@@ -1,0 +1,12 @@
+flowchart LR
+    C["<b>CLOSURE</b><br>the hypothesized single property of every AI answer:<br><i>did the computation settle into consistency with what you gave it?</i>"]
+    E["<b>existence · E0</b><br>grounded? stable? honestly uncertain?<br>do the three readouts collapse to one factor?"]
+    M["<b>mechanism · E1</b><br>hallucination = readout before<br>the evidence was incorporated"]
+    P["<b>physics · E2</b><br>conservation laws of the forward pass"]
+    O["<b>operations · E4 E5</b><br>enforcing and revising beat asking"]
+    A["<b>abstraction · E6 E7</b><br>one spec — independent enforcement<br>backends must agree"]
+    C ==>|gates the program| E
+    C --- M
+    C --- P
+    C --- O
+    C --- A

@@ -1,0 +1,17 @@
+flowchart LR
+    P["<b>the bottleneck</b><br>work cannot be delegated to a model whose<br>only scalable checker is another model —<br>human review does not scale, LLM-as-judge<br>is circular trust, regulators require<br>evidence, not opinion"]
+    V["<b>the program, completed</b><br>verification made independent<br>of the verified: causal tests,<br>measured dynamics,<br>enforced specifications"]
+    C1["incidents intercepted pre-output —<br>hallucination caught as a computational<br>event, not litigated as a text artifact<br><i>requires E1</i>"]
+    C2["risk-tiered automation — route by<br>measured reliability, human review only<br>where the measurement flags<br><i>requires E0 · E2 · E3</i>"]
+    C3["governable agent pipelines —<br>context revision and constraint<br>enforcement as auditable operations<br><i>requires E4 · E5</i>"]
+    C4["portable compliance — one verification<br>spec, enforced identically on any model,<br>any vendor, any backend<br><i>requires E6</i>"]
+    R["<b>delegation at production scale</b><br>model output converted from a liability<br>you review into a governed input<br>you delegate to"]
+    P ==> V
+    V --> C1
+    V --> C2
+    V --> C3
+    V --> C4
+    C1 ==> R
+    C2 ==> R
+    C3 ==> R
+    C4 ==> R

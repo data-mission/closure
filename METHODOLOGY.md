@@ -1,0 +1,29 @@
+# Methodology
+
+How this program's methods relate to recognized research-practice standards. Written so a methods-literate reader can audit conformance instead of guessing — every practice below is either anchored to a named standard, declared as an intentional methodological contribution, or listed as a known nonconformance with its planned fix. Citation statuses for the sources named here: [VERIFICATION.md](VERIFICATION.md).
+
+## Anchored practices
+
+| Practice in this repo | Recognized standard | Conformance note |
+|---|---|---|
+| Repository structure: protocols, results, environment separation | The Turing Way — "research compendium" | Conformant in shape |
+| Per-hypothesis confirm/refute conditions written before data | Preregistration — inference criteria tied to hypotheses (Nosek et al. 2018; Center for Open Science guidance calls this "the heart of the preregistration") | Conformant in content; see nonconformance №1 for the timestamp gap |
+| Both outcomes treated as valuable; results judged against pre-registered conditions, not interestingness | Registered Reports (two-stage review, in-principle acceptance — Center for Open Science; adopted by hundreds of journals) | Same logic, self-administered rather than journal-administered |
+| Literature-search provenance with negative queries reported | PRISMA-S (search-reporting extension of PRISMA 2020) | Adjacent, not conformant: current documentation is provenance-summary level; full PRISMA-S discipline (verbatim strings per source, pre-stated inclusion criteria, counts flow) is adopted for future review rounds |
+| Disclosure that AI agents executed the literature search, with per-citation human verification required | COPE guidance covers AI-assisted *prose*; no standard yet exists for AI-executed *search* | Ahead of current norms — disclosure into a recognized gap |
+| Run discipline for LLM experiments: exact model checkpoint, generation parameters, verbatim prompts, pilot-testing disclosure | Preregistration for experiments with AI agents (arXiv:2606.11217, 2026) | Adopted — see [experiments/README.md](experiments/README.md) run discipline and [results/](results/) reporting standard |
+| Confidence vocabulary for claims | IPCC calibrated language (very low / low / medium / high / very high, from evidence + agreement) | Adopted in [HYPOTHESES.md](HYPOTHESES.md) as a second axis alongside claim status |
+
+## Declared methodological contributions
+
+Three conventions in this repo have **no precedent in any established open research program** we could find (surveyed: EleutherAI, OpenWorm, Polymath, METR, Apollo Research, Redwood Research, BigScience, LAION, ML Collective, The Turing Way's prescriptions). They are intentional, and they stand on the same footing as everything else here: proposed, justified, open to being judged.
+
+1. **The living hypothesis registry** ([HYPOTHESES.md](HYPOTHESES.md)) — a program-owned, continuously updated table of every claim with status and kill condition. Nearest institutional relatives are third-party single-study registries (OSF, AEA RCT Registry, ClinicalTrials.gov — which do maintain per-study status fields including "withdrawn with reason"); none exist as a self-maintained multi-claim ledger inside a program's own repository. Rationale: a research *program* (many claims, evolving evidence) needs claim-level accounting that single-study registration cannot provide; the registry is the program's balance sheet.
+2. **The retired-claims record** (HYPOTHESES.md § Retired) — claims killed under scrutiny stay visible with cause of death. No institutional precedent found. Rationale: silent claim-dropping is how research programs degrade into marketing; the graveyard is the audit trail of intellectual honesty, and it is where a reader checks whether our grading ever cuts against us.
+3. **The citation verification ledger** ([VERIFICATION.md](VERIFICATION.md)) — every citation carries an explicit unverified/abstract-checked/verified status until a human reads the primary source. No standards body maintains such a standard; one independent 2025 protocol converges on the same design (zero-assumption citation auditing, arXiv:2511.04683), and commercial verification tools are emerging around the same shape. Rationale: our own literature review was AI-executed; a program about verifying AI outputs that did not ledger its own AI-gathered citations would fail its own test.
+
+## Known nonconformances and planned fixes
+
+1. **Timestamps are currently self-asserted.** Git commit timestamps on a repo we control do not meet the recognized criteria for preregistration platforms — independent timestamp, public registry, persistence (Haroz 2022, the standard reference on this question: bare GitHub fails; OSF and Zenodo pass). No amount of documentation fixes this; infrastructure does. Planned, in order: Zenodo archiving with DOI per tagged release; an OSF project linked to this repository (two-way sync, OSF's trusted timestamp over git as source of truth); and **E0 pre-registered on OSF before its first run**, using AI-experiment-adapted fields. Until these land, read our pre-registrations as commitments of content, not of independently attested time.
+2. **Live coordination surface.** Established open programs keep mutable status in GitHub Issues/Projects (timestamped by the platform, multi-author), not in hand-edited markdown. Once public: discussion in Issues; HYPOTHESES.md status changes only via pull request, so every state transition carries a platform timestamp and a visible diff.
+3. **Power analysis does not map cleanly** onto inference-time structure experiments. Where a sample-size choice is cost-bounded rather than power-derived (e.g., K regenerations per condition), the experiment says so explicitly — a stated rationale where a methods reader expects a power calculation, instead of a silent gap.
