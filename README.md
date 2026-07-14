@@ -34,22 +34,52 @@ RAG is the teaching case, not the scope. The identical intervention runs whereve
 
 ## The hypothesis
 
-Define **closure**: the terminal state of inference-time reorganization — the structures determining the output have stopped changing and are mutually consistent with the given constraints. **[H-CORE](HYPOTHESES.md#h-core--closure-exists):** grounding, rigidity and ambiguity preservation are correlated readouts of closure quality. One latent factor, testable by factor analysis over score matrices (the instrument validated on capability benchmarks in arXiv:2507.20208, never applied to these axes). Pre-registered: a single factor explaining ≥ 60% of shared variance with same-sign loadings, surviving difficulty controls, confirms; pairwise |r| < 0.2 refutes — and the term is retired.
+Define **closure**: the terminal state of inference-time reorganization — the structures determining the output have stopped changing and are mutually consistent with the given constraints. This is a multidimensional, typed object (the founding specification is a tuple `C = (B, I, P, F, G, U, R, O)`, not a single number), and the program tests its properties separately rather than through one master gate.
 
-That test is [E0](experiments/E0-closure-existence/). It costs API credits and a statistics notebook, and it gates the program: the specification layers ([E6](experiments/E6-lowering-invariance/), [E7](experiments/E7-composition/)) are only coherent if there is one object to specify over.
+The first of those tests asks the narrowest version of the question. **[H-SCALAR](HYPOTHESES.md#h-scalar--grounding-rigidity-and-ambiguity-preservation-share-one-latent-factor):** grounding, rigidity and ambiguity preservation are readouts of one *scalar* factor — testable by factor analysis over score matrices (the instrument validated on capability benchmarks in arXiv:2507.20208, never applied to these axes). Pre-registered: a single factor explaining ≥ 60% of shared variance with same-sign loadings, surviving difficulty controls, confirms; pairwise |r| < 0.2 refutes.
+
+That test is [E0](experiments/E0-closure-existence/) — cheap, decisive, and precisely scoped. It decides whether the tests can be *aggregated into one closure score*; it does **not** gate the architecture. A negative E0 retires the single score and requires closure to be represented as a multidimensional profile — it leaves the operator, composition, and lowering hypotheses ([E4](experiments/E4-enforced-ambiguity/)–[E7](experiments/E7-composition/)) logically untouched, because factor analysis has no power over whether a structured specification exists. Under the program's governing rule — *each experiment may directly retire only the claim it measures* — the claims form a lattice, and what survives each result is read off the [consequence matrix](HYPOTHESES.md#consequence-matrix).
+
+## The architectural thesis (long-term, conditional)
+
+The experiments are the repository's immediate scientific center. But they are chosen because the founding concept already proposes an architecture, and each experiment tests a prerequisite of it. Stated plainly so its epistemic status is unmistakable — this is the long-term hypothesis, not a current result:
+
+```text
+Human intent
+        ↓  intent compiler
+Structural specification          ← a multidimensional typed contract, C = (B,I,P,F,G,U,R,O)
+        ↓  model-specific lowering
+Available control mechanisms      ← prompting, retrieval, memory, tool use, verifier passes,
+        ↓                            constrained decoding, steering, adapters, tuning
+Model execution
+        ↓  structural inspection
+Observable
+```
+
+If the load-bearing hypotheses survive, this could develop into a **model-independent execution-control layer for learned computation.** Under such a layer, the mechanisms above would no longer be exposed as unrelated application-level abstractions; they would become alternative or composable *backends* used to realize one higher-level structural specification — the relationship a compiler has to instruction sets, not the relationship a set of libraries has to each other. This is a possibility conditional on results, stated as a direction; it is not claimed to exist.
+
+Three stages, kept explicitly distinct:
+
+**1 — What exists in the repository now.** The ontology ([CONCEPT.md](CONCEPT.md)); a working operator vocabulary (constrain, release, couple, decouple, perturb, stabilize); the structural-specification proposal; the hypotheses with their kill conditions ([HYPOTHESES.md](HYPOTHESES.md)); the eight experiment protocols; and the four measurement methods (G, R, P, F) that are implementable today against any model API.
+
+**2 — What the current experiments test.** Whether the closure dimensions aggregate to one scalar score (E0); whether individual operations such as enforcement (E4) and release (E5) have causal value over instruction; whether one specification retains its semantics across independent lowerings (E6); and whether composed structural checks add detection power (E7). These are prerequisites of the architecture, tested one property at a time.
+
+**3 — What may become possible later (not implemented, not established).** A compiler targeting multiple model-control mechanisms; an optimizer that selects or composes implementation strategies by cost and quality; a runtime that realizes and verifies computational contracts and recovers from failure; persistent learning of desired closure transitions; and structural rather than prose-based model-to-model communication. These are the later architectural hypotheses ([H-CONTROL-PLANE, H-NATIVE](HYPOTHESES.md#later-architectural-hypotheses)); they are **not** established by E0–E7 and require their own future experiments — and, like the control plane itself, they will be governed as a lattice of separable claims, never one all-or-nothing test.
+
+One scope limit, stated directly to avoid overreach: **E6 does not validate the compiler, the optimizer, or the execution-control plane.** It tests only the narrower prerequisite — that a structural specification can retain its semantics across two independent enforcement backends. A positive E6 makes a portable intermediate representation *plausible*; it does not build the toolchain above it.
 
 ## The experiments
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="figures/claim-structure-dark.svg">
-  <img alt="The claim structure of the program: closure as the hypothesized single property of every AI answer; E0 tests its existence and gates the program; four directions — mechanism (E1), physics (E2), operations (E4, E5), abstraction (E6, E7) — each carry their own falsifiable claims." src="figures/claim-structure-light.svg">
+  <img alt="The claim structure of the program: closure as a hypothesized multidimensional property of every AI answer; E0 tests whether its measured dimensions aggregate to one scalar score; four directions — mechanism (E1), physics (E2), operations (E4, E5), abstraction (E6, E7) — each carry their own falsifiable claims, retired only within the property each measures." src="figures/claim-structure-light.svg">
 </picture>
 
-Every branch is falsifiable on its own; E0 decides whether the center is real. Full protocols with pre-registered verdict conditions in [`/experiments`](experiments/) — along with the build-dependency graph for contributors. No timelines; ordering is dependency and cost only.
+Every branch is falsifiable on its own, and each is retired only within the property it measures — no experiment kills a claim broader than what it tests. E0 decides the narrowest version (do the dimensions aggregate to one score), not whether the whole architecture stands. Full protocols with pre-registered verdict conditions in [`/experiments`](experiments/) — along with the build-dependency graph for contributors. No timelines; ordering is dependency and cost only.
 
 | ID | Claim under test | Literature state |
 |---|---|---|
-| [E0](experiments/E0-closure-existence/) | G/R/P collapse to one latent factor | Instrument validated; this application unrun; nearest candidate withdrawn by its authors |
+| [E0](experiments/E0-closure-existence/) | G/R/P aggregate to one scalar factor (not whether a structured spec exists) | Instrument validated; this application unrun; nearest candidate withdrawn by its authors |
 | [E1](experiments/E1-premature-closure/) | Hallucination = settling before evidence incorporation | Direction contested across published papers; the coupling unmeasured |
 | [E2](experiments/E2-conserved-quantities/) | The forward pass has conservation laws; violations predict failure | No prior work on either half |
 | [E3](experiments/E3-future-volume/) | Future-output diversity is continuous and linearly decodable pre-sampling | Binarized probe exists; continuous target, confidence baseline, belief-state link do not |
@@ -83,7 +113,7 @@ Each consequence in the figure above is bought by the named confirmations; refut
 
 | | Confirmed | Refuted |
 |---|---|---|
-| **E0** | One object to specify over; the spec layers are principled | Term retired publicly; the tests stay valid; E1/E2/E3/E5 unaffected |
+| **E0** | An aggregate closure score is justified | Scalar aggregation retired; closure reported as a multidimensional profile; the structural claims (E4–E7) and the tests stay valid |
 | **E1** | Hallucination is a measurable event with a mechanism — intervene before readout, not after the text | The late-instability account wins; the field's contradiction resolves either way |
 | **E2** | The first conservation law of transformer inference | "Native invariants" demoted to metaphor, on the record |
 | **E5** | A principled revision operation with quantified effect; context management stops being folklore | Instruction suffices — surprising against seven published failures, publishable as such |

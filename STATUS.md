@@ -58,6 +58,8 @@ Last updated: 2026-07-13.
   tested, not a finding.
 - That a structural intermediate representation (Closure IR) exists or that native model-to-model closure
   communication is possible — these are the vision's furthest reach, labeled non-operational or open.
+- That a negative E0 would retire any structural claim, operator, or the IR — E0 retires only the single scalar
+  score. Each architectural claim is killed only within the property its own experiment measures.
 - Any empirical result, any adoption, any external validation. None exists yet; none is implied.
 
 ## Already reduced or retired
@@ -71,12 +73,22 @@ records, so they are recorded as convergence, not prediction
 
 ## Next decisions, gated on results
 
-- **E0's verdict gates the specification layers.** If G/R/P collapse to one latent factor, the specification
-  experiments (E6, E7) have one object to specify over and are worth building; if they do not, the term "closure"
-  is retired publicly and the individual tests continue to stand.
+The program has no single alive/dead gate. Each experiment directly retires only the claim it measures; broader
+architectural claims survive, weaken, or die by their explicit dependencies. What survives each result is stated
+in advance in the [consequence matrix](HYPOTHESES.md#consequence-matrix). In brief:
+
+- **E0 decides scalar aggregation only** — whether G/R/P collapse to one closure score. A negative result retires
+  the single score and reports closure as a multidimensional profile; it does **not** gate the specification
+  layers. The structural hypotheses (E4–E7) stand or fall on their own verdicts, not on E0.
+- **E6 (H-LOWER) decides the portable IR.** If independent backends agree on one spec's verdicts, an
+  architecture-independent Closure IR becomes plausible; if not, model-specific structural control may still
+  survive, and control-plane designs that require backend portability lose support.
+- **E4/E5/E7 each decide one operator or the compositional layer**, and are retired only within that scope.
+- **The execution control plane and native computation** are later hypotheses (H-CONTROL-PLANE, H-NATIVE) — not
+  established by E0–E7, requiring their own future experiments, each to be governed by the same rule.
 - **E1's verdict resolves a live contradiction** in the published literature on hallucination dynamics, in
   whichever direction it lands.
-- **E6b** (the expressiveness A/B) runs only if both E0 and E6 confirm — an adoption question, not a falsifiable
-  one, reported as a lift and only when it is earned.
+- **E6b** (the expressiveness A/B) runs only if E6 confirms — an adoption question, not a falsifiable one,
+  reported as a lift; its aggregate-score portion additionally assumes a positive E0.
 
 No timelines. Ordering is dependency and cost only ([experiments/README.md](experiments/README.md)).

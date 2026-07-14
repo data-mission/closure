@@ -2,7 +2,7 @@
 
 **Question:** When later evidence contradicts an earlier assumption, does **programmatically rebuilding the context without the assumption** (an explicit contraction operation) reduce downstream contamination more than **instructing the model to disregard it**?
 
-**Hypothesis:** [H-REL](../../HYPOTHESES.md#h-rel--revision-is-an-operation-not-a-request). The cheapest experiment in the program: API-only, days of work.
+**Hypothesis:** [H-RELEASE](../../HYPOTHESES.md#h-release--revision-is-an-operation-not-a-request). The cheapest experiment in the program: API-only, days of work. Not gated on E0 — a failure retires `release` as formulated, nothing broader.
 
 ## Status and prior art
 

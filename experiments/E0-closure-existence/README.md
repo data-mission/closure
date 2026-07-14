@@ -1,8 +1,8 @@
-# E0 — Does closure exist?
+# E0 — Do the closure dimensions aggregate to one scalar?
 
-**Question:** Are grounding (G), rigidity (R), and preserved-ambiguity (P) three independent quality measurements — or noisy readouts of ONE latent property?
+**Question:** Do grounding (G), rigidity (R), and preserved-ambiguity (P) collapse to ONE scalar latent factor — or must closure be represented as a multidimensional profile?
 
-**Hypothesis:** [H-CORE](../../HYPOTHESES.md#h-core--closure-exists). This experiment gates the program: if there is no single object behind the tests, the specification layer has nothing to be a specification *of*.
+**Hypothesis:** [H-SCALAR](../../HYPOTHESES.md#h-scalar--grounding-rigidity-and-ambiguity-preservation-share-one-latent-factor). This experiment decides *scalar aggregation only* — whether the tests can be reported as a single closure score. It does **not** gate the program: the founding specification is multidimensional and typed (`C = (B, I, P, F, G, U, R, O)`), and whether a structured specification exists is tested separately by E4–E7. Under the governing rule, this experiment may directly retire only the claim it measures.
 
 ## Status and prior art
 
@@ -21,9 +21,11 @@
 
 ## Verdict conditions (pre-registered)
 
-- **CLOSURE EXISTS** iff a single latent factor explains **≥ 60% of shared variance** across the sub-indicator battery AND all sub-indicators load on it with the same sign, surviving the difficulty control.
-- **CLOSURE IS A METAPHOR** iff pairwise |r| < 0.2 and no factor clears the parallel-analysis threshold — the program then ships independent tests and retires the term.
+- **SCALAR CLOSURE HOLDS** iff a single latent factor explains **≥ 60% of shared variance** across the sub-indicator battery AND all sub-indicators load on it with the same sign, surviving the difficulty control — the tests may be aggregated into one closure score.
+- **SCALAR CLOSURE IS A METAPHOR** iff pairwise |r| < 0.2 and no factor clears the parallel-analysis threshold — the single aggregate score is retired and closure is reported as a multidimensional profile.
 - Anything between: report the structure found; partial-collapse (e.g., G+R share a factor, P doesn't) is a meaningful, publishable answer that reshapes the concept.
+
+**Scope of the verdict.** This experiment decides scalar aggregation only. A metaphor result retires the single closure score and the one-dimensionality claim — **and nothing else**. It does not retire the operators (E4, E5), composition (E7), lowering / the IR (E6), or any of the measurements; factor analysis has no power over whether a structured specification exists. The independent structural hypotheses remain logically open ([consequence matrix](../../HYPOTHESES.md#consequence-matrix)).
 
 ## Cost and prerequisites
 

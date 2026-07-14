@@ -2,7 +2,9 @@
 
 **Question:** Does a structural specification have implementation-independent semantics — do **independent** enforcement backends, given the same spec, agree on verdicts?
 
-**Hypothesis:** [H-IR](../../HYPOTHESES.md#h-ir--structural-specs-are-a-real-abstraction-lowering-invariance). This is the falsifiable form of the claim that structural specs constitute an intermediate representation. SQL became an abstraction because the same query means the same thing on every engine; if verdicts here depend on the enforcement mechanism, there is no abstraction — only tools.
+**Hypothesis:** [H-LOWER](../../HYPOTHESES.md#h-lower--structural-specs-are-a-real-abstraction-lowering-invariance). This is the falsifiable form of the claim that structural specs constitute an intermediate representation. SQL became an abstraction because the same query means the same thing on every engine; if verdicts here depend on the enforcement mechanism, there is no abstraction — only tools.
+
+**E6 does not depend on E0.** Lowering invariance is a structural-coherence test; it requires no shared latent factor among G/R/P. A failure retires the architecture-independent (portable) Closure IR — a model-specific structural DSL could still survive — and, by explicit dependency, undermines any control-plane design that requires backend portability. It does not touch the operators or the measurements.
 
 ## Status and prior art
 
@@ -32,7 +34,7 @@ Citation statuses: [VERIFICATION.md](../../VERIFICATION.md).
 
 ## E6b — Expressiveness A/B (adoption bet; gated)
 
-A second, explicitly weaker question: does *writing* the spec in a structural language beat expressing the same requirements in a raw prompt, measured by structural-property hit rate on hard tasks? This is not falsifiable in the strong sense — languages are adopted, not proven — so it is reported as an A/B lift only, and runs only if **both** E0 (there is an object to specify) and E6 (the spec has stable semantics) are positive.
+A second, explicitly weaker question: does *writing* the spec in a structural language beat expressing the same requirements in a raw prompt, measured by structural-property hit rate on hard tasks? This is not falsifiable in the strong sense — languages are adopted, not proven — so it is reported as an A/B lift only. It runs only if **E6** is positive (the spec has stable semantics across backends); the portion that reports a *single aggregate* structural-quality score additionally assumes a positive E0 (H-SCALAR). E6/H-LOWER itself is not gated on E0.
 
 ## Cost and prerequisites
 

@@ -21,7 +21,7 @@ under intervention, not a prompt under optimization. Nothing here recommends how
 ### "This is just robustness testing."
 **Partly right, and that part is deliberate.** Rigidity (R) is a perturbation-robustness measurement, and the
 program credits that lineage in the [prior-art map](background/prior-art.md). But robustness is one of several
-readouts, and the actual claim ([H-CORE](HYPOTHESES.md)) is that grounding, rigidity, and ambiguity-preservation
+readouts, and the actual claim ([H-SCALAR](HYPOTHESES.md#h-scalar--grounding-rigidity-and-ambiguity-preservation-share-one-latent-factor)) is that grounding, rigidity, and ambiguity-preservation
 are *readouts of one latent property* — a claim robustness testing has never made or tested. If that claim is
 false, the program says so and the tests remain individually useful.
 
@@ -41,11 +41,14 @@ same-sign loadings, surviving difficulty controls)? If they don't (pairwise |r| 
 publicly. A concept with a scheduled execution date is not doing the work vagueness usually does.
 
 ### "Closure cannot be a single scalar."
-**Open empirical question — and E0 is built to answer exactly this, including 'neither.'** E0's pre-registered
-outcomes are three, not two: one factor (closure exists), no shared factor (metaphor, retire the term), or a
-*partial collapse* — e.g. G and R share a factor and P does not — which is called out in the protocol as "a
-meaningful, publishable answer that reshapes the concept." The scalar-vs-multidimensional question is the result,
-not an assumption baked in.
+**Correct — and the governance already agrees.** Closure is not claimed to be a scalar; the founding
+specification is a multidimensional typed tuple `C = (B, I, P, F, G, U, R, O)`, and its coherence rests on stable
+semantics, composition, and lowering — not on its components statistically covarying (SQL, a type system, and a
+deployment manifest are all coherent specifications whose fields do not load on one latent factor). The scalar
+question is isolated in a *single, narrowly-scoped* hypothesis, [H-SCALAR](HYPOTHESES.md#h-scalar--grounding-rigidity-and-ambiguity-preservation-share-one-latent-factor)
+(tested by E0): do G/R/P aggregate to one *score*? A negative result retires the score and nothing else — closure
+is then reported as a multidimensional profile, and the structural hypotheses (E4–E7) are untouched. This is the
+program's governing rule made concrete: no experiment may kill a claim broader than the property it measures.
 
 ### "These operators are human abstractions, not model-native primitives."
 **Valid limitation, and the program has already conceded the strong form.** The claim that the six operators form

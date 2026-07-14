@@ -2,7 +2,7 @@
 
 **Question:** For genuinely ambiguous inputs, does **mechanically enforcing** that the output covers the true interpretation set outperform **instructing** the model to preserve ambiguity?
 
-**Hypothesis:** [H-ENF](../../HYPOTHESES.md#h-enf--preservation-must-be-enforced-not-requested).
+**Hypothesis:** [H-ENFORCE](../../HYPOTHESES.md#h-enforce--preservation-must-be-enforced-not-requested). Not gated on E0 — a failure retires enforcement as an operator, nothing broader.
 
 ## Status and prior art
 

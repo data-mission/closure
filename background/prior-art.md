@@ -37,7 +37,7 @@ What is already covered by existing work (and therefore credited, not claimed), 
 
 - Any systematic search for quantities conserved along inference depth in transformers (H-INV / E2) — and any linkage of invariant violation to behavioral failure.
 - Any statement — let alone test — of lowering invariance for semantic specifications (H-IR / E6): same spec, independent enforcement backends, verdict agreement.
-- Any factor-analytic test of whether structural-quality measurements collapse to one latent (H-CORE / E0). The single candidate (arXiv:2605.08522) was withdrawn by its authors.
+- Any factor-analytic test of whether structural-quality measurements collapse to one latent (H-SCALAR / E0). The single candidate (arXiv:2605.08522) was withdrawn by its authors.
 - The term and operation "reclosure" (programmatic contraction + regeneration as revision semantics) — zero hits under any phrasing tried.
 
 ## Known discrepancies and cautions

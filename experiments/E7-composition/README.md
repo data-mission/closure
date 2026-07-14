@@ -2,7 +2,7 @@
 
 **Question:** Do composed checks — grounding results feeding ambiguity checking feeding collapse detection — catch real failures that no individual check catches?
 
-**Hypothesis:** [H-COMP](../../HYPOTHESES.md#h-comp--composed-checks-catch-what-isolated-checks-miss).
+**Hypothesis:** [H-COMPOSE](../../HYPOTHESES.md#h-compose--composed-checks-catch-what-isolated-checks-miss). Not gated on E0 — whether the tests aggregate to one score (E0) and whether *composing* them adds detection power (this) are separate questions. A failure retires the compositional algebra at this level; independent instruments remain useful.
 
 ## Status
 

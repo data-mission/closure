@@ -1,17 +1,20 @@
 flowchart TB
     T["G / R / P measurement tooling<br>one build serves six experiments"]
-    T -->|score matrix| E0["E0 · closure existence"]
+    T -->|score matrix| E0["E0 · scalar aggregation"]
     T -->|faithful vs hallucinated labels| E1["E1 · premature closure"]
     T -->|interpretation clustering| E4["E4 · enforced ambiguity"]
     T -->|contamination detector| E5["E5 · reclosure"]
     T -->|post-hoc backend| E6["E6 · lowering invariance"]
     T -->|component checks| E7["E7 · composition"]
-    E0 -.->|gates| E6b["E6b · spec expressiveness A/B"]
-    E6 -.->|gates| E6b
-    E0 -.->|frames interpretation| E7
+    E0 -->|aggregate score| SC["single closure score<br>retired if E0 refutes"]
+    E6 -.->|gates| E6b["E6b · spec expressiveness A/B"]
+    E0 -.->|assumed for the<br>aggregate-score portion only| E6b
     subgraph S["independent tracks — no dependencies, can start any time"]
         direction LR
         E2["E2 · conservation laws"]
         E3["E3 · future volume"]
     end
     E6b ~~~ S
+    %% Governing rule: each experiment directly retires only the claim it measures.
+    %% E0 decides scalar aggregation only and does NOT gate E4-E7; the structural
+    %% experiments stand or fall on their own verdicts.

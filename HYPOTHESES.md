@@ -2,6 +2,8 @@
 
 Every claim of the program, each with its **status**, **kill condition**, and **experiment**. Statuses: `OPEN` (untested, no prior work), `CONTESTED` (field has contradictory findings), `PARTIALLY PRE-EMPTED` (a component exists in prior work; the open edge is stated), `RETIRED` (killed under scrutiny — kept visible), `CONVERGENT` (independently published by others; now prior art, priority not claimable).
 
+**Governing rule.** Each experiment may directly retire only the claim it measures. Broader architectural claims survive, weaken, or die according to their explicitly documented dependencies and their own tests — no experiment directly kills a claim broader than the property it measures, and a downstream claim loses support only where it explicitly depends on a prerequisite that failed. This program's central object is multidimensional and typed ([the founding specification](CONCEPT.md#part-iv--the-specification-layer) is a tuple `C = (B, I, P, F, G, U, R, O)`, not a scalar), and its governance mirrors that: the claims form a lattice, not one all-or-nothing gate. What survives each result is read off the [consequence matrix](#consequence-matrix), not decided by a single verdict.
+
 Novelty statuses reflect a literature check against 2024–2026 work (as of 2026-07-13) — every status is a claim about the public record and can be re-checked by anyone. Provenance of the review and per-citation verification status: [VERIFICATION.md](VERIFICATION.md).
 
 Each active hypothesis also carries a **confidence** line in IPCC calibrated language (*very low / low / medium / high / very high*, derived from evidence quality and agreement across sources — see [METHODOLOGY.md](METHODOLOGY.md)). Confidence is a different axis from status: status describes the state of the literature; confidence is our current credence that the claim will hold, stated so its movement over time is auditable.
@@ -10,12 +12,13 @@ Each active hypothesis also carries a **confidence** line in IPCC calibrated lan
 
 ## Active hypotheses
 
-### H-CORE — Closure exists
-**Claim:** Grounding (G), rigidity (R), and ambiguity-preservation (P) scores of an AI output are noisy readouts of ONE latent property — closure quality — not three independent measurements.
-**Why it matters:** This is the existence test for the program's central object. If true, a composition/specification layer over the tests is principled. If false, "closure" is a metaphor over four unrelated functions, and this page will say so.
+### H-SCALAR — Grounding, rigidity, and ambiguity-preservation share one latent factor
+**Claim:** G, R, and P scores of an AI output are noisy readouts of ONE scalar latent property — closure quality — not three independent measurements.
+**Why it matters:** If true, the tests may be aggregated into a single closure score. If false, they are not one number and closure, if it survives, must be reported as a multidimensional profile. This is a claim about *scalar aggregation* — not about whether a structured closure specification exists (that is the structural lattice below, tested by E4–E7 and independent of this result).
 **Status:** `OPEN` — the instrument (exploratory factor analysis + parallel analysis on score matrices) exists and was validated on capability benchmarks (arXiv:2507.20208); nobody has run it on structural-quality axes. The one candidate pre-emption (arXiv:2605.08522) was withdrawn by its own authors citing a fatal flaw.
-**Confidence it holds:** low — plausibility arguments and the founding derivation only; no direct evidence in either direction. That is what makes it the right gate: cheap, decisive, unprejudged.
+**Confidence it holds:** low — plausibility arguments and the founding derivation only; no direct evidence in either direction. That is what makes it a cheap, decisive, unprejudged first measurement.
 **Kill condition:** pairwise |r| < 0.2 between G/R/P across 100–200 tasks, no dominant factor above the parallel-analysis threshold — or the shared factor vanishing after controlling for task difficulty.
+**Scope of the kill:** a negative result retires the single aggregate closure score, scalar aggregation of G/R/P, and the claim that closure quality is one-dimensional — **and nothing else.** It leaves the independent structural hypotheses (H-ENFORCE, H-RELEASE, H-COMPOSE, H-LOWER) logically open, and requires closure, if it survives, to be represented as a multidimensional structure rather than one number. Factor analysis has no power over the operators, composition, lowering, or the IR.
 **Experiment:** [E0](experiments/E0-closure-existence/)
 
 ### H-PC — Hallucination is premature closure
@@ -42,37 +45,79 @@ Each active hypothesis also carries a **confidence** line in IPCC calibrated lan
 **Kill condition:** the hidden state encodes only the binary high/low class (already known), or the probe fails to generalize out-of-distribution, or adds nothing over verbalized confidence.
 **Experiment:** [E3](experiments/E3-future-volume/)
 
-### H-ENF — Preservation must be enforced, not requested
+### H-ENFORCE — Preservation must be enforced, not requested
 **Claim:** For genuinely ambiguous inputs, mechanically enforcing that the output represents the full interpretation set beats *instructing* the model to preserve ambiguity — the model is otherwise not able to keep uncertainty from collapsing into fluency, even when asked.
 **Why it matters:** Decides whether `preserve` is an operator (runtime mechanism) or a diagnostic (measurement) — the first test of the concept's actuation half.
 **Status:** `PARTIALLY PRE-EMPTED` — an architectural enforcement mechanism exists in unreviewed single-author preprints (NRR-Core/NRR-Phi), compared only against an unconstrained baseline. The controlled 3-arm comparison (plain vs instructed vs enforced) isolating the causal contribution of enforcement, on unmodified production models, is unrun. The premise (instructed uncertainty expression misaligns with actual uncertainty) is independently published.
 **Confidence it holds:** medium — an architectural enforcer beats an unconstrained baseline in unreviewed preprints, and instruction is independently documented as weak; the causal isolation is missing, not the direction.
 **Kill condition:** instructed ≈ enforced on interpretation-set retention — instruction suffices, the enforcement layer is ceremony.
+**Scope of the kill:** retires enforcement as a distinct operator and the claim that the runtime can guarantee preservation via this mechanism — nothing broader. Does not touch measurement, revision, lowering, or composition. Not gated on E0.
 **Experiment:** [E4](experiments/E4-enforced-ambiguity/)
 
-### H-REL — Revision is an operation, not a request
+### H-RELEASE — Revision is an operation, not a request
 **Claim:** When evidence contradicts an earlier assumption, programmatically rebuilding the context **without** the assumption (an explicit contraction operation in the sense of AGM belief revision) reduces downstream contamination far more than instructing the model to disregard it.
 **Why it matters:** The `release` operator and revision rules earn existence with a quantified effect size; agent pipelines gain a principled alternative to "append a correction and hope."
 **Status:** `PARTIALLY PRE-EMPTED` — the premise (instructed disregard leaves contamination) is proven independently at least seven times, including at the representation level ("models pretend to forget": the final layer says forgotten while earlier layers still compute from the content). The 3-arm comparison with mechanical rebuild as the third arm and downstream-conclusion contamination as the measured outcome is unrun. Note: a commercial product (XTrace) claims AGM operations at runtime — unverified marketing, no published experiment; "first to apply AGM" is not claimable, "first controlled comparison" is.
 **Confidence it holds:** high — the premise (instruction leaves contamination) is replicated at least seven times, and the closest two-arm analog shows a +10–21pp mechanical advantage; only the controlled three-arm isolation is missing.
 **Kill condition:** instructed-disregard ≈ mechanical rebuild on downstream contamination.
+**Scope of the kill:** retires `release` as currently formulated and localized disciplined revision via this mechanism — nothing broader. Does not touch grounding or the other controls. Not gated on E0.
 **Experiment:** [E5](experiments/E5-reclosure/)
 
-### H-IR — Structural specs are a real abstraction (lowering invariance)
+### H-LOWER — Structural specs are a real abstraction (lowering invariance)
 **Claim:** The same structural specification ("claims grounded in sources", "conclusions rigid under paraphrase") lowered onto two **independent** enforcement backends — post-hoc verification and decode-time enforcement — produces agreeing verdicts. Implementation-independent semantics is what makes a specification layer an intermediate representation rather than a collection of tools.
-**Why it matters:** This is the falsifiable form of the entire "compiler for AI computation" idea. SQL became an abstraction because the same query means the same thing on every engine.
+**Why it matters:** This is the falsifiable form of the entire "compiler for AI computation" idea. SQL became an abstraction because the same query means the same thing on every engine. Note: lowering invariance is a structural-coherence test; it requires no shared latent factor among G/R/P, and is not gated on E0/H-SCALAR.
 **Status:** `OPEN` — the claim has never been stated in the literature. Both backend types exist separately; the one system that compiles one constraint model to two layers runs them sequentially (generate-then-validate) and never compares verdicts.
 **Confidence it holds:** low — never tested by anyone; both backends exist separately and nothing is known about their agreement. Genuine white space cuts both ways.
 **Kill condition:** verdict agreement < 70% across lowerings, or disagreements unsystematic (pre-registered bands: ≥ 85% agreement with κ ≥ 0.7 confirms). (A *systematic* disagreement taxonomy would be a publishable finding in its own right: a map of where "the same property" means different things at different enforcement points.)
-**Experiment:** [E6](experiments/E6-lowering-invariance/) — with an expressiveness A/B (E6b) gated on E0 and E6 both passing.
+**Scope of the kill:** retires the architecture-independent Closure IR and portable specifications across backends (the LLVM-like part of the vision) — a vendor- or model-specific Closure DSL could still survive. Downstream: undermines any control-plane design that specifically requires backend portability (an explicit dependency, not a direct kill). Does not touch the operators, composition, or the measurements.
+**Experiment:** [E6](experiments/E6-lowering-invariance/) — with an expressiveness A/B (E6b) gated on E6 passing; the aggregate-score portion of that A/B additionally assumes H-SCALAR. E6/H-LOWER itself is not gated on E0.
 
-### H-COMP — Composed checks catch what isolated checks miss
+### H-COMPOSE — Composed checks catch what isolated checks miss
 **Claim:** Pipelines composing the tests (grounding feeding ambiguity-checking feeding collapse-detection) catch real failures that no individual test catches.
 **Why it matters:** Decides "system" vs "library" for the measurement layer.
-**Status:** `OPEN` — designed in the program's prior corpus (30–60 tasks, three adversarial task types), unrun. Interpret in light of E0: E0 tests whether one *object* underlies the tests; this tests whether *composing* them adds detection power.
+**Status:** `OPEN` — designed in the program's prior corpus (30–60 tasks, three adversarial task types), unrun. Whether the tests aggregate to one score (H-SCALAR) and whether *composing* them adds detection power are separate questions; this hypothesis does not require a positive E0.
 **Confidence it holds:** low — the program's own earlier adversarial review left this contested; designed to be settled, not assumed.
 **Kill condition:** fewer than 5 composition-only catches across the battery, or catches not confirmed by human review.
+**Scope of the kill:** retires the compositional algebra at that level and the claim that combining operators adds detection/control power — independent instruments remain useful. Not gated on E0.
 **Experiment:** [E7](experiments/E7-composition/)
+
+---
+
+## Later architectural hypotheses
+
+These depend on the results above and require their own future experiments. They are **not** established by E0–E7 alone, and are recorded here so the architecture's epistemic status is explicit rather than implied.
+
+### H-CONTROL-PLANE — a compiler and runtime can realize structural specs
+**Claim:** A compiler and runtime can realize a structural specification by selecting and composing model-control mechanisms (prompting, retrieval, constrained decoding, steering, verifier passes, adapters, tuning) — exposing them as composable backends for a higher-level specification rather than as unrelated application-level abstractions.
+**Status:** `OPEN`. **Confidence:** very low. Not established by E0–E7; depends on H-ENFORCE, H-RELEASE, H-COMPOSE, and H-LOWER, and needs its own experiments.
+**Itself a lattice, not a monolith:** an execution control plane is several separable properties — compiling a specification, selecting mechanisms, composing mechanisms, verifying contract satisfaction, optimizing cost and latency, recovering from failure, moving across backends. These may not succeed or fail together. When their experiments are designed, the governing rule applies again: each property gets its own scoped hypothesis and kill condition — never one all-or-nothing control-plane test.
+**Kill condition:** to be pre-registered when those experiments are designed.
+**Experiment:** future.
+
+### H-NATIVE — closure operations can manipulate model-native computation
+**Claim:** Closure operations can eventually manipulate model-native computation and be transferred between models without linguistic reconstruction — structural rather than prose-based model communication.
+**Status:** `OPEN`. **Confidence:** very low. Requires evidence not provided by E0–E7; a long-term research hypothesis with no current experiment and no feasibility claim.
+**Kill condition:** to be pre-registered if and when it is made testable.
+**Experiment:** future.
+
+---
+
+## Consequence matrix
+
+The program has no single alive/dead verdict. Each experiment directly retires only the claim it measures; broader claims survive, weaken, or die by their explicit dependencies. What survives each result — stated in advance:
+
+| Result | What becomes justified / what survives |
+|---|---|
+| E0 (H-SCALAR) confirms | an aggregate closure score is justified |
+| E0 refutes | scalar aggregation retired; the independent structural hypotheses remain logically open; closure, if it survives, is represented as a multidimensional profile, not one number |
+| E4 / E5 (H-ENFORCE / H-RELEASE) confirm | those closure operations have causal reality |
+| E4 / E5 refute | retire or reformulate those operators only; measurements and other controls remain |
+| E7 (H-COMPOSE) confirms | a compositional specification language becomes plausible |
+| E7 refutes | retain independent controls; abandon algebraic composition at that level |
+| E6 (H-LOWER) confirms | a portable Closure IR becomes plausible |
+| E6 refutes | model-specific structural control may remain; the portable IR dies; control-plane designs that require backend portability lose support |
+| later optimizer / planning tests confirm | the execution control plane (H-CONTROL-PLANE) becomes plausible |
+| native-interface tests confirm | structural model-to-model communication (H-NATIVE) becomes plausible |
 
 ---
 

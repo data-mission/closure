@@ -9,7 +9,7 @@ Eight experiments. Each one tests a hypothesis from the [registry](../HYPOTHESES
   <img alt="Build-dependency graph: the G/R/P measurement tooling feeds six experiments (score matrix to E0, labels to E1, clustering to E4, contamination detection to E5, post-hoc backend to E6, component checks to E7); E0 and E6 jointly gate E6b; E2 and E3 are independent tracks with no dependencies." src="../figures/dependencies-light.svg">
 </picture>
 
-Solid edges: the measurement tooling consumed as an instrument — one implementation feeds six experiments, which is why building it well is a contribution to every experiment at once. Dashed edges: logical gating — E6b runs only if E0 and E6 both confirm; E7's result is interpreted in light of E0's answer. E2 and E3 depend on nothing and can start any time.
+Solid edges: the measurement tooling consumed as an instrument — one implementation feeds six experiments, which is why building it well is a contribution to every experiment at once. Dashed edges: logical gating — E6b (the expressiveness A/B) runs only if E6 confirms, and its aggregate-score portion additionally assumes a positive E0. Note that E0 does **not** gate E4–E7: it decides scalar aggregation only, and each structural experiment is retired within the property it measures ([governing rule](../HYPOTHESES.md)). E2 and E3 depend on nothing and can start any time.
 
 ## Suggested order for a newcomer
 

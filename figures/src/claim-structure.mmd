@@ -1,12 +1,14 @@
 flowchart LR
-    C["<b>CLOSURE</b><br>the hypothesized single property of every AI answer:<br><i>did the computation settle into consistency with what you gave it?</i>"]
-    E["<b>existence · E0</b><br>grounded? stable? honestly uncertain?<br>do the three readouts collapse to one factor?"]
+    C["<b>CLOSURE</b><br>a hypothesized multidimensional property of every AI answer:<br><i>did the computation settle into consistency with what you gave it?</i>"]
+    E["<b>scalar test · E0</b><br>do the three readouts aggregate<br>to one closure score?"]
     M["<b>mechanism · E1</b><br>hallucination = readout before<br>the evidence was incorporated"]
     P["<b>physics · E2</b><br>conservation laws of the forward pass"]
     O["<b>operations · E4 E5</b><br>enforcing and revising beat asking"]
     A["<b>abstraction · E6 E7</b><br>one spec — independent enforcement<br>backends must agree"]
-    C ==>|gates the program| E
+    C --- E
     C --- M
     C --- P
     C --- O
     C --- A
+    %% Each branch is falsifiable on its own and retired only within the property it
+    %% measures. E0 tests scalar aggregation; it does not gate the other branches.
