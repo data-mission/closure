@@ -12,8 +12,10 @@ Last updated: 2026-07-13.
 - The founding ontology, preserved as hypothesis — [CONCEPT.md](CONCEPT.md).
 - The reduction of that ontology to falsifiable claims, and the case study of how the reduction itself went
   wrong and was corrected — [background/reduction-history.md](background/reduction-history.md).
-- The living hypothesis registry: eight claims, each with status, confidence, and kill condition, plus the
-  retired claims kept visible with cause of death — [HYPOTHESES.md](HYPOTHESES.md).
+- The living hypothesis registry: ten active hypotheses — eight with current experiment protocols (E0–E7) and
+  two explicitly future architectural hypotheses (the control plane and native computation) — each with status,
+  confidence, and kill condition, plus the retired claims kept visible with cause of death
+  — [HYPOTHESES.md](HYPOTHESES.md).
 - Eight experiment protocols with pre-registered verdict conditions — [experiments/](experiments/).
 - The methodology, with every practice anchored to a standard, declared as a contribution, or listed as a known
   nonconformance with its fix — [METHODOLOGY.md](METHODOLOGY.md).
@@ -50,8 +52,9 @@ Last updated: 2026-07-13.
 
 ## Explicitly not claimed
 
-- That closure exists, or that structural output quality is one measurable object — that is precisely what E0
-  tests, and its confidence is currently rated *low*.
+- That the closure dimensions aggregate to a single scalar score — that is precisely what E0 tests (H-SCALAR),
+  and its confidence is currently rated *low*. Whether a coherent multidimensional structural specification
+  exists is a separate question, tested by E4–E7, not by E0.
 - That hallucinations are solved, detected, or prevented — H-PC is `CONTESTED`, and the field itself disagrees
   on direction.
 - That the true ontology of transformer inference has been discovered — the ontology is a stance stated to be

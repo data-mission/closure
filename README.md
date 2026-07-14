@@ -1,6 +1,6 @@
 # Closure
 
-A research program on inference-time structure in large language models: a testable mechanistic hypothesis for hallucination and confidence, non-LLM-judged verification of model outputs, and a test of whether structural output quality is one measurable object.
+A research program on model-native inference structure in large language models: a testable mechanistic hypothesis for hallucination and confidence, causal (non-LLM-judged) verification of model outputs, and whether a multidimensional structural specification can become a portable control layer for learned computation.
 
 Originated and led by [Vlad Ryzhkov](AUTHORS.md). Just entered its public research phase — the theory, its adversarial reduction, the hypotheses with their kill conditions, and the experiment protocols are published; execution is beginning. No experiment has run yet, and that is the point: the program is public so the plan can be attacked before execution hardens its assumptions ([STATUS.md](STATUS.md)).
 
@@ -117,7 +117,7 @@ Each consequence in the figure above is bought by the named confirmations; refut
 | **E1** | Hallucination is a measurable event with a mechanism — intervene before readout, not after the text | The late-instability account wins; the field's contradiction resolves either way |
 | **E2** | The first conservation law of transformer inference | "Native invariants" demoted to metaphor, on the record |
 | **E5** | A principled revision operation with quantified effect; context management stops being folklore | Instruction suffices — surprising against seven published failures, publishable as such |
-| **E6** | An intermediate representation exists; a compiler-style toolchain is worth building | No IR — the idea dies cheaply, before anyone builds the expensive version |
+| **E6** | A portable structural IR becomes plausible; a compiler-style prototype is worth building | No portable IR — the idea dies cheaply, before anyone builds the expensive version |
 
 E3, E4 and E7 carry the same two-sided structure in their protocols. A program whose total-refutation branch still produces value is not a bet on being right; it is a bet on the questions being worth deciding.
 
