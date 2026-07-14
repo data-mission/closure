@@ -18,11 +18,17 @@ def _internal_imports(module_file: Path) -> set[str]:
     tree = ast.parse(module_file.read_text())
     names: set[str] = set()
     for node in ast.walk(tree):
-        if isinstance(node, ast.ImportFrom) and node.module:
-            # relative (level>0) or absolute closure_harness.*
-            mod = node.module
-            if node.level > 0 or mod.startswith("closure_harness"):
-                names.add(mod.split(".")[-1])
+        if isinstance(node, ast.ImportFrom):
+            relative = node.level > 0
+            pkg = node.module or ""
+            if relative or pkg.startswith("closure_harness"):
+                if pkg:
+                    # `from .foo import x` / `from closure_harness.foo import x`
+                    names.add(pkg.split(".")[-1])
+                else:
+                    # `from . import foo` — the submodule names are the aliases, not `module`.
+                    for alias in node.names:
+                        names.add(alias.name.split(".")[-1])
         elif isinstance(node, ast.Import):
             for alias in node.names:
                 if alias.name.startswith("closure_harness"):
@@ -62,3 +68,39 @@ def test_detector_is_only_reached_through_contraction():
     # Sanity anchor for the separation: contraction is the only module that pulls in detector.
     reached_from_contraction = _transitive("contraction")
     assert "detector" in reached_from_contraction
+
+
+# The provider (vendor SDK binding) and the pilot (its CLI driver) must stay out of every
+# scoring module's transitive import graph — the scoring path must never pull in a network
+# client. Same AST walk, applied to each scoring module.
+_SCORING_MODULES = (
+    "nli",
+    "grounding",
+    "detector",
+    "contraction",
+    "outcomes",
+    "stats",
+    "generate",
+    "schema",
+)
+
+
+def test_scoring_modules_do_not_import_providers_or_pilot():
+    for module in _SCORING_MODULES:
+        reached = _transitive(module)
+        assert "providers" not in reached, (
+            f"{module} transitively imports providers: {sorted(reached)}"
+        )
+        assert "pilot" not in reached, (
+            f"{module} transitively imports pilot: {sorted(reached)}"
+        )
+
+
+def test_scoring_modules_have_no_dynamic_imports_of_providers():
+    # The AST walk sees only static imports. providers/pilot are the network-facing modules;
+    # a dynamic importlib pull into a scoring module would evade the graph walk above — close
+    # that at the source-text level for every scoring module.
+    for module in _SCORING_MODULES:
+        src = (PKG / f"{module}.py").read_text()
+        assert "importlib" not in src, f"{module}.py must not use dynamic imports"
+        assert "__import__" not in src, f"{module}.py must not use dynamic imports"
