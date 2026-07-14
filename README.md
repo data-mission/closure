@@ -2,6 +2,15 @@
 
 A research program on inference-time structure in large language models: a testable mechanistic hypothesis for hallucination and confidence, non-LLM-judged verification of model outputs, and a test of whether structural output quality is one measurable object.
 
+Originated and led by [Vlad Ryzhkov](AUTHORS.md). Just entered its public research phase — the theory, its adversarial reduction, the hypotheses with their kill conditions, and the experiment protocols are published; execution is beginning. No experiment has run yet, and that is the point: the program is public so the plan can be attacked before execution hardens its assumptions ([STATUS.md](STATUS.md)).
+
+## Choose your entry point
+
+- **You do interpretability or evaluation research** → the [central question](#the-hypothesis), then [E0](experiments/E0-closure-existence/) and the [kill conditions](HYPOTHESES.md). The invitation is not agreement — it is the strongest valid objection, the smallest decisive experiment, or the cleanest way to retire an unnecessary concept ([OBJECTIONS.md](OBJECTIONS.md)).
+- **You want to build or contribute** → [STATUS.md](STATUS.md) for what is implementable now (the shared G/R/P instrument, useful regardless of whether the theory holds), then [CONTRIBUTING.md](CONTRIBUTING.md).
+- **You came for the founding theory** → [CONCEPT.md](CONCEPT.md), the full vision stated before any of it is proven, and [the reduction history](background/reduction-history.md) — how it was compressed under adversarial review, what that got right, and what it dropped without disproving.
+- **You are evaluating the work or its author** → the [reduction history](background/reduction-history.md) and [HYPOTHESES.md](HYPOTHESES.md) show how a new problem was formed, reduced, and made falsifiable; [AUTHORS.md](AUTHORS.md) states authorship and how contribution is credited.
+
 ## Problem
 
 Production evaluation of LLM outputs is LLM-as-judge — a model grading a model, inheriting its failure modes. The causal alternatives are published and validated (leave-one-out attribution, perturbation testing, semantic clustering) but ship nowhere together, and nobody has asked whether the properties they measure are related. Meanwhile the 2025–26 literature on hidden-state dynamics contradicts itself: hallucination is reported both as a trajectory settling *too early* into a stable-but-wrong attractor (arXiv:2604.15400) and as *failing to settle* (arXiv:2602.09825, 2507.06722) — and no study measures the variable that could reconcile them: whether the state settled **before or after incorporating the provided evidence**.
@@ -88,6 +97,9 @@ Claims that failed adversarial review are recorded and closed — "new computati
 
 ## Documents
 
+- [STATUS.md](STATUS.md) — the present stage stated plainly: what is published, ready, not yet run, and explicitly not claimed
+- [AUTHORS.md](AUTHORS.md) — origination, leadership, and how contribution is credited
+- [OBJECTIONS.md](OBJECTIONS.md) — the strongest objections to the program, each classified and answered
 - [CONCEPT.md](CONCEPT.md) — the founding vision, preserved as hypothesis
 - [HYPOTHESES.md](HYPOTHESES.md) — every claim with its kill condition; retired claims with cause of death
 - [METHODOLOGY.md](METHODOLOGY.md) — every method anchored to its named standard, declared as a contribution, or listed as a known nonconformance with its fix

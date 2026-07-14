@@ -3,20 +3,30 @@ title: "closure: an open research program on inference-time structure in LLMs"
 message: "If you use or refer to this program, please cite it as below."
 type: software
 authors:
-  - name: "closure research program contributors"
+  - family-names: "Ryzhkov"
+    given-names: "Vlad"
+    alias: "data-mission"
 repository-code: "https://github.com/data-mission/closure"
+url: "https://github.com/data-mission/closure"
 abstract: >-
-  A pre-registered open research program testing whether structural
-  quality measurements of language-model output (grounding, rigidity,
-  preserved ambiguity, and related contracts) are independent tests or
-  noisy readouts of one latent property ("closure"). Eight experiments,
-  each with pre-registered verdict conditions, a living hypothesis
-  registry, and a citation-verification ledger.
+  An open research program investigating whether language-model inference
+  can be described, and eventually programmed, through structural
+  properties — constraint, dependency, perturbation, release, coupling,
+  stabilization — while treating language as a lossy observable rather
+  than assuming it is the model's native computational ontology. The
+  founding ontology is reduced to eight falsifiable experiments, each
+  with pre-registered verdict conditions and a kill condition, a living
+  hypothesis registry, and a citation-verification ledger. Originated and
+  led by Vlad Ryzhkov.
 keywords:
   - large language models
-  - evaluation
+  - interpretability
+  - mechanistic interpretability
   - hallucination
+  - uncertainty quantification
+  - llm evaluation
   - factor analysis
   - pre-registration
-  - reproducibility
+  - open science
 license: MIT
+version: "0.1.0"
