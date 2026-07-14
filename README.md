@@ -91,7 +91,9 @@ Claims that failed adversarial review are recorded and closed — "new computati
 - [CONCEPT.md](CONCEPT.md) — the founding vision, preserved as hypothesis
 - [HYPOTHESES.md](HYPOTHESES.md) — every claim with its kill condition; retired claims with cause of death
 - [METHODOLOGY.md](METHODOLOGY.md) — every method anchored to its named standard, declared as a contribution, or listed as a known nonconformance with its fix
-- [background/](background/) — prior-art map, closure vs Design-by-Contract, reduction history
+- [decisions/](decisions/) — the methodology choices each experiment's protocol leaves open, frozen with their reasoning (proposed until pre-registered)
+- [experiments/E0-closure-existence/PLAN.md](experiments/E0-closure-existence/PLAN.md) — how the shared G/R/P instrument is built and run to a first verdict
+- [background/](background/) — prior-art map, closure vs Design-by-Contract, reduction history, how the execution plan was derived
 - [CONTRIBUTING.md](CONTRIBUTING.md) — evidence standards, how to run or attack an experiment
 
 MIT license.

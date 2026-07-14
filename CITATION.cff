@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: "closure: an open research program on inference-time structure in LLMs"
+message: "If you use or refer to this program, please cite it as below."
+type: software
+authors:
+  - name: "closure research program contributors"
+repository-code: "https://github.com/data-mission/closure"
+abstract: >-
+  A pre-registered open research program testing whether structural
+  quality measurements of language-model output (grounding, rigidity,
+  preserved ambiguity, and related contracts) are independent tests or
+  noisy readouts of one latent property ("closure"). Eight experiments,
+  each with pre-registered verdict conditions, a living hypothesis
+  registry, and a citation-verification ledger.
+keywords:
+  - large language models
+  - evaluation
+  - hallucination
+  - factor analysis
+  - pre-registration
+  - reproducibility
+license: MIT
