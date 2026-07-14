@@ -81,3 +81,56 @@ the OSF freeze. Hard rules unchanged: no AI/"Claude" mention anywhere in the rep
      pipeline at toy scale) → OSF pre-register E0 before its first real run.
 2. The E0-vs-E5 opener still hinges on one external fact: OSF pre-registration latency (self-serve days vs
    institutional weeks). Resolve that before committing the order.
+
+---
+
+## 2026-07-14 — E5 opens the program; the G-slice harness lands
+
+**Decided, and why.** E5, not E0, is the opener. Re-deriving the experiment ordering against the claim lattice:
+E0 decides scalar aggregation only (H-SCALAR) and is thesis-neutral by the consequence matrix — its likely
+outcome is confounded with the instrument's own structure (each construct's sub-indicators share one method, so
+per-construct separation is predicted by method variance alone; this mono-method debt is recorded for E0's own
+protocol before its freeze). E5 is the cheapest thesis-relevant test: API-only, no GPU, no second key for the
+registered primary run, and either outcome moves the thesis — a mechanical-contraction win is the first
+controlled operator evidence, a null retires `release` cheaply.
+
+**The E5 design repair, before any run.** A pre-execution audit found two defects in E5's protocol and both were
+closed before any pilot or corpus exists. First, a selection-on-outcome loop: the contamination detector both
+built Arm C (choosing what to delete) and scored the outcome (what contamination remains), so C won partly by
+construction. The detector is now scoped to Arm C's contraction only; the outcome is referenced to per-task
+ground-truth annotations — must-change and must-persist conclusions — that the contraction rule never touches.
+Second, a missing dimension: with contamination the only measure an arm can win by deletion, so completeness
+(retention of must-persist conclusions) is added as a co-primary with a pre-registered non-inferiority margin
+(δ = 0.10), and a contamination win with inferior completeness is pre-registered as *contraction wins by
+deletion* — a failure, not a confirmation. Recorded in `background/reduction-history.md`.
+
+**Pre-flight facts (web-verified, 2026-07-14).** ReviseQA, DeltaLogic, and Belief-R do not preempt the 3-arm
+design: each compares update *presentation* (all appends) or measures instruction-level revision — none carries a
+mechanical-rebuild arm with downstream-contamination annotations, so the corpus is not duplicative. DeltaLogic's
+changed/control labeling is the same shape as our must-change/must-persist outcomes — cited as metric lineage,
+novelty claimed only on the 3-arm delivery comparison plus mechanical rebuild. XTrace advertises AGM contraction
+as a runtime operation but its live API docs (fetched directly) expose only active/archived memory states and its
+product is not released — the "first controlled comparison" priority claim is therefore claimable today but
+time-pressured. Replication arm pinned to `gpt-5.4-mini-2026-03-17` (the only GPT tier with frozen dated
+snapshots; the 5.6 family has none and is unusable for pre-registration).
+
+**Built.** `harness/` — the first code in the repo, a `uv` project (`closure-harness`) with committed `uv.lock`
+and `.python-version`, and the two deferred practices from the 2026-07-13 entry now armed: a frozen-config
+mechanism (sorted-key JSON → SHA-256, committed hash file, `scripts/check_config_freeze.py` that fails on drift)
+and the config hash itself as the pre-registration freeze token. The G-slice modules match decisions 0001/0002/
+0006/0007: the NLI grounding scalar (pinned DeBERTa-MNLI checkpoint), the leave-one-out contrast, the
+contamination detector (scoped to contraction), the deterministic Arm-C contraction with a derived — never
+regenerated — conclusion, ground-truth outcome scoring, and the comparison test (two-proportion z-test with
+Bonferroni correction, MDE for N=60, completeness non-inferiority). The scoring modules import no provider SDK —
+generation takes an injected callable that halts on a model-identity mismatch.
+
+Synthetic fixtures were committed with the harness, before any real data or model run exists — validating the
+detector, contraction, outcome, and stats logic on hand-computed cases while the data is still throwaway is the
+anti-fishing point. The detector flags exactly the planted set across the full sensitivity sweep; contraction
+reaches a hand-computed fixpoint and serializes byte-identically across runs; the deletion trap scores
+contamination 0 *and* completeness 0; the z-test matches scipy and non-inferiority is correct at the exact
+boundary; an import-hygiene test proves the outcome scorer never reaches the detector. The single real-model test
+is `slow`-marked and confirms NLI direction (entailed above contradicted) at measured throughput.
+
+**Next session starts here:** S3 — corpus construction per the execution plan (60 tasks, verified A-dependency,
+must-change / must-persist annotations authored at construction time).
