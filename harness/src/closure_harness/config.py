@@ -54,9 +54,14 @@ class OutcomeConfig:
 
 @dataclass(frozen=True)
 class SamplerConfig:
-    # 0001 sampler, shared across arms. Non-zero temperature is mandatory (0001).
-    temperature: float = 0.7
-    top_p: float = 0.95
+    # 0001 sampler, shared across arms. Decision 0001's original values (temperature 0.7,
+    # top_p 0.95) predate checking the pinned tier's API surface, which rejects explicit
+    # sampling values — see decisions/0001. Repair: the registered sampler is the provider
+    # default (stochastic), which satisfies 0001's non-zero-temperature rationale (preserved
+    # dispersion must not degenerate); thinking is disabled to isolate single-pass generation
+    # behavior across arms and keep the output budget clean. Both are hashed frozen choices.
+    sampling: str = "provider-default"
+    thinking: str = "disabled"
 
 
 @dataclass(frozen=True)

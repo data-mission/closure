@@ -89,17 +89,16 @@ def make_provider(config: Config = CONFIG) -> Callable[[str], ProviderResponse]:
     The returned callable reads ANTHROPIC_API_KEY from the environment on EACH invocation and
     constructs a client scoped to that call, so the key is never held on a long-lived object or
     captured in a closure that could be logged. Model id comes from config.generation.model_pin;
-    temperature/top_p from config.sampler; the structured-output format is the frozen 0001 schema.
+    the structured-output format is the frozen 0001 schema.
 
-    Sampler note: config.sampler carries the frozen decision-0001 sampler (temperature 0.7,
-    top_p 0.95). These are sent verbatim because they are part of the registered configuration
-    that the freeze hash and reproducibility depend on. If the pinned model rejects non-default
-    sampling parameters, that is a pin/sampler conflict to resolve BEFORE the pilot runs — this
-    module does not silently drop the frozen parameters to make a call succeed.
+    Sampler note: the pinned tier exposes no sampling parameters — explicit temperature/top_p are
+    rejected by the API — so none are sent, and the registered sampler is the provider default
+    (stochastic), recorded in the frozen config as sampling="provider-default". Thinking is
+    explicitly disabled (thinking={"type": "disabled"}), also a frozen choice, so an unfrozen
+    adaptive-reasoning mode cannot ride along outside the freeze hash. Both are hashed via
+    config.sampler; this module reads neither directly because the API surface fixes them here.
     """
     model_pin = config.generation.model_pin
-    temperature = config.sampler.temperature
-    top_p = config.sampler.top_p
 
     def generate(prompt: str) -> ProviderResponse:
         # Read the key at call time; never stored on the client beyond this call's scope,
@@ -119,8 +118,12 @@ def make_provider(config: Config = CONFIG) -> Callable[[str], ProviderResponse]:
             message = client.messages.create(
                 model=model_pin,
                 max_tokens=_MAX_TOKENS,
-                temperature=temperature,
-                top_p=top_p,
+                # No temperature/top_p: the pinned tier rejects explicit sampling parameters;
+                # the registered sampler is the provider default (config: "provider-default").
+                # Thinking is explicitly disabled — a frozen choice that keeps generation
+                # single-pass across arms and prevents an unfrozen reasoning mode from riding
+                # along outside the freeze hash.
+                thinking={"type": "disabled"},
                 output_config={
                     "format": {
                         "type": "json_schema",

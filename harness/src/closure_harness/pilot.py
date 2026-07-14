@@ -458,7 +458,7 @@ def dry_run_report(candidates: list[Candidate]) -> str:
         "",
         f"config_hash: {config_hash()}",
         f"model_pin:   {CONFIG.generation.model_pin}",
-        f"sampler:     temperature={CONFIG.sampler.temperature}, top_p={CONFIG.sampler.top_p}",
+        f"sampler:     sampling={CONFIG.sampler.sampling}, thinking={CONFIG.sampler.thinking}",
         f"n_pilot_draws per state: {N_PILOT_DRAWS}",
         "",
         f"Plan: {n_tasks} tasks x {len(STATES)} states x {N_PILOT_DRAWS} draws = {total_draws} generations",

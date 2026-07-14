@@ -16,9 +16,15 @@ numbers the scoring produces, so each must be fixed before any data is generated
   preferred). Tier is a cost/capability choice to be fixed at freeze; `claude-sonnet-5` is the working default
   (structured output, current default tier, lower cost for short answers; long-context capacity is irrelevant to
   these tasks).
-- **Sampler (shared across G, R, P):** temperature 0.7, top-p 0.95. Non-zero is mandatory — at temperature 0 the
-  preserved-ambiguity dispersion is identically 0 and rigidity is identically perfect, collapsing two constructs.
-  The same sampler is used for every score so cross-indicator comparison is valid.
+- **Sampler (shared across G, R, P):** originally temperature 0.7, top-p 0.95. Non-zero is mandatory — at
+  temperature 0 the preserved-ambiguity dispersion is identically 0 and rigidity is identically perfect, collapsing
+  two constructs. The same sampler is used for every score so cross-indicator comparison is valid.
+  **Pre-registration repair (before any pilot call):** the pinned tier's API surface rejects explicit sampling
+  parameters, so the 0.7/0.95 values cannot be sent. The registered sampler is the provider default (stochastic,
+  non-zero), which satisfies the non-degenerate-dispersion rationale above; thinking is explicitly disabled to keep
+  generation single-pass across arms and the output budget clean. Both are recorded in the frozen config
+  (`sampling = "provider-default"`, `thinking = "disabled"`) and therefore in the freeze hash. This repair was made
+  before any generation call, so no data predates it.
 - **Structured-output schema:** `{claims: [{id, text, source_ids: [int]}], conclusion: str}`. One claim = one
   atomic proposition; `source_ids` records which provided inputs a claim draws on; an empty `source_ids` marks a
   structurally decorative claim (see 0002). This schema is a program design, not extracted from a standard — the
