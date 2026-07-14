@@ -1,0 +1,29 @@
+[project]
+name = "closure-harness"
+version = "0.1.0"
+description = "E5 G-slice measurement harness for the closure research program"
+readme = "README.md"
+authors = [
+    { name = "Vlad Ryzhkov", email = "vlad@scrapingmartians.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=2.4.6",
+    "scipy>=1.17.1",
+    "torch>=2.13.0",
+    "transformers>=5.13.1",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.26,<0.10.0"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+markers = [
+    "slow: exercises the real NLI model (deselect with '-m \"not slow\"')",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
