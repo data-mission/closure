@@ -42,5 +42,10 @@ def is_contaminated(
 
     full = grounding(scalar, sources, claim.text)
     without = grounding_without(scalar, sources, claim.text, claim.source_ids)
-    drop = full - without
-    return without >= floor and drop < ceiling
+    # Quantize before comparing: float64 subtraction can land an exactly-at-ceiling drop
+    # a hair under the ceiling (0.30 - 0.20 = 0.0999...8), flipping the registered
+    # boundary exclusion. Quantization decimals are a frozen config field.
+    q = config.quantize_decimals
+    without_q = round(without, q)
+    drop_q = round(full - without, q)
+    return without_q >= floor and drop_q < ceiling

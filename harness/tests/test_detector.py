@@ -79,3 +79,27 @@ def test_frozen_defaults_match_center_of_sweep(stub_scalar):
     # No overrides -> uses CONFIG.detector (0.7 / 0.10), the sweep centre.
     assert is_contaminated(s, SOURCES, contaminated) is True
     assert is_contaminated(s, SOURCES, clean) is False
+
+
+def test_out_of_range_source_ids_raise(stub_scalar):
+    # A hallucinated citation index would remove nothing, force drop == 0, and mislabel
+    # the claim contaminated regardless of its real grounding. Fail loudly instead; the
+    # output goes to the pre-registered exclusion bucket.
+    s = stub_scalar(default=0.9)
+    bogus = Claim(id=1, text="bogus-ref", source_ids=(5,))
+    with pytest.raises(ValueError, match="out of range"):
+        is_contaminated(s, SOURCES, bogus)
+    negative = Claim(id=2, text="neg-ref", source_ids=(-1,))
+    with pytest.raises(ValueError, match="out of range"):
+        is_contaminated(s, SOURCES, negative)
+
+
+def test_boundary_robust_to_float_noise(stub_scalar):
+    # 0.30 - 0.20 = 0.0999...8 in float64: a drop that is mathematically exactly at the
+    # 0.10 ceiling must still be excluded (strict <), not flip to contaminated via
+    # subtraction noise. Quantization (config.quantize_decimals) makes the boundary exact.
+    claim = Claim(id=1, text="float-edge", source_ids=(0,))
+    s = stub_scalar()
+    s.set(["source-one"], claim.text, 0.20)
+    s.set(SOURCES, claim.text, 0.30)  # drop = 0.30 - 0.20 == 0.10 exactly (mathematically)
+    assert is_contaminated(s, SOURCES, claim, grounding_floor=0.15, drop_ceiling=0.10) is False

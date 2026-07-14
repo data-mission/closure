@@ -62,23 +62,27 @@ def score(
 ) -> Score:
     """Contamination and completeness for one arm output against the task annotations.
 
-    An empty annotation set yields 0.0 for that dimension (no items to still-assert).
+    Empty annotation sets raise: a task with no must-change items has nothing to measure
+    (it should have failed the A-dependency exclusion at corpus construction), and an empty
+    must-persist set would silently score every arm 0.0 completeness — worst possible — on
+    that task. Scoring defaults must fail loudly, never distort quietly.
     """
     t = config.assert_threshold
 
     change = annotations.must_change
     persist = annotations.must_persist
+    if not change or not persist:
+        raise ValueError(
+            "annotation sets must be non-empty (must_change: "
+            f"{len(change)}, must_persist: {len(persist)}); exclude the task upstream"
+        )
 
-    contamination = (
-        sum(1 for c in change if _still_asserts(scalar, output, c, t)) / len(change)
-        if change
-        else 0.0
-    )
-    completeness = (
-        sum(1 for c in persist if _still_asserts(scalar, output, c, t)) / len(persist)
-        if persist
-        else 0.0
-    )
+    contamination = sum(
+        1 for c in change if _still_asserts(scalar, output, c, t)
+    ) / len(change)
+    completeness = sum(
+        1 for c in persist if _still_asserts(scalar, output, c, t)
+    ) / len(persist)
     return Score(contamination=contamination, completeness=completeness)
 
 

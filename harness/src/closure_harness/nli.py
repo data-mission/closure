@@ -55,10 +55,11 @@ class NLIScorer:
         revision = config.fallback_revision if config.use_fallback else config.revision
 
         self._torch = torch
-        if torch.backends.mps.is_available():
-            self.device = torch.device("mps")
-        else:
-            self.device = torch.device("cpu")
+        # Device comes from the frozen config, never from runtime availability: MPS/CUDA
+        # float paths are not bit-identical to CPU, so an availability-based pick would make
+        # scores machine-dependent under an identical config hash. Registered runs pin "cpu".
+        self.device = torch.device(config.device)
+        torch.use_deterministic_algorithms(True)
 
         self.tokenizer = AutoTokenizer.from_pretrained(checkpoint, revision=revision)
         self.model = AutoModelForSequenceClassification.from_pretrained(
@@ -91,7 +92,19 @@ class NLIScorer:
                 max_length=self.config.max_length,
                 padding=True,
                 return_tensors="pt",
-            ).to(self.device)
+            )
+            # Fail closed on truncation: a silently-truncated premise changes what
+            # "grounded" means for that pair with no visibility. The corpus spec caps
+            # source length; anything longer must be excluded upstream, not clipped here.
+            if enc["input_ids"].shape[1] >= self.config.max_length:
+                lengths = [len(self.tokenizer(p, h)["input_ids"]) for p, h in chunk]
+                over = [i for i, n in enumerate(lengths) if n > self.config.max_length]
+                if over:
+                    raise ValueError(
+                        f"NLI input exceeds max_length={self.config.max_length} for pair "
+                        f"indices {over} in this batch; exclude or shorten the source text"
+                    )
+            enc = enc.to(self.device)
             with torch.no_grad():
                 logits = self.model(**enc).logits
             probs = torch.softmax(logits, dim=-1)

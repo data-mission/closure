@@ -19,7 +19,10 @@ determinism.
   measure): a claim is contaminated iff its grounding stays ≥ 0.7 even when all of its `source_ids` are removed
   (grounding_drop < 0.10) — it was reproduced from parametric memory, not the provided source. The 0.7 and 0.10
   values carry the same anti-fishing requirement as 0002's cutoff (calibrated on held-out data or pre-registered
-  with a sensitivity sweep).
+  with a sensitivity sweep). Inside the contraction, grounding is the **deterministic single-evaluation NLI
+  scalar** — 0002's mean-over-K regeneration averaging does not apply here, because regenerating model output
+  inside Arm C would void the bit-for-bit reproducibility check below; the K-averaged form belongs to the E0
+  measurement context, where scores aggregate over model-regenerated outputs.
 - **Outcome measures (ground-truth referenced, scored identically across all arms):** task construction annotates,
   per task, which downstream conclusions **must change** under ¬A and which **must persist** — the protocol's step-1
   ground truth made explicit as two annotation sets. Primary outcome, contamination: the fraction of must-change

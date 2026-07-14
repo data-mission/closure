@@ -49,6 +49,15 @@ def test_outcomes_does_not_import_detector():
     assert "detector" not in reached, f"outcomes transitively imports: {sorted(reached)}"
 
 
+def test_outcomes_has_no_dynamic_imports():
+    # The AST walk resolves static Import/ImportFrom nodes only — a dynamic
+    # importlib.import_module("...detector") would be invisible to it. Close the blind
+    # spot at the source-text level for the module the separation protects.
+    src = (PKG / "outcomes.py").read_text()
+    assert "importlib" not in src, "outcomes.py must not use dynamic imports"
+    assert "__import__" not in src, "outcomes.py must not use dynamic imports"
+
+
 def test_detector_is_only_reached_through_contraction():
     # Sanity anchor for the separation: contraction is the only module that pulls in detector.
     reached_from_contraction = _transitive("contraction")

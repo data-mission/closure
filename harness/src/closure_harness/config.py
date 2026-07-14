@@ -25,6 +25,10 @@ class NLIConfig:
     use_fallback: bool = False
     max_length: int = 512
     batch_size: int = 16
+    # Frozen inference device. Registered runs pin "cpu": MPS/CUDA float paths are not
+    # bit-identical to CPU, and an unrecorded device would let two machines disagree at the
+    # 0.7/0.10 thresholds while reporting the same config hash (0007 bit-for-bit clause).
+    device: str = "cpu"
 
 
 @dataclass(frozen=True)
@@ -35,6 +39,10 @@ class DetectorConfig:
     drop_ceiling: float = 0.10
     grounding_floor_sweep: tuple[float, ...] = (0.65, 0.70, 0.75)
     drop_ceiling_sweep: tuple[float, ...] = (0.05, 0.10, 0.15)
+    # Threshold comparisons quantize to this many decimals before comparing: float64
+    # subtraction can land a mathematically-exact-0.10 drop at 0.0999...8, flipping the
+    # boundary case the strict `<` is registered to exclude.
+    quantize_decimals: int = 9
 
 
 @dataclass(frozen=True)

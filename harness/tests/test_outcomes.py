@@ -8,6 +8,8 @@ caught, because completeness collapses too).
 
 from __future__ import annotations
 
+import pytest
+
 from closure_harness.config import CONFIG
 from closure_harness.outcomes import Annotations, contamination_rate, completeness_rate, score
 from closure_harness.schema import Claim, Output
@@ -54,7 +56,8 @@ def test_threshold_is_inclusive(stub_scalar):
     s = stub_scalar(default=0.0)
     s.table[_asserted_key(out, "exact")] = T  # exactly threshold
     s.table[_asserted_key(out, "below")] = T - 1e-9
-    ann = Annotations(must_change=("exact", "below"), must_persist=())
+    s.table[_asserted_key(out, "kept")] = 1.0
+    ann = Annotations(must_change=("exact", "below"), must_persist=("kept",))
     assert score(s, out, ann).contamination == 0.5
 
 
@@ -72,12 +75,18 @@ def test_deletion_trap(stub_scalar):
     assert result.completeness == 0.0  # the trap: cleanliness bought by gutting is visible here
 
 
-def test_empty_annotation_sets(stub_scalar):
+def test_empty_annotation_sets_raise(stub_scalar):
+    # An empty set means a broken task slipped past corpus exclusion: fail loudly. Silent
+    # 0.0 would score every arm worst-possible completeness (or best-possible
+    # contamination) on that task, distorting rates without a trace.
     out = _output()
     s = stub_scalar(default=1.0)
-    result = score(s, out, Annotations(must_change=(), must_persist=()))
-    assert result.contamination == 0.0
-    assert result.completeness == 0.0
+    with pytest.raises(ValueError, match="non-empty"):
+        score(s, out, Annotations(must_change=(), must_persist=()))
+    with pytest.raises(ValueError, match="non-empty"):
+        score(s, out, Annotations(must_change=("x",), must_persist=()))
+    with pytest.raises(ValueError, match="non-empty"):
+        score(s, out, Annotations(must_change=(), must_persist=("x",)))
 
 
 def test_arm_level_rates(stub_scalar):

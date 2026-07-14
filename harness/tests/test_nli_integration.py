@@ -48,3 +48,23 @@ def test_direction_and_throughput(capsys):
             f"{n_pairs} directional pairs in {elapsed:.2f}s -> {pps:.1f} pairs/sec"
         )
     assert pps > 0
+
+
+@pytest.mark.slow
+def test_truncation_fails_closed():
+    # Fail-closed on over-length input: a source longer than max_length must raise, not
+    # silently clip (which would change what "grounded" means with no trace). Needs the real
+    # tokenizer, so it lives here. A small max_length forces the boundary without huge text.
+    import dataclasses
+
+    from closure_harness.config import NLIConfig
+    from closure_harness.nli import NLIScorer
+
+    scorer = NLIScorer(dataclasses.replace(NLIConfig(), max_length=16))
+
+    # Exactly at the cap must NOT raise; over the cap must raise.
+    at_cap = " ".join(["word"] * 12)  # 16 tokens with the tiny source premise below
+    assert 0.0 <= scorer(["ok"], at_cap) <= 1.0
+    over_cap = " ".join(["word"] * 30)
+    with pytest.raises(ValueError, match="exceeds max_length"):
+        scorer(["ok"], over_cap)
