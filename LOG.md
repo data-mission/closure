@@ -38,3 +38,46 @@ contribution. Filled it:
    config to sorted-key JSON, SHA-256 it, put the hash in the OSF registration, and add a pre-commit check that
    fails on drift. That hash is what turns "we froze the plan before data" from a claim into something a reader
    can verify in one command.
+
+---
+
+## 2026-07-14 — public launch architecture + the E0 governance correction
+
+**Done.** Two bodies of work landed on `main` (HEAD `fcdd346`).
+
+Launch architecture: `AUTHORS.md` (originator + how contribution is credited), `STATUS.md` (present stage,
+sectioned), `OBJECTIONS.md` (objections classified and answered), a `CITATION.cff` naming the author, and README
+authorship + "Choose your entry point" navigation. Release notes, initial issues, discussion seeds, and outreach
+copy are staged privately (not in this repo).
+
+Governance: E0 was declared a gate over the whole program. A pre-execution audit found a category error — "one
+object to specify over" was conflated with "one scalar latent factor," and a first fix over-corrected into a
+single super-hypothesis. Corrected to a **claim lattice** under one rule: *each experiment may directly retire
+only the claim it measures; broader claims survive, weaken, or die by their explicit dependencies*. H-CORE →
+H-SCALAR (scalar aggregation only); H-ENFORCE / H-RELEASE / H-LOWER / H-COMPOSE each carry a scoped kill and no
+E0 dependency; H-CONTROL-PLANE and H-NATIVE added as future architectural hypotheses (the control plane itself a
+future lattice, not a monolith); a consequence matrix states what survives each result. The correction is
+recorded in `background/reduction-history.md` as a versioned repair made before any run.
+
+The README now also carries the long-term architectural thesis (`Human intent → structural specification →
+lowering → mechanisms → execution → inspection → observable`) with its three stages (now / tested by E0–E7 /
+possible later), labelled conditional. Both figures (dependency graph, claim structure) were regenerated from
+their `.mmd` sources and visually verified.
+
+**Decided, and why.** The governance now mirrors the ontology it tests — preserve distinctions, couple each
+claim to its evidence, release only what evidence invalidates, don't collapse prematurely. That is the
+strongest available protection against the originator's (and any collaborator's) positive bias: no single
+result can be read as validating the whole.
+
+**State.** HEAD `fcdd346`, clean, pushed. No experiment has run. All decision-record pins remain PROPOSED until
+the OSF freeze. Hard rules unchanged: no AI/"Claude" mention anywhere in the repo or commit messages.
+
+**Next session starts here.**
+1. Two independent tracks — pick either:
+   - **Launch (no code):** stage in `_dev_notes/closure-ir-research/LAUNCH-KIT.md`. Order: mint a Zenodo DOI on a
+     `v0.1.0` tag (highest value — turns the self-asserted-timestamp nonconformance into an attested fact) →
+     publish the v0.1 release → open the 7 issues → enable Discussions + seeds → outreach (repo first).
+   - **Science:** pin the generation model (decision 0001) → tracer-bullet run (ONE task through the whole
+     pipeline at toy scale) → OSF pre-register E0 before its first real run.
+2. The E0-vs-E5 opener still hinges on one external fact: OSF pre-registration latency (self-serve days vs
+   institutional weeks). Resolve that before committing the order.

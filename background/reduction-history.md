@@ -35,3 +35,13 @@ The second error appeared in the first attempt to fix the first: it replaced the
 The correction is a claim lattice under a single governing rule: *each experiment may directly retire only the claim it measures; broader architectural claims survive, weaken, or die by their explicitly documented dependencies and their own tests.* Each property — scalar aggregation, enforcement, release, composition, lowering — is its own hypothesis with its own scoped kill condition, and architecture-level viability is read off a [consequence matrix](../HYPOTHESES.md#consequence-matrix) rather than decided by any single verdict. The execution control plane and native model-to-model communication are recorded as later hypotheses requiring their own future tests, not as claims E0–E7 could establish.
 
 The correction was made before any experiment ran — a repair of an overbroad precommitment, not a change made after seeing a result. Its deeper point is that the governance now instantiates the ontology it studies: preserve distinctions, couple each claim to its evidence, release only what evidence invalidates, and do not collapse structures that have not been tested together.
+
+## A design repair to E5, made before any run
+
+A pre-execution audit of E5's protocol found two defects; both were repaired before any pilot, corpus, or registration existed.
+
+The first was a selection-on-outcome loop. The contamination detector drove Arm C's contraction (choosing which claims to delete) and also scored the experiment's outcome (how much contamination remains). An intervention that deletes whatever the outcome instrument flags wins on that instrument partly by construction. The repair separates the roles: the detector remains Arm C's contraction rule, and the outcome is referenced to per-task ground-truth annotations — which conclusions must change under ¬A and which must persist — that the contraction rule never touches ([0007](../decisions/0007-e5-reclosure.md)).
+
+The second was a missing outcome dimension. With contamination as the only measure, an arm can win by deletion: remove enough content and nothing depends on anything. The repair adds completeness — retention of must-persist conclusions — as a co-primary outcome with a pre-registered non-inferiority margin. A contamination win with completeness inferior beyond the margin is pre-registered as *contraction wins by deletion*, a failure of the operator as formulated, not a confirmation.
+
+Like the governance correction above, this is a repair made before data existed, kept visible because outcome definitions being open to criticism is part of the program's honesty.

@@ -13,7 +13,7 @@ Solid edges: the measurement tooling consumed as an instrument — one implement
 
 ## Suggested order for a newcomer
 
-1. **[E0](E0-closure-existence/)** — near-free, gates the biggest questions, pure statistics on top of scored outputs.
+1. **[E0](E0-closure-existence/)** — near-free, decides scalar aggregation (H-SCALAR) only, pure statistics on top of scored outputs.
 2. **[E5](E5-reclosure/)** — API-only, the premise has a strong published tailwind, a clean result in days.
 3. **[E3](E3-future-volume/)** — first experiment needing an open-weights model; standalone-valuable outcome either way.
 4. **[E4](E4-enforced-ambiguity/)** — the first actuation test (enforcement vs instruction).

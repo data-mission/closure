@@ -20,12 +20,13 @@ Citation statuses: [VERIFICATION.md](../../VERIFICATION.md).
 2. **Arm A — naive append.** ¬A is appended; generation continues.
 3. **Arm B — instructed disregard.** ¬A appended with an explicit, maximally strong instruction to retract A and revise everything that depended on it.
 4. **Arm C — mechanical reclosure.** The context is programmatically rebuilt: A removed, ¬A inserted, verified-independent facts carried over per an explicit contraction rule (AGM semantics: retract A and everything whose support depended on A; keep what stands independently). Full regeneration from the rebuilt boundary.
-5. **Outcome measure.** Per-conclusion downstream contamination: does any conclusion still depend on A? Measured causally with the leave-one-out machinery (remove A from the rebuilt context; conclusions that shift were still A-dependent) — the program's grounding test used as the contamination detector.
+5. **Outcome measures.** Scored against the step-1 ground truth, identically across arms. *Contamination*: the fraction of conclusions annotated **must-change** under ¬A that the arm's final output still asserts (bidirectional NLI against the annotated A-dependent conclusion). *Completeness*: the fraction of conclusions annotated **must-persist** that the output still asserts. The leave-one-out grounding machinery serves as Arm C's contraction rule — which claims to delete — while the outcomes are referenced to annotations that rule never touches: the contraction is never scored by the detector that built it, and no arm can win contamination by deleting everything ([0007](../../decisions/0007-e5-reclosure.md)).
 
 ## Verdict conditions (pre-registered)
 
-- **CONFIRMED** iff C substantially beats B on contamination (B vs A quantifies the value of instruction; C vs B isolates the operation). Report effect sizes per task family and per contamination depth (direct conclusions vs second-order inferences).
+- **CONFIRMED** iff C substantially beats B on contamination (per the pre-registered test in [0007](../../decisions/0007-e5-reclosure.md)) **and** C is non-inferior to B on completeness (margin pre-registered there). B vs A quantifies the value of instruction; C vs B isolates the operation. Report effect sizes per task family and per contamination depth (direct conclusions vs second-order inferences).
 - **REFUTED** iff B ≈ C — instruction suffices in this setting, the published contamination results notwithstanding, and the `release` operator is demoted in the registry.
+- **CONTRACTION WINS BY DELETION** iff C beats B on contamination but falls below B on completeness beyond the pre-registered margin — recorded as a failure of the operator as formulated: removing content trivially removes contamination, and the operator earns existence only by revising without gutting.
 - **Validity gate:** the Arm-C contraction rule must be algorithmic — an explicit rule or model-computed dependency, applied uniformly across tasks. A hand-curated per-task contraction set turns Arm C into a human oracle beating a prompt, and voids the comparison. Pre-registered as invalid.
 
 ## Cost and prerequisites
