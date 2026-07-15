@@ -49,6 +49,15 @@ correctness number, so each must be fixed before the first real continuation is 
   the local host. This model supports Matryoshka truncation (64–768 dimensions), which would change every Gram
   entry, so the output dimension is fixed here at the full 768 — a frozen choice, not a library default. The
   revision is pinned in e3-0004 and version-recorded, not silently tracked.
+  **Pre-freeze repair (2026-07-14, before any real datum):** the pilot exposed two choices this record had
+  left implicit, both Gram-moving, both now fixed. (1) nomic-embed v1.5 **requires a task prefix**; the
+  prefix is fixed as `clustering: ` — dispersion measurement is the clustering-family use in the model's
+  own taxonomy; the pilot ran with exactly this prefix (revision `e9b6763023c676ca8431644204f50c2b100d9aab`).
+  (2) The embedder's raw output is fed to the volume statistic **un-preprocessed** — the mean-centering and
+  L2-normalization are performed inside the volume computation itself (once, by the instrument), never
+  upstream, so the statistic is applied to raw embeddings exactly as the validation suite proved it. Both
+  values enter the frozen config (e3-0004). This repair was made after pilot plumbing on disposable prompts
+  and before any confirmatory datum exists.
 
 - **Volume statistic: log-determinant of the Gram matrix of the mean-centered, L2-normalized embeddings, with a
   pre-registered ridge term.** For a prompt's N continuation embeddings: mean-center the N vectors, L2-normalize

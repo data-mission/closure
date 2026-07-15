@@ -39,9 +39,11 @@ sits.
     the lm_head top-1 sanity check in `../FEASIBILITY.md`).
   - **Inference stack:** mlx-lm 0.31.3, with the full dependency set pinned via a committed `uv.lock` and a
     committed `.python-version` for the e3 environment.
-  - **Embedding model:** `nomic-ai/nomic-embed-text-v1.5` at its pinned HF revision (e3-0002), output
-    dimension pinned at 768 — the model supports Matryoshka truncation (64–768), so the dimension is a
-    result-moving choice and is frozen, not defaulted.
+  - **Embedding model:** `nomic-ai/nomic-embed-text-v1.5` at HF revision
+    `e9b6763023c676ca8431644204f50c2b100d9aab` (pinned live by the pilot), output dimension pinned at 768 —
+    the model supports Matryoshka truncation (64–768), so the dimension is a result-moving choice and is
+    frozen, not defaulted. Task prefix pinned to `clustering: ` and raw-embedding input to the volume
+    statistic per e3-0002's pre-freeze repair.
   - **Seeds:** every seed above enumerated in a committed run manifest.
   - **Config freeze:** the full E3 configuration serialized to **sorted-key JSON** with a committed **SHA-256**
     hash, mirroring the program harness's config-freeze pattern — implemented as **new e3 files only**; the shared
