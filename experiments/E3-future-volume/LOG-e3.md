@@ -123,3 +123,43 @@ covers so the sign-off is informed, not ceremonial.
 2. After the OSF timestamp exists and predates it: the confirmatory run (~3 h for 200 prompts on
    this host), on an explicit go.
 3. At merge time: renumber `e3-000N` into the global decision sequence, fold this log into `LOG.md`.
+
+---
+
+## 2026-07-14 — the audit round: five lenses, a rehearsal, and a redesigned contract
+
+Third session of the day. Before freezing anything, the package was attacked: a five-lens adversarial
+audit (statistician, hostile reviewer, replication skeptic, interpretability, methodologist — mutually
+blind), a labeled dress rehearsal of the full stats path, a pre-mortem (`PREMORTEM.md`), and a
+full-text deep-read of every load-bearing citation. The mechanisms mirror the program's E5
+pre-execution audit; the yield was larger.
+
+**Found, and fixed (28-defect ledger; the fatal ones):**
+- Both claimed novelty edges were preempted at full-text depth: probe-beats-verbalized-confidence by
+  arXiv:2509.10625 (same model), continuous-uncertainty regression by the SEP authors' own workshop
+  follow-up (BbZKxrZCNn, Wayback-accessed). The claim is re-scoped (REGISTRATION-DRAFT §1): does a
+  VOLUME direction transfer across families where correctness directions provably do not
+  (arXiv:2506.08572), and does it add value over the correctness probe, entropy, and verbalized
+  confidence.
+- The verdict machine could confirm on an entropy re-reader, on family-band recognition, or on one
+  mislabeled negative (the rehearsal proved the last empirically — it fired confirmed-shaped off a
+  single truncation artifact). Rebuilt (`decisions/e3-0005-audit-redesign.md`, instrument at 99
+  tests): precondition layer with NOT_EVALUABLE, two-part fidelity on the non-degenerate subset,
+  within-family + family-oracle gates, within-held-out-family OOD Spearman with per-family floor and
+  range-coverage flag, a length-residualization gate (rehearsal: ρ(volume, length) = 0.910), and
+  added-value gates over B3, B4, and the max over verbalized arms — eleven honest branches.
+- The corpus made no negatives anywhere (Qwen 100% at every planned difficulty band) and was
+  contaminated with pilot prompts. Repaired: kind-calibrated d4 hardening (3×3 multiplication 0.125,
+  superheavy-element reverse facts ~0.6, six-seat puzzles 0.2–0.4 — measured, not assumed; expected
+  answerable accuracy ≈ 0.78), decontamination against a committed 193-prompt disposable manifest,
+  and a committed assembly-verification script.
+- Reproducibility spine: model revision now enforced at load; the freeze-hash schema covers the full
+  result-moving surface; normalizer and refusal rules are frozen text, not promises.
+
+**Decided, and why.** Fidelity is measured within family or not at all — between-family structure is
+the corpus's own design and proves nothing. A verdict that can say "not evaluable" is worth more than
+one that always answers. And the claim is now the maximal defensible sentence, no larger.
+
+**Next session starts here.** The registrant package is ready: corpus approval, threshold
+confirmation (10 new open parameters), named-reader verification of six papers, OSF submission, then
+the gated run. All human acts, in that order.
