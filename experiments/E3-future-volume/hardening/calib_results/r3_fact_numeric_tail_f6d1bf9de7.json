@@ -1,0 +1,17 @@
+{
+  "round": 3,
+  "kind": "fact_numeric_tail",
+  "family": "factual",
+  "prompt": "Which chemical element has atomic number 101?",
+  "gold": "Mendelevium",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The chemical element with atomic number 101 is Mendelevium. It is a synthetic element and was named after the Russian chemist Dmitri Mendeleev, who created the periodic table. Mendelevium does not occur naturally on Earth and is produced artificially in nuclear reactors.",
+  "answer_tokens": 59,
+  "eos_hit": true,
+  "wall_s": 2.7486662501469254,
+  "correct": true,
+  "truncated": false,
+  "extracted": "Mendelevium",
+  "note": "token-run-match"
+}

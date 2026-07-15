@@ -1,0 +1,17 @@
+{
+  "round": 2,
+  "kind": "arith_multistep",
+  "family": "arithmetic",
+  "prompt": "If 8 workers build a wall in 6 days, how many days do 12 workers take to build the same wall at the same rate?",
+  "gold": "4",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To solve this problem, we can use the concept of worker-days, which is a measure of the amount of work done. If 8 workers can build a wall in 6 days, then the total amount of worker-days required to build the wall is:\n\n\\[ 8 \\text{ workers} \\times 6 \\text{ days} = 48 \\text{ worker-days} \\]\n\nThis means that the wall requires 48 worker-days to be built. If we now have 12 workers, we need to find out how many days, \\(D\\), it will take for these 12 workers to complete the same amount of work (48 worker-days). We can set up the equation:\n\n\\[ 12 \\text{ workers} \\times D \\text{ days} = 48 \\text{ worker-days} \\]\n\nSolving for \\(D\\):\n\n\\[ D = \\frac{48 \\text{ worker-days}}{12 \\text{ workers}} = 4 \\text{ days} \\]\n\nSo, it will take 12 workers 4 days to build the same wall.",
+  "answer_tokens": 233,
+  "eos_hit": true,
+  "wall_s": 9.873614332638681,
+  "correct": false,
+  "truncated": false,
+  "extracted": "12.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

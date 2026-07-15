@@ -1,0 +1,19 @@
+{
+  "round": 1,
+  "kind": "fact_obscure",
+  "family": "factual",
+  "prompt": "What is the capital of Vanuatu?",
+  "gold": "Port Vila",
+  "accept": [
+    "Port-Vila"
+  ],
+  "tol": 0.0,
+  "answer": "The capital of Vanuatu is Port Vila. However, it's important to note that Vanuatu is a unique case in that it does not have a single capital city. Instead, it has two official capital cities: Port Vila and Vila. Port Vila is the largest city and the commercial capital, located on the island of Efate. Vila, on the other hand, is the seat of government and is located on the island of Tafea.",
+  "answer_tokens": 97,
+  "eos_hit": true,
+  "wall_s": 4.29239874985069,
+  "correct": true,
+  "truncated": false,
+  "extracted": "Port Vila",
+  "note": "token-run-match"
+}

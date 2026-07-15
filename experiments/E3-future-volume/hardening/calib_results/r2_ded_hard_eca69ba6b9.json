@@ -1,0 +1,17 @@
+{
+  "round": 2,
+  "kind": "ded_hard",
+  "family": "deduction",
+  "prompt": "Five people -- A, B, C, D, and E -- sit in seats numbered 1 to 5 from left to right. A sits immediately to the left of B. B sits immediately to the left of C. D sits somewhere to the left of A. E is in seat 5. Who sits in seat 1?",
+  "gold": "D",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "Let's break down the information step by step:\n\n1. A sits immediately to the left of B.\n2. B sits immediately to the left of C.\n3. D sits somewhere to the left of A.\n4. E is in seat 5.\n\nFrom points 1 and 2, we can deduce that A, B, and C must be sitting consecutively in seats 1, 2, and 3 or 2, 3, and 4. Let's consider the possible arrangements:\n\n- If A, B, and C are in seats 1, 2, and 3, then D must be in seat 4 or 5, but since E is in seat 5, D must be in seat 4.\n- If A, B, and C are in seats 2, 3, and 4, then D must be in seat 1.\n\nSince D must be to the left of A, the only possible arrangement that fits all the conditions is:\n\n- D is in seat 1.\n- A is in seat 2.\n- B is in seat 3.\n- C is in seat 4.\n- E is in seat 5.\n\nTherefore, the person sitting in seat 1 is D.",
+  "answer_tokens": 259,
+  "eos_hit": true,
+  "wall_s": 11.238403541967273,
+  "correct": true,
+  "truncated": false,
+  "extracted": "D",
+  "note": "token-run-match"
+}

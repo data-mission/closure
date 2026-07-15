@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "arith_multistep",
+  "family": "arithmetic",
+  "prompt": "A car travels at 72 kilometers per hour. How many kilometers does it travel in 25 minutes?",
+  "gold": "30",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To determine how many kilometers a car travels in 25 minutes when it is traveling at a speed of 72 kilometers per hour, we can follow these steps:\n\n1. **Convert the time from minutes to hours**: Since the speed is given in kilometers per hour, we need to convert 25 minutes into hours. There are 60 minutes in an hour, so we divide 25 minutes by 60 to get the time in hours.\n   \\[\n   \\text{Time in hours} = \\frac{25}{60} = \\frac{5}{12} \\text{ hours}\n   \\]\n\n2. **Calculate the distance traveled**: The distance traveled is the product of the speed and the time. The speed is 72 kilometers per hour, and the time is \\(\\frac{5}{12}\\) hours.\n   \\[\n   \\text{Distance} = 72 \\times \\frac{5}{12} = 72 \\times \\frac{5}{12} = 6 \\times 5 = 30 \\text{ kilometers}\n   \\]\n\nSo, the car travels \\(\\boxed{30}\\) kilometers in 25 minutes.",
+  "answer_tokens": 255,
+  "eos_hit": true,
+  "wall_s": 10.895566750317812,
+  "correct": true,
+  "truncated": false,
+  "extracted": "30.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

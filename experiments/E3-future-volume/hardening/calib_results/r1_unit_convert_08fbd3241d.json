@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "unit_convert",
+  "family": "arithmetic",
+  "prompt": "How many millimeters are in 4.2 centimeters?",
+  "gold": "42",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To convert centimeters to millimeters, you need to know that 1 centimeter is equal to 10 millimeters. Therefore, to convert 4.2 centimeters to millimeters, you multiply 4.2 by 10:\n\n\\[ 4.2 \\, \\text{cm} \\times 10 = 42 \\, \\text{mm} \\]\n\nSo, there are 42 millimeters in 4.2 centimeters.",
+  "answer_tokens": 98,
+  "eos_hit": true,
+  "wall_s": 4.325801958329976,
+  "correct": true,
+  "truncated": false,
+  "extracted": "42.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

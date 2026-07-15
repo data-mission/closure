@@ -1,0 +1,193 @@
+{"source": "spike-20", "prompt": "Compute the sum of the first 10 positive integers."}
+{"source": "spike-20", "prompt": "Describe an imaginary color that does not exist."}
+{"source": "spike-20", "prompt": "Give a one-word antonym for 'hot'."}
+{"source": "spike-20", "prompt": "How many continents are there on Earth?"}
+{"source": "spike-20", "prompt": "If a train travels 60 km in 45 minutes, what is its average speed in km/h?"}
+{"source": "spike-20", "prompt": "Invent a name for a new planet and say one thing about it."}
+{"source": "spike-20", "prompt": "Is it going to rain tomorrow?"}
+{"source": "spike-20", "prompt": "List three primary colors, separated by commas."}
+{"source": "spike-20", "prompt": "Rewrite this sentence in the past tense: 'She walks to the store.'"}
+{"source": "spike-20", "prompt": "Translate the word 'hello' into Spanish."}
+{"source": "spike-20", "prompt": "What does this mean?"}
+{"source": "spike-20", "prompt": "What is 17 multiplied by 23?"}
+{"source": "spike-20", "prompt": "What is the capital of France?"}
+{"source": "spike-20", "prompt": "What is the chemical symbol for gold?"}
+{"source": "spike-20", "prompt": "What is the derivative of x^3 with respect to x?"}
+{"source": "spike-20", "prompt": "What should I have for dinner?"}
+{"source": "spike-20", "prompt": "What year did the Apollo 11 mission land on the Moon?"}
+{"source": "spike-20", "prompt": "Which is better?"}
+{"source": "spike-20", "prompt": "Who wrote the play 'Romeo and Juliet'?"}
+{"source": "spike-20", "prompt": "Write the opening line of a mystery novel."}
+{"source": "pilot-30", "kind": "ambiguous", "prompt": "Can you fix it?"}
+{"source": "pilot-30", "kind": "instruction", "prompt": "Capitalize every word in this phrase: the quick brown fox."}
+{"source": "pilot-30", "kind": "creative", "prompt": "Compose a two-line poem about the ocean at night."}
+{"source": "pilot-30", "kind": "instruction", "prompt": "Convert the word 'run' to its past tense."}
+{"source": "pilot-30", "kind": "creative", "prompt": "Describe the taste of a fruit that has never existed."}
+{"source": "pilot-30", "kind": "creative", "prompt": "Design a creature that lives in the clouds and describe it."}
+{"source": "pilot-30", "kind": "instruction", "prompt": "Give the plural form of the word 'child'."}
+{"source": "pilot-30", "kind": "ambiguous", "prompt": "How long will it take?"}
+{"source": "pilot-30", "kind": "math", "prompt": "If a rectangle is 8 cm long and 5 cm wide, what is its area?"}
+{"source": "pilot-30", "kind": "creative", "prompt": "Imagine a new holiday and explain how people celebrate it."}
+{"source": "pilot-30", "kind": "factual", "prompt": "In what year did World War II end?"}
+{"source": "pilot-30", "kind": "creative", "prompt": "Invent a name for a cozy coffee shop and describe its vibe."}
+{"source": "pilot-30", "kind": "ambiguous", "prompt": "Is this a good idea?"}
+{"source": "pilot-30", "kind": "instruction", "prompt": "List the two days of the weekend, separated by commas."}
+{"source": "pilot-30", "kind": "ambiguous", "prompt": "Should I take the job?"}
+{"source": "pilot-30", "kind": "math", "prompt": "Solve for x: 3x + 9 = 24."}
+{"source": "pilot-30", "kind": "instruction", "prompt": "State the opposite of the direction 'north'."}
+{"source": "pilot-30", "kind": "math", "prompt": "What is 15 percent of 200?"}
+{"source": "pilot-30", "kind": "math", "prompt": "What is 48 divided by 6?"}
+{"source": "pilot-30", "kind": "factual", "prompt": "What is the capital of Japan?"}
+{"source": "pilot-30", "kind": "factual", "prompt": "What is the chemical symbol for sodium?"}
+{"source": "pilot-30", "kind": "factual", "prompt": "What is the largest planet in our solar system?"}
+{"source": "pilot-30", "kind": "math", "prompt": "What is the next number in the sequence 2, 4, 8, 16?"}
+{"source": "pilot-30", "kind": "math", "prompt": "What is the square root of 144?"}
+{"source": "pilot-30", "kind": "factual", "prompt": "What is the tallest mountain on Earth?"}
+{"source": "pilot-30", "kind": "ambiguous", "prompt": "What time works for you?"}
+{"source": "pilot-30", "kind": "ambiguous", "prompt": "Where should we go?"}
+{"source": "pilot-30", "kind": "factual", "prompt": "Who painted the Mona Lisa?"}
+{"source": "pilot-30", "kind": "creative", "prompt": "Write the first sentence of a science fiction story."}
+{"source": "pilot-30", "kind": "instruction", "prompt": "Write the number forty-two in Roman numerals."}
+{"source": "rehearsal-41", "kind": "arithmetic", "difficulty": 3, "prompt": "A car travels 240 km using 8 liters of fuel. How many kilometers does it travel per liter?", "gold": "30"}
+{"source": "rehearsal-41", "kind": "deduction", "difficulty": 4, "prompt": "A is twice as old as B. B is 4 years older than C. C is 6 years old. How old is A?", "gold": "20"}
+{"source": "rehearsal-41", "kind": "arithmetic", "difficulty": 3, "prompt": "A jacket costs 80 dollars and is discounted by 15 percent. What is the sale price in dollars?", "gold": "68"}
+{"source": "rehearsal-41", "kind": "arithmetic", "difficulty": 3, "prompt": "A rectangle has a perimeter of 36 cm and a width of 6 cm. What is its area in square centimeters?", "gold": "72"}
+{"source": "rehearsal-41", "kind": "arithmetic", "difficulty": 4, "prompt": "A store sells pens at 3 for 2 dollars. How much do 12 pens cost in dollars?", "gold": "8"}
+{"source": "rehearsal-41", "kind": "arithmetic", "difficulty": 4, "prompt": "A tank holds 800 liters and is 35 percent full. If 90 liters are added, how many liters are in it?", "gold": "370"}
+{"source": "rehearsal-41", "kind": "deduction", "difficulty": 1, "prompt": "A truck is heavier than a bicycle. Which one is lighter?", "gold": "bicycle"}
+{"source": "rehearsal-41", "kind": "arithmetic", "difficulty": 4, "prompt": "A worker earns 15 dollars per hour and works 7 hours a day for 5 days. What are the total earnings in dollars?", "gold": "525"}
+{"source": "rehearsal-41", "kind": "deduction", "difficulty": 1, "prompt": "All birds have feathers. A robin is a bird. Does a robin have feathers? Answer yes or no.", "gold": "yes"}
+{"source": "rehearsal-41", "kind": "deduction", "difficulty": 3, "prompt": "Among four people, the manager earns more than the clerk, the clerk earns more than the guard, and the guard earns more than the intern. Who earns the most?", "gold": "manager"}
+{"source": "rehearsal-41", "kind": "deduction", "difficulty": 3, "prompt": "Ana is faster than Bea. Bea is faster than Cara. Cara is faster than Dana. Who is the slowest?", "gold": "Dana"}
+{"source": "rehearsal-41", "kind": "deduction", "difficulty": 4, "prompt": "Five people sit in a row. Ann is to the left of Bob, Bob is to the left of Cara, Cara is to the left of Dan, and Dan is to the left of Eve. Who is in the middle?", "gold": "Cara"}
+{"source": "rehearsal-41", "kind": "deduction", "difficulty": 3, "prompt": "Four runners finish a race. Kim beats Lou. Lou beats Max. Max beats Ned. Who finishes second?", "gold": "Lou"}
+{"source": "rehearsal-41", "kind": "factual", "difficulty": 1, "prompt": "How many months are there in a year?", "gold": "12"}
+{"source": "rehearsal-41", "kind": "deduction", "difficulty": 2, "prompt": "If yesterday was Friday, what day is tomorrow?", "gold": "Sunday"}
+{"source": "rehearsal-41", "kind": "deduction", "difficulty": 3, "prompt": "Iron is denser than Wood. Foam is less dense than Wood. Stone is denser than Iron. Which of the four is the least dense?", "gold": "Foam"}
+{"source": "rehearsal-41", "kind": "deduction", "difficulty": 2, "prompt": "Lee is taller than Max. Max is taller than Sam. Who is the tallest?", "gold": "Lee"}
+{"source": "rehearsal-41", "kind": "deduction", "difficulty": 1, "prompt": "Maria is older than Tom. Who is younger, Maria or Tom?", "gold": "Tom"}
+{"source": "rehearsal-41", "kind": "deduction", "difficulty": 3, "prompt": "On a shelf, the cup is above the bowl, and the bowl is above the plate. What is at the bottom?", "gold": "plate"}
+{"source": "rehearsal-41", "kind": "deduction", "difficulty": 2, "prompt": "P finishes before Q. Q finishes before R. Who finishes first?", "gold": "P"}
+{"source": "rehearsal-41", "kind": "deduction", "difficulty": 4, "prompt": "There are four switches and exactly one is on. Switch A is off, Switch B is off, and Switch D is off. Which switch is on?", "gold": "C"}
+{"source": "rehearsal-41", "kind": "arithmetic", "difficulty": 4, "prompt": "Tom is 3 times as old as Sara. In 4 years, Tom will be 28. How old is Sara now?", "gold": "8"}
+{"source": "rehearsal-41", "kind": "factual", "difficulty": 1, "prompt": "What color do you get by mixing blue and yellow?", "gold": "green"}
+{"source": "rehearsal-41", "kind": "arithmetic", "difficulty": 2, "prompt": "What is 2 to the power of 7?", "gold": "128"}
+{"source": "rehearsal-41", "kind": "arithmetic", "difficulty": 2, "prompt": "What is 40 percent of 250?", "gold": "100"}
+{"source": "rehearsal-41", "kind": "arithmetic", "difficulty": 1, "prompt": "What is 47 plus 28?", "gold": "75"}
+{"source": "rehearsal-41", "kind": "arithmetic", "difficulty": 2, "prompt": "What is 6 plus 7 times 8?", "gold": "62"}
+{"source": "rehearsal-41", "kind": "arithmetic", "difficulty": 1, "prompt": "What is 63 divided by 7?", "gold": "9"}
+{"source": "rehearsal-41", "kind": "arithmetic", "difficulty": 1, "prompt": "What is 9 times 8?", "gold": "72"}
+{"source": "rehearsal-41", "kind": "factual", "difficulty": 3, "prompt": "What is the capital of Australia?", "gold": "Canberra"}
+{"source": "rehearsal-41", "kind": "factual", "difficulty": 4, "prompt": "What is the capital of Canada?", "gold": "Ottawa"}
+{"source": "rehearsal-41", "kind": "factual", "difficulty": 1, "prompt": "What is the capital of Italy?", "gold": "Rome"}
+{"source": "rehearsal-41", "kind": "factual", "difficulty": 1, "prompt": "What is the capital of Spain?", "gold": "Madrid"}
+{"source": "rehearsal-41", "kind": "factual", "difficulty": 2, "prompt": "What is the chemical symbol for carbon?", "gold": "C"}
+{"source": "rehearsal-41", "kind": "factual", "difficulty": 3, "prompt": "What is the chemical symbol for iron?", "gold": "Fe"}
+{"source": "rehearsal-41", "kind": "factual", "difficulty": 2, "prompt": "What is the chemical symbol for oxygen?", "gold": "O"}
+{"source": "rehearsal-41", "kind": "factual", "difficulty": 3, "prompt": "What is the chemical symbol for potassium?", "gold": "K"}
+{"source": "rehearsal-41", "kind": "factual", "difficulty": 4, "prompt": "What is the chemical symbol for tungsten?", "gold": "W"}
+{"source": "rehearsal-41", "kind": "factual", "difficulty": 2, "prompt": "What is the largest continent by area?", "gold": "Asia"}
+{"source": "rehearsal-41", "kind": "factual", "difficulty": 4, "prompt": "What is the smallest country in the world by area?", "gold": "Vatican City"}
+{"source": "rehearsal-41", "kind": "factual", "difficulty": 2, "prompt": "What planet is known as the Red Planet?", "gold": "Mars"}
+{"source": "calib-r2", "kind": "arith_multistep", "family": "arithmetic", "prompt": "A book originally costs 45 dollars. Its price is reduced by 20 percent, and then a 5 dollar coupon is applied. What is the final price in dollars?", "gold": "31"}
+{"source": "calib-r1", "kind": "arith_multistep", "family": "arithmetic", "prompt": "A car travels at 72 kilometers per hour. How many kilometers does it travel in 25 minutes?", "gold": "30"}
+{"source": "calib-r1", "kind": "arith_multistep", "family": "arithmetic", "prompt": "A number increased by 30 percent equals 195. What is the original number?", "gold": "150"}
+{"source": "calib-r2", "kind": "arith_multistep", "family": "arithmetic", "prompt": "A rectangle has a perimeter of 46 cm and a length of 14 cm. What is its area in square centimeters?", "gold": "126"}
+{"source": "calib-r1", "kind": "arith_multistep", "family": "arithmetic", "prompt": "A shirt costs 60 dollars. It is first marked up by 25 percent, and then that new price is discounted by 20 percent. What is the final price in dollars?", "gold": "60"}
+{"source": "calib-r1", "kind": "arith_multistep", "family": "arithmetic", "prompt": "A tank is 40 percent full and holds 500 liters when full. After 120 liters are added, how many liters are in the tank?", "gold": "320"}
+{"source": "calib-r2", "kind": "arith_multistep", "family": "arithmetic", "prompt": "A train departs at 9:45 and arrives at 13:20 on the same day. How many minutes long is the journey?", "gold": "215"}
+{"source": "calib-r2", "kind": "arith_multistep", "family": "arithmetic", "prompt": "A worker is paid 18 dollars per hour for the first 40 hours and 27 dollars per hour for each additional hour. What is the pay for a 46-hour week in dollars?", "gold": "882"}
+{"source": "calib-r1", "kind": "ded_trap", "family": "deduction", "prompt": "Among four boxes -- red, blue, green, and yellow -- exactly one contains a prize. The prize is not in the red box. The prize is not in the green box. The blue box is empty. Which box contains the prize?", "gold": "yellow"}
+{"source": "calib-r1", "kind": "arith_multistep", "family": "arithmetic", "prompt": "Compute 144 divided by 12, then add 8, then multiply the result by 7.", "gold": "140"}
+{"source": "calib-r3", "kind": "ded_harder", "family": "deduction", "prompt": "Eight people -- A, B, C, D, E, F, G, and H -- sit in seats numbered 1 to 8 from left to right. A is in seat 1. B sits immediately to the left of C. D sits somewhere to the left of B. E sits immediately to the left of F. C sits somewhere to the left of E. G is not in seat 8. D is not in seat 2. H sits immediately to the left of G. Who sits in seat 4?", "gold": "D"}
+{"source": "calib-r3", "kind": "ded_harder", "family": "deduction", "prompt": "Eight people -- A, B, C, D, E, F, G, and H -- sit in seats numbered 1 to 8 from left to right. A is in seat 8. C sits immediately to the left of B. B sits somewhere to the left of D. E sits immediately to the left of F. D sits somewhere to the left of E. G sits immediately to the left of H. F sits somewhere to the left of G. Who sits in seat 4?", "gold": "E"}
+{"source": "calib-r3", "kind": "ded_harder", "family": "deduction", "prompt": "Eight people -- A, B, C, D, E, F, G, and H -- sit in seats numbered 1 to 8 from left to right. B is in seat 1. C sits immediately to the left of D. A sits somewhere to the left of C. E sits immediately to the left of F. D sits somewhere to the left of E. G sits immediately to the left of H. F sits somewhere to the left of G. Who sits in seat 7?", "gold": "G"}
+{"source": "calib-r3", "kind": "ded_harder", "family": "deduction", "prompt": "Eight people -- A, B, C, D, E, F, G, and H -- sit in seats numbered 1 to 8 from left to right. C is in seat 1. D sits immediately to the left of E. A sits somewhere to the left of D. F sits immediately to the left of G. E sits somewhere to the left of F. H sits immediately to the left of A. G sits somewhere to the left of B. Who sits in seat 3?", "gold": "A"}
+{"source": "calib-r3", "kind": "ded_harder", "family": "deduction", "prompt": "Eight people -- A, B, C, D, E, F, G, and H -- sit in seats numbered 1 to 8 from left to right. D is in seat 4. A sits immediately to the left of B. C sits somewhere to the left of A. E sits immediately to the left of F. F sits somewhere to the left of G. H is not in seat 1. B sits somewhere to the left of E. G sits immediately to the left of H. Who sits in seat 6?", "gold": "F"}
+{"source": "calib-r3", "kind": "ded_harder", "family": "deduction", "prompt": "Eight people -- A, B, C, D, E, F, G, and H -- sit in seats numbered 1 to 8 from left to right. H is in seat 8. A sits immediately to the left of B. C sits somewhere to the left of A. D sits immediately to the left of E. B sits somewhere to the left of D. G sits immediately to the left of F. E sits somewhere to the left of G. C is not in seat 3. Who sits in seat 5?", "gold": "E"}
+{"source": "calib-r2", "kind": "ded_hard", "family": "deduction", "prompt": "Five people -- A, B, C, D, and E -- sit in seats numbered 1 to 5 from left to right. A sits immediately to the left of B. B sits immediately to the left of C. D sits somewhere to the left of A. E is in seat 5. Who sits in seat 1?", "gold": "D"}
+{"source": "calib-r2", "kind": "ded_hard", "family": "deduction", "prompt": "Five people -- A, B, C, D, and E -- sit in seats numbered 1 to 5 from left to right. E is in seat 5. A sits immediately to the left of B. C sits somewhere to the left of A. D sits immediately to the left of C. C is not in seat 1. Who sits in seat 2?", "gold": "C"}
+{"source": "calib-r1", "kind": "ded_trap", "family": "deduction", "prompt": "Five sprinters A, B, C, D, E finished a race. C finished last. B finished immediately before A. E finished immediately after A. D finished before B. Who finished first?", "gold": "D"}
+{"source": "calib-r1", "kind": "ded_trap", "family": "deduction", "prompt": "Five students -- F, G, H, I, J -- sit in seats numbered 1 to 5. J sits in seat 1. G sits in seat 5. H sits immediately to the right of I. F does not sit in seat 2 or seat 3. Who sits in seat 3?", "gold": "H"}
+{"source": "calib-r1", "kind": "ded_trap", "family": "deduction", "prompt": "Four friends -- Mia, Noah, Owen, and Pia -- each have a different pet: a cat, a dog, a fish, or a bird. Mia does not have the cat or the dog. Noah has neither the fish nor the bird. Owen does not have the cat. Pia has the bird. Who has the cat?", "gold": "Noah"}
+{"source": "calib-r1", "kind": "ded_trap", "family": "deduction", "prompt": "Four workers -- Tom, Uma, Vic, and Wes -- have different salaries. Tom earns more than Uma. Vic earns less than Uma. Wes earns more than Tom. Uma does not earn the least. Who earns the most?", "gold": "Wes"}
+{"source": "calib-r1", "kind": "unit_convert", "family": "arithmetic", "prompt": "How many cubic inches are in a cubic foot?", "gold": "1728"}
+{"source": "calib-r1", "kind": "letter_count", "family": "arithmetic", "prompt": "How many letters are in the word onomatopoeia?", "gold": "12"}
+{"source": "calib-r1", "kind": "unit_convert", "family": "arithmetic", "prompt": "How many millimeters are in 4.2 centimeters?", "gold": "42"}
+{"source": "calib-r1", "kind": "unit_convert", "family": "arithmetic", "prompt": "How many minutes are there in 3.5 hours?", "gold": "210"}
+{"source": "calib-r1", "kind": "unit_convert", "family": "arithmetic", "prompt": "How many ounces are in 3 pounds?", "gold": "48"}
+{"source": "calib-r1", "kind": "unit_convert", "family": "arithmetic", "prompt": "How many seconds are in 2 hours?", "gold": "7200"}
+{"source": "calib-r1", "kind": "unit_convert", "family": "arithmetic", "prompt": "How many square feet are in a square yard?", "gold": "9"}
+{"source": "calib-r1", "kind": "letter_count", "family": "arithmetic", "prompt": "How many times does the letter e appear in the word beekeeper?", "gold": "5"}
+{"source": "calib-r1", "kind": "letter_count", "family": "arithmetic", "prompt": "How many times does the letter e appear in the word bookkeeper?", "gold": "3"}
+{"source": "calib-r1", "kind": "letter_count", "family": "arithmetic", "prompt": "How many times does the letter i appear in the word indivisibility?", "gold": "6"}
+{"source": "calib-r1", "kind": "letter_count", "family": "arithmetic", "prompt": "How many times does the letter l appear in the word parallel?", "gold": "3"}
+{"source": "calib-r1", "kind": "letter_count", "family": "arithmetic", "prompt": "How many times does the letter r appear in the word strawberry?", "gold": "3"}
+{"source": "calib-r1", "kind": "letter_count", "family": "arithmetic", "prompt": "How many times does the letter s appear in the word mississippi?", "gold": "4"}
+{"source": "calib-r1", "kind": "letter_count", "family": "arithmetic", "prompt": "How many vowels are in the word sequoia?", "gold": "5"}
+{"source": "calib-r1", "kind": "arith_multistep", "family": "arithmetic", "prompt": "If 5 machines make 5 widgets in 5 minutes, how many minutes do 100 machines take to make 100 widgets?", "gold": "5"}
+{"source": "calib-r2", "kind": "arith_multistep", "family": "arithmetic", "prompt": "If 8 workers build a wall in 6 days, how many days do 12 workers take to build the same wall at the same rate?", "gold": "4"}
+{"source": "calib-r1", "kind": "ded_trap", "family": "deduction", "prompt": "If the day before yesterday was Wednesday, what day will it be the day after tomorrow?", "gold": "Sunday"}
+{"source": "calib-r1", "kind": "ded_trap", "family": "deduction", "prompt": "In a row of five houses numbered 1 to 5 from left to right live five people. Ana is not in house 1. Ben is in house 4. Cara is immediately to the left of Ben. Dan is in house 1. Who lives in house 3?", "gold": "Cara"}
+{"source": "calib-r1", "kind": "ded_trap", "family": "deduction", "prompt": "On an island, knights always tell the truth and knaves always lie. You meet two people, X and Y. X says, 'Y is a knave.' Y says, 'X and I are both knights.' Is Y a knight or a knave?", "gold": "knave"}
+{"source": "calib-r2", "kind": "arith_multistep", "family": "arithmetic", "prompt": "Sarah buys 3 notebooks at 4 dollars each and 2 pens at 3 dollars each, and pays with a 20 dollar bill. How much change does she receive in dollars?", "gold": "2"}
+{"source": "calib-r2", "kind": "ded_hard", "family": "deduction", "prompt": "Seven people -- A, B, C, D, E, F, and G -- sit in seats numbered 1 to 7 from left to right. A is in seat 1. B sits immediately to the left of C. D sits somewhere to the left of B. E sits immediately to the left of F. C sits somewhere to the left of E. G is not in seat 7. D is not in seat 2. Who sits in seat 4?", "gold": "B"}
+{"source": "calib-r2", "kind": "ded_hard", "family": "deduction", "prompt": "Six people -- A, B, C, D, E, and F -- sit in seats numbered 1 to 6 from left to right. A is in seat 1. B sits immediately to the left of C. D sits somewhere to the left of B. E sits immediately to the left of F. D is not in seat 2. Who sits in seat 3?", "gold": "F"}
+{"source": "calib-r2", "kind": "ded_hard", "family": "deduction", "prompt": "Six people -- A, B, C, D, E, and F -- sit in seats numbered 1 to 6 from left to right. A is in seat 1. C sits immediately to the left of B. B sits somewhere to the left of D. F sits immediately to the left of E. D sits somewhere to the left of E. C is not in seat 3. Who sits in seat 3?", "gold": "B"}
+{"source": "calib-r2", "kind": "ded_hard", "family": "deduction", "prompt": "Six people -- A, B, C, D, E, and F -- sit in seats numbered 1 to 6 from left to right. A is in seat 3. B sits immediately to the left of A. C sits somewhere to the left of B. D sits immediately to the left of E. A sits somewhere to the left of D. F is not in seat 6. Who sits in seat 5?", "gold": "D"}
+{"source": "calib-r2", "kind": "ded_hard", "family": "deduction", "prompt": "Six people -- A, B, C, D, E, and F -- sit in seats numbered 1 to 6 from left to right. B is in seat 2. D sits immediately to the left of E. A sits somewhere to the left of D. C is not in seat 6. C sits somewhere to the left of A. A sits immediately to the left of F. Who sits in seat 4?", "gold": "F"}
+{"source": "calib-r2", "kind": "ded_hard", "family": "deduction", "prompt": "Six people -- A, B, C, D, E, and F -- sit in seats numbered 1 to 6 from left to right. F is in seat 6. A sits immediately to the left of B. C is not in seat 1. D sits somewhere to the left of A. C sits immediately to the left of D. E is not in seat 3. Who sits in seat 4?", "gold": "A"}
+{"source": "calib-r1", "kind": "arith_multistep", "family": "arithmetic", "prompt": "Three friends split a bill of 87 dollars equally, and then each adds a 4 dollar tip. How much does each friend pay in dollars?", "gold": "33"}
+{"source": "calib-r1", "kind": "arith_multistep", "family": "arithmetic", "prompt": "What is 17 percent of 350?", "gold": "59.5"}
+{"source": "calib-r1", "kind": "arith_mult3x3", "family": "arithmetic", "prompt": "What is 347 times 268?", "gold": "92996"}
+{"source": "calib-r2", "kind": "arith_multistep", "family": "arithmetic", "prompt": "What is 35 percent of 140?", "gold": "49"}
+{"source": "calib-r1", "kind": "arith_mult3x3", "family": "arithmetic", "prompt": "What is 468 times 793?", "gold": "371124"}
+{"source": "calib-r1", "kind": "arith_mult3x3", "family": "arithmetic", "prompt": "What is 583 times 476?", "gold": "277508"}
+{"source": "calib-r1", "kind": "arith_mult3x3", "family": "arithmetic", "prompt": "What is 624 times 379?", "gold": "236496"}
+{"source": "calib-r1", "kind": "arith_mult3x3", "family": "arithmetic", "prompt": "What is 729 times 654?", "gold": "476766"}
+{"source": "calib-r1", "kind": "arith_mult3x3", "family": "arithmetic", "prompt": "What is 745 times 632?", "gold": "470840"}
+{"source": "calib-r1", "kind": "arith_mult3x3", "family": "arithmetic", "prompt": "What is 856 times 437?", "gold": "374072"}
+{"source": "calib-r1", "kind": "arith_mult3x3", "family": "arithmetic", "prompt": "What is 917 times 458?", "gold": "419986"}
+{"source": "calib-r2", "kind": "fact_reverse", "family": "factual", "prompt": "What is the SI unit of absorbed radiation dose?", "gold": "gray"}
+{"source": "calib-r2", "kind": "fact_reverse", "family": "factual", "prompt": "What is the SI unit of capacitance?", "gold": "farad"}
+{"source": "calib-r2", "kind": "fact_reverse", "family": "factual", "prompt": "What is the SI unit of catalytic activity?", "gold": "katal"}
+{"source": "calib-r2", "kind": "fact_reverse", "family": "factual", "prompt": "What is the SI unit of electrical conductance?", "gold": "siemens"}
+{"source": "calib-r2", "kind": "fact_reverse", "family": "factual", "prompt": "What is the SI unit of inductance?", "gold": "henry"}
+{"source": "calib-r2", "kind": "fact_reverse", "family": "factual", "prompt": "What is the SI unit of magnetic flux?", "gold": "weber"}
+{"source": "calib-r2", "kind": "fact_reverse", "family": "factual", "prompt": "What is the SI unit of pressure?", "gold": "pascal"}
+{"source": "calib-r2", "kind": "fact_reverse", "family": "factual", "prompt": "What is the SI unit of radioactivity?", "gold": "becquerel"}
+{"source": "calib-r3", "kind": "fact_numeric_tail", "family": "factual", "prompt": "What is the atomic number of bohrium?", "gold": "107"}
+{"source": "calib-r3", "kind": "fact_numeric_tail", "family": "factual", "prompt": "What is the atomic number of darmstadtium?", "gold": "110"}
+{"source": "calib-r3", "kind": "fact_numeric_tail", "family": "factual", "prompt": "What is the atomic number of fermium?", "gold": "100"}
+{"source": "calib-r1", "kind": "fact_obscure", "family": "factual", "prompt": "What is the atomic number of gold?", "gold": "79"}
+{"source": "calib-r3", "kind": "fact_numeric_tail", "family": "factual", "prompt": "What is the atomic number of meitnerium?", "gold": "109"}
+{"source": "calib-r3", "kind": "fact_numeric_tail", "family": "factual", "prompt": "What is the atomic number of nobelium?", "gold": "102"}
+{"source": "calib-r3", "kind": "fact_numeric_tail", "family": "factual", "prompt": "What is the atomic number of rutherfordium?", "gold": "104"}
+{"source": "calib-r3", "kind": "fact_numeric_tail", "family": "factual", "prompt": "What is the atomic number of seaborgium?", "gold": "106"}
+{"source": "calib-r1", "kind": "fact_obscure", "family": "factual", "prompt": "What is the atomic number of sodium?", "gold": "11"}
+{"source": "calib-r1", "kind": "fact_obscure", "family": "factual", "prompt": "What is the capital of Bhutan?", "gold": "Thimphu"}
+{"source": "calib-r1", "kind": "fact_obscure", "family": "factual", "prompt": "What is the capital of Brunei?", "gold": "Bandar Seri Begawan"}
+{"source": "calib-r1", "kind": "fact_obscure", "family": "factual", "prompt": "What is the capital of Eritrea?", "gold": "Asmara"}
+{"source": "calib-r1", "kind": "fact_obscure", "family": "factual", "prompt": "What is the capital of Kyrgyzstan?", "gold": "Bishkek"}
+{"source": "calib-r1", "kind": "fact_obscure", "family": "factual", "prompt": "What is the capital of Laos?", "gold": "Vientiane"}
+{"source": "calib-r1", "kind": "fact_obscure", "family": "factual", "prompt": "What is the capital of Mongolia?", "gold": "Ulaanbaatar"}
+{"source": "calib-r1", "kind": "fact_obscure", "family": "factual", "prompt": "What is the capital of Montenegro?", "gold": "Podgorica"}
+{"source": "calib-r1", "kind": "fact_obscure", "family": "factual", "prompt": "What is the capital of Palau?", "gold": "Ngerulmud"}
+{"source": "calib-r1", "kind": "fact_obscure", "family": "factual", "prompt": "What is the capital of Suriname?", "gold": "Paramaribo"}
+{"source": "calib-r1", "kind": "fact_obscure", "family": "factual", "prompt": "What is the capital of Vanuatu?", "gold": "Port Vila"}
+{"source": "calib-r1", "kind": "fact_obscure", "family": "factual", "prompt": "What is the official currency of Poland?", "gold": "zloty"}
+{"source": "calib-r1", "kind": "fact_obscure", "family": "factual", "prompt": "What is the official currency of Thailand?", "gold": "baht"}
+{"source": "calib-r1", "kind": "fact_obscure", "family": "factual", "prompt": "What is the official currency of Vietnam?", "gold": "dong"}
+{"source": "calib-r3", "kind": "fact_numeric_tail", "family": "factual", "prompt": "Which chemical element has atomic number 101?", "gold": "Mendelevium"}
+{"source": "calib-r3", "kind": "fact_numeric_tail", "family": "factual", "prompt": "Which chemical element has atomic number 103?", "gold": "Lawrencium"}
+{"source": "calib-r3", "kind": "fact_numeric_tail", "family": "factual", "prompt": "Which chemical element has atomic number 105?", "gold": "Dubnium"}
+{"source": "calib-r3", "kind": "fact_numeric_tail", "family": "factual", "prompt": "Which chemical element has atomic number 111?", "gold": "Roentgenium"}
+{"source": "calib-r3", "kind": "fact_numeric_tail", "family": "factual", "prompt": "Which chemical element has atomic number 113?", "gold": "Nihonium"}
+{"source": "calib-r3", "kind": "fact_numeric_tail", "family": "factual", "prompt": "Which chemical element has atomic number 115?", "gold": "Moscovium"}
+{"source": "calib-r3", "kind": "fact_numeric_tail", "family": "factual", "prompt": "Which chemical element has atomic number 118?", "gold": "Oganesson"}
+{"source": "calib-r2", "kind": "fact_reverse", "family": "factual", "prompt": "Which chemical element has atomic number 30?", "gold": "Zinc"}
+{"source": "calib-r2", "kind": "fact_reverse", "family": "factual", "prompt": "Which chemical element has atomic number 33?", "gold": "Arsenic"}
+{"source": "calib-r2", "kind": "fact_reverse", "family": "factual", "prompt": "Which chemical element has atomic number 42?", "gold": "Molybdenum"}
+{"source": "calib-r2", "kind": "fact_reverse", "family": "factual", "prompt": "Which chemical element has atomic number 47?", "gold": "Silver"}
+{"source": "calib-r2", "kind": "fact_reverse", "family": "factual", "prompt": "Which chemical element has atomic number 56?", "gold": "Barium"}
+{"source": "calib-r2", "kind": "fact_reverse", "family": "factual", "prompt": "Which chemical element has atomic number 74?", "gold": "Tungsten"}

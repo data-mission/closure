@@ -1,0 +1,17 @@
+{
+  "round": 3,
+  "kind": "ded_harder",
+  "family": "deduction",
+  "prompt": "Eight people -- A, B, C, D, E, F, G, and H -- sit in seats numbered 1 to 8 from left to right. B is in seat 1. C sits immediately to the left of D. A sits somewhere to the left of C. E sits immediately to the left of F. D sits somewhere to the left of E. G sits immediately to the left of H. F sits somewhere to the left of G. Who sits in seat 7?",
+  "gold": "G",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To solve this problem, let's analyze the given conditions step by step and place the people in their seats accordingly.\n\n1. **B is in seat 1.**\n   - B: 1\n\n2. **C sits immediately to the left of D.**\n   - Possible pairs: (2,3), (3,4), (4,5), (5,6), (6,7), (7,8)\n\n3. **A sits somewhere to the left of C.**\n   - A must be in a seat to the left of C.\n\n4. **E sits immediately to the left of F.**\n   - Possible pairs: (2,3), (3,4), (4,5), (5,6), (6,7), (7,8)\n\n5. **D sits somewhere to the left of E.**\n   - D must be to the left of E.\n\n6. **G sits immediately to the left of H.**\n   - Possible pairs: (2,3), (3,4), (4,5), (5,6), (6,7), (7,8)\n\n7. **F sits somewhere to the left of G.**\n   - F must be to the left of G.\n\nLet's start by placing B in seat 1 and consider the possible positions for C and D, E and F, and G and H.\n\n### Step-by-step placement:\n\n1. **Place B in seat 1:**\n   - B: 1\n\n2. **Consider the pairs for C and D:**\n   - (2,3), (3,4), (4,5), (5,6), (6,7), (7,8)\n\n3. **Consider the pairs for E and F:**\n   - (2,3), (3,4), (4,5), (5,6), (6,7), (7,8)\n\n4. **Consider the pairs for G and H:**\n   - (2,3), (3,4), (4,5), (5,6), (6,7), (7,8)\n\n5. **D must be to the left of E, and F must be to the left of G.**\n\nLet's try to place these in a way that satisfies all conditions:\n\n- Suppose C is in seat 2 and D is in seat 3.\n- Then E must be in seat 4 and F must be in seat 5.\n- G must be in seat 6 and H must be in seat 7.\n\nNow, we need to place A somewhere to the left of C. Since C is in seat 2, A can be in seat 1, but B is already in seat 1. So, A must be in seat 2, which is not possible because C is already there.\n\nLet's try another pair for C and D:\n\n- Suppose C is in seat 3 and D is in seat 4.\n- Then E must be in seat 5 and F must be in seat 6.\n- G must be in seat 7 and H must be in seat 8.\n\nNow, we need to place A somewhere to the left of C. Since C is in seat 3, A can be in seat 1 or 2. Let's place A in seat 2.\n\nSo, the seating arrangement is:\n- B: 1\n- A: 2\n- C: 3\n- D: 4\n- E: 5\n- F: 6\n- G: 7\n- H: 8\n\nThus, the person sitting in seat 7 is **G**.",
+  "answer_tokens": 764,
+  "eos_hit": true,
+  "wall_s": 32.242286750115454,
+  "correct": true,
+  "truncated": false,
+  "extracted": "G",
+  "note": "token-run-match"
+}

@@ -1,0 +1,84 @@
+{
+  "by_kind": {
+    "arith_mult3x3": {
+      "n": 8,
+      "correct": 1,
+      "truncated": 0,
+      "acc": 0.125
+    },
+    "arith_multistep": {
+      "n": 15,
+      "correct": 12,
+      "truncated": 0,
+      "acc": 0.8
+    },
+    "letter_count": {
+      "n": 8,
+      "correct": 4,
+      "truncated": 0,
+      "acc": 0.5
+    },
+    "unit_convert": {
+      "n": 6,
+      "correct": 6,
+      "truncated": 0,
+      "acc": 1.0
+    },
+    "fact_obscure": {
+      "n": 15,
+      "correct": 13,
+      "truncated": 0,
+      "acc": 0.8666666666666667
+    },
+    "ded_trap": {
+      "n": 8,
+      "correct": 8,
+      "truncated": 0,
+      "acc": 1.0
+    },
+    "fact_reverse": {
+      "n": 14,
+      "correct": 13,
+      "truncated": 0,
+      "acc": 0.9285714285714286
+    },
+    "ded_hard": {
+      "n": 8,
+      "correct": 7,
+      "truncated": 0,
+      "acc": 0.875
+    },
+    "fact_numeric_tail": {
+      "n": 14,
+      "correct": 8,
+      "truncated": 0,
+      "acc": 0.5714285714285714
+    },
+    "ded_harder": {
+      "n": 6,
+      "correct": 5,
+      "truncated": 0,
+      "acc": 0.8333333333333334
+    }
+  },
+  "by_family": {
+    "arithmetic": {
+      "n": 37,
+      "correct": 23,
+      "truncated": 0,
+      "acc": 0.6216216216216216
+    },
+    "factual": {
+      "n": 43,
+      "correct": 34,
+      "truncated": 0,
+      "acc": 0.7906976744186046
+    },
+    "deduction": {
+      "n": 22,
+      "correct": 20,
+      "truncated": 0,
+      "acc": 0.9090909090909091
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "ded_trap",
+  "family": "deduction",
+  "prompt": "Four workers -- Tom, Uma, Vic, and Wes -- have different salaries. Tom earns more than Uma. Vic earns less than Uma. Wes earns more than Tom. Uma does not earn the least. Who earns the most?",
+  "gold": "Wes",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "Let's analyze the information step by step:\n\n1. Tom earns more than Uma: \\( T > U \\)\n2. Vic earns less than Uma: \\( V < U \\)\n3. Wes earns more than Tom: \\( W > T \\)\n4. Uma does not earn the least: \\( U \\neq \\text{least} \\)\n\nFrom these points, we can deduce the following:\n\n- Since Wes earns more than Tom, and Tom earns more than Uma, we can place Wes, Tom, and Uma in order: \\( W > T > U \\).\n- Vic earns less than Uma, so Vic must be the lowest earner: \\( V < U \\).\n\nThus, the order from highest to lowest is: \\( W > T > U > V \\).\n\nTherefore, Wes earns the most.",
+  "answer_tokens": 167,
+  "eos_hit": true,
+  "wall_s": 7.301815708167851,
+  "correct": true,
+  "truncated": false,
+  "extracted": "Wes",
+  "note": "token-run-match"
+}

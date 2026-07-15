@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "ded_trap",
+  "family": "deduction",
+  "prompt": "Five sprinters A, B, C, D, E finished a race. C finished last. B finished immediately before A. E finished immediately after A. D finished before B. Who finished first?",
+  "gold": "D",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To determine who finished first, let's analyze the information step by step:\n\n1. **C finished last.**\n   - This means C is in the 5th position.\n\n2. **B finished immediately before A.**\n   - This means B and A are consecutive, with B finishing before A.\n\n3. **E finished immediately after A.**\n   - This means E is right after A, so A, E, and B are consecutive.\n\n4. **D finished before B.**\n   - This means D is in a position before B.\n\nGiven these points, let's arrange the positions:\n\n- Since C is last, we know C is in the 5th position.\n- B, A, and E are consecutive, and since E is right after A, the order of B, A, and E must be B-A-E.\n- D must be before B, so D must be in the 1st, 2nd, or 3rd position.\n\nLet's try to fit these pieces together:\n\n1. D must be before B, and B, A, E are consecutive. So, the only possible order for D, B, A, E is:\n   - D, B, A, E, C\n\nThis fits all the conditions:\n- D is before B.\n- B is before A.\n- E is after A.\n- C is last.\n\nTherefore, the order from first to last is:\n1. D\n2. B\n3. A\n4. E\n5. C\n\nSo, **D finished first.**",
+  "answer_tokens": 321,
+  "eos_hit": true,
+  "wall_s": 13.633146708831191,
+  "correct": true,
+  "truncated": false,
+  "extracted": "D",
+  "note": "token-run-match"
+}

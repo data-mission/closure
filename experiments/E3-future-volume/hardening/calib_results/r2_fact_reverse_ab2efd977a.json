@@ -1,0 +1,17 @@
+{
+  "round": 2,
+  "kind": "fact_reverse",
+  "family": "factual",
+  "prompt": "Which chemical element has atomic number 30?",
+  "gold": "Zinc",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The chemical element with atomic number 30 is Zn, which stands for Zinc.",
+  "answer_tokens": 18,
+  "eos_hit": true,
+  "wall_s": 1.0402778331190348,
+  "correct": true,
+  "truncated": false,
+  "extracted": "Zinc",
+  "note": "token-run-match"
+}

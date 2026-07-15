@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "unit_convert",
+  "family": "arithmetic",
+  "prompt": "How many cubic inches are in a cubic foot?",
+  "gold": "1728",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "There are 1,728 cubic inches in a cubic foot. This is because a cubic foot is a volume measurement that is equivalent to a cube that is 12 inches (1 foot) on each side. Since volume is calculated by multiplying the length, width, and height, you would calculate it as follows:\n\n\\[ 12 \\text{ inches} \\times 12 \\text{ inches} \\times 12 \\text{ inches} = 1,728 \\text{ cubic inches} \\]",
+  "answer_tokens": 110,
+  "eos_hit": true,
+  "wall_s": 4.8341322503983974,
+  "correct": true,
+  "truncated": false,
+  "extracted": "1728.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

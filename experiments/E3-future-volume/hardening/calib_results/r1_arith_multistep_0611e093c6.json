@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "arith_multistep",
+  "family": "arithmetic",
+  "prompt": "A shirt costs 60 dollars. It is first marked up by 25 percent, and then that new price is discounted by 20 percent. What is the final price in dollars?",
+  "gold": "60",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To find the final price of the shirt after the markup and discount, we can follow these steps:\n\n1. **Calculate the price after the 25% markup:**\n   - The original price of the shirt is $60.\n   - A 25% markup means the price increases by 25% of $60.\n   - Calculate 25% of $60: \\( 0.25 \\times 60 = 15 \\).\n   - Add this to the original price: \\( 60 + 15 = 75 \\).\n   - So, the price after the markup is $75.\n\n2. **Calculate the price after the 20% discount:**\n   - The new price after the markup is $75.\n   - A 20% discount means the price decreases by 20% of $75.\n   - Calculate 20% of $75: \\( 0.20 \\times 75 = 15 \\).\n   - Subtract this from the marked-up price: \\( 75 - 15 = 60 \\).\n   - So, the final price after the discount is $60.\n\nTherefore, the final price of the shirt is \\(\\boxed{60}\\) dollars.",
+  "answer_tokens": 273,
+  "eos_hit": true,
+  "wall_s": 11.728174207732081,
+  "correct": true,
+  "truncated": false,
+  "extracted": "60.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

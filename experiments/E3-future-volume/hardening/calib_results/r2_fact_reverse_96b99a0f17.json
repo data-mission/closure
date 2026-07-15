@@ -1,0 +1,17 @@
+{
+  "round": 2,
+  "kind": "fact_reverse",
+  "family": "factual",
+  "prompt": "What is the SI unit of capacitance?",
+  "gold": "farad",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The SI unit of capacitance is the farad (F).",
+  "answer_tokens": 13,
+  "eos_hit": true,
+  "wall_s": 0.850702959112823,
+  "correct": true,
+  "truncated": false,
+  "extracted": "farad",
+  "note": "token-run-match"
+}

@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "arith_mult3x3",
+  "family": "arithmetic",
+  "prompt": "What is 729 times 654?",
+  "gold": "476766",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To find the product of 729 and 654, you simply multiply the two numbers together:\n\n\\[ 729 \\times 654 = 477,526 \\]",
+  "answer_tokens": 45,
+  "eos_hit": true,
+  "wall_s": 2.1627169586718082,
+  "correct": false,
+  "truncated": false,
+  "extracted": "477526.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

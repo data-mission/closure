@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "fact_obscure",
+  "family": "factual",
+  "prompt": "What is the capital of Suriname?",
+  "gold": "Paramaribo",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The capital of Suriname is Paramaribo.",
+  "answer_tokens": 10,
+  "eos_hit": true,
+  "wall_s": 0.7250067079439759,
+  "correct": true,
+  "truncated": false,
+  "extracted": "Paramaribo",
+  "note": "token-run-match"
+}

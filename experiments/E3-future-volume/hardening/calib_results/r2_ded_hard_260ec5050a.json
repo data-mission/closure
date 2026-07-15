@@ -1,0 +1,17 @@
+{
+  "round": 2,
+  "kind": "ded_hard",
+  "family": "deduction",
+  "prompt": "Six people -- A, B, C, D, E, and F -- sit in seats numbered 1 to 6 from left to right. F is in seat 6. A sits immediately to the left of B. C is not in seat 1. D sits somewhere to the left of A. C sits immediately to the left of D. E is not in seat 3. Who sits in seat 4?",
+  "gold": "A",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "Let's analyze the given conditions step by step to determine who sits in seat 4.\n\n1. **F is in seat 6.**\n   - So, the arrangement looks like: _ _ _ _ _ F\n\n2. **A sits immediately to the left of B.**\n   - This means A and B must be consecutive, and A must be on the left.\n\n3. **C is not in seat 1.**\n   - So, C can be in seats 2, 3, 4, 5.\n\n4. **D sits somewhere to the left of A.**\n   - This means D must be to the left of A, and since A is to the left of B, D must be in seat 1 or 2.\n\n5. **C sits immediately to the left of D.**\n   - This means D and C must be consecutive, and C must be on the left.\n\nGiven these conditions, let's try to place D and C first:\n\n- If D is in seat 1, then C must be in seat 2.\n- If D is in seat 2, then C must be in seat 1.\n\nLet's test both scenarios:\n\n### Scenario 1: D in seat 1, C in seat 2\n- The arrangement so far: D C _ _ _ F\n- A and B must be consecutive, and A must be to the left of B. So, A and B can be in seats 3 and 4, or 4 and 5.\n- E cannot be in seat 3, so E must be in seat 3 or 5.\n\n#### Sub-scenario 1.1: A in seat 3, B in seat 4\n- The arrangement: D C A B _ F\n- E must be in seat 5, and the only remaining seat for E is 5.\n- The arrangement: D C A B E F\n\nThis arrangement fits all the conditions.\n\n### Scenario 2: D in seat 2, C in seat 1\n- The arrangement so far: C D _ _ _ F\n- A and B must be consecutive, and A must be to the left of B. So, A and B can be in seats 3 and 4, or 4 and 5.\n- E cannot be in seat 3, so E must be in seat 3 or 5.\n\n#### Sub-scenario 2.1: A in seat 3, B in seat 4\n- The arrangement: C D A B _ F\n- E must be in seat 5, and the only remaining seat for E is 5.\n- The arrangement: C D A B E F\n\nThis arrangement also fits all the conditions.\n\nBoth scenarios are valid, but we need to determine who sits in seat 4. In both valid scenarios, seat 4 is occupied by B.\n\nTherefore, the person who sits in seat 4 is **B**.",
+  "answer_tokens": 613,
+  "eos_hit": true,
+  "wall_s": 26.020834624767303,
+  "correct": false,
+  "truncated": false,
+  "extracted": "",
+  "note": "empty-gold"
+}

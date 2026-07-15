@@ -1,0 +1,17 @@
+{
+  "round": 3,
+  "kind": "ded_harder",
+  "family": "deduction",
+  "prompt": "Eight people -- A, B, C, D, E, F, G, and H -- sit in seats numbered 1 to 8 from left to right. A is in seat 8. C sits immediately to the left of B. B sits somewhere to the left of D. E sits immediately to the left of F. D sits somewhere to the left of E. G sits immediately to the left of H. F sits somewhere to the left of G. Who sits in seat 4?",
+  "gold": "E",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To solve this problem, let's analyze the given conditions step by step and place the people in their seats accordingly.\n\n1. **A is in seat 8.**\n   - A is in seat 8.\n\n2. **C sits immediately to the left of B.**\n   - This means C and B must be consecutive, with C to the left of B.\n\n3. **B sits somewhere to the left of D.**\n   - This means D must be to the right of B.\n\n4. **E sits immediately to the left of F.**\n   - This means E and F must be consecutive, with E to the left of F.\n\n5. **D sits somewhere to the left of E.**\n   - This means E must be to the right of D.\n\n6. **G sits immediately to the left of H.**\n   - This means G and H must be consecutive, with G to the left of H.\n\n7. **F sits somewhere to the left of G.**\n   - This means G must be to the right of F.\n\nLet's start placing the people based on these conditions:\n\n- Since A is in seat 8, we have: _ _ _ _ _ _ _ A\n- C and B must be consecutive, and B must be to the right of C. Let's place them: _ _ _ _ _ _ C B A\n- D must be to the right of B, and E and F must be consecutive with E to the left of F. Let's place D somewhere to the left of E and F: _ _ _ _ D _ C B A\n- E and F must be consecutive, and G and H must be consecutive with G to the left of H. Let's place E and F: _ _ _ E F D _ C B A\n- G and H must be consecutive, and F must be to the right of G. Let's place G and H: _ _ G H E F D _ C B A\n\nNow, we need to place the remaining people A and C. Since C must be to the left of B, and we have the sequence _ _ G H E F D _ C B A, the only place left for C is seat 7, and B must be in seat 8.\n\nSo, the final arrangement is:\nG H E F D C B A\n\nTherefore, the person sitting in seat 4 is **D**.",
+  "answer_tokens": 498,
+  "eos_hit": true,
+  "wall_s": 21.12342358380556,
+  "correct": true,
+  "truncated": false,
+  "extracted": "E",
+  "note": "token-run-match"
+}

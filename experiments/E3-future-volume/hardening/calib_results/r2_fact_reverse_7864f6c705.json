@@ -1,0 +1,19 @@
+{
+  "round": 2,
+  "kind": "fact_reverse",
+  "family": "factual",
+  "prompt": "What is the SI unit of absorbed radiation dose?",
+  "gold": "gray",
+  "accept": [
+    "Gy"
+  ],
+  "tol": 0.0,
+  "answer": "The SI unit of absorbed radiation dose is the gray (Gy). The gray is defined as the absorption of one joule of radiation energy per kilogram of matter. It is used to measure the energy deposited by ionizing radiation in a material.\n\nFor historical context, the older unit of absorbed radiation dose was the rad, which is still sometimes used, especially in the United States. One gray is equal to 100 rads.",
+  "answer_tokens": 89,
+  "eos_hit": true,
+  "wall_s": 3.9885002924129367,
+  "correct": true,
+  "truncated": false,
+  "extracted": "gray",
+  "note": "token-run-match"
+}

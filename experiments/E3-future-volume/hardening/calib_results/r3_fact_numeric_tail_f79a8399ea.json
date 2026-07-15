@@ -1,0 +1,17 @@
+{
+  "round": 3,
+  "kind": "fact_numeric_tail",
+  "family": "factual",
+  "prompt": "Which chemical element has atomic number 113?",
+  "gold": "Nihonium",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The chemical element with atomic number 113 is Copernicium, named after the astronomer Nicolaus Copernicus. Its symbol is Cn. It is a synthetic element that can be created in a laboratory by bombarding other elements, but it does not occur naturally on Earth.",
+  "answer_tokens": 60,
+  "eos_hit": true,
+  "wall_s": 2.783523041754961,
+  "correct": false,
+  "truncated": false,
+  "extracted": "but it does not occur naturally on earth",
+  "note": "no-token-match"
+}

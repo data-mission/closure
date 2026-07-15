@@ -1,0 +1,17 @@
+{
+  "round": 2,
+  "kind": "arith_multistep",
+  "family": "arithmetic",
+  "prompt": "What is 35 percent of 140?",
+  "gold": "49",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To find 35 percent of 140, you can multiply 140 by 0.35:\n\n\\[ 140 \\times 0.35 = 49 \\]\n\nSo, 35 percent of 140 is 49.",
+  "answer_tokens": 60,
+  "eos_hit": true,
+  "wall_s": 2.8058593748137355,
+  "correct": true,
+  "truncated": false,
+  "extracted": "49.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

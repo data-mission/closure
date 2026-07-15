@@ -1,0 +1,19 @@
+{
+  "round": 2,
+  "kind": "fact_reverse",
+  "family": "factual",
+  "prompt": "Which chemical element has atomic number 74?",
+  "gold": "Tungsten",
+  "accept": [
+    "Wolfram"
+  ],
+  "tol": 0.0,
+  "answer": "The chemical element with atomic number 74 is Tungsten, also known as Wolfram.",
+  "answer_tokens": 20,
+  "eos_hit": true,
+  "wall_s": 1.135028749704361,
+  "correct": true,
+  "truncated": false,
+  "extracted": "Tungsten",
+  "note": "token-run-match"
+}

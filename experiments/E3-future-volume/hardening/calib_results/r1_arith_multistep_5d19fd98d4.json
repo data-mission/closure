@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "arith_multistep",
+  "family": "arithmetic",
+  "prompt": "A tank is 40 percent full and holds 500 liters when full. After 120 liters are added, how many liters are in the tank?",
+  "gold": "320",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To determine how many liters are in the tank after adding 120 liters, we can follow these steps:\n\n1. **Find the current amount of liquid in the tank:**\n   The tank is 40 percent full when it holds 500 liters. To find the current amount of liquid, we calculate 40 percent of 500 liters.\n   \\[\n   \\text{Current amount of liquid} = 0.40 \\times 500 = 200 \\text{ liters}\n   \\]\n\n2. **Add the 120 liters to the current amount:**\n   Now, we add the 120 liters to the current 200 liters.\n   \\[\n   \\text{Total amount of liquid after adding 120 liters} = 200 + 120 = 320 \\text{ liters}\n   \\]\n\nSo, after adding 120 liters, the tank holds \\(\\boxed{320}\\) liters.",
+  "answer_tokens": 215,
+  "eos_hit": true,
+  "wall_s": 9.24249091744423,
+  "correct": false,
+  "truncated": false,
+  "extracted": "120.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "letter_count",
+  "family": "arithmetic",
+  "prompt": "How many times does the letter r appear in the word strawberry?",
+  "gold": "3",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The letter \"r\" appears twice in the word \"strawberry.\"",
+  "answer_tokens": 15,
+  "eos_hit": true,
+  "wall_s": 0.9352244595065713,
+  "correct": false,
+  "truncated": false,
+  "extracted": "",
+  "note": "no-number-parsed"
+}

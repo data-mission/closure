@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "letter_count",
+  "family": "arithmetic",
+  "prompt": "How many times does the letter s appear in the word mississippi?",
+  "gold": "4",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The letter \"s\" appears 4 times in the word \"mississippi.\"",
+  "answer_tokens": 16,
+  "eos_hit": true,
+  "wall_s": 0.9763800418004394,
+  "correct": true,
+  "truncated": false,
+  "extracted": "4.0",
+  "note": "numeric[last-number-fallback]tol=0.0"
+}

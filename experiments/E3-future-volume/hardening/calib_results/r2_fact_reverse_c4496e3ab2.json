@@ -1,0 +1,19 @@
+{
+  "round": 2,
+  "kind": "fact_reverse",
+  "family": "factual",
+  "prompt": "What is the SI unit of catalytic activity?",
+  "gold": "katal",
+  "accept": [
+    "kat"
+  ],
+  "tol": 0.0,
+  "answer": "The SI unit of catalytic activity is the **turnover number per second (s\u207b\u00b9)**, often simply referred to as the turnover frequency (TOF). However, it is also commonly expressed as the **turnover number per molecule (molecule\u207b\u00b9)** or the **mole of substrate converted per mole of catalyst per second (mol/mol/s)**.\n\nThe turnover number (TO) is the number of substrate molecules converted to product by a single enzyme molecule or a single catalytic site on a catalyst in one second. The turnover frequency (TOF) is the turnover number per unit time, typically per second.\n\nFor enzymes, the SI unit is often expressed as **s\u207b\u00b9** or **min\u207b\u00b9**. For catalysts, it can be expressed as **mol/mol/s** or **mol/mmol/s** depending on the context.\n\nFor example, if an enzyme converts one molecule of substrate to product every second, its turnover frequency would be 1 s\u207b\u00b9. If a catalyst converts one mole of substrate to product every second, its turnover frequency would be 1 mol/mol/s.\n\nIt's important to note that the specific unit can vary based on the context and the scale of the measurement, but the fundamental concept remains the same.",
+  "answer_tokens": 255,
+  "eos_hit": true,
+  "wall_s": 10.81362587492913,
+  "correct": false,
+  "truncated": false,
+  "extracted": "scale of measurement but fundamental concept remains same",
+  "note": "no-token-match"
+}

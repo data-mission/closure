@@ -1,0 +1,17 @@
+{
+  "round": 3,
+  "kind": "fact_numeric_tail",
+  "family": "factual",
+  "prompt": "What is the atomic number of bohrium?",
+  "gold": "107",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "Bohrium has an atomic number of 76. This means that a bohrium atom has 76 protons in its nucleus.",
+  "answer_tokens": 30,
+  "eos_hit": true,
+  "wall_s": 1.5450699999928474,
+  "correct": false,
+  "truncated": false,
+  "extracted": "76.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

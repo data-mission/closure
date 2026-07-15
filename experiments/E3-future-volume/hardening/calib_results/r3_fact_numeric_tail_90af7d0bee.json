@@ -1,0 +1,17 @@
+{
+  "round": 3,
+  "kind": "fact_numeric_tail",
+  "family": "factual",
+  "prompt": "Which chemical element has atomic number 105?",
+  "gold": "Dubnium",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The chemical element with atomic number 105 is Dubnium, with the symbol Db. It is a synthetic element that belongs to the group of transition metals. Dubnium was first reported in 1968 at the Joint Institute for Nuclear Research in Dubna, Russia, and later confirmed by a team at the University of California, Berkeley.",
+  "answer_tokens": 73,
+  "eos_hit": true,
+  "wall_s": 3.320031958632171,
+  "correct": true,
+  "truncated": false,
+  "extracted": "Dubnium",
+  "note": "token-run-match"
+}

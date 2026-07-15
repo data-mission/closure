@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "arith_multistep",
+  "family": "arithmetic",
+  "prompt": "A number increased by 30 percent equals 195. What is the original number?",
+  "gold": "150",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To find the original number, let's denote the original number as \\( x \\).\n\nAccording to the problem, when the original number \\( x \\) is increased by 30%, the result is 195. Mathematically, this can be expressed as:\n\n\\[ x + 0.30x = 195 \\]\n\nThis simplifies to:\n\n\\[ 1.30x = 195 \\]\n\nTo find \\( x \\), we divide both sides of the equation by 1.30:\n\n\\[ x = \\frac{195}{1.30} \\]\n\nNow, let's perform the division:\n\n\\[ x = 150 \\]\n\nSo, the original number is \\( 150 \\).",
+  "answer_tokens": 157,
+  "eos_hit": true,
+  "wall_s": 6.808074750006199,
+  "correct": true,
+  "truncated": false,
+  "extracted": "150.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

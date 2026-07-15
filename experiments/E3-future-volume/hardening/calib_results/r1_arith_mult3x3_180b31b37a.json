@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "arith_mult3x3",
+  "family": "arithmetic",
+  "prompt": "What is 583 times 476?",
+  "gold": "277508",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To find the product of 583 and 476, we can perform the multiplication step by step:\n\n```\n     583\n   \u00d7 476\n   ------\n     3498  (583 \u00d7 6)\n    3415   (583 \u00d7 70, note the extra zero)\n   2332    (583 \u00d7 400, note the extra two zeros)\n   ------\n   277328\n```\n\nSo, 583 times 476 equals 277,328.",
+  "answer_tokens": 136,
+  "eos_hit": true,
+  "wall_s": 5.927541084587574,
+  "correct": false,
+  "truncated": false,
+  "extracted": "277328.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

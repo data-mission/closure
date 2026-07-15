@@ -1,0 +1,17 @@
+{
+  "round": 2,
+  "kind": "ded_hard",
+  "family": "deduction",
+  "prompt": "Five people -- A, B, C, D, and E -- sit in seats numbered 1 to 5 from left to right. E is in seat 5. A sits immediately to the left of B. C sits somewhere to the left of A. D sits immediately to the left of C. C is not in seat 1. Who sits in seat 2?",
+  "gold": "C",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "Let's analyze the seating arrangement step by step based on the given conditions:\n\n1. E is in seat 5.\n2. A sits immediately to the left of B.\n3. C sits somewhere to the left of A.\n4. D sits immediately to the left of C.\n5. C is not in seat 1.\n\nFirst, let's place E in seat 5:\n- E is in seat 5.\n\nNext, since D sits immediately to the left of C, and C cannot be in seat 1, let's consider the possible positions for D and C:\n- If C were in seat 2, D would be in seat 1, but C cannot be in seat 1.\n- If C were in seat 3, D would be in seat 2.\n- If C were in seat 4, D would be in seat 3.\n\nNow, let's consider the positions for A and B, who must sit immediately to the left of each other. We need to ensure that A is to the left of B.\n\nLet's test the possible positions for C and D:\n\n**Case 1: C is in seat 3, D is in seat 2.**\n- This means A and B must be in seats 1 and 4, respectively, because A is to the left of B.\n- This arrangement would be: D, C, B, A, E.\n\nThis arrangement fits all the conditions:\n- D is to the left of C.\n- C is to the left of A.\n- A is to the left of B.\n- E is in seat 5.\n- C is not in seat 1.\n\nTherefore, the person sitting in seat 2 is D.",
+  "answer_tokens": 351,
+  "eos_hit": true,
+  "wall_s": 14.953308291733265,
+  "correct": true,
+  "truncated": false,
+  "extracted": "C",
+  "note": "token-run-match"
+}

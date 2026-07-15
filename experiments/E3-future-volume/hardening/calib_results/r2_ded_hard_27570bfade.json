@@ -1,0 +1,17 @@
+{
+  "round": 2,
+  "kind": "ded_hard",
+  "family": "deduction",
+  "prompt": "Six people -- A, B, C, D, E, and F -- sit in seats numbered 1 to 6 from left to right. B is in seat 2. D sits immediately to the left of E. A sits somewhere to the left of D. C is not in seat 6. C sits somewhere to the left of A. A sits immediately to the left of F. Who sits in seat 4?",
+  "gold": "F",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "Let's break down the information step by step to determine who sits in seat 4.\n\n1. **B is in seat 2.**\n   - B: 2\n\n2. **D sits immediately to the left of E.**\n   - Possible pairs: (1, 2), (2, 3), (3, 4), (4, 5), (5, 6)\n\n3. **A sits somewhere to the left of D.**\n   - A must be in a seat number less than D.\n\n4. **C is not in seat 6.**\n   - C: 1, 2, 3, 4, or 5\n\n5. **C sits somewhere to the left of A.**\n   - C must be in a seat number less than A.\n\n6. **A sits immediately to the left of F.**\n   - Possible pairs: (1, 2), (2, 3), (3, 4), (4, 5)\n\nNow, let's combine these constraints to find a consistent seating arrangement.\n\n- Since B is in seat 2, D and E must be in seats 1 and 3 or 3 and 4.\n- A must be to the left of D, and F must be to the right of A.\n- C must be to the left of A.\n\nLet's test the possible pairs for D and E:\n\n### Case 1: D is in seat 1, E is in seat 3\n- A must be in seat 1 (impossible because D is already there).\n- A must be in seat 2 (impossible because B is already there).\n- A must be in seat 3 (impossible because E is already there).\n\n### Case 2: D is in seat 3, E is in seat 4\n- A must be in seat 1 or 2.\n- F must be in seat 4 or 5.\n\nSince B is in seat 2, A must be in seat 1.\n- A: 1\n- F: 4\n\n- C must be to the left of A, so C must be in seat 1 (impossible because A is already there) or seat 2 (impossible because B is already there).\n\n### Case 3: D is in seat 4, E is in seat 5\n- A must be in seat 1, 2, or 3.\n- F must be in seat 5 or 6.\n\nSince B is in seat 2, A must be in seat 1 or 3.\n- A: 1 or 3\n- F: 5 or 6\n\n- C must be to the left of A, so C must be in seat 1, 2, or 3.\n\nLet's test the possible positions for C:\n\n- If A is in seat 1, C must be in seat 1 (impossible because A is already there).\n- If A is in seat 3, C must be in seat 1 or 2.\n\n### Sub",
+  "answer_tokens": 640,
+  "eos_hit": false,
+  "wall_s": 26.890118207782507,
+  "correct": true,
+  "truncated": false,
+  "extracted": "F",
+  "note": "token-run-match"
+}

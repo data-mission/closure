@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "arith_mult3x3",
+  "family": "arithmetic",
+  "prompt": "What is 468 times 793?",
+  "gold": "371124",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To find the product of 468 and 793, you simply multiply the two numbers together:\n\n\\[ 468 \\times 793 = 369,064 \\]",
+  "answer_tokens": 45,
+  "eos_hit": true,
+  "wall_s": 2.164116958156228,
+  "correct": false,
+  "truncated": false,
+  "extracted": "369064.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

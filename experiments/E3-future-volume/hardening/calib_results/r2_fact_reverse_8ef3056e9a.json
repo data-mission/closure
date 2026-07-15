@@ -1,0 +1,17 @@
+{
+  "round": 2,
+  "kind": "fact_reverse",
+  "family": "factual",
+  "prompt": "Which chemical element has atomic number 47?",
+  "gold": "Silver",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The chemical element with atomic number 47 is silver, represented by the symbol Ag.",
+  "answer_tokens": 18,
+  "eos_hit": true,
+  "wall_s": 1.0407549580559134,
+  "correct": true,
+  "truncated": false,
+  "extracted": "Silver",
+  "note": "token-run-match"
+}

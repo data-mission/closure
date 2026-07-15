@@ -1,0 +1,17 @@
+{
+  "round": 3,
+  "kind": "fact_numeric_tail",
+  "family": "factual",
+  "prompt": "Which chemical element has atomic number 111?",
+  "gold": "Roentgenium",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The chemical element with atomic number 111 is Roentgenium, with the symbol Rg. It is a synthetic element that belongs to the group of transition metals.",
+  "answer_tokens": 36,
+  "eos_hit": true,
+  "wall_s": 1.7946245837956667,
+  "correct": true,
+  "truncated": false,
+  "extracted": "Roentgenium",
+  "note": "token-run-match"
+}

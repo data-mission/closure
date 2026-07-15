@@ -1,0 +1,17 @@
+{
+  "round": 2,
+  "kind": "arith_multistep",
+  "family": "arithmetic",
+  "prompt": "A book originally costs 45 dollars. Its price is reduced by 20 percent, and then a 5 dollar coupon is applied. What is the final price in dollars?",
+  "gold": "31",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To find the final price of the book after the discounts, we need to follow these steps:\n\n1. Calculate the price after the 20% reduction.\n2. Subtract the $5 coupon from the reduced price.\n\n**Step 1: Calculate the price after the 20% reduction.**\n\nThe original price of the book is $45. A 20% reduction means the price is reduced by 20% of $45.\n\nFirst, calculate 20% of $45:\n\\[ 20\\% \\text{ of } 45 = 0.20 \\times 45 = 9 \\]\n\nSo, the price after the 20% reduction is:\n\\[ 45 - 9 = 36 \\]\n\n**Step 2: Subtract the $5 coupon from the reduced price.**\n\nNow, we subtract the $5 coupon from the reduced price of $36:\n\\[ 36 - 5 = 31 \\]\n\nTherefore, the final price of the book is:\n\\[ \\boxed{31} \\]",
+  "answer_tokens": 226,
+  "eos_hit": true,
+  "wall_s": 9.774260332807899,
+  "correct": true,
+  "truncated": false,
+  "extracted": "31.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

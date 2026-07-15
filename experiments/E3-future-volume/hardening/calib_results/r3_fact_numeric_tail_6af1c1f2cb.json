@@ -1,0 +1,17 @@
+{
+  "round": 3,
+  "kind": "fact_numeric_tail",
+  "family": "factual",
+  "prompt": "Which chemical element has atomic number 118?",
+  "gold": "Oganesson",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The chemical element with atomic number 118 is Oganesson. It was named after the Russian physicist Yuri Oganessian. Oganesson is a synthetic element that can only be created in a laboratory through nuclear reactions, and it does not occur naturally on Earth.",
+  "answer_tokens": 55,
+  "eos_hit": true,
+  "wall_s": 2.5889067091047764,
+  "correct": true,
+  "truncated": false,
+  "extracted": "Oganesson",
+  "note": "token-run-match"
+}

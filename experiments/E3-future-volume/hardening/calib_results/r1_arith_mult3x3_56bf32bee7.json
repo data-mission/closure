@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "arith_mult3x3",
+  "family": "arithmetic",
+  "prompt": "What is 347 times 268?",
+  "gold": "92996",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To find the product of 347 and 268, we can perform the multiplication step by step.\n\nFirst, let's break it down:\n\n\\[ 347 \\times 268 \\]\n\nWe can use the standard algorithm for multiplication:\n\n1. Multiply 347 by 8 (the ones digit of 268):\n\\[ 347 \\times 8 = 2776 \\]\n\n2. Multiply 347 by 60 (the tens digit of 268, which is 6 times 10):\n\\[ 347 \\times 60 = 20820 \\]\n\n3. Multiply 347 by 200 (the hundreds digit of 268, which is 2 times 100):\n\\[ 347 \\times 200 = 69400 \\]\n\nNow, add these results together:\n\n\\[ 2776 + 20820 + 69400 = 93096 \\]\n\nSo, the product of 347 and 268 is:\n\n\\[ 347 \\times 268 = 93096 \\]",
+  "answer_tokens": 264,
+  "eos_hit": true,
+  "wall_s": 11.35724624991417,
+  "correct": false,
+  "truncated": false,
+  "extracted": "93096.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "letter_count",
+  "family": "arithmetic",
+  "prompt": "How many vowels are in the word sequoia?",
+  "gold": "5",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The word \"sequoia\" contains 4 vowels. The vowels are 'e', 'u', 'i', and 'a'.",
+  "answer_tokens": 28,
+  "eos_hit": true,
+  "wall_s": 1.4707076661288738,
+  "correct": false,
+  "truncated": false,
+  "extracted": "4.0",
+  "note": "numeric[last-number-fallback]tol=0.0"
+}

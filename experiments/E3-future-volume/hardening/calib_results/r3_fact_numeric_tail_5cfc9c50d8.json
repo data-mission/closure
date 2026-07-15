@@ -1,0 +1,17 @@
+{
+  "round": 3,
+  "kind": "fact_numeric_tail",
+  "family": "factual",
+  "prompt": "What is the atomic number of fermium?",
+  "gold": "100",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The atomic number of fermium is 100. Fermium is a synthetic chemical element and is the ninth transuranic element. It was discovered in 1952 by a team led by Glenn T. Seaborg, Jack A. Hollis, and Kenneth Street, Jr. at the Lawrence Berkeley National Laboratory.",
+  "answer_tokens": 68,
+  "eos_hit": true,
+  "wall_s": 3.2759158331900835,
+  "correct": false,
+  "truncated": false,
+  "extracted": "1952.0",
+  "note": "numeric[last-number-fallback]tol=0.0"
+}

@@ -1,0 +1,19 @@
+{
+  "round": 1,
+  "kind": "fact_obscure",
+  "family": "factual",
+  "prompt": "What is the official currency of Thailand?",
+  "gold": "baht",
+  "accept": [
+    "Thai baht"
+  ],
+  "tol": 0.0,
+  "answer": "The official currency of Thailand is the Thai Baht (THB). It is denoted by the symbol \u0e3f and has been in use since 19 August 1941. The Baht is divided into 100 satang, though in practice, it is often rounded to the nearest satang.",
+  "answer_tokens": 66,
+  "eos_hit": true,
+  "wall_s": 3.0158460829406977,
+  "correct": true,
+  "truncated": false,
+  "extracted": "baht",
+  "note": "token-run-match"
+}

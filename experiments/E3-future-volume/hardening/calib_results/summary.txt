@@ -1,0 +1,15 @@
+=== PER-KIND accuracy (truncated excluded from denominator) ===
+  arith_mult3x3    n= 8 correct= 1 acc=0.125 trunc=0  
+  arith_multistep  n=15 correct=12 acc=0.800 trunc=0  <-- BAND
+  ded_hard         n= 8 correct= 7 acc=0.875 trunc=0  
+  ded_harder       n= 6 correct= 5 acc=0.833 trunc=0  
+  ded_trap         n= 8 correct= 8 acc=1.000 trunc=0  
+  fact_numeric_tail n=14 correct= 8 acc=0.571 trunc=0  <-- BAND
+  fact_obscure     n=15 correct=13 acc=0.867 trunc=0  
+  fact_reverse     n=14 correct=13 acc=0.929 trunc=0  
+  letter_count     n= 8 correct= 4 acc=0.500 trunc=0  <-- BAND
+  unit_convert     n= 6 correct= 6 acc=1.000 trunc=0  
+=== PER-FAMILY accuracy ===
+  arithmetic   n=37 correct=23 acc=0.622 trunc=0
+  deduction    n=22 correct=20 acc=0.909 trunc=0
+  factual      n=43 correct=34 acc=0.791 trunc=0

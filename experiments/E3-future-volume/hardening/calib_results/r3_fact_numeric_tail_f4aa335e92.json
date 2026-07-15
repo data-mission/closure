@@ -1,0 +1,17 @@
+{
+  "round": 3,
+  "kind": "fact_numeric_tail",
+  "family": "factual",
+  "prompt": "What is the atomic number of seaborgium?",
+  "gold": "106",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The atomic number of seaborgium is 106. Seaborgium is a synthetic element, and it is named after the American chemist Glenn T. Seaborg. It is a transactinide element and is located in the seventh period of the periodic table, in group 6.",
+  "answer_tokens": 63,
+  "eos_hit": true,
+  "wall_s": 2.8968326672911644,
+  "correct": false,
+  "truncated": false,
+  "extracted": "6.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

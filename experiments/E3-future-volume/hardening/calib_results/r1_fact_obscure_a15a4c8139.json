@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "fact_obscure",
+  "family": "factual",
+  "prompt": "What is the capital of Eritrea?",
+  "gold": "Asmara",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The capital of Eritrea is Asmara.",
+  "answer_tokens": 11,
+  "eos_hit": true,
+  "wall_s": 0.7660199590027332,
+  "correct": true,
+  "truncated": false,
+  "extracted": "Asmara",
+  "note": "token-run-match"
+}

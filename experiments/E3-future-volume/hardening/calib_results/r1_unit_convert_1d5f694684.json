@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "unit_convert",
+  "family": "arithmetic",
+  "prompt": "How many square feet are in a square yard?",
+  "gold": "9",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "There are 9 square feet in a square yard. This is because a yard is equal to 3 feet, and since area is a two-dimensional measurement, you square this linear measurement. So, 3 feet * 3 feet = 9 square feet in a square yard.",
+  "answer_tokens": 57,
+  "eos_hit": true,
+  "wall_s": 2.6704705422744155,
+  "correct": true,
+  "truncated": false,
+  "extracted": "9.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "ded_trap",
+  "family": "deduction",
+  "prompt": "If the day before yesterday was Wednesday, what day will it be the day after tomorrow?",
+  "gold": "Sunday",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "If the day before yesterday was Wednesday, then yesterday was Thursday, and today is Friday.\n\nTo find out what day it will be the day after tomorrow, we can count forward from today:\n- Today is Friday.\n- Tomorrow will be Saturday.\n- The day after tomorrow will be Sunday.\n\nSo, the day after tomorrow will be Sunday.",
+  "answer_tokens": 68,
+  "eos_hit": true,
+  "wall_s": 3.1108580427244306,
+  "correct": true,
+  "truncated": false,
+  "extracted": "Sunday",
+  "note": "token-run-match"
+}

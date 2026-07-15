@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "unit_convert",
+  "family": "arithmetic",
+  "prompt": "How many seconds are in 2 hours?",
+  "gold": "7200",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To calculate the number of seconds in 2 hours, you can follow these steps:\n\n1. First, determine the number of minutes in 2 hours:\n   \\[ 2 \\text{ hours} \\times 60 \\text{ minutes/hour} = 120 \\text{ minutes} \\]\n\n2. Then, determine the number of seconds in 120 minutes:\n   \\[ 120 \\text{ minutes} \\times 60 \\text{ seconds/minute} = 7200 \\text{ seconds} \\]\n\nSo, there are 7200 seconds in 2 hours.",
+  "answer_tokens": 133,
+  "eos_hit": true,
+  "wall_s": 5.771697250194848,
+  "correct": true,
+  "truncated": false,
+  "extracted": "7200.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

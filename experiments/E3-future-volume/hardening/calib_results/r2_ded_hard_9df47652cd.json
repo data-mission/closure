@@ -1,0 +1,17 @@
+{
+  "round": 2,
+  "kind": "ded_hard",
+  "family": "deduction",
+  "prompt": "Seven people -- A, B, C, D, E, F, and G -- sit in seats numbered 1 to 7 from left to right. A is in seat 1. B sits immediately to the left of C. D sits somewhere to the left of B. E sits immediately to the left of F. C sits somewhere to the left of E. G is not in seat 7. D is not in seat 2. Who sits in seat 4?",
+  "gold": "B",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To solve this problem, we need to carefully analyze the given conditions and place each person in their respective seats. Let's break it down step by step.\n\n1. **Initial Conditions:**\n   - A is in seat 1.\n   - G is not in seat 7.\n   - D is not in seat 2.\n\n2. **Conditions Involving B, C, and D:**\n   - B sits immediately to the left of C.\n   - D sits somewhere to the left of B.\n   - C sits somewhere to the left of E.\n\n3. **Conditions Involving E and F:**\n   - E sits immediately to the left of F.\n\n4. **Possible Positions:**\n   - Since A is in seat 1, the remaining seats are 2, 3, 4, 5, 6, and 7.\n   - G is not in seat 7, so G can be in seats 2, 3, 4, 5, or 6.\n   - D is not in seat 2, so D can be in seats 3, 4, 5, 6, or 7.\n\nLet's start by placing B and C. Since B is immediately to the left of C, they must be in consecutive seats. Let's consider the possible pairs:\n\n- (2, 3)\n- (3, 4)\n- (4, 5)\n- (5, 6)\n\nNext, D must be to the left of B. Let's consider the possible positions for D:\n\n- If B and C are in (2, 3), D must be in seat 1 (but A is already there).\n- If B and C are in (3, 4), D must be in seat 2 (but G cannot be there).\n- If B and C are in (4, 5), D must be in seat 3.\n- If B and C are in (5, 6), D must be in seat 4 or 5.\n\nNow, let's consider the pairs for E and F. E is immediately to the left of F, so they must be in consecutive seats. Let's consider the possible pairs:\n\n- (4, 5)\n- (5, 6)\n- (6, 7)\n\nWe need to ensure that these pairs do not conflict with the positions of B, C, and D. Let's test the possible positions:\n\n- If B and C are in (4, 5), D must be in seat 3. This leaves seats 1, 2, 6, and 7 for A, G, E, and F. But E and F must be in (4, 5), which is not possible since B and C are already there.\n- If B and C are in (5, 6), D must be in seat 4 or 5. If D is in seat 4, B and C must be in (5, 6), which is not possible since D is to the left of B. If D is in seat",
+  "answer_tokens": 640,
+  "eos_hit": false,
+  "wall_s": 26.96424987539649,
+  "correct": true,
+  "truncated": false,
+  "extracted": "B",
+  "note": "token-run-match"
+}

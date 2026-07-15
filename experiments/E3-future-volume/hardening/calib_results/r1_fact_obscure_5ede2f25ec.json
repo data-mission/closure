@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "fact_obscure",
+  "family": "factual",
+  "prompt": "What is the capital of Kyrgyzstan?",
+  "gold": "Bishkek",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The capital of Kyrgyzstan is Bishkek. It was previously known as Pishpek and Frunze, but it was officially renamed Bishkek in 1991 after the fall of the Soviet Union.",
+  "answer_tokens": 46,
+  "eos_hit": true,
+  "wall_s": 2.198154584504664,
+  "correct": true,
+  "truncated": false,
+  "extracted": "Bishkek",
+  "note": "token-run-match"
+}

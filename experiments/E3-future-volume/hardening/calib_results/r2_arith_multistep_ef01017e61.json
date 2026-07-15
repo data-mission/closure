@@ -1,0 +1,17 @@
+{
+  "round": 2,
+  "kind": "arith_multistep",
+  "family": "arithmetic",
+  "prompt": "A train departs at 9:45 and arrives at 13:20 on the same day. How many minutes long is the journey?",
+  "gold": "215",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To determine the duration of the train journey, we need to calculate the difference between the arrival time and the departure time.\n\nThe departure time is 9:45, and the arrival time is 13:20.\n\nFirst, let's break it down into hours and minutes:\n\n- From 9:45 to 13:45 is 4 hours (since 13:45 - 9:45 = 4 hours).\n- From 13:45 to 13:20 is a negative 25 minutes (since 13:20 is 25 minutes before 13:45).\n\nSo, we can adjust the hours and minutes as follows:\n\n- 4 hours - 25 minutes = 3 hours and 60 minutes - 25 minutes = 3 hours and 35 minutes.\n\nTherefore, the journey is 3 hours and 35 minutes long. To convert this into minutes, we calculate:\n\n- 3 hours = 3 * 60 minutes = 180 minutes.\n- 180 minutes + 35 minutes = 215 minutes.\n\nSo, the journey is 215 minutes long.",
+  "answer_tokens": 256,
+  "eos_hit": true,
+  "wall_s": 10.862877332605422,
+  "correct": true,
+  "truncated": false,
+  "extracted": "215.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

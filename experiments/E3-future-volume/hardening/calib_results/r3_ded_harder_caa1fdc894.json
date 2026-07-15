@@ -1,0 +1,17 @@
+{
+  "round": 3,
+  "kind": "ded_harder",
+  "family": "deduction",
+  "prompt": "Eight people -- A, B, C, D, E, F, G, and H -- sit in seats numbered 1 to 8 from left to right. A is in seat 1. B sits immediately to the left of C. D sits somewhere to the left of B. E sits immediately to the left of F. C sits somewhere to the left of E. G is not in seat 8. D is not in seat 2. H sits immediately to the left of G. Who sits in seat 4?",
+  "gold": "D",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To solve this problem, we need to carefully analyze and place each person in their seats based on the given conditions. Let's break it down step by step.\n\n1. **Initial Setup:**\n   - A is in seat 1.\n   - H sits immediately to the left of G, so if G is in seat 8, H must be in seat 7. If G is in seat 7, H must be in seat 6, and so on.\n\n2. **Conditions:**\n   - B sits immediately to the left of C.\n   - D sits somewhere to the left of B.\n   - E sits immediately to the left of F.\n   - C sits somewhere to the left of E.\n   - G is not in seat 8.\n   - D is not in seat 2.\n\n3. **Possible Positions for G and H:**\n   - Since G is not in seat 8, G can be in seats 1 through 7.\n   - H must be one seat to the left of G, so H can be in seats 1 through 6.\n\n4. **Placing D:**\n   - D cannot be in seat 2, so D must be in seats 1, 3, 4, 5, 6, or 7.\n   - D must be to the left of B, and B must be to the left of C. So, D must be in a seat such that there is room for B and C to the right of D.\n\n5. **Placing B, C, and E, F:**\n   - B must be to the left of C, and E must be to the left of F, and C must be to the left of E. This means the order of B, C, E, and F must be B, C, E, F or some permutation that respects these conditions.\n\n6. **Combining Conditions:**\n   - Let's start by placing G and H. If G is in seat 7, H must be in seat 6. If G is in seat 6, H must be in seat 5, and so on.\n   - Let's try G in seat 7 and H in seat 6. This leaves seats 1, 2, 3, 4, 5, and 8 for the rest.\n   - A is in seat 1, so we have seats 2, 3, 4, 5, and 8 left.\n   - D cannot be in seat 2, so D must be in seats 3, 4, 5, or 8.\n   - D must be to the left of B, and B must be to the left of C. So, D must be in a seat such that there is room for B and C to the right of D.\n   - Let's try D in seat 3. Then B must be in seat 4 or 5, and C must be in a seat to the right of B.\n   - If B is in seat 4, C must be in seat 5. This leaves seats 2 and 8 for E and F, and E must be to the left of F.\n   - If E is in seat 2, F must be in seat 8. This works.\n\nSo, the seating arrangement is:\n- Seat 1: A\n- Seat 2: E\n- Seat 3: D\n- Seat 4: B\n- Seat 5: C\n- Seat 6: H\n- Seat 7: G\n- Seat 8: F\n\nTherefore, the person sitting in seat 4 is \\boxed{B}.",
+  "answer_tokens": 763,
+  "eos_hit": true,
+  "wall_s": 32.47109999973327,
+  "correct": true,
+  "truncated": false,
+  "extracted": "D",
+  "note": "token-run-match"
+}

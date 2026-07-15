@@ -1,0 +1,17 @@
+{
+  "round": 3,
+  "kind": "fact_numeric_tail",
+  "family": "factual",
+  "prompt": "What is the atomic number of rutherfordium?",
+  "gold": "104",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The atomic number of rutherfordium is 104. Rutherfordium is a synthetic element, and it is a member of the actinide series. It was named after the British physicist Ernest Rutherford.",
+  "answer_tokens": 44,
+  "eos_hit": true,
+  "wall_s": 2.1160750007256866,
+  "correct": true,
+  "truncated": false,
+  "extracted": "104.0",
+  "note": "numeric[last-number-fallback]tol=0.0"
+}

@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "ded_trap",
+  "family": "deduction",
+  "prompt": "On an island, knights always tell the truth and knaves always lie. You meet two people, X and Y. X says, 'Y is a knave.' Y says, 'X and I are both knights.' Is Y a knight or a knave?",
+  "gold": "knave",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "Let's analyze the statements made by X and Y to determine who is a knight and who is a knave.\n\n1. **X says, 'Y is a knave.'**\n2. **Y says, 'X and I are both knights.'**\n\nWe need to consider the two possible cases for Y: Y is either a knight or a knave.\n\n**Case 1: Y is a Knight**\n- If Y is a knight, then Y's statement must be true. So, \"X and I are both knights\" would be true. This means X must also be a knight.\n- If X is a knight, then X's statement must be true. So, \"Y is a knave\" would be false. But we just established that Y is a knight, which contradicts X's statement. Therefore, Y cannot be a knight.\n\n**Case 2: Y is a Knave**\n- If Y is a knave, then Y's statement must be false. So, \"X and I are both knights\" would be false. This means at least one of X or Y is a knave. Since we are assuming Y is a knave, X must be a knight.\n- If X is a knight, then X's statement must be true. So, \"Y is a knave\" would be true, which is consistent with our assumption that Y is a knave.\n\nSince the first case leads to a contradiction and the second case is consistent, we conclude that Y must be a knave.\n\nTherefore, Y is a knave.",
+  "answer_tokens": 319,
+  "eos_hit": true,
+  "wall_s": 13.57782766688615,
+  "correct": true,
+  "truncated": false,
+  "extracted": "knave",
+  "note": "token-run-match"
+}

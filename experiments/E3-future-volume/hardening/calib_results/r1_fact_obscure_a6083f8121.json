@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "fact_obscure",
+  "family": "factual",
+  "prompt": "What is the capital of Palau?",
+  "gold": "Ngerulmud",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The capital of Palau is Ngerulmud. However, it's worth noting that Ngerulmud is one of the smallest national capitals in the world, with a population of less than 1,000 people. The other official capital is Koror, which is the largest city in Palau and serves as the commercial and financial center of the country.",
+  "answer_tokens": 77,
+  "eos_hit": true,
+  "wall_s": 3.4639097917824984,
+  "correct": true,
+  "truncated": false,
+  "extracted": "Ngerulmud",
+  "note": "token-run-match"
+}

@@ -88,12 +88,18 @@ bands. The union with any one family held out therefore always covers the full r
 
 ## Difficulty covariate
 
-Scheme: an integer **1–3** per prompt, **anchored per family** (a "3" means different things in `arithmetic` and
-`creative`). Its purpose is twofold: (a) it is the difficulty covariate E0 `PLAN.md` step 6 requires recorded at
-construction, so a later analysis can check that difficulty is not confounded with family; (b) it is the knob that
-creates within-family volume spread, so each family covers a sub-range rather than sitting at one volume. Higher
-difficulty is expected to raise continuation diversity — harder items admit more varied (and more varied-wrong)
-continuations — so the covariate is monotone in expected volume within a family. Anchors:
+Scheme: an integer **1–4** per prompt, **anchored per family** (a "3" means different things in `arithmetic` and
+`creative`). Difficulties 1–3 are the original within-family degree ladder; **difficulty 4 is a distinct KIND, not a
+harder degree** — added by the kind-based hardening (see § Kind-based d4 hardening) because the dress rehearsal
+proved the model makes zero genuine errors anywhere on the 1–3 ladder. The open families (`enumeration`, `creative`)
+carry no correctness labels and keep the 1–3 ladder; only the three ANSWERABLE families carry d4 items. Its purpose
+is threefold: (a) it is the difficulty covariate E0 `PLAN.md` step 6 requires recorded at construction, so a later
+analysis can check that difficulty is not confounded with family; (b) it is the knob that creates within-family
+volume spread, so each family covers a sub-range rather than sitting at one volume; (c) the d4 tier is the knob that
+creates a real CORRECTNESS-negative rate on the answerable subset (the e3-0003 AUROC arm), which the 1–3 ladder does
+not — the model is at ceiling on all of it. Higher difficulty is expected to raise continuation diversity — harder
+items admit more varied (and more varied-wrong) continuations — so the covariate is monotone in expected volume
+within a family. Anchors:
 
 - **`arithmetic`** — 1: single operation on small operands (`8 × 7`). 2: two operations, a percentage, or
   order-of-operations (`3 + 4 × 5`). 3: multi-step word problem with a real-world frame and unit handling
@@ -109,17 +115,32 @@ continuations — so the covariate is monotone in expected volume within a famil
 - **`creative`** — 1: constrained slot-fill (name/title for a specified thing). 2: short-form composition (a
   one-sentence description). 3: unbounded composition (invent a metaphor, a proverb, a creature).
 
+**d4 — kind-based hardening anchors (answerable families only).** A d4 item is a genuinely-different KIND on which
+the calibration (`hardening/HARDENING.md`) measured a real 7B error rate while the gold stays single-answer-
+unambiguous — NOT a harder degree of the 1–3 anchor. Anchors:
+
+- **`arithmetic` d4** — `arith_mult3x3`: 3-digit × 3-digit multiplication (`374 × 269`). The model runs the long-
+  multiplication algorithm and makes a genuine carry/addition slip. Calibrated greedy accuracy **0.125**.
+- **`factual` d4** — `fact_numeric_tail`: reverse superheavy/transuranic element lookup (atomic number → element,
+  Z = 97…117, the confusable middle). The only factual kind that leaves ceiling; the model confuses the reverse
+  names. Calibrated accuracy **≈ 0.55–0.79** (mixed superheavy 0.786; confusable-reverse subset lower).
+- **`deduction` d4** — `ded_seat6`: unique 6–7-entity seating puzzles (immediate-adjacency + left-of + negations),
+  uniqueness machine-proven by `hardening/ded_verify.py`. Calibrated accuracy **0.20–0.40** (with a truncation
+  caveat — see the answer-cap recommendation in HARDENING.md).
+
 Per-family/difficulty → expected-diversity band mapping (the design annotation stored in `expected_diversity`):
 
-| family | difficulty 1 | difficulty 2 | difficulty 3 |
-|--------|--------------|--------------|--------------|
-| `arithmetic`  | low | low  | mid  |
-| `factual`     | low | low  | mid  |
-| `deduction`   | low | mid  | mid  |
-| `enumeration` | mid | mid  | high |
-| `creative`    | mid | high | high |
+| family | difficulty 1 | difficulty 2 | difficulty 3 | difficulty 4 |
+|--------|--------------|--------------|--------------|--------------|
+| `arithmetic`  | low | low  | mid  | mid |
+| `factual`     | low | low  | mid  | mid |
+| `deduction`   | low | mid  | mid  | mid |
+| `enumeration` | mid | mid  | high | —   |
+| `creative`    | mid | high | high | —   |
 
-Every family spans at least two bands (`arithmetic`/`factual`/`deduction`: low→mid; `enumeration`/`creative`:
+d4 items are annotated `expected_diversity` "mid": their role is CORRECTNESS-negative injection for the AUROC arm,
+not volume-band extension, so they are not claimed to raise the volume band beyond the existing d3 "mid". Every
+family still spans at least two bands (`arithmetic`/`factual`/`deduction`: low→mid; `enumeration`/`creative`:
 mid→high), which is what makes the leave-one-family-out training set volume-diverse under every rotation.
 
 ## Sourcing decision and defense
@@ -178,17 +199,103 @@ convention of E0 `PLAN.md` step 6:
 Built and checked by `corpus/candidates.jsonl`'s assembly (duplicate-prompt check, spike near-duplication check,
 arithmetic-gold recomputation all pass).
 
-| family | total | answerable | difficulty 1 / 2 / 3 | bands spanned |
+| family | total | answerable | difficulty 1 / 2 / 3 / 4 | bands spanned |
 |--------|------:|-----------:|----------------------|---------------|
-| `arithmetic`  |  42 |  42 | 14 / 14 / 14 | low, mid  |
-| `factual`     |  42 |  42 | 14 / 14 / 14 | low, mid  |
-| `deduction`   |  42 |  42 | 14 / 14 / 14 | low, mid  |
-| `enumeration` |  37 |   0 | 12 / 12 / 13 | mid, high |
-| `creative`    |  37 |   0 | 12 / 12 / 13 | mid, high |
-| **total**     | **200** | **126** | 66 / 66 / 68 | low, mid, high |
+| `arithmetic`  |  42 |  42 | 14 / 14 / 0 / 14 | low, mid  |
+| `factual`     |  42 |  42 | 14 / 14 / 0 / 14 | low, mid  |
+| `deduction`   |  42 |  42 | 14 / 14 / 0 / 14 | low, mid  |
+| `enumeration` |  37 |   0 | 12 / 12 / 13 / 0 | mid, high |
+| `creative`    |  37 |   0 | 12 / 12 / 13 / 0 | mid, high |
+| **total**     | **200** | **126** | 66 / 66 / 26 / 42 | low, mid, high |
 
 Answerable subset = **126 of 200** (the three labeled families), comfortably above the ≥120 target with margin for
-any exclusions (below). Corpus-wide expected-diversity bands: 70 low, 92 mid, 38 high.
+any exclusions (below). Each answerable family's original 14 d3 items were REPLACED by 14 calibrated d4 hard-kind
+items (the hardening; § Kind-based d4 hardening), so the answerable families now span difficulties {1, 2, 4} — three
+crossed levels — and the open families keep {1, 2, 3}. Counts are unchanged (42/42/42/37/37); the replacement is
+in-place. Corpus-wide difficulty distribution: 66 d1, 66 d2, 26 d3, 42 d4 (verified by `corpus/assemble_verify.py`).
+
+## Kind-based d4 hardening
+
+The dress rehearsal (`REHEARSAL.md`) established that Qwen2.5-7B-Instruct-4bit makes **zero genuine errors** on the
+1–3 difficulty ladder — trivial through very-hard single-answer prompts, including the band the original hardening
+plan intended to add. Hardening by degree buys ~zero correctness negatives, so the entire e3-0003 AUROC arm (probe
+vs verbalized confidence and the three baselines) would rest on a handful of accidental labels. The fix is to change
+KIND, not degree. The calibration (`hardening/HARDENING.md`, 102 disposable prompts, 3 rounds, improved normalizer)
+searched for kinds where the 7B genuinely fails while the gold stays single-answer-unambiguous, and found one per
+answerable family. Each answerable family's 14 d3 items were replaced in place by 14 items of that family's d4 kind
+(`corpus/d4_items.py`, golds verified — arithmetic recomputed from `expr`, factual sourced to IUPAC, deduction
+uniqueness proven by brute force in `hardening/ded_verify.py`):
+
+| family | d4 kind | what it is | calibrated greedy accuracy |
+|--------|---------|------------|----------------------------|
+| `arithmetic` | `arith_mult3x3`     | 3-digit × 3-digit multiplication (`374 × 269`) | 0.125 |
+| `factual`    | `fact_numeric_tail` | reverse superheavy lookup (Z 97–117 → element name) | ≈ 0.55–0.79 |
+| `deduction`  | `ded_seat6`         | unique 6–7-entity seating puzzles | 0.20–0.40 |
+
+### Expected answerable accuracy (the negative-rate design, stated as arithmetic)
+
+This is a **projection** from the disposable calibration rates — the corpus d4 items are NOT run before registration,
+so their exact accuracy is unknown; it is estimated from the same-kind disposable measurements. Model, per family
+(42 answerable items = 28 non-d4 at 1–2 difficulty + 14 d4):
+
+    family_accuracy = ( 28 · p_easy + 14 · r_kind ) / 42
+
+with `p_easy ≈ 1.00` (the rehearsal measured d1/d2 answerable accuracy at 10/10, 10/10) and `r_kind` the calibrated
+d4 rate. Using the central estimates `r_arith = 0.125`, `r_fact = 0.60`, `r_ded = 0.30`:
+
+- `arithmetic`: (28 + 14·0.125)/42 = 29.75/42 = **0.708**
+- `factual`:    (28 + 14·0.60)/42 = 36.4/42  = **0.867**
+- `deduction`:  (28 + 14·0.30)/42 = 32.2/42  = **0.767**
+- **overall answerable accuracy = mean = (0.708 + 0.867 + 0.767) / 3 = 0.781 ≈ 0.78**, i.e. an answerable **negative
+  rate ≈ 0.22**.
+
+Sensitivity over the calibration's uncertainty (`p_easy` 0.98–1.00; `r_fact` 0.55–0.70; `r_ded` 0.20–0.40;
+`r_arith` fixed at the measured 0.125): overall answerable accuracy lands in **0.75–0.80**, negative rate **0.20–0.25** —
+inside the 60–80% target with margin, and meeting the rehearsal's "≥ 25% preferred negative rate" at the lower edge.
+`factual` is the least-certain and highest family (its kind is the hardest to break — the model's factual recall is
+near-unbreakable while single-answer-unambiguous), so it contributes the fewest negatives; `arithmetic` contributes
+the most. **Caveat (from calibration):** hard `ded_seat6` items produce long chains that can hit the answer cap; a
+truncated correctness decode is EXCLUDED, not a negative, so the deduction negative rate above is only realized if the
+frozen run config sets the correctness-label answer cap ≥ 768 tokens (HARDENING.md § cautions). At a low cap the
+deduction contribution shifts from negatives to exclusions and the overall accuracy rises toward the upper edge.
+
+## Decontamination and repair
+
+The anti-contamination check was extended from the spike-20 to the full DISPOSABLE MANIFEST
+(`corpus/DISPOSABLE-MANIFEST.jsonl` — spike-20 + pilot-30 + rehearsal-41 + the 102 calibration prompts = 193
+throwaway prompts). `corpus/decontaminate.py` audits every corpus prompt against every disposable prompt under three
+content rules: **E** (exact/normalized duplicate), **S** (same-scenario near-dup in an open family, gold null), **G**
+(same-gold near-identical clone, Jaccard ≥ 0.85, in an answerable family). The generic short-question frame and the
+seating-puzzle boilerplate (Jaccard ≤ 0.80 with a different gold, or a colliding single-letter gold under the frame)
+are the accepted frame effect — the same one `REHEARSAL.md` accepted for "9 times 8" vs "9 times 9" — and never flag.
+
+Six contaminated ids were found and replaced in place (same id, new disposable-disjoint content):
+
+| id | original (contaminated) | rule | replacement |
+|----|-------------------------|------|-------------|
+| `arith-015` | "What is 15 percent of 200?" | E — byte-exact vs pilot-30 | d2 "What is 45 percent of 80?" (gold 36) |
+| `fact-003`  | "What is the largest planet in our Solar System?" | E — case-variant vs pilot-30 | d1 "How many wheels does a standard bicycle have?" (gold 2) |
+| `fact-028`  | "In what year did World War II end?" | E — byte-exact vs pilot-30 | d2 "How many sides does a pentagon have?" (gold 5) |
+| `fact-037`  | "What is the currency of Japan?" | topic+template collision with the calibration `official currency of <country>` items (REHEARSAL-era audit) | **d4** factual (Z=109 → Meitnerium) — decontaminates AND hardens in one move |
+| `crea-031`  | "Imagine a new holiday and describe how people celebrate it." | S — same scenario as pilot-30 (verb-swap) | "Invent a board game and describe how it is played." |
+| `crea-036`  | "Imagine a creature that lives in the clouds and describe it." | S — same scenario as pilot-30 ("Imagine"/"Design") | "Invent a musical instrument and describe the sound it makes." |
+
+`fact-037` is a borderline case: by the automated content rules it is a frame effect (different country, different
+gold), but it shares both the topic (currency) and the template with the calibration currency items, so it is
+replaced precautionarily per the REHEARSAL-era audit — and because it is a d3 slot, its replacement doubles as one of
+the factual d4 hardening items. The 42 hardening replacements are the d3 answerable ids `arith-029…042`,
+`fact-029…042` (including `fact-037`), `ded-029…042` → d4 hard-kind items.
+
+## Assembly and verification
+
+The corpus assembly script — missing from the original deposit — is now `corpus/assemble.py` (declarative,
+re-runnable): it attaches a machine-checkable `verify` expression to every arithmetic item, applies the six
+decontamination replacements, and applies the 42 d4 conversions from `corpus/d4_items.py`. `corpus/assemble_verify.py`
+is the commit-grade proof and must PASS before the corpus is used; it verifies schema, counts (42/42/42/37/37, total
+200, answerable 126), difficulty-crossing, no duplicate prompts, **every arithmetic gold recomputed from its `verify`
+expression**, **every deduction d4 gold re-derived to a unique solution by `ded_verify`**, and **zero contamination
+hits** against the disposable manifest (reporting the residual max token-Jaccard, 0.800 — the pre-existing benign
+"9 times 9" vs "9 times 8" frame effect between a corpus d1 item and the rehearsal set, present before this work).
 
 ## Exclusion handling
 
@@ -218,12 +325,24 @@ One JSON object per line in `corpus/candidates.jsonl`:
 | `family` | string | one of the five family names |
 | `prompt` | string | the exact prompt text (chat-templated and run per `e3-0001`) |
 | `gold` | string or null | canonical answer for answerable families; `null` for `enumeration`/`creative` |
-| `difficulty` | int 1–3 | difficulty covariate, anchored per family (above) |
+| `difficulty` | int 1–4 | difficulty covariate, anchored per family (above); 4 = kind-based hardening tier |
 | `expected_diversity` | "low"/"mid"/"high" | **design annotation** of expected volume band, not a measurement |
 | `provenance` | string | sourcing note; hand-authored, with the dataset format it is styled after |
 | `answerable` | bool | `true` iff a gold answer exists (drives the AUROC subset) |
+| `verify` | string (optional) | arithmetic expression recomputed by `assemble_verify.py` to equal the numeric gold; present on every `arithmetic` item and numeric-gold factual items — the gold is machine-recomputed, never asserted |
+| `ded_spec` | object (optional) | `{entities, spec, ask}` for d4 deduction items; `ded_verify` re-proves a UNIQUE solution and that seat `ask` == `gold` |
+| `accept` | list (optional) | per-item enumerated acceptable equivalents for the run-time normalizer (F4) |
+| `hard_kind` | string (optional) | on d4 items only: the calibrated kind label (`arith_mult3x3`/`fact_numeric_tail`/`ded_seat6`) |
 
 ## Anti-contamination guarantee
+
+**Updated for the full disposable manifest.** Zero of the 200 prompts is the same as, or a near-duplicate of, any of
+the **193** throwaway prompts now on record — the spike-20, the pilot-30, the rehearsal-41, and the 102 hardening-
+calibration prompts (`corpus/DISPOSABLE-MANIFEST.jsonl`). This is verified by `corpus/assemble_verify.py` calling
+`corpus/decontaminate.py` (§ Decontamination and repair): **0 contamination hits** under the E/S/G rules, residual
+max token-Jaccard **0.800** (the benign frame effect between corpus `arith-008` "9 times 9" and the rehearsal's
+"9 times 8" — different content, different gold — present before this work). The six items that DID overlap the
+pilot/calibration sets were found and replaced (table above). The original spike-only guarantee is preserved below.
 
 Zero of the 200 prompts is the same as, or a near-duplicate of, any of the 20 throwaway prompts in
 `spike/run_spike.py` (`FEASIBILITY.md` § Contamination rule). Checked in assembly: no exact overlap; and the

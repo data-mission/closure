@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "unit_convert",
+  "family": "arithmetic",
+  "prompt": "How many minutes are there in 3.5 hours?",
+  "gold": "210",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To find out how many minutes are in 3.5 hours, you can multiply the number of hours by the number of minutes in an hour. Since there are 60 minutes in an hour, you would calculate:\n\n\\[ 3.5 \\text{ hours} \\times 60 \\text{ minutes/hour} = 210 \\text{ minutes} \\]\n\nSo, there are 210 minutes in 3.5 hours.",
+  "answer_tokens": 95,
+  "eos_hit": true,
+  "wall_s": 4.214128916151822,
+  "correct": true,
+  "truncated": false,
+  "extracted": "210.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

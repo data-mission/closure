@@ -1,0 +1,19 @@
+{
+  "round": 1,
+  "kind": "fact_obscure",
+  "family": "factual",
+  "prompt": "What is the official currency of Vietnam?",
+  "gold": "dong",
+  "accept": [
+    "Vietnamese dong"
+  ],
+  "tol": 0.0,
+  "answer": "The official currency of Vietnam is the Vietnamese \u0111\u1ed3ng (VND). It is divided into 100 sen, though sen are no longer in circulation. The currency code for the Vietnamese \u0111\u1ed3ng is VND.",
+  "answer_tokens": 42,
+  "eos_hit": true,
+  "wall_s": 2.0341854160651565,
+  "correct": false,
+  "truncated": false,
+  "extracted": "circulation currency code for vietnamese ng is vnd",
+  "note": "no-token-match"
+}

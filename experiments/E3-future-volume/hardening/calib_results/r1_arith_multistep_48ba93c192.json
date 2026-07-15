@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "arith_multistep",
+  "family": "arithmetic",
+  "prompt": "Compute 144 divided by 12, then add 8, then multiply the result by 7.",
+  "gold": "140",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To solve the problem, we will follow the steps in the order given:\n\n1. Compute 144 divided by 12.\n2. Add 8 to the result from step 1.\n3. Multiply the result from step 2 by 7.\n\nLet's go through each step:\n\n1. \\( 144 \\div 12 = 12 \\)\n2. \\( 12 + 8 = 20 \\)\n3. \\( 20 \\times 7 = 140 \\)\n\nSo, the final answer is \\( 140 \\).",
+  "answer_tokens": 124,
+  "eos_hit": true,
+  "wall_s": 5.489344500005245,
+  "correct": true,
+  "truncated": false,
+  "extracted": "140.0",
+  "note": "numeric[after-marker]tol=0.0"
+}
