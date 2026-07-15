@@ -72,3 +72,54 @@ merges, these entries fold into the program log.
    ceiling).
 4. OSF pre-registration; only then the confirmatory run. Registration, corpus approval, and the run
    are each gated on an explicit human go — none proceeds on automation alone.
+
+---
+
+## 2026-07-14 — pre-registration package: corpus proposal, pilot, thresholds, registration draft
+
+Same day, second session — items 1–2 of the previous entry's list, plus the registration draft,
+brought to registrant-ready state.
+
+**Done.**
+- **Corpus proposal** (`CORPUS.md`, `corpus/candidates.jsonl`, PROPOSED): 200 hand-authored prompts,
+  five families distinct in kind (arithmetic / factual / deduction / enumeration / creative), 126
+  with verified golds for the AUROC subset. Hand-authoring defended on E3-specific grounds: a
+  memorized benchmark item depresses continuation diversity — contaminating the *dependent variable*,
+  not just the labels. Spike-overlap checked (max token-set Jaccard 0.50, generic frame only);
+  arithmetic golds recomputed in assembly; one edge-ambiguous factual item removed rather than
+  caveated.
+- **Pilot** (`PILOT.md`, `pilot/`): the full instrument end-to-end on 30 fresh throwaway prompts,
+  21.7 min wall clock, zero sampling failures, zero verbalized-confidence parse failures. The
+  plumbing answer is yes: volume separates prompt kinds with zero overlap between the low end
+  (instruction, ≤ −107.7) and the high end (ambiguous/creative, ≥ −19.5); the degenerate floor
+  observed in the wild equals the fixture-proven `10·log(1e-6)` exactly; six prompts sit on that
+  floor, so the log-volume target carries a mass point at its minimum — recorded for the analysis
+  plan. Verbalized confidence showed the literature's near-uniform overconfidence (median 100).
+- **Pre-freeze repair to e3-0002/e3-0004** (dated, before any real datum, the 0001-repair pattern):
+  the pilot exposed two implicit Gram-moving choices — the nomic task prefix (fixed: `clustering: `)
+  and whether embeddings are preprocessed upstream (fixed: raw embeddings in, the instrument centers
+  and normalizes once, internally). Embedding revision pinned live:
+  `e9b6763023c676ca8431644204f50c2b100d9aab`.
+- **Threshold proposal** (`THRESHOLDS-PROPOSAL.md`, PROPOSED): values with their evidence base split
+  into literature anchors (SEP's own 0.7–0.95 binarized range → `auc_binary_min` 0.70; verbalized
+  confidence at 0.50–0.70 on this model class → strict zero CI floor) and pilot observations (floor
+  mass point → modest R² bars 0.10/0.05/0.05 with pre-registered sweeps and a "threshold-fragile"
+  label if a verdict flips inside its band). Stated plainly: no published R²/Spearman anchor exists
+  for continuous-target hidden-state regression — the field stops at binarized AUROC, so the R² bars
+  are justified by construction, not citation.
+- **Registration draft** (`REGISTRATION-DRAFT.md`, DRAFT — NOT SUBMITTED): the full OSF package
+  assembled from the records — verdict conditions verbatim, all pins, analysis plan with the five
+  proven branches, honest spike+pilot disclosure, prior-art positioning, and a gaps-for-the-
+  registrant section listing exactly what only a human may close.
+
+**Decided, and why.** The thresholds are proposed, not set — the registration act decides them, and
+that act is human. The corpus is proposed, not approved. Both documents say precisely what approval
+covers so the sign-off is informed, not ceremonial.
+
+**Next session starts here.**
+1. Registrant acts, in order: read the two load-bearing papers (2406.15927 § binarized target;
+   2503.14749) and flip their ledger status; approve or amend the corpus; confirm or adjust the
+   thresholds; submit the registration on OSF.
+2. After the OSF timestamp exists and predates it: the confirmatory run (~3 h for 200 prompts on
+   this host), on an explicit go.
+3. At merge time: renumber `e3-000N` into the global decision sequence, fold this log into `LOG.md`.
