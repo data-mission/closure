@@ -5,7 +5,7 @@ conditions, the methodology, and the eight experiment protocols are published; e
 This page states exactly what that means — what is settled, what is not, and what is deliberately not claimed —
 because a stage stated plainly is worth more than a stage inferred from an absence.
 
-Last updated: 2026-07-13.
+Last updated: 2026-07-15.
 
 ## Published (stable, citable)
 
@@ -39,7 +39,14 @@ Last updated: 2026-07-13.
 
 ## Not yet run
 
-- **Every experiment.** No experiment has been executed; there are no results. E0 is the first target
+- **E3 has run — the program's first executed experiment (2026-07-15).** Verdict: `confirmed-shaped`,
+  carrying two honesty labels stated in full in the verdict document: the run was **unregistered**
+  (pre-registration waived; exploratory-grade evidence by this program's own standard — a registered
+  replication is the planned next step) and **threshold-fragile** on the length-residualization sweep
+  band. Full record: [experiments/E3-future-volume/](experiments/E3-future-volume/), verdict at
+  `run/VERDICT.md`, archived snapshot DOI
+  [10.5281/zenodo.21383448](https://doi.org/10.5281/zenodo.21383448).
+- **Every other experiment.** Not yet executed. E0 is the first target
   ([results/](results/) is empty by design). "No result yet" is the expected state at founding publication, not
   an omission — the program was published so that the plan can be attacked before execution hardens its
   assumptions.

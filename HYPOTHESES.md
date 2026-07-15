@@ -43,6 +43,14 @@ Each active hypothesis also carries a **confidence** line in IPCC calibrated lan
 **Status:** `PARTIALLY PRE-EMPTED` — the probe mechanism exists (Semantic Entropy Probes predict a *binarized* entropy class pre-generation); the step-resolved *contraction-shape* phenomenon was published independently in 2026 (see § Independent convergence below). Open edge: continuous volume as regression target + head-to-head vs verbalized confidence + the belief-state-geometry bridge at LLM scale. The "volume of reachable futures" framing has no prior use.
 **Confidence it holds:** medium — the binarized version of the signal is demonstrated (Semantic Entropy Probes); the open question is whether the continuum and the geometry are there too.
 **Kill condition:** the hidden state encodes only the binary high/low class (already known), or the probe fails to generalize out-of-distribution, or adds nothing over verbalized confidence.
+**First result (2026-07-15):** E3 executed — the program's first run. Verdict `confirmed-shaped` at the
+pre-frozen thresholds: the probe regressed continuous volume (non-degenerate Spearman 0.83), survived
+within-family and length-residualization controls, transferred under every leave-one-family-out rotation, and
+beat verbalized confidence and predictive entropy on correctness prediction without being dominated by a
+direct correctness probe. Two labels bind the claim: the run was **unregistered** (exploratory-grade by this
+program's standard) and **threshold-fragile** on the length-residualization band. Confidence moves medium →
+**high** on this evidence; the registered replication (second model, fresh corpus) is the step that would
+settle it. Record: `experiments/E3-future-volume/run/VERDICT.md`; snapshot DOI 10.5281/zenodo.21383448.
 **Experiment:** [E3](experiments/E3-future-volume/)
 
 ### H-ENFORCE — Preservation must be enforced, not requested
