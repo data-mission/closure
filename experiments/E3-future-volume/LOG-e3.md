@@ -163,3 +163,34 @@ one that always answers. And the claim is now the maximal defensible sentence, n
 **Next session starts here.** The registrant package is ready: corpus approval, threshold
 confirmation (10 new open parameters), named-reader verification of six papers, OSF submission, then
 the gated run. All human acts, in that order.
+
+---
+
+## 2026-07-15 — the run, and the verdict
+
+The confirmatory run executed on operator order, **unregistered** (pre-registration waived by explicit
+operator decision after full disclosure — recorded verbatim in the run manifest). 200/200 prompts,
+zero failures, zero exclusions, ~3.5 h wall. Analysis by the frozen instrument at the manifest
+thresholds, determinism proven across three independent passes (gate-block SHA-256 identical:
+`10205fcc9e83…`).
+
+**VERDICT: `confirmed-shaped` — threshold-fragile on one band.** All gates cleared: 26 negatives
+(precondition 15); non-degenerate fidelity R² 0.549 / Spearman 0.832; within-family Spearman 0.718;
+family-oracle margin +0.394; length-residualized within-family Spearman 0.361 (the narrow one — clears
+0.3, fails 0.4, hence the pre-registered FRAGILE label on `within_family_spearman_min`); OOD pooled
+within-held-out-family Spearman 0.572 with every rotation positive (floor 0.194, factual); probe beats
+verbalized confidence (CI-low +0.155) and entropy (CI-low +0.218), and is not dominated by the direct
+correctness probe (B4−probe CI-low −0.129; nominal AUROCs probe 0.789 vs B4 0.776). Full table in
+`run/VERDICT.md`; every number in `run/results/analysis.json`.
+
+**Exploratory (zero verdict weight):** all 26 model errors were confident errors (verbalized ≥ 90);
+entropy anti-predicted correctness (AUROC 0.42) and decoupled from volume (ρ 0.20) — the entropy-
+re-reader hypothesis died empirically, not just by gate; deduction-d4 calibration missed (0.93
+observed vs 0.2–0.4 calibrated); enumeration volumes landed below their design band (modal-preference
+collapse on bounded categories).
+
+**Standing.** As an unregistered result this is, by the program's own rules, exploratory-grade
+evidence: strong enough to justify a registered replication, not strong enough to claim the
+pre-registered standard. The natural next act: register the frozen contract as-is (it existed in this
+repo before the run — the git trail shows it, though git self-timestamps are not the OSF standard) and
+replicate on a fresh corpus, second model.
