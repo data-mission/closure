@@ -134,3 +134,50 @@ is `slow`-marked and confirms NLI direction (entailed above contradicted) at mea
 
 **Next session starts here:** S3 — corpus construction per the execution plan (60 tasks, verified A-dependency,
 must-change / must-persist annotations authored at construction time).
+
+---
+
+## 2026-07-15 — the E5 pilot completes; the corpus freezes at 60
+
+**The pilot ran, and the instrument's noise floor is now measured, not assumed.** All 150 candidate
+tasks (50 per family) went through the two-state, three-draw A-dependency filter — 900 generations,
+about $6.4 of metered cost, one instrument-noise event: two generations returned a provider-overload
+error and were re-scored on their two clean draws (both tasks retained). 136 of 150 candidates passed
+(91%); the 14 exclusions were all the same shape — no conclusion that flips when the correction
+replaces the assumption — which is exactly the one thing the filter exists to remove. Per-family
+retention was 42/50, 44/50, 50/50.
+
+**The three-draw majority is robust but not noiseless, so the noise got a disclosed pruning rule.**
+A conclusion can be a genuine assumption-dependency for its task yet, under the stochastic sampler,
+still be asserted in the majority of correction-state draws — a scorer target the model does not
+reliably retract even in the clean corrected world. Keeping such an item in the scored set would let
+all three arms be measured against a target that carries no real signal. The rule: for every retained
+task, drop from the scored set any conclusion still asserted in ≥2 of its correction-state draws.
+26 items across 26 tasks were pruned (each affected task lost exactly one of two); the invariant that
+every retained task keeps ≥1 scored conclusion held with no violations. The false-stale floor is
+about 18% of retained tasks — characterized, disclosed, not swept under the sampler.
+
+**Two selection amendments, both decided before any arm ran.** The pilot also flags a task when a
+must-persist conclusion changes assertion state across the two evidence states — a suspected leak of
+the assumption into a conclusion that was supposed to be assumption-independent, which would let the
+completeness co-primary punish correct revision. 23 tasks were flagged. Rather than adjudicate them
+one by one, the final set was restricted to unflagged tasks. That exclusion collided with a
+difficulty-covariate target: the flagged tasks turned out to be almost exactly the quantitative
+family's short-source-count tasks (16 of its 17), so removing them left that family unable to meet the
+source-count spread quota. The quota — a covariate-reporting target that carries no verdict weight —
+was relaxed to the feasible maximum for that family only; the other two families kept their quotas.
+The consequence is stated as a limitation: that family's short-context stratum is thin, so any
+short-context effect inside it is exploratory. Both amendments change only which tasks enter the
+corpus, never the frozen scoring configuration.
+
+**Frozen at 60, family-balanced 20/20/20.** Selection is deterministic — task_id ascending, quota
+reservations then fill — recorded so nothing is a hidden judgment call. The committed corpus carries
+only the task records: sources, the assumption and its correction, the question, and the two
+annotation sets, with all drafting-provenance stripped. The pilot logs and the full candidate pool,
+the selection audit trail, and the pruning register stay in private notes; the pre-registration will
+cite the exclusion counts and the configuration hash.
+
+**Next session starts here:** S4 — the OSF pre-registration. The protocol and the public registration
+draft are filled with the pilot's real numbers and the two amendments; the remaining step is to freeze
+the harness commit, re-read the configuration hash at the moment of registration, and deposit the
+pre-registration before the first registered arm runs.
