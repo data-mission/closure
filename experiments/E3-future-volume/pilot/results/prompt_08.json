@@ -1,0 +1,130 @@
+{
+  "idx": 8,
+  "kind": "math",
+  "prompt": "If a rectangle is 8 cm long and 5 cm wide, what is its area?",
+  "throwaway": true,
+  "prompt_tokens": 48,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.3653351664543152,
+  "entropy_base": "nats",
+  "top1_token_id": 785,
+  "top1_token_str": "The",
+  "extract_time_s": 0.3607071666046977,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260794,
+      "n_tokens": 124,
+      "eos_hit": true,
+      "wall_s": 5.429886500351131,
+      "text": "To find the area of a rectangle, you multiply its length by its width. For a rectangle that is 8 cm long and 5 cm wide, the area is calculated as follows:\n\n\\[ \\text{Area} = \\text{Length} \\times \\text{Width} \\]\n\\[ \\text{Area} = 8 \\, \\text{cm} \\times 5 \\, \\text{cm} \\]\n\\[ \\text{Area} = 40 \\, \\text{cm}^2 \\]\n\nSo, the area of the rectangle is 40 square centimeters."
+    },
+    {
+      "draw": 1,
+      "seed": 20260795,
+      "n_tokens": 118,
+      "eos_hit": true,
+      "wall_s": 5.2288427501916885,
+      "text": "The area of a rectangle can be found using the formula:\n\n\\[ \\text{Area} = \\text{length} \\times \\text{width} \\]\n\nGiven that the length of the rectangle is 8 cm and the width is 5 cm, we can substitute these values into the formula:\n\n\\[ \\text{Area} = 8 \\, \\text{cm} \\times 5 \\, \\text{cm} = 40 \\, \\text{cm}^2 \\]\n\nSo, the area of the rectangle is 40 square centimeters."
+    },
+    {
+      "draw": 2,
+      "seed": 20260796,
+      "n_tokens": 106,
+      "eos_hit": true,
+      "wall_s": 4.74134112522006,
+      "text": "The area of a rectangle can be found by multiplying its length by its width. For a rectangle that is 8 cm long and 5 cm wide, the area would be:\n\n\\[ \\text{Area} = \\text{Length} \\times \\text{Width} = 8 \\, \\text{cm} \\times 5 \\, \\text{cm} = 40 \\, \\text{cm}^2 \\]\n\nSo, the area of the rectangle is 40 square centimeters."
+    },
+    {
+      "draw": 3,
+      "seed": 20260797,
+      "n_tokens": 117,
+      "eos_hit": true,
+      "wall_s": 5.19782358314842,
+      "text": "The area of a rectangle can be found using the formula:\n\n\\[ \\text{Area} = \\text{length} \\times \\text{width} \\]\n\nGiven that the length of the rectangle is 8 cm and the width is 5 cm, we can calculate the area as follows:\n\n\\[ \\text{Area} = 8 \\, \\text{cm} \\times 5 \\, \\text{cm} = 40 \\, \\text{cm}^2 \\]\n\nSo, the area of the rectangle is 40 square centimeters."
+    },
+    {
+      "draw": 4,
+      "seed": 20260798,
+      "n_tokens": 106,
+      "eos_hit": true,
+      "wall_s": 4.714263958856463,
+      "text": "The area of a rectangle can be calculated by multiplying its length by its width. For a rectangle that is 8 cm long and 5 cm wide, the area would be:\n\n\\[ \\text{Area} = \\text{length} \\times \\text{width} = 8 \\, \\text{cm} \\times 5 \\, \\text{cm} = 40 \\, \\text{cm}^2 \\]\n\nSo, the area of the rectangle is 40 square centimeters."
+    },
+    {
+      "draw": 5,
+      "seed": 20260799,
+      "n_tokens": 108,
+      "eos_hit": true,
+      "wall_s": 4.8076833337545395,
+      "text": "The area of a rectangle can be calculated by multiplying its length by its width. For a rectangle that is 8 cm long and 5 cm wide, the area is calculated as follows:\n\n\\[ \\text{Area} = \\text{length} \\times \\text{width} = 8 \\, \\text{cm} \\times 5 \\, \\text{cm} = 40 \\, \\text{cm}^2 \\]\n\nSo, the area of the rectangle is 40 square centimeters."
+    },
+    {
+      "draw": 6,
+      "seed": 20260800,
+      "n_tokens": 118,
+      "eos_hit": true,
+      "wall_s": 5.214231415651739,
+      "text": "The area of a rectangle can be calculated using the formula:\n\n\\[ \\text{Area} = \\text{length} \\times \\text{width} \\]\n\nGiven that the length of the rectangle is 8 cm and the width is 5 cm, we can substitute these values into the formula:\n\n\\[ \\text{Area} = 8 \\, \\text{cm} \\times 5 \\, \\text{cm} = 40 \\, \\text{cm}^2 \\]\n\nSo, the area of the rectangle is 40 square centimeters."
+    },
+    {
+      "draw": 7,
+      "seed": 20260801,
+      "n_tokens": 105,
+      "eos_hit": true,
+      "wall_s": 4.699931125156581,
+      "text": "The area of a rectangle can be calculated by multiplying its length by its width. For a rectangle that is 8 cm long and 5 cm wide, the area is:\n\n\\[ \\text{Area} = \\text{length} \\times \\text{width} = 8 \\, \\text{cm} \\times 5 \\, \\text{cm} = 40 \\, \\text{cm}^2 \\]\n\nSo, the area of the rectangle is 40 square centimeters."
+    },
+    {
+      "draw": 8,
+      "seed": 20260802,
+      "n_tokens": 125,
+      "eos_hit": true,
+      "wall_s": 5.5212458753958344,
+      "text": "The area of a rectangle can be calculated using the formula:\n\n\\[ \\text{Area} = \\text{length} \\times \\text{width} \\]\n\nGiven that the length of the rectangle is 8 cm and the width is 5 cm, we can substitute these values into the formula:\n\n\\[ \\text{Area} = 8 \\, \\text{cm} \\times 5 \\, \\text{cm} = 40 \\, \\text{cm}^2 \\]\n\nSo, the area of the rectangle is \\(40 \\, \\text{cm}^2\\)."
+    },
+    {
+      "draw": 9,
+      "seed": 20260803,
+      "n_tokens": 118,
+      "eos_hit": true,
+      "wall_s": 5.188434625044465,
+      "text": "The area of a rectangle can be calculated using the formula:\n\n\\[ \\text{Area} = \\text{length} \\times \\text{width} \\]\n\nGiven that the length of the rectangle is 8 cm and the width is 5 cm, we can substitute these values into the formula:\n\n\\[ \\text{Area} = 8 \\, \\text{cm} \\times 5 \\, \\text{cm} = 40 \\, \\text{cm}^2 \\]\n\nSo, the area of the rectangle is 40 square centimeters."
+    }
+  ],
+  "realized_lengths": [
+    124,
+    118,
+    106,
+    117,
+    106,
+    108,
+    118,
+    105,
+    125,
+    118
+  ],
+  "eos_hit_count": 10,
+  "gen_total_wall_s": 50.746146500110626,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.39219091553241014,
+  "semantic_volume": -36.126506124210074,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "The area of a rectangle can be found by multiplying its length by its width. For a rectangle that is 8 cm long and 5 cm wide, the area would be:\n\n\\[ \\text{Area} = \\text{length} \\times \\text{width} = 8 \\, \\text{cm} \\times 5 \\, \\text{cm} = 40 \\, \\text{cm}^2 \\]\n\nSo, the area of the rectangle is 40 square centimeters.",
+    "answer_tokens": 106,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 5.668317291885614
+  },
+  "npz": "prompt_08.npz",
+  "prompt_total_wall_s": 57.1735476674512
+}

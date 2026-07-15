@@ -1,0 +1,130 @@
+{
+  "idx": 18,
+  "kind": "ambiguous",
+  "prompt": "Should I take the job?",
+  "throwaway": true,
+  "prompt_tokens": 35,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.7235642075538635,
+  "entropy_base": "nats",
+  "top1_token_id": 1249,
+  "top1_token_str": "To",
+  "extract_time_s": 0.2654695827513933,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260894,
+      "n_tokens": 256,
+      "eos_hit": false,
+      "wall_s": 10.82601458299905,
+      "text": "To give you the best advice on whether you should take the job, I'll need more details about the job offer and your current situation. Here are some key points to consider:\n\n1. **Job Description and Responsibilities**: What are the main responsibilities of the job? Are they aligned with your skills and interests?\n\n2. **Salary and Benefits**: What is the offered salary, and are there any benefits included, such as health insurance, retirement plans, paid time off, etc.?\n\n3. **Company Culture and Environment**: What does the company culture seem like? Does it align with your values and work style?\n\n4. **Career Growth Opportunities**: Does the company offer opportunities for professional development and career advancement?\n\n5. **Work-Life Balance**: What are the expectations for work hours and productivity? Is there a good balance between work and personal life?\n\n6. **Location**: Is the job location convenient for you? Are there any commute issues or other logistical challenges?\n\n7. **Market and Industry Trends**: Is the industry growing or declining? How stable is the job market in this sector?\n\n8. **Reviews and Reputation**: What do other employees say about the company? Check online reviews, social media, and professional networks.\n\n9. **Compensation Compared to Industry Standards**: Is"
+    },
+    {
+      "draw": 1,
+      "seed": 20260895,
+      "n_tokens": 256,
+      "eos_hit": false,
+      "wall_s": 10.835076958872378,
+      "text": "To help you decide whether to take the job, I'll need some more information about the job offer and your current circumstances. Here are some key factors to consider:\n\n1. **Salary and Benefits**: Compare the salary and benefits offered with what you're currently earning and what you need to meet your living expenses.\n\n2. **Job Responsibilities**: Review the job description to ensure the responsibilities align with your skills and career goals.\n\n3. **Company Culture**: Consider the company's culture, values, and work environment. Does it align with your personal values and work style?\n\n4. **Career Growth**: Assess the opportunities for professional development and career advancement within the company.\n\n5. **Location**: Consider the location of the job, including commute time, relocation costs, and whether it fits with your personal life.\n\n6. **Work-Life Balance**: Evaluate the expected hours and work schedule. Does it fit with your current lifestyle and personal commitments?\n\n7. **Initial Contract Terms**: Review any initial contract terms, including start date, probation period, and any specific conditions.\n\n8. **References and Interviews**: If you have had any interviews or feedback, consider the insights you received.\n\n9. **Future Prospects**: Think about the long-term prospects of the job and how it fits into your career"
+    },
+    {
+      "draw": 2,
+      "seed": 20260896,
+      "n_tokens": 256,
+      "eos_hit": false,
+      "wall_s": 10.826569416560233,
+      "text": "Sure, I can help you think through the decision! To make a more informed choice, let's consider a few key factors:\n\n1. **Job Offer Details**: What are the salary, benefits, and other perks offered? Are they in line with what you were expecting or what you need?\n\n2. **Company Culture**: Does the company align with your values and work style? Consider conducting background checks or talking to current or past employees for insights.\n\n3. **Professional Development**: Will this job provide opportunities for growth and learning? Are there training programs, mentorship options, or career advancement paths?\n\n4. **Job Responsibilities**: Are the duties outlined in the job description something you can handle and are you enthusiastic about them?\n\n5. **Work-Life Balance**: How does the company\u2019s schedule and expectations align with your personal and professional life? Consider the commute, hours, and work environment.\n\n6. **Long-Term Goals**: How does this role fit into your career goals? Will it help you achieve what you want to achieve in the next few years?\n\n7. **Compensation and Benefits**: Are the salary and benefits competitive? Consider not just the base pay but also bonuses, health insurance, retirement plans, and other benefits.\n\n8. **Location**: Is the location convenient"
+    },
+    {
+      "draw": 3,
+      "seed": 20260897,
+      "n_tokens": 256,
+      "eos_hit": false,
+      "wall_s": 10.827897707931697,
+      "text": "To give you the best advice, I'll need more details about the job and your current situation. However, here are some general factors you might consider when deciding whether to take a job:\n\n1. **Salary and Benefits**: Does the salary meet your needs? Are the benefits generous, such as health insurance, retirement plans, and vacation time?\n\n2. **Job Description**: Does the job align with your skills and career goals? Are the responsibilities clear and do they match what you're looking for?\n\n3. **Company Culture**: Is the company's culture a good fit for you? Consider the work environment, management style, and company values.\n\n4. **Location**: Will you have to relocate? If so, what are the costs and implications?\n\n5. **Career Growth**: Does the company offer opportunities for professional development and advancement?\n\n6. **Work-Life Balance**: Does the job allow for a healthy work-life balance? Consider the hours, travel requirements, and stress level.\n\n7. **Reviews and Reputation**: Check reviews of the company and the job. What are current and former employees saying about their experiences?\n\n8. **Vacation and Time Off**: Are the vacation policies reasonable and do they align with your needs?\n\n9. **Salary Negotiation**: Have you discussed salary"
+    },
+    {
+      "draw": 4,
+      "seed": 20260898,
+      "n_tokens": 254,
+      "eos_hit": true,
+      "wall_s": 10.800376583822072,
+      "text": "To give you the best advice, I'll need more details about the job offer and your current situation. Here are some questions to consider:\n\n1. **Job Offer Details**: What is the job title, company, salary, benefits, and work environment like?\n2. **Current Situation**: What are your current job responsibilities, salary, and benefits?\n3. **Career Goals**: How does this job align with your career goals and aspirations?\n4. **Location and Commute**: Is the job location convenient or do you need to make significant lifestyle changes?\n5. **Company Culture**: What is the company culture like, and does it align with your values?\n6. **Professional Development**: Will this job provide opportunities for growth and development?\n7. **Work-Life Balance**: Will the job allow you to maintain a good balance between work and personal life?\n8. **Financial Considerations**: Are there any financial benefits or drawbacks to consider?\n9. **Opportunities for Growth**: Will you have the chance to learn new skills or take on more responsibility?\n10. **Interview Experience**: Did you enjoy the interview process and get a good feel for the company?\n\nBy considering these factors, you can make a more informed decision about whether to accept the job offer."
+    },
+    {
+      "draw": 5,
+      "seed": 20260899,
+      "n_tokens": 256,
+      "eos_hit": false,
+      "wall_s": 10.839165415614843,
+      "text": "To give you the best advice, I'll need more details about the job and your situation. Here are some questions to consider:\n\n1. **Job Details**: What is the job about? What are the responsibilities? What are the key benefits (salary, benefits, etc.)?\n\n2. **Company Information**: Who is the company? Is it a well-known company or a startup? What is their culture like? Are they financially stable?\n\n3. **Career Goals**: How does this job align with your career goals and long-term aspirations? Will it help you grow professionally?\n\n4. **Work Environment**: What is the work environment like? Will you be comfortable with the colleagues and management?\n\n5. **Location**: Is the location convenient for you? Will it cause any significant inconvenience?\n\n6. **Personal Factors**: How will this job impact your personal life (e.g., commute, work-life balance)?\n\n7. **Alternatives**: Are there other opportunities that you are considering? What are the pros and cons of those options?\n\n8. **Negotiations**: Have you discussed the terms of the offer? Are you willing to negotiate for better terms?\n\n9. **Intuition**: What does your gut tell you about the job and the company?\n\nOnce you have more information,"
+    },
+    {
+      "draw": 6,
+      "seed": 20260900,
+      "n_tokens": 256,
+      "eos_hit": false,
+      "wall_s": 10.870651917532086,
+      "text": "To give you the best advice on whether you should take the job, I would need more information about the job offer. Here are some factors you might consider:\n\n1. **Salary and Benefits**: Is the compensation package competitive and aligns with your current or desired income level?\n2. **Job Responsibilities**: Are the duties and tasks described in the job description suitable for your skills and interests?\n3. **Company Culture**: Does the company's culture align with your values and work style?\n4. **Career Growth**: Is there room for advancement and professional development within the company?\n5. **Location**: Is the location convenient or do you need to relocate?\n6. **Work-Life Balance**: Does the job offer a reasonable work schedule that fits your personal and professional needs?\n7. **Reviews and Reputation**: What do current and former employees say about the company? Check online reviews and social media.\n8. **Company Stability**: Is the company financially stable, and does it have a good track record?\n9. **Benefits**: Consider the overall benefits package, including health insurance, retirement plans, vacation days, etc.\n10. **Opportunities for Learning**: Will you have the chance to learn new skills or take on challenging projects?\n\nIf you can provide more details about the"
+    },
+    {
+      "draw": 7,
+      "seed": 20260901,
+      "n_tokens": 256,
+      "eos_hit": false,
+      "wall_s": 10.83103487547487,
+      "text": "To help you decide whether to take the job, it would be useful to know more about the specific details of the job offer and your current circumstances. However, here are some general factors you might consider when making your decision:\n\n1. **Salary and Benefits**: Is the compensation competitive for the industry and location? Are there additional benefits like health insurance, retirement plans, vacation time, etc.?\n\n2. **Job Responsibilities**: Do the responsibilities align with your career goals and interests? Is the work challenging or does it allow for growth?\n\n3. **Company Culture**: Does the company's culture fit with your values and work style? Consider aspects like the dress code, work hours, and management style.\n\n4. **Growth Opportunities**: Is there room for advancement within the company? Are there opportunities for training and professional development?\n\n5. **Location**: Will the job require you to relocate? Consider the cost of living, commute, and quality of life in the new area.\n\n6. **Work-Life Balance**: Will the job require long hours or travel? Consider how it will impact your personal life and relationships.\n\n7. **Company Stability**: Is the company financially stable and likely to be around for the long term? Consider the company's reputation and stability.\n\n8. **Networking Opportunities"
+    },
+    {
+      "draw": 8,
+      "seed": 20260902,
+      "n_tokens": 242,
+      "eos_hit": true,
+      "wall_s": 10.314087792299688,
+      "text": "To help you decide whether to take the job, I need a bit more information about the job offer and your current situation. Here are some questions to consider:\n\n1. **Job Description**: What are the main responsibilities of the job? Do they align with your skills and career goals?\n2. **Company Culture**: Is the company's culture a good fit for you? Do you feel comfortable with their values and work environment?\n3. **Salary and Benefits**: How does the salary and benefits package compare to your current situation or what you were expecting?\n4. **Career Growth**: Are there opportunities for professional development and career advancement within the company?\n5. **Work Location**: Will the job be in a location that is convenient for you?\n6. **Work Hours and Flexibility**: Are the working hours suitable, and is there flexibility in your schedule?\n7. **Reviews and Reputation**: What do others say about the company? Are there any red flags you should be aware of?\n8. **Personal Priorities**: Do the job requirements and environment align with your personal and professional priorities?\n\nIf you can provide more details about the job and your current situation, I can help you make a more informed decision."
+    },
+    {
+      "draw": 9,
+      "seed": 20260903,
+      "n_tokens": 244,
+      "eos_hit": true,
+      "wall_s": 10.382143791764975,
+      "text": "To give you the best advice, I need a bit more information about the job and your current situation. Here are some questions to consider:\n\n1. **What is the job about?** What are the responsibilities, and how do they align with your career goals?\n2. **What are the benefits?** Consider salary, bonuses, benefits, and perks.\n3. **Work environment:** Is it a good fit for your work style and company culture?\n4. **Career growth:** Does the job offer opportunities for advancement or skill development?\n5. **Location:** Will you be able to commute or relocate if necessary?\n6. **Work-life balance:** How do the job requirements impact your personal life?\n7. **Company stability:** What is the financial health and stability of the company?\n8. **How does this job fit with your long-term goals?**\n9. **Opportunity cost:** What are you giving up by taking this job?\n10. **Job offer terms:** Are the terms (salary, benefits, start date) satisfactory?\n\nOnce you have some answers to these questions, you can make a more informed decision. If you can provide more details, I can help you analyze the situation further."
+    }
+  ],
+  "realized_lengths": [
+    256,
+    256,
+    256,
+    256,
+    254,
+    256,
+    256,
+    256,
+    242,
+    244
+  ],
+  "eos_hit_count": 3,
+  "gen_total_wall_s": 107.3551340829581,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.8275068327784538,
+  "semantic_volume": -14.468521042361814,
+  "vc": {
+    "value": 85,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "To give you the best advice, I'll need more details about the job and your current situation. Here are some questions to consider:\n\n1. **Job Details**: What is the job about? What are the responsibilities and duties?\n2. **Company Information**: What is the company culture like? What is the company's reputation?\n3. **Salary and Benefits**: What is the salary and what benefits are offered?\n4. **Career Growth**: Does the job offer opportunities for career advancement?\n5. **Work-Life Balance**: How does the job fit with your personal and professional goals?\n6. **Location**: Is the job location convenient for you?\n7. **Current Situation**: How does this job fit with your current career path and financial needs?\n8. **Negotiation Room**: Are there any areas where you can negotiate better terms?\n\nOnce you provide more details, I can help you make a more informed decision!",
+    "answer_tokens": 185,
+    "conf_raw": "85",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 9.136912582442164
+  },
+  "npz": "prompt_18.npz",
+  "prompt_total_wall_s": 117.59259145800024
+}

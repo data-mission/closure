@@ -1,0 +1,130 @@
+{
+  "idx": 21,
+  "kind": "ambiguous",
+  "prompt": "Is this a good idea?",
+  "throwaway": true,
+  "prompt_tokens": 35,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.964750349521637,
+  "entropy_base": "nats",
+  "top1_token_id": 39814,
+  "top1_token_str": "Sure",
+  "extract_time_s": 0.2670824993401766,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260924,
+      "n_tokens": 48,
+      "eos_hit": true,
+      "wall_s": 2.29092404153198,
+      "text": "Sure, I'd be happy to help you evaluate whether an idea is a good one! Could you please provide more details about the idea you're considering? The more specific you can be, the better I can assist you with an assessment."
+    },
+    {
+      "draw": 1,
+      "seed": 20260925,
+      "n_tokens": 31,
+      "eos_hit": true,
+      "wall_s": 1.5948454588651657,
+      "text": "To provide a helpful response, I'll need more context about what idea you're referring to. Could you please specify what idea you're considering or evaluating?"
+    },
+    {
+      "draw": 2,
+      "seed": 20260926,
+      "n_tokens": 51,
+      "eos_hit": true,
+      "wall_s": 2.419403458945453,
+      "text": "Sure, I'd be happy to help you evaluate whether an idea is a good one! Could you please provide more details about the idea you're considering? The more information you share, the better I can assist you in assessing its potential success and viability."
+    },
+    {
+      "draw": 3,
+      "seed": 20260927,
+      "n_tokens": 61,
+      "eos_hit": true,
+      "wall_s": 2.8310166662558913,
+      "text": "To determine if an idea is good, I would need more context about the specific idea you're referring to. Could you please provide more details about the idea, such as what it is, the purpose, and any relevant background information? That way, I can give you a more informed and helpful answer."
+    },
+    {
+      "draw": 4,
+      "seed": 20260928,
+      "n_tokens": 57,
+      "eos_hit": true,
+      "wall_s": 2.6674485420808196,
+      "text": "To determine if an idea is a good one, I'll need more context about the specific idea you're considering. Could you please provide more details about what the idea is and what you're hoping to achieve with it? This will help me give you a more informed and useful response."
+    },
+    {
+      "draw": 5,
+      "seed": 20260929,
+      "n_tokens": 67,
+      "eos_hit": true,
+      "wall_s": 3.073843000456691,
+      "text": "Sure, I'd be happy to help you evaluate if a particular idea is good or not. However, I need more details about the idea you're considering. Could you please provide more information about what the idea is and what you're looking to achieve with it? That way, I can give you a more informed and useful assessment."
+    },
+    {
+      "draw": 6,
+      "seed": 20260930,
+      "n_tokens": 67,
+      "eos_hit": true,
+      "wall_s": 3.075527999550104,
+      "text": "Sure, I'd be happy to help you determine if an idea is good! Could you please provide more details about the idea you have in mind? What is it related to, and what is your goal with this idea? The more information you can give me, the better I can assist you in evaluating its feasibility and potential success."
+    },
+    {
+      "draw": 7,
+      "seed": 20260931,
+      "n_tokens": 72,
+      "eos_hit": true,
+      "wall_s": 3.279359208419919,
+      "text": "To determine if an idea is good, I would need more context about the specific idea you're referring to. Could you please provide more details about the idea in question? This could include the purpose of the idea, the context in which it will be used, and any potential benefits or drawbacks. With more information, I can give you a more informed opinion."
+    },
+    {
+      "draw": 8,
+      "seed": 20260932,
+      "n_tokens": 34,
+      "eos_hit": true,
+      "wall_s": 1.7176428753882647,
+      "text": "To give you a good answer, I'll need more context about what specific idea you're referring to. Could you please provide more details about the idea you're considering?"
+    },
+    {
+      "draw": 9,
+      "seed": 20260933,
+      "n_tokens": 31,
+      "eos_hit": true,
+      "wall_s": 1.5963404588401318,
+      "text": "Sure, could you please provide more context or details about the idea you're considering? That way, I can give you a more informed and helpful response!"
+    }
+  ],
+  "realized_lengths": [
+    48,
+    31,
+    51,
+    61,
+    57,
+    67,
+    67,
+    72,
+    34,
+    31
+  ],
+  "eos_hit_count": 10,
+  "gen_total_wall_s": 24.547096707858145,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.21849808283150196,
+  "semantic_volume": -17.388790437711833,
+  "vc": {
+    "value": 85,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "Sure, I'd be happy to help you evaluate if an idea is good! Could you please provide more details about the idea you're considering? The more information you give me, the better I can assist you in assessing its potential success and viability.",
+    "answer_tokens": 50,
+    "conf_raw": "85",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 3.1293557081371546
+  },
+  "npz": "prompt_21.npz",
+  "prompt_total_wall_s": 28.167979000136256
+}

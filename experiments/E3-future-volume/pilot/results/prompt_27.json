@@ -1,0 +1,130 @@
+{
+  "idx": 27,
+  "kind": "creative",
+  "prompt": "Compose a two-line poem about the ocean at night.",
+  "throwaway": true,
+  "prompt_tokens": 40,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.49254554510116577,
+  "entropy_base": "nats",
+  "top1_token_id": 76019,
+  "top1_token_str": "Moon",
+  "extract_time_s": 0.274422500282526,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260984,
+      "n_tokens": 17,
+      "eos_hit": true,
+      "wall_s": 1.0238668750971556,
+      "text": "Moonlit waves whisper to the shore,\nShadows dance where night and sea restore."
+    },
+    {
+      "draw": 1,
+      "seed": 20260985,
+      "n_tokens": 21,
+      "eos_hit": true,
+      "wall_s": 1.1990163335576653,
+      "text": "Moonlight silvers the deep ocean's kiss,\nWhispers of waves in the silent night's embrace."
+    },
+    {
+      "draw": 2,
+      "seed": 20260986,
+      "n_tokens": 19,
+      "eos_hit": true,
+      "wall_s": 1.1163302920758724,
+      "text": "Moonlight silvers the deep ocean's breath,\nWhispers of waves in the silent night."
+    },
+    {
+      "draw": 3,
+      "seed": 20260987,
+      "n_tokens": 16,
+      "eos_hit": true,
+      "wall_s": 0.9926070403307676,
+      "text": "Moonlit waves whisper to the shore,\nSea ghosts tread softly on silver showers."
+    },
+    {
+      "draw": 4,
+      "seed": 20260988,
+      "n_tokens": 20,
+      "eos_hit": true,
+      "wall_s": 1.162036624737084,
+      "text": "Moonlight silvers the vast ocean's sleep,\nWhispers of waves caress the dark beach."
+    },
+    {
+      "draw": 5,
+      "seed": 20260989,
+      "n_tokens": 18,
+      "eos_hit": true,
+      "wall_s": 1.076722583733499,
+      "text": "Moonlit waves kiss the sandy shore,\nSilent whispers of the deep, untold."
+    },
+    {
+      "draw": 6,
+      "seed": 20260990,
+      "n_tokens": 20,
+      "eos_hit": true,
+      "wall_s": 1.158961834385991,
+      "text": "Moonlit waves whisper to the shore,\nGentle giants cradle dreams, unawake."
+    },
+    {
+      "draw": 7,
+      "seed": 20260991,
+      "n_tokens": 17,
+      "eos_hit": true,
+      "wall_s": 1.032849833369255,
+      "text": "Moonlit waves whisper to the shore,\nGentle giants cradle dreams below."
+    },
+    {
+      "draw": 8,
+      "seed": 20260992,
+      "n_tokens": 16,
+      "eos_hit": true,
+      "wall_s": 0.992504708468914,
+      "text": "Moonlit waves whisper to the shore,\nShadows dance where waters gently roar."
+    },
+    {
+      "draw": 9,
+      "seed": 20260993,
+      "n_tokens": 19,
+      "eos_hit": true,
+      "wall_s": 1.1205287501215935,
+      "text": "Moonlight silvers the vast ocean's sleep,\nWhispers of waves cradle dreams deep."
+    }
+  ],
+  "realized_lengths": [
+    17,
+    21,
+    19,
+    16,
+    20,
+    18,
+    20,
+    17,
+    16,
+    19
+  ],
+  "eos_hit_count": 10,
+  "gen_total_wall_s": 10.876063333824277,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.08410762529820204,
+  "semantic_volume": -19.529922763778554,
+  "vc": {
+    "value": 85,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "Moonlit waves whisper to the shore,\nGhosts of ships dance where silvery light pours.",
+    "answer_tokens": 19,
+    "conf_raw": "85",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 1.7528205830603838
+  },
+  "npz": "prompt_27.npz",
+  "prompt_total_wall_s": 12.9946876661852
+}

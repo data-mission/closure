@@ -1,0 +1,130 @@
+{
+  "idx": 13,
+  "kind": "instruction",
+  "prompt": "Convert the word 'run' to its past tense.",
+  "throwaway": true,
+  "prompt_tokens": 40,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 1.571382745169103e-05,
+  "entropy_base": "nats",
+  "top1_token_id": 785,
+  "top1_token_str": "The",
+  "extract_time_s": 0.25971883349120617,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260844,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.8398286253213882,
+      "text": "The past tense of the word 'run' is 'ran.'"
+    },
+    {
+      "draw": 1,
+      "seed": 20260845,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.8512576250359416,
+      "text": "The past tense of the word 'run' is 'ran.'"
+    },
+    {
+      "draw": 2,
+      "seed": 20260846,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.8520620837807655,
+      "text": "The past tense of the word 'run' is 'ran'."
+    },
+    {
+      "draw": 3,
+      "seed": 20260847,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.8563026245683432,
+      "text": "The past tense of the verb 'run' is 'ran.'"
+    },
+    {
+      "draw": 4,
+      "seed": 20260848,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.8525586258620024,
+      "text": "The past tense of the word 'run' is 'ran.'"
+    },
+    {
+      "draw": 5,
+      "seed": 20260849,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.8517420422285795,
+      "text": "The past tense of the word 'run' is 'ran.'"
+    },
+    {
+      "draw": 6,
+      "seed": 20260850,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.851455332711339,
+      "text": "The past tense of the word 'run' is 'ran.'"
+    },
+    {
+      "draw": 7,
+      "seed": 20260851,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.8514513755217195,
+      "text": "The past tense of the word 'run' is 'ran.'"
+    },
+    {
+      "draw": 8,
+      "seed": 20260852,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.8521556677296758,
+      "text": "The past tense of the word 'run' is 'ran'."
+    },
+    {
+      "draw": 9,
+      "seed": 20260853,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.8559785839170218,
+      "text": "The past tense of the word 'run' is 'ran.'"
+    }
+  ],
+  "realized_lengths": [
+    13,
+    13,
+    13,
+    13,
+    13,
+    13,
+    13,
+    13,
+    13,
+    13
+  ],
+  "eos_hit_count": 10,
+  "gen_total_wall_s": 8.515366958454251,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.07323295809328556,
+  "semantic_volume": -107.66342358427559,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "The past tense of the word 'run' is 'ran.'",
+    "answer_tokens": 13,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 1.5178012074902654
+  },
+  "npz": "prompt_13.npz",
+  "prompt_total_wall_s": 10.373900833539665
+}

@@ -1,0 +1,130 @@
+{
+  "idx": 20,
+  "kind": "ambiguous",
+  "prompt": "Where should we go?",
+  "throwaway": true,
+  "prompt_tokens": 34,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.9216036200523376,
+  "entropy_base": "nats",
+  "top1_token_id": 1249,
+  "top1_token_str": "To",
+  "extract_time_s": 0.26452408265322447,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260914,
+      "n_tokens": 85,
+      "eos_hit": true,
+      "wall_s": 3.812494625337422,
+      "text": "To give you the best recommendation, could you please provide more details? Are you looking for a specific type of destination, such as a city with good food, a beach resort, or a place with historical significance? Also, are there any particular interests or activities you're interested in, like hiking, visiting museums, or trying new foods? Knowing more about your preferences will help me suggest a great place for you to visit!"
+    },
+    {
+      "draw": 1,
+      "seed": 20260915,
+      "n_tokens": 78,
+      "eos_hit": true,
+      "wall_s": 3.526831208728254,
+      "text": "To give you the best recommendation, could you please provide more context? Are you looking for a specific place to visit, like a city or attraction, or are you open to any type of destination? Also, do you have any preferences in terms of the type of activity (e.g., cultural, natural, adventure, relaxation), and are there any constraints such as budget or travel time?"
+    },
+    {
+      "draw": 2,
+      "seed": 20260916,
+      "n_tokens": 84,
+      "eos_hit": true,
+      "wall_s": 3.775110167451203,
+      "text": "It would be helpful to know more about your preferences and context to give you a better suggestion. Are you looking for a specific type of destination, such as a beach, a city, a mountain retreat, or somewhere with cultural attractions? Do you have any particular interests, like hiking, art museums, or shopping? Additionally, knowing your location or where you are starting from could also help in suggesting a place to go."
+    },
+    {
+      "draw": 3,
+      "seed": 20260917,
+      "n_tokens": 132,
+      "eos_hit": true,
+      "wall_s": 5.752216374501586,
+      "text": "Sure, I'd be happy to help you plan a trip! To give you some ideas, I'll need a bit more information:\n\n1. Are you looking for a specific type of destination (e.g., beach, mountains, city, countryside)?\n2. Where are you currently located?\n3. How long do you plan to travel?\n4. Is there a particular time of year you prefer to travel?\n5. Are there any activities or experiences you're particularly interested in?\n6. Do you have a budget in mind?\n7. Are there any specific countries or regions you're considering?\n\nWith this information, I can suggest some great options for you!"
+    },
+    {
+      "draw": 4,
+      "seed": 20260918,
+      "n_tokens": 71,
+      "eos_hit": true,
+      "wall_s": 3.2401735419407487,
+      "text": "It would be helpful to have more context or details to give you a better recommendation. Are you looking for a place to visit in a specific city, or for a type of activity or destination (like a park, museum, restaurant, etc.)? Also, do you have any preferences in terms of location, time of day, or any other factors?"
+    },
+    {
+      "draw": 5,
+      "seed": 20260919,
+      "n_tokens": 60,
+      "eos_hit": true,
+      "wall_s": 2.7883550003170967,
+      "text": "To give you a better recommendation, could you please provide more context or specify what kind of place you're interested in visiting? For example, are you looking for a restaurant, a park, a museum, or somewhere else? Also, could you let me know your location or where you are considering?"
+    },
+    {
+      "draw": 6,
+      "seed": 20260920,
+      "n_tokens": 62,
+      "eos_hit": true,
+      "wall_s": 2.865065417252481,
+      "text": "To give you a good recommendation, could you please provide more context or information about what you're looking for? Are you interested in a specific type of activity, location (e.g., city, nature, indoors, outdoors), or any particular interests (e.g., museums, parks, restaurants, etc.)?"
+    },
+    {
+      "draw": 7,
+      "seed": 20260921,
+      "n_tokens": 64,
+      "eos_hit": true,
+      "wall_s": 2.953662292100489,
+      "text": "To give you the best recommendation, could you please provide more details? Are you looking for a specific type of destination, such as a beach, mountain resort, city, or cultural site? Do you have any particular interests or activities in mind? Additionally, knowing your location or the area you are considering would be helpful."
+    },
+    {
+      "draw": 8,
+      "seed": 20260922,
+      "n_tokens": 72,
+      "eos_hit": true,
+      "wall_s": 3.287241750396788,
+      "text": "To give you the best recommendation, could you please provide more details about your preferences? For example, are you looking for a place to go for a specific activity like hiking, shopping, or visiting a museum? Are there any particular locations or types of places you are interested in? Additionally, knowing your location or the area you are considering would also be helpful."
+    },
+    {
+      "draw": 9,
+      "seed": 20260923,
+      "n_tokens": 112,
+      "eos_hit": true,
+      "wall_s": 4.929828541353345,
+      "text": "That depends on what you and your group are interested in doing! Do you have any particular destination or activity in mind? For example:\n\n1. Are you looking for a beach?\n2. Do you want to visit a city with lots of museums and art galleries?\n3. Are you interested in outdoor activities like hiking or cycling?\n4. Maybe you want to try some local cuisine?\n5. Or perhaps you're looking for a place with a vibrant nightlife?\n\nLet me know what you're interested in, and I can help you come up with some options!"
+    }
+  ],
+  "realized_lengths": [
+    85,
+    78,
+    84,
+    132,
+    71,
+    60,
+    62,
+    64,
+    72,
+    112
+  ],
+  "eos_hit_count": 10,
+  "gen_total_wall_s": 36.93199208378792,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.39117025025188923,
+  "semantic_volume": -14.216158100054326,
+  "vc": {
+    "value": 70,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "To give you the best recommendation, could you please provide more context or specify what kind of place you're interested in visiting? For example, are you looking for a restaurant, a park, a museum, or somewhere else? Also, do you have a specific location or city in mind?",
+    "answer_tokens": 58,
+    "conf_raw": "70",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 3.45114279165864
+  },
+  "npz": "prompt_20.npz",
+  "prompt_total_wall_s": 41.04558087512851
+}

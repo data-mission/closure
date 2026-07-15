@@ -1,0 +1,130 @@
+{
+  "idx": 4,
+  "kind": "factual",
+  "prompt": "Who painted the Mona Lisa?",
+  "throwaway": true,
+  "prompt_tokens": 35,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 7.577091309940442e-05,
+  "entropy_base": "nats",
+  "top1_token_id": 785,
+  "top1_token_str": "The",
+  "extract_time_s": 0.2597518749535084,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260754,
+      "n_tokens": 83,
+      "eos_hit": true,
+      "wall_s": 3.7423544991761446,
+      "text": "The Mona Lisa was painted by Leonardo da Vinci, a renowned Italian polymath of the Renaissance period. He began working on the painting in 1503 or 1504 and continued to refine it until his death in 1519. The Mona Lisa is one of the most famous and most mysterious paintings in the world, known for its enigmatic smile and the subject's elusive expression."
+    },
+    {
+      "draw": 1,
+      "seed": 20260755,
+      "n_tokens": 96,
+      "eos_hit": true,
+      "wall_s": 4.304833333007991,
+      "text": "The Mona Lisa was painted by Leonardo da Vinci, a renowned Italian polymath of the Renaissance period. He completed the painting between 1503 and 1506. The full name of the painting is \"La Joconde\" in French. Leonardo da Vinci is celebrated for his skills in painting, sculpting, architecture, science, music, mathematics, engineering, literature, anatomy, geology, astronomy, botany, writing, history, and cartography."
+    },
+    {
+      "draw": 2,
+      "seed": 20260756,
+      "n_tokens": 35,
+      "eos_hit": true,
+      "wall_s": 1.7651335000991821,
+      "text": "The Mona Lisa was painted by Leonardo da Vinci. It is one of the most famous paintings in the world and is currently housed in the Louvre Museum in Paris, France."
+    },
+    {
+      "draw": 3,
+      "seed": 20260757,
+      "n_tokens": 49,
+      "eos_hit": true,
+      "wall_s": 2.3530376674607396,
+      "text": "The Mona Lisa was painted by Leonardo da Vinci, a renowned Italian polymath of the Renaissance period. He completed the painting around 1503-1506, and it is one of the most famous paintings in the world."
+    },
+    {
+      "draw": 4,
+      "seed": 20260758,
+      "n_tokens": 67,
+      "eos_hit": true,
+      "wall_s": 3.096654915250838,
+      "text": "The Mona Lisa was painted by Leonardo da Vinci. It is one of the most famous paintings in the world and is currently housed in the Louvre Museum in Paris, France. The painting is known for its enigmatic smile and the use of sfumato, a technique that involves subtle blending of colors to create a hazy effect."
+    },
+    {
+      "draw": 5,
+      "seed": 20260759,
+      "n_tokens": 35,
+      "eos_hit": true,
+      "wall_s": 1.7708712089806795,
+      "text": "The Mona Lisa was painted by Leonardo da Vinci. It is one of the most famous paintings in the world and is currently housed in the Louvre Museum in Paris, France."
+    },
+    {
+      "draw": 6,
+      "seed": 20260760,
+      "n_tokens": 35,
+      "eos_hit": true,
+      "wall_s": 1.7692853324115276,
+      "text": "The Mona Lisa was painted by Leonardo da Vinci. It is one of the most famous paintings in the world and is currently housed in the Louvre Museum in Paris, France."
+    },
+    {
+      "draw": 7,
+      "seed": 20260761,
+      "n_tokens": 35,
+      "eos_hit": true,
+      "wall_s": 1.773932040669024,
+      "text": "The Mona Lisa was painted by Leonardo da Vinci. It is one of the most famous paintings in the world and is currently housed in the Louvre Museum in Paris, France."
+    },
+    {
+      "draw": 8,
+      "seed": 20260762,
+      "n_tokens": 69,
+      "eos_hit": true,
+      "wall_s": 3.1841325825080276,
+      "text": "The Mona Lisa was painted by Leonardo da Vinci. It is one of the most famous paintings in the world and is currently housed in the Louvre Museum in Paris, France. The painting is known for its subject's enigmatic smile and the intricate details and lifelike quality that Leonardo achieved through his skillful use of sfumato technique."
+    },
+    {
+      "draw": 9,
+      "seed": 20260763,
+      "n_tokens": 36,
+      "eos_hit": true,
+      "wall_s": 1.8165854159742594,
+      "text": "The Mona Lisa was painted by Leonardo da Vinci. It is one of the most famous paintings in the world and is currently on display at the Louvre Museum in Paris, France."
+    }
+  ],
+  "realized_lengths": [
+    83,
+    96,
+    35,
+    49,
+    67,
+    35,
+    35,
+    35,
+    69,
+    36
+  ],
+  "eos_hit_count": 10,
+  "gen_total_wall_s": 25.577954792417586,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.25422016717493534,
+  "semantic_volume": -57.62029835302837,
+  "vc": {
+    "value": 99,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "The Mona Lisa was painted by Leonardo da Vinci. It is one of the most famous paintings in the world and is currently housed in the Louvre Museum in Paris, France.",
+    "answer_tokens": 35,
+    "conf_raw": "99",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 2.417826833203435
+  },
+  "npz": "prompt_04.npz",
+  "prompt_total_wall_s": 28.51546229235828
+}

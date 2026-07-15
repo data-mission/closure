@@ -1,0 +1,130 @@
+{
+  "idx": 14,
+  "kind": "instruction",
+  "prompt": "Write the number forty-two in Roman numerals.",
+  "throwaway": true,
+  "prompt_tokens": 39,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.010675888508558273,
+  "entropy_base": "nats",
+  "top1_token_id": 785,
+  "top1_token_str": "The",
+  "extract_time_s": 0.25817979127168655,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260854,
+      "n_tokens": 14,
+      "eos_hit": true,
+      "wall_s": 0.8819688754156232,
+      "text": "The number forty-two in Roman numerals is written as XLII."
+    },
+    {
+      "draw": 1,
+      "seed": 20260855,
+      "n_tokens": 14,
+      "eos_hit": true,
+      "wall_s": 0.892231666482985,
+      "text": "The number forty-two in Roman numerals is written as XLII."
+    },
+    {
+      "draw": 2,
+      "seed": 20260856,
+      "n_tokens": 14,
+      "eos_hit": true,
+      "wall_s": 0.8930859165266156,
+      "text": "The number forty-two in Roman numerals is written as XLII."
+    },
+    {
+      "draw": 3,
+      "seed": 20260857,
+      "n_tokens": 14,
+      "eos_hit": true,
+      "wall_s": 0.8968393327668309,
+      "text": "The number forty-two in Roman numerals is written as XLII."
+    },
+    {
+      "draw": 4,
+      "seed": 20260858,
+      "n_tokens": 14,
+      "eos_hit": true,
+      "wall_s": 0.8929810421541333,
+      "text": "The number forty-two in Roman numerals is written as XLII."
+    },
+    {
+      "draw": 5,
+      "seed": 20260859,
+      "n_tokens": 14,
+      "eos_hit": true,
+      "wall_s": 0.8935347497463226,
+      "text": "The number forty-two in Roman numerals is written as XLII."
+    },
+    {
+      "draw": 6,
+      "seed": 20260860,
+      "n_tokens": 95,
+      "eos_hit": true,
+      "wall_s": 4.228255040943623,
+      "text": "The number forty-two in Roman numerals is written as XLIIS. However, there seems to be a small confusion in the direct conversion. The correct Roman numeral for forty-two is XLII. Here's the breakdown:\n\n- X represents 10\n- L represents 50\n- I represents 1\n\nSo, XL is 40 (50 - 10), and II is 2. Therefore, XLII is 42."
+    },
+    {
+      "draw": 7,
+      "seed": 20260861,
+      "n_tokens": 14,
+      "eos_hit": true,
+      "wall_s": 0.8933739997446537,
+      "text": "The number forty-two in Roman numerals is written as XLII."
+    },
+    {
+      "draw": 8,
+      "seed": 20260862,
+      "n_tokens": 14,
+      "eos_hit": true,
+      "wall_s": 0.8933270005509257,
+      "text": "The number forty-two in Roman numerals is written as XLII."
+    },
+    {
+      "draw": 9,
+      "seed": 20260863,
+      "n_tokens": 14,
+      "eos_hit": true,
+      "wall_s": 0.8924841247498989,
+      "text": "The number forty-two in Roman numerals is written as XLII."
+    }
+  ],
+  "realized_lengths": [
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    95,
+    14,
+    14,
+    14
+  ],
+  "eos_hit_count": 10,
+  "gen_total_wall_s": 12.258722125552595,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.23555383272469044,
+  "semantic_volume": -122.03700982898394,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "The number forty-two in Roman numerals is written as XLII.",
+    "answer_tokens": 14,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 1.559361707419157
+  },
+  "npz": "prompt_14.npz",
+  "prompt_total_wall_s": 14.32001524977386
+}

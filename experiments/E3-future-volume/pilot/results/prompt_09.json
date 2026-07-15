@@ -1,0 +1,130 @@
+{
+  "idx": 9,
+  "kind": "math",
+  "prompt": "What is 15 percent of 200?",
+  "throwaway": true,
+  "prompt_tokens": 41,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.00012064399925293401,
+  "entropy_base": "nats",
+  "top1_token_id": 1249,
+  "top1_token_str": "To",
+  "extract_time_s": 0.2597797494381666,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260804,
+      "n_tokens": 96,
+      "eos_hit": true,
+      "wall_s": 4.2795236660167575,
+      "text": "To find 15 percent of 200, you can follow these steps:\n\n1. Convert the percentage to a decimal by dividing by 100. So, 15% becomes 0.15.\n2. Multiply the decimal by the number 200.\n\nSo, \\( 0.15 \\times 200 = 30 \\).\n\nTherefore, 15 percent of 200 is 30."
+    },
+    {
+      "draw": 1,
+      "seed": 20260805,
+      "n_tokens": 96,
+      "eos_hit": true,
+      "wall_s": 4.28505783341825,
+      "text": "To find 15 percent of 200, you can follow these steps:\n\n1. Convert the percentage to a decimal by dividing by 100. So, 15% becomes 0.15.\n2. Multiply the decimal by the number 200.\n\nSo, \\( 0.15 \\times 200 = 30 \\).\n\nTherefore, 15 percent of 200 is 30."
+    },
+    {
+      "draw": 2,
+      "seed": 20260806,
+      "n_tokens": 82,
+      "eos_hit": true,
+      "wall_s": 3.7123065004125237,
+      "text": "To find 15 percent of 200, you can use the following calculation:\n\n\\[ 15\\% \\times 200 = \\frac{15}{100} \\times 200 = 0.15 \\times 200 = 30 \\]\n\nSo, 15 percent of 200 is 30."
+    },
+    {
+      "draw": 3,
+      "seed": 20260807,
+      "n_tokens": 120,
+      "eos_hit": true,
+      "wall_s": 5.258728958666325,
+      "text": "To find 15 percent of 200, you can follow these steps:\n\n1. Convert the percentage to a decimal by dividing by 100. So, 15% becomes 0.15.\n2. Multiply the decimal by the number you want to find the percentage of. In this case, multiply 0.15 by 200.\n\nSo, the calculation would be:\n\n\\[ 0.15 \\times 200 = 30 \\]\n\nTherefore, 15 percent of 200 is 30."
+    },
+    {
+      "draw": 4,
+      "seed": 20260808,
+      "n_tokens": 120,
+      "eos_hit": true,
+      "wall_s": 5.2884790832176805,
+      "text": "To find 15 percent of 200, you can follow these steps:\n\n1. Convert the percentage to a decimal by dividing by 100. So, 15% becomes 0.15.\n2. Multiply the decimal by the number you want to find the percentage of. In this case, multiply 0.15 by 200.\n\nSo, the calculation would be:\n\\[ 0.15 \\times 200 = 30 \\]\n\nTherefore, 15 percent of 200 is 30."
+    },
+    {
+      "draw": 5,
+      "seed": 20260809,
+      "n_tokens": 96,
+      "eos_hit": true,
+      "wall_s": 4.276324916630983,
+      "text": "To find 15 percent of 200, you can follow these steps:\n\n1. Convert the percentage to a decimal by dividing by 100. So, 15% becomes 0.15.\n2. Multiply the decimal by the number 200.\n\nSo, \\( 0.15 \\times 200 = 30 \\).\n\nTherefore, 15 percent of 200 is 30."
+    },
+    {
+      "draw": 6,
+      "seed": 20260810,
+      "n_tokens": 60,
+      "eos_hit": true,
+      "wall_s": 2.79187716729939,
+      "text": "To find 15 percent of 200, you can multiply 200 by 0.15:\n\n\\[ 200 \\times 0.15 = 30 \\]\n\nSo, 15 percent of 200 is 30."
+    },
+    {
+      "draw": 7,
+      "seed": 20260811,
+      "n_tokens": 82,
+      "eos_hit": true,
+      "wall_s": 3.7306139171123505,
+      "text": "To find 15 percent of 200, you can use the following calculation:\n\n\\[ 15\\% \\times 200 = \\frac{15}{100} \\times 200 = 0.15 \\times 200 = 30 \\]\n\nSo, 15 percent of 200 is 30."
+    },
+    {
+      "draw": 8,
+      "seed": 20260812,
+      "n_tokens": 60,
+      "eos_hit": true,
+      "wall_s": 2.917057750746608,
+      "text": "To find 15 percent of 200, you can multiply 200 by 0.15:\n\n\\[ 200 \\times 0.15 = 30 \\]\n\nSo, 15 percent of 200 is 30."
+    },
+    {
+      "draw": 9,
+      "seed": 20260813,
+      "n_tokens": 82,
+      "eos_hit": true,
+      "wall_s": 3.86121479049325,
+      "text": "To find 15 percent of 200, you can use the following calculation:\n\n\\[ 15\\% \\times 200 = \\frac{15}{100} \\times 200 = 0.15 \\times 200 = 30 \\]\n\nSo, 15 percent of 200 is 30."
+    }
+  ],
+  "realized_lengths": [
+    96,
+    96,
+    82,
+    120,
+    120,
+    96,
+    60,
+    82,
+    60,
+    82
+  ],
+  "eos_hit_count": 10,
+  "gen_total_wall_s": 40.40267354156822,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.26259420718997717,
+  "semantic_volume": -94.35194310881836,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "To find 15 percent of 200, you can multiply 200 by 0.15:\n\n\\[ 200 \\times 0.15 = 30 \\]\n\nSo, 15 percent of 200 is 30.",
+    "answer_tokens": 60,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 3.7115466659888625
+  },
+  "npz": "prompt_09.npz",
+  "prompt_total_wall_s": 44.64426816627383
+}

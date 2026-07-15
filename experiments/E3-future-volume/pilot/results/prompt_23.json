@@ -1,0 +1,130 @@
+{
+  "idx": 23,
+  "kind": "ambiguous",
+  "prompt": "Can you fix it?",
+  "throwaway": true,
+  "prompt_tokens": 34,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.20418405532836914,
+  "entropy_base": "nats",
+  "top1_token_id": 2124,
+  "top1_token_str": "Of",
+  "extract_time_s": 0.2732279999181628,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260944,
+      "n_tokens": 44,
+      "eos_hit": true,
+      "wall_s": 2.1240018336102366,
+      "text": "Of course! Could you please provide more details about what needs fixing? Is it a technical issue, a document, a code snippet, or something else? The more details you provide, the better I can assist you."
+    },
+    {
+      "draw": 1,
+      "seed": 20260945,
+      "n_tokens": 43,
+      "eos_hit": true,
+      "wall_s": 2.0878416653722525,
+      "text": "Of course! Could you please provide more details about what needs fixing? Is this related to a technical issue, a document, or something else? The more specific you can be, the better I can assist you."
+    },
+    {
+      "draw": 2,
+      "seed": 20260946,
+      "n_tokens": 44,
+      "eos_hit": true,
+      "wall_s": 2.1257024174556136,
+      "text": "Of course! Could you please provide more details about what you need fixed? Is it related to software, hardware, a document, or something else? The more specific you can be, the better I can assist you."
+    },
+    {
+      "draw": 3,
+      "seed": 20260947,
+      "n_tokens": 45,
+      "eos_hit": true,
+      "wall_s": 2.1679082084447145,
+      "text": "Of course! Could you please provide more details about what you need fixed? Is it a technical issue, a document that needs correction, or something else? The more specific you can be, the better I can assist you."
+    },
+    {
+      "draw": 4,
+      "seed": 20260948,
+      "n_tokens": 41,
+      "eos_hit": true,
+      "wall_s": 2.009162708185613,
+      "text": "Of course! Could you please provide more details about what needs fixing? It could be a typo, a technical issue, or something else. The more specific you are, the better I can assist you!"
+    },
+    {
+      "draw": 5,
+      "seed": 20260949,
+      "n_tokens": 41,
+      "eos_hit": true,
+      "wall_s": 2.0057991249486804,
+      "text": "Of course! Could you please provide more details about what needs fixing? Is it a technical issue, a document, or something else? The more specific you can be, the better I can assist you."
+    },
+    {
+      "draw": 6,
+      "seed": 20260950,
+      "n_tokens": 41,
+      "eos_hit": true,
+      "wall_s": 2.004952042363584,
+      "text": "Of course! Could you please provide more details about what you need fixed? Is it a technical issue, a document, or something else? The more specific you are, the better I can assist you."
+    },
+    {
+      "draw": 7,
+      "seed": 20260951,
+      "n_tokens": 45,
+      "eos_hit": true,
+      "wall_s": 2.1700999587774277,
+      "text": "Of course! Could you please provide more details about what needs fixing? It could be a technical issue, a sentence in a document, or something else entirely. The more details you give, the better I can assist you!"
+    },
+    {
+      "draw": 8,
+      "seed": 20260952,
+      "n_tokens": 44,
+      "eos_hit": true,
+      "wall_s": 2.1269072918221354,
+      "text": "Of course! Could you please provide more details about what needs fixing? Is it a technical issue, a document, a sentence, or something else? The more specific you can be, the better I can assist you."
+    },
+    {
+      "draw": 9,
+      "seed": 20260953,
+      "n_tokens": 47,
+      "eos_hit": true,
+      "wall_s": 2.2523083332926035,
+      "text": "Of course! Could you please provide more details about what needs fixing? This could be a piece of code, a sentence, or perhaps you need help with something specific. The more details you give, the better I can assist you!"
+    }
+  ],
+  "realized_lengths": [
+    44,
+    43,
+    44,
+    45,
+    41,
+    41,
+    41,
+    45,
+    44,
+    47
+  ],
+  "eos_hit_count": 10,
+  "gen_total_wall_s": 21.075364583171904,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.15425174962729216,
+  "semantic_volume": -16.91719776422095,
+  "vc": {
+    "value": 95,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "Of course! Could you please provide more details about what needs fixing? Is it a technical issue, a document, or something else? The more specific you are, the better I can assist you.",
+    "answer_tokens": 40,
+    "conf_raw": "95",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 2.600179083645344
+  },
+  "npz": "prompt_23.npz",
+  "prompt_total_wall_s": 24.11030083335936
+}

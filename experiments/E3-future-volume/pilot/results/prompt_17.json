@@ -1,0 +1,130 @@
+{
+  "idx": 17,
+  "kind": "instruction",
+  "prompt": "State the opposite of the direction 'north'.",
+  "throwaway": true,
+  "prompt_tokens": 38,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 9.702800980448956e-07,
+  "entropy_base": "nats",
+  "top1_token_id": 785,
+  "top1_token_str": "The",
+  "extract_time_s": 0.2686457084491849,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260884,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.644601040519774,
+      "text": "The opposite direction of north is south."
+    },
+    {
+      "draw": 1,
+      "seed": 20260885,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6527922498062253,
+      "text": "The opposite direction of north is south."
+    },
+    {
+      "draw": 2,
+      "seed": 20260886,
+      "n_tokens": 11,
+      "eos_hit": true,
+      "wall_s": 0.7750702500343323,
+      "text": "The opposite direction of 'north' is 'south'."
+    },
+    {
+      "draw": 3,
+      "seed": 20260887,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6524450415745378,
+      "text": "The opposite direction of north is south."
+    },
+    {
+      "draw": 4,
+      "seed": 20260888,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6521392920985818,
+      "text": "The opposite direction of north is south."
+    },
+    {
+      "draw": 5,
+      "seed": 20260889,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6486220844089985,
+      "text": "The opposite direction of north is south."
+    },
+    {
+      "draw": 6,
+      "seed": 20260890,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.648871541954577,
+      "text": "The opposite direction of north is south."
+    },
+    {
+      "draw": 7,
+      "seed": 20260891,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6493377080187201,
+      "text": "The opposite direction of north is south."
+    },
+    {
+      "draw": 8,
+      "seed": 20260892,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6490202080458403,
+      "text": "The opposite direction of north is south."
+    },
+    {
+      "draw": 9,
+      "seed": 20260893,
+      "n_tokens": 11,
+      "eos_hit": true,
+      "wall_s": 0.7730304161086679,
+      "text": "The opposite direction of 'north' is 'south'."
+    }
+  ],
+  "realized_lengths": [
+    8,
+    8,
+    11,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    11
+  ],
+  "eos_hit_count": 10,
+  "gen_total_wall_s": 6.746415792033076,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.06794450059533119,
+  "semantic_volume": -122.0370098273852,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "The opposite direction of north is south.",
+    "answer_tokens": 8,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 1.2134693330153823
+  },
+  "npz": "prompt_17.npz",
+  "prompt_total_wall_s": 8.302783749997616
+}

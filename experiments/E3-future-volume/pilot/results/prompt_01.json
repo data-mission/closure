@@ -1,0 +1,130 @@
+{
+  "idx": 1,
+  "kind": "factual",
+  "prompt": "What is the largest planet in our solar system?",
+  "throwaway": true,
+  "prompt_tokens": 39,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.00012208557745907456,
+  "entropy_base": "nats",
+  "top1_token_id": 785,
+  "top1_token_str": "The",
+  "extract_time_s": 0.25941562559455633,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260724,
+      "n_tokens": 99,
+      "eos_hit": true,
+      "wall_s": 4.3860662914812565,
+      "text": "The largest planet in our solar system is Jupiter. It is a gas giant with a diameter of about 86,881 miles (139,822 kilometers), which is roughly 11 times the diameter of Earth. Jupiter is known for its Great Red Spot, a giant storm system in its atmosphere that has been raging for at least 400 years, and its many moons, with a total of 79 confirmed moons as of my last update."
+    },
+    {
+      "draw": 1,
+      "seed": 20260725,
+      "n_tokens": 51,
+      "eos_hit": true,
+      "wall_s": 2.420779500156641,
+      "text": "The largest planet in our solar system is Jupiter. It has a diameter of about 86,881 miles (139,822 kilometers) at its equator, making it significantly larger than the next largest planet, Saturn."
+    },
+    {
+      "draw": 2,
+      "seed": 20260726,
+      "n_tokens": 79,
+      "eos_hit": true,
+      "wall_s": 3.572634750045836,
+      "text": "The largest planet in our solar system is Jupiter. It has a diameter of about 86,881 miles (139,822 kilometers) at its equator, making it significantly larger than any other planet in the solar system. Jupiter is a gas giant, primarily composed of hydrogen and helium, and it has several times the mass of all the other planets combined."
+    },
+    {
+      "draw": 3,
+      "seed": 20260727,
+      "n_tokens": 84,
+      "eos_hit": true,
+      "wall_s": 3.798077625222504,
+      "text": "The largest planet in our solar system is Jupiter. It is a gas giant with a diameter of about 86,881 miles (139,822 kilometers), which is about 11 times the diameter of Earth. Jupiter is known for its Great Red Spot, a giant storm larger than Earth that has been raging for at least several centuries, and its prominent ring system and many moons."
+    },
+    {
+      "draw": 4,
+      "seed": 20260728,
+      "n_tokens": 75,
+      "eos_hit": true,
+      "wall_s": 3.4263045424595475,
+      "text": "The largest planet in our solar system is Jupiter. It is a gas giant with a diameter of about 86,881 miles (139,822 kilometers), which is significantly larger than the other planets in our solar system. For context, Earth's diameter is about 7,926 miles (12,742 kilometers)."
+    },
+    {
+      "draw": 5,
+      "seed": 20260729,
+      "n_tokens": 50,
+      "eos_hit": true,
+      "wall_s": 2.3861399171873927,
+      "text": "The largest planet in our solar system is Jupiter. It is a gas giant with a diameter of about 86,881 miles (139,822 kilometers), making it significantly larger than the next largest planet, Saturn."
+    },
+    {
+      "draw": 6,
+      "seed": 20260730,
+      "n_tokens": 51,
+      "eos_hit": true,
+      "wall_s": 2.4422208750620484,
+      "text": "The largest planet in our solar system is Jupiter. It is a gas giant with a diameter of about 86,881 miles (139,822 kilometers), making it much larger than any other planet in our solar system."
+    },
+    {
+      "draw": 7,
+      "seed": 20260731,
+      "n_tokens": 50,
+      "eos_hit": true,
+      "wall_s": 2.3866978343576193,
+      "text": "The largest planet in our solar system is Jupiter. It is a gas giant with a diameter of about 86,881 miles (139,822 kilometers), which is significantly larger than the next largest planet, Saturn."
+    },
+    {
+      "draw": 8,
+      "seed": 20260732,
+      "n_tokens": 75,
+      "eos_hit": true,
+      "wall_s": 3.420841916464269,
+      "text": "The largest planet in our solar system is Jupiter. It is a gas giant with a diameter of about 86,881 miles (139,822 kilometers), which is significantly larger than the other planets in our solar system. For context, Earth's diameter is about 7,926 miles (12,742 kilometers)."
+    },
+    {
+      "draw": 9,
+      "seed": 20260733,
+      "n_tokens": 50,
+      "eos_hit": true,
+      "wall_s": 2.388624125160277,
+      "text": "The largest planet in our solar system is Jupiter. It is a gas giant with a diameter of about 86,881 miles (139,822 kilometers), which is significantly larger than the next largest planet, Saturn."
+    }
+  ],
+  "realized_lengths": [
+    99,
+    51,
+    79,
+    84,
+    75,
+    50,
+    51,
+    50,
+    75,
+    50
+  ],
+  "eos_hit_count": 10,
+  "gen_total_wall_s": 30.629696208052337,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.2351655839011073,
+  "semantic_volume": -43.09869046409207,
+  "vc": {
+    "value": 99,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "The largest planet in our solar system is Jupiter. It is a gas giant with a diameter of about 86,881 miles (139,822 kilometers), which is significantly larger than the next largest planet, Saturn.",
+    "answer_tokens": 50,
+    "conf_raw": "99",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 3.114535833708942
+  },
+  "npz": "prompt_01.npz",
+  "prompt_total_wall_s": 34.24470958393067
+}

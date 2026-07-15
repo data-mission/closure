@@ -1,0 +1,130 @@
+{
+  "idx": 26,
+  "kind": "creative",
+  "prompt": "Describe the taste of a fruit that has never existed.",
+  "throwaway": true,
+  "prompt_tokens": 40,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 2.3170506954193115,
+  "entropy_base": "nats",
+  "top1_token_id": 24973,
+  "top1_token_str": "Creating",
+  "extract_time_s": 0.2758278325200081,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260974,
+      "n_tokens": 254,
+      "eos_hit": true,
+      "wall_s": 10.78345854114741,
+      "text": "Creating a taste description for a fruit that has never existed can be a fun and imaginative exercise! Let's imagine a fruit called the \"GalaxiBerry,\" a magical hybrid of a berry and a star. The GalaxiBerry would be as visually stunning as it is delicious. Its outer layer would be a shimmering, iridescent blue, almost like the night sky with twinkling stars embedded within. When you take a bite, the first sensation would be a burst of cool, refreshing water, refreshing yet energizing, almost like a sip of the cosmos. The flesh would be soft, with a texture similar to a ripe juicy raspberry, but with a subtle, sweet and tart flavor that's both fruity and slightly metallic, reminiscent of starlight.\n\nAs you continue to savor, you might notice hints of a cosmic sweetness, almost like a sweetener from the universe itself, mixed with a hint of the earth's mineral richness. The aftertaste would leave a lingering, almost ethereal, sensation on your palate, as if the fruit were whispering the secrets of the universe.\n\nImagine the GalaxiBerry as a symphony of flavors and textures, a taste that transcends the mundane, offering a glimpse into the wonders of the galaxy."
+    },
+    {
+      "draw": 1,
+      "seed": 20260975,
+      "n_tokens": 256,
+      "eos_hit": false,
+      "wall_s": 10.844558165408671,
+      "text": "Creating a description of the taste of a fruit that has never existed can be a fun and imaginative exercise! Let's imagine a fruit called the \"Aurora Berry.\"\n\nThe Aurora Berry is a vibrant, pear-shaped fruit, about the size of a small apple. Its surface is covered in a soft, iridescent skin that shimmers like the Northern Lights, reflecting an ever-changing spectrum of colors: deep purples, bright pinks, and shimmering blues. When you take a bite, the texture is surprisingly crisp, yet it melts in your mouth with a delicate juiciness. The taste is a unique blend of flavors:\n\n1. **Sweetness**: The berry is extremely sweet, like the honeyed nectar of a sunflower, but with a subtle undercurrent of sweetness that feels almost like sugar.\n\n2. **Tartness**: It also has a slight tartness, reminiscent of a green apple, but with a refreshing, almost citrusy tang.\n\n3. **Spices**: There are subtle notes of exotic spices, like cardamom and cinnamon, giving the fruit a warm, comforting flavor. It\u2019s as if the berry has been kissed by the spices of a far-off land.\n\n4. **Floral Undertones**: A delicate floral"
+    },
+    {
+      "draw": 2,
+      "seed": 20260976,
+      "n_tokens": 256,
+      "eos_hit": false,
+      "wall_s": 10.833099790848792,
+      "text": "That's an interesting and imaginative prompt! Let's imagine a fruit that has never existed before. We'll call it the \"Glimmerberry.\"\n\nThe Glimmerberry would have a unique, shimmering appearance, with a translucent skin that changes color depending on the light. Its flavor would be a delightful blend of sweetness and tartness, with a hint of metallic and citrus notes. Imagine a cross between a juicy, sweet peach and a zesty, tangy grapefruit, but with a shimmering, almost magical quality.\n\nWhen you take a bite, the texture would be soft and succulent, yet almost grainy, as if it had the consistency of a cross between a peach and a pomegranate. The taste would start with a burst of sweetness, followed by a tangy, citrusy zing that would leave a refreshing aftertaste. As you continue to chew, you might detect a subtle, almost metallic undercurrent, as if it had a hint of copper or silver, giving it a slightly different flavor profile.\n\nThe Glimmerberry would not just taste unique but also feel like an otherworldly experience, as if you were tasting something from a fantasy world or a distant planet. It would be a fruit that truly stands out,"
+    },
+    {
+      "draw": 3,
+      "seed": 20260977,
+      "n_tokens": 213,
+      "eos_hit": true,
+      "wall_s": 9.085871666669846,
+      "text": "Creating a description of a fruit that has never existed can be a fun exercise in imagination! Let's call this fruit the \"Aurelia Luxiflora.\" Here\u2019s a description of its taste:\n\nThe Aurelia Luxiflora has a texture similar to a very soft, almost gelatinous yet juicy flesh, almost like a cross between a ripe fig and a pomegranate. Its flavor is a symphony of sweetness, with hints of honey and a delicate floral note, much like a jasmine tea, but with a subtle complexity. The sweetness is balanced by a refreshing tartness, akin to a hint of lemon, which gives it a vibrant, almost zesty quality. When you bite into it, there\u2019s a burst of flavor that is both familiar and exotic at the same time, with a finish that lingers with a gentle, soothing warmth reminiscent of a warm summer evening. It\u2019s a fruit that feels like a treat from another world, where the sun shines brighter and the air is filled with the gentle scent of blooming flowers."
+    },
+    {
+      "draw": 4,
+      "seed": 20260978,
+      "n_tokens": 226,
+      "eos_hit": true,
+      "wall_s": 9.62513070832938,
+      "text": "Certainly! Let's imagine a fruit that has never existed before, which we will call the \"Dreamfruit.\" Dreamfruit would be a delicate, translucent sphere, the size of a small orange. Its surface would be covered in a shimmering, iridescent skin that shifts colors like a rainbow under different light conditions.\n\nThe taste of the Dreamfruit would be an experience in itself. Upon taking a bite, you would first notice a faint sweetness, like the subtle sweetness of a honeydew melon. As you continue to savor it, the flavor would become more complex, evolving into a harmonious blend of floral and citrus notes, with a hint of the earthy, slightly bitter taste of green tea. The texture would be soft and juicy, yet the Dreamfruit would have a slightly chewy, al dente quality, similar to a perfectly cooked apple. \n\nThere would be a refreshing, slightly tangy aftertaste, which lingers on the palate, making each bite feel like a new discovery. The overall experience would be unique, refreshing, and deeply satisfying, leaving a sense of wonder and delight."
+    },
+    {
+      "draw": 5,
+      "seed": 20260979,
+      "n_tokens": 214,
+      "eos_hit": true,
+      "wall_s": 9.117770750075579,
+      "text": "Sure, let's imagine a fruit called the \"Aerifruit.\" The Aerifruit is a floating, translucent orb, about the size of a small apple, with a delicate, shimmering skin that changes color with the air around it. When you bite into it, the texture is surprisingly crisp, much like a cross between a crisp apple and a delicate watermelon. It has a unique, refreshing taste that is hard to describe but feels like a blend of sweet and sour, with subtle hints of the ocean, a bit of the earth, and a touch of the sweetest clouds you've ever tasted. The flavor is not intense but rather delicate, almost like a whisper of flavor, making each bite a new and surprising experience. There's a faint, sweet floral note that lingers on the palate, followed by a crisp, refreshing aftertaste that leaves you wanting more. Overall, it's a taste that feels like a breath of fresh air, a sip of the sky, and a taste of the world's most refreshing and carefree moments."
+    },
+    {
+      "draw": 6,
+      "seed": 20260980,
+      "n_tokens": 256,
+      "eos_hit": false,
+      "wall_s": 10.809009834192693,
+      "text": "Since the fruit you're describing has never existed, we can imagine a unique, fantastical taste that blends elements from various fruits and introduces a new, magical flavor profile. Let's call this fruit the \"Enchanted Berry.\"\n\nThe Enchanted Berry would have a flavor that starts with a sweet, almost floral note, reminiscent of a cross between a rose petal and a sweet cherry. As you bite into it, a burst of fresh, juicy watermelon flavor would hit your taste buds, followed by a hint of zest from a lemon or lime, giving it a refreshing and tangy finish. This flavor would then be enhanced by a subtle, enchanting sweetness that lingers, almost like the sweetness of honey combined with a sprinkle of cinnamon.\n\nThe texture of the Enchanted Berry would be a bit unusual, with a gelatinous, yet squishy consistency. It would be juicy, but not too runny, and would have a slightly chewy texture, similar to the combination of a berry and a jelly bean. The aroma would be a delightful blend of floral and fruity scents, with a hint of something magical and whimsical.\n\nOverall, the Enchanted Berry would be a truly unique and magical fruit, offering a taste experience that is both"
+    },
+    {
+      "draw": 7,
+      "seed": 20260981,
+      "n_tokens": 256,
+      "eos_hit": false,
+      "wall_s": 10.811538333073258,
+      "text": "Since the fruit in question is entirely fictional, we can create a unique and imaginative taste profile for it. Let's call this imaginary fruit the \"Aetherfruit.\"\n\nThe Aetherfruit would have a taste that is a harmonious blend of sweet and metallic notes, almost like a cross between a sweet apple and the crispness of a bell. It might have a subtle, yet distinct, umami flavor that lingers on the tongue, reminiscent of a delicate touch of aged cheese. The texture would be a delightful surprise, starting with a juicy, almost gummy mouthfeel, then transitioning into a crunchy, almost crystalline interior that shatters in the mouth, releasing a burst of sparkling, fresh air-like sensation.\n\nThe flavor profile of the Aetherfruit would be complex and multi-layered, with an underlying floral note that blossoms as the fruit begins to age, adding a hint of delicate perfume to the overall taste. It might also have a faint, almost imperceptible aftertaste of starlight, leaving the palate with a sense of wonder and the feeling of reaching for the stars.\n\nIn terms of how it would feel in the mouth, it might have a slight tingling sensation, as if the fruit contains a natural, non-irritating form of"
+    },
+    {
+      "draw": 8,
+      "seed": 20260982,
+      "n_tokens": 256,
+      "eos_hit": false,
+      "wall_s": 10.811005749739707,
+      "text": "Imagine a fruit called the \"Aetheriapple.\" It's a vibrant, translucent sphere, the size of a small grapefruit, with a shimmering iridescence that changes with the light. The texture of the Aetheriapple is soft and juicy, almost like a cross between a pomegranate and a watermelon, but with a unique sponginess that feels almost magical.\n\nThe taste of the Aetheriapple is a delightful and unexpected fusion of flavors. It begins with a subtle sweetness, a hint of honey that lingers on the palate. This sweetness quickly gives way to a burst of zesty citrus notes, reminiscent of a tangerine or a blood orange. As you continue to bite into the fruit, you notice a refreshing, crisp undertone, almost like a juicy apple, which then mingles with a delicate floral note, making you think of rose petals or jasmine.\n\nSurprisingly, the Aetheriapple also has a faint, earthy aftertaste, as if it has a grounding element to it, balancing the more exotic flavors. This creates a complex and unique taste profile that is both familiar and entirely new, leaving a sense of wonder and delight in every bite. The overall experience of eating an Aetheriapple"
+    },
+    {
+      "draw": 9,
+      "seed": 20260983,
+      "n_tokens": 256,
+      "eos_hit": false,
+      "wall_s": 10.809369708411396,
+      "text": "Creating a description of a fruit that has never existed can be a fun and imaginative exercise! Let's call this hypothetical fruit the \"Auroraxia.\"\n\nThe Auroraxia has a unique and enchanting taste that combines the freshness of a crisp apple with the sweetness of a juicy peach, but with a subtle hint of the sun's warmth and a faint, almost imperceptible metallic note that evokes the sparkle of the aurora borealis. Imagine biting into a perfectly ripe Auroraxia and feeling a burst of flavors that dance on your taste buds, each one more delightful than the last. The texture is a delightful mix of the juicy, yet firm, of a well-kept apple and the delicate, almost flaky, flesh of a peach.\n\nSurrounding this core flavor is a layer of cool, refreshing mint that lingers in the background, much like the way a cool breeze picks up the scent of blooming flowers. The aftertaste is a gentle, almost soothing, sensation, leaving behind a trace of the aurora's light, as if you've just caught a glimpse of a celestial event before it disappears.\n\nThe aroma of the Auroraxia is equally captivating, with notes of freshly picked apples, the sweetness of ripe pe"
+    }
+  ],
+  "realized_lengths": [
+    254,
+    256,
+    256,
+    213,
+    226,
+    214,
+    256,
+    256,
+    256,
+    256
+  ],
+  "eos_hit_count": 4,
+  "gen_total_wall_s": 103.53257929161191,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.9140082495287061,
+  "semantic_volume": -13.806187408622385,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "Creating a description of a fruit that has never existed can be a fun and imaginative exercise! Let's imagine a fruit called the \"Aurora Berry.\"\n\nThe Aurora Berry is a vibrant, pear-shaped fruit, about the size of a small apple. Its skin is a shimmering gradient of colors, transitioning from deep indigo at the base to a soft, pastel pink at the top, with a subtle iridescent sheen that catches the light like a rainbow. When you first bite into it, the texture is surprisingly crisp, almost like a cross between a pear and a watermelon, with a slight crunch that gives way to a juicy, tender flesh.\n\nThe taste of the Aurora Berry is a delightful symphony of flavors. It starts with a sweet, almost honey-like sweetness that quickly transitions into a burst of tartness, reminiscent of a lemon. This is followed by a subtle, earthy undertone that hints at the soil from which it grows, and a hint of floral notes that evoke the scent of a blooming garden. The finish is refreshing and slightly astringent, leaving a pleasant tingling sensation on the tongue.\n\nThe aroma of the Aurora Berry is equally enchanting, with a fresh, clean scent that combines the sweetness of ripe fruit with the",
+    "answer_tokens": 256,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 12.336804166436195
+  },
+  "npz": "prompt_26.npz",
+  "prompt_total_wall_s": 117.06696016713977
+}

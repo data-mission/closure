@@ -1,0 +1,130 @@
+{
+  "idx": 22,
+  "kind": "ambiguous",
+  "prompt": "What time works for you?",
+  "throwaway": true,
+  "prompt_tokens": 35,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.3222098648548126,
+  "entropy_base": "nats",
+  "top1_token_id": 2121,
+  "top1_token_str": "As",
+  "extract_time_s": 0.2724594995379448,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260934,
+      "n_tokens": 43,
+      "eos_hit": true,
+      "wall_s": 2.083669208921492,
+      "text": "As an AI assistant, I don't have a specific working time because I'm available 24/7. I can assist you at any time of the day or night. How can I help you today?"
+    },
+    {
+      "draw": 1,
+      "seed": 20260935,
+      "n_tokens": 58,
+      "eos_hit": true,
+      "wall_s": 2.7075404999777675,
+      "text": "As an AI assistant, I don't have personal availability or a specific time that works for me. I'm available 24/7 to provide information and assistance. You can ask me any questions or request help with tasks at any time! What would you like to know or discuss?"
+    },
+    {
+      "draw": 2,
+      "seed": 20260936,
+      "n_tokens": 47,
+      "eos_hit": true,
+      "wall_s": 2.2507234578952193,
+      "text": "As an AI, I don't have a specific working time since I'm available 24/7. I can assist you with any questions or tasks at any hour of the day or night. How can I help you today?"
+    },
+    {
+      "draw": 3,
+      "seed": 20260937,
+      "n_tokens": 53,
+      "eos_hit": true,
+      "wall_s": 2.505303249694407,
+      "text": "As an AI assistant, I don't have a specific time because I'm available 24/7 to assist you. Whether you need help at 3 AM or 3 PM, I'm here to help! What can I assist you with right now?"
+    },
+    {
+      "draw": 4,
+      "seed": 20260938,
+      "n_tokens": 42,
+      "eos_hit": true,
+      "wall_s": 2.046096292324364,
+      "text": "As an AI assistant, I don't have a specific time because I'm available 24/7! I can help you with any questions or tasks at any hour. What would you like assistance with?"
+    },
+    {
+      "draw": 5,
+      "seed": 20260939,
+      "n_tokens": 67,
+      "eos_hit": true,
+      "wall_s": 3.072739541530609,
+      "text": "As an AI assistant, I don't have a specific working time because I'm available 24/7. I can assist you at any time of the day or night. Whether you need help during the early morning hours or late at night, I'll be here to help you. What can I assist you with right now?"
+    },
+    {
+      "draw": 6,
+      "seed": 20260940,
+      "n_tokens": 41,
+      "eos_hit": true,
+      "wall_s": 2.0057651670649648,
+      "text": "As an AI assistant, I don't have a specific time because I'm available 24/7! I can help with information and tasks anytime you need. What would you like assistance with today?"
+    },
+    {
+      "draw": 7,
+      "seed": 20260941,
+      "n_tokens": 49,
+      "eos_hit": true,
+      "wall_s": 2.356626416556537,
+      "text": "As an AI assistant, I don't have a specific time as I operate 24/7. I'm available to help you at any hour of the day or night. What time would you like to schedule a meeting or need assistance?"
+    },
+    {
+      "draw": 8,
+      "seed": 20260942,
+      "n_tokens": 66,
+      "eos_hit": true,
+      "wall_s": 3.0579102924093604,
+      "text": "As an AI assistant, I don't have a specific time that works for me since I'm available 24/7. I'm here to help you anytime you need assistance! Whether you have a question at 3 AM or 3 PM, I'll be ready to help. What can I assist you with today?"
+    },
+    {
+      "draw": 9,
+      "seed": 20260943,
+      "n_tokens": 74,
+      "eos_hit": true,
+      "wall_s": 3.361923207528889,
+      "text": "As an AI assistant, I don't have a specific working time because I'm available 24/7. I'm here to help you with any questions or tasks you need assistance with, anytime you need help! Whether it's in the middle of the night or during the middle of the day, I'm always available. What can I help you with today?"
+    }
+  ],
+  "realized_lengths": [
+    43,
+    58,
+    47,
+    53,
+    42,
+    67,
+    41,
+    49,
+    66,
+    74
+  ],
+  "eos_hit_count": 10,
+  "gen_total_wall_s": 25.449077667668462,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.24041975010186434,
+  "semantic_volume": -15.248202395452735,
+  "vc": {
+    "value": 95,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "As an AI assistant, I don't have a specific time because I'm available 24/7! I can help with information and tasks at any hour of the day or night. What would you like assistance with?",
+    "answer_tokens": 45,
+    "conf_raw": "95",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 2.9186135418713093
+  },
+  "npz": "prompt_22.npz",
+  "prompt_total_wall_s": 28.887228459119797
+}

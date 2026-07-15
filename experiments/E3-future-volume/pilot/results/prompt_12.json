@@ -1,0 +1,130 @@
+{
+  "idx": 12,
+  "kind": "instruction",
+  "prompt": "List the two days of the weekend, separated by commas.",
+  "throwaway": true,
+  "prompt_tokens": 41,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.010617347434163094,
+  "entropy_base": "nats",
+  "top1_token_id": 33674,
+  "top1_token_str": "Saturday",
+  "extract_time_s": 0.2582603329792619,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260834,
+      "n_tokens": 3,
+      "eos_hit": true,
+      "wall_s": 0.4262826247140765,
+      "text": "Saturday, Sunday"
+    },
+    {
+      "draw": 1,
+      "seed": 20260835,
+      "n_tokens": 3,
+      "eos_hit": true,
+      "wall_s": 0.4409534577280283,
+      "text": "Saturday, Sunday"
+    },
+    {
+      "draw": 2,
+      "seed": 20260836,
+      "n_tokens": 3,
+      "eos_hit": true,
+      "wall_s": 0.4411032097414136,
+      "text": "Saturday, Sunday"
+    },
+    {
+      "draw": 3,
+      "seed": 20260837,
+      "n_tokens": 3,
+      "eos_hit": true,
+      "wall_s": 0.44118333235383034,
+      "text": "Saturday, Sunday"
+    },
+    {
+      "draw": 4,
+      "seed": 20260838,
+      "n_tokens": 3,
+      "eos_hit": true,
+      "wall_s": 0.44122787471860647,
+      "text": "Saturday, Sunday"
+    },
+    {
+      "draw": 5,
+      "seed": 20260839,
+      "n_tokens": 3,
+      "eos_hit": true,
+      "wall_s": 0.4405293334275484,
+      "text": "Saturday, Sunday"
+    },
+    {
+      "draw": 6,
+      "seed": 20260840,
+      "n_tokens": 3,
+      "eos_hit": true,
+      "wall_s": 0.44096050038933754,
+      "text": "Saturday, Sunday"
+    },
+    {
+      "draw": 7,
+      "seed": 20260841,
+      "n_tokens": 3,
+      "eos_hit": true,
+      "wall_s": 0.4411693336442113,
+      "text": "Saturday, Sunday"
+    },
+    {
+      "draw": 8,
+      "seed": 20260842,
+      "n_tokens": 3,
+      "eos_hit": true,
+      "wall_s": 0.4415809577330947,
+      "text": "Saturday, Sunday"
+    },
+    {
+      "draw": 9,
+      "seed": 20260843,
+      "n_tokens": 3,
+      "eos_hit": true,
+      "wall_s": 0.4422796666622162,
+      "text": "Saturday, Sunday"
+    }
+  ],
+  "realized_lengths": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "eos_hit_count": 10,
+  "gen_total_wall_s": 4.397642250172794,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.047906250692903996,
+  "semantic_volume": -138.15510557964274,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "Saturday, Sunday",
+    "answer_tokens": 3,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 0.9937544586136937
+  },
+  "npz": "prompt_12.npz",
+  "prompt_total_wall_s": 5.7049126252532005
+}
