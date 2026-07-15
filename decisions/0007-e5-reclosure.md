@@ -12,9 +12,11 @@ in the program — the whole point is a mechanical arm beating an instruction ar
 determinism.
 
 ## Decision
-- **Arms:** A = raw generation (no intervention); B = generation with grounding annotation shown but no removal
-  (the strongest reasonable instruction — a weak B makes a C-win worthless); C = algorithmic contraction. The
-  comparison is contamination rate and grounding across A/B/C.
+- **Arms:** A = raw generation (no intervention); B = generation with ¬A appended plus the strongest reasonable
+  retract-and-revise instruction (frozen verbatim in PROTOCOL.md); the instruction's first required move —
+  identify the specific superseded statement — subsumes the earlier "grounding annotation shown" phrasing, which
+  described a weaker draft design. A weak B makes a C-win worthless. C = algorithmic contraction. The comparison is
+  contamination rate and grounding across A/B/C.
 - **Contamination detector** (reuses 0002's leave-one-out; drives Arm C's contraction only — it is not the outcome
   measure): a claim is contaminated iff its grounding stays ≥ 0.7 even when all of its `source_ids` are removed
   (grounding_drop < 0.10) — it was reproduced from parametric memory, not the provided source. The 0.7 and 0.10
