@@ -1,8 +1,10 @@
 # E3 synthetic validation — the analysis pipeline and verdict-branch logic proven on planted fixtures
 
-**All five fixture classes plant a right answer BY CONSTRUCTION; the pipeline recovers each exactly;
-the pre-registered verdict logic routes each to its known branch. 47 tests pass, CPU-only, no model,
-no network. The verdict thresholds remain OPEN — fixed only at registration.**
+**All fixture classes plant a right answer BY CONSTRUCTION; the pipeline recovers each exactly; the
+pre-registered verdict logic routes each to its known branch. 99 tests pass, CPU-only, no model, no
+network. The verdict thresholds remain OPEN — fixed only at registration.** The instrument was
+rebuilt on 2026-07-14 to close the holes the labeled dress rehearsal (`REHEARSAL.md`) exposed — see
+**Audit-driven redesign (2026-07-14)** below for the new modules, gates, fixtures, and open params.
 
 The anti-fishing point, same ordering as the harness (`harness/tests/README.md`, E0 PLAN step 4):
 validate the analysis logic and the verdict-branch logic on throwaway data whose answer is known
@@ -31,10 +33,13 @@ scipy 1.18.0, pytest 9.1.1; `pyproject.toml`, `uv.lock`, `.python-version` commi
 - `splits.py` — seeded in-distribution split and leave-one-family-out OOD rotation (e3-0001).
 - `compare.py` — AUROC and paired-bootstrap CI for probe-vs-baseline AUROC differences (e3-0003);
   resample count and CI level are explicit parameters recorded on the result.
+- `preconditions.py`, `fidelity.py`, `ood.py`, `correctness.py`, `loader.py`, `freeze.py` — the
+  audit-driven redesign modules; see **Audit-driven redesign (2026-07-14)** below.
 - `verdict.py` — the pre-registered branch logic (README § Verdict conditions), parameterized
-  entirely by `VerdictThresholds`. **This module invents no threshold value.** Five branches:
-  confirmed-shaped, refuted/no-signal, refuted/binary-only, refuted/ood-failure,
-  refuted/no-margin-over-verbalized.
+  entirely by `VerdictThresholds`. **This module invents no threshold value.** Redesigned branch set
+  (see below): confirmed-shaped; the terminal not-evaluable/correctness-arm; and the refuted branches
+  no-signal, margin-only, binary-only, length-confounded, ood-range-uncovered, ood-failure,
+  no-margin-over-verbalized, no-margin-over-entropy, dominated-by-correctness-probe.
 
 ## The five fixture classes: planted answer vs observed result
 
@@ -106,21 +111,139 @@ are exactly reproducible; the seeded steps reproduce identically given the same 
 non-bit-exact caveat concerns Metal/GPU activation extraction upstream — outside this CPU-only,
 numpy/sklearn synthetic stage.)
 
+## Audit-driven redesign (2026-07-14)
+
+The labeled dress rehearsal (`REHEARSAL.md`, 41 disposable prompts) fired the strongest verdict
+branch (confirmed-shaped) off a correctness arm carrying **one** negative, from a fidelity number the
+volume ↔ length rank correlation of **0.910** and the between-family volume variance (η² = 0.255)
+could each fully explain. The verdict contract was rebuilt to make those failures impossible. Every
+new behaviour has planted-answer fixtures and tests in the established style.
+
+### New modules (`validation/src/e3_validation/`)
+
+- **`preconditions.py`** — the correctness arm must carry evidential mass. `correctness_arm_evaluable`
+  gates on a pre-registered `min_negatives`; below it `decide` returns the terminal, honest
+  `NOT_EVALUABLE_CORRECTNESS_ARM` (not a refutation), checked BEFORE any branch. `exclusion_report`
+  tallies per-family excluded/answerable counts.
+- **`fidelity.py`** — two-part target + within-family fidelity. `degenerate_mask`/`degenerate_floor`
+  split out items on the exact `N·log(ε)` floor; `degeneracy_auroc` reports the floor classifier
+  separately; `continuous_fidelity` scores R² AND Spearman on the NON-degenerate subset only;
+  `within_family_metrics` scores volume/predictions residualized on train-derived family means (immune
+  to between-family means); `family_mean_oracle_r2` is the family-band ceiling the probe must beat;
+  `length_residualized_within_family_spearman` supports the length gate.
+- **`ood.py`** — `leave_one_family_out_spearman` scores the rank correlation INSIDE each held-out
+  family (pooled = **mean over rotations**, pinned), retains the per-rotation minimum for a per-family
+  floor, and flags `range_uncovered` (a materially out-of-range held-out family = extrapolation, not
+  transfer) with a relative guard-band against finite-sample tail noise.
+- **`correctness.py`** — frozen `ORIENTATION` table (`probe = −predicted_volume`, `B3 = −entropy`,
+  `B4 = P(correct)`, `verbalized = stated_value`); `probe_scores_oof` / `b4_scores_oof` are the ONLY
+  scoring paths and are strictly out-of-fold (seeded k-fold, no in-sample path); the missing-VC rule
+  masks to the VC-present subset for verbalized comparisons and `arm_aurocs` reports both subsets.
+- **`loader.py`** — `load(model_id, revision, loader_fn)` fails closed unless the resolved snapshot
+  equals the pin, and records the SHA-256 of a canonical probe rendered through the chat template
+  (`ChatTemplateMismatchError` catches a template change under an unchanged revision). Injected loader
+  → no model download in tests.
+- **`freeze.py`** — `FrozenConfig` enumerates EVERY result-moving input (corpus/golds hashes, refusal
+  regexes, normalizer spec version, ε, N, sampler, base seed + split/bootstrap/CV seed FORMULAS, alpha
+  grid, inner/CV folds, bootstrap n/CI, test fraction, ALL verdict thresholds incl. the new ones,
+  model/tokenizer/embedder revisions + chat-template hash, dims, library versions, orientation table)
+  → sorted-key JSON → SHA-256. The hash is stable across key order and changes on any field change.
+
+### New / changed verdict gates (`verdict.py`)
+
+`VerdictInputs` now enumerates exactly the redesigned quantities and `VerdictThresholds` carries all
+new params. Decision precedence: **precondition** → **continuous fidelity** (R² + Spearman on the
+non-degenerate subset, within-family Spearman, family-mean-oracle margin — the family-oracle margin
+replaces the 2-bin class-mean margin as the gate; the old class-mean margin is retained as B2
+reporting) → **length gate** (within-family fidelity must survive residualizing volume on
+mean+std continuation length) → **OOD range** → **OOD transfer** (pooled within-family Spearman AND
+per-family floor) → **added value** (probe beats verbalized AND probe beats B3 entropy AND B4 does
+not beat probe — paired-bootstrap CIs). OOD is resolved BEFORE the verbalized/added-value gates.
+
+New branches: `NOT_EVALUABLE_CORRECTNESS_ARM`, `REFUTED_LENGTH_CONFOUNDED`,
+`REFUTED_OOD_RANGE_UNCOVERED`, `REFUTED_NO_MARGIN_OVER_ENTROPY`,
+`REFUTED_DOMINATED_BY_CORRECTNESS_PROBE`, and **`REFUTED_MARGIN_ONLY`** — the fix for the row the
+pre-redesign code mislabeled `refuted/no-signal` (above-floor R² that fails the margin/within-family
+gates with no binarized signal is margin-only, not no-signal). The three distinct added-value branches
+(verbalized / entropy / B4-dominated) are a deliberate choice to name each honest reason separately
+rather than conflate them; this is flagged as an interpretation of the spec (see below).
+
+### New fixtures (`tests/_fixtures.py`)
+
+- `passing_inputs(**overrides)` — a fully gate-satisfying `VerdictInputs` for one-dimension-at-a-time
+  branch tests.
+- `make_family_band_only` — heterogeneous family MEANS with NO within-family signal (the fixture the
+  old suite lacked): passes a naive pooled/full R² and binarized AUROC but the within-family Spearman
+  is ~0 and the family-oracle margin ~0 → routes **refuted** (never confirmed).
+- `make_family_specific_signal` — genuine within-family signal in a family-specific block: learnable
+  in-distribution, does NOT transfer OOD → `REFUTED_OOD_FAILURE` (a collapse, ranges covered).
+- `make_degenerate_mixed` — a degenerate-floor mass point plus a continuous population, cleanly and
+  disjointly encoded; the two-part treatment recovers the floor and scores continuous fidelity on the
+  non-degenerate subset.
+- `make_length_confound` — volume ≈ a linear readout of continuation length; within-family fidelity
+  holds until the volume is residualized on length, then collapses → `REFUTED_LENGTH_CONFOUNDED`.
+- `make_correctness_arms` — a full arm bundle (probe/B3/B4/verbalized with missing VC) exercising the
+  added-value gates and the missing-VC rule.
+
+Fixture E (`make_ood_shortcut`) is re-read: under the within-family OOD Spearman its genuine
+within-family signal DOES transfer (its collapse was between-family LEVEL, i.e. the family-band
+confound the redesign rules out), so it no longer routes `refuted/ood-failure` — its test now
+documents the pooled-R²-collapse vs within-family-transfer contrast. The old `test_verdict.py`
+five-field tuples and the pipeline tests' `VerdictInputs` constructions embodied the superseded
+pre-redesign contract (`r2_ood`/`r2_ood_min`, class-mean margin as the fidelity gate) and were
+updated; the analysis logic itself was not weakened to fit any test.
+
+### New open threshold params (added to the registration's open set)
+
+- `min_negatives` — minimum negatives for the correctness arm to be evaluable (rehearsal proposed
+  ≥ 20). **NEW; must be registered.**
+- `spearman_fidelity_min` — Spearman bar on the non-degenerate subset (the floor-mass-robust half).
+- `within_family_spearman_min` — within-family Spearman bar (also the length-residualized bar).
+- `family_oracle_margin_min` — minimum `probe R² − family-mean-oracle R²`.
+- `ood_pooled_spearman_min`, `ood_per_family_floor` — the within-family OOD transfer bars (replace
+  `r2_ood_min`).
+- `b3_ci_floor`, `b4_margin_ceiling` — the entropy-beat and B4-non-domination bars.
+- `require_length_robust` — whether the length gate is enforced.
+- `correctness_cv_folds` (k) — the out-of-fold correctness-scoring fold count.
+
+`THRESHOLDS-PROPOSAL.md` proposes values for the pre-existing bars; the NEW bars above have no proposed
+value yet and are open for the registration decision.
+
+### Contract ambiguity flagged
+
+The reviewer's spec named three added-value gates (beats verbalized, beats B3, B4 non-domination) but
+enumerated only two new branch labels (`REFUTED_MARGIN_ONLY`, `ROOD_RANGE_UNCOVERED`). Rather than
+conflate three distinct scientific failure reasons under one label — which would repeat exactly the
+honest-labeling failure the audit targets — each added-value failure and the length-gate failure route
+to a DISTINCT branch (`REFUTED_NO_MARGIN_OVER_VERBALIZED`, `REFUTED_NO_MARGIN_OVER_ENTROPY`,
+`REFUTED_DOMINATED_BY_CORRECTNESS_PROBE`, `REFUTED_LENGTH_CONFOUNDED`). This is an interpretation, not
+a deviation from the gate semantics; if the registration prefers a single collapsed label it is a
+one-line change to the enum mapping.
+
 ## What remains open — thresholds fixed at registration, not here
 
 Everything under `validation/` is throwaway-fixture machinery; the code is the real instrument but
 the numbers below are NOT set:
 
-- `r2_fidelity_min` — minimum in-distribution R² for "continuous fidelity present".
-- `r2_margin_over_classmean_min` — minimum `R²_indist − R²_classmean` for the continuous probe to
-  count as reading more than the binarized class.
-- `r2_ood_min` — minimum leave-one-family-out R² for "OOD transfer present".
+- `r2_fidelity_min` — minimum R² on the non-degenerate subset for "continuous fidelity present".
+- `spearman_fidelity_min` — minimum Spearman on the non-degenerate subset (**NEW**, floor-robust).
+- `within_family_spearman_min` — minimum within-family Spearman, and the length-residualized bar
+  (**NEW**).
+- `family_oracle_margin_min` — minimum `probe R² − family-mean-oracle R²` (**NEW**; the fidelity gate
+  that replaces the class-mean margin).
+- `r2_margin_over_classmean_min` — the old `R²_indist − R²_classmean` margin, RETAINED as B2 reporting
+  only (no longer a fidelity gate).
+- `ood_pooled_spearman_min`, `ood_per_family_floor` — the within-family OOD transfer bars (**NEW**;
+  replace the old `r2_ood_min` pooled-R² bar).
 - `auc_binary_min` — minimum SEP-style median-split AUROC for "a binarized signal exists".
-- `vc_ci_floor` — the paired-bootstrap CI-low on the probe-minus-verbalized AUROC margin that counts
-  as beating verbalized confidence.
-- The probe's `alpha` grid and inner-fold count, the bootstrap resample count and CI level — module
-  defaults for the synthetic stage; e3-0004 freezes the confirmatory values in the config before any
-  real datum is fit.
+- `vc_ci_floor`, `b3_ci_floor` — the paired-bootstrap CI-low floors for beating verbalized confidence
+  and predictive entropy (`b3_ci_floor` **NEW**).
+- `b4_margin_ceiling` — the ceiling the (B4 − probe) CI-low must not exceed (**NEW**).
+- `min_negatives` — the correctness-arm precondition (**NEW**).
+- `require_length_robust` — whether the length gate is enforced (**NEW**).
+- The probe's `alpha` grid and inner-fold count, the correctness out-of-fold `k`, the bootstrap
+  resample count and CI level — module defaults for the synthetic stage; e3-0004 freezes the
+  confirmatory values in the config before any real datum is fit.
 
 The `PASSING_THRESHOLDS` in `_fixtures.py` exist ONLY to route the planted fixtures to their known
 branches; they are not a registration and carry no scientific commitment. The freeze boundary
@@ -129,9 +252,10 @@ branches; they are not a registration and carry no scientific commitment. The fr
 ## pytest summary
 
 ```
-47 passed in ~8.5s
+99 passed in ~16s
 ```
 
-`test_compare.py` 6 · `test_determinism.py` 6 · `test_ood_shortcut.py` 3 · `test_probe_binary_only.py`
-4 · `test_probe_nosignal.py` 3 · `test_probe_signal.py` 5 · `test_splits.py` 4 · `test_verdict.py` 9
-· `test_volume.py` 7.
+`test_compare.py` 6 · `test_correctness.py` 9 · `test_determinism.py` 6 · `test_fidelity.py` 8 ·
+`test_freeze.py` 5 · `test_loader.py` 5 · `test_ood.py` 7 · `test_ood_shortcut.py` 3 ·
+`test_preconditions.py` 5 · `test_probe_binary_only.py` 5 · `test_probe_nosignal.py` 3 ·
+`test_probe_signal.py` 6 · `test_splits.py` 4 · `test_verdict.py` 20 · `test_volume.py` 7.
