@@ -1,0 +1,17 @@
+{
+  "round": 2,
+  "kind": "ded_hard",
+  "family": "deduction",
+  "prompt": "Six people -- A, B, C, D, E, and F -- sit in seats numbered 1 to 6 from left to right. A is in seat 1. C sits immediately to the left of B. B sits somewhere to the left of D. F sits immediately to the left of E. D sits somewhere to the left of E. C is not in seat 3. Who sits in seat 3?",
+  "gold": "B",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "Let's analyze the given conditions step by step to determine who sits in seat 3.\n\n1. **A is in seat 1.**\n   - A: 1\n\n2. **C sits immediately to the left of B.**\n   - This means C and B must be consecutive, and C must be to the left of B.\n\n3. **B sits somewhere to the left of D.**\n   - This means D must be to the right of B.\n\n4. **F sits immediately to the left of E.**\n   - This means F and E must be consecutive, and F must be to the left of E.\n\n5. **D sits somewhere to the left of E.**\n   - This means E must be to the right of D.\n\n6. **C is not in seat 3.**\n   - So, C must be in seat 2, 4, 5, or 6.\n\nLet's start by placing A in seat 1 and consider the possible positions for C and B.\n\n### Case Analysis:\n\n#### Case 1: C is in seat 2\n- A: 1\n- C: 2\n- B must be in seat 3 (since C is immediately to the left of B).\n\nNow, we need to place D, E, and F.\n\n- D must be to the right of B, so D can be in seat 4, 5, or 6.\n- E must be to the right of D.\n- F must be to the left of E.\n\nLet's try D in seat 4:\n- A: 1\n- C: 2\n- B: 3\n- D: 4\n- E must be in seat 5 or 6.\n- F must be to the left of E.\n\nIf E is in seat 5:\n- F must be in seat 6.\n\nThis arrangement is:\n- A: 1\n- C: 2\n- B: 3\n- D: 4\n- E: 5\n- F: 6\n\nThis satisfies all conditions. Therefore, B is in seat 3.\n\n#### Case 2: C is in seat 4\n- A: 1\n- C: 4\n- B must be in seat 5 (since C is immediately to the left of B).\n\nNow, we need to place D, E, and F.\n\n- D must be to the right of B, so D can be in seat 6.\n- E must be to the right of D.\n- F must be to the left of E.\n\nIf D is in seat 6:\n- E must be in seat 5, but B is already in seat 5, which is a contradiction.\n\n#### Case 3: C is in seat 5\n- A: 1\n- C: 5\n- B must be in seat 6 (since C is immediately to the left of B).\n\nNow, we need to place D, E, and F.\n\n- D must be to the right of B, but B is already in seat",
+  "answer_tokens": 640,
+  "eos_hit": false,
+  "wall_s": 26.849614624865353,
+  "correct": true,
+  "truncated": false,
+  "extracted": "B",
+  "note": "token-run-match"
+}

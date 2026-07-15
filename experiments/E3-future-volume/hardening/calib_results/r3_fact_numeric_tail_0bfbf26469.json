@@ -1,0 +1,17 @@
+{
+  "round": 3,
+  "kind": "fact_numeric_tail",
+  "family": "factual",
+  "prompt": "Which chemical element has atomic number 103?",
+  "gold": "Lawrencium",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The chemical element with atomic number 103 is Lawrencium, named after the physicist Ernest Lawrence.",
+  "answer_tokens": 22,
+  "eos_hit": true,
+  "wall_s": 1.219477167353034,
+  "correct": true,
+  "truncated": false,
+  "extracted": "Lawrencium",
+  "note": "token-run-match"
+}

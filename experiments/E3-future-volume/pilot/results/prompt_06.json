@@ -1,0 +1,130 @@
+{
+  "idx": 6,
+  "kind": "math",
+  "prompt": "What is 48 divided by 6?",
+  "throwaway": true,
+  "prompt_tokens": 39,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.0004693683295045048,
+  "entropy_base": "nats",
+  "top1_token_id": 19,
+  "top1_token_str": "4",
+  "extract_time_s": 0.2598026255145669,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260774,
+      "n_tokens": 10,
+      "eos_hit": true,
+      "wall_s": 0.7204373329877853,
+      "text": "48 divided by 6 is 8."
+    },
+    {
+      "draw": 1,
+      "seed": 20260775,
+      "n_tokens": 30,
+      "eos_hit": true,
+      "wall_s": 1.5566755831241608,
+      "text": "48 divided by 6 is 8. \n\nYou can calculate it as:\n\n\\[ 48 \\div 6 = 8 \\]"
+    },
+    {
+      "draw": 2,
+      "seed": 20260776,
+      "n_tokens": 10,
+      "eos_hit": true,
+      "wall_s": 0.7308818334713578,
+      "text": "48 divided by 6 is 8."
+    },
+    {
+      "draw": 3,
+      "seed": 20260777,
+      "n_tokens": 52,
+      "eos_hit": true,
+      "wall_s": 2.462968667037785,
+      "text": "48 divided by 6 is 8. \n\nMathematically, this can be represented as:\n\n\\[ 48 \\div 6 = 8 \\]\n\nOr written as:\n\n\\[ \\frac{48}{6} = 8 \\]"
+    },
+    {
+      "draw": 4,
+      "seed": 20260778,
+      "n_tokens": 37,
+      "eos_hit": true,
+      "wall_s": 1.8409754168242216,
+      "text": "48 divided by 6 is 8. \n\nYou can think of it as 48 items divided into 6 equal groups, and each group would have 8 items."
+    },
+    {
+      "draw": 5,
+      "seed": 20260779,
+      "n_tokens": 30,
+      "eos_hit": true,
+      "wall_s": 1.556459916755557,
+      "text": "48 divided by 6 is 8. \n\nYou can calculate it as:\n\n\\[ 48 \\div 6 = 8 \\]"
+    },
+    {
+      "draw": 6,
+      "seed": 20260780,
+      "n_tokens": 33,
+      "eos_hit": true,
+      "wall_s": 1.6771741257980466,
+      "text": "48 divided by 6 is 8. \n\nYou can verify this by multiplying the divisor by the quotient: 6 * 8 = 48."
+    },
+    {
+      "draw": 7,
+      "seed": 20260781,
+      "n_tokens": 34,
+      "eos_hit": true,
+      "wall_s": 1.7309272084385157,
+      "text": "48 divided by 6 is 8. \n\nMathematically, this can be represented as:\n\n\\[ 48 \\div 6 = 8 \\]"
+    },
+    {
+      "draw": 8,
+      "seed": 20260782,
+      "n_tokens": 10,
+      "eos_hit": true,
+      "wall_s": 0.7368499170988798,
+      "text": "48 divided by 6 is 8."
+    },
+    {
+      "draw": 9,
+      "seed": 20260783,
+      "n_tokens": 33,
+      "eos_hit": true,
+      "wall_s": 1.6772464578971267,
+      "text": "48 divided by 6 is 8. \n\nYou can verify this by multiplying the divisor by the quotient: 6 * 8 = 48."
+    }
+  ],
+  "realized_lengths": [
+    10,
+    30,
+    10,
+    52,
+    37,
+    30,
+    33,
+    34,
+    10,
+    33
+  ],
+  "eos_hit_count": 10,
+  "gen_total_wall_s": 14.691619374789298,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.15178474970161915,
+  "semantic_volume": -67.88672197270738,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "48 divided by 6 is 8. \n\nMathematically, this can be represented as:\n\n\\[ 48 \\div 6 = 8 \\]",
+    "answer_tokens": 34,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 2.372634833678603
+  },
+  "npz": "prompt_06.npz",
+  "prompt_total_wall_s": 17.481666333042085
+}

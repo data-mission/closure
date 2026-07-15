@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "ded_trap",
+  "family": "deduction",
+  "prompt": "Among four boxes -- red, blue, green, and yellow -- exactly one contains a prize. The prize is not in the red box. The prize is not in the green box. The blue box is empty. Which box contains the prize?",
+  "gold": "yellow",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "Given the conditions:\n\n1. The prize is not in the red box.\n2. The prize is not in the green box.\n3. The blue box is empty.\n\nWe can deduce the following:\n\n- Since the prize is not in the red box and it is not in the green box, we can eliminate these two options.\n- The blue box is empty, so it also cannot contain the prize.\n\nThis leaves us with only one option: the yellow box.\n\nTherefore, the prize must be in the yellow box.",
+  "answer_tokens": 105,
+  "eos_hit": true,
+  "wall_s": 4.743799082934856,
+  "correct": true,
+  "truncated": false,
+  "extracted": "yellow",
+  "note": "token-run-match"
+}

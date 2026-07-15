@@ -1,0 +1,142 @@
+{
+  "idx": 30,
+  "kind": "deduction",
+  "family": "deduction",
+  "difficulty": 2,
+  "prompt": "Lee is taller than Max. Max is taller than Sam. Who is the tallest?",
+  "gold": "Lee",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 46,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.005965441465377808,
+  "entropy_base": "nats",
+  "top1_token_id": 28715,
+  "top1_token_str": "Based",
+  "extract_time_s": 0.27786283288151026,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20261014,
+      "n_tokens": 50,
+      "eos_hit": true,
+      "wall_s": 2.3806059593334794,
+      "text": "Based on the information given:\n\n1. Lee is taller than Max.\n2. Max is taller than Sam.\n\nFrom this, we can deduce the following order from tallest to shortest:\n\nLee > Max > Sam\n\nTherefore, Lee is the tallest."
+    },
+    {
+      "draw": 1,
+      "seed": 20261015,
+      "n_tokens": 48,
+      "eos_hit": true,
+      "wall_s": 2.303875332698226,
+      "text": "Based on the information given:\n\n1. Lee is taller than Max.\n2. Max is taller than Sam.\n\nFrom this, we can deduce the following order of height:\n\nLee > Max > Sam\n\nTherefore, Lee is the tallest."
+    },
+    {
+      "draw": 2,
+      "seed": 20261016,
+      "n_tokens": 45,
+      "eos_hit": true,
+      "wall_s": 2.1783193331211805,
+      "text": "Based on the information given:\n\n1. Lee is taller than Max.\n2. Max is taller than Sam.\n\nFrom this, we can conclude that Lee is taller than both Max and Sam. Therefore, Lee is the tallest."
+    },
+    {
+      "draw": 3,
+      "seed": 20261017,
+      "n_tokens": 48,
+      "eos_hit": true,
+      "wall_s": 2.3039190834388137,
+      "text": "Based on the information given:\n\n1. Lee is taller than Max.\n2. Max is taller than Sam.\n\nFrom this, we can deduce the following order of height:\n\nLee > Max > Sam\n\nTherefore, Lee is the tallest."
+    },
+    {
+      "draw": 4,
+      "seed": 20261018,
+      "n_tokens": 49,
+      "eos_hit": true,
+      "wall_s": 2.352620833553374,
+      "text": "Based on the information given:\n\n1. Lee is taller than Max.\n2. Max is taller than Sam.\n\nFrom this, we can deduce that Lee is taller than both Max and Sam. Therefore, Lee is the tallest among the three."
+    },
+    {
+      "draw": 5,
+      "seed": 20261019,
+      "n_tokens": 49,
+      "eos_hit": true,
+      "wall_s": 2.3355059158056974,
+      "text": "Based on the information given:\n\n1. Lee is taller than Max.\n2. Max is taller than Sam.\n\nFrom these statements, we can deduce the following order of height:\n\nLee > Max > Sam\n\nTherefore, Lee is the tallest."
+    },
+    {
+      "draw": 6,
+      "seed": 20261020,
+      "n_tokens": 47,
+      "eos_hit": true,
+      "wall_s": 2.256796833127737,
+      "text": "Based on the information given:\n\n1. Lee is taller than Max.\n2. Max is taller than Sam.\n\nWe can deduce the following order from tallest to shortest:\n\nLee > Max > Sam\n\nTherefore, Lee is the tallest."
+    },
+    {
+      "draw": 7,
+      "seed": 20261021,
+      "n_tokens": 46,
+      "eos_hit": true,
+      "wall_s": 2.219268332235515,
+      "text": "Based on the information given:\n\n1. Lee is taller than Max.\n2. Max is taller than Sam.\n\nFrom this, we can deduce that Lee is taller than both Max and Sam. Therefore, Lee is the tallest."
+    },
+    {
+      "draw": 8,
+      "seed": 20261022,
+      "n_tokens": 50,
+      "eos_hit": true,
+      "wall_s": 2.3988110003992915,
+      "text": "Based on the information given:\n\n1. Lee is taller than Max.\n2. Max is taller than Sam.\n\nFrom this, we can deduce the following order from tallest to shortest:\n\nLee > Max > Sam\n\nTherefore, Lee is the tallest."
+    },
+    {
+      "draw": 9,
+      "seed": 20261023,
+      "n_tokens": 48,
+      "eos_hit": true,
+      "wall_s": 2.3085612915456295,
+      "text": "Based on the information given:\n\n1. Lee is taller than Max.\n2. Max is taller than Sam.\n\nFrom this, we can conclude that Lee is taller than both Max and Sam. Therefore, Lee is the tallest among the three."
+    }
+  ],
+  "realized_lengths": [
+    50,
+    48,
+    45,
+    48,
+    49,
+    49,
+    47,
+    46,
+    50,
+    48
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.19088074937462807,
+  "semantic_volume": -51.42909948894677,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "Based on the information given:\n\n1. Lee is taller than Max.\n2. Max is taller than Sam.\n\nFrom these statements, we can deduce the following order from tallest to shortest:\n\nLee > Max > Sam\n\nTherefore, Lee is the tallest.",
+    "answer_tokens": 51,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 3.2273174580186605
+  },
+  "greedy_answer": "Based on the information given:\n\n1. Lee is taller than Max.\n2. Max is taller than Sam.\n\nFrom these statements, we can deduce the following order from tallest to shortest:\n\nLee > Max > Sam\n\nTherefore, Lee is the tallest.",
+  "greedy_answer_tokens": 51,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "lee",
+  "normalizer_note": "token-run-match",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_30.npz",
+  "prompt_total_wall_s": 29.17789529170841
+}

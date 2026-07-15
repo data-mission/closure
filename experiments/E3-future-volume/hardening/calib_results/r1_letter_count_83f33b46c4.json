@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "letter_count",
+  "family": "arithmetic",
+  "prompt": "How many times does the letter l appear in the word parallel?",
+  "gold": "3",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The letter \"l\" appears 3 times in the word \"parallel.\"",
+  "answer_tokens": 15,
+  "eos_hit": true,
+  "wall_s": 0.9327030424028635,
+  "correct": true,
+  "truncated": false,
+  "extracted": "3.0",
+  "note": "numeric[last-number-fallback]tol=0.0"
+}

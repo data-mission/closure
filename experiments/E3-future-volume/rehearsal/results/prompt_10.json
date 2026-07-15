@@ -1,0 +1,142 @@
+{
+  "idx": 10,
+  "kind": "arithmetic",
+  "family": "arithmetic",
+  "difficulty": 4,
+  "prompt": "Tom is 3 times as old as Sara. In 4 years, Tom will be 28. How old is Sara now?",
+  "gold": "8",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 57,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.578983724117279,
+  "entropy_base": "nats",
+  "top1_token_id": 10061,
+  "top1_token_str": "Let",
+  "extract_time_s": 0.26545633282512426,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260814,
+      "n_tokens": 207,
+      "eos_hit": true,
+      "wall_s": 8.859242209233344,
+      "text": "Let's denote Sara's current age as \\( S \\) and Tom's current age as \\( T \\).\n\nAccording to the problem, Tom is 3 times as old as Sara, so we can write:\n\\[ T = 3S \\]\n\nThe problem also states that in 4 years, Tom will be 28 years old. Therefore, we can express Tom's future age as:\n\\[ T + 4 = 28 \\]\n\nFrom this equation, we can solve for \\( T \\):\n\\[ T + 4 = 28 \\]\n\\[ T = 28 - 4 \\]\n\\[ T = 24 \\]\n\nNow that we know Tom's current age is 24, we can use the first equation to find Sara's current age:\n\\[ T = 3S \\]\n\\[ 24 = 3S \\]\n\\[ S = \\frac{24}{3} \\]\n\\[ S = 8 \\]\n\nSo, Sara is currently 8 years old."
+    },
+    {
+      "draw": 1,
+      "seed": 20260815,
+      "n_tokens": 234,
+      "eos_hit": true,
+      "wall_s": 9.98306250013411,
+      "text": "Let's define the current ages of Tom and Sara with variables:\n- Let \\( T \\) be Tom's current age.\n- Let \\( S \\) be Sara's current age.\n\nWe are given two pieces of information:\n1. Tom is 3 times as old as Sara.\n2. In 4 years, Tom will be 28 years old.\n\nFrom the second piece of information, we can write the equation:\n\\[ T + 4 = 28 \\]\n\nTo find Tom's current age, we solve for \\( T \\):\n\\[ T = 28 - 4 \\]\n\\[ T = 24 \\]\n\nNow, using the first piece of information that Tom is 3 times as old as Sara, we can write:\n\\[ T = 3S \\]\n\nWe already know \\( T = 24 \\), so we substitute this into the equation:\n\\[ 24 = 3S \\]\n\nTo find Sara's current age, we solve for \\( S \\):\n\\[ S = \\frac{24}{3} \\]\n\\[ S = 8 \\]\n\nTherefore, Sara is currently 8 years old."
+    },
+    {
+      "draw": 2,
+      "seed": 20260816,
+      "n_tokens": 194,
+      "eos_hit": true,
+      "wall_s": 8.327282374724746,
+      "text": "Let's break down the problem step by step.\n\n1. **Identify the current age of Tom:**\n   - In 4 years, Tom will be 28 years old.\n   - Therefore, Tom's current age is \\(28 - 4 = 24\\) years old.\n\n2. **Relate Tom's age to Sara's age:**\n   - Tom is 3 times as old as Sara.\n   - If Sara's current age is \\(S\\), then Tom's current age is \\(3S\\).\n\n3. **Set up the equation:**\n   - We know Tom's current age is 24.\n   - So, \\(3S = 24\\).\n\n4. **Solve for Sara's age:**\n   - Divide both sides of the equation by 3: \\(S = \\frac{24}{3} = 8\\).\n\nTherefore, Sara is currently 8 years old."
+    },
+    {
+      "draw": 3,
+      "seed": 20260817,
+      "n_tokens": 181,
+      "eos_hit": true,
+      "wall_s": 7.787848792038858,
+      "text": "To solve this problem, let's set up an equation based on the information given.\n\nLet's say Sara's current age is \\( S \\) years. According to the problem, Tom is 3 times as old as Sara, so Tom's current age is \\( 3S \\) years.\n\nThe problem also states that in 4 years, Tom will be 28 years old. Therefore, we can write the following equation for Tom's future age:\n\n\\[ 3S + 4 = 28 \\]\n\nNow, we solve for \\( S \\):\n\n\\[ 3S + 4 = 28 \\]\n\\[ 3S = 28 - 4 \\]\n\\[ 3S = 24 \\]\n\\[ S = \\frac{24}{3} \\]\n\\[ S = 8 \\]\n\nSo, Sara is currently 8 years old."
+    },
+    {
+      "draw": 4,
+      "seed": 20260818,
+      "n_tokens": 201,
+      "eos_hit": true,
+      "wall_s": 8.658717708662152,
+      "text": "Let's break down the problem step by step.\n\n1. We know that in 4 years, Tom will be 28 years old.\n2. To find out Tom's current age, we subtract 4 years from 28:\n   \\[\n   28 - 4 = 24\n   \\]\n   So, Tom is currently 24 years old.\n\n3. We are also given that Tom is 3 times as old as Sara. Let's represent Sara's current age with the variable \\( S \\).\n\n4. Since Tom is 3 times as old as Sara, we can write the equation:\n   \\[\n   24 = 3S\n   \\]\n\n5. To find Sara's age, we solve for \\( S \\) by dividing both sides of the equation by 3:\n   \\[\n   S = \\frac{24}{3} = 8\n   \\]\n\nTherefore, Sara is currently 8 years old."
+    },
+    {
+      "draw": 5,
+      "seed": 20260819,
+      "n_tokens": 208,
+      "eos_hit": true,
+      "wall_s": 8.921030041761696,
+      "text": "To solve this problem, let's set up the equations based on the information given.\n\nLet's say Sara's current age is \\( S \\) and Tom's current age is \\( T \\).\n\nFrom the problem, we know:\n1. Tom is 3 times as old as Sara: \\( T = 3S \\)\n2. In 4 years, Tom will be 28: \\( T + 4 = 28 \\)\n\nFirst, we solve the second equation to find Tom's current age:\n\\[ T + 4 = 28 \\]\n\\[ T = 28 - 4 \\]\n\\[ T = 24 \\]\n\nNow, we use the first equation to find Sara's age. Since \\( T = 3S \\) and we found \\( T = 24 \\):\n\\[ 24 = 3S \\]\n\\[ S = \\frac{24}{3} \\]\n\\[ S = 8 \\]\n\nSo, Sara is currently 8 years old."
+    },
+    {
+      "draw": 6,
+      "seed": 20260820,
+      "n_tokens": 205,
+      "eos_hit": true,
+      "wall_s": 8.787009959109128,
+      "text": "Let's denote Sara's current age as \\( S \\) and Tom's current age as \\( T \\).\n\nAccording to the problem, we have two pieces of information:\n\n1. Tom is 3 times as old as Sara: \\( T = 3S \\).\n2. In 4 years, Tom will be 28 years old: \\( T + 4 = 28 \\).\n\nFirst, we can solve the second equation for \\( T \\):\n\\[ T + 4 = 28 \\]\n\\[ T = 28 - 4 \\]\n\\[ T = 24 \\]\n\nNow we know Tom's current age is 24. We can substitute \\( T = 24 \\) into the first equation \\( T = 3S \\) to find Sara's age:\n\\[ 24 = 3S \\]\n\\[ S = \\frac{24}{3} \\]\n\\[ S = 8 \\]\n\nSo, Sara is currently 8 years old."
+    },
+    {
+      "draw": 7,
+      "seed": 20260821,
+      "n_tokens": 195,
+      "eos_hit": true,
+      "wall_s": 8.3746222499758,
+      "text": "Let's solve this step by step.\n\n1. **Understand the information:**\n   - Tom is 3 times as old as Sara.\n   - In 4 years, Tom will be 28 years old.\n\n2. **Determine Tom's current age:**\n   - If in 4 years Tom will be 28, then his current age is \\(28 - 4 = 24\\) years.\n\n3. **Set up the relationship:**\n   - Let Sara's current age be \\(S\\).\n   - Since Tom is 3 times as old as Sara, we can write this relationship as: \\(3S = 24\\).\n\n4. **Solve for Sara's age:**\n   - To find Sara's current age, we divide both sides of the equation by 3: \\(S = \\frac{24}{3} = 8\\).\n\nSo, Sara is currently 8 years old."
+    },
+    {
+      "draw": 8,
+      "seed": 20260822,
+      "n_tokens": 209,
+      "eos_hit": true,
+      "wall_s": 8.952829209156334,
+      "text": "Let's solve this step by step.\n\n1. **Determine Tom's current age:**\n   - We know that in 4 years, Tom will be 28 years old.\n   - Therefore, Tom's current age is \\(28 - 4 = 24\\) years old.\n\n2. **Set up the relationship between Tom's and Sara's ages:**\n   - Tom is 3 times as old as Sara.\n   - Let Sara's current age be \\(S\\).\n   - Then, Tom's current age can be expressed as \\(3S\\).\n\n3. **Substitute Tom's current age:**\n   - We know Tom's current age is 24.\n   - So, \\(3S = 24\\).\n\n4. **Solve for Sara's age:**\n   - Divide both sides of the equation by 3:\n     \\[\n     S = \\frac{24}{3} = 8\n     \\]\n\nTherefore, Sara is currently 8 years old."
+    },
+    {
+      "draw": 9,
+      "seed": 20260823,
+      "n_tokens": 178,
+      "eos_hit": true,
+      "wall_s": 7.670176332816482,
+      "text": "Let's denote Sara's current age as \\( S \\) and Tom's current age as \\( T \\).\n\nAccording to the problem, Tom is 3 times as old as Sara, so we can write:\n\\[ T = 3S \\]\n\nIn 4 years, Tom will be 28 years old. So, we can also write:\n\\[ T + 4 = 28 \\]\n\nNow, let's solve the second equation for \\( T \\):\n\\[ T = 28 - 4 \\]\n\\[ T = 24 \\]\n\nSo, Tom is currently 24 years old. Now we can use the first equation to find Sara's age:\n\\[ 24 = 3S \\]\n\\[ S = \\frac{24}{3} \\]\n\\[ S = 8 \\]\n\nTherefore, Sara is currently 8 years old."
+    }
+  ],
+  "realized_lengths": [
+    207,
+    234,
+    194,
+    181,
+    201,
+    208,
+    205,
+    195,
+    209,
+    178
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.6780753331258893,
+  "semantic_volume": -16.280743720215334,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "Let's denote Sara's current age as \\( S \\) and Tom's current age as \\( T \\).\n\nAccording to the problem, we have two pieces of information:\n\n1. Tom is 3 times as old as Sara: \\( T = 3S \\).\n2. In 4 years, Tom will be 28 years old: \\( T + 4 = 28 \\).\n\nFirst, we can solve the second equation to find Tom's current age:\n\\[ T + 4 = 28 \\]\n\\[ T = 28 - 4 \\]\n\\[ T = 24 \\]\n\nNow that we know Tom's current age is 24, we can use the first piece of information to find Sara's current age. Since \\( T = 3S \\), we substitute \\( T \\) with 24:\n\\[ 24 = 3S \\]\n\\[ S = \\frac{24}{3} \\]\n\\[ S = 8 \\]\n\nSo, Sara is currently 8 years old.",
+    "answer_tokens": 214,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 10.529627375304699
+  },
+  "greedy_answer": "Let's denote Sara's current age as \\( S \\) and Tom's current age as \\( T \\).\n\nAccording to the problem, we have two pieces of information:\n\n1. Tom is 3 times as old as Sara: \\( T = 3S \\).\n2. In 4 years, Tom will be 28 years old: \\( T + 4 = 28 \\).\n\nFirst, we can solve the second equation to find Tom's current age:\n\\[ T + 4 = 28 \\]\n\\[ T = 28 - 4 \\]\n\\[ T = 24 \\]\n\nNow that we know Tom's current age is 24, we can use the first piece of information to find Sara's current age. Since \\( T = 3S \\), we substitute \\( T \\) with 24:\n\\[ 24 = 3S \\]\n\\[ S = \\frac{24}{3} \\]\n\\[ S = 8 \\]\n\nSo, Sara is currently 8 years old.",
+  "greedy_answer_tokens": 214,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "8.0",
+  "normalizer_note": "numeric-exact",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_10.npz",
+  "prompt_total_wall_s": 106.8999438341707
+}

@@ -1,0 +1,27 @@
+{
+  "n_rehearsal": 41,
+  "n_spike": 20,
+  "n_pilot": 30,
+  "n_corpus": 200,
+  "vs_spike20": {
+    "jaccard": 0.75,
+    "rehearsal": "What is the chemical symbol for oxygen?",
+    "reference": "What is the chemical symbol for gold?",
+    "exact_overlaps": [],
+    "n_exact_overlaps": 0
+  },
+  "vs_pilot30": {
+    "jaccard": 0.75,
+    "rehearsal": "What is the chemical symbol for oxygen?",
+    "reference": "What is the chemical symbol for sodium?",
+    "exact_overlaps": [],
+    "n_exact_overlaps": 0
+  },
+  "vs_corpus200": {
+    "jaccard": 0.8,
+    "rehearsal": "What is 9 times 8?",
+    "reference": "What is 9 times 9?",
+    "exact_overlaps": [],
+    "n_exact_overlaps": 0
+  }
+}

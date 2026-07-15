@@ -1,0 +1,17 @@
+{
+  "round": 3,
+  "kind": "ded_harder",
+  "family": "deduction",
+  "prompt": "Eight people -- A, B, C, D, E, F, G, and H -- sit in seats numbered 1 to 8 from left to right. C is in seat 1. D sits immediately to the left of E. A sits somewhere to the left of D. F sits immediately to the left of G. E sits somewhere to the left of F. H sits immediately to the left of A. G sits somewhere to the left of B. Who sits in seat 3?",
+  "gold": "A",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To solve this problem, let's break down the information step by step and use logical deduction to determine the seating arrangement.\n\n1. **C is in seat 1.**\n   - C: 1\n\n2. **D sits immediately to the left of E.**\n   - Possible pairs: (D, E) can be (2, 3), (3, 4), (4, 5), (5, 6), (6, 7), (7, 8)\n\n3. **A sits somewhere to the left of D.**\n   - A must be in a seat to the left of D.\n\n4. **F sits immediately to the left of G.**\n   - Possible pairs: (F, G) can be (2, 3), (3, 4), (4, 5), (5, 6), (6, 7), (7, 8)\n\n5. **E sits somewhere to the left of F.**\n   - E must be to the left of F.\n\n6. **H sits immediately to the left of A.**\n   - Possible pairs: (H, A) can be (1, 2), (2, 3), (3, 4), (4, 5), (5, 6), (6, 7), (7, 8)\n\n7. **G sits somewhere to the left of B.**\n   - G must be to the left of B.\n\nLet's start by placing C in seat 1 and consider the possible positions for D and E, and F and G.\n\n### Step-by-step Deduction:\n\n1. **Consider D and E:**\n   - If D is in seat 2, E must be in seat 3.\n   - If D is in seat 3, E must be in seat 4.\n   - If D is in seat 4, E must be in seat 5.\n   - If D is in seat 5, E must be in seat 6.\n   - If D is in seat 6, E must be in seat 7.\n   - If D is in seat 7, E must be in seat 8.\n\n2. **Consider F and G:**\n   - If F is in seat 2, G must be in seat 3.\n   - If F is in seat 3, G must be in seat 4.\n   - If F is in seat 4, G must be in seat 5.\n   - If F is in seat 5, G must be in seat 6.\n   - If F is in seat 6, G must be in seat 7.\n   - If F is in seat 7, G must be in seat 8.\n\n3. **Consider H and A:**\n   - If H is in seat 1, A must be in seat 2.\n   - If H is in seat 2, A must be in seat 3.\n   - If H is in seat 3, A must be in seat 4.\n   - If H is in seat 4, A must be in seat 5.\n   - If H is in seat 5, A must be in seat 6.\n   - If H is in seat 6, A must be in seat 7.\n   - If H is in seat 7, A must be in seat 8.\n\n4. **Consider G and B:**\n   - If G is in seat 1, B must be in seat 2.\n   - If G is in seat 2, B must be in seat 3.\n   - If G is in seat 3, B must be in seat 4.\n   - If G is in seat 4, B must be in seat 5.\n   - If G is in seat 5, B must be in seat 6.\n   - If G is in seat 6, B must be in seat 7.\n   - If G is in seat 7, B must be in seat 8.\n\n### Finding a Consistent Arrangement:\n\nLet's try to place D and E first:\n- If D is in seat 2, E must be in seat 3.\n- If F is in seat 2, G must be in seat 3.\n\nThis creates a conflict because D",
+  "answer_tokens": 900,
+  "eos_hit": false,
+  "wall_s": 37.94249779172242,
+  "correct": false,
+  "truncated": false,
+  "extracted": "",
+  "note": "empty-gold"
+}

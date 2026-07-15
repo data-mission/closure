@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "letter_count",
+  "family": "arithmetic",
+  "prompt": "How many times does the letter e appear in the word bookkeeper?",
+  "gold": "3",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The word \"bookkeeper\" contains three 'e's. Here it is written out with each 'e' in a different color for clarity:\n\nb o o k k e e p e e r\n\nSo, the letter 'e' appears 3 times in the word \"bookkeeper.\"",
+  "answer_tokens": 59,
+  "eos_hit": true,
+  "wall_s": 2.7429230846464634,
+  "correct": true,
+  "truncated": false,
+  "extracted": "3.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

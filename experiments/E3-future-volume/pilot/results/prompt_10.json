@@ -1,0 +1,130 @@
+{
+  "idx": 10,
+  "kind": "math",
+  "prompt": "What is the next number in the sequence 2, 4, 8, 16?",
+  "throwaway": true,
+  "prompt_tokens": 50,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 6.421958005375927e-06,
+  "entropy_base": "nats",
+  "top1_token_id": 785,
+  "top1_token_str": "The",
+  "extract_time_s": 0.2657203348353505,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260814,
+      "n_tokens": 58,
+      "eos_hit": true,
+      "wall_s": 2.8354063341394067,
+      "text": "The sequence you've provided (2, 4, 8, 16) appears to be a geometric progression where each term is multiplied by 2 to get the next term. Following this pattern, the next number in the sequence after 16 would be 32."
+    },
+    {
+      "draw": 1,
+      "seed": 20260815,
+      "n_tokens": 104,
+      "eos_hit": true,
+      "wall_s": 4.849663416855037,
+      "text": "The sequence you've provided (2, 4, 8, 16) is a geometric sequence where each term is multiplied by 2 to get the next term. \n\nSo, the pattern is:\n\n2 \u00d7 2 = 4\n4 \u00d7 2 = 8\n8 \u00d7 2 = 16\n\nFollowing this pattern, the next number in the sequence would be:\n\n16 \u00d7 2 = 32\n\nTherefore, the next number in the sequence is 32."
+    },
+    {
+      "draw": 2,
+      "seed": 20260816,
+      "n_tokens": 80,
+      "eos_hit": true,
+      "wall_s": 3.824176416732371,
+      "text": "The sequence you've given is a geometric progression where each term is multiplied by 2 to get the next term. Starting with 2, the sequence is:\n\n2, 2*2=4, 4*2=8, 8*2=16\n\nFollowing this pattern, the next number in the sequence would be 16*2, which is 32."
+    },
+    {
+      "draw": 3,
+      "seed": 20260817,
+      "n_tokens": 88,
+      "eos_hit": true,
+      "wall_s": 4.162035000510514,
+      "text": "The sequence you've provided is a geometric progression where each term is multiplied by 2 to get the next term. Starting with 2, the sequence is:\n\n2, 2*2, 2*2*2, 2*2*2*2, ...\n\nSo the sequence is:\n\n2, 4, 8, 16, 32\n\nThe next number in the sequence is 32."
+    },
+    {
+      "draw": 4,
+      "seed": 20260818,
+      "n_tokens": 94,
+      "eos_hit": true,
+      "wall_s": 4.3761001247912645,
+      "text": "The sequence you've provided is a geometric sequence where each term is multiplied by 2 to get the next term. The sequence starts with 2, and each subsequent term is 2 times the previous one:\n\n2, 4 (2 * 2), 8 (4 * 2), 16 (8 * 2)\n\nFollowing this pattern, the next number in the sequence would be 16 * 2, which is 32."
+    },
+    {
+      "draw": 5,
+      "seed": 20260819,
+      "n_tokens": 56,
+      "eos_hit": true,
+      "wall_s": 2.649729084223509,
+      "text": "The sequence you've provided (2, 4, 8, 16) is a geometric progression where each term is multiplied by 2 to get the next term. Following this pattern, the next number in the sequence after 16 would be 32."
+    },
+    {
+      "draw": 6,
+      "seed": 20260820,
+      "n_tokens": 78,
+      "eos_hit": true,
+      "wall_s": 3.560445334762335,
+      "text": "The sequence you've provided is a geometric progression where each term is multiplied by 2 to get the next term. Starting with 2, the sequence goes:\n\n2, 2*2=4, 2*4=8, 2*8=16, ...\n\nSo, the next number in the sequence would be 2 * 16 = 32."
+    },
+    {
+      "draw": 7,
+      "seed": 20260821,
+      "n_tokens": 52,
+      "eos_hit": true,
+      "wall_s": 2.4892542073503137,
+      "text": "The sequence you've provided (2, 4, 8, 16) is a geometric progression where each term is multiplied by 2 to get the next term. Following this pattern, the next number in the sequence would be 32."
+    },
+    {
+      "draw": 8,
+      "seed": 20260822,
+      "n_tokens": 56,
+      "eos_hit": true,
+      "wall_s": 2.6374007500708103,
+      "text": "The sequence you've given (2, 4, 8, 16) is a geometric progression where each term is multiplied by 2 to get the next term. Following this pattern, the next number in the sequence after 16 would be 32."
+    },
+    {
+      "draw": 9,
+      "seed": 20260823,
+      "n_tokens": 64,
+      "eos_hit": true,
+      "wall_s": 2.967097249813378,
+      "text": "The sequence you've provided is a geometric progression where each term is obtained by multiplying the previous term by 2. The sequence is 2, 4, 8, 16.\n\nFollowing this pattern, the next number in the sequence would be 16 * 2, which equals 32."
+    }
+  ],
+  "realized_lengths": [
+    58,
+    104,
+    80,
+    88,
+    94,
+    56,
+    78,
+    52,
+    56,
+    64
+  ],
+  "eos_hit_count": 10,
+  "gen_total_wall_s": 34.35367849934846,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.2762944158166647,
+  "semantic_volume": -17.579024569905258,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "The sequence you've provided is a geometric progression where each term is multiplied by 2 to get the next term. Starting from 2, the sequence is:\n\n2, 2*2, 2*2*2, 2*2*2*2, ...\n\nSo the sequence is:\n\n2, 4, 8, 16, 32\n\nTherefore, the next number in the sequence is 32.",
+    "answer_tokens": 90,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 4.932306291535497
+  },
+  "npz": "prompt_10.npz",
+  "prompt_total_wall_s": 39.83425854053348
+}

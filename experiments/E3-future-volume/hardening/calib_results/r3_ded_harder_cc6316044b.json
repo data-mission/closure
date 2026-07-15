@@ -1,0 +1,17 @@
+{
+  "round": 3,
+  "kind": "ded_harder",
+  "family": "deduction",
+  "prompt": "Eight people -- A, B, C, D, E, F, G, and H -- sit in seats numbered 1 to 8 from left to right. H is in seat 8. A sits immediately to the left of B. C sits somewhere to the left of A. D sits immediately to the left of E. B sits somewhere to the left of D. G sits immediately to the left of F. E sits somewhere to the left of G. C is not in seat 3. Who sits in seat 5?",
+  "gold": "E",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To solve this problem, we need to carefully place each person in their seats based on the given conditions. Let's break it down step by step.\n\n1. **Given conditions:**\n   - H is in seat 8.\n   - A sits immediately to the left of B.\n   - C sits somewhere to the left of A.\n   - D sits immediately to the left of E.\n   - B sits somewhere to the left of D.\n   - G sits immediately to the left of F.\n   - E sits somewhere to the left of G.\n   - C is not in seat 3.\n\n2. **Let's start by placing H:**\n   - H is in seat 8: \\( \\_ \\_ \\_ \\_ \\_ \\_ \\_ H \\)\n\n3. **Next, let's consider the pairs:**\n   - A sits immediately to the left of B: \\( \\_ \\_ \\_ \\_ \\_ \\_ A B \\)\n   - D sits immediately to the left of E: \\( \\_ \\_ \\_ \\_ \\_ D E \\)\n   - G sits immediately to the left of F: \\( \\_ \\_ \\_ \\_ G F \\)\n\n4. **Now, let's consider the order of these pairs:**\n   - B sits somewhere to the left of D: \\( \\_ \\_ \\_ \\_ B \\_ D E \\)\n   - E sits somewhere to the left of G: \\( \\_ \\_ \\_ \\_ B \\_ D E G F \\)\n\n5. **We also know that C is not in seat 3:**\n   - C must be in one of the seats 1, 2, 4, 5, 6, or 7.\n\n6. **Let's place C somewhere to the left of A:**\n   - If C is in seat 1, then A and B must be in seats 2 and 3, respectively. This would place D and E in seats 4 and 5, but we need to check if this fits with the remaining seats.\n   - If C is in seat 2, then A and B must be in seats 3 and 4, respectively. This would place D and E in seats 5 and 6, but we need to check if this fits with the remaining seats.\n   - If C is in seat 4, then A and B must be in seats 5 and 6, respectively. This would place D and E in seats 7 and 8, but we need to check if this fits with the remaining seats.\n\n7. **Let's try C in seat 1:**\n   - \\( C \\_ \\_ \\_ B \\_ D E \\_ H \\)\n   - A must be in seat 2, and B must be in seat 3.\n   - D must be in seat 4, and E must be in seat 5.\n   - G must be in seat 6, and F must be in seat 7.\n\n8. **Verify the conditions:**\n   - C is in seat 1, which is to the left of A in seat 2.\n   - B is in seat 3, which is to the left of D in seat 4.\n   - D is in seat 4, which is to the left of E in seat 5.\n   - G is in seat 6, which is to the left of F in seat 7.\n   - H is in seat 8.\n\nAll conditions are satisfied with this arrangement. Therefore, the person sitting in seat 5 is:\n\n**E**.",
+  "answer_tokens": 754,
+  "eos_hit": true,
+  "wall_s": 31.598898249678314,
+  "correct": true,
+  "truncated": false,
+  "extracted": "E",
+  "note": "token-run-match"
+}

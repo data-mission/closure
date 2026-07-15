@@ -1,0 +1,142 @@
+{
+  "idx": 18,
+  "kind": "factual",
+  "family": "factual",
+  "difficulty": 2,
+  "prompt": "What planet is known as the Red Planet?",
+  "gold": "Mars",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 38,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 1.4175539945426863e-05,
+  "entropy_base": "nats",
+  "top1_token_id": 785,
+  "top1_token_str": "The",
+  "extract_time_s": 0.27635445911437273,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260894,
+      "n_tokens": 39,
+      "eos_hit": true,
+      "wall_s": 1.9232791252434254,
+      "text": "The planet known as the Red Planet is Mars. The nickname \"Red Planet\" comes from the reddish appearance of Mars, which is due to the iron oxide (rust) on its surface."
+    },
+    {
+      "draw": 1,
+      "seed": 20260895,
+      "n_tokens": 27,
+      "eos_hit": true,
+      "wall_s": 1.4445059578865767,
+      "text": "The planet known as the Red Planet is Mars. Its reddish appearance is due to iron oxide, or rust, on its surface."
+    },
+    {
+      "draw": 2,
+      "seed": 20260896,
+      "n_tokens": 41,
+      "eos_hit": true,
+      "wall_s": 2.0123539166525006,
+      "text": "The planet known as the Red Planet is Mars. Mars appears reddish in color due to iron oxide, or rust, on its surface. This gives it a distinct reddish hue when viewed from Earth."
+    },
+    {
+      "draw": 3,
+      "seed": 20260897,
+      "n_tokens": 52,
+      "eos_hit": true,
+      "wall_s": 2.4601227501407266,
+      "text": "The planet known as the Red Planet is Mars. This nickname is due to its reddish appearance, which is caused by iron oxide (rust) on its surface. Mars has a thin atmosphere composed mainly of carbon dioxide and is the fourth planet from the Sun."
+    },
+    {
+      "draw": 4,
+      "seed": 20260898,
+      "n_tokens": 27,
+      "eos_hit": true,
+      "wall_s": 1.437295707874,
+      "text": "The planet known as the Red Planet is Mars. Its reddish appearance is due to iron oxide, or rust, on its surface."
+    },
+    {
+      "draw": 5,
+      "seed": 20260899,
+      "n_tokens": 60,
+      "eos_hit": true,
+      "wall_s": 2.7875159168615937,
+      "text": "The planet known as the Red Planet is Mars. This nickname is due to its reddish appearance, which is caused by iron oxide, or rust, on its surface. Mars has a thin atmosphere composed primarily of carbon dioxide. Its reddish color comes from iron oxide (rust) in its soil."
+    },
+    {
+      "draw": 6,
+      "seed": 20260900,
+      "n_tokens": 33,
+      "eos_hit": true,
+      "wall_s": 1.6850709160789847,
+      "text": "The planet known as the Red Planet is Mars. This nickname is due to its reddish appearance, which is caused by iron oxide (rust) on its surface."
+    },
+    {
+      "draw": 7,
+      "seed": 20260901,
+      "n_tokens": 33,
+      "eos_hit": true,
+      "wall_s": 1.6815151665359735,
+      "text": "The planet known as the Red Planet is Mars. This nickname is due to its reddish appearance, which is caused by iron oxide (rust) on its surface."
+    },
+    {
+      "draw": 8,
+      "seed": 20260902,
+      "n_tokens": 27,
+      "eos_hit": true,
+      "wall_s": 1.4354694578796625,
+      "text": "The planet known as the Red Planet is Mars. Its reddish appearance is due to iron oxide, or rust, on its surface."
+    },
+    {
+      "draw": 9,
+      "seed": 20260903,
+      "n_tokens": 27,
+      "eos_hit": true,
+      "wall_s": 1.4317964995279908,
+      "text": "The planet known as the Red Planet is Mars. Its reddish appearance is due to iron oxide, or rust, on its surface."
+    }
+  ],
+  "realized_lengths": [
+    39,
+    27,
+    41,
+    52,
+    27,
+    60,
+    33,
+    33,
+    27,
+    27
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.18033441714942455,
+  "semantic_volume": -68.73954952580553,
+  "vc": {
+    "value": 95,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "The planet known as the Red Planet is Mars. This nickname is due to its reddish appearance, which is caused by iron oxide (rust) on its surface.",
+    "answer_tokens": 33,
+    "conf_raw": "95",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 2.316033124923706
+  },
+  "greedy_answer": "The planet known as the Red Planet is Mars. This nickname is due to its reddish appearance, which is caused by iron oxide (rust) on its surface.",
+  "greedy_answer_tokens": 33,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "mars",
+  "normalizer_note": "token-run-match",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_18.npz",
+  "prompt_total_wall_s": 22.75423604156822
+}

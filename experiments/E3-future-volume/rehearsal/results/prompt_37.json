@@ -1,0 +1,142 @@
+{
+  "idx": 37,
+  "kind": "deduction",
+  "family": "deduction",
+  "difficulty": 3,
+  "prompt": "Ana is faster than Bea. Bea is faster than Cara. Cara is faster than Dana. Who is the slowest?",
+  "gold": "Dana",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 53,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.021771753206849098,
+  "entropy_base": "nats",
+  "top1_token_id": 28715,
+  "top1_token_str": "Based",
+  "extract_time_s": 0.27329091541469097,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20261084,
+      "n_tokens": 67,
+      "eos_hit": true,
+      "wall_s": 3.0836246246472,
+      "text": "Based on the information given:\n\n1. Ana is faster than Bea.\n2. Bea is faster than Cara.\n3. Cara is faster than Dana.\n\nWe can deduce the following order from fastest to slowest:\n\n1. Ana\n2. Bea\n3. Cara\n4. Dana\n\nTherefore, Dana is the slowest."
+    },
+    {
+      "draw": 1,
+      "seed": 20261085,
+      "n_tokens": 59,
+      "eos_hit": true,
+      "wall_s": 2.7576946252956986,
+      "text": "Based on the information given:\n\n1. Ana is faster than Bea.\n2. Bea is faster than Cara.\n3. Cara is faster than Dana.\n\nWe can deduce the following ranking from fastest to slowest:\n\nAna > Bea > Cara > Dana\n\nTherefore, Dana is the slowest."
+    },
+    {
+      "draw": 2,
+      "seed": 20261086,
+      "n_tokens": 62,
+      "eos_hit": true,
+      "wall_s": 2.8835998345166445,
+      "text": "Based on the information provided:\n\n1. Ana is faster than Bea.\n2. Bea is faster than Cara.\n3. Cara is faster than Dana.\n\nFrom this, we can deduce the following order from fastest to slowest:\n\nAna > Bea > Cara > Dana\n\nTherefore, Dana is the slowest."
+    },
+    {
+      "draw": 3,
+      "seed": 20261087,
+      "n_tokens": 59,
+      "eos_hit": true,
+      "wall_s": 2.7641365826129913,
+      "text": "Based on the information given:\n\n1. Ana is faster than Bea.\n2. Bea is faster than Cara.\n3. Cara is faster than Dana.\n\nWe can deduce the following order from fastest to slowest:\n\nAna > Bea > Cara > Dana\n\nTherefore, Dana is the slowest."
+    },
+    {
+      "draw": 4,
+      "seed": 20261088,
+      "n_tokens": 69,
+      "eos_hit": true,
+      "wall_s": 3.1824150402098894,
+      "text": "Based on the information given:\n\n1. Ana is faster than Bea.\n2. Bea is faster than Cara.\n3. Cara is faster than Dana.\n\nFrom this, we can deduce the order from fastest to slowest:\n\n1. Ana\n2. Bea\n3. Cara\n4. Dana\n\nTherefore, Dana is the slowest."
+    },
+    {
+      "draw": 5,
+      "seed": 20261089,
+      "n_tokens": 65,
+      "eos_hit": true,
+      "wall_s": 3.0055513344705105,
+      "text": "Based on the information given:\n\n- Ana is faster than Bea.\n- Bea is faster than Cara.\n- Cara is faster than Dana.\n\nWe can deduce the order from fastest to slowest as follows:\n\n1. Ana\n2. Bea\n3. Cara\n4. Dana\n\nTherefore, Dana is the slowest."
+    },
+    {
+      "draw": 6,
+      "seed": 20261090,
+      "n_tokens": 64,
+      "eos_hit": true,
+      "wall_s": 2.9620132502168417,
+      "text": "Based on the information given:\n\n- Ana is faster than Bea.\n- Bea is faster than Cara.\n- Cara is faster than Dana.\n\nWe can rank their speed from fastest to slowest as follows:\n1. Ana\n2. Bea\n3. Cara\n4. Dana\n\nTherefore, Dana is the slowest."
+    },
+    {
+      "draw": 7,
+      "seed": 20261091,
+      "n_tokens": 67,
+      "eos_hit": true,
+      "wall_s": 3.093801292590797,
+      "text": "Based on the information given:\n\n1. Ana is faster than Bea.\n2. Bea is faster than Cara.\n3. Cara is faster than Dana.\n\nWe can arrange their speeds from fastest to slowest as follows:\n\n1. Ana\n2. Bea\n3. Cara\n4. Dana\n\nTherefore, Dana is the slowest."
+    },
+    {
+      "draw": 8,
+      "seed": 20261092,
+      "n_tokens": 62,
+      "eos_hit": true,
+      "wall_s": 2.8832097090780735,
+      "text": "Based on the given information:\n\n- Ana is faster than Bea.\n- Bea is faster than Cara.\n- Cara is faster than Dana.\n\nWe can arrange their speeds from fastest to slowest:\n\n1. Ana\n2. Bea\n3. Cara\n4. Dana\n\nTherefore, Dana is the slowest."
+    },
+    {
+      "draw": 9,
+      "seed": 20261093,
+      "n_tokens": 64,
+      "eos_hit": true,
+      "wall_s": 2.9660142082720995,
+      "text": "Based on the information given:\n\n1. Ana is faster than Bea.\n2. Bea is faster than Cara.\n3. Cara is faster than Dana.\n\nFrom this, we can deduce the following order of speed from fastest to slowest:\n\nAna > Bea > Cara > Dana\n\nTherefore, Dana is the slowest."
+    }
+  ],
+  "realized_lengths": [
+    67,
+    59,
+    62,
+    59,
+    69,
+    65,
+    64,
+    67,
+    62,
+    64
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.19060062523931265,
+  "semantic_volume": -20.057828602107996,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "Based on the information given:\n\n1. Ana is faster than Bea.\n2. Bea is faster than Cara.\n3. Cara is faster than Dana.\n\nWe can deduce the following order from fastest to slowest:\n\nAna > Bea > Cara > Dana\n\nTherefore, Dana is the slowest.",
+    "answer_tokens": 59,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 3.6734380424022675
+  },
+  "greedy_answer": "Based on the information given:\n\n1. Ana is faster than Bea.\n2. Bea is faster than Cara.\n3. Cara is faster than Dana.\n\nWe can deduce the following order from fastest to slowest:\n\nAna > Bea > Cara > Dana\n\nTherefore, Dana is the slowest.",
+  "greedy_answer_tokens": 59,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "dana",
+  "normalizer_note": "token-run-match",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_37.npz",
+  "prompt_total_wall_s": 36.472074791789055
+}

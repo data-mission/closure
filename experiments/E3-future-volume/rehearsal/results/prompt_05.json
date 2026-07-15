@@ -1,0 +1,142 @@
+{
+  "idx": 5,
+  "kind": "arithmetic",
+  "family": "arithmetic",
+  "difficulty": 2,
+  "prompt": "What is 2 to the power of 7?",
+  "gold": "128",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 40,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.12110641598701477,
+  "entropy_base": "nats",
+  "top1_token_id": 17,
+  "top1_token_str": "2",
+  "extract_time_s": 0.2564358748495579,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260764,
+      "n_tokens": 67,
+      "eos_hit": true,
+      "wall_s": 3.1630911668762565,
+      "text": "2 to the power of 7 is calculated as \\(2^7\\).\n\n\\(2^7 = 2 \\times 2 \\times 2 \\times 2 \\times 2 \\times 2 \\times 2 = 128\\).\n\nSo, \\(2^7 = 128\\)."
+    },
+    {
+      "draw": 1,
+      "seed": 20260765,
+      "n_tokens": 68,
+      "eos_hit": true,
+      "wall_s": 3.1832543751224875,
+      "text": "2 to the power of 7 is calculated as \\(2^7\\). \n\n\\[2^7 = 2 \\times 2 \\times 2 \\times 2 \\times 2 \\times 2 \\times 2 = 128\\]\n\nSo, \\(2^7 = 128\\)."
+    },
+    {
+      "draw": 2,
+      "seed": 20260766,
+      "n_tokens": 23,
+      "eos_hit": true,
+      "wall_s": 1.3354220418259501,
+      "text": "2 to the power of 7 is calculated as \\(2^7\\), which equals 128."
+    },
+    {
+      "draw": 3,
+      "seed": 20260767,
+      "n_tokens": 23,
+      "eos_hit": true,
+      "wall_s": 1.2829900421202183,
+      "text": "2 to the power of 7 is calculated as \\(2^7\\), which equals 128."
+    },
+    {
+      "draw": 4,
+      "seed": 20260768,
+      "n_tokens": 68,
+      "eos_hit": true,
+      "wall_s": 3.1660872912034392,
+      "text": "2 to the power of 7 is calculated as \\(2^7\\). \n\n\\[2^7 = 2 \\times 2 \\times 2 \\times 2 \\times 2 \\times 2 \\times 2 = 128\\]\n\nSo, \\(2^7 = 128\\)."
+    },
+    {
+      "draw": 5,
+      "seed": 20260769,
+      "n_tokens": 23,
+      "eos_hit": true,
+      "wall_s": 1.2798810005187988,
+      "text": "2 to the power of 7 is calculated as \\(2^7\\), which equals 128."
+    },
+    {
+      "draw": 6,
+      "seed": 20260770,
+      "n_tokens": 23,
+      "eos_hit": true,
+      "wall_s": 1.2796998340636492,
+      "text": "2 to the power of 7 is calculated as \\(2^7\\), which equals 128."
+    },
+    {
+      "draw": 7,
+      "seed": 20260771,
+      "n_tokens": 23,
+      "eos_hit": true,
+      "wall_s": 1.27490908280015,
+      "text": "2 to the power of 7 is calculated as \\(2^7\\), which equals 128."
+    },
+    {
+      "draw": 8,
+      "seed": 20260772,
+      "n_tokens": 23,
+      "eos_hit": true,
+      "wall_s": 1.2820123750716448,
+      "text": "2 to the power of 7 is calculated as \\(2^7\\), which equals 128."
+    },
+    {
+      "draw": 9,
+      "seed": 20260773,
+      "n_tokens": 54,
+      "eos_hit": true,
+      "wall_s": 2.5534489173442125,
+      "text": "2 to the power of 7 is calculated as \\(2^7\\).\n\n\\(2^7 = 2 \\times 2 \\times 2 \\times 2 \\times 2 \\times 2 \\times 2 = 128\\)."
+    }
+  ],
+  "realized_lengths": [
+    67,
+    68,
+    23,
+    23,
+    68,
+    23,
+    23,
+    23,
+    23,
+    54
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.2247584154829383,
+  "semantic_volume": -98.57991779906885,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "2 to the power of 7 is calculated as \\(2^7\\), which equals 128.",
+    "answer_tokens": 23,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 1.9316650833934546
+  },
+  "greedy_answer": "2 to the power of 7 is calculated as \\(2^7\\), which equals 128.",
+  "greedy_answer_tokens": 23,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "128.0",
+  "normalizer_note": "numeric-exact",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_05.npz",
+  "prompt_total_wall_s": 23.494391249492764
+}

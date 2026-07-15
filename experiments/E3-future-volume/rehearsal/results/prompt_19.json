@@ -1,0 +1,142 @@
+{
+  "idx": 19,
+  "kind": "factual",
+  "family": "factual",
+  "difficulty": 2,
+  "prompt": "What is the largest continent by area?",
+  "gold": "Asia",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 37,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.00020368502009660006,
+  "entropy_base": "nats",
+  "top1_token_id": 785,
+  "top1_token_str": "The",
+  "extract_time_s": 0.2666322495788336,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260904,
+      "n_tokens": 43,
+      "eos_hit": true,
+      "wall_s": 2.09078645799309,
+      "text": "The largest continent by area is Asia. Asia covers approximately 44.5 million square kilometers (17.2 million square miles), which is about 30% of the Earth's total land area."
+    },
+    {
+      "draw": 1,
+      "seed": 20260905,
+      "n_tokens": 42,
+      "eos_hit": true,
+      "wall_s": 2.0508417915552855,
+      "text": "The largest continent by area is Asia. Asia covers approximately 44.5 million square kilometers (17.2 million square miles), which is about 30% of the world's land area."
+    },
+    {
+      "draw": 2,
+      "seed": 20260906,
+      "n_tokens": 38,
+      "eos_hit": true,
+      "wall_s": 1.894434541463852,
+      "text": "The largest continent by area is Asia. Asia covers about 39.4 million square miles (101.8 million square kilometers) and is the most populous continent as well."
+    },
+    {
+      "draw": 3,
+      "seed": 20260907,
+      "n_tokens": 53,
+      "eos_hit": true,
+      "wall_s": 2.4991773748770356,
+      "text": "The largest continent by area is Asia. Asia covers approximately 44,579,000 square kilometers (17,212,000 square miles), which is about 30% of the total land area on Earth."
+    },
+    {
+      "draw": 4,
+      "seed": 20260908,
+      "n_tokens": 52,
+      "eos_hit": true,
+      "wall_s": 2.464443332515657,
+      "text": "The largest continent by area is Asia. Asia covers approximately 44,579,000 square kilometers (17,212,000 square miles), which is about 30% of the world's land area."
+    },
+    {
+      "draw": 5,
+      "seed": 20260909,
+      "n_tokens": 43,
+      "eos_hit": true,
+      "wall_s": 2.0921309581026435,
+      "text": "The largest continent by area is Asia. Asia covers approximately 44.5 million square kilometers (17.2 million square miles), which is about 30% of the total land area on Earth."
+    },
+    {
+      "draw": 6,
+      "seed": 20260910,
+      "n_tokens": 71,
+      "eos_hit": true,
+      "wall_s": 3.240410791710019,
+      "text": "The largest continent by area is Asia. Asia covers about 44,579,000 square kilometers (17,132,000 square miles), which is approximately 30% of the total land area on Earth. It is also the most populous continent, currently housing about 4.6 billion people."
+    },
+    {
+      "draw": 7,
+      "seed": 20260911,
+      "n_tokens": 69,
+      "eos_hit": true,
+      "wall_s": 3.1556974155828357,
+      "text": "The largest continent by area is Asia. Asia covers approximately 44.5 million square kilometers (17.2 million square miles), which is about 30% of the total land area on Earth. It is also the most populous continent, with a population of over 4.7 billion as of 2023."
+    },
+    {
+      "draw": 8,
+      "seed": 20260912,
+      "n_tokens": 28,
+      "eos_hit": true,
+      "wall_s": 1.4753126669675112,
+      "text": "The largest continent by area is Asia. Asia is also the most populous continent, containing about 60% of the world's population."
+    },
+    {
+      "draw": 9,
+      "seed": 20260913,
+      "n_tokens": 53,
+      "eos_hit": true,
+      "wall_s": 2.4987796656787395,
+      "text": "The largest continent by area is Asia. Asia covers approximately 44,579,000 square kilometers (17,212,000 square miles), which is about 30% of the total land area on Earth."
+    }
+  ],
+  "realized_lengths": [
+    43,
+    42,
+    38,
+    53,
+    52,
+    43,
+    71,
+    69,
+    28,
+    53
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.18199333269149065,
+  "semantic_volume": -35.58066312813527,
+  "vc": {
+    "value": 95,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "The largest continent by area is Asia. Asia covers approximately 44,579,000 square kilometers (17,212,000 square miles), which is about 30% of the total land area on Earth. It is also the most populous continent, with a significant portion of the world's population living there.",
+    "answer_tokens": 73,
+    "conf_raw": "95",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 4.074998125433922
+  },
+  "greedy_answer": "The largest continent by area is Asia. Asia covers approximately 44,579,000 square kilometers (17,212,000 square miles), which is about 30% of the total land area on Earth. It is also the most populous continent, with a significant portion of the world's population living there.",
+  "greedy_answer_tokens": 73,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "asia",
+  "normalizer_note": "token-run-match",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_19.npz",
+  "prompt_total_wall_s": 31.298878375440836
+}

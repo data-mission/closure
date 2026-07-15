@@ -1,0 +1,142 @@
+{
+  "idx": 28,
+  "kind": "deduction",
+  "family": "deduction",
+  "difficulty": 1,
+  "prompt": "Maria is older than Tom. Who is younger, Maria or Tom?",
+  "gold": "Tom",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 43,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.3223574459552765,
+  "entropy_base": "nats",
+  "top1_token_id": 24732,
+  "top1_token_str": "Tom",
+  "extract_time_s": 0.2771632494404912,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260994,
+      "n_tokens": 6,
+      "eos_hit": true,
+      "wall_s": 0.5665084160864353,
+      "text": "Tom is younger than Maria."
+    },
+    {
+      "draw": 1,
+      "seed": 20260995,
+      "n_tokens": 6,
+      "eos_hit": true,
+      "wall_s": 0.5829940000548959,
+      "text": "Tom is younger than Maria."
+    },
+    {
+      "draw": 2,
+      "seed": 20260996,
+      "n_tokens": 6,
+      "eos_hit": true,
+      "wall_s": 0.5830365419387817,
+      "text": "Tom is younger than Maria."
+    },
+    {
+      "draw": 3,
+      "seed": 20260997,
+      "n_tokens": 6,
+      "eos_hit": true,
+      "wall_s": 0.5838567083701491,
+      "text": "Tom is younger than Maria."
+    },
+    {
+      "draw": 4,
+      "seed": 20260998,
+      "n_tokens": 6,
+      "eos_hit": true,
+      "wall_s": 0.5824394170194864,
+      "text": "Tom is younger than Maria."
+    },
+    {
+      "draw": 5,
+      "seed": 20260999,
+      "n_tokens": 6,
+      "eos_hit": true,
+      "wall_s": 0.5824937904253602,
+      "text": "Tom is younger than Maria."
+    },
+    {
+      "draw": 6,
+      "seed": 20261000,
+      "n_tokens": 6,
+      "eos_hit": true,
+      "wall_s": 0.5832449169829488,
+      "text": "Tom is younger than Maria."
+    },
+    {
+      "draw": 7,
+      "seed": 20261001,
+      "n_tokens": 6,
+      "eos_hit": true,
+      "wall_s": 0.5829336252063513,
+      "text": "Tom is younger than Maria."
+    },
+    {
+      "draw": 8,
+      "seed": 20261002,
+      "n_tokens": 6,
+      "eos_hit": true,
+      "wall_s": 0.5841122083365917,
+      "text": "Tom is younger than Maria."
+    },
+    {
+      "draw": 9,
+      "seed": 20261003,
+      "n_tokens": 6,
+      "eos_hit": true,
+      "wall_s": 0.5828126659616828,
+      "text": "Tom is younger than Maria."
+    }
+  ],
+  "realized_lengths": [
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.057048125192523,
+  "semantic_volume": -138.15510557964274,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "Tom is younger than Maria.",
+    "answer_tokens": 6,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 1.2667001662775874
+  },
+  "greedy_answer": "Tom is younger than Maria.",
+  "greedy_answer_tokens": 6,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "tom",
+  "normalizer_note": "token-run-match",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_28.npz",
+  "prompt_total_wall_s": 8.002588749863207
+}

@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "unit_convert",
+  "family": "arithmetic",
+  "prompt": "How many ounces are in 3 pounds?",
+  "gold": "48",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "There are 16 ounces in 1 pound. Therefore, in 3 pounds, there would be:\n\n\\[ 3 \\text{ pounds} \\times 16 \\text{ ounces/pound} = 48 \\text{ ounces} \\]\n\nSo, there are 48 ounces in 3 pounds.",
+  "answer_tokens": 66,
+  "eos_hit": true,
+  "wall_s": 3.021735332906246,
+  "correct": true,
+  "truncated": false,
+  "extracted": "48.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

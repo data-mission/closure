@@ -1,0 +1,17 @@
+{
+  "round": 3,
+  "kind": "fact_numeric_tail",
+  "family": "factual",
+  "prompt": "Which chemical element has atomic number 115?",
+  "gold": "Moscovium",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The chemical element with atomic number 115 is\u9546 (M\u00f6), which is also known as nihonium. It is a synthetic element that belongs to the periodic table group 13 and period 7. It was first reported in 2003 by a joint Russian-Japanese research team.",
+  "answer_tokens": 64,
+  "eos_hit": true,
+  "wall_s": 2.95001283288002,
+  "correct": false,
+  "truncated": false,
+  "extracted": "in 2003 by joint russian japanese research team",
+  "note": "no-token-match"
+}

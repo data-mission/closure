@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "arith_multistep",
+  "family": "arithmetic",
+  "prompt": "Three friends split a bill of 87 dollars equally, and then each adds a 4 dollar tip. How much does each friend pay in dollars?",
+  "gold": "33",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To determine how much each friend pays, we need to follow these steps:\n\n1. **Calculate the total bill including the tip:**\n   - The original bill is $87.\n   - Each friend adds a $4 tip.\n   - Since there are three friends, the total tip is \\(3 \\times 4 = 12\\) dollars.\n   - Therefore, the total amount to be paid is \\(87 + 12 = 99\\) dollars.\n\n2. **Divide the total amount by the number of friends:**\n   - The total amount to be paid is $99.\n   - There are three friends.\n   - Each friend pays \\( \\frac{99}{3} = 33 \\) dollars.\n\nSo, each friend pays \\(\\boxed{33}\\) dollars.",
+  "answer_tokens": 169,
+  "eos_hit": true,
+  "wall_s": 7.328273417428136,
+  "correct": true,
+  "truncated": false,
+  "extracted": "33.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

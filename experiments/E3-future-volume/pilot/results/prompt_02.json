@@ -1,0 +1,130 @@
+{
+  "idx": 2,
+  "kind": "factual",
+  "prompt": "In what year did World War II end?",
+  "throwaway": true,
+  "prompt_tokens": 38,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.0004474968882277608,
+  "entropy_base": "nats",
+  "top1_token_id": 10134,
+  "top1_token_str": "World",
+  "extract_time_s": 0.25992837455123663,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260734,
+      "n_tokens": 62,
+      "eos_hit": true,
+      "wall_s": 2.87328025046736,
+      "text": "World War II ended in 1945. The formal surrender of Nazi Germany occurred on May 7, 1945, with the signing of the surrender document on the USS Missouri in Tokyo Bay on September 2, 1945, marking the end of World War II."
+    },
+    {
+      "draw": 1,
+      "seed": 20260735,
+      "n_tokens": 90,
+      "eos_hit": true,
+      "wall_s": 4.071147750131786,
+      "text": "World War II ended in 1945. The formal surrender of Nazi Germany occurred on May 7, 1945, with an unconditional surrender signed on May 8, 1945 (Victory in Europe Day, or VE Day). The surrender of Japan was marked by the signing of the Instrument of Surrender on the USS Missouri on September 2, 1945, which ended the war."
+    },
+    {
+      "draw": 2,
+      "seed": 20260736,
+      "n_tokens": 36,
+      "eos_hit": true,
+      "wall_s": 1.8412027498707175,
+      "text": "World War II ended in 1945. The formal surrender of Japan was signed on September 2, 1945, marking the end of the war."
+    },
+    {
+      "draw": 3,
+      "seed": 20260737,
+      "n_tokens": 64,
+      "eos_hit": true,
+      "wall_s": 2.9784070421010256,
+      "text": "World War II ended in 1945. The formal surrender of Nazi Germany occurred on April 30, 1945 (V-E Day), and the formal surrender of Imperial Japan took place on September 2, 1945, aboard the battleship USS Missouri in Tokyo Bay."
+    },
+    {
+      "draw": 4,
+      "seed": 20260738,
+      "n_tokens": 52,
+      "eos_hit": true,
+      "wall_s": 2.477175292558968,
+      "text": "World War II ended in 1945. The formal surrender of Nazi Germany occurred on April 30, 1945 (V-E Day), and the formal surrender of Japan happened on September 2, 1945."
+    },
+    {
+      "draw": 5,
+      "seed": 20260739,
+      "n_tokens": 56,
+      "eos_hit": true,
+      "wall_s": 2.6405301252380013,
+      "text": "World War II ended in 1945. The formal surrender of Nazi Germany was signed on April 30, 1945, while the surrender of Japan was signed on September 2, 1945, marking the end of the war."
+    },
+    {
+      "draw": 6,
+      "seed": 20260740,
+      "n_tokens": 48,
+      "eos_hit": true,
+      "wall_s": 2.3210805002599955,
+      "text": "World War II ended in 1945. The formal surrender of Nazi Germany occurred on May 7, 1945, and the formal surrender of Japan took place on September 2, 1945."
+    },
+    {
+      "draw": 7,
+      "seed": 20260741,
+      "n_tokens": 48,
+      "eos_hit": true,
+      "wall_s": 2.3368613328784704,
+      "text": "World War II ended in 1945. The formal surrender of Nazi Germany was on May 7, 1945, and the formal surrender of Imperial Japan was on September 2, 1945."
+    },
+    {
+      "draw": 8,
+      "seed": 20260742,
+      "n_tokens": 52,
+      "eos_hit": true,
+      "wall_s": 2.495968082919717,
+      "text": "World War II ended in 1945. The war concluded with the surrender of Japan on September 2, 1945, following the atomic bombings of Hiroshima and Nagasaki and the declaration of war by the Soviet Union against Japan."
+    },
+    {
+      "draw": 9,
+      "seed": 20260743,
+      "n_tokens": 47,
+      "eos_hit": true,
+      "wall_s": 2.275775750167668,
+      "text": "World War II ended in 1945. The formal surrender of Nazi Germany was on May 7, 1945, followed by the official surrender of Japan on September 2, 1945."
+    }
+  ],
+  "realized_lengths": [
+    62,
+    90,
+    36,
+    64,
+    52,
+    56,
+    48,
+    48,
+    52,
+    47
+  ],
+  "eos_hit_count": 10,
+  "gen_total_wall_s": 26.31302237417549,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.20838754065334797,
+  "semantic_volume": -17.017365792781057,
+  "vc": {
+    "value": 99,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "World War II ended in 1945. The formal surrender of Nazi Germany occurred on April 30, 1945 (V-E Day), and the formal surrender of Japan took place on September 2, 1945, aboard the USS Missouri in Tokyo Bay.",
+    "answer_tokens": 61,
+    "conf_raw": "99",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 3.58244258351624
+  },
+  "npz": "prompt_02.npz",
+  "prompt_total_wall_s": 30.369548165239394
+}

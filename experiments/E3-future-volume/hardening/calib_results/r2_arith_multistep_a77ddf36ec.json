@@ -1,0 +1,17 @@
+{
+  "round": 2,
+  "kind": "arith_multistep",
+  "family": "arithmetic",
+  "prompt": "Sarah buys 3 notebooks at 4 dollars each and 2 pens at 3 dollars each, and pays with a 20 dollar bill. How much change does she receive in dollars?",
+  "gold": "2",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To calculate the change Sarah receives, we need to follow these steps:\n\n1. Calculate the total cost of the notebooks.\n2. Calculate the total cost of the pens.\n3. Add the costs of the notebooks and pens to get the total cost.\n4. Subtract the total cost from the amount Sarah paid to find the change.\n\nLet's do the calculations:\n\n1. The cost of the notebooks: \\(3 \\text{ notebooks} \\times 4 \\text{ dollars/notebook} = 12 \\text{ dollars}\\)\n2. The cost of the pens: \\(2 \\text{ pens} \\times 3 \\text{ dollars/pen} = 6 \\text{ dollars}\\)\n3. The total cost: \\(12 \\text{ dollars} + 6 \\text{ dollars} = 18 \\text{ dollars}\\)\n4. The change received: \\(20 \\text{ dollars} - 18 \\text{ dollars} = 2 \\text{ dollars}\\)\n\nSo, Sarah receives $2 in change.",
+  "answer_tokens": 217,
+  "eos_hit": true,
+  "wall_s": 9.361365541815758,
+  "correct": true,
+  "truncated": false,
+  "extracted": "2.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

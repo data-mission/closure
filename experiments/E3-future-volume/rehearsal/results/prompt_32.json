@@ -1,0 +1,142 @@
+{
+  "idx": 32,
+  "kind": "deduction",
+  "family": "deduction",
+  "difficulty": 2,
+  "prompt": "If yesterday was Friday, what day is tomorrow?",
+  "gold": "Sunday",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 39,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.00010398003360023722,
+  "entropy_base": "nats",
+  "top1_token_id": 2679,
+  "top1_token_str": "If",
+  "extract_time_s": 0.2681125421077013,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20261034,
+      "n_tokens": 17,
+      "eos_hit": true,
+      "wall_s": 1.0182493338361382,
+      "text": "If yesterday was Friday, then today is Saturday. Therefore, tomorrow would be Sunday."
+    },
+    {
+      "draw": 1,
+      "seed": 20261035,
+      "n_tokens": 17,
+      "eos_hit": true,
+      "wall_s": 1.0267272079363465,
+      "text": "If yesterday was Friday, then today is Saturday. Therefore, tomorrow would be Sunday."
+    },
+    {
+      "draw": 2,
+      "seed": 20261036,
+      "n_tokens": 17,
+      "eos_hit": true,
+      "wall_s": 1.0262871664017439,
+      "text": "If yesterday was Friday, then today is Saturday. Therefore, tomorrow would be Sunday."
+    },
+    {
+      "draw": 3,
+      "seed": 20261037,
+      "n_tokens": 17,
+      "eos_hit": true,
+      "wall_s": 1.0290999580174685,
+      "text": "If yesterday was Friday, then today is Saturday. Therefore, tomorrow would be Sunday."
+    },
+    {
+      "draw": 4,
+      "seed": 20261038,
+      "n_tokens": 17,
+      "eos_hit": true,
+      "wall_s": 1.0290762083604932,
+      "text": "If yesterday was Friday, then today is Saturday. Therefore, tomorrow would be Sunday."
+    },
+    {
+      "draw": 5,
+      "seed": 20261039,
+      "n_tokens": 17,
+      "eos_hit": true,
+      "wall_s": 1.0285386247560382,
+      "text": "If yesterday was Friday, then today is Saturday. Therefore, tomorrow would be Sunday."
+    },
+    {
+      "draw": 6,
+      "seed": 20261040,
+      "n_tokens": 17,
+      "eos_hit": true,
+      "wall_s": 1.0284266667440534,
+      "text": "If yesterday was Friday, then today is Saturday. Therefore, tomorrow would be Sunday."
+    },
+    {
+      "draw": 7,
+      "seed": 20261041,
+      "n_tokens": 17,
+      "eos_hit": true,
+      "wall_s": 1.0277127074077725,
+      "text": "If yesterday was Friday, then today is Saturday. Therefore, tomorrow would be Sunday."
+    },
+    {
+      "draw": 8,
+      "seed": 20261042,
+      "n_tokens": 17,
+      "eos_hit": true,
+      "wall_s": 1.0276606241241097,
+      "text": "If yesterday was Friday, then today is Saturday. Therefore, tomorrow would be Sunday."
+    },
+    {
+      "draw": 9,
+      "seed": 20261043,
+      "n_tokens": 17,
+      "eos_hit": true,
+      "wall_s": 1.0334657495841384,
+      "text": "If yesterday was Friday, then today is Saturday. Therefore, tomorrow would be Sunday."
+    }
+  ],
+  "realized_lengths": [
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17,
+    17
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.07832291536033154,
+  "semantic_volume": -138.15510557964274,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "If yesterday was Friday, then today is Saturday. Therefore, tomorrow would be Sunday.",
+    "answer_tokens": 17,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 1.711443416774273
+  },
+  "greedy_answer": "If yesterday was Friday, then today is Saturday. Therefore, tomorrow would be Sunday.",
+  "greedy_answer_tokens": 17,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "sunday",
+  "normalizer_note": "token-run-match",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_32.npz",
+  "prompt_total_wall_s": 13.366358000785112
+}

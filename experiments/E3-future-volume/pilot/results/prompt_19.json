@@ -1,0 +1,130 @@
+{
+  "idx": 19,
+  "kind": "ambiguous",
+  "prompt": "How long will it take?",
+  "throwaway": true,
+  "prompt_tokens": 35,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.2505054175853729,
+  "entropy_base": "nats",
+  "top1_token_id": 1249,
+  "top1_token_str": "To",
+  "extract_time_s": 0.2622600421309471,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260904,
+      "n_tokens": 60,
+      "eos_hit": true,
+      "wall_s": 2.782111708074808,
+      "text": "To provide an accurate answer, I would need more context about what specific task or process you are referring to. Could you please specify what you are asking about in more detail? For example, are you inquiring about the duration for a project, a trip, a software installation, or something else?"
+    },
+    {
+      "draw": 1,
+      "seed": 20260905,
+      "n_tokens": 30,
+      "eos_hit": true,
+      "wall_s": 1.5550090419128537,
+      "text": "To provide a helpful answer, could you please specify what task or process you are referring to? The time required can vary greatly depending on the context."
+    },
+    {
+      "draw": 2,
+      "seed": 20260906,
+      "n_tokens": 56,
+      "eos_hit": true,
+      "wall_s": 2.6190851656720042,
+      "text": "To provide an accurate answer, I would need more context about what you're referring to. Are you asking about how long a specific task will take, such as a project, a trip, or a process? Please provide more details so I can give you a more precise response."
+    },
+    {
+      "draw": 3,
+      "seed": 20260907,
+      "n_tokens": 39,
+      "eos_hit": true,
+      "wall_s": 1.919806582853198,
+      "text": "To provide a helpful answer, could you please specify what you are referring to? Are you asking about how long a specific task will take, or is there another context you're inquiring about?"
+    },
+    {
+      "draw": 4,
+      "seed": 20260908,
+      "n_tokens": 63,
+      "eos_hit": true,
+      "wall_s": 2.904601540416479,
+      "text": "It seems like you might have omitted some details. Could you please provide more context or specify what you are referring to? For example, are you asking about how long a trip, a task, a project, or something else will take? Providing more details will help me give you a more accurate and helpful answer."
+    },
+    {
+      "draw": 5,
+      "seed": 20260909,
+      "n_tokens": 46,
+      "eos_hit": true,
+      "wall_s": 2.2059527914971113,
+      "text": "To provide a more accurate response, could you please specify what task or process you are referring to? The time required can vary greatly depending on the context, such as the complexity of the task, available resources, and specific requirements."
+    },
+    {
+      "draw": 6,
+      "seed": 20260910,
+      "n_tokens": 59,
+      "eos_hit": true,
+      "wall_s": 2.741608291864395,
+      "text": "To provide an accurate answer, I would need more context about what specific task or process you are referring to. Could you please specify what you are asking about in more detail? For example, are you asking about the duration of a trip, a project, a technological process, or something else?"
+    },
+    {
+      "draw": 7,
+      "seed": 20260911,
+      "n_tokens": 58,
+      "eos_hit": true,
+      "wall_s": 2.709491624496877,
+      "text": "To provide an accurate answer, I would need more context about what specific task or process you're referring to. Could you please specify what you are asking about in more detail? For example, are you asking about the duration of a trip, a project, a procedure, or something else?"
+    },
+    {
+      "draw": 8,
+      "seed": 20260912,
+      "n_tokens": 53,
+      "eos_hit": true,
+      "wall_s": 2.4967052079737186,
+      "text": "To provide an accurate answer, I would need more context about what you're referring to. Are you asking about the duration of a specific task, event, or process? Once you specify what you're inquiring about, I can give you a more precise estimate."
+    },
+    {
+      "draw": 9,
+      "seed": 20260913,
+      "n_tokens": 58,
+      "eos_hit": true,
+      "wall_s": 2.7034835424274206,
+      "text": "To provide an accurate answer, I would need more context about what specific task or process you are referring to. Could you please clarify what you are asking about in more detail? For example, are you referring to the duration of a trip, a project, a meeting, or something else?"
+    }
+  ],
+  "realized_lengths": [
+    60,
+    30,
+    56,
+    39,
+    63,
+    46,
+    59,
+    58,
+    53,
+    58
+  ],
+  "eos_hit_count": 10,
+  "gen_total_wall_s": 24.638662957586348,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.18351474963128567,
+  "semantic_volume": -18.067734838066652,
+  "vc": {
+    "value": 85,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "To provide an accurate answer, I would need more context about what specific task or process you are referring to. Could you please specify what you are asking about in more detail? For example, are you asking about the duration of a trip, a project, a cooking process, or something else?",
+    "answer_tokens": 59,
+    "conf_raw": "85",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 3.4843826666474342
+  },
+  "npz": "prompt_19.npz",
+  "prompt_total_wall_s": 28.577162750065327
+}

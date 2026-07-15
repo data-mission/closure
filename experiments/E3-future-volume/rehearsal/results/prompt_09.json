@@ -1,0 +1,142 @@
+{
+  "idx": 9,
+  "kind": "arithmetic",
+  "family": "arithmetic",
+  "difficulty": 4,
+  "prompt": "A tank holds 800 liters and is 35 percent full. If 90 liters are added, how many liters are in it?",
+  "gold": "370",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 60,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.4446435868740082,
+  "entropy_base": "nats",
+  "top1_token_id": 1249,
+  "top1_token_str": "To",
+  "extract_time_s": 0.26169791631400585,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260804,
+      "n_tokens": 192,
+      "eos_hit": true,
+      "wall_s": 8.294662749394774,
+      "text": "To solve this problem, let's follow these steps:\n\n1. **Calculate the current amount of liquid in the tank:**\n   The tank is 35 percent full, so we need to find 35% of 800 liters.\n   \\[\n   \\text{Current amount} = 35\\% \\times 800 = \\frac{35}{100} \\times 800 = 0.35 \\times 800 = 280 \\text{ liters}\n   \\]\n\n2. **Add the 90 liters to the current amount:**\n   \\[\n   \\text{New amount} = \\text{Current amount} + 90 = 280 + 90 = 370 \\text{ liters}\n   \\]\n\nTherefore, after adding 90 liters, the tank will contain 370 liters."
+    },
+    {
+      "draw": 1,
+      "seed": 20260805,
+      "n_tokens": 190,
+      "eos_hit": true,
+      "wall_s": 8.211141708306968,
+      "text": "To solve this problem, we need to follow these steps:\n\n1. **Determine the current amount of liquid in the tank.**\n   - The tank is 35 percent full.\n   - The tank's total capacity is 800 liters.\n   - To find the current amount of liquid, we calculate 35% of 800 liters.\n   \n   \\[\n   0.35 \\times 800 = 280 \\text{ liters}\n   \\]\n\n2. **Add the 90 liters of liquid to the current amount.**\n   - The tank currently holds 280 liters.\n   - We add 90 liters to this amount.\n   \n   \\[\n   280 + 90 = 370 \\text{ liters}\n   \\]\n\nSo, after adding 90 liters, the tank will contain 370 liters."
+    },
+    {
+      "draw": 2,
+      "seed": 20260806,
+      "n_tokens": 167,
+      "eos_hit": true,
+      "wall_s": 7.280830541625619,
+      "text": "To determine how many liters are in the tank after adding 90 liters, we can follow these steps:\n\n1. **Calculate the initial amount of water in the tank:**\n   The tank is 35 percent full, so we need to find 35% of 800 liters.\n   \\[\n   \\text{Initial amount} = 0.35 \\times 800 = 280 \\text{ liters}\n   \\]\n\n2. **Add the 90 liters to the initial amount:**\n   \\[\n   \\text{Final amount} = 280 + 90 = 370 \\text{ liters}\n   \\]\n\nSo, after adding 90 liters, the tank contains \\(\\boxed{370}\\) liters."
+    },
+    {
+      "draw": 3,
+      "seed": 20260807,
+      "n_tokens": 186,
+      "eos_hit": true,
+      "wall_s": 8.036422125063837,
+      "text": "To solve the problem, we need to follow these steps:\n\n1. **Calculate the initial amount of liquid in the tank:**\n   The tank is 35% full, so we need to find 35% of 800 liters.\n   \\[\n   \\text{Initial amount of liquid} = 800 \\times \\frac{35}{100} = 800 \\times 0.35 = 280 \\text{ liters}\n   \\]\n\n2. **Add 90 liters to the initial amount:**\n   \\[\n   \\text{New amount of liquid} = \\text{Initial amount of liquid} + 90 = 280 + 90 = 370 \\text{ liters}\n   \\]\n\nSo, after adding 90 liters, the tank will contain 370 liters."
+    },
+    {
+      "draw": 4,
+      "seed": 20260808,
+      "n_tokens": 199,
+      "eos_hit": true,
+      "wall_s": 8.574672749266028,
+      "text": "To determine how many liters are in the tank after adding 90 liters, let's follow these steps:\n\n1. **Calculate the initial amount of liquid in the tank:**\n   - The tank is 35% full.\n   - To find the initial amount of liquid, multiply the total capacity of the tank by 35% (or 0.35):\n     \\[\n     800 \\text{ liters} \\times 0.35 = 280 \\text{ liters}\n     \\]\n\n2. **Add the 90 liters to the initial amount:**\n   - Add the 90 liters to the 280 liters already in the tank:\n     \\[\n     280 \\text{ liters} + 90 \\text{ liters} = 370 \\text{ liters}\n     \\]\n\nSo, after adding 90 liters, the tank contains **370 liters**."
+    },
+    {
+      "draw": 5,
+      "seed": 20260809,
+      "n_tokens": 220,
+      "eos_hit": true,
+      "wall_s": 9.435209916904569,
+      "text": "To find out how many liters are in the tank after adding 90 liters, we can follow these steps:\n\n1. Calculate the current amount of water in the tank when it is 35 percent full.\n2. Add the 90 liters to the current amount.\n\n**Step 1: Calculate the current amount of water in the tank.**\n\nThe tank's total capacity is 800 liters, and it is 35 percent full. So, the current amount of water is:\n\\[ 800 \\text{ liters} \\times 0.35 = 280 \\text{ liters} \\]\n\n**Step 2: Add the 90 liters to the current amount.**\n\nNow, add the 90 liters to the 280 liters already in the tank:\n\\[ 280 \\text{ liters} + 90 \\text{ liters} = 370 \\text{ liters} \\]\n\nSo, after adding 90 liters, the tank will have 370 liters of water."
+    },
+    {
+      "draw": 6,
+      "seed": 20260810,
+      "n_tokens": 198,
+      "eos_hit": true,
+      "wall_s": 8.495070207864046,
+      "text": "To solve this problem, we need to follow these steps:\n\n1. Calculate the amount of water currently in the tank.\n2. Add the 90 liters of water to the current amount.\n3. Determine the total amount of water in the tank after adding the 90 liters.\n\nFirst, let's find out how much water is currently in the tank. The tank holds 800 liters and is 35 percent full. To find the current amount of water, we calculate 35 percent of 800 liters:\n\n\\[\n0.35 \\times 800 = 280 \\text{ liters}\n\\]\n\nNext, we add the 90 liters that are being added to the tank:\n\n\\[\n280 + 90 = 370 \\text{ liters}\n\\]\n\nSo, after adding 90 liters, the tank will have \\(\\boxed{370}\\) liters of water."
+    },
+    {
+      "draw": 7,
+      "seed": 20260811,
+      "n_tokens": 199,
+      "eos_hit": true,
+      "wall_s": 8.534023749642074,
+      "text": "To solve this problem, let's break it down step by step.\n\n1. First, determine how many liters are currently in the tank when it is 35 percent full.\n   - The tank's total capacity is 800 liters.\n   - It is 35 percent full, so we calculate 35% of 800 liters.\n   \\[\n   0.35 \\times 800 = 280 \\text{ liters}\n   \\]\n   So, the tank currently holds 280 liters.\n\n2. Next, we add 90 liters to the current amount.\n   - Current amount in the tank: 280 liters\n   - Liters added: 90 liters\n   \\[\n   280 + 90 = 370 \\text{ liters}\n   \\]\n\nTherefore, after adding 90 liters, the tank will hold 370 liters."
+    },
+    {
+      "draw": 8,
+      "seed": 20260812,
+      "n_tokens": 151,
+      "eos_hit": true,
+      "wall_s": 6.549798999913037,
+      "text": "To determine how many liters are in the tank after adding 90 liters, we can follow these steps:\n\n1. **Calculate the initial amount of water in the tank:**\n   The tank is 35 percent full, so we need to find 35% of 800 liters.\n   \\[\n   0.35 \\times 800 = 280 \\text{ liters}\n   \\]\n\n2. **Add the 90 liters to the initial amount:**\n   \\[\n   280 + 90 = 370 \\text{ liters}\n   \\]\n\nSo, after adding 90 liters, the tank will have 370 liters of water."
+    },
+    {
+      "draw": 9,
+      "seed": 20260813,
+      "n_tokens": 193,
+      "eos_hit": true,
+      "wall_s": 8.30277895834297,
+      "text": "To solve this problem, we can follow these steps:\n\n1. Determine the current amount of liquid in the tank.\n2. Add the 90 liters to the current amount.\n3. Calculate the new total.\n\nStep 1: Calculate the current amount of liquid in the tank.\nThe tank is 35 percent full, so we need to calculate 35% of 800 liters.\n\\[ \\text{Current amount} = 800 \\times \\frac{35}{100} = 800 \\times 0.35 = 280 \\text{ liters} \\]\n\nStep 2: Add 90 liters to the current amount.\n\\[ \\text{New amount} = 280 + 90 = 370 \\text{ liters} \\]\n\nSo, after adding 90 liters, the tank will have 370 liters of liquid."
+    }
+  ],
+  "realized_lengths": [
+    192,
+    190,
+    167,
+    186,
+    199,
+    220,
+    198,
+    199,
+    151,
+    193
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.6230888748541474,
+  "semantic_volume": -18.589635669428503,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "To solve this problem, let's follow these steps:\n\n1. **Calculate the current amount of liquid in the tank:**\n   - The tank is 35% full.\n   - The total capacity of the tank is 800 liters.\n   - To find the current amount of liquid, we calculate 35% of 800 liters:\n     \\[\n     0.35 \\times 800 = 280 \\text{ liters}\n     \\]\n\n2. **Add the 90 liters to the current amount:**\n   - We add 90 liters to the 280 liters already in the tank:\n     \\[\n     280 + 90 = 370 \\text{ liters}\n     \\]\n\nSo, after adding 90 liters, the tank will contain 370 liters.",
+    "answer_tokens": 181,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 9.13998412527144
+  },
+  "greedy_answer": "To solve this problem, let's follow these steps:\n\n1. **Calculate the current amount of liquid in the tank:**\n   - The tank is 35% full.\n   - The total capacity of the tank is 800 liters.\n   - To find the current amount of liquid, we calculate 35% of 800 liters:\n     \\[\n     0.35 \\times 800 = 280 \\text{ liters}\n     \\]\n\n2. **Add the 90 liters to the current amount:**\n   - We add 90 liters to the 280 liters already in the tank:\n     \\[\n     280 + 90 = 370 \\text{ liters}\n     \\]\n\nSo, after adding 90 liters, the tank will contain 370 liters.",
+  "greedy_answer_tokens": 181,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "370.0",
+  "normalizer_note": "numeric-exact",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_09.npz",
+  "prompt_total_wall_s": 99.49464683327824
+}

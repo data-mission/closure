@@ -1,0 +1,17 @@
+{
+  "round": 3,
+  "kind": "fact_numeric_tail",
+  "family": "factual",
+  "prompt": "What is the atomic number of meitnerium?",
+  "gold": "109",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The atomic number of meitnerium is 109. Meitnerium is a synthetic element, and its symbol is Mt. It was named in honor of Lise Meitner, a pioneer in nuclear physics.",
+  "answer_tokens": 47,
+  "eos_hit": true,
+  "wall_s": 2.250599291175604,
+  "correct": true,
+  "truncated": false,
+  "extracted": "109.0",
+  "note": "numeric[last-number-fallback]tol=0.0"
+}

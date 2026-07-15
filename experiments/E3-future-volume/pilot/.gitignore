@@ -1,0 +1,14 @@
+# uv virtual environment
+.venv/
+
+# Python caches
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Local caches (the HuggingFace model cache lives in ~/.cache/huggingface,
+# outside the repo, and is intentionally NOT vendored here).
+.cache/
+
+# Pilot outputs are disposable measured artifacts and ARE tracked (results/),
+# so results/ is intentionally NOT ignored.

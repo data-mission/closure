@@ -1,0 +1,17 @@
+{
+  "round": 2,
+  "kind": "arith_multistep",
+  "family": "arithmetic",
+  "prompt": "A worker is paid 18 dollars per hour for the first 40 hours and 27 dollars per hour for each additional hour. What is the pay for a 46-hour week in dollars?",
+  "gold": "882",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To calculate the worker's pay for a 46-hour week, we need to break down the hours into regular hours and overtime hours, and then calculate the pay for each part separately.\n\n1. **Regular Hours Pay:**\n   - The worker is paid $18 per hour for the first 40 hours.\n   - For 40 hours, the pay is \\( 40 \\text{ hours} \\times \\$18/\\text{hour} = \\$720 \\).\n\n2. **Overtime Hours Pay:**\n   - The worker worked a total of 46 hours, so the number of overtime hours is \\( 46 - 40 = 6 \\) hours.\n   - The worker is paid $27 per hour for each additional hour.\n   - For 6 overtime hours, the pay is \\( 6 \\text{ hours} \\times \\$27/\\text{hour} = \\$162 \\).\n\n3. **Total Pay:**\n   - The total pay for the week is the sum of the regular hours pay and the overtime hours pay.\n   - Total pay = \\$720 (regular hours) + \\$162 (overtime hours) = \\$882.\n\nTherefore, the worker's pay for a 46-hour week is **\\$882**.",
+  "answer_tokens": 277,
+  "eos_hit": true,
+  "wall_s": 11.920093791559339,
+  "correct": true,
+  "truncated": false,
+  "extracted": "882.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

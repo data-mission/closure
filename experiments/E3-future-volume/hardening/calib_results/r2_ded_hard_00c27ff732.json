@@ -1,0 +1,17 @@
+{
+  "round": 2,
+  "kind": "ded_hard",
+  "family": "deduction",
+  "prompt": "Six people -- A, B, C, D, E, and F -- sit in seats numbered 1 to 6 from left to right. A is in seat 3. B sits immediately to the left of A. C sits somewhere to the left of B. D sits immediately to the left of E. A sits somewhere to the left of D. F is not in seat 6. Who sits in seat 5?",
+  "gold": "D",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "Let's analyze the given conditions step by step to determine who sits in seat 5.\n\n1. **A is in seat 3.**\n   - A: 3\n\n2. **B sits immediately to the left of A.**\n   - B: 2\n\n3. **C sits somewhere to the left of B.**\n   - C must be in seat 1 because B is in seat 2 and C must be to the left of B.\n\n4. **D sits immediately to the left of E.**\n   - D and E must be consecutive seats. Since A is in seat 3, D and E cannot be in seats 1 or 2. Therefore, D and E must be in seats 4 and 5 or seats 5 and 6.\n\n5. **A sits somewhere to the left of D.**\n   - Since A is in seat 3, D must be in seat 4 or 5. If D were in seat 5, E would be in seat 6, but F cannot be in seat 6. Therefore, D must be in seat 4 and E must be in seat 5.\n\n6. **F is not in seat 6.**\n   - Since D is in seat 4 and E is in seat 5, the only seats left for F are 1, 2, or 3. However, since C is in seat 1 and B is in seat 2, F must be in seat 3, but A is already in seat 3. Therefore, F must be in seat 6.\n\nSo, the seating arrangement is:\n- C: 1\n- B: 2\n- A: 3\n- D: 4\n- E: 5\n- F: 6\n\nTherefore, **E** sits in seat 5.",
+  "answer_tokens": 382,
+  "eos_hit": true,
+  "wall_s": 16.30371441692114,
+  "correct": true,
+  "truncated": false,
+  "extracted": "D",
+  "note": "token-run-match"
+}

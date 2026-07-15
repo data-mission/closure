@@ -1,0 +1,130 @@
+{
+  "idx": 3,
+  "kind": "factual",
+  "prompt": "What is the chemical symbol for sodium?",
+  "throwaway": true,
+  "prompt_tokens": 37,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 1.7682773432170507e-06,
+  "entropy_base": "nats",
+  "top1_token_id": 785,
+  "top1_token_str": "The",
+  "extract_time_s": 0.25909462478011847,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260744,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6345532089471817,
+      "text": "The chemical symbol for sodium is Na."
+    },
+    {
+      "draw": 1,
+      "seed": 20260745,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6580164581537247,
+      "text": "The chemical symbol for sodium is Na."
+    },
+    {
+      "draw": 2,
+      "seed": 20260746,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6528150830417871,
+      "text": "The chemical symbol for sodium is Na."
+    },
+    {
+      "draw": 3,
+      "seed": 20260747,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6523959590122104,
+      "text": "The chemical symbol for sodium is Na."
+    },
+    {
+      "draw": 4,
+      "seed": 20260748,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6532302917912602,
+      "text": "The chemical symbol for sodium is Na."
+    },
+    {
+      "draw": 5,
+      "seed": 20260749,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.649721291847527,
+      "text": "The chemical symbol for sodium is Na."
+    },
+    {
+      "draw": 6,
+      "seed": 20260750,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6504109166562557,
+      "text": "The chemical symbol for sodium is Na."
+    },
+    {
+      "draw": 7,
+      "seed": 20260751,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6536595830693841,
+      "text": "The chemical symbol for sodium is Na."
+    },
+    {
+      "draw": 8,
+      "seed": 20260752,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6536175422370434,
+      "text": "The chemical symbol for sodium is Na."
+    },
+    {
+      "draw": 9,
+      "seed": 20260753,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6548396665602922,
+      "text": "The chemical symbol for sodium is Na."
+    }
+  ],
+  "realized_lengths": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8
+  ],
+  "eos_hit_count": 10,
+  "gen_total_wall_s": 6.51409462466836,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.05953170731663704,
+  "semantic_volume": -138.15510557964274,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "The chemical symbol for sodium is Na.",
+    "answer_tokens": 8,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 1.1950554177165031
+  },
+  "npz": "prompt_03.npz",
+  "prompt_total_wall_s": 8.033653791062534
+}

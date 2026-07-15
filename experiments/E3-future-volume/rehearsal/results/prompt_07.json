@@ -1,0 +1,142 @@
+{
+  "idx": 7,
+  "kind": "arithmetic",
+  "family": "arithmetic",
+  "difficulty": 3,
+  "prompt": "A car travels 240 km using 8 liters of fuel. How many kilometers does it travel per liter?",
+  "gold": "30",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 53,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 2.5783276214497164e-05,
+  "entropy_base": "nats",
+  "top1_token_id": 1249,
+  "top1_token_str": "To",
+  "extract_time_s": 0.2617256250232458,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260784,
+      "n_tokens": 125,
+      "eos_hit": true,
+      "wall_s": 5.500422082841396,
+      "text": "To find out how many kilometers the car travels per liter of fuel, you can divide the total distance traveled by the total amount of fuel used. \n\nGiven:\n- Total distance traveled = 240 km\n- Total fuel used = 8 liters\n\nThe calculation is as follows:\n\n\\[ \\text{Distance per liter} = \\frac{\\text{Total distance}}{\\text{Total fuel}} = \\frac{240 \\text{ km}}{8 \\text{ liters}} = 30 \\text{ km/liter} \\]\n\nSo, the car travels 30 kilometers per liter."
+    },
+    {
+      "draw": 1,
+      "seed": 20260785,
+      "n_tokens": 133,
+      "eos_hit": true,
+      "wall_s": 5.852336584590375,
+      "text": "To find out how many kilometers the car travels per liter of fuel, you can divide the total distance traveled by the total amount of fuel used. \n\nGiven:\n- Distance traveled = 240 km\n- Fuel used = 8 liters\n\nThe calculation is:\n\n\\[ \\text{Distance per liter} = \\frac{\\text{Distance traveled}}{\\text{Fuel used}} = \\frac{240 \\text{ km}}{8 \\text{ liters}} \\]\n\n\\[ \\text{Distance per liter} = 30 \\text{ km/liter} \\]\n\nSo, the car travels 30 kilometers per liter of fuel."
+    },
+    {
+      "draw": 2,
+      "seed": 20260786,
+      "n_tokens": 135,
+      "eos_hit": true,
+      "wall_s": 5.933468457311392,
+      "text": "To determine how many kilometers the car travels per liter of fuel, you can divide the total distance traveled by the total amount of fuel used. Here's the calculation:\n\n\\[ \\text{Distance per liter} = \\frac{\\text{Total Distance}}{\\text{Total Fuel Used}} \\]\n\nGiven that the car travels 240 km using 8 liters of fuel, the calculation would be:\n\n\\[ \\text{Distance per liter} = \\frac{240 \\text{ km}}{8 \\text{ liters}} = 30 \\text{ km/liter} \\]\n\nSo, the car travels 30 kilometers per liter of fuel."
+    },
+    {
+      "draw": 3,
+      "seed": 20260787,
+      "n_tokens": 131,
+      "eos_hit": true,
+      "wall_s": 5.759703207761049,
+      "text": "To find out how many kilometers the car travels per liter of fuel, you can divide the total distance traveled by the amount of fuel used. \n\nSo, if the car travels 240 kilometers using 8 liters of fuel, you would calculate the kilometers per liter as follows:\n\n\\[ \\text{Kilometers per liter} = \\frac{\\text{Total kilometers traveled}}{\\text{Total liters of fuel used}} = \\frac{240 \\text{ km}}{8 \\text{ L}} = 30 \\text{ km/L} \\]\n\nTherefore, the car travels 30 kilometers per liter of fuel."
+    },
+    {
+      "draw": 4,
+      "seed": 20260788,
+      "n_tokens": 122,
+      "eos_hit": true,
+      "wall_s": 5.404554000124335,
+      "text": "To find out how many kilometers the car travels per liter of fuel, you can divide the total distance traveled by the amount of fuel used. \n\nGiven:\n- Total distance traveled = 240 km\n- Total fuel used = 8 liters\n\nThe calculation is:\n\n\\[ \\text{Distance per liter} = \\frac{\\text{Total distance}}{\\text{Total fuel}} = \\frac{240 \\text{ km}}{8 \\text{ liters}} = 30 \\text{ km/liter} \\]\n\nSo, the car travels 30 kilometers per liter."
+    },
+    {
+      "draw": 5,
+      "seed": 20260789,
+      "n_tokens": 137,
+      "eos_hit": true,
+      "wall_s": 6.041391124948859,
+      "text": "To find out how many kilometers the car travels per liter of fuel, you can divide the total distance traveled by the amount of fuel used. \n\nGiven:\n- Total distance traveled = 240 km\n- Total fuel used = 8 liters\n\nThe calculation is as follows:\n\\[ \\text{Kilometers per liter} = \\frac{\\text{Total distance traveled}}{\\text{Total fuel used}} = \\frac{240 \\, \\text{km}}{8 \\, \\text{liters}} = 30 \\, \\text{km/liter} \\]\n\nSo, the car travels 30 kilometers per liter of fuel."
+    },
+    {
+      "draw": 6,
+      "seed": 20260790,
+      "n_tokens": 140,
+      "eos_hit": true,
+      "wall_s": 6.161612750031054,
+      "text": "To find out how many kilometers the car travels per liter of fuel, you can divide the total distance traveled by the amount of fuel used. Here's the calculation:\n\n\\[ \\text{Kilometers per liter} = \\frac{\\text{Total distance traveled}}{\\text{Amount of fuel used}} \\]\n\nGiven that the car travels 240 km using 8 liters of fuel, the calculation would be:\n\n\\[ \\text{Kilometers per liter} = \\frac{240 \\text{ km}}{8 \\text{ L}} = 30 \\text{ km/L} \\]\n\nSo, the car travels 30 kilometers per liter of fuel."
+    },
+    {
+      "draw": 7,
+      "seed": 20260791,
+      "n_tokens": 123,
+      "eos_hit": true,
+      "wall_s": 5.455769750289619,
+      "text": "To find out how many kilometers the car travels per liter of fuel, you can divide the total distance traveled by the total amount of fuel used. \n\nSo, if the car travels 240 km using 8 liters of fuel, the calculation would be:\n\n\\[ \\text{Kilometers per liter} = \\frac{\\text{Total Distance}}{\\text{Total Fuel Used}} = \\frac{240 \\text{ km}}{8 \\text{ liters}} = 30 \\text{ km/liter} \\]\n\nTherefore, the car travels 30 kilometers per liter."
+    },
+    {
+      "draw": 8,
+      "seed": 20260792,
+      "n_tokens": 124,
+      "eos_hit": true,
+      "wall_s": 5.450024917721748,
+      "text": "To find out how many kilometers the car travels per liter of fuel, you can divide the total distance traveled by the total amount of fuel used.\n\nGiven:\n- Distance traveled = 240 km\n- Fuel used = 8 liters\n\nThe calculation is as follows:\n\n\\[ \\text{Kilometers per liter} = \\frac{\\text{Distance traveled}}{\\text{Fuel used}} = \\frac{240 \\text{ km}}{8 \\text{ liters}} = 30 \\text{ km/liter} \\]\n\nSo, the car travels 30 kilometers per liter."
+    },
+    {
+      "draw": 9,
+      "seed": 20260793,
+      "n_tokens": 129,
+      "eos_hit": true,
+      "wall_s": 5.69325187522918,
+      "text": "To find out how many kilometers the car travels per liter of fuel, you can divide the total distance traveled by the amount of fuel used. \n\nSo, if the car travels 240 km using 8 liters of fuel, you would calculate the kilometers per liter as follows:\n\n\\[ \\text{Kilometers per liter} = \\frac{\\text{Total distance traveled}}{\\text{Amount of fuel used}} = \\frac{240 \\text{ km}}{8 \\text{ liters}} = 30 \\text{ km/liter} \\]\n\nTherefore, the car travels 30 kilometers per liter."
+    }
+  ],
+  "realized_lengths": [
+    125,
+    133,
+    135,
+    131,
+    122,
+    137,
+    140,
+    123,
+    124,
+    129
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.4345632493495941,
+  "semantic_volume": -19.19537571380472,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "To find out how many kilometers the car travels per liter of fuel, you can divide the total distance traveled by the amount of fuel used. \n\nGiven:\n- Total distance traveled = 240 km\n- Total fuel used = 8 liters\n\nThe calculation is as follows:\n\n\\[ \\text{Kilometers per liter} = \\frac{\\text{Total distance traveled}}{\\text{Total fuel used}} = \\frac{240 \\text{ km}}{8 \\text{ liters}} = 30 \\text{ km/liter} \\]\n\nSo, the car travels 30 kilometers per liter.",
+    "answer_tokens": 128,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 6.712431292049587
+  },
+  "greedy_answer": "To find out how many kilometers the car travels per liter of fuel, you can divide the total distance traveled by the amount of fuel used. \n\nGiven:\n- Total distance traveled = 240 km\n- Total fuel used = 8 liters\n\nThe calculation is as follows:\n\n\\[ \\text{Kilometers per liter} = \\frac{\\text{Total distance traveled}}{\\text{Total fuel used}} = \\frac{240 \\text{ km}}{8 \\text{ liters}} = 30 \\text{ km/liter} \\]\n\nSo, the car travels 30 kilometers per liter.",
+  "greedy_answer_tokens": 128,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "30.0",
+  "normalizer_note": "numeric-exact",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_07.npz",
+  "prompt_total_wall_s": 70.26164958346635
+}

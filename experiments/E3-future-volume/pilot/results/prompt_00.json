@@ -1,0 +1,130 @@
+{
+  "idx": 0,
+  "kind": "factual",
+  "prompt": "What is the capital of Japan?",
+  "throwaway": true,
+  "prompt_tokens": 36,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 2.1632263269566465e-06,
+  "entropy_base": "nats",
+  "top1_token_id": 785,
+  "top1_token_str": "The",
+  "extract_time_s": 0.46616408322006464,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260714,
+      "n_tokens": 7,
+      "eos_hit": true,
+      "wall_s": 0.6020885417237878,
+      "text": "The capital of Japan is Tokyo."
+    },
+    {
+      "draw": 1,
+      "seed": 20260715,
+      "n_tokens": 7,
+      "eos_hit": true,
+      "wall_s": 0.6152267502620816,
+      "text": "The capital of Japan is Tokyo."
+    },
+    {
+      "draw": 2,
+      "seed": 20260716,
+      "n_tokens": 7,
+      "eos_hit": true,
+      "wall_s": 0.6052872501313686,
+      "text": "The capital of Japan is Tokyo."
+    },
+    {
+      "draw": 3,
+      "seed": 20260717,
+      "n_tokens": 7,
+      "eos_hit": true,
+      "wall_s": 0.6058663344010711,
+      "text": "The capital of Japan is Tokyo."
+    },
+    {
+      "draw": 4,
+      "seed": 20260718,
+      "n_tokens": 7,
+      "eos_hit": true,
+      "wall_s": 0.6048353342339396,
+      "text": "The capital of Japan is Tokyo."
+    },
+    {
+      "draw": 5,
+      "seed": 20260719,
+      "n_tokens": 7,
+      "eos_hit": true,
+      "wall_s": 0.6040281672030687,
+      "text": "The capital of Japan is Tokyo."
+    },
+    {
+      "draw": 6,
+      "seed": 20260720,
+      "n_tokens": 7,
+      "eos_hit": true,
+      "wall_s": 0.6061202073469758,
+      "text": "The capital of Japan is Tokyo."
+    },
+    {
+      "draw": 7,
+      "seed": 20260721,
+      "n_tokens": 7,
+      "eos_hit": true,
+      "wall_s": 0.6076335003599524,
+      "text": "The capital of Japan is Tokyo."
+    },
+    {
+      "draw": 8,
+      "seed": 20260722,
+      "n_tokens": 7,
+      "eos_hit": true,
+      "wall_s": 0.6047822088003159,
+      "text": "The capital of Japan is Tokyo."
+    },
+    {
+      "draw": 9,
+      "seed": 20260723,
+      "n_tokens": 7,
+      "eos_hit": true,
+      "wall_s": 0.6042781667783856,
+      "text": "The capital of Japan is Tokyo."
+    }
+  ],
+  "realized_lengths": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7
+  ],
+  "eos_hit_count": 10,
+  "gen_total_wall_s": 6.061364292167127,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.0638025002554059,
+  "semantic_volume": -138.15510557964274,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "The capital of Japan is Tokyo.",
+    "answer_tokens": 7,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 1.1558714173734188
+  },
+  "npz": "prompt_00.npz",
+  "prompt_total_wall_s": 7.804151750169694
+}

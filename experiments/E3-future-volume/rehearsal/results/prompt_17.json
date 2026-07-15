@@ -1,0 +1,142 @@
+{
+  "idx": 17,
+  "kind": "factual",
+  "family": "factual",
+  "difficulty": 2,
+  "prompt": "What is the chemical symbol for oxygen?",
+  "gold": "O",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 37,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 8.022452107070421e-07,
+  "entropy_base": "nats",
+  "top1_token_id": 785,
+  "top1_token_str": "The",
+  "extract_time_s": 0.2761924993246794,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260884,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.650503458455205,
+      "text": "The chemical symbol for oxygen is O."
+    },
+    {
+      "draw": 1,
+      "seed": 20260885,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6641696253791451,
+      "text": "The chemical symbol for oxygen is O."
+    },
+    {
+      "draw": 2,
+      "seed": 20260886,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6662889998406172,
+      "text": "The chemical symbol for oxygen is O."
+    },
+    {
+      "draw": 3,
+      "seed": 20260887,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6640428323298693,
+      "text": "The chemical symbol for oxygen is O."
+    },
+    {
+      "draw": 4,
+      "seed": 20260888,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6634084163233638,
+      "text": "The chemical symbol for oxygen is O."
+    },
+    {
+      "draw": 5,
+      "seed": 20260889,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6620930833742023,
+      "text": "The chemical symbol for oxygen is O."
+    },
+    {
+      "draw": 6,
+      "seed": 20260890,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6629654997959733,
+      "text": "The chemical symbol for oxygen is O."
+    },
+    {
+      "draw": 7,
+      "seed": 20260891,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6630766671150923,
+      "text": "The chemical symbol for oxygen is O."
+    },
+    {
+      "draw": 8,
+      "seed": 20260892,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6615532077848911,
+      "text": "The chemical symbol for oxygen is O."
+    },
+    {
+      "draw": 9,
+      "seed": 20260893,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6614962918683887,
+      "text": "The chemical symbol for oxygen is O."
+    }
+  ],
+  "realized_lengths": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.06599054019898176,
+  "semantic_volume": -138.15510557964274,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "The chemical symbol for oxygen is O.",
+    "answer_tokens": 8,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 1.227613290771842
+  },
+  "greedy_answer": "The chemical symbol for oxygen is O.",
+  "greedy_answer_tokens": 8,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "o",
+  "normalizer_note": "token-run-match",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_17.npz",
+  "prompt_total_wall_s": 8.857237874530256
+}

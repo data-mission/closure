@@ -1,0 +1,142 @@
+{
+  "idx": 38,
+  "kind": "deduction",
+  "family": "deduction",
+  "difficulty": 4,
+  "prompt": "Five people sit in a row. Ann is to the left of Bob, Bob is to the left of Cara, Cara is to the left of Dan, and Dan is to the left of Eve. Who is in the middle?",
+  "gold": "Cara",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 75,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.2585330307483673,
+  "entropy_base": "nats",
+  "top1_token_id": 22043,
+  "top1_token_str": "Given",
+  "extract_time_s": 0.40148662496358156,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20261094,
+      "n_tokens": 82,
+      "eos_hit": true,
+      "wall_s": 3.8380803745239973,
+      "text": "Given the condition that Ann is to the left of Bob, Bob is to the left of Cara, Cara is to the left of Dan, and Dan is to the left of Eve, we can determine the order of the five people from left to right as follows:\n\n1. Ann\n2. Bob\n3. Cara\n4. Dan\n5. Eve\n\nTherefore, in the middle position is Cara."
+    },
+    {
+      "draw": 1,
+      "seed": 20261095,
+      "n_tokens": 78,
+      "eos_hit": true,
+      "wall_s": 3.670828875154257,
+      "text": "Given the conditions:\n\n1. Ann is to the left of Bob.\n2. Bob is to the left of Cara.\n3. Cara is to the left of Dan.\n4. Dan is to the left of Eve.\n\nWe can arrange the people in order from left to right as follows:\n\nAnn, Bob, Cara, Dan, Eve\n\nTherefore, the person in the middle is Cara."
+    },
+    {
+      "draw": 2,
+      "seed": 20261096,
+      "n_tokens": 101,
+      "eos_hit": true,
+      "wall_s": 4.618068542331457,
+      "text": "Given the constraints, we can order the five people based on their positions:\n\n1. Ann is to the left of Bob.\n2. Bob is to the left of Cara.\n3. Cara is to the left of Dan.\n4. Dan is to the left of Eve.\n\nFrom these constraints, we can deduce the following order from left to right:\n\nAnn -> Bob -> Cara -> Dan -> Eve\n\nSince there are five people, the person in the middle position (the third position) is Cara."
+    },
+    {
+      "draw": 3,
+      "seed": 20261097,
+      "n_tokens": 91,
+      "eos_hit": true,
+      "wall_s": 4.207586709409952,
+      "text": "Given the sequence of people based on their positions relative to each other:\n\n- Ann is to the left of Bob.\n- Bob is to the left of Cara.\n- Cara is to the left of Dan.\n- Dan is to the left of Eve.\n\nThis creates the following order from left to right: Ann, Bob, Cara, Dan, Eve.\n\nIn the middle position would be the third person in this sequence. Therefore, Cara is in the middle."
+    },
+    {
+      "draw": 4,
+      "seed": 20261098,
+      "n_tokens": 76,
+      "eos_hit": true,
+      "wall_s": 3.602571167051792,
+      "text": "Given the sequence of positions based on the conditions:\n\n- Ann is to the left of Bob.\n- Bob is to the left of Cara.\n- Cara is to the left of Dan.\n- Dan is to the left of Eve.\n\nThis means the order from left to right is: Ann, Bob, Cara, Dan, Eve.\n\nTherefore, the person in the middle is Cara."
+    },
+    {
+      "draw": 5,
+      "seed": 20261099,
+      "n_tokens": 100,
+      "eos_hit": true,
+      "wall_s": 4.594421375542879,
+      "text": "Given the arrangement where Ann is to the left of Bob, Bob is to the left of Cara, Cara is to the left of Dan, and Dan is to the left of Eve, we can deduce the order of the five people from left to right as follows:\n\n1. Ann\n2. Bob\n3. Cara\n4. Dan\n5. Eve\n\nSince the people are arranged in ascending order of their names, the person in the middle position (the third position) is Cara."
+    },
+    {
+      "draw": 6,
+      "seed": 20261100,
+      "n_tokens": 102,
+      "eos_hit": true,
+      "wall_s": 4.67019962426275,
+      "text": "Given the conditions, we can arrange the five people in the order from left to right as follows:\n\n1. Ann is to the left of Bob.\n2. Bob is to the left of Cara.\n3. Cara is to the left of Dan.\n4. Dan is to the left of Eve.\n\nFrom these conditions, we can deduce the order of the five people from left to right:\n\nAnn \u2192 Bob \u2192 Cara \u2192 Dan \u2192 Eve\n\nTherefore, the person who is in the middle position is Cara."
+    },
+    {
+      "draw": 7,
+      "seed": 20261101,
+      "n_tokens": 80,
+      "eos_hit": true,
+      "wall_s": 3.7599887922406197,
+      "text": "Given the conditions:\n\n1. Ann is to the left of Bob.\n2. Bob is to the left of Cara.\n3. Cara is to the left of Dan.\n4. Dan is to the left of Eve.\n\nWe can arrange these people in order from left to right:\n\nAnn, Bob, Cara, Dan, Eve\n\nFrom this arrangement, we can see that Cara is in the middle."
+    },
+    {
+      "draw": 8,
+      "seed": 20261102,
+      "n_tokens": 95,
+      "eos_hit": true,
+      "wall_s": 4.356904834508896,
+      "text": "Given the conditions:\n\n1. Ann is to the left of Bob.\n2. Bob is to the left of Cara.\n3. Cara is to the left of Dan.\n4. Dan is to the left of Eve.\n\nWe can deduce the order of the five people from left to right as follows:\n\nAnn < Bob < Cara < Dan < Eve\n\nFrom this order, it is clear that Cara is in the middle position when the five people are seated in a row."
+    },
+    {
+      "draw": 9,
+      "seed": 20261103,
+      "n_tokens": 104,
+      "eos_hit": true,
+      "wall_s": 4.730045291595161,
+      "text": "Given the order of the people based on their positions relative to each other, we can list them from left to right as follows:\n\n1. Ann\n2. Bob\n3. Cara\n4. Dan\n5. Eve\n\nSince Ann is to the left of Bob, Bob is to the left of Cara, Cara is to the left of Dan, and Dan is to the left of Eve, the only possible order is:\n\nAnn, Bob, Cara, Dan, Eve\n\nTherefore, Cara is in the middle."
+    }
+  ],
+  "realized_lengths": [
+    82,
+    78,
+    101,
+    91,
+    76,
+    100,
+    102,
+    80,
+    95,
+    104
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.2819595420733094,
+  "semantic_volume": -15.382527364209462,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "Given the conditions:\n\n1. Ann is to the left of Bob.\n2. Bob is to the left of Cara.\n3. Cara is to the left of Dan.\n4. Dan is to the left of Eve.\n\nWe can arrange these people in order from left to right as follows:\n\nAnn, Bob, Cara, Dan, Eve\n\nFrom this arrangement, we can see that Cara is in the middle.",
+    "answer_tokens": 82,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 4.864144583232701
+  },
+  "greedy_answer": "Given the conditions:\n\n1. Ann is to the left of Bob.\n2. Bob is to the left of Cara.\n3. Cara is to the left of Dan.\n4. Dan is to the left of Eve.\n\nWe can arrange these people in order from left to right as follows:\n\nAnn, Bob, Cara, Dan, Eve\n\nFrom this arrangement, we can see that Cara is in the middle.",
+  "greedy_answer_tokens": 82,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "cara",
+  "normalizer_note": "token-run-match",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_38.npz",
+  "prompt_total_wall_s": 51.41230974998325
+}

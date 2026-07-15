@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "fact_obscure",
+  "family": "factual",
+  "prompt": "What is the capital of Laos?",
+  "gold": "Vientiane",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The capital of Laos is Vientiane.",
+  "answer_tokens": 9,
+  "eos_hit": true,
+  "wall_s": 0.6888680830597878,
+  "correct": true,
+  "truncated": false,
+  "extracted": "Vientiane",
+  "note": "token-run-match"
+}

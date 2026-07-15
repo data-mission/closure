@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "arith_multistep",
+  "family": "arithmetic",
+  "prompt": "What is 17 percent of 350?",
+  "gold": "59.5",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To find 17 percent of 350, you can multiply 350 by 0.17:\n\n\\[ 350 \\times 0.17 = 59.5 \\]\n\nSo, 17 percent of 350 is 59.5.",
+  "answer_tokens": 64,
+  "eos_hit": true,
+  "wall_s": 2.955601249821484,
+  "correct": true,
+  "truncated": false,
+  "extracted": "59.5",
+  "note": "numeric[after-marker]tol=0.0"
+}

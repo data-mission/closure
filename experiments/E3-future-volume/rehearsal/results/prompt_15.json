@@ -1,0 +1,142 @@
+{
+  "idx": 15,
+  "kind": "factual",
+  "family": "factual",
+  "difficulty": 1,
+  "prompt": "What color do you get by mixing blue and yellow?",
+  "gold": "green",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 40,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.7016378045082092,
+  "entropy_base": "nats",
+  "top1_token_id": 1359,
+  "top1_token_str": "By",
+  "extract_time_s": 0.2753252498805523,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260864,
+      "n_tokens": 83,
+      "eos_hit": true,
+      "wall_s": 3.744610957801342,
+      "text": "When you mix blue and yellow, you get green. This is a primary color mixing, where blue and yellow are primary colors in the RGB (red, green, blue) color model, and green is the result of their combination. In the context of paint or pigments, which often use the complementary CMY (cyan, magenta, yellow) color model, blue and yellow also mix to produce green."
+    },
+    {
+      "draw": 1,
+      "seed": 20260865,
+      "n_tokens": 55,
+      "eos_hit": true,
+      "wall_s": 2.599611167795956,
+      "text": "By mixing blue and yellow, you get green. This is a primary combination in the RGB (red, green, blue) color model and also in traditional color theory. However, the exact shade of green can vary slightly depending on the specific ratios of blue and yellow used."
+    },
+    {
+      "draw": 2,
+      "seed": 20260866,
+      "n_tokens": 49,
+      "eos_hit": true,
+      "wall_s": 2.362710500136018,
+      "text": "When you mix blue and yellow, you get green. Blue and yellow are considered primary colors in the subtractive color process, which is used in painting and printing. In this process, mixing equal parts of blue and yellow pigments produces green."
+    },
+    {
+      "draw": 3,
+      "seed": 20260867,
+      "n_tokens": 70,
+      "eos_hit": true,
+      "wall_s": 3.2048115422949195,
+      "text": "When you mix blue and yellow, you get green. This is a primary example in the color theory of additive and subtractive color mixing. In the additive system (like on a computer screen), blue and green light combine to make cyan, and when you mix yellow and blue pigments (subtractive system, like in painting), you get green."
+    },
+    {
+      "draw": 4,
+      "seed": 20260868,
+      "n_tokens": 71,
+      "eos_hit": true,
+      "wall_s": 3.2431235825642943,
+      "text": "By mixing blue and yellow, you get green. Blue and yellow are primary colors when you are mixing colors in the context of light, and they combine to form green. In traditional paint or pigments, which follow subtractive color mixing, blue and yellow also combine to form green, though the exact shade can vary depending on the specific pigments used."
+    },
+    {
+      "draw": 5,
+      "seed": 20260869,
+      "n_tokens": 55,
+      "eos_hit": true,
+      "wall_s": 2.583112083375454,
+      "text": "By mixing blue and yellow, you get green. In the world of color mixing, there are two main types: additive and subtractive. For subtractive mixing, which is what typically happens with pigments, paints, and ink, blue and yellow mix to produce green."
+    },
+    {
+      "draw": 6,
+      "seed": 20260870,
+      "n_tokens": 46,
+      "eos_hit": true,
+      "wall_s": 2.213356874883175,
+      "text": "By mixing blue and yellow, you get green. Blue and yellow are primary colors in the subtractive color model, which is used in printing and painting. When these two colors are mixed together in equal amounts, they produce green."
+    },
+    {
+      "draw": 7,
+      "seed": 20260871,
+      "n_tokens": 46,
+      "eos_hit": true,
+      "wall_s": 2.223079999908805,
+      "text": "By mixing blue and yellow, you get green. Blue and yellow are primary colors in the subtractive color model, which is used in printing and other physical media. When these two colors are combined, they produce a green color."
+    },
+    {
+      "draw": 8,
+      "seed": 20260872,
+      "n_tokens": 95,
+      "eos_hit": true,
+      "wall_s": 4.232656208798289,
+      "text": "By mixing blue and yellow, you get green. Blue and yellow are the primary colors when you're mixing colors in the RGB (red, green, blue) model, which is used for digital displays. However, in the traditional paint mixing model (also known as the subtractive color model used in printing and some other media), blue and yellow can also make a greenish color, but typically a more brownish or olive green if not mixed in the exact right proportions."
+    },
+    {
+      "draw": 9,
+      "seed": 20260873,
+      "n_tokens": 77,
+      "eos_hit": true,
+      "wall_s": 3.4876874163746834,
+      "text": "By mixing blue and yellow, you get green. This is a primary example of color mixing in the additive color model, which is used in electronic displays like TVs and computer screens. In the subtractive color model, which is used in pigments and paints, mixing blue and yellow also results in a green color, although the exact shade can vary depending on the specific pigments used."
+    }
+  ],
+  "realized_lengths": [
+    83,
+    55,
+    49,
+    70,
+    71,
+    55,
+    46,
+    46,
+    95,
+    77
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.27216104231774807,
+  "semantic_volume": -16.42495405941924,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "By mixing blue and yellow, you get green. Blue and yellow are primary colors in the subtractive color model, which is used in printing and other physical media. When these two colors are mixed together, they create the color green.",
+    "answer_tokens": 47,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 3.048406457528472
+  },
+  "greedy_answer": "By mixing blue and yellow, you get green. Blue and yellow are primary colors in the subtractive color model, which is used in printing and other physical media. When these two colors are mixed together, they create the color green.",
+  "greedy_answer_tokens": 47,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "green",
+  "normalizer_note": "token-run-match",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_15.npz",
+  "prompt_total_wall_s": 35.74152891617268
+}

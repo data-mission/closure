@@ -1,0 +1,17 @@
+{
+  "round": 2,
+  "kind": "arith_multistep",
+  "family": "arithmetic",
+  "prompt": "A rectangle has a perimeter of 46 cm and a length of 14 cm. What is its area in square centimeters?",
+  "gold": "126",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To find the area of the rectangle, we first need to determine its width. We know the perimeter of the rectangle and its length, so we can use the formula for the perimeter of a rectangle to find the width.\n\nThe formula for the perimeter \\(P\\) of a rectangle is:\n\\[ P = 2 \\times (\\text{length} + \\text{width}) \\]\n\nGiven:\n\\[ P = 46 \\text{ cm} \\]\n\\[ \\text{length} = 14 \\text{ cm} \\]\n\nLet's denote the width by \\(w\\). Substituting the known values into the perimeter formula, we get:\n\\[ 46 = 2 \\times (14 + w) \\]\n\nFirst, we divide both sides of the equation by 2:\n\\[ 23 = 14 + w \\]\n\nNext, we solve for \\(w\\) by subtracting 14 from both sides:\n\\[ w = 23 - 14 \\]\n\\[ w = 9 \\text{ cm} \\]\n\nNow that we have the width, we can find the area \\(A\\) of the rectangle using the formula for the area of a rectangle:\n\\[ A = \\text{length} \\times \\text{width} \\]\n\nSubstituting the known values:\n\\[ A = 14 \\times 9 \\]\n\\[ A = 126 \\text{ square centimeters} \\]\n\nTherefore, the area of the rectangle is:\n\\[ \\boxed{126} \\]",
+  "answer_tokens": 316,
+  "eos_hit": true,
+  "wall_s": 13.401003666222095,
+  "correct": true,
+  "truncated": false,
+  "extracted": "126.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

@@ -1,0 +1,19 @@
+{
+  "round": 2,
+  "kind": "fact_reverse",
+  "family": "factual",
+  "prompt": "What is the SI unit of magnetic flux?",
+  "gold": "weber",
+  "accept": [
+    "Wb"
+  ],
+  "tol": 0.0,
+  "answer": "The SI unit of magnetic flux is the weber (Wb). It is named after the German physicist and engineer Wilhelm Eduard Weber. The weber is defined as the magnetic flux that, linking a circuit of one turn, would produce in it an electromotive force of one volt if it were reduced to zero at a uniform rate in one second. Mathematically, it can be expressed as:\n\n\\[ \\text{1 Weber} = \\text{1 Volt} \\cdot \\text{second} = \\text{1 Tesla} \\cdot \\text{m}^2 \\]\n\nThe weber is a derived unit in the International System of Units (SI).",
+  "answer_tokens": 136,
+  "eos_hit": true,
+  "wall_s": 5.88274662476033,
+  "correct": true,
+  "truncated": false,
+  "extracted": "weber",
+  "note": "token-run-match"
+}

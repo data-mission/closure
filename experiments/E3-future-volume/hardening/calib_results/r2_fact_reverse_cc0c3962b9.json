@@ -1,0 +1,17 @@
+{
+  "round": 2,
+  "kind": "fact_reverse",
+  "family": "factual",
+  "prompt": "What is the SI unit of inductance?",
+  "gold": "henry",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The SI unit of inductance is the henry (symbolized by H). Inductance is a measure of the ability of an electrical circuit to store energy in a magnetic field.",
+  "answer_tokens": 38,
+  "eos_hit": true,
+  "wall_s": 1.8543599592521787,
+  "correct": true,
+  "truncated": false,
+  "extracted": "henry",
+  "note": "token-run-match"
+}

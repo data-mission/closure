@@ -1,0 +1,142 @@
+{
+  "idx": 2,
+  "kind": "arithmetic",
+  "family": "arithmetic",
+  "difficulty": 1,
+  "prompt": "What is 47 plus 28?",
+  "gold": "75",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 39,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.2595149874687195,
+  "entropy_base": "nats",
+  "top1_token_id": 19,
+  "top1_token_str": "4",
+  "extract_time_s": 0.2593235829845071,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260734,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.8568795006722212,
+      "text": "47 plus 28 is equal to 75."
+    },
+    {
+      "draw": 1,
+      "seed": 20260735,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.8610110832378268,
+      "text": "47 plus 28 is equal to 75."
+    },
+    {
+      "draw": 2,
+      "seed": 20260736,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.8611207911744714,
+      "text": "47 plus 28 is equal to 75."
+    },
+    {
+      "draw": 3,
+      "seed": 20260737,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.8591822078451514,
+      "text": "47 plus 28 is equal to 75."
+    },
+    {
+      "draw": 4,
+      "seed": 20260738,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.8596332920715213,
+      "text": "47 plus 28 is equal to 75."
+    },
+    {
+      "draw": 5,
+      "seed": 20260739,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.8599970415234566,
+      "text": "47 plus 28 is equal to 75."
+    },
+    {
+      "draw": 6,
+      "seed": 20260740,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.8597813751548529,
+      "text": "47 plus 28 is equal to 75."
+    },
+    {
+      "draw": 7,
+      "seed": 20260741,
+      "n_tokens": 11,
+      "eos_hit": true,
+      "wall_s": 0.7760397922247648,
+      "text": "47 plus 28 equals 75."
+    },
+    {
+      "draw": 8,
+      "seed": 20260742,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.859421250410378,
+      "text": "47 plus 28 is equal to 75."
+    },
+    {
+      "draw": 9,
+      "seed": 20260743,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.8629817077890038,
+      "text": "47 plus 28 is equal to 75."
+    }
+  ],
+  "realized_lengths": [
+    13,
+    13,
+    13,
+    13,
+    13,
+    13,
+    13,
+    11,
+    13,
+    13
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.05961162503808737,
+  "semantic_volume": -122.03700982516477,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "47 plus 28 is equal to 75.",
+    "answer_tokens": 13,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 1.5161341670900583
+  },
+  "greedy_answer": "47 plus 28 is equal to 75.",
+  "greedy_answer_tokens": 13,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "75.0",
+  "normalizer_note": "numeric-exact",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_02.npz",
+  "prompt_total_wall_s": 11.213480832986534
+}

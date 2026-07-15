@@ -1,0 +1,9 @@
+# uv virtual environment
+.venv/
+
+# Python caches
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# All fixture data is generated in-code with fixed seeds; nothing is vendored.

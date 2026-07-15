@@ -1,0 +1,130 @@
+{
+  "idx": 7,
+  "kind": "math",
+  "prompt": "What is the square root of 144?",
+  "throwaway": true,
+  "prompt_tokens": 40,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 2.7398547786106064e-07,
+  "entropy_base": "nats",
+  "top1_token_id": 785,
+  "top1_token_str": "The",
+  "extract_time_s": 0.2594359153881669,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260784,
+      "n_tokens": 29,
+      "eos_hit": true,
+      "wall_s": 1.4995241668075323,
+      "text": "The square root of 144 is 12, because \\(12 \\times 12 = 144\\)."
+    },
+    {
+      "draw": 1,
+      "seed": 20260785,
+      "n_tokens": 29,
+      "eos_hit": true,
+      "wall_s": 1.5243865828961134,
+      "text": "The square root of 144 is 12, because \\(12 \\times 12 = 144\\)."
+    },
+    {
+      "draw": 2,
+      "seed": 20260786,
+      "n_tokens": 29,
+      "eos_hit": true,
+      "wall_s": 1.527161791920662,
+      "text": "The square root of 144 is 12, because \\(12 \\times 12 = 144\\)."
+    },
+    {
+      "draw": 3,
+      "seed": 20260787,
+      "n_tokens": 29,
+      "eos_hit": true,
+      "wall_s": 1.5306383334100246,
+      "text": "The square root of 144 is 12, because \\(12 \\times 12 = 144\\)."
+    },
+    {
+      "draw": 4,
+      "seed": 20260788,
+      "n_tokens": 29,
+      "eos_hit": true,
+      "wall_s": 1.5244030831381679,
+      "text": "The square root of 144 is 12, because \\(12 \\times 12 = 144\\)."
+    },
+    {
+      "draw": 5,
+      "seed": 20260789,
+      "n_tokens": 29,
+      "eos_hit": true,
+      "wall_s": 1.516017667017877,
+      "text": "The square root of 144 is 12, because \\(12 \\times 12 = 144\\)."
+    },
+    {
+      "draw": 6,
+      "seed": 20260790,
+      "n_tokens": 29,
+      "eos_hit": true,
+      "wall_s": 1.5142188742756844,
+      "text": "The square root of 144 is 12, because \\(12 \\times 12 = 144\\)."
+    },
+    {
+      "draw": 7,
+      "seed": 20260791,
+      "n_tokens": 29,
+      "eos_hit": true,
+      "wall_s": 1.522546292282641,
+      "text": "The square root of 144 is 12, because \\(12 \\times 12 = 144\\)."
+    },
+    {
+      "draw": 8,
+      "seed": 20260792,
+      "n_tokens": 29,
+      "eos_hit": true,
+      "wall_s": 1.5155713753774762,
+      "text": "The square root of 144 is 12, because \\(12 \\times 12 = 144\\)."
+    },
+    {
+      "draw": 9,
+      "seed": 20260793,
+      "n_tokens": 29,
+      "eos_hit": true,
+      "wall_s": 1.5144592076539993,
+      "text": "The square root of 144 is 12, because \\(12 \\times 12 = 144\\)."
+    }
+  ],
+  "realized_lengths": [
+    29,
+    29,
+    29,
+    29,
+    29,
+    29,
+    29,
+    29,
+    29,
+    29
+  ],
+  "eos_hit_count": 10,
+  "gen_total_wall_s": 15.190062332898378,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.0872124582529068,
+  "semantic_volume": -138.15510557964274,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "The square root of 144 is 12, because \\(12 \\times 12 = 144\\).",
+    "answer_tokens": 29,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 2.1779854157939553
+  },
+  "npz": "prompt_07.npz",
+  "prompt_total_wall_s": 17.720663459040225
+}

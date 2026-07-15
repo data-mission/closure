@@ -1,0 +1,142 @@
+{
+  "idx": 3,
+  "kind": "arithmetic",
+  "family": "arithmetic",
+  "difficulty": 2,
+  "prompt": "What is 40 percent of 250?",
+  "gold": "100",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 41,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 3.335383007652126e-05,
+  "entropy_base": "nats",
+  "top1_token_id": 1249,
+  "top1_token_str": "To",
+  "extract_time_s": 0.4860810833051801,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260744,
+      "n_tokens": 83,
+      "eos_hit": true,
+      "wall_s": 3.7631671242415905,
+      "text": "To find 40 percent of 250, you can use the following calculation:\n\n\\[ 40\\% \\times 250 = \\frac{40}{100} \\times 250 = 0.4 \\times 250 = 100 \\]\n\nSo, 40 percent of 250 is 100."
+    },
+    {
+      "draw": 1,
+      "seed": 20260745,
+      "n_tokens": 100,
+      "eos_hit": true,
+      "wall_s": 4.527066375128925,
+      "text": "To find 40 percent of 250, you can follow these steps:\n\n1. Convert the percentage to a decimal by dividing by 100. So, 40% becomes 0.40.\n2. Multiply the decimal by the number 250.\n\nThe calculation is:\n\n\\[ 0.40 \\times 250 = 100 \\]\n\nSo, 40 percent of 250 is 100."
+    },
+    {
+      "draw": 2,
+      "seed": 20260746,
+      "n_tokens": 102,
+      "eos_hit": true,
+      "wall_s": 4.636296625249088,
+      "text": "To find 40 percent of 250, you can follow these steps:\n\n1. Convert the percentage to a decimal by dividing by 100. So, 40% becomes 0.40.\n2. Multiply the decimal by the number 250.\n\nSo, the calculation is:\n\n\\[ 0.40 \\times 250 = 100 \\]\n\nTherefore, 40 percent of 250 is 100."
+    },
+    {
+      "draw": 3,
+      "seed": 20260747,
+      "n_tokens": 84,
+      "eos_hit": true,
+      "wall_s": 3.8898474583402276,
+      "text": "To find 40 percent of 250, you can use the following calculation:\n\n\\[ 40\\% \\times 250 = \\frac{40}{100} \\times 250 = 0.40 \\times 250 = 100 \\]\n\nSo, 40 percent of 250 is 100."
+    },
+    {
+      "draw": 4,
+      "seed": 20260748,
+      "n_tokens": 84,
+      "eos_hit": true,
+      "wall_s": 3.8789253747090697,
+      "text": "To find 40 percent of 250, you can use the following calculation:\n\n\\[ 40\\% \\times 250 = \\frac{40}{100} \\times 250 = 0.40 \\times 250 = 100 \\]\n\nSo, 40 percent of 250 is 100."
+    },
+    {
+      "draw": 5,
+      "seed": 20260749,
+      "n_tokens": 117,
+      "eos_hit": true,
+      "wall_s": 5.243635333143175,
+      "text": "To find 40 percent of 250, you can follow these steps:\n\n1. Convert the percentage to a decimal by dividing by 100. So, 40% becomes 0.40.\n2. Multiply the decimal by the number you want to find the percentage of. In this case, it's 250.\n\nSo, the calculation would be:\n\n\\[ 0.40 \\times 250 = 100 \\]\n\nTherefore, 40 percent of 250 is 100."
+    },
+    {
+      "draw": 6,
+      "seed": 20260750,
+      "n_tokens": 97,
+      "eos_hit": true,
+      "wall_s": 4.408988958224654,
+      "text": "To find 40 percent of 250, you can follow these steps:\n\n1. Convert the percentage to a decimal by dividing by 100. So, 40% becomes 0.40.\n2. Multiply the decimal by the number 250.\n\nSo, \\(0.40 \\times 250 = 100\\).\n\nTherefore, 40 percent of 250 is 100."
+    },
+    {
+      "draw": 7,
+      "seed": 20260751,
+      "n_tokens": 83,
+      "eos_hit": true,
+      "wall_s": 3.8217029999941587,
+      "text": "To find 40 percent of 250, you can use the following calculation:\n\n\\[ 40\\% \\times 250 = \\frac{40}{100} \\times 250 = 0.4 \\times 250 = 100 \\]\n\nSo, 40 percent of 250 is 100."
+    },
+    {
+      "draw": 8,
+      "seed": 20260752,
+      "n_tokens": 103,
+      "eos_hit": true,
+      "wall_s": 4.679359458386898,
+      "text": "To find 40 percent of 250, you can follow these steps:\n\n1. Convert the percentage to a decimal by dividing by 100. So, 40% becomes 0.40.\n2. Multiply the decimal by the number 250.\n\nSo, the calculation would be:\n\\[ 0.40 \\times 250 = 100 \\]\n\nTherefore, 40 percent of 250 is 100."
+    },
+    {
+      "draw": 9,
+      "seed": 20260753,
+      "n_tokens": 91,
+      "eos_hit": true,
+      "wall_s": 4.1648027915507555,
+      "text": "To find 40 percent of 250, you can multiply 250 by 0.40 (since 40 percent is equal to 40/100 or 0.40).\n\nSo, the calculation would be:\n\n\\[ 250 \\times 0.40 = 100 \\]\n\nTherefore, 40 percent of 250 is 100."
+    }
+  ],
+  "realized_lengths": [
+    83,
+    100,
+    102,
+    84,
+    84,
+    117,
+    97,
+    83,
+    103,
+    91
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.29828733298927546,
+  "semantic_volume": -51.25877660660067,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "To find 40 percent of 250, you can follow these steps:\n\n1. Convert the percentage to a decimal by dividing by 100. So, 40% becomes 0.40.\n2. Multiply the decimal by the number 250.\n\nSo, the calculation is:\n\n\\[ 0.40 \\times 250 = 100 \\]\n\nTherefore, 40 percent of 250 is 100.",
+    "answer_tokens": 102,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 5.619860792532563
+  },
+  "greedy_answer": "To find 40 percent of 250, you can follow these steps:\n\n1. Convert the percentage to a decimal by dividing by 100. So, 40% becomes 0.40.\n2. Multiply the decimal by the number 250.\n\nSo, the calculation is:\n\n\\[ 0.40 \\times 250 = 100 \\]\n\nTherefore, 40 percent of 250 is 100.",
+  "greedy_answer_tokens": 102,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "100.0",
+  "normalizer_note": "numeric-exact",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_03.npz",
+  "prompt_total_wall_s": 54.081975957378745
+}

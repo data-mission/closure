@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "arith_mult3x3",
+  "family": "arithmetic",
+  "prompt": "What is 856 times 437?",
+  "gold": "374072",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To find the product of 856 and 437, you simply multiply the two numbers together:\n\n\\[ 856 \\times 437 = 374,072 \\]",
+  "answer_tokens": 45,
+  "eos_hit": true,
+  "wall_s": 2.1674896674230695,
+  "correct": true,
+  "truncated": false,
+  "extracted": "374072.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

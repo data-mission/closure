@@ -1,0 +1,20 @@
+{
+  "round": 1,
+  "kind": "fact_obscure",
+  "family": "factual",
+  "prompt": "What is the capital of Mongolia?",
+  "gold": "Ulaanbaatar",
+  "accept": [
+    "Ulan Bator",
+    "Ulan-Bator"
+  ],
+  "tol": 0.0,
+  "answer": "The capital of Mongolia is Ulaanbaatar.",
+  "answer_tokens": 11,
+  "eos_hit": true,
+  "wall_s": 0.7664573332294822,
+  "correct": true,
+  "truncated": false,
+  "extracted": "Ulaanbaatar",
+  "note": "token-run-match"
+}

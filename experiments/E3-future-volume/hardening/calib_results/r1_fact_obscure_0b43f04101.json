@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "fact_obscure",
+  "family": "factual",
+  "prompt": "What is the atomic number of sodium?",
+  "gold": "11",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The atomic number of sodium is 11. This means that a sodium atom has 11 protons in its nucleus.",
+  "answer_tokens": 26,
+  "eos_hit": true,
+  "wall_s": 1.378332084044814,
+  "correct": true,
+  "truncated": false,
+  "extracted": "11.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

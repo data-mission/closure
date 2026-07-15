@@ -1,0 +1,19 @@
+{
+  "round": 2,
+  "kind": "fact_reverse",
+  "family": "factual",
+  "prompt": "What is the SI unit of radioactivity?",
+  "gold": "becquerel",
+  "accept": [
+    "Bq"
+  ],
+  "tol": 0.0,
+  "answer": "The SI unit of radioactivity is the becquerel (Bq). One becquerel is defined as the activity of a quantity of radioactive material in which one nucleus decays per second. \n\nAnother commonly used unit is the curie (Ci), which is an older unit of radioactivity. One curie is equal to the activity of a quantity of radioactive material that undergoes 37 billion (3.7 \u00d7 10^10) nuclear disintegrations per second. While the curie is still used in some contexts, the becquerel is the standard SI unit for radioactivity.",
+  "answer_tokens": 127,
+  "eos_hit": true,
+  "wall_s": 5.5282085835933685,
+  "correct": true,
+  "truncated": false,
+  "extracted": "becquerel",
+  "note": "token-run-match"
+}

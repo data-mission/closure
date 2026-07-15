@@ -1,0 +1,130 @@
+{
+  "idx": 24,
+  "kind": "creative",
+  "prompt": "Write the first sentence of a science fiction story.",
+  "throwaway": true,
+  "prompt_tokens": 39,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 1.0366530418395996,
+  "entropy_base": "nats",
+  "top1_token_id": 641,
+  "top1_token_str": "In",
+  "extract_time_s": 0.27558158431202173,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260954,
+      "n_tokens": 37,
+      "eos_hit": true,
+      "wall_s": 1.842624457553029,
+      "text": "As the first human to set foot on Alpha Centauri II, Emma felt the weight of history on her boots, knowing that every step could rewrite the course of humanity's future."
+    },
+    {
+      "draw": 1,
+      "seed": 20260955,
+      "n_tokens": 41,
+      "eos_hit": true,
+      "wall_s": 2.008002041839063,
+      "text": "In the year 2145, when the stars began to flicker like dying embers in the cosmos, humanity discovered theemarks of ancient alien civilizations on the far side of the Milky Way."
+    },
+    {
+      "draw": 2,
+      "seed": 20260956,
+      "n_tokens": 44,
+      "eos_hit": true,
+      "wall_s": 2.1336473328992724,
+      "text": "As the first ray of dawn pierced through the haze, Captain Elara Voss stood atop the bridge of the starship Aeon, her eyes fixed on the distant nebula, a shimmering gateway to the unknown."
+    },
+    {
+      "draw": 3,
+      "seed": 20260957,
+      "n_tokens": 36,
+      "eos_hit": true,
+      "wall_s": 1.8029008749872446,
+      "text": "In the year 2145, when the solar flares made the old sun a flicker, humanity rose into the stars, leaving Earth behind like a dying ember."
+    },
+    {
+      "draw": 4,
+      "seed": 20260958,
+      "n_tokens": 49,
+      "eos_hit": true,
+      "wall_s": 2.33561229147017,
+      "text": "In the year 2145, when the last sun began to dim and the artificial light from the city domes cast long shadows across the deserted streets, the first whispers of the Great Convergence spread like fire through the underground networks."
+    },
+    {
+      "draw": 5,
+      "seed": 20260959,
+      "n_tokens": 47,
+      "eos_hit": true,
+      "wall_s": 2.2728154584765434,
+      "text": "As the first human stepped out of the colony ship and onto the dusty surface of Nova Prime, the stars in the sky shimmered like diamonds against the deep indigo backdrop, knowing their time in the spotlight was drawing to a close."
+    },
+    {
+      "draw": 6,
+      "seed": 20260960,
+      "n_tokens": 48,
+      "eos_hit": true,
+      "wall_s": 2.294364375062287,
+      "text": "In the year 2145, when Earth's skies were no longer just blue but shimmered with the glow of orbital solar collectors, humanity's next great leap began with a single, tiny signal transmitted from a ship named Odyssey."
+    },
+    {
+      "draw": 7,
+      "seed": 20260961,
+      "n_tokens": 35,
+      "eos_hit": true,
+      "wall_s": 1.7684969576075673,
+      "text": "As the first human stepped out of the ancient alien craft and onto the dust-covered surface of Kepler-438b, the horizon shimmered with possibilities and dangers alike."
+    },
+    {
+      "draw": 8,
+      "seed": 20260962,
+      "n_tokens": 40,
+      "eos_hit": true,
+      "wall_s": 1.968069209717214,
+      "text": "As the first human stepped out of the ancient ruins on Titan, the cold methane fog enveloped her, whispering secrets of the past through the icy tendrils that reached towards the distant methane lakes."
+    },
+    {
+      "draw": 9,
+      "seed": 20260963,
+      "n_tokens": 40,
+      "eos_hit": true,
+      "wall_s": 1.9644745420664549,
+      "text": "In the year 2145, when the last remnants of humanity had fled to the stars, the starship Aeon became the last bastion of hope against the encroaching darkness."
+    }
+  ],
+  "realized_lengths": [
+    37,
+    41,
+    44,
+    36,
+    49,
+    47,
+    48,
+    35,
+    40,
+    40
+  ],
+  "eos_hit_count": 10,
+  "gen_total_wall_s": 20.391888041980565,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.15265983436256647,
+  "semantic_volume": -13.875565386478538,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "In the year 2145, when the last sun began to flicker like a dying candle, humanity's last colony ship, the Aeon's Dawn, set course for a distant star system, hoping to find a new home among the stars.",
+    "answer_tokens": 52,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 3.2554679168388247
+  },
+  "npz": "prompt_24.npz",
+  "prompt_total_wall_s": 24.08122045826167
+}

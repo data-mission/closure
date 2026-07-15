@@ -1,0 +1,17 @@
+{
+  "round": 3,
+  "kind": "fact_numeric_tail",
+  "family": "factual",
+  "prompt": "What is the atomic number of darmstadtium?",
+  "gold": "110",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The atomic number of darmstadtium is 110. Darmstadtium is a synthetic element, and it is a member of the iron group of elements. It was first created in 1994 at the GSI Helmholtz Centre for Heavy Ion Research in Darmstadt, Germany.",
+  "answer_tokens": 64,
+  "eos_hit": true,
+  "wall_s": 2.9449836667627096,
+  "correct": false,
+  "truncated": false,
+  "extracted": "1994.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

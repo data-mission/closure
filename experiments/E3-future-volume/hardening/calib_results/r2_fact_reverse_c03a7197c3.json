@@ -1,0 +1,17 @@
+{
+  "round": 2,
+  "kind": "fact_reverse",
+  "family": "factual",
+  "prompt": "What is the SI unit of electrical conductance?",
+  "gold": "siemens",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The SI unit of electrical conductance is the siemens (S). Conductance is the reciprocal of resistance, and it measures how easily electric current flows through a material. The siemens is named after the German inventor and physicist Werner von Siemens.",
+  "answer_tokens": 49,
+  "eos_hit": true,
+  "wall_s": 2.2999636670574546,
+  "correct": true,
+  "truncated": false,
+  "extracted": "siemens",
+  "note": "token-run-match"
+}

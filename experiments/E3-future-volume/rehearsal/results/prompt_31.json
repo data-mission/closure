@@ -1,0 +1,142 @@
+{
+  "idx": 31,
+  "kind": "deduction",
+  "family": "deduction",
+  "difficulty": 2,
+  "prompt": "P finishes before Q. Q finishes before R. Who finishes first?",
+  "gold": "P",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 43,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.150243878364563,
+  "entropy_base": "nats",
+  "top1_token_id": 28715,
+  "top1_token_str": "Based",
+  "extract_time_s": 0.26994966715574265,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20261024,
+      "n_tokens": 45,
+      "eos_hit": true,
+      "wall_s": 2.1789645412936807,
+      "text": "Based on the information given:\n\n1. P finishes before Q.\n2. Q finishes before R.\n\nFrom these two statements, we can deduce the following order:\n\nP -> Q -> R\n\nTherefore, P finishes first."
+    },
+    {
+      "draw": 1,
+      "seed": 20261025,
+      "n_tokens": 44,
+      "eos_hit": true,
+      "wall_s": 2.141443875618279,
+      "text": "Based on the information given:\n\n1. P finishes before Q.\n2. Q finishes before R.\n\nFrom this, we can deduce the order as follows:\n\nP -> Q -> R\n\nTherefore, P finishes first."
+    },
+    {
+      "draw": 2,
+      "seed": 20261026,
+      "n_tokens": 43,
+      "eos_hit": true,
+      "wall_s": 2.1015027491375804,
+      "text": "Based on the information given:\n\n1. P finishes before Q.\n2. Q finishes before R.\n\nWe can deduce the order of finishing as follows:\n\nP \u2192 Q \u2192 R\n\nTherefore, P finishes first."
+    },
+    {
+      "draw": 3,
+      "seed": 20261027,
+      "n_tokens": 47,
+      "eos_hit": true,
+      "wall_s": 2.2677827924489975,
+      "text": "Based on the information given:\n\n1. P finishes before Q.\n2. Q finishes before R.\n\nFrom these statements, we can deduce the order of finishing as follows:\n\nP -> Q -> R\n\nTherefore, P finishes first."
+    },
+    {
+      "draw": 4,
+      "seed": 20261028,
+      "n_tokens": 68,
+      "eos_hit": true,
+      "wall_s": 3.143440917134285,
+      "text": "Based on the information given:\n\n1. P finishes before Q.\n2. Q finishes before R.\n\nFrom these two statements, we can deduce the order of finish:\n\n- P is before Q.\n- Q is before R.\n\nTherefore, the order from first to last is: P, Q, R.\n\nSo, P finishes first."
+    },
+    {
+      "draw": 5,
+      "seed": 20261029,
+      "n_tokens": 46,
+      "eos_hit": true,
+      "wall_s": 2.219278790988028,
+      "text": "Based on the information given:\n\n1. P finishes before Q.\n2. Q finishes before R.\n\nFrom this, we can deduce the order of finishing as follows:\n\nP -> Q -> R\n\nTherefore, P finishes first."
+    },
+    {
+      "draw": 6,
+      "seed": 20261030,
+      "n_tokens": 45,
+      "eos_hit": true,
+      "wall_s": 2.180309792049229,
+      "text": "Based on the information given:\n\n1. P finishes before Q.\n2. Q finishes before R.\n\nFrom these statements, we can deduce the order of finishing:\n\nP -> Q -> R\n\nTherefore, P finishes first."
+    },
+    {
+      "draw": 7,
+      "seed": 20261031,
+      "n_tokens": 39,
+      "eos_hit": true,
+      "wall_s": 1.9471102096140385,
+      "text": "Based on the information given:\n\n1. P finishes before Q.\n2. Q finishes before R.\n\nWe can conclude the following order:\n\nP -> Q -> R\n\nTherefore, P finishes first."
+    },
+    {
+      "draw": 8,
+      "seed": 20261032,
+      "n_tokens": 46,
+      "eos_hit": true,
+      "wall_s": 2.219665542244911,
+      "text": "Based on the information given:\n\n1. P finishes before Q.\n2. Q finishes before R.\n\nFrom this, we can deduce the order of finishing as follows:\n\nP -> Q -> R\n\nTherefore, P finishes first."
+    },
+    {
+      "draw": 9,
+      "seed": 20261033,
+      "n_tokens": 42,
+      "eos_hit": true,
+      "wall_s": 2.0525265419855714,
+      "text": "Based on the information given:\n\n1. P finishes before Q.\n2. Q finishes before R.\n\nFrom this, we can deduce the order:\n\nP -> Q -> R\n\nTherefore, P finishes first."
+    }
+  ],
+  "realized_lengths": [
+    45,
+    44,
+    43,
+    47,
+    68,
+    46,
+    45,
+    39,
+    46,
+    42
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.2037359168753028,
+  "semantic_volume": -32.14207933528798,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "Based on the information given:\n\n1. P finishes before Q.\n2. Q finishes before R.\n\nFrom these statements, we can deduce the order of finishing as follows:\n\nP -> Q -> R\n\nTherefore, P finishes first.",
+    "answer_tokens": 47,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 3.0486495001241565
+  },
+  "greedy_answer": "Based on the information given:\n\n1. P finishes before Q.\n2. Q finishes before R.\n\nFrom these statements, we can deduce the order of finishing as follows:\n\nP -> Q -> R\n\nTherefore, P finishes first.",
+  "greedy_answer_tokens": 47,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "p",
+  "normalizer_note": "token-run-match",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_31.npz",
+  "prompt_total_wall_s": 28.23215016722679
+}

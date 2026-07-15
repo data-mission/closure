@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "ded_trap",
+  "family": "deduction",
+  "prompt": "Five students -- F, G, H, I, J -- sit in seats numbered 1 to 5. J sits in seat 1. G sits in seat 5. H sits immediately to the right of I. F does not sit in seat 2 or seat 3. Who sits in seat 3?",
+  "gold": "H",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "Let's analyze the given information step by step to determine who sits in seat 3.\n\n1. **J sits in seat 1.**\n   - Seat 1: J\n\n2. **G sits in seat 5.**\n   - Seat 5: G\n\n3. **H sits immediately to the right of I.**\n   - This means H and I must be in consecutive seats. Possible pairs are (2,3), (3,4), or (4,5).\n\n4. **F does not sit in seat 2 or seat 3.**\n   - F can sit in seat 1, 4, or 5. But since J is in seat 1 and G is in seat 5, F can only sit in seat 4.\n\nNow, let's place F in seat 4:\n   - Seat 4: F\n\nGiven the constraints, we need to place H and I in consecutive seats, and the remaining seats are 2 and 3. Since F is in seat 4, the only possible pairs for H and I are (2,3) or (3,2).\n\nLet's consider the possible pairs:\n- If H and I are in seats 2 and 3, then:\n  - Seat 2: H\n  - Seat 3: I\n\n- If H and I are in seats 3 and 2, then:\n  - Seat 2: I\n  - Seat 3: H\n\nSince F is in seat 4, and we need to place H and I in consecutive seats, the only remaining seats are 2 and 3. Therefore, the only possible arrangement that fits all the constraints is:\n\n- Seat 1: J\n- Seat 2: H\n- Seat 3: I\n- Seat 4: F\n- Seat 5: G\n\nThus, **I sits in seat 3.**",
+  "answer_tokens": 394,
+  "eos_hit": true,
+  "wall_s": 16.669869417324662,
+  "correct": true,
+  "truncated": false,
+  "extracted": "H",
+  "note": "token-run-match"
+}

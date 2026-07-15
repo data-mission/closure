@@ -1,0 +1,19 @@
+{
+  "round": 1,
+  "kind": "fact_obscure",
+  "family": "factual",
+  "prompt": "What is the official currency of Poland?",
+  "gold": "zloty",
+  "accept": [
+    "Polish zloty"
+  ],
+  "tol": 0.0,
+  "answer": "The official currency of Poland is the Polish z\u0142oty. It is denoted by the symbol z\u0142 or Z\u0141 and has the ISO code PLN.",
+  "answer_tokens": 31,
+  "eos_hit": true,
+  "wall_s": 1.5856806673109531,
+  "correct": false,
+  "truncated": false,
+  "extracted": "z or z and has iso code pln",
+  "note": "no-token-match"
+}

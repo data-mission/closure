@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "letter_count",
+  "family": "arithmetic",
+  "prompt": "How many letters are in the word onomatopoeia?",
+  "gold": "12",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The word \"onomatopoeia\" contains 12 letters.",
+  "answer_tokens": 15,
+  "eos_hit": true,
+  "wall_s": 0.9326764158904552,
+  "correct": true,
+  "truncated": false,
+  "extracted": "12.0",
+  "note": "numeric[last-number-fallback]tol=0.0"
+}

@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "fact_obscure",
+  "family": "factual",
+  "prompt": "What is the atomic number of gold?",
+  "gold": "79",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The atomic number of gold is 79. This means that a gold atom has 79 protons in its nucleus.",
+  "answer_tokens": 26,
+  "eos_hit": true,
+  "wall_s": 1.391069708392024,
+  "correct": true,
+  "truncated": false,
+  "extracted": "79.0",
+  "note": "numeric[after-marker]tol=0.0"
+}

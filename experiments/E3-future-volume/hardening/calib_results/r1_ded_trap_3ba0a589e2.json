@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "ded_trap",
+  "family": "deduction",
+  "prompt": "In a row of five houses numbered 1 to 5 from left to right live five people. Ana is not in house 1. Ben is in house 4. Cara is immediately to the left of Ben. Dan is in house 1. Who lives in house 3?",
+  "gold": "Cara",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "Let's break down the information given:\n\n1. Ana is not in house 1.\n2. Ben is in house 4.\n3. Cara is immediately to the left of Ben.\n4. Dan is in house 1.\n\nFrom point 4, we know Dan is in house 1. So, the arrangement so far is:\n- House 1: Dan\n\nFrom point 2, Ben is in house 4. So, the arrangement is:\n- House 1: Dan\n- House 2: (unknown)\n- House 3: (unknown)\n- House 4: Ben\n- House 5: (unknown)\n\nFrom point 3, Cara is immediately to the left of Ben. Since Ben is in house 4, Cara must be in house 3. So, the arrangement is:\n- House 1: Dan\n- House 2: (unknown)\n- House 3: Cara\n- House 4: Ben\n- House 5: (unknown)\n\nFrom point 1, Ana is not in house 1. Since Dan is in house 1, and we know Ana is not in house 1, and we have already placed Cara in house 3 and Ben in house 4, the only remaining house for Ana is house 5. So, the arrangement is:\n- House 1: Dan\n- House 2: (unknown)\n- House 3: Cara\n- House 4: Ben\n- House 5: Ana\n\nThe only house left for the remaining person (who must be in house 2) is:\n- House 2: (unknown)\n\nSince Ana, Dan, Ben, and Cara are already placed, the only person left is the one who must be in house 2, which is not specified but can be any of the remaining people. However, the question asks specifically who lives in house 3, and we have determined that it is Cara.\n\nTherefore, the person who lives in house 3 is Cara.",
+  "answer_tokens": 410,
+  "eos_hit": true,
+  "wall_s": 17.406125417910516,
+  "correct": true,
+  "truncated": false,
+  "extracted": "Cara",
+  "note": "token-run-match"
+}

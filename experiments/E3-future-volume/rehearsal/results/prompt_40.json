@@ -1,0 +1,142 @@
+{
+  "idx": 40,
+  "kind": "deduction",
+  "family": "deduction",
+  "difficulty": 4,
+  "prompt": "A is twice as old as B. B is 4 years older than C. C is 6 years old. How old is A?",
+  "gold": "20",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 58,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.5608236193656921,
+  "entropy_base": "nats",
+  "top1_token_id": 10061,
+  "top1_token_str": "Let",
+  "extract_time_s": 0.27170920837670565,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20261114,
+      "n_tokens": 81,
+      "eos_hit": true,
+      "wall_s": 3.6602163333445787,
+      "text": "Let's break down the information given:\n\n- C is 6 years old.\n- B is 4 years older than C, so B's age is \\(6 + 4 = 10\\) years.\n- A is twice as old as B, so A's age is \\(2 \\times 10 = 20\\) years.\n\nTherefore, A is 20 years old."
+    },
+    {
+      "draw": 1,
+      "seed": 20261115,
+      "n_tokens": 85,
+      "eos_hit": true,
+      "wall_s": 3.8390580834820867,
+      "text": "Let's break it down step by step:\n\n1. C is 6 years old.\n2. B is 4 years older than C, so B's age is \\(6 + 4 = 10\\) years.\n3. A is twice as old as B, so A's age is \\(2 \\times 10 = 20\\) years.\n\nTherefore, A is 20 years old."
+    },
+    {
+      "draw": 2,
+      "seed": 20261116,
+      "n_tokens": 143,
+      "eos_hit": true,
+      "wall_s": 6.221529833972454,
+      "text": "Let's break down the problem step by step:\n\n1. We know that C is 6 years old.\n2. B is 4 years older than C. So, B's age is C's age plus 4 years. That means:\n   \\[ B = C + 4 = 6 + 4 = 10 \\text{ years old} \\]\n3. A is twice as old as B. So, A's age is 2 times B's age. That means:\n   \\[ A = 2 \\times B = 2 \\times 10 = 20 \\text{ years old} \\]\n\nTherefore, A is 20 years old."
+    },
+    {
+      "draw": 3,
+      "seed": 20261117,
+      "n_tokens": 197,
+      "eos_hit": true,
+      "wall_s": 8.494467250071466,
+      "text": "Let's break down the information given:\n\n1. C is 6 years old.\n2. B is 4 years older than C.\n3. A is twice as old as B.\n\nFirst, let's find B's age:\nSince B is 4 years older than C, and C is 6 years old, we can calculate B's age as follows:\n\\[ \\text{B's age} = \\text{C's age} + 4 = 6 + 4 = 10 \\text{ years old} \\]\n\nNow, let's find A's age:\nSince A is twice as old as B, and B is 10 years old, we can calculate A's age as follows:\n\\[ \\text{A's age} = 2 \\times \\text{B's age} = 2 \\times 10 = 20 \\text{ years old} \\]\n\nTherefore, A is 20 years old."
+    },
+    {
+      "draw": 4,
+      "seed": 20261118,
+      "n_tokens": 159,
+      "eos_hit": true,
+      "wall_s": 6.912340417504311,
+      "text": "Let's break down the information given:\n\n1. C is 6 years old.\n2. B is 4 years older than C.\n3. A is twice as old as B.\n\nFirst, we calculate B's age:\nSince B is 4 years older than C, and C is 6 years old, we have:\n\\[ B = C + 4 = 6 + 4 = 10 \\text{ years old} \\]\n\nNext, we calculate A's age:\nSince A is twice as old as B, and B is 10 years old, we have:\n\\[ A = 2 \\times B = 2 \\times 10 = 20 \\text{ years old} \\]\n\nSo, A is 20 years old."
+    },
+    {
+      "draw": 5,
+      "seed": 20261119,
+      "n_tokens": 84,
+      "eos_hit": true,
+      "wall_s": 3.811098750680685,
+      "text": "Let's break down the information given:\n\n1. C is 6 years old.\n2. B is 4 years older than C, so B's age is \\(6 + 4 = 10\\) years.\n3. A is twice as old as B, so A's age is \\(2 \\times 10 = 20\\) years.\n\nTherefore, A is 20 years old."
+    },
+    {
+      "draw": 6,
+      "seed": 20261120,
+      "n_tokens": 111,
+      "eos_hit": true,
+      "wall_s": 4.927264084108174,
+      "text": "Let's break down the information given:\n\n1. C is 6 years old.\n2. B is 4 years older than C.\n3. A is twice as old as B.\n\nFirst, we calculate B's age:\nB = C + 4\nB = 6 + 4\nB = 10 years old\n\nNow, we calculate A's age:\nA = 2 * B\nA = 2 * 10\nA = 20 years old\n\nSo, A is 20 years old."
+    },
+    {
+      "draw": 7,
+      "seed": 20261121,
+      "n_tokens": 91,
+      "eos_hit": true,
+      "wall_s": 4.0901076244190335,
+      "text": "To determine A's age, we can follow these steps:\n\n1. We know that C is 6 years old.\n2. B is 4 years older than C, so B's age is \\(6 + 4 = 10\\) years.\n3. A is twice as old as B, so A's age is \\(2 \\times 10 = 20\\) years.\n\nTherefore, A is 20 years old."
+    },
+    {
+      "draw": 8,
+      "seed": 20261122,
+      "n_tokens": 147,
+      "eos_hit": true,
+      "wall_s": 6.385529417544603,
+      "text": "Let's break it down step by step:\n\n1. We know that C is 6 years old.\n2. B is 4 years older than C. So, B's age is C's age plus 4 years.\n   \\[ \\text{B's age} = 6 + 4 = 10 \\text{ years} \\]\n3. A is twice as old as B. So, A's age is 2 times B's age.\n   \\[ \\text{A's age} = 2 \\times \\text{B's age} = 2 \\times 10 = 20 \\text{ years} \\]\n\nTherefore, A is 20 years old."
+    },
+    {
+      "draw": 9,
+      "seed": 20261123,
+      "n_tokens": 143,
+      "eos_hit": true,
+      "wall_s": 6.373510874807835,
+      "text": "Let's break down the information given:\n\n1. C is 6 years old.\n2. B is 4 years older than C, so B's age is C's age plus 4 years.\n3. A is twice as old as B.\n\nFirst, we calculate B's age:\n\\[ B = C + 4 \\]\nSince C is 6 years old:\n\\[ B = 6 + 4 = 10 \\]\n\nNow, we calculate A's age:\n\\[ A = 2 \\times B \\]\nSince B is 10 years old:\n\\[ A = 2 \\times 10 = 20 \\]\n\nSo, A is 20 years old."
+    }
+  ],
+  "realized_lengths": [
+    81,
+    85,
+    143,
+    197,
+    159,
+    84,
+    111,
+    91,
+    147,
+    143
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.6768955839797854,
+  "semantic_volume": -18.04410670002144,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "Let's break down the information given:\n\n1. C is 6 years old.\n2. B is 4 years older than C.\n3. A is twice as old as B.\n\nFirst, we calculate B's age:\n\\[ \\text{B's age} = \\text{C's age} + 4 = 6 + 4 = 10 \\text{ years} \\]\n\nNext, we calculate A's age:\n\\[ \\text{A's age} = 2 \\times \\text{B's age} = 2 \\times 10 = 20 \\text{ years} \\]\n\nSo, A is 20 years old.",
+    "answer_tokens": 139,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 7.288612666539848
+  },
+  "greedy_answer": "Let's break down the information given:\n\n1. C is 6 years old.\n2. B is 4 years older than C.\n3. A is twice as old as B.\n\nFirst, we calculate B's age:\n\\[ \\text{B's age} = \\text{C's age} + 4 = 6 + 4 = 10 \\text{ years} \\]\n\nNext, we calculate A's age:\n\\[ \\text{A's age} = 2 \\times \\text{B's age} = 2 \\times 10 = 20 \\text{ years} \\]\n\nSo, A is 20 years old.",
+  "greedy_answer_tokens": 139,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "20.0",
+  "normalizer_note": "numeric-exact",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_40.npz",
+  "prompt_total_wall_s": 69.07530916668475
+}

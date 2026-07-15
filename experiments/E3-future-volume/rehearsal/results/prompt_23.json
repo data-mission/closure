@@ -1,0 +1,142 @@
+{
+  "idx": 23,
+  "kind": "factual",
+  "family": "factual",
+  "difficulty": 3,
+  "prompt": "What is the chemical symbol for iron?",
+  "gold": "Fe",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 37,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 1.2391911923259613e-06,
+  "entropy_base": "nats",
+  "top1_token_id": 785,
+  "top1_token_str": "The",
+  "extract_time_s": 0.27744158264249563,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260944,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6482342500239611,
+      "text": "The chemical symbol for iron is Fe."
+    },
+    {
+      "draw": 1,
+      "seed": 20260945,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6639602081850171,
+      "text": "The chemical symbol for iron is Fe."
+    },
+    {
+      "draw": 2,
+      "seed": 20260946,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6642703749239445,
+      "text": "The chemical symbol for iron is Fe."
+    },
+    {
+      "draw": 3,
+      "seed": 20260947,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6638834998011589,
+      "text": "The chemical symbol for iron is Fe."
+    },
+    {
+      "draw": 4,
+      "seed": 20260948,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6676074163988233,
+      "text": "The chemical symbol for iron is Fe."
+    },
+    {
+      "draw": 5,
+      "seed": 20260949,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6651658741757274,
+      "text": "The chemical symbol for iron is Fe."
+    },
+    {
+      "draw": 6,
+      "seed": 20260950,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6644425420090556,
+      "text": "The chemical symbol for iron is Fe."
+    },
+    {
+      "draw": 7,
+      "seed": 20260951,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6639566663652658,
+      "text": "The chemical symbol for iron is Fe."
+    },
+    {
+      "draw": 8,
+      "seed": 20260952,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6633495409041643,
+      "text": "The chemical symbol for iron is Fe."
+    },
+    {
+      "draw": 9,
+      "seed": 20260953,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6632852079346776,
+      "text": "The chemical symbol for iron is Fe."
+    }
+  ],
+  "realized_lengths": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.0624831672757864,
+  "semantic_volume": -138.15510557964274,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "The chemical symbol for iron is Fe.",
+    "answer_tokens": 8,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 1.2252334589138627
+  },
+  "greedy_answer": "The chemical symbol for iron is Fe.",
+  "greedy_answer_tokens": 8,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "fe",
+  "normalizer_note": "token-run-match",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_23.npz",
+  "prompt_total_wall_s": 8.860595500096679
+}

@@ -1,0 +1,142 @@
+{
+  "idx": 39,
+  "kind": "deduction",
+  "family": "deduction",
+  "difficulty": 4,
+  "prompt": "There are four switches and exactly one is on. Switch A is off, Switch B is off, and Switch D is off. Which switch is on?",
+  "gold": "C",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 60,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.14277464151382446,
+  "entropy_base": "nats",
+  "top1_token_id": 22043,
+  "top1_token_str": "Given",
+  "extract_time_s": 0.27365945745259523,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20261104,
+      "n_tokens": 88,
+      "eos_hit": true,
+      "wall_s": 3.949436374939978,
+      "text": "Given that there are four switches and exactly one of them is on, and Switch A, Switch B, and Switch D are off, we can deduce the following:\n\n- Switch A is off.\n- Switch B is off.\n- Switch D is off.\n\nSince exactly one switch is on, and the other three are off, the only switch that can be on is Switch C.\n\nTherefore, Switch C is the one that is on."
+    },
+    {
+      "draw": 1,
+      "seed": 20261105,
+      "n_tokens": 97,
+      "eos_hit": true,
+      "wall_s": 4.319983208552003,
+      "text": "Given the information that there are four switches (A, B, C, and D) and exactly one of them is on, and knowing that Switch A, Switch B, and Switch D are off, we can deduce the following:\n\n- Switch A is off.\n- Switch B is off.\n- Switch D is off.\n\nSince exactly one switch is on, the only switch left that could be on is Switch C. Therefore, Switch C must be the one that is on."
+    },
+    {
+      "draw": 2,
+      "seed": 20261106,
+      "n_tokens": 85,
+      "eos_hit": true,
+      "wall_s": 3.8259895415976644,
+      "text": "Given that there are four switches and exactly one of them is on, and you have identified that Switch A, Switch B, and Switch D are all off, you can deduce the position of the switch that is on by process of elimination.\n\nSince Switch A, Switch B, and Switch D are all off, the only switch that could be on is Switch C.\n\nTherefore, Switch C is the one that is on."
+    },
+    {
+      "draw": 3,
+      "seed": 20261107,
+      "n_tokens": 82,
+      "eos_hit": true,
+      "wall_s": 3.6994863329455256,
+      "text": "Given the information:\n\n- There are four switches: A, B, C, and D.\n- Exactly one switch is on.\n- Switch A is off.\n- Switch B is off.\n- Switch D is off.\n\nSince Switch A, Switch B, and Switch D are all off, the only switch left that could be on is Switch C.\n\nTherefore, Switch C must be the one that is on."
+    },
+    {
+      "draw": 4,
+      "seed": 20261108,
+      "n_tokens": 37,
+      "eos_hit": true,
+      "wall_s": 1.8516389997676015,
+      "text": "Given the information, Switch A, Switch B, and Switch D are all off. Since there is exactly one switch that is on, the switch that must be on is Switch C."
+    },
+    {
+      "draw": 5,
+      "seed": 20261109,
+      "n_tokens": 93,
+      "eos_hit": true,
+      "wall_s": 4.15326691698283,
+      "text": "Given that there are four switches and exactly one of them is on, and knowing the states of Switch A, Switch B, and Switch D, we can determine the state of Switch C.\n\nThe information provided is:\n- Switch A is off.\n- Switch B is off.\n- Switch D is off.\n\nSince exactly one switch is on, and all the other switches are off, the switch that must be on is Switch C.\n\nTherefore, Switch C is on."
+    },
+    {
+      "draw": 6,
+      "seed": 20261110,
+      "n_tokens": 91,
+      "eos_hit": true,
+      "wall_s": 4.07487462554127,
+      "text": "Given the information:\n\n- There are four switches: A, B, C, and D.\n- Exactly one switch is on.\n- Switch A is off.\n- Switch B is off.\n- Switch D is off.\n\nSince exactly one switch is on and we know the status of switches A, B, and D (all are off), the only switch left that could be on is Switch C.\n\nTherefore, Switch C is the one that is on."
+    },
+    {
+      "draw": 7,
+      "seed": 20261111,
+      "n_tokens": 82,
+      "eos_hit": true,
+      "wall_s": 3.7007453748956323,
+      "text": "Given the information that there are four switches and exactly one of them is on, and knowing the states of Switch A, Switch B, and Switch D (all are off), we can deduce the state of Switch C.\n\nSince Switch A, Switch B, and Switch D are all off, the only switch left that could be on is Switch C.\n\nTherefore, Switch C is the one that is on."
+    },
+    {
+      "draw": 8,
+      "seed": 20261112,
+      "n_tokens": 91,
+      "eos_hit": true,
+      "wall_s": 4.069571957923472,
+      "text": "Given the information:\n\n- There are four switches: A, B, C, and D.\n- Exactly one switch is on.\n- Switch A is off.\n- Switch B is off.\n- Switch D is off.\n\nSince exactly one switch is on and we know the status of switches A, B, and D (all are off), the only switch left that could be on is Switch C.\n\nTherefore, the switch that is on is Switch C."
+    },
+    {
+      "draw": 9,
+      "seed": 20261113,
+      "n_tokens": 95,
+      "eos_hit": true,
+      "wall_s": 4.23385616671294,
+      "text": "Given that there are four switches (A, B, C, D) and exactly one of them is on, and we know that Switch A, Switch B, and Switch D are off, we can deduce the following:\n\n- Switch A is off.\n- Switch B is off.\n- Switch D is off.\n\nSince exactly one switch is on, and the only switch left that could be on is Switch C, we can conclude that:\n\n- Switch C is on."
+    }
+  ],
+  "realized_lengths": [
+    88,
+    97,
+    85,
+    82,
+    37,
+    93,
+    91,
+    82,
+    91,
+    95
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.2626579161733389,
+  "semantic_volume": -17.726317255555742,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "Given the information that there are four switches and exactly one of them is on, and that Switch A, Switch B, and Switch D are all off, we can deduce the following:\n\n- Switch A is off.\n- Switch B is off.\n- Switch D is off.\n\nSince exactly one switch is on, and the other three are off, the only switch that could be on is Switch C.\n\nTherefore, Switch C is the one that is on.",
+    "answer_tokens": 92,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 5.140226500108838
+  },
+  "greedy_answer": "Given the information that there are four switches and exactly one of them is on, and that Switch A, Switch B, and Switch D are all off, we can deduce the following:\n\n- Switch A is off.\n- Switch B is off.\n- Switch D is off.\n\nSince exactly one switch is on, and the other three are off, the only switch that could be on is Switch C.\n\nTherefore, Switch C is the one that is on.",
+  "greedy_answer_tokens": 92,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "c",
+  "normalizer_note": "token-run-match",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_39.npz",
+  "prompt_total_wall_s": 47.665888416580856
+}

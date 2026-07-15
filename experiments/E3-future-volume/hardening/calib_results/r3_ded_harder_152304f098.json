@@ -1,0 +1,17 @@
+{
+  "round": 3,
+  "kind": "ded_harder",
+  "family": "deduction",
+  "prompt": "Eight people -- A, B, C, D, E, F, G, and H -- sit in seats numbered 1 to 8 from left to right. D is in seat 4. A sits immediately to the left of B. C sits somewhere to the left of A. E sits immediately to the left of F. F sits somewhere to the left of G. H is not in seat 1. B sits somewhere to the left of E. G sits immediately to the left of H. Who sits in seat 6?",
+  "gold": "F",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To solve this problem, we need to carefully place each person in their seats based on the given conditions. Let's go through the conditions step by step:\n\n1. **D is in seat 4.**\n   - D: 4\n\n2. **A sits immediately to the left of B.**\n   - This means A and B must be in consecutive seats, with A to the left of B.\n\n3. **C sits somewhere to the left of A.**\n   - This means C must be in a seat to the left of A.\n\n4. **E sits immediately to the left of F.**\n   - This means E and F must be in consecutive seats, with E to the left of F.\n\n5. **F sits somewhere to the left of G.**\n   - This means F must be in a seat to the left of G.\n\n6. **H is not in seat 1.**\n   - H: Not 1\n\n7. **B sits somewhere to the left of E.**\n   - This means B must be in a seat to the left of E.\n\n8. **G sits immediately to the left of H.**\n   - This means G and H must be in consecutive seats, with G to the left of H.\n\nLet's start placing the people based on these conditions:\n\n- Since D is in seat 4, we have: _ _ _ D _ _ _ _\n- Since H is not in seat 1, H must be in one of seats 2, 3, 5, 6, 7, or 8.\n- Since G sits immediately to the left of H, G and H must be consecutive. So, we have two possibilities: (G, H) in (2, 3), (3, 4), (5, 6), (6, 7), or (7, 8).\n\nLet's consider the possible positions for G and H:\n\n- If G and H are in (2, 3), then H must be in seat 3 and G in seat 2.\n- If G and H are in (5, 6), then H must be in seat 6 and G in seat 5.\n- If G and H are in (6, 7), then H must be in seat 7 and G in seat 6.\n\nWe need to check which of these fits with the other conditions. Let's try the second possibility: G in seat 5 and H in seat 6.\n\n- Now we have: _ _ _ D _ G H _\n- Since B sits somewhere to the left of E, and E sits immediately to the left of F, we need to place B, E, and F in consecutive seats to the left of G and H. The only possible consecutive seats to the left of G and H are seats 1, 2, 3, and 4.\n\n- Since D is in seat 4, the only consecutive seats left are 1, 2, and 3.\n- Since A sits immediately to the left of B, and C sits somewhere to the left of A, we need to place A, B, and C in consecutive seats to the left of D.\n\nLet's try placing A, B, and C in seats 1, 2, and 3:\n\n- If A is in seat 1, B in seat 2, and C in seat 3, we have: C A B D _ G H _\n- This fits all the conditions so far.\n\nNow, we need to place E and F. Since E sits immediately to the left of F, and F must be to the left of G, we place E and F in seats 7 and 8:\n\n- E in seat 7 and F in seat 8: C A B D _ G H E F\n\nSo, the final seating arrangement is:\n- Seat 1: C\n- Seat 2: A\n- Seat 3: B\n- Seat 4: D\n- Seat 5: G\n- Seat 6: H\n- Seat 7: E\n- Seat 8: F\n\nTherefore, the person sitting in seat 6 is **H**.",
+  "answer_tokens": 869,
+  "eos_hit": true,
+  "wall_s": 36.34523837547749,
+  "correct": true,
+  "truncated": false,
+  "extracted": "F",
+  "note": "token-run-match"
+}

@@ -1,0 +1,130 @@
+{
+  "idx": 15,
+  "kind": "instruction",
+  "prompt": "Give the plural form of the word 'child'.",
+  "throwaway": true,
+  "prompt_tokens": 39,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 9.63682509791397e-07,
+  "entropy_base": "nats",
+  "top1_token_id": 785,
+  "top1_token_str": "The",
+  "extract_time_s": 0.2592627080157399,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260864,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.8430224163457751,
+      "text": "The plural form of the word \"child\" is \"children.\""
+    },
+    {
+      "draw": 1,
+      "seed": 20260865,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.8529830006882548,
+      "text": "The plural form of the word \"child\" is \"children.\""
+    },
+    {
+      "draw": 2,
+      "seed": 20260866,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.8514951672405005,
+      "text": "The plural form of the word \"child\" is \"children.\""
+    },
+    {
+      "draw": 3,
+      "seed": 20260867,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.8519332073628902,
+      "text": "The plural form of the word \"child\" is \"children.\""
+    },
+    {
+      "draw": 4,
+      "seed": 20260868,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.8562741661444306,
+      "text": "The plural form of the word \"child\" is \"children.\""
+    },
+    {
+      "draw": 5,
+      "seed": 20260869,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.8528298335149884,
+      "text": "The plural form of the word \"child\" is \"children.\""
+    },
+    {
+      "draw": 6,
+      "seed": 20260870,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.8524048328399658,
+      "text": "The plural form of the word \"child\" is \"children.\""
+    },
+    {
+      "draw": 7,
+      "seed": 20260871,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.8528273329138756,
+      "text": "The plural form of the word \"child\" is \"children.\""
+    },
+    {
+      "draw": 8,
+      "seed": 20260872,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.8512357920408249,
+      "text": "The plural form of the word \"child\" is \"children.\""
+    },
+    {
+      "draw": 9,
+      "seed": 20260873,
+      "n_tokens": 13,
+      "eos_hit": true,
+      "wall_s": 0.8527715001255274,
+      "text": "The plural form of the word \"child\" is \"children.\""
+    }
+  ],
+  "realized_lengths": [
+    13,
+    13,
+    13,
+    13,
+    13,
+    13,
+    13,
+    13,
+    13,
+    13
+  ],
+  "eos_hit_count": 10,
+  "gen_total_wall_s": 8.518275917507708,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.07043350022286177,
+  "semantic_volume": -138.15510557964274,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "The plural form of the word \"child\" is \"children.\"",
+    "answer_tokens": 13,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 1.5258280830457807
+  },
+  "npz": "prompt_15.npz",
+  "prompt_total_wall_s": 10.381019666790962
+}

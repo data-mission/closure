@@ -1,0 +1,142 @@
+{
+  "idx": 22,
+  "kind": "factual",
+  "family": "factual",
+  "difficulty": 3,
+  "prompt": "What is the chemical symbol for potassium?",
+  "gold": "K",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 37,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 2.643695779624977e-06,
+  "entropy_base": "nats",
+  "top1_token_id": 785,
+  "top1_token_str": "The",
+  "extract_time_s": 0.2744593331590295,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260934,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6484206672757864,
+      "text": "The chemical symbol for potassium is K."
+    },
+    {
+      "draw": 1,
+      "seed": 20260935,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6643090425059199,
+      "text": "The chemical symbol for potassium is K."
+    },
+    {
+      "draw": 2,
+      "seed": 20260936,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6673479164019227,
+      "text": "The chemical symbol for potassium is K."
+    },
+    {
+      "draw": 3,
+      "seed": 20260937,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6636701254174113,
+      "text": "The chemical symbol for potassium is K."
+    },
+    {
+      "draw": 4,
+      "seed": 20260938,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6639431677758694,
+      "text": "The chemical symbol for potassium is K."
+    },
+    {
+      "draw": 5,
+      "seed": 20260939,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6731029581278563,
+      "text": "The chemical symbol for potassium is K."
+    },
+    {
+      "draw": 6,
+      "seed": 20260940,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6632275842130184,
+      "text": "The chemical symbol for potassium is K."
+    },
+    {
+      "draw": 7,
+      "seed": 20260941,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6686564590781927,
+      "text": "The chemical symbol for potassium is K."
+    },
+    {
+      "draw": 8,
+      "seed": 20260942,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6635603336617351,
+      "text": "The chemical symbol for potassium is K."
+    },
+    {
+      "draw": 9,
+      "seed": 20260943,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6637382498010993,
+      "text": "The chemical symbol for potassium is K."
+    }
+  ],
+  "realized_lengths": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.06404454074800014,
+  "semantic_volume": -138.15510557964274,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "The chemical symbol for potassium is K.",
+    "answer_tokens": 8,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 1.2320694159716368
+  },
+  "greedy_answer": "The chemical symbol for potassium is K.",
+  "greedy_answer_tokens": 8,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "k",
+  "normalizer_note": "token-run-match",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_22.npz",
+  "prompt_total_wall_s": 8.880090500228107
+}

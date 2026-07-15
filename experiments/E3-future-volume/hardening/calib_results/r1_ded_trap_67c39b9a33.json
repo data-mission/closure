@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "ded_trap",
+  "family": "deduction",
+  "prompt": "Four friends -- Mia, Noah, Owen, and Pia -- each have a different pet: a cat, a dog, a fish, or a bird. Mia does not have the cat or the dog. Noah has neither the fish nor the bird. Owen does not have the cat. Pia has the bird. Who has the cat?",
+  "gold": "Noah",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "Let's analyze the information step by step to determine who has the cat.\n\n1. **Mia does not have the cat or the dog.**\n   - So, Mia can have either the fish or the bird.\n\n2. **Noah has neither the fish nor the bird.**\n   - So, Noah can have either the cat or the dog.\n\n3. **Owen does not have the cat.**\n   - So, Owen can have either the dog, the fish, or the bird.\n\n4. **Pia has the bird.**\n   - This means Pia cannot have the cat, dog, or fish.\n\nGiven that Pia has the bird, we can update our list of possible pets for each friend:\n\n- Mia: fish or bird (but since Pia has the bird, Mia must have the fish)\n- Noah: cat or dog\n- Owen: cat, dog, or fish (but since Mia has the fish, Owen can have the cat or the dog)\n- Pia: bird\n\nSince Pia has the bird, and Mia has the fish, we need to determine what Noah and Owen have. We know:\n\n- Noah can have either the cat or the dog.\n- Owen can have either the cat or the dog.\n\nSince Owen does not have the cat, Owen must have the dog. This leaves Noah with the cat.\n\nSo, the final distribution is:\n- Mia: fish\n- Noah: cat\n- Owen: dog\n- Pia: bird\n\nTherefore, Noah has the cat.",
+  "answer_tokens": 312,
+  "eos_hit": true,
+  "wall_s": 13.381853207945824,
+  "correct": true,
+  "truncated": false,
+  "extracted": "Noah",
+  "note": "token-run-match"
+}

@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "letter_count",
+  "family": "arithmetic",
+  "prompt": "How many times does the letter e appear in the word beekeeper?",
+  "gold": "5",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The letter \"e\" appears twice in the word \"beekeeper.\"",
+  "answer_tokens": 14,
+  "eos_hit": true,
+  "wall_s": 0.8935784166678786,
+  "correct": false,
+  "truncated": false,
+  "extracted": "",
+  "note": "no-number-parsed"
+}

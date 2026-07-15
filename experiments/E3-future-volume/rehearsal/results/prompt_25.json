@@ -1,0 +1,142 @@
+{
+  "idx": 25,
+  "kind": "factual",
+  "family": "factual",
+  "difficulty": 4,
+  "prompt": "What is the chemical symbol for tungsten?",
+  "gold": "W",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 38,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 2.9450193324009888e-06,
+  "entropy_base": "nats",
+  "top1_token_id": 785,
+  "top1_token_str": "The",
+  "extract_time_s": 0.27654220815747976,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260964,
+      "n_tokens": 9,
+      "eos_hit": true,
+      "wall_s": 0.6935424581170082,
+      "text": "The chemical symbol for tungsten is W."
+    },
+    {
+      "draw": 1,
+      "seed": 20260965,
+      "n_tokens": 9,
+      "eos_hit": true,
+      "wall_s": 0.7049312917515635,
+      "text": "The chemical symbol for tungsten is W."
+    },
+    {
+      "draw": 2,
+      "seed": 20260966,
+      "n_tokens": 9,
+      "eos_hit": true,
+      "wall_s": 0.7052129162475467,
+      "text": "The chemical symbol for tungsten is W."
+    },
+    {
+      "draw": 3,
+      "seed": 20260967,
+      "n_tokens": 9,
+      "eos_hit": true,
+      "wall_s": 0.7050950415432453,
+      "text": "The chemical symbol for tungsten is W."
+    },
+    {
+      "draw": 4,
+      "seed": 20260968,
+      "n_tokens": 9,
+      "eos_hit": true,
+      "wall_s": 0.7045211670920253,
+      "text": "The chemical symbol for tungsten is W."
+    },
+    {
+      "draw": 5,
+      "seed": 20260969,
+      "n_tokens": 9,
+      "eos_hit": true,
+      "wall_s": 0.704547124914825,
+      "text": "The chemical symbol for tungsten is W."
+    },
+    {
+      "draw": 6,
+      "seed": 20260970,
+      "n_tokens": 9,
+      "eos_hit": true,
+      "wall_s": 0.705035749822855,
+      "text": "The chemical symbol for tungsten is W."
+    },
+    {
+      "draw": 7,
+      "seed": 20260971,
+      "n_tokens": 9,
+      "eos_hit": true,
+      "wall_s": 0.7085810005664825,
+      "text": "The chemical symbol for tungsten is W."
+    },
+    {
+      "draw": 8,
+      "seed": 20260972,
+      "n_tokens": 9,
+      "eos_hit": true,
+      "wall_s": 0.7055332092568278,
+      "text": "The chemical symbol for tungsten is W."
+    },
+    {
+      "draw": 9,
+      "seed": 20260973,
+      "n_tokens": 9,
+      "eos_hit": true,
+      "wall_s": 0.7052930416539311,
+      "text": "The chemical symbol for tungsten is W."
+    }
+  ],
+  "realized_lengths": [
+    9,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.06364062521606684,
+  "semantic_volume": -138.15510557964274,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "The chemical symbol for tungsten is W.",
+    "answer_tokens": 9,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 1.273039499297738
+  },
+  "greedy_answer": "The chemical symbol for tungsten is W.",
+  "greedy_answer_tokens": 9,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "w",
+  "normalizer_note": "token-run-match",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_25.npz",
+  "prompt_total_wall_s": 9.364414458163083
+}

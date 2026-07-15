@@ -1,0 +1,17 @@
+[project]
+name = "e3-pilot"
+version = "0.1.0"
+description = "E3 disposable-prompt pilot: the full E3 instrument (hidden-state extraction, seeded continuation sampling, nomic embedding, ground-truth semantic volume, verbalized-confidence and predictive-entropy baselines) exercised end to end on 30 THROWAWAY prompts on the local host."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mlx-lm>=0.31.3",
+    "numpy>=2.0",
+    "scipy>=1.13",
+    "sentence-transformers>=3.0",
+    "einops>=0.8",
+    "e3-validation",
+]
+
+[tool.uv.sources]
+e3-validation = { path = "../validation", editable = false }

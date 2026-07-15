@@ -1,0 +1,130 @@
+{
+  "idx": 16,
+  "kind": "instruction",
+  "prompt": "Capitalize every word in this phrase: the quick brown fox.",
+  "throwaway": true,
+  "prompt_tokens": 42,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 7.684701813559514e-06,
+  "entropy_base": "nats",
+  "top1_token_id": 785,
+  "top1_token_str": "The",
+  "extract_time_s": 0.26334429159760475,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260874,
+      "n_tokens": 4,
+      "eos_hit": true,
+      "wall_s": 0.47707458306103945,
+      "text": "The Quick Brown Fox"
+    },
+    {
+      "draw": 1,
+      "seed": 20260875,
+      "n_tokens": 4,
+      "eos_hit": true,
+      "wall_s": 0.4867717493325472,
+      "text": "The Quick Brown Fox"
+    },
+    {
+      "draw": 2,
+      "seed": 20260876,
+      "n_tokens": 4,
+      "eos_hit": true,
+      "wall_s": 0.48628408275544643,
+      "text": "The Quick Brown Fox"
+    },
+    {
+      "draw": 3,
+      "seed": 20260877,
+      "n_tokens": 4,
+      "eos_hit": true,
+      "wall_s": 0.48799466621130705,
+      "text": "The Quick Brown Fox"
+    },
+    {
+      "draw": 4,
+      "seed": 20260878,
+      "n_tokens": 4,
+      "eos_hit": true,
+      "wall_s": 0.4886749582365155,
+      "text": "The Quick Brown Fox"
+    },
+    {
+      "draw": 5,
+      "seed": 20260879,
+      "n_tokens": 4,
+      "eos_hit": true,
+      "wall_s": 0.4865462500602007,
+      "text": "The Quick Brown Fox"
+    },
+    {
+      "draw": 6,
+      "seed": 20260880,
+      "n_tokens": 4,
+      "eos_hit": true,
+      "wall_s": 0.4877054998651147,
+      "text": "The Quick Brown Fox"
+    },
+    {
+      "draw": 7,
+      "seed": 20260881,
+      "n_tokens": 4,
+      "eos_hit": true,
+      "wall_s": 0.4913714164867997,
+      "text": "The Quick Brown Fox"
+    },
+    {
+      "draw": 8,
+      "seed": 20260882,
+      "n_tokens": 4,
+      "eos_hit": true,
+      "wall_s": 0.48995337542146444,
+      "text": "The Quick Brown Fox"
+    },
+    {
+      "draw": 9,
+      "seed": 20260883,
+      "n_tokens": 4,
+      "eos_hit": true,
+      "wall_s": 0.4900228753685951,
+      "text": "The Quick Brown Fox"
+    }
+  ],
+  "realized_lengths": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "eos_hit_count": 10,
+  "gen_total_wall_s": 4.872871667146683,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.05190687533468008,
+  "semantic_volume": -138.15510557964274,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "The Quick Brown Fox",
+    "answer_tokens": 4,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 1.048828000202775
+  },
+  "npz": "prompt_16.npz",
+  "prompt_total_wall_s": 6.24355816654861
+}

@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "letter_count",
+  "family": "arithmetic",
+  "prompt": "How many times does the letter i appear in the word indivisibility?",
+  "gold": "6",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The word \"indivisibility\" contains the letter \"i\" nine times.",
+  "answer_tokens": 17,
+  "eos_hit": true,
+  "wall_s": 1.019954833202064,
+  "correct": false,
+  "truncated": false,
+  "extracted": "",
+  "note": "no-number-parsed"
+}

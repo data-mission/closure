@@ -1,0 +1,17 @@
+{
+  "round": 2,
+  "kind": "ded_hard",
+  "family": "deduction",
+  "prompt": "Six people -- A, B, C, D, E, and F -- sit in seats numbered 1 to 6 from left to right. A is in seat 1. B sits immediately to the left of C. D sits somewhere to the left of B. E sits immediately to the left of F. D is not in seat 2. Who sits in seat 3?",
+  "gold": "F",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "Let's analyze the given conditions step by step to determine who sits in seat 3.\n\n1. **A is in seat 1.**\n   - A is fixed in seat 1.\n\n2. **B sits immediately to the left of C.**\n   - This means B and C must be consecutive, and B must be to the left of C.\n\n3. **D sits somewhere to the left of B.**\n   - D must be to the left of B.\n\n4. **E sits immediately to the left of F.**\n   - This means E and F must be consecutive, and E must be to the left of F.\n\n5. **D is not in seat 2.**\n   - D cannot be in seat 2.\n\nLet's consider the possible positions for D, B, and C, and E, F, while ensuring all conditions are met.\n\n### Step-by-step Analysis:\n\n- Since D is not in seat 2, D can be in seat 1, 3, 4, 5, or 6.\n- Since D must be to the left of B, and B must be to the left of C, we need to place D, B, and C in a way that respects these conditions.\n\nLet's try placing D in seat 3 (since it's the first feasible seat for D that allows B and C to be to the right of D):\n\n- If D is in seat 3, then B and C must be in seats 4 and 5, or 5 and 6, but not in seats 2 or 1 because D is to the left of B and B is to the left of C.\n\n- Let's place B in seat 4 and C in seat 5:\n  - A is in seat 1.\n  - B is in seat 4.\n  - C is in seat 5.\n  - D is in seat 3.\n  - This leaves seats 2 and 6 for E and F.\n\n- Since E must be to the left of F, E must be in seat 2 and F must be in seat 6.\n\nSo, the seating arrangement is:\n- Seat 1: A\n- Seat 2: E\n- Seat 3: D\n- Seat 4: B\n- Seat 5: C\n- Seat 6: F\n\nThus, the person sitting in seat 3 is **D**.",
+  "answer_tokens": 500,
+  "eos_hit": true,
+  "wall_s": 21.124543957412243,
+  "correct": true,
+  "truncated": false,
+  "extracted": "F",
+  "note": "token-run-match"
+}

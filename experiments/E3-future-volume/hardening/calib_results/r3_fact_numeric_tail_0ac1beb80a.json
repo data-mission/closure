@@ -1,0 +1,17 @@
+{
+  "round": 3,
+  "kind": "fact_numeric_tail",
+  "family": "factual",
+  "prompt": "What is the atomic number of nobelium?",
+  "gold": "102",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The atomic number of nobelium is 102. Nobelium is a synthetic element, which means it does not occur naturally and must be produced in a laboratory. It is a radioactive element with no stable isotopes.",
+  "answer_tokens": 46,
+  "eos_hit": true,
+  "wall_s": 2.2061592917889357,
+  "correct": true,
+  "truncated": false,
+  "extracted": "102.0",
+  "note": "numeric[last-number-fallback]tol=0.0"
+}

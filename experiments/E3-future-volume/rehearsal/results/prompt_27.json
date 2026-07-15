@@ -1,0 +1,142 @@
+{
+  "idx": 27,
+  "kind": "deduction",
+  "family": "deduction",
+  "difficulty": 1,
+  "prompt": "All birds have feathers. A robin is a bird. Does a robin have feathers? Answer yes or no.",
+  "gold": "yes",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 51,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 3.652572922874242e-05,
+  "entropy_base": "nats",
+  "top1_token_id": 9454,
+  "top1_token_str": "Yes",
+  "extract_time_s": 0.2761715827509761,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260984,
+      "n_tokens": 2,
+      "eos_hit": true,
+      "wall_s": 0.4052207497879863,
+      "text": "Yes."
+    },
+    {
+      "draw": 1,
+      "seed": 20260985,
+      "n_tokens": 2,
+      "eos_hit": true,
+      "wall_s": 0.4219458755105734,
+      "text": "Yes."
+    },
+    {
+      "draw": 2,
+      "seed": 20260986,
+      "n_tokens": 2,
+      "eos_hit": true,
+      "wall_s": 0.4216760005801916,
+      "text": "Yes."
+    },
+    {
+      "draw": 3,
+      "seed": 20260987,
+      "n_tokens": 2,
+      "eos_hit": true,
+      "wall_s": 0.42124124988913536,
+      "text": "Yes."
+    },
+    {
+      "draw": 4,
+      "seed": 20260988,
+      "n_tokens": 2,
+      "eos_hit": true,
+      "wall_s": 0.42126575019210577,
+      "text": "Yes."
+    },
+    {
+      "draw": 5,
+      "seed": 20260989,
+      "n_tokens": 2,
+      "eos_hit": true,
+      "wall_s": 0.421681291423738,
+      "text": "Yes."
+    },
+    {
+      "draw": 6,
+      "seed": 20260990,
+      "n_tokens": 2,
+      "eos_hit": true,
+      "wall_s": 0.42138429172337055,
+      "text": "Yes."
+    },
+    {
+      "draw": 7,
+      "seed": 20260991,
+      "n_tokens": 2,
+      "eos_hit": true,
+      "wall_s": 0.4218322914093733,
+      "text": "Yes."
+    },
+    {
+      "draw": 8,
+      "seed": 20260992,
+      "n_tokens": 2,
+      "eos_hit": true,
+      "wall_s": 0.4212225843220949,
+      "text": "Yes."
+    },
+    {
+      "draw": 9,
+      "seed": 20260993,
+      "n_tokens": 2,
+      "eos_hit": true,
+      "wall_s": 0.421491707675159,
+      "text": "Yes."
+    }
+  ],
+  "realized_lengths": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.04584637563675642,
+  "semantic_volume": -138.15510557964274,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "Yes.",
+    "answer_tokens": 2,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 1.1133457096293569
+  },
+  "greedy_answer": "Yes.",
+  "greedy_answer_tokens": 2,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "yes",
+  "normalizer_note": "token-run-match",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_27.npz",
+  "prompt_total_wall_s": 6.06133387517184
+}

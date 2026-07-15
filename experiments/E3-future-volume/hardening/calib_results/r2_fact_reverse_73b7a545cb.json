@@ -1,0 +1,17 @@
+{
+  "round": 2,
+  "kind": "fact_reverse",
+  "family": "factual",
+  "prompt": "Which chemical element has atomic number 33?",
+  "gold": "Arsenic",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "The chemical element with atomic number 33 is Arsenic (As).",
+  "answer_tokens": 16,
+  "eos_hit": true,
+  "wall_s": 0.9674661252647638,
+  "correct": true,
+  "truncated": false,
+  "extracted": "Arsenic",
+  "note": "token-run-match"
+}

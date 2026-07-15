@@ -1,0 +1,17 @@
+{
+  "round": 1,
+  "kind": "arith_mult3x3",
+  "family": "arithmetic",
+  "prompt": "What is 624 times 379?",
+  "gold": "236496",
+  "accept": [],
+  "tol": 0.0,
+  "answer": "To find the product of 624 and 379, you simply multiply the two numbers together:\n\n\\[ 624 \\times 379 = 236,596 \\]",
+  "answer_tokens": 45,
+  "eos_hit": true,
+  "wall_s": 2.1657849168404937,
+  "correct": false,
+  "truncated": false,
+  "extracted": "236596.0",
+  "note": "numeric[after-marker]tol=0.0"
+}
