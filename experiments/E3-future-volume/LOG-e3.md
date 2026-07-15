@@ -194,3 +194,9 @@ evidence: strong enough to justify a registered replication, not strong enough t
 pre-registered standard. The natural next act: register the frozen contract as-is (it existed in this
 repo before the run — the git trail shows it, though git self-timestamps are not the OSF standard) and
 replicate on a fresh corpus, second model.
+
+**Archived.** Branch pushed; tag `e3-verdict-2026-07-15`; GitHub release published; Zenodo archive
+minted: **DOI 10.5281/zenodo.21383448** — the independent timestamp over the exact verdict snapshot.
+PR #1 (`e3-instrument` → `main`, additions only, no E5 file touched) open for merge. Merge-time
+integration (global renumbering of e3-000N, LOG fold-in, H-VOL status amendment) deferred to a
+follow-up PR once E5 completes.
