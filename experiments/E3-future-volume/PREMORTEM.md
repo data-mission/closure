@@ -22,6 +22,10 @@ co-target and within-family fidelity as a co-metric (families are internally mor
 consider a length-capped generation variant as a sensitivity arm. Not registering any length control
 when the confound is this obvious would be negligence — this one is mandatory regardless of the
 rehearsal number.
+**Audit update (2026-07-14): FIXED.** Rehearsal measured ρ(volume, mean length) = 0.910 (rank). The redesign
+(e3-0005) makes the length residualization a **hard verdict gate** (`require_length_robust` →
+`REFUTED_LENGTH_CONFOUNDED`): within-family fidelity must survive residualizing volume on length or the
+verdict refutes. Adopted via arXiv:2606.02907's residualization protocol.
 
 ## 2. "The probe beat verbalized confidence but lost to free entropy — and the verdict called it CONFIRMED"
 
@@ -36,6 +40,9 @@ names only verbalized confidence; B3 is specified in e3-0003 but orphaned from e
 entropy alone regresses). This is a protocol-refinement question — the README's CONFIRMED wording
 ("useful fidelity") arguably intends it, but arguably is not a standard. Needs an explicit clause
 before freeze.
+**Audit update (2026-07-14): FIXED by the B3 gate.** e3-0005 adds `probe_vs_b3_ci_low > b3_ci_floor` as a
+hard added-value gate → `REFUTED_NO_MARGIN_OVER_ENTROPY`. Confirmation now requires beating predictive
+entropy (and B4, and the max over verbalized variants), each routed to a distinct honest branch.
 
 ## 3. "R² was meaningless on the actual target distribution"
 
@@ -50,6 +57,10 @@ continuations).
 classifier + regression on the non-degenerate part) or at minimum pre-register Spearman as co-primary
 with R², and report the floor-mass fraction as a corpus property. The statistician lens owns this;
 adopt its recommendation before freeze.
+**Audit update (2026-07-14): FIXED by the two-part treatment.** e3-0005 splits out degenerate items
+(reported degeneracy AUROC, not gated) and scores continuous fidelity — **both** R² and Spearman
+(`spearman_fidelity_min`) — on the non-degenerate subset only (`fidelity.py`). Spearman is a hard co-gate,
+immune to the floor mass point.
 
 ## 4. "The verbalized-confidence arm was a strawman"
 
@@ -63,6 +74,10 @@ the SFT variant as the stronger conceivable arm; pilot confirmed the known overc
 "zero-shot verbalized confidence" in the claim sentence, every time. An SFT-verbalization arm is a
 follow-up, not this experiment. If the audit finds a cheap strengthening (e.g., a second elicitation
 phrasing as robustness), consider it; do not let the claim's wording exceed the arm actually run.
+**Audit update (2026-07-14): strengthened.** The added-value gate now requires beating the **max over
+verbalized variants** (frozen zero-shot + a CoT-confidence variant, both zero-shot), so a single lucky
+phrasing cannot understate B1; the claim stays scoped "zero-shot verbalized confidence". 2503.14749 is
+version-anchored (v2/v3 add a P(IK) baseline) as the stronger conceivable arm (§ 7 registration).
 
 ## 5. "The OOD test tested extrapolation, not transfer"
 
@@ -78,6 +93,9 @@ measured volumes.
 range vs the held-out family's range; an OOD failure where the held-out range lies outside the trained
 range is reported as *range-uncovered*, distinct from shortcut-collapse. The verdict branch should not
 be allowed to call extrapolation failure a refutation without this distinction.
+**Audit update (2026-07-14): FIXED by the range-coverage flag.** e3-0005 adds `ood_range_uncovered` →
+`REFUTED_OOD_RANGE_UNCOVERED`, a branch distinct from `REFUTED_OOD_FAILURE` (genuine collapse), with a
+relative guard-band against finite-sample tail noise (`ood.py`).
 
 ## 6. "Confirmed, and nobody cared — the corpus was a toy"
 
@@ -93,6 +111,9 @@ drafting that sentence). A multi-model, benchmark-family replication is the expl
 confirms. The one cheap strengthening worth considering now: whether one dataset-derived family with
 documented contamination risk is worth the external-validity purchase — a design decision for Vlad,
 both options defensible.
+**Audit update (2026-07-14): scoped.** The maximal-defensible-claim sentence is adopted as the registration
+§ 1 claim (single model, 200-prompt battery, transfer + added-value, no geometry claim); belief-state/
+geometry language is demoted to labeled speculation.
 
 ## 7. "The verdict flipped inside its own sweep band"
 
@@ -109,6 +130,10 @@ improvised one.
 
 **The death.** "You probed a 4-bit model; the geometry you read is quantization artifact." No cited
 probe paper used a quantized host.
+**Audit update (2026-07-14): the "no cited probe paper used a quantized host" claim is FALSE — corrected.**
+The second-round read found arXiv:2606.02628 (cited as **NF4**): 4-bit (NF4) probing of Qwen2.5-7B is a
+published, working precedent. The scope line stands ("linear readability in the 4-bit-quantized deployment
+form"), but it is now a scoped-and-precedented choice, not an unanswered objection.
 **Evidence now.** Weights are 4-bit; activations and the probed hidden state are fp16. The extraction
 sanity check (20/20 top-1 agreement) shows the state drives the head faithfully. Whether
 quantization *changes* linear readability is unknown and untestable on this hardware (the fp16 model

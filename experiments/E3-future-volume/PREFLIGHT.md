@@ -47,3 +47,44 @@ the output level:
 - Both flags are dischargeable for design purposes; the run itself remains gated on primary-source
   verification of 2406.15927 (binarized-target confirmation) and 2503.14749 by a named reader, per
   the citation ceiling.
+
+## Second round — full-text pass (2026-07-14)
+
+The first round above is `abstract-checked`. A second-round review pass retrieved and read the **full text**
+of the papers below (the SEP PDF that resisted extraction in round one, and four papers surfaced by the
+audit). **The citation ceiling still binds:** everything here is `full-text-read-by-automation`, **not
+`verified`** — no load-bearing claim rests on it until a named person reads the primary source, and the run
+stays gated on those human reads (REGISTRATION-DRAFT § 9). The net effect of this pass was to **re-scope the
+claim** (REGISTRATION-DRAFT § 1, § 7) and to **correct one false pre-mortem assertion**.
+
+- **arXiv:2509.10625 — full text verified; preempts the naive probe-vs-verbalized-confidence framing.** A
+  correctness probe (B4) beats verbalized confidence on Qwen2.5-7B, and correctness directions fail on math.
+  Consequence: E3 cannot claim novelty for "a hidden-state signal beats verbalized confidence"; the surviving
+  question is whether the **volume** target adds value over B4/B3/verbalized, which the redesigned added-value
+  gates now require (e3-0005).
+- **BbZKxrZCNn — Wayback-accessed full text; the closest prior art.** SEP authors (NeurIPS 2024 MINT
+  workshop); trains a LASSO **regression** on **continuous semantic entropy** from hidden states — so
+  "continuous uncertainty regression from a hidden state" is **not novel per se**. But it is in-distribution
+  only, uses no volume, runs no OOD transfer, and no head-to-head against verbalized confidence or a
+  correctness probe. E3's edge is defined strictly against it (volume target + cross-family transfer +
+  B4/B3/verbalized head-to-head). The retrieved PDF is retained **outside** the repository (not committed); a
+  named human read is required to move it onto the verified list.
+- **arXiv:2503.14749 — version discrepancy resolved.** v1 is SFT-only (verbalization, no probe, no
+  head-to-head); **v2/v3 add a P(IK) probe baseline vs verbalized confidence** (verbalized beat P(IK) in
+  their tables). The E3 citation is version-anchored accordingly (stronger-conceivable-B1 at v1;
+  adjacent probe-vs-verbalized prior art at v2/v3).
+- **arXiv:2506.08572 — full text verified.** Correctness directions are near-orthogonal across tasks,
+  isolated on math, and mixtures do not fix it. This is what makes the volume-transfer question sharp: a
+  volume direction that *did* transfer would be doing something correctness directions provably do not.
+- **arXiv:2606.02907 — full text verified; control adopted.** Its format-feature residualization protocol
+  (regress family ID / length / option structure out of the hidden state, re-probe) is adopted as a
+  registered control — the source of the e3-0005 length-residualized gate. Fidelity surviving residualization
+  is stronger than leave-one-family-out alone.
+- **arXiv:2606.02628 (NF4) — full text verified; corrects a pre-mortem false claim.** 4-bit (NF4) probing of
+  Qwen2.5-7B works and is published; this **falsifies** PREMORTEM § 8's "no cited probe paper used a
+  quantized host" and turns E3's 4-bit host from an unanswered objection into a scoped, precedented choice.
+
+**Consequence.** The design flags of round one remain dischargeable; the claim is re-scoped and the prior-art
+positioning is fixed (REGISTRATION-DRAFT § 1, § 7). The run remains gated on **named-reader** primary-source
+verification of 2406.15927 (binarized target — now quoted verbatim in this pass), BbZKxrZCNn, 2503.14749,
+and the four second-round papers; per-citation statuses live in `VERIFICATION.md`.

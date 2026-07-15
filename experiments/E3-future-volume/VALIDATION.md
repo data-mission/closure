@@ -195,8 +195,9 @@ updated; the analysis logic itself was not weakened to fit any test.
 
 ### New open threshold params (added to the registration's open set)
 
-- `min_negatives` — minimum negatives for the correctness arm to be evaluable (rehearsal proposed
-  ≥ 20). **NEW; must be registered.**
+- `min_negatives` — minimum negatives for the correctness arm to be evaluable (proposal: 15, with
+  the rehearsal's stricter ≥ 20 as the registered sweep point — THRESHOLDS-PROPOSAL.md). **NEW; must
+  be registered.**
 - `spearman_fidelity_min` — Spearman bar on the non-degenerate subset (the floor-mass-robust half).
 - `within_family_spearman_min` — within-family Spearman bar (also the length-residualized bar).
 - `family_oracle_margin_min` — minimum `probe R² − family-mean-oracle R²`.

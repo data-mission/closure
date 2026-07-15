@@ -30,3 +30,4 @@ Until then these record the current best-justified choice, open to challenge lik
 - [e3-0002](e3-0002-ground-truth-volume.md) — continuation sampling, embedding model, semantic-volume statistic, exclusions
 - [e3-0003](e3-0003-baselines.md) — the comparator set (verbalized confidence, SEP-style probe, naive entropy, P(IK) probe) and the comparison procedure
 - [e3-0004](e3-0004-reproducibility-standard.md) — E3's seeded-and-reported reproducibility posture, pins, and freeze boundary
+- [e3-0005](e3-0005-audit-redesign.md) — audit-driven verdict-contract redesign (precondition layer, two-part fidelity, within-family + OOD-Spearman gates, added-value gates, kind-based d4 hardening, revision enforcement, full freeze-hash schema)
