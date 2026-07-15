@@ -1,0 +1,142 @@
+{
+  "idx": 35,
+  "kind": "deduction",
+  "family": "deduction",
+  "difficulty": 3,
+  "prompt": "Among four people, the manager earns more than the clerk, the clerk earns more than the guard, and the guard earns more than the intern. Who earns the most?",
+  "gold": "manager",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 63,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.10245657712221146,
+  "entropy_base": "nats",
+  "top1_token_id": 28715,
+  "top1_token_str": "Based",
+  "extract_time_s": 0.26987333316355944,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20261064,
+      "n_tokens": 69,
+      "eos_hit": true,
+      "wall_s": 3.198720334097743,
+      "text": "Based on the information given:\n\n1. The manager earns more than the clerk.\n2. The clerk earns more than the guard.\n3. The guard earns more than the intern.\n\nFrom these statements, we can deduce the following order from highest to lowest earnings:\n\nManager > Clerk > Guard > Intern\n\nTherefore, the manager earns the most."
+    },
+    {
+      "draw": 1,
+      "seed": 20261065,
+      "n_tokens": 72,
+      "eos_hit": true,
+      "wall_s": 3.3142535416409373,
+      "text": "Based on the information given:\n\n1. The manager earns more than the clerk.\n2. The clerk earns more than the guard.\n3. The guard earns more than the intern.\n\nWe can order their earnings from most to least as follows:\n\n1. Manager\n2. Clerk\n3. Guard\n4. Intern\n\nTherefore, the manager earns the most."
+    },
+    {
+      "draw": 2,
+      "seed": 20261066,
+      "n_tokens": 67,
+      "eos_hit": true,
+      "wall_s": 3.0903865406289697,
+      "text": "Based on the information provided:\n\n- The manager earns more than the clerk.\n- The clerk earns more than the guard.\n- The guard earns more than the intern.\n\nWe can arrange the earnings in a descending order:\n\n1. Manager\n2. Clerk\n3. Guard\n4. Intern\n\nTherefore, the manager earns the most."
+    },
+    {
+      "draw": 3,
+      "seed": 20261067,
+      "n_tokens": 68,
+      "eos_hit": true,
+      "wall_s": 3.138586207292974,
+      "text": "Based on the information provided:\n\n1. The manager earns more than the clerk.\n2. The clerk earns more than the guard.\n3. The guard earns more than the intern.\n\nFrom this, we can establish the following order from highest to lowest earner:\n\nManager > Clerk > Guard > Intern\n\nTherefore, the manager earns the most."
+    },
+    {
+      "draw": 4,
+      "seed": 20261068,
+      "n_tokens": 65,
+      "eos_hit": true,
+      "wall_s": 3.009729916229844,
+      "text": "Based on the information provided:\n\n- The manager earns more than the clerk.\n- The clerk earns more than the guard.\n- The guard earns more than the intern.\n\nThis creates a clear hierarchy in terms of earnings:\n\n1. Manager > Clerk > Guard > Intern\n\nTherefore, the manager earns the most among the four people."
+    },
+    {
+      "draw": 5,
+      "seed": 20261069,
+      "n_tokens": 66,
+      "eos_hit": true,
+      "wall_s": 3.0466104997321963,
+      "text": "Based on the information given:\n\n1. The manager earns more than the clerk.\n2. The clerk earns more than the guard.\n3. The guard earns more than the intern.\n\nWe can establish the following order from the most to the least earning:\n\nManager > Clerk > Guard > Intern\n\nTherefore, the manager earns the most."
+    },
+    {
+      "draw": 6,
+      "seed": 20261070,
+      "n_tokens": 67,
+      "eos_hit": true,
+      "wall_s": 3.090868500061333,
+      "text": "Based on the given information:\n\n1. The manager earns more than the clerk.\n2. The clerk earns more than the guard.\n3. The guard earns more than the intern.\n\nFrom this, we can deduce the following order in terms of earnings:\n\nManager > Clerk > Guard > Intern\n\nTherefore, the manager earns the most."
+    },
+    {
+      "draw": 7,
+      "seed": 20261071,
+      "n_tokens": 69,
+      "eos_hit": true,
+      "wall_s": 3.1775293331593275,
+      "text": "Based on the information provided:\n\n1. The manager earns more than the clerk.\n2. The clerk earns more than the guard.\n3. The guard earns more than the intern.\n\nWe can establish the following order of earnings from highest to lowest:\n\nManager > Clerk > Guard > Intern\n\nTherefore, the manager earns the most among the four people."
+    },
+    {
+      "draw": 8,
+      "seed": 20261072,
+      "n_tokens": 61,
+      "eos_hit": true,
+      "wall_s": 2.8529300848022103,
+      "text": "Based on the information given:\n\n1. The manager earns more than the clerk.\n2. The clerk earns more than the guard.\n3. The guard earns more than the intern.\n\nWe can rank the earnings in descending order:\n\nManager > Clerk > Guard > Intern\n\nTherefore, the manager earns the most."
+    },
+    {
+      "draw": 9,
+      "seed": 20261073,
+      "n_tokens": 68,
+      "eos_hit": true,
+      "wall_s": 3.133437667042017,
+      "text": "Based on the information provided:\n\n1. The manager earns more than the clerk.\n2. The clerk earns more than the guard.\n3. The guard earns more than the intern.\n\nWe can order their earnings from highest to lowest as follows:\n\n- Manager\n- Clerk\n- Guard\n- Intern\n\nTherefore, the manager earns the most."
+    }
+  ],
+  "realized_lengths": [
+    69,
+    72,
+    67,
+    68,
+    65,
+    66,
+    67,
+    69,
+    61,
+    68
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.26395929232239723,
+  "semantic_volume": -15.722764927504485,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "Based on the information provided:\n\n1. The manager earns more than the clerk.\n2. The clerk earns more than the guard.\n3. The guard earns more than the intern.\n\nFrom these statements, we can deduce the following order of earnings from highest to lowest:\n\nManager > Clerk > Guard > Intern\n\nTherefore, the manager earns the most.",
+    "answer_tokens": 70,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 4.132980707101524
+  },
+  "greedy_answer": "Based on the information provided:\n\n1. The manager earns more than the clerk.\n2. The clerk earns more than the guard.\n3. The guard earns more than the intern.\n\nFrom these statements, we can deduce the following order of earnings from highest to lowest:\n\nManager > Clerk > Guard > Intern\n\nTherefore, the manager earns the most.",
+  "greedy_answer_tokens": 70,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "manager",
+  "normalizer_note": "token-run-match",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_35.npz",
+  "prompt_total_wall_s": 38.9280887497589
+}

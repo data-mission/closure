@@ -1,0 +1,142 @@
+{
+  "idx": 21,
+  "kind": "factual",
+  "family": "factual",
+  "difficulty": 3,
+  "prompt": "What is the capital of Australia?",
+  "gold": "Canberra",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 36,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 4.291164259484503e-06,
+  "entropy_base": "nats",
+  "top1_token_id": 785,
+  "top1_token_str": "The",
+  "extract_time_s": 0.27681704238057137,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260924,
+      "n_tokens": 61,
+      "eos_hit": true,
+      "wall_s": 2.8312387503683567,
+      "text": "The capital of Australia is Canberra. It is located in the Australian Capital Territory (ACT), in the southeast of the country. Canberra was chosen as the capital in 1908 and officially became the capital in 1913, replacing Melbourne, which was the temporary capital at the time."
+    },
+    {
+      "draw": 1,
+      "seed": 20260925,
+      "n_tokens": 47,
+      "eos_hit": true,
+      "wall_s": 2.2581400414928794,
+      "text": "The capital of Australia is Canberra. It is located in the Australian Capital Territory (ACT) and serves as the country's federal capital. While Sydney and Melbourne are larger and more populous, Canberra was specifically designed to be the national capital."
+    },
+    {
+      "draw": 2,
+      "seed": 20260926,
+      "n_tokens": 7,
+      "eos_hit": true,
+      "wall_s": 0.6121318750083447,
+      "text": "The capital of Australia is Canberra."
+    },
+    {
+      "draw": 3,
+      "seed": 20260927,
+      "n_tokens": 57,
+      "eos_hit": true,
+      "wall_s": 2.672009415924549,
+      "text": "The capital of Australia is Canberra. It is located in the Australian Capital Territory and serves as the country's federal capital. While Sydney and Melbourne are larger and more populous cities, Canberra was specifically designed to be the national capital when Australia was founded in the early 20th century."
+    },
+    {
+      "draw": 4,
+      "seed": 20260928,
+      "n_tokens": 7,
+      "eos_hit": true,
+      "wall_s": 0.6127923335880041,
+      "text": "The capital of Australia is Canberra."
+    },
+    {
+      "draw": 5,
+      "seed": 20260929,
+      "n_tokens": 7,
+      "eos_hit": true,
+      "wall_s": 0.6142105832695961,
+      "text": "The capital of Australia is Canberra."
+    },
+    {
+      "draw": 6,
+      "seed": 20260930,
+      "n_tokens": 52,
+      "eos_hit": true,
+      "wall_s": 2.464039790444076,
+      "text": "The capital of Australia is Canberra. It is located in the Australian Capital Territory and serves as the country's federal capital. While Sydney and Melbourne are larger and more populous cities, Canberra was specifically established to serve as the national capital after the Australian colonies federated."
+    },
+    {
+      "draw": 7,
+      "seed": 20260931,
+      "n_tokens": 57,
+      "eos_hit": true,
+      "wall_s": 2.66342662461102,
+      "text": "The capital of Australia is Canberra. It was specifically designed to be the national capital when Australia was federating its states in the late 19th century. Before that, Australia did not have a national capital, with government functions being carried out in other cities like Melbourne and Sydney."
+    },
+    {
+      "draw": 8,
+      "seed": 20260932,
+      "n_tokens": 47,
+      "eos_hit": true,
+      "wall_s": 2.254382999613881,
+      "text": "The capital of Australia is Canberra. It's located in the Australian Capital Territory (ACT) and serves as the country's administrative center. While Sydney and Melbourne are larger and more populous, Canberra was specifically designed to be the national capital."
+    },
+    {
+      "draw": 9,
+      "seed": 20260933,
+      "n_tokens": 7,
+      "eos_hit": true,
+      "wall_s": 0.6143772499635816,
+      "text": "The capital of Australia is Canberra."
+    }
+  ],
+  "realized_lengths": [
+    61,
+    47,
+    7,
+    57,
+    7,
+    7,
+    52,
+    57,
+    47,
+    7
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.16671991720795631,
+  "semantic_volume": -58.11304372665417,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "The capital of Australia is Canberra.",
+    "answer_tokens": 7,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 1.1753538744524121
+  },
+  "greedy_answer": "The capital of Australia is Canberra.",
+  "greedy_answer_tokens": 7,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "canberra",
+  "normalizer_note": "token-run-match",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_21.npz",
+  "prompt_total_wall_s": 19.840161208994687
+}

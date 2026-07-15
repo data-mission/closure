@@ -1,0 +1,33 @@
+{
+  "base_seed": 20260714,
+  "config_sha256": "f4aa991f5178fdd771000b16346366beeb249f4d0bbed5fc56eb9c6608e930cc",
+  "difficulty_band": "1 trivial(d1-like) / 2 medium(d3-like) / 3 hard / 4 very-hard(hardening band)",
+  "entropy_base": "nats",
+  "families": [
+    "arithmetic",
+    "deduction",
+    "factual"
+  ],
+  "gen_temp": 0.7,
+  "gen_top_p": 0.95,
+  "labeled_rehearsal": true,
+  "max_tokens": 256,
+  "mlx_lm_version": "0.31.3",
+  "mlx_version": "0.32.0",
+  "model_id": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+  "model_revision_pinned": "c26a38f6a37d0a51b4e9a1eb3026530fa35d9fed",
+  "n_gen": 10,
+  "n_prompts": 41,
+  "nomic_model": "nomic-ai/nomic-embed-text-v1.5",
+  "nomic_output_dim": 768,
+  "nomic_prefix": "clustering: ",
+  "nomic_prefix_decision_gap": "nomic-embed v1.5 requires a task prefix; e3-0002 does not fix the choice. 'clustering: ' used, same as the pilot. Must be closed before freeze.",
+  "nomic_revision_pinned": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "normalizer_source": "normalizer.py (concrete CORPUS.md \u00a7 Labeling protocol impl)",
+  "python_version": "3.12.13",
+  "seed_formula": "base_seed + prompt_index * N + draw_index",
+  "throwaway": true,
+  "tie_word_embeddings": false,
+  "vc_elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+  "volume_source": "e3_validation.volume.semantic_volume (e3-0002, called not reimplemented)"
+}

@@ -1,0 +1,142 @@
+{
+  "idx": 0,
+  "kind": "arithmetic",
+  "family": "arithmetic",
+  "difficulty": 1,
+  "prompt": "What is 9 times 8?",
+  "gold": "72",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 37,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.000679367280099541,
+  "entropy_base": "nats",
+  "top1_token_id": 24,
+  "top1_token_str": "9",
+  "extract_time_s": 0.6807852908968925,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260714,
+      "n_tokens": 9,
+      "eos_hit": true,
+      "wall_s": 0.8481087498366833,
+      "text": "9 times 8 is 72."
+    },
+    {
+      "draw": 1,
+      "seed": 20260715,
+      "n_tokens": 9,
+      "eos_hit": true,
+      "wall_s": 0.6951904585584998,
+      "text": "9 times 8 is 72."
+    },
+    {
+      "draw": 2,
+      "seed": 20260716,
+      "n_tokens": 9,
+      "eos_hit": true,
+      "wall_s": 0.6965657500550151,
+      "text": "9 times 8 is 72."
+    },
+    {
+      "draw": 3,
+      "seed": 20260717,
+      "n_tokens": 9,
+      "eos_hit": true,
+      "wall_s": 0.7063617072999477,
+      "text": "9 times 8 is 72."
+    },
+    {
+      "draw": 4,
+      "seed": 20260718,
+      "n_tokens": 9,
+      "eos_hit": true,
+      "wall_s": 0.7120764581486583,
+      "text": "9 times 8 is 72."
+    },
+    {
+      "draw": 5,
+      "seed": 20260719,
+      "n_tokens": 9,
+      "eos_hit": true,
+      "wall_s": 0.7322817500680685,
+      "text": "9 times 8 is 72."
+    },
+    {
+      "draw": 6,
+      "seed": 20260720,
+      "n_tokens": 9,
+      "eos_hit": true,
+      "wall_s": 0.6937202913686633,
+      "text": "9 times 8 is 72."
+    },
+    {
+      "draw": 7,
+      "seed": 20260721,
+      "n_tokens": 9,
+      "eos_hit": true,
+      "wall_s": 0.6963906669989228,
+      "text": "9 times 8 is 72."
+    },
+    {
+      "draw": 8,
+      "seed": 20260722,
+      "n_tokens": 9,
+      "eos_hit": true,
+      "wall_s": 0.6941316248849034,
+      "text": "9 times 8 is 72."
+    },
+    {
+      "draw": 9,
+      "seed": 20260723,
+      "n_tokens": 27,
+      "eos_hit": true,
+      "wall_s": 1.4384817499667406,
+      "text": "9 times 8 is 72. \n\nTo break it down: \\(9 \\times 8 = 72\\)."
+    }
+  ],
+  "realized_lengths": [
+    9,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9,
+    9,
+    27
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.10142041649669409,
+  "semantic_volume": -122.03700982509815,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "9 times 8 is 72.",
+    "answer_tokens": 9,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 1.2476543746888638
+  },
+  "greedy_answer": "9 times 8 is 72.",
+  "greedy_answer_tokens": 9,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "72.0",
+  "normalizer_note": "numeric-exact",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_00.npz",
+  "prompt_total_wall_s": 10.725833375006914
+}

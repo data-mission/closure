@@ -1,0 +1,142 @@
+{
+  "idx": 14,
+  "kind": "factual",
+  "family": "factual",
+  "difficulty": 1,
+  "prompt": "How many months are there in a year?",
+  "gold": "12",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 38,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 5.014656562707387e-05,
+  "entropy_base": "nats",
+  "top1_token_id": 3862,
+  "top1_token_str": "There",
+  "extract_time_s": 0.27329425048083067,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260854,
+      "n_tokens": 10,
+      "eos_hit": true,
+      "wall_s": 0.736325959675014,
+      "text": "There are 12 months in a year."
+    },
+    {
+      "draw": 1,
+      "seed": 20260855,
+      "n_tokens": 10,
+      "eos_hit": true,
+      "wall_s": 0.7491286667063832,
+      "text": "There are 12 months in a year."
+    },
+    {
+      "draw": 2,
+      "seed": 20260856,
+      "n_tokens": 10,
+      "eos_hit": true,
+      "wall_s": 0.7449864158406854,
+      "text": "There are 12 months in a year."
+    },
+    {
+      "draw": 3,
+      "seed": 20260857,
+      "n_tokens": 10,
+      "eos_hit": true,
+      "wall_s": 0.7474135002121329,
+      "text": "There are 12 months in a year."
+    },
+    {
+      "draw": 4,
+      "seed": 20260858,
+      "n_tokens": 10,
+      "eos_hit": true,
+      "wall_s": 0.7478120001032948,
+      "text": "There are 12 months in a year."
+    },
+    {
+      "draw": 5,
+      "seed": 20260859,
+      "n_tokens": 10,
+      "eos_hit": true,
+      "wall_s": 0.7474643755704165,
+      "text": "There are 12 months in a year."
+    },
+    {
+      "draw": 6,
+      "seed": 20260860,
+      "n_tokens": 10,
+      "eos_hit": true,
+      "wall_s": 0.7497532907873392,
+      "text": "There are 12 months in a year."
+    },
+    {
+      "draw": 7,
+      "seed": 20260861,
+      "n_tokens": 10,
+      "eos_hit": true,
+      "wall_s": 0.7451889161020517,
+      "text": "There are 12 months in a year."
+    },
+    {
+      "draw": 8,
+      "seed": 20260862,
+      "n_tokens": 10,
+      "eos_hit": true,
+      "wall_s": 0.745043832808733,
+      "text": "There are 12 months in a year."
+    },
+    {
+      "draw": 9,
+      "seed": 20260863,
+      "n_tokens": 10,
+      "eos_hit": true,
+      "wall_s": 0.7481554169207811,
+      "text": "There are 12 months in a year."
+    }
+  ],
+  "realized_lengths": [
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.0651850001886487,
+  "semantic_volume": -138.15510557964274,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "There are 12 months in a year.",
+    "answer_tokens": 10,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 1.430014000274241
+  },
+  "greedy_answer": "There are 12 months in a year.",
+  "greedy_answer_tokens": 10,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "12.0",
+  "normalizer_note": "numeric-exact",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_14.npz",
+  "prompt_total_wall_s": 9.982403790578246
+}

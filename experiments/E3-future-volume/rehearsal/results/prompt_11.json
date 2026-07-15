@@ -1,0 +1,142 @@
+{
+  "idx": 11,
+  "kind": "arithmetic",
+  "family": "arithmetic",
+  "difficulty": 4,
+  "prompt": "A worker earns 15 dollars per hour and works 7 hours a day for 5 days. What are the total earnings in dollars?",
+  "gold": "525",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 58,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.0005478384555317461,
+  "entropy_base": "nats",
+  "top1_token_id": 1249,
+  "top1_token_str": "To",
+  "extract_time_s": 0.27105916664004326,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260824,
+      "n_tokens": 137,
+      "eos_hit": true,
+      "wall_s": 5.9714711252599955,
+      "text": "To calculate the total earnings, you can follow these steps:\n\n1. Calculate the daily earnings by multiplying the hourly wage by the number of hours worked per day.\n2. Calculate the total earnings by multiplying the daily earnings by the number of days worked.\n\nLet's do the math:\n\n1. Hourly wage: $15\n2. Hours worked per day: 7\n3. Daily earnings: $15 * 7 = $105\n4. Days worked: 5\n5. Total earnings: $105 * 5 = $525\n\nSo, the worker's total earnings for the 5 days are $525."
+    },
+    {
+      "draw": 1,
+      "seed": 20260825,
+      "n_tokens": 206,
+      "eos_hit": true,
+      "wall_s": 8.937173792161047,
+      "text": "To calculate the total earnings, you can multiply the hourly wage by the number of hours worked per day, and then by the number of days worked in a week.\n\nThe formula is:\n\n\\[ \\text{Total Earnings} = \\text{Hourly Wage} \\times \\text{Hours per Day} \\times \\text{Days per Week} \\]\n\nPlugging in the numbers:\n\n\\[ \\text{Total Earnings} = 15 \\, \\text{dollars/hour} \\times 7 \\, \\text{hours/day} \\times 5 \\, \\text{days/week} \\]\n\n\\[ \\text{Total Earnings} = 15 \\times 7 \\times 5 \\]\n\n\\[ \\text{Total Earnings} = 105 \\times 5 \\]\n\n\\[ \\text{Total Earnings} = 525 \\, \\text{dollars} \\]\n\nSo, the total earnings for the worker are $525."
+    },
+    {
+      "draw": 2,
+      "seed": 20260826,
+      "n_tokens": 141,
+      "eos_hit": true,
+      "wall_s": 6.14220754057169,
+      "text": "To calculate the total earnings of the worker, you can follow these steps:\n\n1. Calculate the daily earnings: Multiply the hourly wage by the number of hours worked per day.\n2. Calculate the total earnings: Multiply the daily earnings by the number of days worked.\n\nLet's do the math:\n\n1. Daily earnings = Hourly wage \u00d7 Hours per day\n   Daily earnings = $15 \u00d7 7 hours\n   Daily earnings = $105\n\n2. Total earnings = Daily earnings \u00d7 Number of days\n   Total earnings = $105 \u00d7 5 days\n   Total earnings = $525\n\nSo, the total earnings for the worker are $525."
+    },
+    {
+      "draw": 3,
+      "seed": 20260827,
+      "n_tokens": 157,
+      "eos_hit": true,
+      "wall_s": 6.784214999526739,
+      "text": "To calculate the total earnings, we can multiply the hourly wage by the number of hours worked per day, and then by the number of days worked in the week.\n\nHere's the calculation step by step:\n\n1. Hourly wage: $15\n2. Hours worked per day: 7\n3. Days worked per week: 5\n\nTotal earnings = Hourly wage \u00d7 Hours worked per day \u00d7 Days worked per week\nTotal earnings = $15 \u00d7 7 \u00d7 5\n\nNow, let's do the math:\n\nTotal earnings = $15 \u00d7 7 = $105\nTotal earnings for the week = $105 \u00d7 5 = $525\n\nSo, the total earnings for the worker are $525."
+    },
+    {
+      "draw": 4,
+      "seed": 20260828,
+      "n_tokens": 168,
+      "eos_hit": true,
+      "wall_s": 7.232260499149561,
+      "text": "To calculate the total earnings, we need to multiply the hourly wage by the number of hours worked per day, and then by the number of days worked.\n\nThe worker earns $15 per hour and works 7 hours a day for 5 days.\n\nFirst, calculate the daily earnings:\n\\[ \\text{Daily earnings} = \\text{Hourly wage} \\times \\text{Hours per day} = 15 \\times 7 = 105 \\text{ dollars} \\]\n\nNext, calculate the total earnings for the 5 days:\n\\[ \\text{Total earnings} = \\text{Daily earnings} \\times \\text{Days worked} = 105 \\times 5 = 525 \\text{ dollars} \\]\n\nSo, the total earnings are $525."
+    },
+    {
+      "draw": 5,
+      "seed": 20260829,
+      "n_tokens": 173,
+      "eos_hit": true,
+      "wall_s": 7.4302144991233945,
+      "text": "To calculate the total earnings, you can use the formula:\n\n\\[ \\text{Total Earnings} = \\text{Hourly Wage} \\times \\text{Hours Per Day} \\times \\text{Days Per Week} \\]\n\nGiven:\n- Hourly Wage = $15\n- Hours Per Day = 7\n- Days Per Week = 5\n\nNow, let's plug in the values:\n\n\\[ \\text{Total Earnings} = 15 \\times 7 \\times 5 \\]\n\nFirst, multiply the hourly wage by the hours per day:\n\n\\[ 15 \\times 7 = 105 \\]\n\nThen, multiply the result by the number of days per week:\n\n\\[ 105 \\times 5 = 525 \\]\n\nSo, the total earnings are $525."
+    },
+    {
+      "draw": 6,
+      "seed": 20260830,
+      "n_tokens": 154,
+      "eos_hit": true,
+      "wall_s": 6.648425207473338,
+      "text": "To calculate the total earnings of the worker, you can follow these steps:\n\n1. Calculate the daily earnings by multiplying the hourly wage by the number of hours worked per day.\n2. Calculate the total earnings by multiplying the daily earnings by the number of days worked.\n\nHere's the calculation:\n\n1. Daily earnings: \\( 15 \\text{ dollars/hour} \\times 7 \\text{ hours/day} = 105 \\text{ dollars/day} \\)\n2. Total earnings: \\( 105 \\text{ dollars/day} \\times 5 \\text{ days} = 525 \\text{ dollars} \\)\n\nSo, the worker's total earnings for 5 days of work are 525 dollars."
+    },
+    {
+      "draw": 7,
+      "seed": 20260831,
+      "n_tokens": 166,
+      "eos_hit": true,
+      "wall_s": 7.289428499527276,
+      "text": "To calculate the total earnings, you can multiply the hourly wage by the number of hours worked per day and then by the number of days worked in the week.\n\nThe worker earns $15 per hour and works 7 hours a day for 5 days a week. So the total earnings can be calculated as:\n\n\\[ \\text{Total Earnings} = \\text{Hourly Wage} \\times \\text{Hours per Day} \\times \\text{Days per Week} \\]\n\n\\[ \\text{Total Earnings} = 15 \\times 7 \\times 5 \\]\n\n\\[ \\text{Total Earnings} = 105 \\times 5 \\]\n\n\\[ \\text{Total Earnings} = 525 \\]\n\nSo, the total earnings are $525."
+    },
+    {
+      "draw": 8,
+      "seed": 20260832,
+      "n_tokens": 177,
+      "eos_hit": true,
+      "wall_s": 7.59309820830822,
+      "text": "To calculate the total earnings, you can use the following formula:\n\n\\[ \\text{Total Earnings} = \\text{Hourly Wage} \\times \\text{Hours Worked per Day} \\times \\text{Number of Days Worked} \\]\n\nGiven:\n- Hourly wage = $15\n- Hours worked per day = 7\n- Number of days worked = 5\n\nPlugging in the values:\n\n\\[ \\text{Total Earnings} = 15 \\times 7 \\times 5 \\]\n\nFirst, multiply the hourly wage by the hours worked per day:\n\n\\[ 15 \\times 7 = 105 \\]\n\nThen, multiply the result by the number of days worked:\n\n\\[ 105 \\times 5 = 525 \\]\n\nSo, the total earnings are $525."
+    },
+    {
+      "draw": 9,
+      "seed": 20260833,
+      "n_tokens": 198,
+      "eos_hit": true,
+      "wall_s": 8.51383825019002,
+      "text": "To calculate the total earnings, we need to follow these steps:\n\n1. Calculate the daily earnings.\n2. Calculate the total earnings for the week.\n\nFirst, let's find the daily earnings:\n- The worker earns $15 per hour.\n- The worker works 7 hours a day.\n\nSo, the daily earnings are:\n\\[ 15 \\, \\text{dollars/hour} \\times 7 \\, \\text{hours/day} = 105 \\, \\text{dollars/day} \\]\n\nNext, let's find the total earnings for the week:\n- The worker works 5 days a week.\n\nSo, the total earnings for the week are:\n\\[ 105 \\, \\text{dollars/day} \\times 5 \\, \\text{days/week} = 525 \\, \\text{dollars/week} \\]\n\nTherefore, the total earnings for the week are $525."
+    }
+  ],
+  "realized_lengths": [
+    137,
+    206,
+    141,
+    157,
+    168,
+    173,
+    154,
+    166,
+    177,
+    198
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.6188550414517522,
+  "semantic_volume": -16.690252022312173,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "To calculate the total earnings, you can follow these steps:\n\n1. Calculate the daily earnings by multiplying the hourly wage by the number of hours worked per day.\n2. Calculate the total earnings by multiplying the daily earnings by the number of days worked.\n\nLet's do the math:\n\n1. Daily earnings = Hourly wage \u00d7 Hours per day\n   Daily earnings = $15 \u00d7 7 hours\n   Daily earnings = $105\n\n2. Total earnings = Daily earnings \u00d7 Number of days worked\n   Total earnings = $105 \u00d7 5 days\n   Total earnings = $525\n\nSo, the worker's total earnings for 5 days of work are $525.",
+    "answer_tokens": 144,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 7.426786833442748
+  },
+  "greedy_answer": "To calculate the total earnings, you can follow these steps:\n\n1. Calculate the daily earnings by multiplying the hourly wage by the number of hours worked per day.\n2. Calculate the total earnings by multiplying the daily earnings by the number of days worked.\n\nLet's do the math:\n\n1. Daily earnings = Hourly wage \u00d7 Hours per day\n   Daily earnings = $15 \u00d7 7 hours\n   Daily earnings = $105\n\n2. Total earnings = Daily earnings \u00d7 Number of days worked\n   Total earnings = $105 \u00d7 5 days\n   Total earnings = $525\n\nSo, the worker's total earnings for 5 days of work are $525.",
+  "greedy_answer_tokens": 144,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "525.0",
+  "normalizer_note": "numeric-exact",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_11.npz",
+  "prompt_total_wall_s": 87.09630108252168
+}

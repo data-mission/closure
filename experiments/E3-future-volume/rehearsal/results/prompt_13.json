@@ -1,0 +1,142 @@
+{
+  "idx": 13,
+  "kind": "factual",
+  "family": "factual",
+  "difficulty": 1,
+  "prompt": "What is the capital of Italy?",
+  "gold": "Rome",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 36,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 2.283249386891839e-06,
+  "entropy_base": "nats",
+  "top1_token_id": 785,
+  "top1_token_str": "The",
+  "extract_time_s": 0.2582147093489766,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260844,
+      "n_tokens": 7,
+      "eos_hit": true,
+      "wall_s": 0.6028937501832843,
+      "text": "The capital of Italy is Rome."
+    },
+    {
+      "draw": 1,
+      "seed": 20260845,
+      "n_tokens": 7,
+      "eos_hit": true,
+      "wall_s": 0.6171282092109323,
+      "text": "The capital of Italy is Rome."
+    },
+    {
+      "draw": 2,
+      "seed": 20260846,
+      "n_tokens": 7,
+      "eos_hit": true,
+      "wall_s": 0.6124349171295762,
+      "text": "The capital of Italy is Rome."
+    },
+    {
+      "draw": 3,
+      "seed": 20260847,
+      "n_tokens": 7,
+      "eos_hit": true,
+      "wall_s": 0.610594124533236,
+      "text": "The capital of Italy is Rome."
+    },
+    {
+      "draw": 4,
+      "seed": 20260848,
+      "n_tokens": 7,
+      "eos_hit": true,
+      "wall_s": 0.6137707093730569,
+      "text": "The capital of Italy is Rome."
+    },
+    {
+      "draw": 5,
+      "seed": 20260849,
+      "n_tokens": 7,
+      "eos_hit": true,
+      "wall_s": 0.6145468326285481,
+      "text": "The capital of Italy is Rome."
+    },
+    {
+      "draw": 6,
+      "seed": 20260850,
+      "n_tokens": 7,
+      "eos_hit": true,
+      "wall_s": 0.6126293754205108,
+      "text": "The capital of Italy is Rome."
+    },
+    {
+      "draw": 7,
+      "seed": 20260851,
+      "n_tokens": 7,
+      "eos_hit": true,
+      "wall_s": 0.6154441246762872,
+      "text": "The capital of Italy is Rome."
+    },
+    {
+      "draw": 8,
+      "seed": 20260852,
+      "n_tokens": 7,
+      "eos_hit": true,
+      "wall_s": 0.6195681253448129,
+      "text": "The capital of Italy is Rome."
+    },
+    {
+      "draw": 9,
+      "seed": 20260853,
+      "n_tokens": 7,
+      "eos_hit": true,
+      "wall_s": 0.6160915410146117,
+      "text": "The capital of Italy is Rome."
+    }
+  ],
+  "realized_lengths": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.05883200000971556,
+  "semantic_volume": -138.15510557964274,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "The capital of Italy is Rome.",
+    "answer_tokens": 7,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 1.1875407081097364
+  },
+  "greedy_answer": "The capital of Italy is Rome.",
+  "greedy_answer_tokens": 7,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "rome",
+  "normalizer_note": "token-run-match",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_13.npz",
+  "prompt_total_wall_s": 8.271116542629898
+}

@@ -1,0 +1,142 @@
+{
+  "idx": 6,
+  "kind": "arithmetic",
+  "family": "arithmetic",
+  "difficulty": 3,
+  "prompt": "A jacket costs 80 dollars and is discounted by 15 percent. What is the sale price in dollars?",
+  "gold": "68",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 53,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.00011159791756654158,
+  "entropy_base": "nats",
+  "top1_token_id": 1249,
+  "top1_token_str": "To",
+  "extract_time_s": 0.2631611246615648,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260774,
+      "n_tokens": 163,
+      "eos_hit": true,
+      "wall_s": 7.073541083373129,
+      "text": "To find the sale price of the jacket after a 15% discount, you can follow these steps:\n\n1. Calculate the amount of the discount:\n\\[ \\text{Discount Amount} = \\text{Original Price} \\times \\text{Discount Rate} \\]\n\\[ \\text{Discount Amount} = 80 \\times 0.15 = 12 \\text{ dollars} \\]\n\n2. Subtract the discount amount from the original price to get the sale price:\n\\[ \\text{Sale Price} = \\text{Original Price} - \\text{Discount Amount} \\]\n\\[ \\text{Sale Price} = 80 - 12 = 68 \\text{ dollars} \\]\n\nSo, the sale price of the jacket is 68 dollars."
+    },
+    {
+      "draw": 1,
+      "seed": 20260775,
+      "n_tokens": 214,
+      "eos_hit": true,
+      "wall_s": 9.2286163745448,
+      "text": "To find the sale price of the jacket after a 15 percent discount, you can follow these steps:\n\n1. Calculate the amount of the discount.\n2. Subtract the discount from the original price.\n\nLet's do the calculations:\n\n1. Calculate the amount of the discount:\n\\[ \\text{Discount} = \\text{Original Price} \\times \\text{Discount Rate} \\]\n\\[ \\text{Discount} = 80 \\times \\frac{15}{100} \\]\n\\[ \\text{Discount} = 80 \\times 0.15 \\]\n\\[ \\text{Discount} = 12 \\]\n\n2. Subtract the discount from the original price to find the sale price:\n\\[ \\text{Sale Price} = \\text{Original Price} - \\text{Discount} \\]\n\\[ \\text{Sale Price} = 80 - 12 \\]\n\\[ \\text{Sale Price} = 68 \\]\n\nSo, the sale price of the jacket is $68."
+    },
+    {
+      "draw": 2,
+      "seed": 20260776,
+      "n_tokens": 188,
+      "eos_hit": true,
+      "wall_s": 8.14496541582048,
+      "text": "To find the sale price of the jacket after a 15% discount, you first calculate the amount of the discount and then subtract it from the original price.\n\n1. Calculate the discount amount:\n\\[ \\text{Discount Amount} = \\text{Original Price} \\times \\text{Discount Rate} \\]\n\\[ \\text{Discount Amount} = 80 \\times \\frac{15}{100} = 80 \\times 0.15 = 12 \\text{ dollars} \\]\n\n2. Subtract the discount amount from the original price to get the sale price:\n\\[ \\text{Sale Price} = \\text{Original Price} - \\text{Discount Amount} \\]\n\\[ \\text{Sale Price} = 80 - 12 = 68 \\text{ dollars} \\]\n\nSo, the sale price of the jacket is 68 dollars."
+    },
+    {
+      "draw": 3,
+      "seed": 20260777,
+      "n_tokens": 150,
+      "eos_hit": true,
+      "wall_s": 6.560281832702458,
+      "text": "To find the sale price of the jacket after a 15% discount, you can follow these steps:\n\n1. Calculate the amount of the discount:\n   \\[\n   \\text{Discount} = \\text{Original Price} \\times \\text{Discount Rate} = 80 \\times 0.15 = 12 \\text{ dollars}\n   \\]\n\n2. Subtract the discount from the original price to get the sale price:\n   \\[\n   \\text{Sale Price} = \\text{Original Price} - \\text{Discount} = 80 - 12 = 68 \\text{ dollars}\n   \\]\n\nSo, the sale price of the jacket is 68 dollars."
+    },
+    {
+      "draw": 4,
+      "seed": 20260778,
+      "n_tokens": 179,
+      "eos_hit": true,
+      "wall_s": 7.7320817075669765,
+      "text": "To find the sale price of the jacket after a 15% discount, you can follow these steps:\n\n1. Calculate the amount of the discount:\n\\[ \\text{Discount Amount} = \\text{Original Price} \\times \\text{Discount Percentage} \\]\n\\[ \\text{Discount Amount} = 80 \\times \\frac{15}{100} = 80 \\times 0.15 = 12 \\text{ dollars} \\]\n\n2. Subtract the discount amount from the original price to get the sale price:\n\\[ \\text{Sale Price} = \\text{Original Price} - \\text{Discount Amount} \\]\n\\[ \\text{Sale Price} = 80 - 12 = 68 \\text{ dollars} \\]\n\nSo, the sale price of the jacket is 68 dollars."
+    },
+    {
+      "draw": 5,
+      "seed": 20260779,
+      "n_tokens": 158,
+      "eos_hit": true,
+      "wall_s": 6.867201583459973,
+      "text": "To find the sale price after a 15% discount on a jacket that originally costs $80, you can follow these steps:\n\n1. Calculate the amount of the discount:\n\\[ \\text{Discount amount} = \\text{Original price} \\times \\text{Discount percentage} \\]\n\\[ \\text{Discount amount} = 80 \\times 0.15 = 12 \\]\n\n2. Subtract the discount amount from the original price to get the sale price:\n\\[ \\text{Sale price} = \\text{Original price} - \\text{Discount amount} \\]\n\\[ \\text{Sale price} = 80 - 12 = 68 \\]\n\nSo, the sale price of the jacket is $68."
+    },
+    {
+      "draw": 6,
+      "seed": 20260780,
+      "n_tokens": 176,
+      "eos_hit": true,
+      "wall_s": 7.616775999777019,
+      "text": "To find the sale price of the jacket after a 15% discount, you can follow these steps:\n\n1. Calculate the amount of the discount.\n2. Subtract the discount from the original price.\n\nFirst, calculate the discount amount:\n\\[ \\text{Discount} = \\text{Original Price} \\times \\text{Discount Rate} \\]\n\\[ \\text{Discount} = 80 \\times 0.15 = 12 \\text{ dollars} \\]\n\nNext, subtract the discount from the original price to find the sale price:\n\\[ \\text{Sale Price} = \\text{Original Price} - \\text{Discount} \\]\n\\[ \\text{Sale Price} = 80 - 12 = 68 \\text{ dollars} \\]\n\nSo, the sale price of the jacket is 68 dollars."
+    },
+    {
+      "draw": 7,
+      "seed": 20260781,
+      "n_tokens": 181,
+      "eos_hit": true,
+      "wall_s": 7.844324957579374,
+      "text": "To find the sale price of the jacket after a 15% discount, you can follow these steps:\n\n1. Calculate the amount of the discount:\n\\[ \\text{Discount Amount} = \\text{Original Price} \\times \\text{Discount Percentage} \\]\n\\[ \\text{Discount Amount} = 80 \\times 0.15 \\]\n\\[ \\text{Discount Amount} = 12 \\text{ dollars} \\]\n\n2. Subtract the discount amount from the original price to get the sale price:\n\\[ \\text{Sale Price} = \\text{Original Price} - \\text{Discount Amount} \\]\n\\[ \\text{Sale Price} = 80 - 12 \\]\n\\[ \\text{Sale Price} = 68 \\text{ dollars} \\]\n\nSo, the sale price of the jacket is 68 dollars."
+    },
+    {
+      "draw": 8,
+      "seed": 20260782,
+      "n_tokens": 215,
+      "eos_hit": true,
+      "wall_s": 9.250675749965012,
+      "text": "To find the sale price of the jacket after a 15% discount, we can follow these steps:\n\n1. Calculate the amount of the discount.\n2. Subtract the discount from the original price.\n\nFirst, let's calculate the discount amount:\n\\[ \\text{Discount amount} = \\text{Original price} \\times \\text{Discount percentage} \\]\n\\[ \\text{Discount amount} = 80 \\times \\frac{15}{100} \\]\n\\[ \\text{Discount amount} = 80 \\times 0.15 \\]\n\\[ \\text{Discount amount} = 12 \\]\n\nNow, subtract the discount amount from the original price to get the sale price:\n\\[ \\text{Sale price} = \\text{Original price} - \\text{Discount amount} \\]\n\\[ \\text{Sale price} = 80 - 12 \\]\n\\[ \\text{Sale price} = 68 \\]\n\nSo, the sale price of the jacket is 68 dollars."
+    },
+    {
+      "draw": 9,
+      "seed": 20260783,
+      "n_tokens": 168,
+      "eos_hit": true,
+      "wall_s": 7.306969041004777,
+      "text": "To find the sale price of the jacket after a 15% discount, you can follow these steps:\n\n1. Calculate the discount amount:\n\\[ \\text{Discount amount} = \\text{Original price} \\times \\text{Discount percentage} \\]\n\\[ \\text{Discount amount} = 80 \\times 0.15 \\]\n\\[ \\text{Discount amount} = 12 \\]\n\n2. Subtract the discount amount from the original price to get the sale price:\n\\[ \\text{Sale price} = \\text{Original price} - \\text{Discount amount} \\]\n\\[ \\text{Sale price} = 80 - 12 \\]\n\\[ \\text{Sale price} = 68 \\]\n\nSo, the sale price of the jacket is $68."
+    }
+  ],
+  "realized_lengths": [
+    163,
+    214,
+    188,
+    150,
+    179,
+    158,
+    176,
+    181,
+    215,
+    168
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.6171218324452639,
+  "semantic_volume": -16.367925184405713,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "To find the sale price of the jacket after a 15% discount, you can follow these steps:\n\n1. Calculate the amount of the discount:\n\\[ \\text{Discount Amount} = \\text{Original Price} \\times \\text{Discount Rate} \\]\n\\[ \\text{Discount Amount} = 80 \\times 0.15 = 12 \\text{ dollars} \\]\n\n2. Subtract the discount amount from the original price to get the sale price:\n\\[ \\text{Sale Price} = \\text{Original Price} - \\text{Discount Amount} \\]\n\\[ \\text{Sale Price} = 80 - 12 = 68 \\text{ dollars} \\]\n\nSo, the sale price of the jacket is 68 dollars.",
+    "answer_tokens": 163,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 8.27246595826
+  },
+  "greedy_answer": "To find the sale price of the jacket after a 15% discount, you can follow these steps:\n\n1. Calculate the amount of the discount:\n\\[ \\text{Discount Amount} = \\text{Original Price} \\times \\text{Discount Rate} \\]\n\\[ \\text{Discount Amount} = 80 \\times 0.15 = 12 \\text{ dollars} \\]\n\n2. Subtract the discount amount from the original price to get the sale price:\n\\[ \\text{Sale Price} = \\text{Original Price} - \\text{Discount Amount} \\]\n\\[ \\text{Sale Price} = 80 - 12 = 68 \\text{ dollars} \\]\n\nSo, the sale price of the jacket is 68 dollars.",
+  "greedy_answer_tokens": 163,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "68.0",
+  "normalizer_note": "numeric-exact",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_06.npz",
+  "prompt_total_wall_s": 93.83958116639405
+}

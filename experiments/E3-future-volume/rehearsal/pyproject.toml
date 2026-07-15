@@ -1,0 +1,18 @@
+[project]
+name = "e3-rehearsal"
+version = "0.1.0"
+description = "E3 LABELED dress rehearsal: the full E3 instrument (hidden-state extraction, seeded continuation sampling, nomic embedding, ground-truth semantic volume, verbalized-confidence and predictive-entropy baselines) PLUS the entire downstream analysis path (ridge probe, SEP median-split, AUROC comparison, paired bootstrap, verdict-branch decision) exercised end to end on ~40 THROWAWAY LABELED prompts on the local host, to eyeball every number for scale robustness and calibrate difficulty."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mlx-lm>=0.31.3",
+    "numpy>=2.0",
+    "scipy>=1.13",
+    "scikit-learn>=1.5",
+    "sentence-transformers>=3.0",
+    "einops>=0.8",
+    "e3-validation",
+]
+
+[tool.uv.sources]
+e3-validation = { path = "../validation", editable = false }

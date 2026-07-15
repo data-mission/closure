@@ -1,0 +1,53 @@
+[rehearsal] 41 labeled throwaway prompts loaded
+[rehearsal] loading model mlx-community/Qwen2.5-7B-Instruct-4bit ...
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 23431.87it/s]
+[rehearsal] model loaded in 1.68s
+[rehearsal] eos ids = [151645]
+[rehearsal] config sha256 = f4aa991f5178fdd771000b16346366beeb249f4d0bbed5fc56eb9c6608e930cc
+[rehearsal] loading embedder nomic-ai/nomic-embed-text-v1.5@e9b67630 ...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+<All keys matched successfully>
+[rehearsal] embedder loaded in 3.53s
+[prompt 00] SKIP (exists) - arithmetic d1
+[prompt 01] SKIP (exists) - arithmetic d1
+[prompt 02] SKIP (exists) - arithmetic d1
+[transformers] Detected the usage of `get_extended_attention_mask`: This function is deprecated and will be removed in v5.12.0. Please use the new API in `transformers.masking_utils`
+[prompt 03] arithmetic d2 vol=-51.259 ent=0.000 vc=100 correct=1 gold='100' got='100.0' t=54.1s
+[prompt 04] arithmetic d2 vol=-19.725 ent=0.011 vc=100 correct=1 gold='62' got='62.0' t=70.9s
+[prompt 05] arithmetic d2 vol=-98.580 ent=0.121 vc=100 correct=1 gold='128' got='128.0' t=23.5s
+[prompt 06] arithmetic d3 vol=-16.368 ent=0.000 vc=100 correct=1 gold='68' got='68.0' t=93.8s
+[prompt 07] arithmetic d3 vol=-19.195 ent=0.000 vc=100 correct=1 gold='30' got='30.0' t=70.3s
+[prompt 08] arithmetic d4 vol=-17.156 ent=0.058 vc=100 correct=1 gold='8' got='8.0' t=102.0s
+[prompt 09] arithmetic d4 vol=-18.590 ent=0.445 vc=100 correct=1 gold='370' got='370.0' t=99.5s
+[prompt 10] arithmetic d4 vol=-16.281 ent=0.579 vc=100 correct=1 gold='8' got='8.0' t=106.9s
+[prompt 11] arithmetic d4 vol=-16.690 ent=0.001 vc=100 correct=1 gold='525' got='525.0' t=87.1s
+[prompt 12] arithmetic d3 vol=-16.382 ent=0.046 vc=100 correct=0 gold='72' got='12.0' t=133.2s
+[prompt 13] factual    d1 vol=-138.155 ent=0.000 vc=100 correct=1 gold='Rome' got='rome' t=8.3s
+[prompt 14] factual    d1 vol=-138.155 ent=0.000 vc=100 correct=1 gold='12' got='12.0' t=10.0s
+[prompt 15] factual    d1 vol=-16.425 ent=0.702 vc=100 correct=1 gold='green' got='green' t=35.7s
+[prompt 16] factual    d1 vol=-138.155 ent=0.000 vc=100 correct=1 gold='Madrid' got='madrid' t=8.3s
+[prompt 17] factual    d2 vol=-138.155 ent=0.000 vc=100 correct=1 gold='O' got='o' t=8.9s
+[prompt 18] factual    d2 vol=-68.740 ent=0.000 vc=95 correct=1 gold='Mars' got='mars' t=22.8s
+[prompt 19] factual    d2 vol=-35.581 ent=0.000 vc=95 correct=1 gold='Asia' got='asia' t=31.3s
+[prompt 20] factual    d2 vol=-138.155 ent=0.000 vc=100 correct=1 gold='C' got='c' t=8.8s
+[prompt 21] factual    d3 vol=-58.113 ent=0.000 vc=100 correct=1 gold='Canberra' got='canberra' t=19.8s
+[prompt 22] factual    d3 vol=-138.155 ent=0.000 vc=100 correct=1 gold='K' got='k' t=8.9s
+[prompt 23] factual    d3 vol=-138.155 ent=0.000 vc=100 correct=1 gold='Fe' got='fe' t=8.9s
+[prompt 24] factual    d4 vol=-122.037 ent=0.000 vc=100 correct=1 gold='Ottawa' got='ottawa' t=9.1s
+[prompt 25] factual    d4 vol=-138.155 ent=0.000 vc=100 correct=1 gold='W' got='w' t=9.4s
+[prompt 26] factual    d4 vol=-67.201 ent=0.000 vc=100 correct=1 gold='Vatican City' got='vatican city' t=24.4s
+[prompt 27] deduction  d1 vol=-138.155 ent=0.000 vc=100 correct=1 gold='yes' got='yes' t=6.1s
+[prompt 28] deduction  d1 vol=-138.155 ent=0.322 vc=100 correct=1 gold='Tom' got='tom' t=8.0s
+[prompt 29] deduction  d1 vol=-96.757 ent=0.761 vc=100 correct=1 gold='bicycle' got='bicycle' t=12.0s
+[prompt 30] deduction  d2 vol=-51.429 ent=0.006 vc=100 correct=1 gold='Lee' got='lee' t=29.2s
+[prompt 31] deduction  d2 vol=-32.142 ent=0.150 vc=100 correct=1 gold='P' got='p' t=28.2s
+[prompt 32] deduction  d2 vol=-138.155 ent=0.000 vc=100 correct=1 gold='Sunday' got='sunday' t=13.4s
+[prompt 33] deduction  d3 vol=-15.479 ent=0.855 vc=100 correct=1 gold='Lou' got='lou' t=64.4s
+[prompt 34] deduction  d3 vol=-17.029 ent=0.894 vc=100 correct=1 gold='Foam' got='foam' t=58.6s
+[prompt 35] deduction  d3 vol=-15.723 ent=0.102 vc=100 correct=1 gold='manager' got='manager' t=38.9s
+[prompt 36] deduction  d3 vol=-45.977 ent=1.223 vc=100 correct=1 gold='plate' got='plate' t=25.1s
+[prompt 37] deduction  d3 vol=-20.058 ent=0.022 vc=100 correct=1 gold='Dana' got='dana' t=36.5s
+[prompt 38] deduction  d4 vol=-15.383 ent=0.259 vc=100 correct=1 gold='Cara' got='cara' t=51.4s
+[prompt 39] deduction  d4 vol=-17.726 ent=0.143 vc=100 correct=1 gold='C' got='c' t=47.7s
+[prompt 40] deduction  d4 vol=-18.044 ent=0.561 vc=100 correct=1 gold='20' got='20.0' t=69.1s
+[rehearsal] finished: 38 computed, 3 skipped, wall 1544.3s

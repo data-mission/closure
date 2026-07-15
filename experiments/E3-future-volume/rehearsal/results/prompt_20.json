@@ -1,0 +1,142 @@
+{
+  "idx": 20,
+  "kind": "factual",
+  "family": "factual",
+  "difficulty": 2,
+  "prompt": "What is the chemical symbol for carbon?",
+  "gold": "C",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 37,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 1.2831208096031332e-06,
+  "entropy_base": "nats",
+  "top1_token_id": 785,
+  "top1_token_str": "The",
+  "extract_time_s": 0.2641507079824805,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260914,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6488622920587659,
+      "text": "The chemical symbol for carbon is C."
+    },
+    {
+      "draw": 1,
+      "seed": 20260915,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.654551999643445,
+      "text": "The chemical symbol for carbon is C."
+    },
+    {
+      "draw": 2,
+      "seed": 20260916,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.656679249368608,
+      "text": "The chemical symbol for carbon is C."
+    },
+    {
+      "draw": 3,
+      "seed": 20260917,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6577862091362476,
+      "text": "The chemical symbol for carbon is C."
+    },
+    {
+      "draw": 4,
+      "seed": 20260918,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6625779159367085,
+      "text": "The chemical symbol for carbon is C."
+    },
+    {
+      "draw": 5,
+      "seed": 20260919,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6682205414399505,
+      "text": "The chemical symbol for carbon is C."
+    },
+    {
+      "draw": 6,
+      "seed": 20260920,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6640755003318191,
+      "text": "The chemical symbol for carbon is C."
+    },
+    {
+      "draw": 7,
+      "seed": 20260921,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6668906658887863,
+      "text": "The chemical symbol for carbon is C."
+    },
+    {
+      "draw": 8,
+      "seed": 20260922,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6636286666616797,
+      "text": "The chemical symbol for carbon is C."
+    },
+    {
+      "draw": 9,
+      "seed": 20260923,
+      "n_tokens": 8,
+      "eos_hit": true,
+      "wall_s": 0.6631275415420532,
+      "text": "The chemical symbol for carbon is C."
+    }
+  ],
+  "realized_lengths": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.06202833354473114,
+  "semantic_volume": -138.15510557964274,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "The chemical symbol for carbon is C.",
+    "answer_tokens": 8,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 1.2301578344777226
+  },
+  "greedy_answer": "The chemical symbol for carbon is C.",
+  "greedy_answer_tokens": 8,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "c",
+  "normalizer_note": "token-run-match",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_20.npz",
+  "prompt_total_wall_s": 8.829761458560824
+}

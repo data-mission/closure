@@ -1,0 +1,142 @@
+{
+  "idx": 4,
+  "kind": "arithmetic",
+  "family": "arithmetic",
+  "difficulty": 2,
+  "prompt": "What is 6 plus 7 times 8?",
+  "gold": "62",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 40,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.011050532571971416,
+  "entropy_base": "nats",
+  "top1_token_id": 1249,
+  "top1_token_str": "To",
+  "extract_time_s": 0.257209500297904,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260754,
+      "n_tokens": 121,
+      "eos_hit": true,
+      "wall_s": 5.421060875058174,
+      "text": "To solve the expression \"6 plus 7 times 8,\" you need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).\n\nThe expression is: \\(6 + 7 \\times 8\\).\n\nFirst, you perform the multiplication:\n\\[7 \\times 8 = 56\\]\n\nThen, you perform the addition:\n\\[6 + 56 = 62\\]\n\nSo, the answer is \\(62\\)."
+    },
+    {
+      "draw": 1,
+      "seed": 20260755,
+      "n_tokens": 152,
+      "eos_hit": true,
+      "wall_s": 6.762166959233582,
+      "text": "To solve the expression \"6 plus 7 times 8,\" you need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).\n\nHere, the expression is:\n\n\\[ 6 + 7 \\times 8 \\]\n\nAccording to PEMDAS, you should perform the multiplication before the addition:\n\n1. First, multiply 7 by 8:\n\\[ 7 \\times 8 = 56 \\]\n\n2. Then, add 6 to the result:\n\\[ 6 + 56 = 62 \\]\n\nSo, the final answer is:\n\n\\[ 62 \\]"
+    },
+    {
+      "draw": 2,
+      "seed": 20260756,
+      "n_tokens": 127,
+      "eos_hit": true,
+      "wall_s": 5.7214152086526155,
+      "text": "To solve the expression \"6 plus 7 times 8,\" you need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).\n\nHere, the expression is:\n\n\\[ 6 + 7 \\times 8 \\]\n\nFirst, you perform the multiplication:\n\n\\[ 7 \\times 8 = 56 \\]\n\nThen, you perform the addition:\n\n\\[ 6 + 56 = 62 \\]\n\nSo, the answer is \\( 62 \\)."
+    },
+    {
+      "draw": 3,
+      "seed": 20260757,
+      "n_tokens": 148,
+      "eos_hit": true,
+      "wall_s": 6.548667166382074,
+      "text": "To solve the expression \"6 plus 7 times 8,\" you need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).\n\nHere's the step-by-step solution:\n\n1. Identify the operations: \\(6 + 7 \\times 8\\).\n2. According to PEMDAS, you perform multiplication before addition.\n3. First, multiply \\(7 \\times 8 = 56\\).\n4. Then, add \\(6 + 56 = 62\\).\n\nSo, \\(6 + 7 \\times 8 = 62\\)."
+    },
+    {
+      "draw": 4,
+      "seed": 20260758,
+      "n_tokens": 125,
+      "eos_hit": true,
+      "wall_s": 5.628178584389389,
+      "text": "To solve the expression \"6 plus 7 times 8,\" you need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).\n\nThe expression is: \\(6 + 7 \\times 8\\).\n\nFirst, perform the multiplication:\n\\[7 \\times 8 = 56\\]\n\nThen, add 6 to the result of the multiplication:\n\\[6 + 56 = 62\\]\n\nSo, the answer is \\(62\\)."
+    },
+    {
+      "draw": 5,
+      "seed": 20260759,
+      "n_tokens": 124,
+      "eos_hit": true,
+      "wall_s": 5.573058125562966,
+      "text": "To solve the expression \"6 plus 7 times 8,\" you need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).\n\nThe expression can be written as:\n\n\\[6 + 7 \\times 8\\]\n\nFirst, perform the multiplication:\n\n\\[7 \\times 8 = 56\\]\n\nThen, add 6 to the result:\n\n\\[6 + 56 = 62\\]\n\nSo, the answer is 62."
+    },
+    {
+      "draw": 6,
+      "seed": 20260760,
+      "n_tokens": 117,
+      "eos_hit": true,
+      "wall_s": 5.265685332939029,
+      "text": "To solve the expression \"6 plus 7 times 8,\" you need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).\n\nHere's the step-by-step solution:\n\n1. First, perform the multiplication: \\(7 \\times 8 = 56\\).\n2. Then, perform the addition: \\(6 + 56 = 62\\).\n\nSo, the final answer is \\(62\\)."
+    },
+    {
+      "draw": 7,
+      "seed": 20260761,
+      "n_tokens": 116,
+      "eos_hit": true,
+      "wall_s": 5.233664833009243,
+      "text": "To solve the expression \"6 plus 7 times 8,\" you need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).\n\nHere's the step-by-step solution:\n\n1. First, perform the multiplication: \\(7 \\times 8 = 56\\).\n2. Then, perform the addition: \\(6 + 56 = 62\\).\n\nSo, the answer is \\(62\\)."
+    },
+    {
+      "draw": 8,
+      "seed": 20260762,
+      "n_tokens": 127,
+      "eos_hit": true,
+      "wall_s": 5.67800504155457,
+      "text": "To solve the expression \"6 plus 7 times 8,\" you need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).\n\nThe expression is:\n\n\\[ 6 + 7 \\times 8 \\]\n\nFirst, you perform the multiplication:\n\n\\[ 7 \\times 8 = 56 \\]\n\nThen, you perform the addition:\n\n\\[ 6 + 56 = 62 \\]\n\nSo, the final answer is:\n\n\\[ 62 \\]"
+    },
+    {
+      "draw": 9,
+      "seed": 20260763,
+      "n_tokens": 138,
+      "eos_hit": true,
+      "wall_s": 6.1411444172263145,
+      "text": "To solve the expression \"6 plus 7 times 8,\" you need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).\n\nThe expression can be written as:\n\n\\[ 6 + 7 \\times 8 \\]\n\nAccording to PEMDAS, you should perform the multiplication before the addition:\n\n\\[ 7 \\times 8 = 56 \\]\n\nThen, add 6 to the result:\n\n\\[ 6 + 56 = 62 \\]\n\nSo, the answer is \\( 62 \\)."
+    }
+  ],
+  "realized_lengths": [
+    121,
+    152,
+    127,
+    148,
+    125,
+    124,
+    117,
+    116,
+    127,
+    138
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.44435016717761755,
+  "semantic_volume": -19.72472689985121,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "To solve the expression \"6 plus 7 times 8,\" you need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).\n\nHere, the expression is:\n\n\\[ 6 + 7 \\times 8 \\]\n\nFirst, you perform the multiplication:\n\n\\[ 7 \\times 8 = 56 \\]\n\nThen, you perform the addition:\n\n\\[ 6 + 56 = 62 \\]\n\nSo, the answer is 62.",
+    "answer_tokens": 125,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 6.5646316250786185
+  },
+  "greedy_answer": "To solve the expression \"6 plus 7 times 8,\" you need to follow the order of operations, often remembered by the acronym PEMDAS (Parentheses, Exponents, Multiplication and Division (from left to right), Addition and Subtraction (from left to right)).\n\nHere, the expression is:\n\n\\[ 6 + 7 \\times 8 \\]\n\nFirst, you perform the multiplication:\n\n\\[ 7 \\times 8 = 56 \\]\n\nThen, you perform the addition:\n\n\\[ 6 + 56 = 62 \\]\n\nSo, the answer is 62.",
+  "greedy_answer_tokens": 125,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "62.0",
+  "normalizer_note": "numeric-exact",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_04.npz",
+  "prompt_total_wall_s": 70.88583495933563
+}

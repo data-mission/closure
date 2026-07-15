@@ -1,0 +1,142 @@
+{
+  "idx": 26,
+  "kind": "factual",
+  "family": "factual",
+  "difficulty": 4,
+  "prompt": "What is the smallest country in the world by area?",
+  "gold": "Vatican City",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 40,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.00015409584739245474,
+  "entropy_base": "nats",
+  "top1_token_id": 785,
+  "top1_token_str": "The",
+  "extract_time_s": 0.27685683220624924,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260974,
+      "n_tokens": 39,
+      "eos_hit": true,
+      "wall_s": 1.9281157916411757,
+      "text": "The smallest country in the world by area is Vatican City, also known as the Vatican. It has an area of approximately 0.44 square kilometers (0.17 square miles)."
+    },
+    {
+      "draw": 1,
+      "seed": 20260975,
+      "n_tokens": 33,
+      "eos_hit": true,
+      "wall_s": 1.6912774164229631,
+      "text": "The smallest country in the world by area is Vatican City, which has an area of approximately 0.44 square kilometers (0.17 square miles)."
+    },
+    {
+      "draw": 2,
+      "seed": 20260976,
+      "n_tokens": 33,
+      "eos_hit": true,
+      "wall_s": 1.6843439992517233,
+      "text": "The smallest country in the world by area is Vatican City, which has an area of approximately 0.44 square kilometers (0.17 square miles)."
+    },
+    {
+      "draw": 3,
+      "seed": 20260977,
+      "n_tokens": 51,
+      "eos_hit": true,
+      "wall_s": 2.4258458325639367,
+      "text": "The smallest country in the world by area is Vatican City, which has an area of approximately 0.44 square kilometers (0.17 square miles). It is located in Rome, Italy, and is the headquarters of the Roman Catholic Church."
+    },
+    {
+      "draw": 4,
+      "seed": 20260978,
+      "n_tokens": 33,
+      "eos_hit": true,
+      "wall_s": 1.6770318746566772,
+      "text": "The smallest country in the world by area is Vatican City, which has an area of approximately 0.44 square kilometers (0.17 square miles)."
+    },
+    {
+      "draw": 5,
+      "seed": 20260979,
+      "n_tokens": 33,
+      "eos_hit": true,
+      "wall_s": 1.6778188338503242,
+      "text": "The smallest country in the world by area is Vatican City, which has an area of about 0.44 square kilometers (0.17 square miles)."
+    },
+    {
+      "draw": 6,
+      "seed": 20260980,
+      "n_tokens": 50,
+      "eos_hit": true,
+      "wall_s": 2.379022791981697,
+      "text": "The smallest country in the world by area is Vatican City, also known as the Vatican. It is located in the heart of Rome, Italy, and has an area of approximately 0.44 square kilometers (0.17 square miles)."
+    },
+    {
+      "draw": 7,
+      "seed": 20260981,
+      "n_tokens": 50,
+      "eos_hit": true,
+      "wall_s": 2.380763875320554,
+      "text": "The smallest country in the world by area is Vatican City, also known as the Vatican. It is located in the heart of Rome, Italy, and has an area of about 0.44 square kilometers (0.17 square miles)."
+    },
+    {
+      "draw": 8,
+      "seed": 20260982,
+      "n_tokens": 51,
+      "eos_hit": true,
+      "wall_s": 2.422736916691065,
+      "text": "The smallest country in the world by area is Vatican City, which has an area of approximately 0.44 square kilometers (0.17 square miles). It is located within Rome, Italy, and is the headquarters of the Roman Catholic Church."
+    },
+    {
+      "draw": 9,
+      "seed": 20260983,
+      "n_tokens": 33,
+      "eos_hit": true,
+      "wall_s": 1.6791194593533874,
+      "text": "The smallest country in the world by area is Vatican City, which has an area of about 0.44 square kilometers (0.17 square miles)."
+    }
+  ],
+  "realized_lengths": [
+    39,
+    33,
+    33,
+    51,
+    33,
+    33,
+    50,
+    50,
+    51,
+    33
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.15362554229795933,
+  "semantic_volume": -67.20116209373407,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "The smallest country in the world by area is Vatican City, which has an area of approximately 0.44 square kilometers (0.17 square miles).",
+    "answer_tokens": 33,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 2.3670545844361186
+  },
+  "greedy_answer": "The smallest country in the world by area is Vatican City, which has an area of approximately 0.44 square kilometers (0.17 square miles).",
+  "greedy_answer_tokens": 33,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "vatican city",
+  "normalizer_note": "token-run-match",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_26.npz",
+  "prompt_total_wall_s": 24.430570125579834
+}

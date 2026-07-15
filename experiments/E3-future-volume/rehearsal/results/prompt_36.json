@@ -1,0 +1,142 @@
+{
+  "idx": 36,
+  "kind": "deduction",
+  "family": "deduction",
+  "difficulty": 3,
+  "prompt": "On a shelf, the cup is above the bowl, and the bowl is above the plate. What is at the bottom?",
+  "gold": "plate",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 54,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 1.222696304321289,
+  "entropy_base": "nats",
+  "top1_token_id": 785,
+  "top1_token_str": "The",
+  "extract_time_s": 0.27015645802021027,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20261074,
+      "n_tokens": 28,
+      "eos_hit": true,
+      "wall_s": 1.4734848327934742,
+      "text": "On the shelf, the arrangement from top to bottom is: cup, bowl, and plate. Therefore, the plate is at the bottom."
+    },
+    {
+      "draw": 1,
+      "seed": 20261075,
+      "n_tokens": 41,
+      "eos_hit": true,
+      "wall_s": 2.020162875764072,
+      "text": "On the shelf, the plate is at the bottom since the cup is above the bowl, and the bowl is above the plate. So the order from top to bottom is: cup, bowl, plate."
+    },
+    {
+      "draw": 2,
+      "seed": 20261076,
+      "n_tokens": 42,
+      "eos_hit": true,
+      "wall_s": 2.0565487910062075,
+      "text": "Based on the information given, the plate is at the bottom since the cup is above the bowl, and the bowl is above the plate. So, the plate is the item at the bottom of the stack."
+    },
+    {
+      "draw": 3,
+      "seed": 20261077,
+      "n_tokens": 53,
+      "eos_hit": true,
+      "wall_s": 2.510892207734287,
+      "text": "Based on the information given, the plate is at the bottom because the bowl is above it and the cup is above both the bowl and the plate. So, the order from top to bottom is: cup, bowl, plate. The plate is at the bottom."
+    },
+    {
+      "draw": 4,
+      "seed": 20261078,
+      "n_tokens": 30,
+      "eos_hit": true,
+      "wall_s": 1.573450499214232,
+      "text": "On the shelf, the order from top to bottom is the cup, the bowl, and the plate. Therefore, the plate is at the bottom."
+    },
+    {
+      "draw": 5,
+      "seed": 20261079,
+      "n_tokens": 42,
+      "eos_hit": true,
+      "wall_s": 2.0673578334972262,
+      "text": "Based on the information given, the plate is at the bottom since the cup is above the bowl, and the bowl is above the plate. So, the plate is the item at the bottom of the stack."
+    },
+    {
+      "draw": 6,
+      "seed": 20261080,
+      "n_tokens": 62,
+      "eos_hit": true,
+      "wall_s": 2.8807571660727262,
+      "text": "Based on the information provided:\n\n1. The cup is above the bowl.\n2. The bowl is above the plate.\n\nFrom these statements, we can deduce the order from top to bottom as follows:\n\n1. Cup\n2. Bowl\n3. Plate\n\nTherefore, the plate is at the bottom."
+    },
+    {
+      "draw": 7,
+      "seed": 20261081,
+      "n_tokens": 42,
+      "eos_hit": true,
+      "wall_s": 2.0578230004757643,
+      "text": "Based on the information given, the plate is at the bottom since the cup is above the bowl, and the bowl is above the plate. So, the plate is the item at the bottom of the stack."
+    },
+    {
+      "draw": 8,
+      "seed": 20261082,
+      "n_tokens": 57,
+      "eos_hit": true,
+      "wall_s": 2.674218541942537,
+      "text": "Based on the information given, the plate is at the bottom because the cup is above the bowl, and the bowl is above the plate. So, the order from top to bottom is:\n\n1. Cup\n2. Bowl\n3. Plate\n\nThe plate is at the bottom."
+    },
+    {
+      "draw": 9,
+      "seed": 20261083,
+      "n_tokens": 45,
+      "eos_hit": true,
+      "wall_s": 2.1845177924260497,
+      "text": "Based on the information given, the plate is at the bottom because the bowl is above it and the cup is above both the bowl and the plate. So the order from top to bottom is: cup, bowl, plate."
+    }
+  ],
+  "realized_lengths": [
+    28,
+    41,
+    42,
+    53,
+    30,
+    42,
+    62,
+    42,
+    57,
+    45
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.2351247500628233,
+  "semantic_volume": -45.97689761616408,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "The plate is at the bottom. The arrangement from top to bottom is: cup, bowl, plate.",
+    "answer_tokens": 21,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 1.9022246673703194
+  },
+  "greedy_answer": "The plate is at the bottom. The arrangement from top to bottom is: cup, bowl, plate.",
+  "greedy_answer_tokens": 21,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "plate",
+  "normalizer_note": "token-run-match",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_36.npz",
+  "prompt_total_wall_s": 25.104249209165573
+}

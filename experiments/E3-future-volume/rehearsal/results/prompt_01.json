@@ -1,0 +1,142 @@
+{
+  "idx": 1,
+  "kind": "arithmetic",
+  "family": "arithmetic",
+  "difficulty": 1,
+  "prompt": "What is 63 divided by 7?",
+  "gold": "9",
+  "throwaway": true,
+  "answerable": true,
+  "prompt_tokens": 39,
+  "hidden_dim": 3584,
+  "hidden_dtype_source": "mlx.core.float16",
+  "next_token_entropy_nats": 0.002500709379091859,
+  "entropy_base": "nats",
+  "top1_token_id": 21,
+  "top1_token_str": "6",
+  "extract_time_s": 0.25994200073182583,
+  "continuations": [
+    {
+      "draw": 0,
+      "seed": 20260724,
+      "n_tokens": 10,
+      "eos_hit": true,
+      "wall_s": 0.7187177501618862,
+      "text": "63 divided by 7 is 9."
+    },
+    {
+      "draw": 1,
+      "seed": 20260725,
+      "n_tokens": 10,
+      "eos_hit": true,
+      "wall_s": 0.7346857506781816,
+      "text": "63 divided by 7 is 9."
+    },
+    {
+      "draw": 2,
+      "seed": 20260726,
+      "n_tokens": 10,
+      "eos_hit": true,
+      "wall_s": 0.7345097921788692,
+      "text": "63 divided by 7 is 9."
+    },
+    {
+      "draw": 3,
+      "seed": 20260727,
+      "n_tokens": 10,
+      "eos_hit": true,
+      "wall_s": 0.7342107500880957,
+      "text": "63 divided by 7 is 9."
+    },
+    {
+      "draw": 4,
+      "seed": 20260728,
+      "n_tokens": 34,
+      "eos_hit": true,
+      "wall_s": 1.7350682504475117,
+      "text": "63 divided by 7 is 9. \n\nMathematically, it can be represented as:\n\n\\[ 63 \\div 7 = 9 \\]"
+    },
+    {
+      "draw": 5,
+      "seed": 20260729,
+      "n_tokens": 10,
+      "eos_hit": true,
+      "wall_s": 0.7336363745853305,
+      "text": "63 divided by 7 is 9."
+    },
+    {
+      "draw": 6,
+      "seed": 20260730,
+      "n_tokens": 39,
+      "eos_hit": true,
+      "wall_s": 1.9397547924891114,
+      "text": "63 divided by 7 is 9. \n\nYou can think of it as 63 \u00f7 7 = 9, or 7 \u00d7 9 = 63."
+    },
+    {
+      "draw": 7,
+      "seed": 20260731,
+      "n_tokens": 30,
+      "eos_hit": true,
+      "wall_s": 1.5702745001763105,
+      "text": "63 divided by 7 is 9. \n\nYou can verify this by multiplying 7 by 9, which indeed equals 63."
+    },
+    {
+      "draw": 8,
+      "seed": 20260732,
+      "n_tokens": 30,
+      "eos_hit": true,
+      "wall_s": 1.5646532084792852,
+      "text": "63 divided by 7 is 9. \n\nYou can verify this by multiplying 7 by 9, which gives you 63."
+    },
+    {
+      "draw": 9,
+      "seed": 20260733,
+      "n_tokens": 34,
+      "eos_hit": true,
+      "wall_s": 1.7417239164933562,
+      "text": "63 divided by 7 is 9. \n\nMathematically, this can be represented as:\n\n\\[ 63 \\div 7 = 9 \\]"
+    }
+  ],
+  "realized_lengths": [
+    10,
+    10,
+    10,
+    10,
+    34,
+    10,
+    39,
+    30,
+    30,
+    34
+  ],
+  "eos_hit_count": 10,
+  "n_valid_continuations": 10,
+  "excluded": false,
+  "embedding_model": "nomic-ai/nomic-embed-text-v1.5",
+  "embedding_revision": "e9b6763023c676ca8431644204f50c2b100d9aab",
+  "embedding_dim": 768,
+  "embedding_prefix": "clustering: ",
+  "embed_wall_s": 0.09490691684186459,
+  "semantic_volume": -72.59562519888192,
+  "vc": {
+    "value": 100,
+    "missing": false,
+    "parse_failed_first": false,
+    "retried": false,
+    "answer": "63 divided by 7 is 9. \n\nMathematically, this can be represented as:\n\n\\[ 63 \\div 7 = 9 \\]",
+    "answer_tokens": 34,
+    "conf_raw": "100",
+    "conf_raw_retry": null,
+    "elicitation_verbatim": "On a scale from 0 to 100, what is the probability that your answer above is correct? Reply with a single integer between 0 and 100 and nothing else.",
+    "wall_s": 2.3983485847711563
+  },
+  "greedy_answer": "63 divided by 7 is 9. \n\nMathematically, this can be represented as:\n\n\\[ 63 \\div 7 = 9 \\]",
+  "greedy_answer_tokens": 34,
+  "greedy_answer_eos_hit": true,
+  "correct": true,
+  "normalizer_extracted": "9.0",
+  "normalizer_note": "numeric-exact",
+  "greedy_matches_vc_turn1": true,
+  "npz": "prompt_01.npz",
+  "prompt_total_wall_s": 16.68907650001347
+}

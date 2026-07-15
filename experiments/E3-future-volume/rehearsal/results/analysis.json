@@ -1,0 +1,323 @@
+{
+  "n": 41,
+  "n_correct": 40,
+  "n_negatives": 1,
+  "families": {
+    "arithmetic": 13,
+    "deduction": 14,
+    "factual": 14
+  },
+  "thresholds_evaluated_at": {
+    "r2_fidelity_min": 0.1,
+    "r2_margin_over_classmean_min": 0.05,
+    "r2_ood_min": 0.05,
+    "auc_binary_min": 0.7,
+    "vc_ci_floor": 0.0
+  },
+  "alpha_grid": [
+    0.01,
+    0.1,
+    1.0,
+    10.0,
+    100.0,
+    1000.0,
+    10000.0,
+    100000.0,
+    1000000.0
+  ],
+  "indistribution": {
+    "n_train": 29,
+    "n_test": 12,
+    "ridge_alpha_selected": 10.0,
+    "r2": 0.7431219065114032,
+    "spearman": 0.8193785757076022,
+    "classmean_r2": 0.339567099853439,
+    "r2_minus_classmean": 0.40355480665796417,
+    "label": "DESCRIPTIVE at n=41 \u2014 not a result"
+  },
+  "sep_median_split": {
+    "auroc_volume_class": 0.9444444444444445,
+    "note": "ok"
+  },
+  "ood_leave_one_family_out": {
+    "per_family_r2": {
+      "arithmetic": 0.42936639081638184,
+      "deduction": 0.3293895437821023,
+      "factual": 0.059961791933253905
+    },
+    "pooled_r2": 0.4543605130322731,
+    "pooled_spearman": 0.6666978680374296,
+    "label": "DESCRIPTIVE at n=41 \u2014 load-bearing regime, uninterpretable at this n"
+  },
+  "correctness_auroc": {
+    "probe_ood": {
+      "auroc": 0.825,
+      "note": "ok",
+      "n_scored": 41
+    },
+    "gt_volume_ceiling": {
+      "auroc": 0.875,
+      "note": "ok",
+      "n_scored": 41
+    },
+    "binarized_probe_ood": {
+      "auroc": 0.725,
+      "note": "ok",
+      "n_scored": 41
+    },
+    "verbalized_confidence": {
+      "auroc": 0.475,
+      "note": "ok",
+      "n_scored": 41
+    },
+    "predictive_entropy_b3": {
+      "auroc": 0.6,
+      "note": "ok",
+      "n_scored": 41
+    }
+  },
+  "probe_vs_vc_paired_bootstrap": {
+    "diff": 0.35,
+    "ci_low": 0.2179487179487179,
+    "ci_high": 0.47435897435897434,
+    "excludes_zero": true,
+    "n_boot": 10000,
+    "ci_level": 0.95,
+    "n_scored": 41
+  },
+  "verdict": {
+    "inputs": {
+      "r2_indist": 0.7431219065114032,
+      "r2_classmean_indist": 0.339567099853439,
+      "r2_ood": 0.4543605130322731,
+      "auc_binary": 0.9444444444444445,
+      "probe_vs_vc_ci_low": 0.2179487179487179
+    },
+    "branch": "confirmed-shaped",
+    "computable": true
+  },
+  "greedy_truncation": {
+    "n_truncated": 1,
+    "truncated_idx": [
+      12
+    ],
+    "truncated_and_labeled_incorrect": 1,
+    "note": "a truncated greedy answer's correctness label is a cap artifact risk: the model may have been mid-derivation when MAX_TOKENS=256 cut it"
+  },
+  "calibration": {
+    "accuracy_by_difficulty": {
+      "1": {
+        "n": 10,
+        "n_correct": 10,
+        "accuracy": 1.0
+      },
+      "2": {
+        "n": 10,
+        "n_correct": 10,
+        "accuracy": 1.0
+      },
+      "3": {
+        "n": 11,
+        "n_correct": 10,
+        "accuracy": 0.9090909090909091
+      },
+      "4": {
+        "n": 10,
+        "n_correct": 10,
+        "accuracy": 1.0
+      }
+    },
+    "accuracy_by_family": {
+      "arithmetic": {
+        "n": 13,
+        "n_correct": 12,
+        "accuracy": 0.9230769230769231
+      },
+      "deduction": {
+        "n": 14,
+        "n_correct": 14,
+        "accuracy": 1.0
+      },
+      "factual": {
+        "n": 14,
+        "n_correct": 14,
+        "accuracy": 1.0
+      }
+    },
+    "n_by_family_difficulty": {
+      "arithmetic-d1": {
+        "n": 3,
+        "n_correct": 3
+      },
+      "arithmetic-d2": {
+        "n": 3,
+        "n_correct": 3
+      },
+      "arithmetic-d3": {
+        "n": 3,
+        "n_correct": 2
+      },
+      "arithmetic-d4": {
+        "n": 4,
+        "n_correct": 4
+      },
+      "deduction-d1": {
+        "n": 3,
+        "n_correct": 3
+      },
+      "deduction-d2": {
+        "n": 3,
+        "n_correct": 3
+      },
+      "deduction-d3": {
+        "n": 5,
+        "n_correct": 5
+      },
+      "deduction-d4": {
+        "n": 3,
+        "n_correct": 3
+      },
+      "factual-d1": {
+        "n": 4,
+        "n_correct": 4
+      },
+      "factual-d2": {
+        "n": 4,
+        "n_correct": 4
+      },
+      "factual-d3": {
+        "n": 3,
+        "n_correct": 3
+      },
+      "factual-d4": {
+        "n": 3,
+        "n_correct": 3
+      }
+    },
+    "n_negatives_overall": 1,
+    "overall_accuracy": 0.975609756097561,
+    "auroc_ci_width_at_n41": {
+      "observed_negative_rate": 0.024390243902439025,
+      "arms": {
+        "probe_ood": {
+          "auroc_point": 0.825,
+          "ci_low": 0.7,
+          "ci_high": 0.925,
+          "ci_width": 0.2250000000000001,
+          "n_boot_effective": 10000
+        },
+        "gt_volume_ceiling": {
+          "auroc_point": 0.875,
+          "ci_low": 0.7692307692307693,
+          "ci_high": 0.9743589743589743,
+          "ci_width": 0.20512820512820507,
+          "n_boot_effective": 10000
+        }
+      },
+      "method": "single-arm percentile bootstrap, 10k resamples, 95% two-sided"
+    },
+    "extrapolated_auroc_ci_width_at_n126": {
+      "method": "synthetic-mixture bootstrap: resample correct/incorrect conditional score distributions (rehearsal-observed) to target n and negative rate, 2000 reps, 95% two-sided. Only as trustworthy as the (small) incorrect-score pool.",
+      "arms": {
+        "probe_ood": {
+          "neg_rate_10pct": {
+            "ci_low": 0.7522123893805309,
+            "ci_high": 0.8938053097345132,
+            "ci_width": 0.1415929203539823,
+            "median_auroc": 0.8230088495575221,
+            "pos_pool_size": 40,
+            "neg_pool_size": 1
+          },
+          "neg_rate_25pct": {
+            "ci_low": 0.7446808510638298,
+            "ci_high": 0.8936170212765957,
+            "ci_width": 0.14893617021276595,
+            "median_auroc": 0.8297872340425532,
+            "pos_pool_size": 40,
+            "neg_pool_size": 1
+          },
+          "neg_rate_40pct": {
+            "ci_low": 0.7368421052631579,
+            "ci_high": 0.9078947368421053,
+            "ci_width": 0.17105263157894746,
+            "median_auroc": 0.8289473684210527,
+            "pos_pool_size": 40,
+            "neg_pool_size": 1
+          }
+        },
+        "gt_volume_ceiling": {
+          "neg_rate_10pct": {
+            "ci_low": 0.8141592920353983,
+            "ci_high": 0.9294247787610608,
+            "ci_width": 0.1152654867256625,
+            "median_auroc": 0.8761061946902655,
+            "pos_pool_size": 40,
+            "neg_pool_size": 1
+          },
+          "neg_rate_25pct": {
+            "ci_low": 0.8082446808510638,
+            "ci_high": 0.9361702127659575,
+            "ci_width": 0.12792553191489364,
+            "median_auroc": 0.8723404255319149,
+            "pos_pool_size": 40,
+            "neg_pool_size": 1
+          },
+          "neg_rate_40pct": {
+            "ci_low": 0.7894736842105263,
+            "ci_high": 0.9342105263157895,
+            "ci_width": 0.14473684210526316,
+            "median_auroc": 0.881578947368421,
+            "pos_pool_size": 40,
+            "neg_pool_size": 1
+          }
+        }
+      }
+    }
+  },
+  "confounds": {
+    "volume_vs_mean_len": {
+      "pearson": 0.7862282685763019,
+      "spearman": 0.9101929918773901
+    },
+    "volume_vs_std_len": {
+      "pearson": 0.6596308836821243,
+      "spearman": 0.7107895673614522
+    },
+    "volume_vs_entropy": {
+      "pearson": 0.337103771721859,
+      "spearman": 0.6271181793016983
+    },
+    "volume_variance_decomposition": {
+      "ss_total": 109307.12980774904,
+      "ss_between_family": 27880.73346931873,
+      "ss_within_family": 81426.3963384303,
+      "eta_squared_between": 0.2550678397498477,
+      "per_family": {
+        "arithmetic": {
+          "n": 13,
+          "mean": -46.68421041684064,
+          "var": 1657.4289341210592
+        },
+        "deduction": {
+          "n": 14,
+          "mean": -54.300817518225244,
+          "var": 2370.694686399856
+        },
+        "factual": {
+          "n": 14,
+          "mean": -105.23837335720047,
+          "var": 1906.4353275184683
+        }
+      },
+      "note": "eta^2 = fraction of log-volume variance BETWEEN families; 1-eta^2 is within-family"
+    }
+  },
+  "volume_split_half_reliability": {
+    "pearson_half_vs_half": 0.9327143110934697,
+    "spearman_half_vs_half": 0.8623702895624509,
+    "spearman_brown_full_length": 0.9651859105506069,
+    "n": 41,
+    "method": "volume recomputed on draws 0-4 vs draws 5-9 per prompt via e3_validation.semantic_volume; correlated across prompts. N=5 halves are noisier than the N=10 statistic, so this understates N=10 reliability; Spearman-Brown correction reported. DESCRIPTIVE.",
+    "implied_r2_ceiling_note": "probe R^2 against the N=10 target cannot exceed target reliability; compare r2_fidelity_min=0.10 to this number"
+  }
+}
