@@ -1,0 +1,310 @@
+{
+  "model_id": "mlx-community/Qwen2.5-7B-Instruct-4bit",
+  "mlx_version": "0.32.0",
+  "python_version": "3.12.13",
+  "seed": 20260714,
+  "total_ram_bytes_nominal": 17179869184,
+  "mlx_lm_version": "0.31.3",
+  "load_time_s": 1.601205375045538,
+  "ram_available_before_load_bytes": 7389544448,
+  "ram_available_after_load_bytes": 3887890432,
+  "ram_consumed_by_load_bytes": 3501654016,
+  "mlx_peak_memory_after_load_bytes": 4287507464,
+  "tie_word_embeddings": false,
+  "hidden_dim": 3584,
+  "hidden_dtype": "mlx.core.float16",
+  "hidden_states_npz": "/Users/vladryzhkov/repos/closure/experiments/E3-future-volume/spike/results/hidden_states.npz",
+  "hidden_states_shape": [
+    20,
+    3584
+  ],
+  "extract_time_s_mean": 0.25013573342002926,
+  "extract_time_s_min": 0.24417579174041748,
+  "extract_time_s_max": 0.3477552495896816,
+  "sanity_top1_match_count": 20,
+  "sanity_top1_match_total": 20,
+  "sanity_max_abs_logit_diff": 0.03125,
+  "per_prompt": [
+    {
+      "idx": 0,
+      "prompt": "What is the capital of France?",
+      "prompt_tokens": 36,
+      "extract_time_s": 0.3477552495896816,
+      "top1_token_id": 785,
+      "top1_token_str": "The",
+      "sanity_top1_match": true,
+      "max_abs_logit_diff": 0.01953125
+    },
+    {
+      "idx": 1,
+      "prompt": "How many continents are there on Earth?",
+      "prompt_tokens": 37,
+      "extract_time_s": 0.24485070817172527,
+      "top1_token_id": 3862,
+      "top1_token_str": "There",
+      "sanity_top1_match": true,
+      "max_abs_logit_diff": 0.021484375
+    },
+    {
+      "idx": 2,
+      "prompt": "What year did the Apollo 11 mission land on the Moon?",
+      "prompt_tokens": 43,
+      "extract_time_s": 0.24522312451153994,
+      "top1_token_id": 785,
+      "top1_token_str": "The",
+      "sanity_top1_match": true,
+      "max_abs_logit_diff": 0.01953125
+    },
+    {
+      "idx": 3,
+      "prompt": "What is the chemical symbol for gold?",
+      "prompt_tokens": 37,
+      "extract_time_s": 0.24457712564617395,
+      "top1_token_id": 785,
+      "top1_token_str": "The",
+      "sanity_top1_match": true,
+      "max_abs_logit_diff": 0.017578125
+    },
+    {
+      "idx": 4,
+      "prompt": "Who wrote the play 'Romeo and Juliet'?",
+      "prompt_tokens": 40,
+      "extract_time_s": 0.24472262524068356,
+      "top1_token_id": 785,
+      "top1_token_str": "The",
+      "sanity_top1_match": true,
+      "max_abs_logit_diff": 0.015625
+    },
+    {
+      "idx": 5,
+      "prompt": "What is 17 multiplied by 23?",
+      "prompt_tokens": 40,
+      "extract_time_s": 0.24443641770631075,
+      "top1_token_id": 1249,
+      "top1_token_str": "To",
+      "sanity_top1_match": true,
+      "max_abs_logit_diff": 0.017578125
+    },
+    {
+      "idx": 6,
+      "prompt": "If a train travels 60 km in 45 minutes, what is its average speed in km/h?",
+      "prompt_tokens": 52,
+      "extract_time_s": 0.24851970747113228,
+      "top1_token_id": 1249,
+      "top1_token_str": "To",
+      "sanity_top1_match": true,
+      "max_abs_logit_diff": 0.015625
+    },
+    {
+      "idx": 7,
+      "prompt": "What is the derivative of x^3 with respect to x?",
+      "prompt_tokens": 42,
+      "extract_time_s": 0.24523899983614683,
+      "top1_token_id": 785,
+      "top1_token_str": "The",
+      "sanity_top1_match": true,
+      "max_abs_logit_diff": 0.015625
+    },
+    {
+      "idx": 8,
+      "prompt": "Compute the sum of the first 10 positive integers.",
+      "prompt_tokens": 41,
+      "extract_time_s": 0.24520370922982693,
+      "top1_token_id": 1249,
+      "top1_token_str": "To",
+      "sanity_top1_match": true,
+      "max_abs_logit_diff": 0.03125
+    },
+    {
+      "idx": 9,
+      "prompt": "List three primary colors, separated by commas.",
+      "prompt_tokens": 38,
+      "extract_time_s": 0.24470695853233337,
+      "top1_token_id": 6033,
+      "top1_token_str": "Red",
+      "sanity_top1_match": true,
+      "max_abs_logit_diff": 0.017578125
+    },
+    {
+      "idx": 10,
+      "prompt": "Rewrite this sentence in the past tense: 'She walks to the store.'",
+      "prompt_tokens": 45,
+      "extract_time_s": 0.24585933238267899,
+      "top1_token_id": 7941,
+      "top1_token_str": "She",
+      "sanity_top1_match": true,
+      "max_abs_logit_diff": 0.01953125
+    },
+    {
+      "idx": 11,
+      "prompt": "Translate the word 'hello' into Spanish.",
+      "prompt_tokens": 38,
+      "extract_time_s": 0.24463733471930027,
+      "top1_token_id": 785,
+      "top1_token_str": "The",
+      "sanity_top1_match": true,
+      "max_abs_logit_diff": 0.015625
+    },
+    {
+      "idx": 12,
+      "prompt": "Give a one-word antonym for 'hot'.",
+      "prompt_tokens": 39,
+      "extract_time_s": 0.2442758334800601,
+      "top1_token_id": 76418,
+      "top1_token_str": "Cold",
+      "sanity_top1_match": true,
+      "max_abs_logit_diff": 0.0234375
+    },
+    {
+      "idx": 13,
+      "prompt": "Is it going to rain tomorrow?",
+      "prompt_tokens": 36,
+      "extract_time_s": 0.24510412570089102,
+      "top1_token_id": 40,
+      "top1_token_str": "I",
+      "sanity_top1_match": true,
+      "max_abs_logit_diff": 0.0234375
+    },
+    {
+      "idx": 14,
+      "prompt": "What should I have for dinner?",
+      "prompt_tokens": 36,
+      "extract_time_s": 0.24429662432521582,
+      "top1_token_id": 39814,
+      "top1_token_str": "Sure",
+      "sanity_top1_match": true,
+      "max_abs_logit_diff": 0.02490234375
+    },
+    {
+      "idx": 15,
+      "prompt": "Which is better?",
+      "prompt_tokens": 33,
+      "extract_time_s": 0.24417579174041748,
+      "top1_token_id": 1249,
+      "top1_token_str": "To",
+      "sanity_top1_match": true,
+      "max_abs_logit_diff": 0.01953125
+    },
+    {
+      "idx": 16,
+      "prompt": "What does this mean?",
+      "prompt_tokens": 34,
+      "extract_time_s": 0.24424287490546703,
+      "top1_token_id": 40,
+      "top1_token_str": "I",
+      "sanity_top1_match": true,
+      "max_abs_logit_diff": 0.0224609375
+    },
+    {
+      "idx": 17,
+      "prompt": "Write the opening line of a mystery novel.",
+      "prompt_tokens": 38,
+      "extract_time_s": 0.24478625040501356,
+      "top1_token_id": 785,
+      "top1_token_str": "The",
+      "sanity_top1_match": true,
+      "max_abs_logit_diff": 0.015625
+    },
+    {
+      "idx": 18,
+      "prompt": "Describe an imaginary color that does not exist.",
+      "prompt_tokens": 38,
+      "extract_time_s": 0.2444047499448061,
+      "top1_token_id": 39814,
+      "top1_token_str": "Sure",
+      "sanity_top1_match": true,
+      "max_abs_logit_diff": 0.017578125
+    },
+    {
+      "idx": 19,
+      "prompt": "Invent a name for a new planet and say one thing about it.",
+      "prompt_tokens": 44,
+      "extract_time_s": 0.24569712486118078,
+      "top1_token_id": 785,
+      "top1_token_str": "The",
+      "sanity_top1_match": true,
+      "max_abs_logit_diff": 0.015625
+    }
+  ],
+  "generation": {
+    "gen_tokens_requested": 128,
+    "temp": 0.7,
+    "top_p": 0.95,
+    "n_prompts": 5,
+    "eos_ignored_note": "generate_step consumed exactly gen_tokens_requested tokens per run without stopping at EOS \u2014 sustained-throughput measurement",
+    "runs": [
+      {
+        "prompt_idx": 0,
+        "prompt": "What is the capital of France?",
+        "prompt_tokens": 36,
+        "generation_tokens": 128,
+        "prompt_tps": 109.2460327540216,
+        "generation_tps": 24.269640098659114,
+        "prompt_time_s": 0.3295314172282815,
+        "generation_time_s": 5.232875291258097,
+        "peak_memory_gb": 4.4242618,
+        "eos_ignored": true
+      },
+      {
+        "prompt_idx": 6,
+        "prompt": "If a train travels 60 km in 45 minutes, what is its average speed in km/h?",
+        "prompt_tokens": 52,
+        "generation_tokens": 128,
+        "prompt_tps": 161.7596969107484,
+        "generation_tps": 24.250614826289233,
+        "prompt_time_s": 0.3214644994586706,
+        "generation_time_s": 5.236980625428259,
+        "peak_memory_gb": 4.43314547,
+        "eos_ignored": true
+      },
+      {
+        "prompt_idx": 10,
+        "prompt": "Rewrite this sentence in the past tense: 'She walks to the store.'",
+        "prompt_tokens": 45,
+        "generation_tokens": 128,
+        "prompt_tps": 141.21043542067923,
+        "generation_tps": 24.247254599590594,
+        "prompt_time_s": 0.31867333222180605,
+        "generation_time_s": 5.237706375308335,
+        "peak_memory_gb": 4.43588163,
+        "eos_ignored": true
+      },
+      {
+        "prompt_idx": 14,
+        "prompt": "What should I have for dinner?",
+        "prompt_tokens": 36,
+        "generation_tokens": 128,
+        "prompt_tps": 113.40023231514824,
+        "generation_tps": 24.220065425373896,
+        "prompt_time_s": 0.3174596671015024,
+        "generation_time_s": 5.243586165830493,
+        "peak_memory_gb": 4.43588163,
+        "eos_ignored": true
+      },
+      {
+        "prompt_idx": 17,
+        "prompt": "Write the opening line of a mystery novel.",
+        "prompt_tokens": 38,
+        "generation_tokens": 128,
+        "prompt_tps": 119.32813556361991,
+        "generation_tps": 24.164490157620232,
+        "prompt_time_s": 0.3184496248140931,
+        "generation_time_s": 5.25564575009048,
+        "peak_memory_gb": 4.43588163,
+        "eos_ignored": true
+      }
+    ],
+    "prompt_tps_mean": 128.98890659284348,
+    "generation_tps_mean": 24.230413021506614,
+    "prompt_tps_min": 109.2460327540216,
+    "prompt_tps_max": 161.7596969107484,
+    "generation_tps_min": 24.164490157620232,
+    "generation_tps_max": 24.269640098659114
+  },
+  "ram_available_after_gen_bytes": 3249061888,
+  "mlx_peak_memory_bytes": 4435881630,
+  "mlx_peak_memory_gb": 4.43588163,
+  "headroom_vs_16gb_bytes": 12743987554,
+  "headroom_vs_16gb_gb": 12.743987554,
+  "min_ram_available_observed_bytes": 3249061888
+}

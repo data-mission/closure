@@ -1,0 +1,11 @@
+[project]
+name = "e3-spike"
+version = "0.1.0"
+description = "E3 feasibility spike: last-token pre-sampling hidden-state extraction + throughput on Apple silicon"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mlx-lm>=0.31.3",
+    "numpy>=2.5.1",
+    "psutil>=7.2.2",
+]
