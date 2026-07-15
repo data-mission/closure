@@ -1,0 +1,19 @@
+[project]
+name = "e3-run"
+version = "0.1.0"
+description = "E3 confirmatory run: the full frozen E3 instrument (hidden-state extraction, seeded continuation sampling, nomic embedding, ground-truth semantic volume, verbalized-confidence B1 variants and predictive-entropy B3) executed end to end on the 200-prompt confirmatory corpus, resumable, with a committed frozen-config manifest."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mlx-lm>=0.31.3",
+    "numpy>=2.0",
+    "scipy>=1.13",
+    "scikit-learn>=1.5",
+    "sentence-transformers>=3.0",
+    "einops>=0.8",
+    "huggingface-hub>=0.24",
+    "e3-validation",
+]
+
+[tool.uv.sources]
+e3-validation = { path = "../validation", editable = true }
