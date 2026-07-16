@@ -39,14 +39,15 @@ Every citation used in this repository, with its verification status. **A citati
 | arXiv:2405.16908 | Instructed hedging misaligns with intrinsic uncertainty | E4 | unverified |
 | arXiv:2511.10453 | Enumerate-interpretations prompting (+11.75/+7.15) | E4 | unverified |
 | arXiv:2511.01323, arXiv:2502.01523 | Coverage metrics; ~1.17 vs 2.19 interpretations/question | E4 | unverified |
-| arXiv:2410.00382 | "Pretend to forget": final layer says forgotten, earlier layers still compute from content | E5 | unverified |
-| arXiv:2506.08184 | Outdated/irrelevant annotations barely modulate retrieval | E5 | unverified |
-| arXiv:2602.04288 (Contextual Drag) | Context errors bias later generations; feedback doesn't eliminate | E5 | abstract-checked |
-| arXiv:2605.08563 (CCRM) | Contamination cascade ε₁/ε₀ = 7.1 on SWE-bench Verified | E5 | unverified — PDF partially unreadable during review |
-| arXiv:2505.15392, arXiv:2412.06593 | Anchoring resists "ignore the anchor" instructions | E5 | unverified |
-| arXiv:2605.30219 (BeliefTrack) | Contextual hijacking; RL reduces failed-isolation 70.9%, prompting doesn't | E5 | abstract-checked |
-| arXiv:2406.19764 (Wilie et al.) | Belief-revision near floor across ~30 models; AGM as motivation only | E5 | abstract-checked |
-| arXiv:2606.01435 | Deterministic freshness resolver beats LLM judgment +10–21pp | E5 | abstract-checked |
+| arXiv:2410.00382 | "Pretend to forget": final layer says forgotten, earlier layers still compute from content | E5 | body-checked — confirmed (logit-lens evidence, §5.3.1) |
+| arXiv:2506.08184 | Outdated/irrelevant annotations barely modulate retrieval | E5 | body-checked — confirmed near-verbatim (the annotation wording is the paper's own, p.2) |
+| arXiv:2602.04288 (Contextual Drag) | Context errors bias later generations; feedback doesn't eliminate | E5 | body-checked — confirmed (10–20% and mechanism in body) |
+| arXiv:2605.08563 (CCRM) | Contamination cascade ε₁/ε₀ = 7.1 on SWE-bench Verified | E5 | body-checked — confirmed (ε₁/ε₀ = 7.1 and "SWE-bench Verified" both named, p.1) |
+| arXiv:2412.06593 | Anchoring resists explicit "ignore the anchor" instructions | E5 | body-checked — confirmed ("Ignore Anchor Hint" tested and insufficient, §5; "we cannot correct their behavior even when we explicitly ask") |
+| arXiv:2505.15392 | Anchoring persists under generic mitigation strategies | E5 | body-checked — does NOT test ignore-anchor instructions (zero "ignor" matches in full text); removed from the ignore-instruction claim; its best strategy (Anti-DP) shows partial reduction |
+| arXiv:2605.30219 (BeliefTrack) | Contextual hijacking; RL reduces failed-isolation 70.9%, prompting doesn't | E5 | body-checked — confirmed incl. "contextual hijacking" (the paper's own term, Fig. 5 caption + Failed Isolation analysis) |
+| arXiv:2406.19764 (Wilie et al.) | Belief-update accuracy (BU-Acc) near floor for most non-API models; AGM founding paper cited as motivation; prompting only | E5 | body-checked — prior wording "near floor across ~30 models" was an overstatement (overall accuracy 75–90%+; near-floor holds for BU-Acc only), corrected; the acronym "AGM" is absent but the founding paper (Alchourrón–Gärdenfors–Makinson 1985) is cited in full |
+| arXiv:2606.01435 | Deterministic freshness resolver beats LLM judgment +10–21pp | E5 | body-checked — confirmed with exact figures (+10.8pp pooled, McNemar p<0.001; +8pp at 6K → +21pp at 262K, non-monotonic dip at 64K); the paper itself flags it as a whole-pipeline effect, not an isolated-resolver effect |
 | XTrace (xtrace.ai) | Product page claims AGM ops at runtime | E5 | unverified — commercial marketing; no paper; assess before any priority claim |
 | ReviseQA (OpenReview) | Possibly per-turn fact add/remove belief reassessment benchmark | E5 pre-flight | unverified — access blocked during review |
 | arXiv:2503.01804 (SEM-CTRL) | MCTS decoding under answer-set-grammar constraints | E6 | unverified |

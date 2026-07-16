@@ -50,9 +50,9 @@ before any probe is generated.
     - *dependency depth between the corrected fact and the conclusion* — E5's audit found 1–2 reasoning ops per
       task; contamination that cascades through structurally similar errors (arXiv:2602.04288) predicts the break
       appears only past a reasoning-depth floor the E5 corpus never reached.
-    - *distance / separation between the assumption and its correction* — anchoring resists "ignore the anchor"
-      instructions and the residue scales with how far the anchor sits from the correction (arXiv:2505.15392,
-      2412.06593).
+    - *distance / separation between the assumption and its correction* — anchoring resists explicit "ignore
+      the anchor" instructions (arXiv:2412.06593); whether the residue scales with anchor-to-correction
+      distance is untested in that literature — this axis measures it rather than assumes it.
     - *domain shift of the correction document* — a ¬A phrased in a different register/domain than A, testing
       whether retrieval-under-interference (arXiv:2506.08184) degrades when the correction does not lexically
       resemble what it corrects.
