@@ -24,6 +24,7 @@ E8's candidate axes are drawn from the same literature E5 rested on ([E5 README]
 - Belief-revision-under-interference failures are stated at single-revision depth (arXiv:2406.19764, 2605.30219) — **correction-of-correction interleaving** is untested.
 - Anchoring resists explicit "ignore the anchor" instructions (arXiv:2412.06593); whether the residue scales with **assumption-to-correction separation** is untested in that literature — this axis measures it.
 - E5's own registered result: one mechanical contraction of a live context injected 10.3% contamination vs 0.9% instructed, with a retained-conclusion-lost-support signature ([results record](../../results/E5-reclosure/2026-07-15-registered-run/)) — predicts **summarization/compaction cycles** accumulate exactly that error class; the one candidate axis that avoids the instrument constraint below rather than colliding with it.
+- Interference grows as overwritten information accumulates (arXiv:2506.08184, body-confirmed); no cited work tests **scoped-exception generalization** — a case-limited correction treated as revoking the whole rule. `must_persist` carries the rule's unexcepted remainder, so the instrument measures the failure directly; registered as an original prediction.
 
 The full candidate set, motivations, and the narrowing criteria are registered in [0008](../../decisions/0008-e8-instruction-breakpoint.md); they are frozen in Phase 0, not here.
 

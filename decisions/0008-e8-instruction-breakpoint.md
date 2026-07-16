@@ -66,6 +66,21 @@ before any probe is generated.
       constraint below rather than colliding with it (compaction shortens sources). Classification note for
       Phase 0: this is a context-lifecycle property rather than a task property — Phase 0 decides whether it
       enters as an E8 axis or as a separately derived hypothesis.
+    - *scoped-exception generalization* — a correction that supersedes a general rule **for one named case
+      only**, with the rule remaining in force everywhere else. The predicted failure is over-generalization:
+      the model treats the scoped exception as a revision of the rule itself. Task shape: sources state a
+      general rule plus a case-scoped correction; `must_change` = the excepted case's conclusion,
+      `must_persist` = the rule's conclusions for every non-excepted case. Dose = number of scoped exceptions
+      accumulated in the context (1/2/3), each naming a different case. Interference is body-confirmed to grow
+      as overwritten information accumulates (arXiv:2506.08184); no cited work tests scope-limited corrections
+      being over-generalized — the axis probes an unmeasured mechanism, registered here as an original
+      prediction. The instrument is fully valid at every level (short sources, standard annotation scoring).
+      Distinct from *number of accumulated corrections* above: that axis varies correction **count** under
+      full supersession; this one varies correction **scope** — a break here is a failure to preserve the
+      rule's unexcepted remainder, which count cannot detect. Classification note for Phase 0: the
+      propositional form above is the measurable projection; the behavioral form (rule-compliance decaying
+      across an agentic trajectory) is not scorable by this instrument and, if pursued, is a separately
+      derived hypothesis, not an axis.
   - **(ii) Selection criteria** for narrowing the candidate set to the final frozen axes: each retained axis must
     (1) have a dose parameter with ≥ 3 monotone levels that are operationally distinguishable, (2) hold the E5
     scoring instrument valid at every level (see the instrument constraint below), (3) be motivated by cited
