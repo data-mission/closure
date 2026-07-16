@@ -6,7 +6,7 @@
 
 ## Status and prior art
 
-`OPEN`. The statistical instrument — exploratory factor analysis with parallel analysis over score matrices — was validated on LLM *capability* benchmarks (arXiv:2507.20208: 60 models × 44 benchmarks, low-rank latent structure found). Nobody has applied it to structural-*quality* axes. The one candidate pre-emption (arXiv:2605.08522) was **withdrawn by its authors** (May 2026) citing a fatal flaw, and asserted orthogonality by construction rather than testing for collapse. Motivational neighbor: construct-validity critiques of LLM benchmarks (arXiv:2511.04703). Citation statuses: [VERIFICATION.md](../../VERIFICATION.md).
+`OPEN`. The statistical instrument — exploratory factor analysis with parallel analysis over score matrices — was reported validated on LLM *capability* benchmarks (arXiv:2507.20208: 60 models × 44 benchmarks, low-rank latent structure found; abstract-checked, not yet human-verified). Nobody has applied it to structural-*quality* axes. The one candidate pre-emption (arXiv:2605.08522) was **withdrawn by its authors** (May 2026) citing a fatal flaw, and asserted orthogonality by construction rather than testing for collapse. Motivational neighbor: construct-validity critiques of LLM benchmarks (arXiv:2511.04703). Citation statuses: [VERIFICATION.md](../../VERIFICATION.md).
 
 ## Protocol
 

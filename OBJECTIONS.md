@@ -61,27 +61,34 @@ the model is not claimed; the ontological stance in [CONCEPT.md](CONCEPT.md) is 
 
 ### "The theory is unfalsifiable even if the individual experiments are falsifiable."
 **Requires a precise answer.** There is no separate "the theory" floating above the experiments to be
-independently confirmed. Every load-bearing claim is in the [registry](HYPOTHESES.md) with a kill condition, and
-the founding gate — does closure exist as one object — is E0. What is *not* falsifiable is explicitly fenced as
-such: the boldest ontological speculation is marked "non-operational as stated; kept as orientation, not a claim
-under test," and E6b (expressiveness) is reported as an adoption A/B, not a proof. The unfalsifiable parts are
-labeled unfalsifiable; the rest carries a refutation condition.
+independently confirmed. Every load-bearing claim is in the [registry](HYPOTHESES.md) with a kill condition,
+governed as a lattice — each experiment retires exactly the claim it measures — and the ontology itself carries
+its own stated retirement condition (all three of its hidden-state projections failing:
+[HYPOTHESES.md](HYPOTHESES.md), "The ontology's own exposure"). One kill condition has already fired and was
+executed as written: H-RELEASE was refuted by E5's registered run and published in stronger-than-registered
+form — the difference between claiming falsifiability and demonstrating it. What is *not* falsifiable is
+explicitly fenced as such: the boldest ontological speculation is marked "non-operational as stated; kept as
+orientation, not a claim under test," and E6b (expressiveness) is reported as an adoption A/B, not a proof. The
+unfalsifiable parts are labeled unfalsifiable; the rest carries a refutation condition.
 
-### "No experiments have run — there is nothing here yet."
-**Valid, and it is the stated stage, not a defect.** [STATUS.md](STATUS.md) says plainly that no experiment has
-run and that E0 is the first target. The program was published at this stage on purpose: to fix the theory and
-its reduction as a public record, and to expose the protocols to attack *before* execution hardens their
-assumptions. The right question at founding publication is not "why no result yet" but "is the program clear,
-falsifiable, and executable enough for others to begin testing it." If the answer is no anywhere, that is a
-[contribution](CONTRIBUTING.md).
+### "Almost nothing has run — two results, one of them exploratory, is not evidence of much."
+**Valid, and it is the stated stage, not a defect.** [STATUS.md](STATUS.md) states the stage plainly: two
+verdicts on record — one registered refutation (E5), one exploratory-grade confirmation (E3) — and seven
+protocols not yet executed. The program was published before execution on purpose: to fix the theory and its
+reduction as a public record, and to expose the protocols to attack *before* execution hardens their
+assumptions. What the two runs add is evidence about the machine itself: a pre-registered kill condition fired
+against the program's own flagship operator and the refutation was published rather than absorbed. The right
+question is still "is the program clear, falsifiable, and executable enough for others to test it." If the
+answer is no anywhere, that is a [contribution](CONTRIBUTING.md).
 
 ### "There is too much documentation and not enough code."
 **Valid tension, answered by sequencing.** The order is deliberate: pre-register the analysis plan and the
 verdict conditions *before* the data, because a scorer built and tuned against real output can no longer be
 honestly pre-registered ([PLAN.md](experiments/E0-closure-existence/PLAN.md)). The documentation is the frozen
-plan; the code is the next step and its exact specification is written
-([decisions/](decisions/), the "Wanted from contributors" lists). The shared G/R/P instrument is the highest-
-leverage code contribution and is specified and waiting.
+plan; the first code slice exists and has run — the G-slice harness ([harness/](harness/)), validated on
+synthetic fixtures before any real data and then used for E5's registered run. The remainder of the shared
+instrument (R, P, the factor-analysis notebook) is the highest-leverage code contribution and is specified and
+waiting ([decisions/](decisions/), the "Wanted from contributors" lists).
 
 ### "Existing interpretability work already covers all of this."
 **Open empirical question, mapped honestly.** The [prior-art map](background/prior-art.md) credits what exists —
@@ -95,7 +102,7 @@ and checkable; if a paper covers one of them, that is a pull request against the
 **Valid — and it is not on the experimental program.** Non-linguistic model-to-model communication is part of the
 *founding vision* in [CONCEPT.md](CONCEPT.md), and the vision is explicitly separated from the current research
 program: it carries no experiment, no verdict condition, and no claim of feasibility. It is stated as the
-furthest reach of the idea, labeled as such. None of the eight experiments depend on it.
+furthest reach of the idea, labeled as such. None of the nine experiments depend on it.
 
 ### "The proposed intermediate representation can't be architecture-independent."
 **Open empirical question — this is E6, stated as your objection.** [E6](experiments/E6-lowering-invariance/)

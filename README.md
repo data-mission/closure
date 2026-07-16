@@ -2,7 +2,7 @@
 
 A research program on model-native inference structure in large language models: a testable mechanistic hypothesis for hallucination and confidence, causal (non-LLM-judged) verification of model outputs, and whether a multidimensional structural specification can become a portable control layer for learned computation.
 
-Originated and led by [Vlad Ryzhkov](AUTHORS.md). Just entered its public research phase — the theory, its adversarial reduction, the hypotheses with their kill conditions, and the experiment protocols are published; execution is beginning. No experiment has run yet, and that is the point: the program is public so the plan can be attacked before execution hardens its assumptions ([STATUS.md](STATUS.md)).
+Originated and led by [Vlad Ryzhkov](AUTHORS.md). Public since 2026-07-14; execution has begun. Two verdicts are on record: E3 (future-output volume) `confirmed-shaped` at exploratory grade, and E5 (mechanical reclosure) **REFUTED** at registered grade — the program's own flagship revision operator lost to a one-paragraph instruction, published in stronger-than-registered form and archived under DOI [10.5281/zenodo.21399411](https://doi.org/10.5281/zenodo.21399411). The remaining experiments are pre-execution, and that is still the point: the plan is public so it can be attacked before execution hardens its assumptions ([STATUS.md](STATUS.md), [LOG.md](LOG.md)).
 
 ## Choose your entry point
 
@@ -17,7 +17,7 @@ Production evaluation of LLM outputs is LLM-as-judge — a model grading a model
 
 ## The measurement, on one example
 
-*The numbers below are illustrative — no experiment has run yet ([`/results`](results/)).*
+*The numbers below are illustrative — a worked example, not a measurement. Recorded runs and verdicts live in [`/results`](results/).*
 
 A RAG model is asked *"What did the 2023 audit find regarding vendor payments?"*, with the audit report as source **[A]**. It answers:
 
@@ -36,7 +36,7 @@ RAG is the teaching case, not the scope. The identical intervention runs whereve
 
 Define **closure**: the terminal state of inference-time reorganization — the structures determining the output have stopped changing and are mutually consistent with the given constraints. This is a multidimensional, typed object (the founding specification is a tuple `C = (B, I, P, F, G, U, R, O)`, not a single number), and the program tests its properties separately rather than through one master gate.
 
-The first of those tests asks the narrowest version of the question. **[H-SCALAR](HYPOTHESES.md#h-scalar--grounding-rigidity-and-ambiguity-preservation-share-one-latent-factor):** grounding, rigidity and ambiguity preservation are readouts of one *scalar* factor — testable by factor analysis over score matrices (the instrument validated on capability benchmarks in arXiv:2507.20208, never applied to these axes). Pre-registered: a single factor explaining ≥ 60% of shared variance with same-sign loadings, surviving difficulty controls, confirms; pairwise |r| < 0.2 refutes.
+The first of those tests asks the narrowest version of the question. **[H-SCALAR](HYPOTHESES.md#h-scalar--grounding-rigidity-and-ambiguity-preservation-share-one-latent-factor):** grounding, rigidity and ambiguity preservation are readouts of one *scalar* factor — testable by factor analysis over score matrices (the instrument reported as validated on capability benchmarks in arXiv:2507.20208 — abstract-checked, not yet human-verified, per [VERIFICATION.md](VERIFICATION.md); never applied to these axes). Pre-registered: a single factor explaining ≥ 60% of shared variance with same-sign loadings, surviving difficulty controls, confirms; pairwise |r| < 0.2 refutes.
 
 That test is [E0](experiments/E0-closure-existence/) — cheap, decisive, and precisely scoped. It decides whether the tests can be *aggregated into one closure score*; it does **not** gate the architecture. A negative E0 retires the single score and requires closure to be represented as a multidimensional profile — it leaves the operator, composition, and lowering hypotheses ([E4](experiments/E4-enforced-ambiguity/)–[E7](experiments/E7-composition/)) logically untouched, because factor analysis has no power over whether a structured specification exists. Under the program's governing rule — *each experiment may directly retire only the claim it measures* — the claims form a lattice, and what survives each result is read off the [consequence matrix](HYPOTHESES.md#consequence-matrix).
 
@@ -60,7 +60,7 @@ If the load-bearing hypotheses survive, this could develop into a **model-indepe
 
 Three stages, kept explicitly distinct:
 
-**1 — What exists in the repository now.** The ontology ([CONCEPT.md](CONCEPT.md)); a working operator vocabulary (constrain, release, couple, decouple, perturb, stabilize); the structural-specification proposal; the hypotheses with their kill conditions ([HYPOTHESES.md](HYPOTHESES.md)); the eight experiment protocols; and the four measurement methods (G, R, P, F) that are implementable today against any model API.
+**1 — What exists in the repository now.** The ontology ([CONCEPT.md](CONCEPT.md)); a working operator vocabulary (constrain, release, couple, decouple, perturb, stabilize); the structural-specification proposal; the hypotheses with their kill conditions ([HYPOTHESES.md](HYPOTHESES.md)); the nine experiment protocols; the operational definitions of the settling quantities ([background/formal-core.md](background/formal-core.md)); and the four measurement methods (G, R, P, F) that are implementable today against any model API.
 
 **2 — What the current experiments test.** Whether the closure dimensions aggregate to one scalar score (E0); whether individual operations such as enforcement (E4) and release (E5) have causal value over instruction; whether one specification retains its semantics across independent lowerings (E6); and whether composed structural checks add detection power (E7). These are prerequisites of the architecture, tested one property at a time.
 
@@ -79,7 +79,7 @@ Every branch is falsifiable on its own, and each is retired only within the prop
 
 | ID | Claim under test | Literature state |
 |---|---|---|
-| [E0](experiments/E0-closure-existence/) | G/R/P aggregate to one scalar factor (not whether a structured spec exists) | Instrument validated; this application unrun; nearest candidate withdrawn by its authors |
+| [E0](experiments/E0-closure-existence/) | G/R/P aggregate to one scalar factor (not whether a structured spec exists) | Instrument reported validated (abstract-checked); this application unrun; nearest candidate withdrawn by its authors |
 | [E1](experiments/E1-premature-closure/) | Hallucination = settling before evidence incorporation | Direction contested across published papers; the coupling unmeasured |
 | [E2](experiments/E2-conserved-quantities/) | The forward pass has conservation laws; violations predict failure | No prior work on either half |
 | [E3](experiments/E3-future-volume/) | Future-output diversity is continuous and linearly decodable pre-sampling | Binarized probe exists; continuous target, confidence baseline, belief-state link do not |
@@ -132,6 +132,7 @@ Claims that failed adversarial review are recorded and closed — "new computati
 - [AUTHORS.md](AUTHORS.md) — origination, leadership, and how contribution is credited
 - [OBJECTIONS.md](OBJECTIONS.md) — the strongest objections to the program, each classified and answered
 - [CONCEPT.md](CONCEPT.md) — the founding vision, preserved as hypothesis
+- [background/formal-core.md](background/formal-core.md) — the operational definitions: settling depth, incorporation, premature closure, the bridge claim, future volume, conserved quantities; what remains unformalized, named as open problems
 - [HYPOTHESES.md](HYPOTHESES.md) — every claim with its kill condition; retired claims with cause of death
 - [METHODOLOGY.md](METHODOLOGY.md) — every method anchored to its named standard, declared as a contribution, or listed as a known nonconformance with its fix
 - [decisions/](decisions/) — the methodology choices each experiment's protocol leaves open, frozen with their reasoning (proposed until pre-registered)

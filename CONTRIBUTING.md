@@ -18,7 +18,7 @@ This is an open research program. Contributions of experiment runs, tooling, cor
 
 **Attack the program.** Kill conditions that are under-specified, confounds a protocol misses, prior art the map doesn't list — all accepted as issues or PRs against the relevant document. Adversarial review is a named contribution here, not a courtesy.
 
-**Build the shared tooling.** The G/R/P measurement implementations serve five of the eight experiments (E0's score matrix, E1's labels, E5's contamination detector, E6's post-hoc backend, E7's checks). Clean, reusable, provider-agnostic implementations are the highest-leverage engineering contribution available.
+**Build the shared tooling.** The G/R/P measurement implementations serve six of the nine experiments (E0's score matrix, E1's labels, E5's contamination detector, E6's post-hoc backend, E7's checks, E8's dose-response scoring). Clean, reusable, provider-agnostic implementations are the highest-leverage engineering contribution available.
 
 ## Ground rules
 
