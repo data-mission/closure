@@ -27,3 +27,4 @@ the current best-justified choice, open to challenge like everything else in thi
 - [0005](0005-factor-analysis.md) — EFA library, factorability gate, parallel analysis, rotation, confound control
 - [0006](0006-reproducibility-and-freeze.md) — reproducibility posture, the pre-registration freeze boundary
 - [0007](0007-e5-reclosure.md) — E5 arms, contamination detector, deterministic contraction, comparison test
+- [0008](0008-e8-instruction-breakpoint.md) — E8 instruction-breakpoint dose-response, Phase 0 axis selection, break definition

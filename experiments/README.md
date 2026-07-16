@@ -1,6 +1,6 @@
 # The Experiment Program
 
-Eight experiments. Each one tests a hypothesis from the [registry](../HYPOTHESES.md), ships with its kill condition, and is decomposed into concrete steps in its own folder. **No timelines, no priority tiers** — the only ordering is dependency and cost.
+Nine experiments (E0–E7, plus E8 derived post-E5). Each one tests a hypothesis from the [registry](../HYPOTHESES.md), ships with its kill condition, and is decomposed into concrete steps in its own folder. **No timelines, no priority tiers** — the only ordering is dependency and cost.
 
 ## Dependency structure
 
