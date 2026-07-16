@@ -1,0 +1,127 @@
+{
+  "config_hash": "6dbe47a8e843ec1540f64ed6ddd8339c17b95688db363e31605502e374a8b9f0",
+  "head": null,
+  "ts": "2026-07-16T01:59:59Z",
+  "regenerated_from": "arms-scores.jsonl after phase-4 serialization crash (see EVENTS.md); scores untouched",
+  "corpus_sha256": "c98c8c1948c8a7a2f2d638e2b6d69a1aeef1cb29b82e4765dd577ab51d0818e1",
+  "armb_sha256": "f9c242958fccba4eb536ef74d903f6c897545f4365211a6dacd00b6fdbe70a7c",
+  "n_tasks_scored": 60,
+  "excluded_tasks": {},
+  "sanitation_register": {
+    "F1-0003/A": 1,
+    "F1-0005/A": 1,
+    "F2-0004/B": 2,
+    "F2-0010/A": 1,
+    "F2-0011/A": 1,
+    "F2-0012/A": 1,
+    "F2-0014/B": 2,
+    "F2-0021/B": 1,
+    "F3-0032/B": 1
+  },
+  "arms": {
+    "A": {
+      "contaminated": 3,
+      "trials": 107,
+      "rate": 0.028037383177570093,
+      "mean_completeness": 0.95
+    },
+    "B": {
+      "contaminated": 1,
+      "trials": 107,
+      "rate": 0.009345794392523364,
+      "mean_completeness": 0.9416666666666667
+    },
+    "C": {
+      "contaminated": 11,
+      "trials": 107,
+      "rate": 0.102803738317757,
+      "mean_completeness": 0.9916666666666667
+    }
+  },
+  "tests": {
+    "A_vs_B": {
+      "p_a": 0.028037383177570093,
+      "p_b": 0.009345794392523364,
+      "z": 1.0094788848943892,
+      "p_value": 0.31274502313716857,
+      "p_corrected": 0.9382350694115057,
+      "significant": false
+    },
+    "A_vs_C": {
+      "p_a": 0.028037383177570093,
+      "p_b": 0.102803738317757,
+      "z": -2.2116574263272715,
+      "p_value": 0.026990344258414227,
+      "p_corrected": 0.08097103277524267,
+      "significant": false
+    },
+    "B_vs_C": {
+      "p_a": 0.009345794392523364,
+      "p_b": 0.102803738317757,
+      "z": -2.9712594700368777,
+      "p_value": 0.0029658109151941736,
+      "p_corrected": 0.008897432745582521,
+      "significant": true
+    },
+    "C_completeness_noninferior_to_B": {
+      "mean_c": 0.9916666666666667,
+      "mean_b": 0.9416666666666667,
+      "diff": 0.050000000000000044,
+      "margin": 0.1,
+      "non_inferior": true
+    }
+  },
+  "per_family": {
+    "F1": {
+      "A": {
+        "rate": 0.08571428571428572,
+        "contaminated": 3,
+        "trials": 35
+      },
+      "B": {
+        "rate": 0.02857142857142857,
+        "contaminated": 1,
+        "trials": 35
+      },
+      "C": {
+        "rate": 0.2,
+        "contaminated": 7,
+        "trials": 35
+      }
+    },
+    "F2": {
+      "A": {
+        "rate": 0.0,
+        "contaminated": 0,
+        "trials": 32
+      },
+      "B": {
+        "rate": 0.0,
+        "contaminated": 0,
+        "trials": 32
+      },
+      "C": {
+        "rate": 0.125,
+        "contaminated": 4,
+        "trials": 32
+      }
+    },
+    "F3": {
+      "A": {
+        "rate": 0.0,
+        "contaminated": 0,
+        "trials": 40
+      },
+      "B": {
+        "rate": 0.0,
+        "contaminated": 0,
+        "trials": 40
+      },
+      "C": {
+        "rate": 0.0,
+        "contaminated": 0,
+        "trials": 40
+      }
+    }
+  }
+}

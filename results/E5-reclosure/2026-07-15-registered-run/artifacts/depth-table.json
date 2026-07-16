@@ -1,0 +1,42 @@
+{
+  "note": "per-item must_change contamination pooled across families by depth tag (must_change_depth); must_persist excluded (no depth).",
+  "assert_threshold": 0.7,
+  "config_hash": "6dbe47a8e843ec1540f64ed6ddd8339c17b95688db363e31605502e374a8b9f0",
+  "ts": "2026-07-16T05:31:07Z",
+  "depths": {
+    "direct": {
+      "A": {
+        "contaminated": 3,
+        "trials": 56,
+        "rate": 0.05357142857142857
+      },
+      "B": {
+        "contaminated": 1,
+        "trials": 56,
+        "rate": 0.017857142857142856
+      },
+      "C": {
+        "contaminated": 7,
+        "trials": 56,
+        "rate": 0.125
+      }
+    },
+    "second_order": {
+      "A": {
+        "contaminated": 0,
+        "trials": 51,
+        "rate": 0.0
+      },
+      "B": {
+        "contaminated": 0,
+        "trials": 51,
+        "rate": 0.0
+      },
+      "C": {
+        "contaminated": 4,
+        "trials": 51,
+        "rate": 0.0784313725490196
+      }
+    }
+  }
+}

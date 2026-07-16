@@ -70,6 +70,19 @@ def test_detector_is_only_reached_through_contraction():
     assert "detector" in reached_from_contraction
 
 
+def test_run_e5_reaches_detector_only_through_contraction():
+    # run_e5 builds Arm C exclusively via contraction.contract() (PROTOCOL §4 seam): it must NOT
+    # import the detector directly. It may reach detector transitively through contraction (that
+    # is where the contamination seam legitimately lives), but its own imports must not name it.
+    run_e5_imports = _internal_imports(PKG / "run_e5.py")
+    assert "detector" not in run_e5_imports, (
+        f"run_e5 imports detector directly: {sorted(run_e5_imports)}"
+    )
+    # And no direct is_contaminated call in the run path (source-level guard for the seam).
+    src = (PKG / "run_e5.py").read_text()
+    assert "is_contaminated" not in src, "run_e5 must not call the detector directly"
+
+
 # The provider (vendor SDK binding) and the pilot (its CLI driver) must stay out of every
 # scoring module's transitive import graph — the scoring path must never pull in a network
 # client. Same AST walk, applied to each scoring module.
@@ -94,6 +107,23 @@ def test_scoring_modules_do_not_import_providers_or_pilot():
         assert "pilot" not in reached, (
             f"{module} transitively imports pilot: {sorted(reached)}"
         )
+
+
+def test_run_e5_is_a_runner_not_a_scoring_module():
+    # run_e5 is a runner like pilot: it MAY import providers (it drives real generation). It is
+    # therefore deliberately EXCLUDED from _SCORING_MODULES. This test records that intent so a
+    # future edit that adds run_e5 to the scoring list (which would wrongly forbid its provider
+    # use) fails loudly and forces the author to reconsider.
+    assert "run_e5" not in _SCORING_MODULES
+    # It gates its provider import behind a function-local `from .providers import make_provider`
+    # (only reached on a real run), same as pilot: no top-level, module-scope providers import.
+    # (The AST walk in _internal_imports cannot see import scope, so this checks the source text
+    # for a module-level `from .providers` at column 0 — the thing that would pull the SDK in on
+    # a bare `import closure_harness.run_e5`.)
+    src = (PKG / "run_e5.py").read_text()
+    assert "\nfrom .providers import" not in src, (
+        "run_e5 should import providers lazily (function-local), like pilot"
+    )
 
 
 def test_scoring_modules_have_no_dynamic_imports_of_providers():

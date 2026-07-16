@@ -1,0 +1,131 @@
+{
+  "note": "Pre-registered grid grounding_floor x drop_ceiling. Frozen point 0.70/0.10 must reproduce C = 11/107. B pooled numbers fixed (1/107) and threshold-independent. B-vs-C two-proportion z-test, successes pooled over must_change items with the pruning register applied.",
+  "config_hash": "6dbe47a8e843ec1540f64ed6ddd8339c17b95688db363e31605502e374a8b9f0",
+  "ts": "2026-07-16T06:05:33Z",
+  "assert_threshold": 0.7,
+  "b_pooled": {
+    "contaminated": 1,
+    "trials": 107,
+    "rate": 0.009345794392523364,
+    "mean_completeness": 0.9416666666666667
+  },
+  "cells": {
+    "0.65/0.05": {
+      "grounding_floor": 0.65,
+      "drop_ceiling": 0.05,
+      "c_contaminated": 11,
+      "c_trials": 107,
+      "c_contamination_rate": 0.102803738317757,
+      "c_mean_completeness": 0.9916666666666667,
+      "b_vs_c_z": -2.9712594700368777,
+      "b_vs_c_p_value": 0.0029658109151941736,
+      "b_vs_c_p_corrected": 0.008897432745582521,
+      "b_vs_c_significant": true,
+      "is_frozen_point": false
+    },
+    "0.65/0.1": {
+      "grounding_floor": 0.65,
+      "drop_ceiling": 0.1,
+      "c_contaminated": 11,
+      "c_trials": 107,
+      "c_contamination_rate": 0.102803738317757,
+      "c_mean_completeness": 0.9916666666666667,
+      "b_vs_c_z": -2.9712594700368777,
+      "b_vs_c_p_value": 0.0029658109151941736,
+      "b_vs_c_p_corrected": 0.008897432745582521,
+      "b_vs_c_significant": true,
+      "is_frozen_point": false
+    },
+    "0.65/0.15": {
+      "grounding_floor": 0.65,
+      "drop_ceiling": 0.15,
+      "c_contaminated": 11,
+      "c_trials": 107,
+      "c_contamination_rate": 0.102803738317757,
+      "c_mean_completeness": 0.9916666666666667,
+      "b_vs_c_z": -2.9712594700368777,
+      "b_vs_c_p_value": 0.0029658109151941736,
+      "b_vs_c_p_corrected": 0.008897432745582521,
+      "b_vs_c_significant": true,
+      "is_frozen_point": false
+    },
+    "0.7/0.05": {
+      "grounding_floor": 0.7,
+      "drop_ceiling": 0.05,
+      "c_contaminated": 11,
+      "c_trials": 107,
+      "c_contamination_rate": 0.102803738317757,
+      "c_mean_completeness": 0.9916666666666667,
+      "b_vs_c_z": -2.9712594700368777,
+      "b_vs_c_p_value": 0.0029658109151941736,
+      "b_vs_c_p_corrected": 0.008897432745582521,
+      "b_vs_c_significant": true,
+      "is_frozen_point": false
+    },
+    "0.7/0.1": {
+      "grounding_floor": 0.7,
+      "drop_ceiling": 0.1,
+      "c_contaminated": 11,
+      "c_trials": 107,
+      "c_contamination_rate": 0.102803738317757,
+      "c_mean_completeness": 0.9916666666666667,
+      "b_vs_c_z": -2.9712594700368777,
+      "b_vs_c_p_value": 0.0029658109151941736,
+      "b_vs_c_p_corrected": 0.008897432745582521,
+      "b_vs_c_significant": true,
+      "is_frozen_point": true
+    },
+    "0.7/0.15": {
+      "grounding_floor": 0.7,
+      "drop_ceiling": 0.15,
+      "c_contaminated": 11,
+      "c_trials": 107,
+      "c_contamination_rate": 0.102803738317757,
+      "c_mean_completeness": 0.9916666666666667,
+      "b_vs_c_z": -2.9712594700368777,
+      "b_vs_c_p_value": 0.0029658109151941736,
+      "b_vs_c_p_corrected": 0.008897432745582521,
+      "b_vs_c_significant": true,
+      "is_frozen_point": false
+    },
+    "0.75/0.05": {
+      "grounding_floor": 0.75,
+      "drop_ceiling": 0.05,
+      "c_contaminated": 12,
+      "c_trials": 107,
+      "c_contamination_rate": 0.11214953271028037,
+      "c_mean_completeness": 0.9916666666666667,
+      "b_vs_c_z": -3.14796479609343,
+      "b_vs_c_p_value": 0.0016441149250972353,
+      "b_vs_c_p_corrected": 0.004932344775291706,
+      "b_vs_c_significant": true,
+      "is_frozen_point": false
+    },
+    "0.75/0.1": {
+      "grounding_floor": 0.75,
+      "drop_ceiling": 0.1,
+      "c_contaminated": 12,
+      "c_trials": 107,
+      "c_contamination_rate": 0.11214953271028037,
+      "c_mean_completeness": 0.9916666666666667,
+      "b_vs_c_z": -3.14796479609343,
+      "b_vs_c_p_value": 0.0016441149250972353,
+      "b_vs_c_p_corrected": 0.004932344775291706,
+      "b_vs_c_significant": true,
+      "is_frozen_point": false
+    },
+    "0.75/0.15": {
+      "grounding_floor": 0.75,
+      "drop_ceiling": 0.15,
+      "c_contaminated": 12,
+      "c_trials": 107,
+      "c_contamination_rate": 0.11214953271028037,
+      "c_mean_completeness": 0.9916666666666667,
+      "b_vs_c_z": -3.14796479609343,
+      "b_vs_c_p_value": 0.0016441149250972353,
+      "b_vs_c_p_corrected": 0.004932344775291706,
+      "b_vs_c_significant": true,
+      "is_frozen_point": false
+    }
+  }
+}

@@ -1,0 +1,158 @@
+[
+  {
+    "task_id": "F1-0003",
+    "item_index": 0,
+    "text": "The footings will not have cured in time for the Thursday crane loading.",
+    "withNotA_assert_count": 2
+  },
+  {
+    "task_id": "F1-0005",
+    "item_index": 1,
+    "text": "The tart shells cannot all be baked before the 09:30 dispatch.",
+    "withNotA_assert_count": 3
+  },
+  {
+    "task_id": "F1-0016",
+    "item_index": 0,
+    "text": "All twenty-seven sample tubes cannot be spun in the single booked run.",
+    "withNotA_assert_count": 3
+  },
+  {
+    "task_id": "F1-0018",
+    "item_index": 1,
+    "text": "At least one more certified pressure-vessel welder must be added for the welding to proceed.",
+    "withNotA_assert_count": 2
+  },
+  {
+    "task_id": "F1-0025",
+    "item_index": 1,
+    "text": "About twenty-four trays have no chilled holding space.",
+    "withNotA_assert_count": 2
+  },
+  {
+    "task_id": "F1-0027",
+    "item_index": 0,
+    "text": "Duties will accrue before the buyer's day-27 pickup.",
+    "withNotA_assert_count": 3
+  },
+  {
+    "task_id": "F1-0034",
+    "item_index": 1,
+    "text": "At least three more accessible vehicles are needed for the outing.",
+    "withNotA_assert_count": 3
+  },
+  {
+    "task_id": "F1-0037",
+    "item_index": 1,
+    "text": "Some cartons must wait for the next flight in two days.",
+    "withNotA_assert_count": 3
+  },
+  {
+    "task_id": "F1-0038",
+    "item_index": 1,
+    "text": "At least eight closings cannot be handled by the available notary capacity.",
+    "withNotA_assert_count": 3
+  },
+  {
+    "task_id": "F1-0044",
+    "item_index": 1,
+    "text": "The route duration exceeds the drone's per-charge flight time.",
+    "withNotA_assert_count": 2
+  },
+  {
+    "task_id": "F1-0045",
+    "item_index": 1,
+    "text": "About 180 plates will remain unwashed at service time.",
+    "withNotA_assert_count": 2
+  },
+  {
+    "task_id": "F1-0049",
+    "item_index": 0,
+    "text": "The formwork cannot be struck in time to reuse the panels for the Thursday pour.",
+    "withNotA_assert_count": 3
+  },
+  {
+    "task_id": "F2-0005",
+    "item_index": 1,
+    "text": "The annual rent for the Tarn Street unit is $4,000 above Ferro Cafe's ceiling.",
+    "withNotA_assert_count": 2
+  },
+  {
+    "task_id": "F2-0006",
+    "item_index": 1,
+    "text": "The Dellmoor plant's monthly electricity cost is $600 under the $9,000 budget.",
+    "withNotA_assert_count": 3
+  },
+  {
+    "task_id": "F2-0009",
+    "item_index": 1,
+    "text": "Each active picking lane clears 540 orders over the evening shift.",
+    "withNotA_assert_count": 3
+  },
+  {
+    "task_id": "F2-0014",
+    "item_index": 0,
+    "text": "Each bus's peak-hour carrying capacity on the Riverline route is 220 commuters.",
+    "withNotA_assert_count": 3
+  },
+  {
+    "task_id": "F2-0015",
+    "item_index": 1,
+    "text": "The Larkfield shoot needs 3 shooting days.",
+    "withNotA_assert_count": 3
+  },
+  {
+    "task_id": "F2-0021",
+    "item_index": 1,
+    "text": "The 15 rostered nurses adequately staff the day shift.",
+    "withNotA_assert_count": 3
+  },
+  {
+    "task_id": "F2-0022",
+    "item_index": 1,
+    "text": "The Thornbury concert leaves 40 seats empty.",
+    "withNotA_assert_count": 2
+  },
+  {
+    "task_id": "F2-0023",
+    "item_index": 0,
+    "text": "The 12-batch run yields 2,880 bottles.",
+    "withNotA_assert_count": 3
+  },
+  {
+    "task_id": "F2-0035",
+    "item_index": 1,
+    "text": "The hourly capacity keeps up with the 380-call inbound volume, so no backlog forms.",
+    "withNotA_assert_count": 3
+  },
+  {
+    "task_id": "F2-0037",
+    "item_index": 1,
+    "text": "The 90-tonne daily intake is fully cleared in one shift.",
+    "withNotA_assert_count": 3
+  },
+  {
+    "task_id": "F2-0038",
+    "item_index": 1,
+    "text": "The Ashworth gala needs 2 more tables than the ballroom can hold.",
+    "withNotA_assert_count": 2
+  },
+  {
+    "task_id": "F2-0043",
+    "item_index": 1,
+    "text": "The schedule is over-subscribed against the 50 usable nights.",
+    "withNotA_assert_count": 2
+  },
+  {
+    "task_id": "F2-0045",
+    "item_index": 1,
+    "text": "The Ashvale plant treats 6 megaliters above monthly demand.",
+    "withNotA_assert_count": 3
+  },
+  {
+    "task_id": "F2-0050",
+    "item_index": 1,
+    "text": "The Oakhurst crew fills 96 bins per day.",
+    "withNotA_assert_count": 3
+  }
+]

@@ -84,9 +84,10 @@ Every branch is falsifiable on its own, and each is retired only within the prop
 | [E2](experiments/E2-conserved-quantities/) | The forward pass has conservation laws; violations predict failure | No prior work on either half |
 | [E3](experiments/E3-future-volume/) | Future-output diversity is continuous and linearly decodable pre-sampling | Binarized probe exists; continuous target, confidence baseline, belief-state link do not |
 | [E4](experiments/E4-enforced-ambiguity/) | Enforced interpretation coverage beats instruction | Enforcement exists (unreviewed, 2-arm); causal isolation unrun |
-| [E5](experiments/E5-reclosure/) | Mechanical context rebuild beats instructed disregard | Premise replicated ≥ 7×; the 3-arm comparison unrun |
+| [E5](experiments/E5-reclosure/) | Mechanical context rebuild beats instructed disregard | REFUTED by registered run 2026-07-16 (contraction worse than instruction); [results record](results/E5-reclosure/2026-07-15-registered-run/) |
 | [E6](experiments/E6-lowering-invariance/) | Independent enforcement backends agree on one spec's verdicts | Claim never stated in the literature |
 | [E7](experiments/E7-composition/) | Composed checks catch what single checks miss | Designed; unrun |
+| [E8](experiments/E8-instruction-breakpoint/) | Instructed revision degrades along measurable difficulty axes (no operators) | Derived post-E5; registered before design freeze |
 
 ## What each result changes
 

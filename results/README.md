@@ -11,4 +11,6 @@ Each run folder contains:
 
 Negative results use the identical structure and receive the same review. A confirmed verdict (either direction) triggers a status update in [HYPOTHESES.md](../HYPOTHESES.md) in the same PR.
 
-No results yet — the program is at its starting line. The first target is [E0](../experiments/E0-closure-existence/).
+Runs recorded here:
+
+- [E5 registered run, 2026-07-15](E5-reclosure/2026-07-15-registered-run/) — H-RELEASE refuted (mechanical contraction lost to instructed disregard, 10.3% vs 0.9% contamination). E3's earlier record lives in [experiments/E3-future-volume/run/](../experiments/E3-future-volume/run/), predating this folder's first entry.
