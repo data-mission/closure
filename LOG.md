@@ -234,3 +234,41 @@ operators their terrain; outcome (b) concludes the revision line with a negative
 
 **Next session starts here:** E8 Phase 0 (the axis-selection study, registration act per amended
 0006) or the pre-registered cross-vendor replication of E5.
+
+---
+
+## 2026-07-16 — state sync + the formal core
+
+**Done.** Documentation only; no run, no spend.
+
+**State sync.** The front page and STATUS still described the pre-execution stage after two verdicts existed —
+README's "no experiment has run yet" sat on the same page as E5's REFUTED row. README now leads with the two
+verdicts and the E5 DOI; STATUS is rewritten to 2026-07-16 (On the record / Next in line / built vs not yet
+built); OBJECTIONS updated, closing a real inconsistency: it still called E0 "the founding gate," contradicting
+the 2026-07-14 governance correction — and its unfalsifiability answer now cites the strongest available fact,
+a kill condition that fired and was executed as written. Stale eight-experiment counts fixed across six files;
+arXiv:2507.20208 downgraded from "validated" to its ledger grade (abstract-checked) in the four places it was
+overstated; methodology-provenance's standing scope amended (dated, alongside the original) for the 0006
+registration-act redefinition. Known gap left open: the claim-structure figure still shows E0–E7; regeneration
+from the `.mmd` sources is a follow-up.
+
+**The formal core** (`background/formal-core.md`). The operational definitions assembled into one object from
+instruments the protocols already pin separately: settling depth ℓ*(ε, w) — full-window, undefined means
+never-settles, so a vacuous tail cannot manufacture a plateau; incorporation depth τ(s) — the leave-one-out
+logic moved inside the network, with ICR stated as estimator, not definition; premature closure
+`ℓ* defined ∧ (τ undefined ∨ ℓ* < τ)`; the continuous settling margin; future volume; conserved quantities;
+re-closure with the boundary-level vs trajectory-level edit distinction (E5's signature annotated as post-hoc
+consistency, zero verdict weight). Three absences stated as open problems rather than implied: existence and
+convergence theorems, operator semantics, any settling→correctness theorem. One new claim staged for E1's
+freeze: the bridge — the behavioral G score must co-vary with the settling margin if both measure the same
+event; both failure directions recorded in advance. The retired formal-mathematics claim stays retired:
+definitions, not proofs.
+
+**Governance.** HYPOTHESES now carries the ontology's own retirement condition — if E1, E2, and the registered
+E3 replication all refute, the trajectory ontology is demoted to interpretive vocabulary, on the record. The
+measurement instrument survives that retirement on its engineering merits. AUTHORS gains the lead's LinkedIn.
+
+**Next session starts here:** E8 Phase 0 — the axis-selection study. The preparation register (the work items
+to a freezable Phase-0 packet: axis adjudication, the 512-token instrument resolution, the break-threshold memo
+with its power table, per-axis dose tables, probe budgets, and the no-probes-before-freeze rule) is staged
+privately; the freeze act itself — commit, tag, Zenodo release — is the lead's.
