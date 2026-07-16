@@ -181,3 +181,53 @@ cite the exclusion counts and the configuration hash.
 draft are filled with the pilot's real numbers and the two amendments; the remaining step is to freeze
 the harness commit, re-read the configuration hash at the moment of registration, and deposit the
 pre-registration before the first registered arm runs.
+
+## 2026-07-16 — E5 registered run: H-RELEASE refuted
+
+**The gate changed form before the run.** The freeze-before-data gate was executed as
+freeze-by-public-commit rather than an OSF deposit: the corpus (`5deb8eb`, 15:11:40Z) and
+the Arm-B instruction (`379c767`, 15:25:40Z) were public on origin before the first paid generation
+(15:28:29Z). The verifiable chain is recorded in the run folder's `GATE-RECORD.md`. The gate was
+executed manually with the lean driver rather than the in-code-gated runner; recorded as a deviation,
+not absorbed.
+
+**The run.** 60 tasks, three arms, 120 generations, zero provider errors; Arm C derived
+deterministically from Arm A by the frozen contraction; a claim-level sanitation repair (invalid source
+citations stripped identically in every arm) was applied before any outcome existed and is disclosed as
+PROTOCOL §9a–9e. The statistics phase crashed on a JSON serialization defect after all 180 score rows
+were banked; the summary was regenerated from the banked rows via the frozen stats functions and every
+test statistic was independently re-derived by hand — exact match.
+
+**The verdict is REFUTED, in a form sharper than registered.** Contamination: naive append 3/107
+(2.8%), instructed disregard 1/107 (0.9%), mechanical contraction 11/107 (10.3%). B-vs-C cleared the
+Bonferroni-corrected threshold with contraction WORSE (p = 0.0089); A-vs-C did not survive correction;
+contraction's completeness was non-inferior (0.992 vs 0.942) — no win-by-deletion in either direction.
+None of the three registered outcome blocks fires literally: the registered REFUTED wording assumed no
+significant separation, and the run produced a significant reversal. Recorded as a pre-registration
+wording defect and adjudicated REFUTED-in-stronger-form; `release` as formulated is retired. The
+task-level robustness read agrees with the pooled test (contraction worse on 9 tasks, instruction worse
+on 0; sign test p = 0.0039); the observed gap is 2.2× the minimum detectable effect.
+
+**Post-verdict analyses armor the result.** An exhaustive per-item rescore (681 items) reproduced every
+banked aggregate exactly; the Arm-C regeneration check matched all 60 logged fingerprints bit-for-bit
+(the pre-registered validity gate, affirmed with evidence); the threshold sensitivity sweep shows
+contraction losing at all nine grid cells — stricter thresholds make it worse, not better. The depth
+split is the cleanest single table of why the hypothesis died: both instruction and even naive append
+keep ZERO stale second-order inferences; the contraction operator is the only arm that contaminates the
+second-order layer at all (7.8%). The published instructed-disregard-fails premise did not reproduce in
+this regime.
+
+**A commissioned hostile audit bounds the claim.** The corpus is arithmetically flawless (91/91
+recomputed figures), contamination-free of viral puzzles, and realistic — and shallow: 1–2 reasoning
+operations per task, a naive baseline flooring near zero on two of three families, persist items largely
+source echoes. The verdict is therefore scoped to shallow document-revision tasks; it says nothing about
+long contexts, stacked corrections, or deep dependency chains.
+
+**The refutation derives E8.** Every remaining operator experiment silently assumes instructed revision
+fails somewhere; in the E5 regime it did not. E8 (instruction breakpoint, decision 0008) is registered:
+a dose-response study on the instruction baseline alone, no operators, with Phase 0 — the axis-selection
+research itself — as a gating sub-registration frozen before any probe. Outcome (a) gives the remaining
+operators their terrain; outcome (b) concludes the revision line with a negative of record.
+
+**Next session starts here:** publish the results record and the E8 registration; then either E8
+Phase 0 (the axis-selection study) or the pre-registered cross-vendor replication of E5.
