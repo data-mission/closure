@@ -229,5 +229,8 @@ a dose-response study on the instruction baseline alone, no operators, with Phas
 research itself — as a gating sub-registration frozen before any probe. Outcome (a) gives the remaining
 operators their terrain; outcome (b) concludes the revision line with a negative of record.
 
-**Next session starts here:** publish the results record and the E8 registration; then either E8
-Phase 0 (the axis-selection study) or the pre-registered cross-vendor replication of E5.
+**Archived.** Tag `e5-verdict-2026-07-16`; GitHub release published; Zenodo archive minted:
+**DOI 10.5281/zenodo.21399411** — the independent timestamp over the exact verdict snapshot.
+
+**Next session starts here:** E8 Phase 0 (the axis-selection study, registration act per amended
+0006) or the pre-registered cross-vendor replication of E5.
