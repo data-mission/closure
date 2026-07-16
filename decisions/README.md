@@ -4,7 +4,7 @@ Methodology-level choices that cut across experiments, recorded in the [MADR](ht
 (Markdown Any Decision Record) format — one file per decision area, numbered, never deleted.
 
 These are distinct from the per-experiment protocols (`experiments/E*/README.md`, which register *what* each
-experiment tests) and from the pre-registration itself (frozen at submission time on OSF). A decision record
+experiment tests) and from the pre-registration itself (frozen by the registration act of [0006 as amended 2026-07-16](0006-reproducibility-and-freeze.md): public freeze commit plus Zenodo-archived release). A decision record
 freezes a *how* — an operational choice an experiment's protocol leaves open — with the reasoning that fixed it,
 so that a later reader can tell a deliberate choice from an oversight, and a reversal from a mistake.
 
@@ -15,8 +15,9 @@ so that a later reader can tell a deliberate choice from an oversight, and a rev
 - Every record states the options considered and the consequence of the chosen one, not only the choice.
 
 ## Status of this set
-All records below are `proposed`. **No decision is binding until it is frozen in the E0 pre-registration on OSF**
-(see `experiments/E0-closure-existence/PLAN.md` and METHODOLOGY.md nonconformance #1). Until then these record
+All records below are `proposed`. **No decision is binding until frozen by the registration act of
+[0006 as amended 2026-07-16](0006-reproducibility-and-freeze.md)** (public freeze commit plus Zenodo-archived
+release; see also METHODOLOGY.md nonconformance #1). Until then these record
 the current best-justified choice, open to challenge like everything else in this program.
 
 ## Index

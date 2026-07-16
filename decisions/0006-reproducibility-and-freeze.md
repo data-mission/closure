@@ -26,7 +26,29 @@ choices are frozen at what moment.
   detector, and comparison test (0007). Version-record-only (safe to note post-hoc): the NLI/embedding revision
   hashes, the K and N counts, and the library version — these change reproducibility bookkeeping, not the result.
 
+## Amendment — 2026-07-16 (registration act redefined)
+
+E5 ran gated by freeze-by-public-commit alone, without an OSF deposit; the deviation is recorded in its
+results record (`results/E5-reclosure/2026-07-15-registered-run/`, GATE-RECORD.md) rather than absorbed.
+That run exposed the gap between this record's original wording and the program's practice, and the gap is
+resolved here rather than left ambiguous for E8:
+
+- **The registration act, from this amendment forward:** every result-sensitive choice frozen at a named
+  public commit on origin, **plus a Zenodo-archived tagged release of that frozen state, both predating the
+  first generation.** The Zenodo DOI supplies the independent external timestamp (it meets the
+  independent-timestamp / public-registry / persistence criteria in METHODOLOGY.md's own reference; the
+  repository's Zenodo integration is operational — see the E3 verdict DOI). A run may not begin until the
+  release exists; a post-data change to any frozen choice requires a new registration recorded alongside
+  the original, never an in-place edit.
+- **OSF becomes optional**, an additional deposit where wanted, no longer the required act. The original
+  Decision bullet's sentence "the actual pre-registration act is the OSF submission" is superseded by this
+  amendment.
+- **Applies to E8 and everything after.** E8's Phase 0 freeze therefore means: Phase 0 content committed,
+  tagged, and Zenodo-archived before any probe generation.
+
 ## Consequences
 Sets the honesty line the whole program depends on: the verdict is worth exactly as much as the pre-registration
 was unimpeachable at the moment the data did not yet exist. It also states a real limitation (no exact LLM
-reproducibility) up front rather than letting a reader assume more than the tooling can deliver.
+reproducibility) up front rather than letting a reader assume more than the tooling can deliver. The 2026-07-16
+amendment keeps that line while replacing the third-party act (OSF) with one the program demonstrably executes
+(commit + Zenodo-archived release), so the gate is defined by what is verifiable rather than by what was planned.
