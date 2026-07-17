@@ -307,3 +307,7 @@ unfunded marginal-break cells disclosed. Budget frozen in dollar caps: $56.87 to
 
 **Next session starts here:** the freeze act — push, tag `e8-phase0-freeze-<date>`, release → Zenodo DOI →
 DOI-record commit — then corpus construction under the frozen caps, then the registered dose-response run.
+
+**Freeze act executed, same session (2026-07-17).** PR #4 merged (`283400a`); tag `e8-phase0-freeze-2026-07-17`;
+release published; Zenodo archive minted: **DOI 10.5281/zenodo.21404864** — the independent timestamp over the
+frozen registration. E8 is registered. Corpus construction under the frozen caps is now permitted to spend.
