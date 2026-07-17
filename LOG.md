@@ -272,3 +272,38 @@ measurement instrument survives that retirement on its engineering merits. AUTHO
 to a freezable Phase-0 packet: axis adjudication, the 512-token instrument resolution, the break-threshold memo
 with its power table, per-axis dose tables, probe budgets, and the no-probes-before-freeze rule) is staged
 privately; the freeze act itself — commit, tag, Zenodo release — is the lead's.
+
+---
+
+## 2026-07-17 — E8 Phase 0 assembled and frozen in content; freeze act staged
+
+**Done.** The complete Phase-0 registration landed as `experiments/E8-instruction-breakpoint/PHASE0.md`,
+with the harness verdict machinery and two 0008 clarifications alongside. The frozen axis set is **three
+axes**: dependency depth (D1–D3, certification rules incl. an irreducibility gate and a pre-registered
+construction acceptance check), scoped-exception generalization in its propositional form (S1–S3, break read
+on the persist side), and accumulated corrections (C1–C3, transform-preferred from the E5 corpus). Break
+definition: a three-conjunct gate — Cochran–Armitage Z > 0, strict observed rise across every adjacent level
+pair, and a one-sided exact-binomial crossing at α = 0.05/3 — with θ = 5% contamination and θ_persist = 10%
+(the persist floor is 5.83%, ~6× the contamination floor; reusing 5% would have let the clean baseline cross
+by construction). N = 150 items per dose level; powered for substantial breaks (0.81 at a true 12%), the
+unfunded marginal-break cells disclosed. Budget frozen in dollar caps: $56.87 total, per-axis caps inside.
+
+**Decided, and why.**
+- The strict-rise conjunct exists because the trend statistic alone admits the flat-then-jump curve 0008
+  forbids (0/0/12% gives Z ≈ +5.3); the counterexample is now a frozen oracle.
+- The candidate per-segment scoring extension was **excluded from the freeze**: planted-fixture validation
+  showed it can inflate a score across the assert threshold when it fires (0.643 → 0.787, evidence isolated
+  from diluting context) and it never fires at this corpus scale (max asserted-text premise 196 tokens).
+  The frozen scorer ships unchanged; the config hash is therefore E5's registered token, carried forward.
+  The context-volume axis is deferred to its own amendment carrying the repaired extension; compaction is
+  staged as its own derived hypothesis rather than an E8 axis (a summarize cycle is an operator, and E8 is
+  registered operator-free).
+- A reproducibility constraint surfaced by the validation is now documented and pinned: a pair's score
+  depends on its batch composition (CPU float path is not padding-invariant); bs=16 grouping in request
+  order is part of the frozen path, and replay divergences under other groupings are last-ULP artifacts
+  (±2.4×10⁻⁴ bound, zero threshold crossings in controlled replays).
+- The verdict functions (`exact_binomial_crossing`, `monotonicity_gate`, `bonferroni_alpha`) landed in the
+  frozen stats module with a hand-computed oracle suite; full suite 107 green.
+
+**Next session starts here:** the freeze act — push, tag `e8-phase0-freeze-<date>`, release → Zenodo DOI →
+DOI-record commit — then corpus construction under the frozen caps, then the registered dose-response run.
