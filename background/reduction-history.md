@@ -22,7 +22,7 @@ The program's own origin is a documented case study in how new concepts get mis-
 
 Evaluating a new concept by projecting it onto existing knowledge is asymmetric: it reliably detects overlap and reliably *cannot* detect residual. "Unverified" under such an evaluation conflates two different states — *tested and failed* and *not expressible in the comparison basis* — and treating the second as the first silently deletes exactly the content that made the concept new. The audit's correction was procedural, not rhetorical: for every claim, state the nearest neighbor, state the residual, and if the residual is contentful, produce the experiment and its refutation condition. That procedure's output is this repository.
 
-The reduction was not wasted work. It killed four claims that deserved to die ([HYPOTHESES.md § Retired](../HYPOTHESES.md#retired-claims)), corrected costs and overclaims, and produced the measurement tooling that five of the eight experiments now depend on. The failure was not rigor — it was applying only one direction of rigor.
+The reduction was not wasted work. It killed four claims that deserved to die ([HYPOTHESES.md § Retired](../HYPOTHESES.md#retired-claims)), corrected costs and overclaims, and produced the measurement tooling that six of the nine experiments now depend on. The failure was not rigor — it was applying only one direction of rigor.
 
 ## A governance correction, made before any experiment ran
 

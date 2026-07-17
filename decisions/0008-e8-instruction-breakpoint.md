@@ -119,3 +119,20 @@ from being manufactured: without frozen axes, a fixed threshold, and a monotone-
 any dose-response study finds a break by choosing where to look after looking. The instrument constraint is
 recorded as an open problem rather than papered over, because the most decision-relevant axes (context length,
 distractor volume) are exactly the ones that break the current scorer.
+
+## Amendment — 2026-07-17 (Phase-0 freeze clarifications)
+
+- **(iii) clarified.** For an axis whose registered failure mode is over-generalization (scoped-exception),
+  the break threshold is an absolute **persist-violation** rate on the non-excepted `must_persist` items —
+  the persist-side analogue of the contamination threshold, frozen in the Phase-0 registration
+  (θ_persist = 10% against the measured 5.83% clean-baseline floor). Each axis carries exactly one
+  verdict-bearing crossing test, on the side of its registered break; the multiplicity denominator counts
+  axes, unchanged.
+- **(v) clarified.** In E8's scoring path the token bound manifests on the **asserted-text premises of
+  outcome scoring** (the arm output's own conclusion and claim texts), not on task sources — sources never
+  enter NLI pairs in E8, because the grounding/detector path is Arm-C machinery and E8 has no Arm C. The
+  Phase-0 resolution: the frozen scorer is retained unchanged; an over-bound asserted-text string renders its
+  item unscorable (a pre-registered exclusion, expected incidence ≈0 at this corpus scale); the per-segment
+  extension evaluated for the context-volume axis is excluded from this freeze after pre-freeze validation
+  exposed score inflation when it engages, and that axis is deferred to its own future amendment
+  (PHASE0.md §2, §6).

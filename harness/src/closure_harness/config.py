@@ -24,6 +24,11 @@ class NLIConfig:
     fallback_revision: str = "6f5cf0a2b59cabb106aca4c287eed12e357e90eb"
     use_fallback: bool = False
     max_length: int = 512
+    # batch_size is part of the FROZEN scoring path, not just a throughput knob: a pair's score
+    # depends on its batch composition (which pairs pad it), because the CPU float path is not
+    # bit-invariant to padding — bs=16 grouping in request order reproduces banked scores, per-pair
+    # (bs=1) rescoring diverges at the last ULPs. A replayer MUST batch at bs=16 in the original
+    # request order to reproduce banked scores.
     batch_size: int = 16
     # Frozen inference device. Registered runs pin "cpu": MPS/CUDA float paths are not
     # bit-identical to CPU, and an unrecorded device would let two machines disagree at the

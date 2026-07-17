@@ -234,3 +234,76 @@ operators their terrain; outcome (b) concludes the revision line with a negative
 
 **Next session starts here:** E8 Phase 0 (the axis-selection study, registration act per amended
 0006) or the pre-registered cross-vendor replication of E5.
+
+---
+
+## 2026-07-16 — state sync + the formal core
+
+**Done.** Documentation only; no run, no spend.
+
+**State sync.** The front page and STATUS still described the pre-execution stage after two verdicts existed —
+README's "no experiment has run yet" sat on the same page as E5's REFUTED row. README now leads with the two
+verdicts and the E5 DOI; STATUS is rewritten to 2026-07-16 (On the record / Next in line / built vs not yet
+built); OBJECTIONS updated, closing a real inconsistency: it still called E0 "the founding gate," contradicting
+the 2026-07-14 governance correction — and its unfalsifiability answer now cites the strongest available fact,
+a kill condition that fired and was executed as written. Stale eight-experiment counts fixed across six files;
+arXiv:2507.20208 downgraded from "validated" to its ledger grade (abstract-checked) in the four places it was
+overstated; methodology-provenance's standing scope amended (dated, alongside the original) for the 0006
+registration-act redefinition. Known gap left open: the claim-structure figure still shows E0–E7; regeneration
+from the `.mmd` sources is a follow-up.
+
+**The formal core** (`background/formal-core.md`). The operational definitions assembled into one object from
+instruments the protocols already pin separately: settling depth ℓ*(ε, w) — full-window, undefined means
+never-settles, so a vacuous tail cannot manufacture a plateau; incorporation depth τ(s) — the leave-one-out
+logic moved inside the network, with ICR stated as estimator, not definition; premature closure
+`ℓ* defined ∧ (τ undefined ∨ ℓ* < τ)`; the continuous settling margin; future volume; conserved quantities;
+re-closure with the boundary-level vs trajectory-level edit distinction (E5's signature annotated as post-hoc
+consistency, zero verdict weight). Three absences stated as open problems rather than implied: existence and
+convergence theorems, operator semantics, any settling→correctness theorem. One new claim staged for E1's
+freeze: the bridge — the behavioral G score must co-vary with the settling margin if both measure the same
+event; both failure directions recorded in advance. The retired formal-mathematics claim stays retired:
+definitions, not proofs.
+
+**Governance.** HYPOTHESES now carries the ontology's own retirement condition — if E1, E2, and the registered
+E3 replication all refute, the trajectory ontology is demoted to interpretive vocabulary, on the record. The
+measurement instrument survives that retirement on its engineering merits. AUTHORS gains the lead's LinkedIn.
+
+**Next session starts here:** E8 Phase 0 — the axis-selection study. The preparation register (the work items
+to a freezable Phase-0 packet: axis adjudication, the 512-token instrument resolution, the break-threshold memo
+with its power table, per-axis dose tables, probe budgets, and the no-probes-before-freeze rule) is staged
+privately; the freeze act itself — commit, tag, Zenodo release — is the lead's.
+
+---
+
+## 2026-07-17 — E8 Phase 0 assembled and frozen in content; freeze act staged
+
+**Done.** The complete Phase-0 registration landed as `experiments/E8-instruction-breakpoint/PHASE0.md`,
+with the harness verdict machinery and two 0008 clarifications alongside. The frozen axis set is **three
+axes**: dependency depth (D1–D3, certification rules incl. an irreducibility gate and a pre-registered
+construction acceptance check), scoped-exception generalization in its propositional form (S1–S3, break read
+on the persist side), and accumulated corrections (C1–C3, transform-preferred from the E5 corpus). Break
+definition: a three-conjunct gate — Cochran–Armitage Z > 0, strict observed rise across every adjacent level
+pair, and a one-sided exact-binomial crossing at α = 0.05/3 — with θ = 5% contamination and θ_persist = 10%
+(the persist floor is 5.83%, ~6× the contamination floor; reusing 5% would have let the clean baseline cross
+by construction). N = 150 items per dose level; powered for substantial breaks (0.81 at a true 12%), the
+unfunded marginal-break cells disclosed. Budget frozen in dollar caps: $56.87 total, per-axis caps inside.
+
+**Decided, and why.**
+- The strict-rise conjunct exists because the trend statistic alone admits the flat-then-jump curve 0008
+  forbids (0/0/12% gives Z ≈ +5.3); the counterexample is now a frozen oracle.
+- The candidate per-segment scoring extension was **excluded from the freeze**: planted-fixture validation
+  showed it can inflate a score across the assert threshold when it fires (0.643 → 0.787, evidence isolated
+  from diluting context) and it never fires at this corpus scale (max asserted-text premise 196 tokens).
+  The frozen scorer ships unchanged; the config hash is therefore E5's registered token, carried forward.
+  The context-volume axis is deferred to its own amendment carrying the repaired extension; compaction is
+  staged as its own derived hypothesis rather than an E8 axis (a summarize cycle is an operator, and E8 is
+  registered operator-free).
+- A reproducibility constraint surfaced by the validation is now documented and pinned: a pair's score
+  depends on its batch composition (CPU float path is not padding-invariant); bs=16 grouping in request
+  order is part of the frozen path, and replay divergences under other groupings are last-ULP artifacts
+  (±2.4×10⁻⁴ bound, zero threshold crossings in controlled replays).
+- The verdict functions (`exact_binomial_crossing`, `monotonicity_gate`, `bonferroni_alpha`) landed in the
+  frozen stats module with a hand-computed oracle suite; full suite 107 green.
+
+**Next session starts here:** the freeze act — push, tag `e8-phase0-freeze-<date>`, release → Zenodo DOI →
+DOI-record commit — then corpus construction under the frozen caps, then the registered dose-response run.

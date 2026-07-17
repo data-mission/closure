@@ -116,3 +116,144 @@ def completeness_non_inferiority(
         margin=delta,
         non_inferior=mean_c >= mean_b - delta,
     )
+
+
+# ---------------------------------------------------------------------------
+# E8 break-test additions (decision 0008 Phase 0): exact one-sided binomial
+# crossing of one dose level against a frozen absolute threshold, the
+# three-conjunct monotonicity gate (CA trend + strict observed rise), and
+# Bonferroni alpha over the final axis count. Parameter-agnostic in the outcome
+# side: the same functions read the contamination (must_change) and persist
+# (must_persist) breaks. Imports above already cover these (math, dataclass,
+# Sequence, scipy _sp, CONFIG/StatsConfig).
+# ---------------------------------------------------------------------------
+@dataclass(frozen=True)
+class BinomCrossingResult:
+    p_hat: float
+    critical_count: int | None
+    p_value: float
+    crossed: bool
+
+
+def exact_binomial_crossing(
+    count: int,
+    trials: int,
+    threshold: float,
+    alpha_corrected: float,
+) -> BinomCrossingResult:
+    """One-sided exact-binomial crossing of one dose level against a fixed absolute threshold.
+
+    H0: p <= threshold, H1: p > threshold. Reject (declare the crossing) iff the observed
+    count reaches the smallest k* whose upper-tail probability under p=threshold is
+    <= alpha_corrected. Exact (not normal-approx): the upper tail is scipy's binomial survival
+    function, which is what keeps the small-N power honest (threshold-memo §4 cross-check).
+
+    alpha_corrected is the Bonferroni-divided level (bonferroni_alpha below), passed in rather
+    than read from config so the caller owns the axis count. p_value is the exact upper tail at
+    the observed count. critical_count is None when even count==trials cannot reach the level
+    (a threshold too high for this N to ever cross), in which case crossed is False.
+    """
+    if trials <= 0:
+        raise ValueError("trials must be > 0")
+    if not 0.0 <= threshold <= 1.0:
+        raise ValueError("threshold must be in [0, 1]")
+    p_hat = count / trials
+    critical = _critical_count(trials, threshold, alpha_corrected)
+    # P(K >= count | trials, threshold) = survival at count-1.
+    p_value = float(_sp.binom.sf(count - 1, trials, threshold))
+    crossed = critical is not None and count >= critical
+    return BinomCrossingResult(
+        p_hat=p_hat,
+        critical_count=critical,
+        p_value=p_value,
+        crossed=crossed,
+    )
+
+
+def _critical_count(trials: int, threshold: float, alpha_corrected: float) -> int | None:
+    """Smallest k* with P(K >= k* | trials, threshold) <= alpha_corrected, or None if none."""
+    for k in range(0, trials + 1):
+        if float(_sp.binom.sf(k - 1, trials, threshold)) <= alpha_corrected:
+            return k
+    return None
+
+
+@dataclass(frozen=True)
+class MonotonicityResult:
+    z: float
+    p_value: float
+    rates: tuple[float, ...]
+    ca_uptrend: bool
+    strict_rise: bool
+    gate_pass: bool
+
+
+def monotonicity_gate(
+    counts: Sequence[int],
+    trials: Sequence[int],
+) -> MonotonicityResult:
+    """Two of the three break conjuncts (0008 (iii) monotone dose-response), on ordered levels.
+
+    Computes (a) the Cochran-Armitage trend Z across the >=3 ordered dose levels (integer dose
+    scores 0..L-1, per-item binary response) and (b) the strict observed rise
+    rate_0 < rate_1 < ... < rate_top. gate_pass is (a) AND (b). The third conjunct — the
+    top-level crossing firing — is combined by the caller (it lives in exact_binomial_crossing),
+    because the crossing consumes the axis's alpha and this gate does not.
+
+    Conjunct (b) is what excludes a flat-then-jump curve: a top-only jump has a large positive
+    CA Z (a 0/0/high curve gives Z well above 0), so (a) alone would wrongly pass the single-bump
+    curve 0008 (iii) forbids. (b) is tolerance-free (pure observed ordering) and can only fail
+    under sampling noise — the conservative, anti-fishing direction. rates are returned so a
+    noise-failed (b) is visible as such (threshold-memo §2ii).
+    """
+    if len(counts) != len(trials):
+        raise ValueError("counts and trials must have equal length")
+    if len(counts) < 3:
+        raise ValueError("monotone dose-response requires >= 3 levels (0008 (iii))")
+    if any(n <= 0 for n in trials):
+        raise ValueError("every dose level needs trials > 0")
+
+    rates = tuple(counts[i] / trials[i] for i in range(len(counts)))
+    z = _cochran_armitage_z(counts, trials)
+    ca_uptrend = z > 0.0
+    strict_rise = all(rates[i] < rates[i + 1] for i in range(len(rates) - 1))
+    return MonotonicityResult(
+        z=z,
+        p_value=float(_sp.norm.sf(z)),
+        rates=rates,
+        ca_uptrend=ca_uptrend,
+        strict_rise=strict_rise,
+        gate_pass=ca_uptrend and strict_rise,
+    )
+
+
+def _cochran_armitage_z(counts: Sequence[int], trials: Sequence[int]) -> float:
+    """Cochran-Armitage trend Z with integer dose scores 0..L-1.
+
+    Z = sum_i s_i (k_i - n_i p_bar) / sqrt( p_bar (1 - p_bar) sum_i n_i (s_i - s_bar)^2 ),
+    p_bar = sum k / sum n, s_bar = sum s_i n_i / sum n. Returns 0.0 when the variance term is
+    0 (a fully-flat or degenerate table), matching the se==0 -> z=0 convention in
+    two_proportion_ztest (stats.py:51).
+    """
+    scores = range(len(counts))
+    total_n = sum(trials)
+    p_bar = sum(counts) / total_n
+    s_bar = sum(s * trials[s] for s in scores) / total_n
+    numerator = sum(s * (counts[s] - trials[s] * p_bar) for s in scores)
+    variance = p_bar * (1.0 - p_bar) * sum(trials[s] * (s - s_bar) ** 2 for s in scores)
+    if variance <= 0.0:
+        return 0.0
+    return numerator / math.sqrt(variance)
+
+
+def bonferroni_alpha(axis_count: int, config: StatsConfig = CONFIG.stats) -> float:
+    """Bonferroni-divided alpha over the final frozen axis count (0008 (iv) multiplicity).
+
+    Each axis contributes exactly one verdict-bearing crossing test (whichever outcome side
+    carries that axis's registered break), so the family size is the axis count. Divide-alpha
+    form (mirrors minimum_detectable_effect at stats.py:80) so the crossing p-values are reported
+    uncorrected and compared against this returned level.
+    """
+    if axis_count <= 0:
+        raise ValueError("axis_count must be > 0")
+    return config.alpha / axis_count

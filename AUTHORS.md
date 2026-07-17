@@ -2,9 +2,10 @@
 
 ## Originator and lead
 
-The ontology, the closure concept, the research direction, and the reduction into the eight falsifiable
+The ontology, the closure concept, the research direction, and the reduction into falsifiable
 experiments were originated by **Vlad Ryzhkov** (independent researcher and machine-learning systems engineer; GitHub
-[`data-mission`](https://github.com/data-mission)), who leads the program.
+[`data-mission`](https://github.com/data-mission) · [LinkedIn](https://www.linkedin.com/in/ryzhkovvlad/)), who
+leads the program.
 
 Origination here means the specific things a research program is: the initial stance (that language is a lossy
 observable of a model's computation rather than its native ontology), the closure concept and its five-necessity

@@ -32,6 +32,10 @@ Two disciplines shaped the result:
   confident but meaningless verdict.
 
 ## Standing scope
-Every decision record is `proposed`, not binding, until frozen in the E0 pre-registration on OSF. The plan is a
-plan; no experiment has run. Its worth is that a total-refutation outcome still produces a decided question — the
-same standard the rest of the program holds itself to.
+Every decision record is `proposed`, not binding, until frozen at registration. (Originally stated here as "the
+E0 pre-registration on OSF"; the registration act was redefined 2026-07-16 as a public freeze commit plus a
+Zenodo-archived release — [0006 as amended](../decisions/0006-reproducibility-and-freeze.md).) As of 2026-07-16
+two experiments have run to a verdict ([STATUS.md](../STATUS.md)); the decisions that governed them are binding
+as-frozen for those runs and remain `proposed` for everything else. The plan's worth is unchanged: a
+total-refutation outcome still produces a decided question — the same standard the rest of the program holds
+itself to.
