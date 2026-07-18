@@ -1,0 +1,54 @@
+# Lead intervention log — watchers MUST check this before alarming on process deaths.
+# Format: [UTC] ACTION | TARGET | REASON
+[2026-07-18T03:56:50Z] KILL | A2 serial scorer (filter_stage_progress, A2-filter) | measured 4-5 min/family = waste; parallel relaunch planned
+[2026-07-18T04:16:00Z] KILL | A1 serial scoring phase (filter_stage_progress, A1-filter) | same waste profile; draws banked
+[2026-07-18T04:19:00Z] PAUSE | A3 paracheck 3-wide (filter_parallel, A3-filter-paracheck) | 8% done, thrashing box; resumable
+[2026-07-18T04:40:13Z] KILL | A2 + A1 parallel scorers (filter_parallel, both axes, one kill pass) | serialization strategy: all cores on A3
+[2026-07-18T04:38:57Z] LAUNCH | A3 paracheck 4-wide relaunch | A3-focus; races serial for delivery + Gate B
+[2026-07-18T05:25:00Z] AUTHORIZE | gpu_probe.py (MPS equivalence probe, builder, nice -19, GPU + light CPU) | director-ordered GPU certification; NOT part of registered run; watchers: expected new process, do not alarm
+[2026-07-18T05:29:00Z] PAUSE | gpu_probe.py (PID 9232, SIGSTOP) | memory compressor spike +1.16GB/5min toward swap + 183% CPU (MPS fallback suspected) — probe outranked by registered run; RESUME after A3 delivery
+[2026-07-18T05:45:00Z] STOP-ALL | entire experiment (A3 serial, A3 paracheck, gpu_probe, log mirrors, tripwires) | OWNER ORDER: stop the experiment. All banked artifacts preserved: gen-logs (2352 draws, $16.42), partial scoring logs, corpora untouched, repo untouched. Nothing deleted.
+[2026-07-18T15:19:21Z] LAUNCH | gpu_probe smoke (4 fams, strict-MPS, threads=2, GPU solo) | owner-authorized GPU rewire, ceremony dropped; watchers: expected process
+[2026-07-18T15:20:02Z] NOTE | first smoke launch died instantly (bare-PATH, uv not found); relaunching with PATH prefix
+[2026-07-18T15:20:02Z] LAUNCH | gpu_probe smoke (4 fams, strict-MPS, threads=2, GPU solo) | owner-authorized GPU rewire, ceremony dropped; watchers: expected process
+[2026-07-18T15:30:15Z] STAGE | batched_scorer.py + batched_equiv.py + BATCHED-NOTES.md copied to ~/e8-driver (new files, originals untouched) | equiv smoke gate queued after probe exit
+[2026-07-18T15:36:04Z] LAUNCH | batched_equiv smoke gate (4 fams, mps, batched-vs-per-call, GPU solo) | device gate A_ZERO_FLIPS passed 15:35:17Z; composition gate next
+[2026-07-18T15:39:57Z] NOTE | first full-tier launch died pre-loop (bash 3.2 declare -A under set -u); relaunching with case-mapping
+[2026-07-18T15:39:57Z] LAUNCH | batched_scorer A3 full axis (mps, fp32, bs=16, GPU solo) | both gates PASSED (device A_ZERO_FLIPS 15:35Z, composition PASS 15:37Z); corpus-gen task_id binding verified
+[2026-07-18T15:41:19Z] NOTE | sha256 record for staged tools (lead correction, flagged by dashboard auditor): batched_scorer.py=4a21ec7f... batched_equiv.py=657e5480... (full: 4a21ec7fa1943afa / 657e5480ce97cc69)
+[2026-07-18T15:44:03Z] STAGE | reanchor_e5_mps.py + run_axis_gpu.sh + READINESS-NOTES.md staged to ~/e8-driver (6fc817337ee8c950) | E5 re-anchor queued after tier completes
+[2026-07-18T15:52:15Z] LAUNCH | stage2_generate A3 (SPEND, 336 Arm-B draws) | owner-gated generation; watchers: expected API traffic, do not alarm
+[2026-07-18T15:57:10Z] STAGE | batched_stage2_scorer/equiv + run_stage2_gpu.sh staged to ~/e8-driver | Stage-2 scoring path B, gate-first
+[2026-07-18T15:57:53Z] DONE | stage2_generate A3 | 336 Arm-B draws banked → /Users/vladryzhkov/e8-run/A3-stage2/stage2-gen.jsonl
+[2026-07-18T15:58:14Z] LAUNCH | stage2_generate A2 (SPEND, 390 Arm-B draws) | owner-gated generation; watchers: expected API traffic, do not alarm
+[2026-07-18T16:02:54Z] STAGE | filter_report_from_batched.py + filter_report_equiv.py staged | converter for batched-scores→pruned-items, gate-first
+[2026-07-18T16:03:59Z] DONE | stage2_generate A2 | 390 Arm-B draws banked → /Users/vladryzhkov/e8-run/A2-stage2/stage2-gen.jsonl
+[2026-07-18T16:04:23Z] LAUNCH | stage2_generate A1 (SPEND, 450 Arm-B draws) | owner-gated generation; watchers: expected API traffic, do not alarm
+[2026-07-18T16:09:06Z] DONE | batched_scorer A3 | [2026-07-18T16:09:06Z] [batched] RESULT {"n_items": 2244, "n_assert": 1098, "pair_count": 51336, "device": "mps", "elapsed_s": 1748.2, "pairs_per_s": 29.39, "warn_only": false}
+[2026-07-18T16:09:06Z] LAUNCH | batched_scorer A2 full axis (mps, fp32, bs=16, GPU solo) | both gates PASSED (device A_ZERO_FLIPS 15:35Z, composition PASS 15:37Z); corpus-gen task_id binding verified
+[2026-07-18T16:09:32Z] DONE | stage2_generate A1 | 450 Arm-B draws banked → /Users/vladryzhkov/e8-run/A1-stage2/stage2-gen.jsonl
+[2026-07-18T16:12:15Z] STAGE | stage2_oracle_sample.py + updated run_stage2_gpu.sh (Option C: equiv→score→stratified-CPU-oracle) staged | oracle_verify.py byte-unchanged
+[2026-07-18T16:30:00Z] DONE | batched_scorer A2 | [2026-07-18T16:30:00Z] [batched] RESULT {"n_items": 2340, "n_assert": 1076, "pair_count": 46260, "device": "mps", "elapsed_s": 1252.7, "pairs_per_s": 36.97, "warn_only": false}
+[2026-07-18T16:30:00Z] LAUNCH | batched_scorer A1 full axis (mps, fp32, bs=16, GPU solo) | both gates PASSED (device A_ZERO_FLIPS 15:35Z, composition PASS 15:37Z); corpus-gen task_id binding verified
+[2026-07-18T16:48:35Z] STAGE | run_stage2_gpu.sh re-staged with EQUIV_N_TASKS knob (15b6d697); lead will run shard N=30
+[2026-07-18T16:51:55Z] DONE | batched_scorer A1 | [2026-07-18T16:51:54Z] [batched] RESULT {"n_items": 3600, "n_assert": 1558, "pair_count": 63384, "device": "mps", "elapsed_s": 1313.7, "pairs_per_s": 48.3, "warn_only": false}
+[2026-07-18T16:51:55Z] DONE | full filter tier scored on GPU (A3,A2,A1) | all outputs banked
+[2026-07-18T16:52:33Z] LAUNCH | converter smoke gate: batched_scorer on _smoke + filter_report_equiv vs frozen outputs | endgame step 1, GPU free
+[2026-07-18T16:53:38Z] DONE | converter smoke gate PASS (byte-identical) + pruned-items/filter-report emitted for A3,A2,A1
+[2026-07-18T16:53:57Z] LAUNCH | run_stage2_gpu A3 (device=mps, GPU-SOLO) | scoring banked Stage-2 gens; watchers: expected MPS process, do not alarm
+[2026-07-18T16:57:14Z] GATE | run_stage2_gpu A3 | composition equiv PASSED (shard(N=30))
+[2026-07-18T17:42:43Z] DONE | run_stage2_gpu A3 | equiv PASS + scored pass + oracle sample PASS → /Users/vladryzhkov/e8-run/A3-stage2/results/
+[2026-07-18T17:43:26Z] LAUNCH | run_stage2_gpu A2 (device=mps, GPU-SOLO) | scoring banked Stage-2 gens; watchers: expected MPS process, do not alarm
+[2026-07-18T17:48:13Z] GATE | run_stage2_gpu A2 | composition equiv PASSED (shard(N=30))
+[2026-07-18T17:55:13Z] STAGE | verdict_compute.py staged (d465e094) | canonical verdict instrument; A3 real-file falsification next
+[2026-07-18T17:59:47Z] STAGE | verdict_compute.py re-staged with per-axis expect-n partial guard (3d5a54ff)
+[2026-07-18T18:44:46Z] DONE | run_stage2_gpu A2 | equiv PASS + scored pass + oracle sample PASS → /Users/vladryzhkov/e8-run/A2-stage2/results/
+[2026-07-18T20:01:10Z] LAUNCH | run_stage2_gpu A1 (device=mps, GPU-SOLO) | scoring banked Stage-2 gens; watchers: expected MPS process, do not alarm
+[2026-07-18T20:03:35Z] GATE | run_stage2_gpu A1 | composition equiv PASSED (shard(N=30))
+[2026-07-18T20:36:33Z] DONE | run_stage2_gpu A1 | equiv PASS + scored pass + oracle sample PASS → /Users/vladryzhkov/e8-run/A1-stage2/results/
+[2026-07-18T20:37:46Z] DONE | FINAL all-axes verdict_compute run | program verdict computed from 3 complete oracle-validated axes
+[2026-07-18T20:38:32Z] LAUNCH | E5 re-anchor on MPS (reanchor_e5_mps.py, 60 tasks, score-only, gateless) | final compute item; GPU free after A1 chain
+[2026-07-18T20:46:47Z] LAUNCH | E5 re-anchor RETRY with sanitize fix (1b6503b7) | register gate 9/9 verified by builder; crash root-caused to unsanitized hallucinated citations
+[2026-07-18T21:05:36Z] ERROR | E5 re-anchor crashed AT WRITE (numpy bool not JSON serializable) after full scoring pass | fix + re-run needed; register gate + sanitize proven good
+[2026-07-18T21:09:59Z] LAUNCH | E5 re-anchor attempt 3 (numpy-JSON coercer + scores sidecar, a1a28360) | crash root-caused to np.bool_ from stats.py:63-65
+[2026-07-18T22:21:24Z] STAGE+RUN | verdict_compute A2 wrong-side fix (53b84cb6) re-run | red-check finding #1, acceptance contract: only A2 blocks may change

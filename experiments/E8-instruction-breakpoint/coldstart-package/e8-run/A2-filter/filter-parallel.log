@@ -1,0 +1,79 @@
+[filter-score] 130 families across 3 workers (threads=2/worker); config_hash=6dbe47a8e843
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+Loading weights:   0%|          | 0/394 [00:00<?, ?it/s]Loading weights: 100%|██████████| 394/394 [00:00<00:00, 26357.81it/s]
+Loading weights:   0%|          | 0/394 [00:00<?, ?it/s]Loading weights: 100%|██████████| 394/394 [00:00<00:00, 14260.43it/s]
+Loading weights:   0%|          | 0/394 [00:00<?, ?it/s]Loading weights: 100%|██████████| 394/394 [00:00<00:00, 15355.33it/s]
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score w1] 1/43 families
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score w0] 1/44 families
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score w2] 1/43 families
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score w0] 2/44 families
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score w1] 2/43 families
+[filter-score w2] 2/43 families
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score w0] 3/44 families
+[filter-score w2] 3/43 families
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+[filter-score] total 0/130 (running shards: [0, 1, 2])
+/Users/vladryzhkov/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+/Users/vladryzhkov/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+/Users/vladryzhkov/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

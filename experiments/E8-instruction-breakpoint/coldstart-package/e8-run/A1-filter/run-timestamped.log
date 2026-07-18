@@ -1,0 +1,49 @@
+[2026-07-18T03:50:19Z] [filter-gen] 900 draws to do (150 families × 2 states × 3 draws) ...
+[2026-07-18T03:50:47Z] [filter-gen]   20/900
+[2026-07-18T03:51:15Z] [filter-gen]   40/900
+[2026-07-18T03:51:43Z] [filter-gen]   60/900
+[2026-07-18T03:52:12Z] [filter-gen]   80/900
+[2026-07-18T03:52:39Z] [filter-gen]   100/900
+[2026-07-18T03:53:08Z] [filter-gen]   120/900
+[2026-07-18T03:53:40Z] [filter-gen]   140/900
+[2026-07-18T03:54:14Z] [filter-gen]   160/900
+[2026-07-18T03:54:43Z] [filter-gen]   180/900
+[2026-07-18T03:55:13Z] [filter-gen]   200/900
+[2026-07-18T03:55:43Z] [filter-gen]   220/900
+[2026-07-18T03:56:09Z] [filter-gen]   240/900
+[2026-07-18T03:56:36Z] [filter-gen]   260/900
+[2026-07-18T03:57:05Z] [filter-gen]   280/900
+[2026-07-18T03:57:37Z] [filter-gen]   300/900
+[2026-07-18T03:58:05Z] [filter-gen]   320/900
+[2026-07-18T03:58:33Z] [filter-gen]   340/900
+[2026-07-18T03:59:00Z] [filter-gen]   360/900
+[2026-07-18T03:59:27Z] [filter-gen]   380/900
+[2026-07-18T03:59:54Z] [filter-gen]   400/900
+[2026-07-18T04:00:20Z] [filter-gen]   420/900
+[2026-07-18T04:00:51Z] [filter-gen]   440/900
+[2026-07-18T04:01:21Z] [filter-gen]   460/900
+[2026-07-18T04:01:48Z] [filter-gen]   480/900
+[2026-07-18T04:02:19Z] [filter-gen]   500/900
+[2026-07-18T04:02:49Z] [filter-gen]   520/900
+[2026-07-18T04:03:17Z] [filter-gen]   540/900
+[2026-07-18T04:03:45Z] [filter-gen]   560/900
+[2026-07-18T04:04:13Z] [filter-gen]   580/900
+[2026-07-18T04:04:40Z] [filter-gen]   600/900
+[2026-07-18T04:05:10Z] [filter-gen]   620/900
+[2026-07-18T04:05:41Z] [filter-gen]   640/900
+[2026-07-18T04:06:08Z] [filter-gen]   660/900
+[2026-07-18T04:06:37Z] [filter-gen]   680/900
+[2026-07-18T04:07:18Z] [filter-gen]   700/900
+[2026-07-18T04:07:46Z] [filter-gen]   720/900
+[2026-07-18T04:08:11Z] [filter-gen]   740/900
+[2026-07-18T04:08:38Z] [filter-gen]   760/900
+[2026-07-18T04:09:06Z] [filter-gen]   780/900
+[2026-07-18T04:09:31Z] [filter-gen]   800/900
+[2026-07-18T04:09:59Z] [filter-gen]   820/900
+[2026-07-18T04:10:30Z] [filter-gen]   840/900
+[2026-07-18T04:10:56Z] [filter-gen]   860/900
+[2026-07-18T04:11:24Z] [filter-gen]   880/900
+[2026-07-18T04:11:51Z] [filter-gen]   900/900
+[2026-07-18T04:11:53Z] Loading weights:   0%|          | 0/394 [00:00<?, ?it/s]Loading weights: 100%|██████████| 394/394 [00:00<00:00, 19328.82it/s]
+[2026-07-18T04:15:35Z] /Users/vladryzhkov/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+[2026-07-18T04:15:35Z]   warnings.warn('resource_tracker: There appear to be %d '

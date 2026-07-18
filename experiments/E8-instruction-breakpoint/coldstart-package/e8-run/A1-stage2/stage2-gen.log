@@ -1,0 +1,26 @@
+=== [2026-07-18T16:04:23Z] A1 STAGE-2 GENERATION START (450 Arm-B draws, rate=4.0, conc=8) ===
+[gen] 450 generations to do (0 banked), dry_run=False, concurrency=8, rate=4.0/s
+[gen]   20/450 (ok=20 err=0)
+[gen]   40/450 (ok=40 err=0)
+[gen]   60/450 (ok=60 err=0)
+[gen]   80/450 (ok=80 err=0)
+[gen]   100/450 (ok=100 err=0)
+[gen]   120/450 (ok=120 err=0)
+[gen]   140/450 (ok=140 err=0)
+[gen]   160/450 (ok=160 err=0)
+[gen]   180/450 (ok=180 err=0)
+[gen]   200/450 (ok=200 err=0)
+[gen]   220/450 (ok=220 err=0)
+[gen]   240/450 (ok=240 err=0)
+[gen]   260/450 (ok=260 err=0)
+[gen]   280/450 (ok=280 err=0)
+[gen]   300/450 (ok=300 err=0)
+[gen]   320/450 (ok=320 err=0)
+[gen]   340/450 (ok=340 err=0)
+[gen]   360/450 (ok=360 err=0)
+[gen]   380/450 (ok=380 err=0)
+[gen]   400/450 (ok=400 err=0)
+[gen]   420/450 (ok=420 err=0)
+[gen]   440/450 (ok=440 err=0)
+[gen] DONE ok=450 err=0
+=== [2026-07-18T16:09:32Z] A1 STAGE-2 GENERATION DONE — banked → /Users/vladryzhkov/e8-run/A1-stage2/stage2-gen.jsonl ===

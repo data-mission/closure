@@ -1,0 +1,10 @@
+You are given a set of source documents and a question. Read the documents and answer the question using only the information they contain.
+
+Documents:
+{documents}
+
+Question: {question}
+
+Provide your answer as structured output with two fields:
+- "claims": a list of atomic factual claims, each an object with "id" (an integer), "text" (the claim as a single sentence), and "source_ids" (a list of the document numbers, as shown above, that the claim draws on; use an empty list if the claim draws on no specific document).
+- "conclusion": a single sentence that directly answers the question, following from the claims.

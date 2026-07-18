@@ -1,0 +1,14 @@
+[2026-07-18T15:36:05Z] [equiv] 4 families, threshold=0.7, batch_size=16, device=mps, config_hash=6dbe47a8e843
+Loading weights:   0%|          | 0/394 [00:00<?, ?it/s]Loading weights: 100%|██████████| 394/394 [00:00<00:00, 23425.89it/s]
+[2026-07-18T15:36:06Z] [equiv] scorer built on mps; warn_only needed: False
+[2026-07-18T15:36:06Z] [equiv] scoring per-call (frozen per-__call__ path) ...
+[2026-07-18T15:36:11Z] [probe equiv-percall] 1/4 families scored
+[2026-07-18T15:36:29Z] [probe equiv-percall] 2/4 families scored
+[2026-07-18T15:36:37Z] [probe equiv-percall] 3/4 families scored
+[2026-07-18T15:36:46Z] [probe equiv-percall] 4/4 families scored
+[2026-07-18T15:36:46Z] [equiv] scoring batched (fixed canonical composition) ...
+[2026-07-18T15:37:10Z] [batched] forward 50/92 batches (800/1462 pairs)
+[2026-07-18T15:37:25Z] [batched] forward 92/92 batches (1462/1462 pairs)
+[2026-07-18T15:37:25Z] [equiv] RESULT {"verdict": "PASS", "flips": 0, "flip_rate": 0.0, "max_delta": 0.000244140625, "near_flips": 0, "key_mismatch": false, "n_items": 84}
+[2026-07-18T15:37:25Z] [equiv] wrote /Users/vladryzhkov/e8-run/_gpu_rewire/equiv-smoke.json
+[2026-07-18T15:37:25Z] [equiv] PASS: zero boolean flips — batched scorer is equivalent to the per-call path here.

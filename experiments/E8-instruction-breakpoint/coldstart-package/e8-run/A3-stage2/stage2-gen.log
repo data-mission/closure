@@ -1,0 +1,20 @@
+=== [2026-07-18T15:52:15Z] A3 STAGE-2 GENERATION START (336 Arm-B draws, rate=4.0, conc=8) ===
+[gen] 336 generations to do (0 banked), dry_run=False, concurrency=8, rate=4.0/s
+[gen]   20/336 (ok=20 err=0)
+[gen]   40/336 (ok=40 err=0)
+[gen]   60/336 (ok=60 err=0)
+[gen]   80/336 (ok=80 err=0)
+[gen]   100/336 (ok=100 err=0)
+[gen]   120/336 (ok=120 err=0)
+[gen]   140/336 (ok=140 err=0)
+[gen]   160/336 (ok=160 err=0)
+[gen]   180/336 (ok=180 err=0)
+[gen]   200/336 (ok=200 err=0)
+[gen]   220/336 (ok=220 err=0)
+[gen]   240/336 (ok=240 err=0)
+[gen]   260/336 (ok=260 err=0)
+[gen]   280/336 (ok=280 err=0)
+[gen]   300/336 (ok=300 err=0)
+[gen]   320/336 (ok=320 err=0)
+[gen] DONE ok=336 err=0
+=== [2026-07-18T15:57:53Z] A3 STAGE-2 GENERATION DONE — banked → /Users/vladryzhkov/e8-run/A3-stage2/stage2-gen.jsonl ===

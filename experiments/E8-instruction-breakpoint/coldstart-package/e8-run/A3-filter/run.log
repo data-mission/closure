@@ -1,0 +1,37 @@
+[filter-gen] 672 draws to do (112 families × 2 states × 3 draws) ...
+[filter-gen]   20/672
+[filter-gen]   40/672
+[filter-gen]   60/672
+[filter-gen]   80/672
+[filter-gen]   100/672
+[filter-gen]   120/672
+[filter-gen]   140/672
+[filter-gen]   160/672
+[filter-gen]   180/672
+[filter-gen]   200/672
+[filter-gen]   220/672
+[filter-gen]   240/672
+[filter-gen]   260/672
+[filter-gen]   280/672
+[filter-gen]   300/672
+[filter-gen]   320/672
+[filter-gen]   340/672
+[filter-gen]   360/672
+[filter-gen]   380/672
+[filter-gen]   400/672
+[filter-gen]   420/672
+[filter-gen]   440/672
+[filter-gen]   460/672
+[filter-gen]   480/672
+[filter-gen]   500/672
+[filter-gen]   520/672
+[filter-gen]   540/672
+[filter-gen]   560/672
+[filter-gen]   580/672
+[filter-gen]   600/672
+[filter-gen]   620/672
+[filter-gen]   640/672
+[filter-gen]   660/672
+Loading weights:   0%|          | 0/394 [00:00<?, ?it/s]Loading weights: 100%|██████████| 394/394 [00:00<00:00, 10992.05it/s]
+/Users/vladryzhkov/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

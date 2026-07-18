@@ -1,0 +1,39 @@
+{
+  "oracle": "per-task == , fresh re-pinned process",
+  "verdict": "PASS",
+  "oracle_threads": 1,
+  "n_sampled_tasks": 12,
+  "per_worker_coverage": {
+    "Mac-558|2|2.13.0|5.13.1|6dbe47a8e843ec1540f64ed6ddd8339c17b95688db363e31605502e374a8b9f0": 12
+  },
+  "n_mismatches": 0,
+  "mismatches": [],
+  "elapsed_s": 2455.9,
+  "gpu_path_note": "gpu-path oracle = bounded stratified CPU cross-check. This is a FRESH-process, 1-thread CPU per-task re-score (via the unmodified oracle_verify.py / frozen score_one_task) of a stratified SAMPLE of the GPU-scored results \u2014 NOT a full-corpus re-score, and NOT the multi-worker-corruption check the registered CPU-fleet oracle ran (the GPU path is a single MPS process). It verifies instrument identity per sampled task on fresh CPU. Batching/composition equivalence is covered separately by the mandatory batched_stage2_equiv gate (zero boolean flips). PASS here + PASS there = the GPU Stage-2 scores are trustworthy for \u00a75.",
+  "sample_composition": {
+    "sample_task_ids": [
+      "A2-0001-S1",
+      "A2-0001-S2",
+      "A2-0001-S3",
+      "A2-0002-S1",
+      "A2-0002-S2",
+      "A2-0002-S3",
+      "A2-0003-S1",
+      "A2-0003-S2",
+      "A2-0003-S3",
+      "A2-0004-S1",
+      "A2-0004-S2",
+      "A2-0004-S3"
+    ],
+    "n_sampled": 12,
+    "n_total": 390,
+    "per_stratum_counts": {
+      "dose=1,break_side=must_persist": 4,
+      "dose=2,break_side=must_persist": 4,
+      "dose=3,break_side=must_persist": 4
+    },
+    "n_forced_contaminated_or_defaulted": 12
+  },
+  "sample_cap": 12,
+  "verified_at": "2026-07-18T18:44:46Z"
+}

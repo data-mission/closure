@@ -1,0 +1,46 @@
+[filter-gen] 780 draws to do (130 families × 2 states × 3 draws) ...
+[filter-gen]   20/780
+[filter-gen]   40/780
+[filter-gen]   60/780
+[filter-gen]   80/780
+[filter-gen]   100/780
+[filter-gen]   120/780
+[filter-gen]   140/780
+[filter-gen]   160/780
+[filter-gen]   180/780
+[filter-gen]   200/780
+[filter-gen]   220/780
+[filter-gen]   240/780
+[filter-gen]   260/780
+[filter-gen]   280/780
+[filter-gen]   300/780
+[filter-gen]   320/780
+[filter-gen]   340/780
+[filter-gen]   360/780
+[filter-gen]   380/780
+[filter-gen]   400/780
+[filter-gen]   420/780
+[filter-gen]   440/780
+[filter-gen]   460/780
+[filter-gen]   480/780
+[filter-gen]   500/780
+[filter-gen]   520/780
+[filter-gen]   540/780
+[filter-gen]   560/780
+[filter-gen]   580/780
+[filter-gen]   600/780
+[filter-gen]   620/780
+[filter-gen]   640/780
+[filter-gen]   660/780
+[filter-gen]   680/780
+[filter-gen]   700/780
+[filter-gen]   720/780
+[filter-gen]   740/780
+[filter-gen]   760/780
+[filter-gen]   780/780
+Loading weights:   0%|          | 0/394 [00:00<?, ?it/s]Loading weights: 100%|██████████| 394/394 [00:00<00:00, 10768.22it/s]
+[filter-score] 1/130 families scored
+[filter-score] 2/130 families scored
+[filter-score] 3/130 families scored
+/Users/vladryzhkov/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

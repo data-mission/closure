@@ -1,0 +1,1 @@
+RESTART ENTRYPOINT: read ~/repos/closure/experiments/E8-instruction-breakpoint/GPU-REWIRE-NOTES.md (uncommitted) — cold-start checklist at top. This dir holds banked draws (paid), logs, verdict-prep, smoke ground truth. Delete nothing.
