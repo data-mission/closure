@@ -79,6 +79,8 @@ defaulting to all-true per the manager's 2026-07-17 canon ruling, score_worker.p
 
 ### A1 — Dependency depth (break side: must_change, θ = 5%)
 
+> **VALIDITY: AXIS INVALID AS BUILT — corpus polarity inverted: must_change holds the corrected (post-revision) values (verified 450/450 tasks, 2026-07-18), so per_dose counts measure revision SUCCESS, not contamination; this axis contributes no contamination signal to H-BREAKPOINT; break_verdict=false stands but is uninformative; corpus rebuild with stale-value must_change required to test the depth hypothesis.**
+
 | Level | count | trials (N) | rate |
 |---|---|---|---|
 | D1 | 157 | 300 | 0.523333 |
@@ -95,6 +97,9 @@ defaulting to all-true per the manager's 2026-07-17 canon ruling, score_worker.p
 - **A1 BREAK: NO BREAK** (all three conjuncts required: gate_pass AND crossed).
 
 ### A2 — Scoped-exception generalization (break side: must_persist, θ_persist = 10%)
+
+> **VALIDITY: polarity verified correct (A2: persist side, drop-counting fix applied 2026-07-18)**
+
 
 | Level | count | trials (N) | rate |
 |---|---|---|---|
@@ -115,6 +120,9 @@ defaulting to all-true per the manager's 2026-07-17 canon ruling, score_worker.p
 - **A2 BREAK: NO BREAK** (all three conjuncts required).
 
 ### A3 — Accumulated corrections (break side: must_change, θ = 5%)
+
+> **VALIDITY: polarity verified correct (A3: stale values confirmed 336/336)**
+
 
 | Level | count | trials (N) | rate |
 |---|---|---|---|

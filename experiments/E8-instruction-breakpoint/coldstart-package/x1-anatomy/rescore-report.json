@@ -1,0 +1,6153 @@
+{
+  "headline": {
+    "raw_nli_contaminated": 200,
+    "numeric_slot_verified_true": 0,
+    "artifact_reclassified": 200,
+    "artifact_fraction": 1.0
+  },
+  "true_floor_table": {
+    "F1|dose1": {
+      "raw_nli": 16,
+      "verified_true": 0,
+      "items_total": 36
+    },
+    "F1|dose2": {
+      "raw_nli": 12,
+      "verified_true": 0,
+      "items_total": 72
+    },
+    "F1|dose3": {
+      "raw_nli": 2,
+      "verified_true": 0,
+      "items_total": 102
+    },
+    "F2|dose1": {
+      "raw_nli": 24,
+      "verified_true": 0,
+      "items_total": 37
+    },
+    "F2|dose2": {
+      "raw_nli": 65,
+      "verified_true": 0,
+      "items_total": 74
+    },
+    "F2|dose3": {
+      "raw_nli": 77,
+      "verified_true": 0,
+      "items_total": 91
+    },
+    "F3|dose1": {
+      "raw_nli": 0,
+      "verified_true": 0,
+      "items_total": 77
+    },
+    "F3|dose2": {
+      "raw_nli": 0,
+      "verified_true": 0,
+      "items_total": 116
+    },
+    "F3|dose3": {
+      "raw_nli": 4,
+      "verified_true": 0,
+      "items_total": 151
+    }
+  },
+  "by_family": {
+    "F1": {
+      "raw_nli": 30,
+      "verified_true": 0
+    },
+    "F2": {
+      "raw_nli": 166,
+      "verified_true": 0
+    },
+    "F3": {
+      "raw_nli": 4,
+      "verified_true": 0
+    }
+  },
+  "by_dose": {
+    "1": {
+      "raw_nli": 40,
+      "verified_true": 0
+    },
+    "2": {
+      "raw_nli": 77,
+      "verified_true": 0
+    },
+    "3": {
+      "raw_nli": 83,
+      "verified_true": 0
+    }
+  },
+  "pruning_bias": {
+    "n_excluded_families": 27,
+    "n_pruned_items": 30,
+    "excluded_by_F_family": {
+      "F2": 27
+    },
+    "all_families_by_F": {
+      "F2": 37,
+      "F3": 39,
+      "F1": 36
+    },
+    "exclusion_rate_by_F": {
+      "F2": 0.7297,
+      "F3": 0.0,
+      "F1": 0.0
+    },
+    "note": "Filter is a SEPARATE A-dependency qualification stage; it did NOT remove families from the stage-2 contamination run (all 112 families present in stage-2 results). So the rescore has no survivorship bias. The exclusion pattern is itself evidence: the same NLI instrument, run on correction-state draws, independently flagged 73% of F2 families (0% F1, 0% F3) as anomalously 'asserted' \u2014 a second confirmation that F2's template is where the NLI misbehaves."
+  },
+  "records": [
+    {
+      "task_id": "A3-C-0528-C3",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The total lift rides today is 20,400 rides, which fails to meet the 22,000 rides lift-operator staffing contract's minimum ride-volume threshold.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 20400.0,
+        "benchmark": 22000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          750.0,
+          6800.0,
+          7400.0,
+          24480.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0528-C3",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The dining halls' total lunch-sitting throughput is 900 guests, which meets the 900 guests resort's total lunch-sitting capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 900.0,
+        "benchmark": 900.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          750.0,
+          6800.0,
+          7400.0,
+          24480.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": true,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0528-C3",
+      "item_idx": 2,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The resort's daily slope-grooming budget is $6,000, which fails to meet the $6,800 minimum daily grooming budget required to keep all runs open.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 6000.0,
+        "benchmark": 6800.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          750.0,
+          6800.0,
+          7400.0,
+          24480.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": true,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0516-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The sheets printed per hour is 75,600 sheets, which fails to meet the 78,000 sheets publisher's minimum print-run contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 75600.0,
+        "benchmark": 78000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          2100.0,
+          2200.0,
+          5200.0,
+          86400.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0516-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The books bound per hour is 2,550 books, which meets the 2,200 books warehouse's hourly intake capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 2550.0,
+        "benchmark": 2200.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          2100.0,
+          2200.0,
+          5200.0,
+          86400.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0506-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The herd's daily milk yield is 25,200 litres, which meets the 22,000 litres processor's daily milk-intake contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 25200.0,
+        "benchmark": 22000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3200.0,
+          21600.0,
+          28000.0,
+          31200.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0506-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The tanker fleet's daily collection volume is 27,000 litres, which fits within the 28,000 litres processor's tanker-bay unloading capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 27000.0,
+        "benchmark": 28000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3200.0,
+          21600.0,
+          28000.0,
+          31200.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0517-C3",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The total bottles yielded from maturation is 140,000 bottles, which meets the 132,500 bottles export bottling contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 140000.0,
+        "benchmark": 132500.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          8400.0,
+          78000.0,
+          84000.0,
+          125000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0517-C3",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The bottling hall's hourly fill rate is 7,200 bottles, which fits within the 7,500 bottles hall's hourly labelling-station capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 7200.0,
+        "benchmark": 7500.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          8400.0,
+          78000.0,
+          84000.0,
+          125000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0517-C3",
+      "item_idx": 2,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The distillery's quarterly excise-duty budget is $90,000, which meets the $84,000 minimum quarterly excise-duty budget required.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 90000.0,
+        "benchmark": 84000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          8400.0,
+          78000.0,
+          84000.0,
+          125000.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": true,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0409-C1",
+      "item_idx": 0,
+      "family": "F1",
+      "dose": 1,
+      "mc_text": "Ticketed attendance exceeds the certified occupancy cap, so the event as ticketed is a life-safety violation.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": null,
+        "benchmark": null,
+        "correct_final_nums": [
+          3.0,
+          4.0,
+          7.0,
+          10.0,
+          1150.0,
+          1200.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0419-C1",
+      "item_idx": 0,
+      "family": "F1",
+      "dose": 1,
+      "mc_text": "The delivery exceeds Silo 4's remaining free capacity, so it may not be received into the silo as is.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": null,
+        "benchmark": null,
+        "correct_final_nums": [
+          14.0,
+          16.5,
+          20.0,
+          32.0,
+          35.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [
+          4.0
+        ],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0513-C1",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 1,
+      "mc_text": "The farm's total daily generation is 3,600 kilowatt-hours, which fails to meet the 3,900 kilowatt-hours grid operator's minimum daily-supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 3600.0,
+        "benchmark": 3900.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3800.0,
+          3900.0,
+          4200.0,
+          8000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0503-C1",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 1,
+      "mc_text": "The loaves baked per shift is 7,200 loaves, which fails to meet the 7,500 loaves supermarket supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 7200.0,
+        "benchmark": 7500.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          630.0,
+          6000.0,
+          7500.0,
+          8400.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0529-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The total viable saplings grown is 11,700 saplings, which meets the 10,950 saplings reforestation authority's minimum supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 11700.0,
+        "benchmark": 10950.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          1300.0,
+          1440.0,
+          3800.0,
+          10200.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0529-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The potting bays' hourly potting throughput is 1,260 saplings, which fits within the 1,300 saplings loading dock's hourly dispatch capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 1260.0,
+        "benchmark": 1300.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          1300.0,
+          1440.0,
+          3800.0,
+          10200.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0525-C1",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 1,
+      "mc_text": "The recyclables recovered this month is 306 tonnes, which meets the 280 tonnes municipal diversion-rate contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 306.0,
+        "benchmark": 280.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          110.0,
+          261.0,
+          280.0,
+          7000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0621-C1",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 1,
+      "mc_text": "The hourly calls handled is 450 calls, which fails to meet the 486 calls retail client's minimum hourly call-handling SLA.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 450.0,
+        "benchmark": 486.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          108.0,
+          486.0,
+          540.0,
+          8000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0521-C3",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The total daily bandwidth used is 50,400 gigabytes, which fails to meet the 58,000 gigabytes upstream provider's minimum-bandwidth SLA contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 50400.0,
+        "benchmark": 58000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          17000.0,
+          19000.0,
+          64800.0,
+          66000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0521-C3",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The cooling plant's total load drawn is 56,000 watts, which fits within the 61,000 watts cooling plant's total capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 56000.0,
+        "benchmark": 61000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          17000.0,
+          19000.0,
+          64800.0,
+          66000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0521-C3",
+      "item_idx": 2,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The data centre's monthly backup-power budget is $15,000, which fails to meet the $17,000 minimum monthly backup-power budget required.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 15000.0,
+        "benchmark": 17000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          17000.0,
+          19000.0,
+          64800.0,
+          66000.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": true,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0531-C3",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The cheese cultured today is 1,710 kilograms, which meets the 1,550 kilograms wholesaler's minimum weekly wheel-count contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 1710.0,
+        "benchmark": 1550.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          1458.0,
+          1680.0,
+          2100.0,
+          2300.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0531-C3",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The ripening cave's total chamber load is 1,440 kilograms, which falls short of the 1,600 kilograms cave's total ripening capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 1440.0,
+        "benchmark": 1600.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          1458.0,
+          1680.0,
+          2100.0,
+          2300.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0531-C3",
+      "item_idx": 2,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The ripening cave's monthly climate-control budget is $2,600, which meets the $2,300 minimum monthly climate-control budget required to hold humidity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 2600.0,
+        "benchmark": 2300.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          1458.0,
+          1680.0,
+          2100.0,
+          2300.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": true,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0530-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The lehr lines' hourly annealing throughput is 10,400 bottles, which fits within the 11,000 bottles packing hall's hourly intake capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 10400.0,
+        "benchmark": 11000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          9500.0,
+          11000.0,
+          12000.0,
+          102000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0520-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The coins bagged per hour is 126,000 coins, which fits within the 135,000 coins vault's hourly intake capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 126000.0,
+        "benchmark": 135000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          1086.0,
+          26000.0,
+          135000.0,
+          144000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0329-C3",
+      "item_idx": 2,
+      "family": "F3",
+      "dose": 3,
+      "mc_text": "The total monthly bill including dockage, pump-maintenance, and environmental-compliance fees is $5,225.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "value",
+        "stale_number": 5225.0,
+        "benchmark": null,
+        "correct_final_nums": [
+          3.0,
+          60.0,
+          140.0,
+          500.0,
+          4725.0,
+          5425.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "MIXED",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0329-C3",
+      "item_idx": 3,
+      "family": "F3",
+      "dose": 3,
+      "mc_text": "The total monthly bill including dockage, pump-maintenance, and environmental-compliance fees is $5,375.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "value",
+        "stale_number": 5375.0,
+        "benchmark": null,
+        "correct_final_nums": [
+          3.0,
+          60.0,
+          140.0,
+          500.0,
+          4725.0,
+          5425.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "MIXED",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0534-C1",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 1,
+      "mc_text": "The total finished sheet rolled is 528 tonnes, which meets the 507 tonnes automotive supplier's minimum sheet-supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 528.0,
+        "benchmark": 507.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          42.0,
+          486.0,
+          507.0,
+          7200.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0530-C3",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The total bottles melted is 114,000 bottles, which meets the 108,000 bottles beverage client's minimum bottle-supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 114000.0,
+        "benchmark": 108000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          10800.0,
+          11800.0,
+          12000.0,
+          102000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0530-C3",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The lehr lines' hourly annealing throughput is 10,400 bottles, which fits within the 11,000 bottles packing hall's hourly intake capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 10400.0,
+        "benchmark": 11000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          10800.0,
+          11800.0,
+          12000.0,
+          102000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0530-C3",
+      "item_idx": 2,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The annealing lehr's weekly natural-gas budget is $9,500, which fails to meet the $10,800 minimum weekly natural-gas budget required to run all lehr lines.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 9500.0,
+        "benchmark": 10800.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          10800.0,
+          11800.0,
+          12000.0,
+          102000.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": true,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0520-C3",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The coins bagged per hour is 126,000 coins, which fits within the 135,000 coins vault's hourly intake capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 126000.0,
+        "benchmark": 135000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          1086.0,
+          21000.0,
+          23500.0,
+          144000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0521-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The total daily bandwidth used is 50,400 gigabytes, which fails to meet the 58,000 gigabytes upstream provider's minimum-bandwidth SLA contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 50400.0,
+        "benchmark": 58000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          15000.0,
+          61000.0,
+          64800.0,
+          66000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0521-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The cooling plant's total load drawn is 56,000 watts, which fits within the 61,000 watts cooling plant's total capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 56000.0,
+        "benchmark": 61000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          15000.0,
+          61000.0,
+          64800.0,
+          66000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0531-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The cheese cultured today is 1,710 kilograms, which meets the 1,550 kilograms wholesaler's minimum weekly wheel-count contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 1710.0,
+        "benchmark": 1550.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          1458.0,
+          1600.0,
+          1680.0,
+          2600.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0531-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The ripening cave's total chamber load is 1,440 kilograms, which falls short of the 1,600 kilograms cave's total ripening capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 1440.0,
+        "benchmark": 1600.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          1458.0,
+          1600.0,
+          1680.0,
+          2600.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0401-C1",
+      "item_idx": 0,
+      "family": "F1",
+      "dose": 1,
+      "mc_text": "The stair core exceeds the crane's rated capacity at this radius, so the lift cannot proceed as charted.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": null,
+        "benchmark": null,
+        "correct_final_nums": [
+          32.0,
+          36.0,
+          46.0,
+          48.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0529-C3",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The total viable saplings grown is 11,700 saplings, which meets the 10,950 saplings reforestation authority's minimum supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 11700.0,
+        "benchmark": 10950.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          1440.0,
+          3100.0,
+          3400.0,
+          10200.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0529-C3",
+      "item_idx": 2,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The potting line's weekly peat-compost budget is $3,800, which meets the $3,400 minimum weekly peat-compost budget required to run all bays.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 3800.0,
+        "benchmark": 3400.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          1440.0,
+          3100.0,
+          3400.0,
+          10200.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": true,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0507-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The cargo weight loaded is 900 tonnes, which fails to meet the 950 tonnes shipping line's cargo-weight contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 900.0,
+        "benchmark": 950.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          153.0,
+          170.0,
+          1050.0,
+          12000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0517-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The bottling hall's hourly fill rate is 7,200 bottles, which fits within the 7,500 bottles hall's hourly labelling-station capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 7200.0,
+        "benchmark": 7500.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          7500.0,
+          8400.0,
+          90000.0,
+          125000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0408-C1",
+      "item_idx": 0,
+      "family": "F1",
+      "dose": 1,
+      "mc_text": "Tonight's nurse roster is below the mandated ratio for the current census, so the unit may not run at full census as staffed.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": null,
+        "benchmark": null,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          6.0,
+          12.0,
+          14.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0516-C3",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The sheets printed per hour is 75,600 sheets, which fails to meet the 78,000 sheets publisher's minimum print-run contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 75600.0,
+        "benchmark": 78000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          2100.0,
+          5700.0,
+          6100.0,
+          86400.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0516-C3",
+      "item_idx": 2,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The print job's weekly ink budget is $5,200, which fails to meet the $5,700 minimum weekly ink budget required to run the presses.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 5200.0,
+        "benchmark": 5700.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          2100.0,
+          5700.0,
+          6100.0,
+          86400.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": true,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0506-C3",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The herd's daily milk yield is 25,200 litres, which meets the 22,000 litres processor's daily milk-intake contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 25200.0,
+        "benchmark": 22000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          2600.0,
+          2900.0,
+          21600.0,
+          31200.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0506-C3",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The tanker fleet's daily collection volume is 27,000 litres, which fits within the 28,000 litres processor's tanker-bay unloading capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 27000.0,
+        "benchmark": 28000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          2600.0,
+          2900.0,
+          21600.0,
+          31200.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0506-C3",
+      "item_idx": 2,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The tanker fleet's weekly fuel budget is $3,200, which meets the $2,900 minimum weekly fuel budget required to run the collection routes.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 3200.0,
+        "benchmark": 2900.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          2600.0,
+          2900.0,
+          21600.0,
+          31200.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": true,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0602-C3",
+      "item_idx": 2,
+      "family": "F1",
+      "dose": 3,
+      "mc_text": "The scheduled sound check falls after the venue's noise curfew, so it cannot proceed at 23:00 as scheduled.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 23.0,
+        "benchmark": 0.0,
+        "correct_final_nums": [
+          4.6,
+          4.8,
+          23.0,
+          24.0,
+          2600.0,
+          2800.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": true,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0528-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The total lift rides today is 20,400 rides, which fails to meet the 22,000 rides lift-operator staffing contract's minimum ride-volume threshold.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 20400.0,
+        "benchmark": 22000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          750.0,
+          900.0,
+          6000.0,
+          24480.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0528-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The dining halls' total lunch-sitting throughput is 900 guests, which meets the 900 guests resort's total lunch-sitting capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 900.0,
+        "benchmark": 900.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          750.0,
+          900.0,
+          6000.0,
+          24480.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": true,
+        "stale_equals_correct": true,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0502-C1",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 1,
+      "mc_text": "The cloth woven per shift is 4,500 metres, which fails to meet the 4,875 metres export order.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 4500.0,
+        "benchmark": 4875.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          720.0,
+          4875.0,
+          5250.0,
+          18000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0512-C1",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 1,
+      "mc_text": "The total state funding received is $12,880,000, which meets the $12,500,000 district's minimum state-funding contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 12880000.0,
+        "benchmark": 12500000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          704.0,
+          210000.0,
+          12040000.0,
+          12500000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0608-C2",
+      "item_idx": 0,
+      "family": "F1",
+      "dose": 2,
+      "mc_text": "The combined hoist weight exceeds the winch cable's certified working-load limit, so the extraction cannot proceed by this method.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": null,
+        "benchmark": null,
+        "correct_final_nums": [
+          180.0,
+          300.0,
+          310.0,
+          330.0,
+          2850.0,
+          3000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "MIXED",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0522-C3",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The total packaged lamb yielded is 23,400 kilograms, which meets the 21,000 kilograms supermarket's minimum lamb-supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 23400.0,
+        "benchmark": 21000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          1760.0,
+          2700.0,
+          3000.0,
+          20640.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0522-C3",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The packing lines' hourly output is 1,520 kilograms, which fits within the 1,650 kilograms dispatch bay's hourly loading capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 1520.0,
+        "benchmark": 1650.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          1760.0,
+          2700.0,
+          3000.0,
+          20640.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0522-C3",
+      "item_idx": 2,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The plant's weekly vacuum-film budget is $3,400, which meets the $3,000 minimum weekly vacuum-film budget required.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 3400.0,
+        "benchmark": 3000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          1760.0,
+          2700.0,
+          3000.0,
+          20640.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": true,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0532-C3",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The total assembly labour hours required is 900 hours, which meets the 1,025 hours assembly team's contracted maximum labour-hour budget.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 900.0,
+        "benchmark": 1025.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          152.0,
+          1150.0,
+          4700.0,
+          5100.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0532-C3",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The spray booths' per-shift finishing throughput is 180 frames, which exceeds the 170 frames warehouse's per-shift crating capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 180.0,
+        "benchmark": 170.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          152.0,
+          1150.0,
+          4700.0,
+          5100.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0532-C3",
+      "item_idx": 2,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The finishing line's weekly solvent budget is $4,200, which fails to meet the $4,700 minimum weekly solvent budget required to run all booths.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 4200.0,
+        "benchmark": 4700.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          152.0,
+          1150.0,
+          4700.0,
+          5100.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": true,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0416-C2",
+      "item_idx": 0,
+      "family": "F1",
+      "dose": 2,
+      "mc_text": "The planned dive depth exceeds the diver's certified maximum, so he may not work this dive as planned.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": null,
+        "benchmark": null,
+        "correct_final_nums": [
+          2.0,
+          3.0,
+          32.0,
+          35.0,
+          55.0,
+          60.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0526-C1",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 1,
+      "mc_text": "The total tonnage loaded across trailers is 1,320 tonnes, which fails to meet the 1,400 tonnes haulage contract's minimum tonnage requirement.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 1320.0,
+        "benchmark": 1400.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          36.0,
+          1400.0,
+          1470.0,
+          5600.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0413-C1",
+      "item_idx": 0,
+      "family": "F1",
+      "dose": 1,
+      "mc_text": "The commission requires more firings than the policy cap allows without an outside slot, so it cannot proceed on the single kiln as capped.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": null,
+        "benchmark": null,
+        "correct_final_nums": [
+          6.0,
+          8.0,
+          14.0,
+          18.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0403-C1",
+      "item_idx": 0,
+      "family": "F1",
+      "dose": 1,
+      "mc_text": "The order requires more batches than the oven's per-batch capacity allows without approval, so it cannot proceed unapproved.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": null,
+        "benchmark": null,
+        "correct_final_nums": [
+          2.0,
+          3.0,
+          3.5,
+          24.0,
+          28.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0533-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The total chicks hatched this cycle is 20,500 chicks, which meets the 19,750 chicks broiler-grower's minimum hatchling-supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 20500.0,
+        "benchmark": 19750.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          2400.0,
+          16500.0,
+          18000.0,
+          19000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0533-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The delivery vans' total same-day carrying load is 16,000 chicks, which fits within the 16,500 chicks grower farms' total same-day intake capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 16000.0,
+        "benchmark": 16500.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          2400.0,
+          16500.0,
+          18000.0,
+          19000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0523-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The total passengers handled today is 14,025 passengers, which fails to meet the 15,500 passengers airport authority's minimum passenger-throughput contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 14025.0,
+        "benchmark": 15500.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          4920.0,
+          5200.0,
+          8200.0,
+          16150.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0523-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The baggage belts' hourly sorting throughput is 5,700 bags, which exceeds the 5,200 bags hall's hourly sorting capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 5700.0,
+        "benchmark": 5200.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          4920.0,
+          5200.0,
+          8200.0,
+          16150.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0519-C1",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 1,
+      "mc_text": "The usable aggregate blasted is 42,750 tonnes, which fails to meet the 45,000 tonnes highways authority's minimum aggregate-supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 42750.0,
+        "benchmark": 45000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          240.0,
+          8200.0,
+          45000.0,
+          47250.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0515-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The total herring landed is 84,000 kilograms, which meets the 76,000 kilograms cannery's minimum supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 84000.0,
+        "benchmark": 76000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          2600.0,
+          19600.0,
+          21000.0,
+          72000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0505-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The ward's daily nursing-hour requirement is 70 hours, which fails to meet the 75 hours minimum daily nurse-hour staffing contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 70.0,
+        "benchmark": 75.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          14.0,
+          16.8,
+          84.0,
+          1800.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0505-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The infusion suite's daily pharmacy-prep requirement is 12 hours, which fits within the 14 hours pharmacy department's daily prep-hour capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 12.0,
+        "benchmark": 14.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          14.0,
+          16.8,
+          84.0,
+          1800.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0510-C1",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 1,
+      "mc_text": "The raw coal extracted is 14,700 tonnes, which fails to meet the 16,000 tonnes utility's minimum-tonnage supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 14700.0,
+        "benchmark": 16000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          180.0,
+          9000.0,
+          16000.0,
+          17500.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0504-C3",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The stormwater moved per hour is 600 cubic metres, which fits within the 700 cubic metres downstream culvert throughput capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 600.0,
+        "benchmark": 700.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          825.0,
+          17000.0,
+          19000.0,
+          1560000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0504-C3",
+      "item_idx": 2,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The pump network's monthly electricity budget is $21,000, which meets the $19,000 minimum monthly electricity budget required to run the pumps.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 21000.0,
+        "benchmark": 19000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          825.0,
+          17000.0,
+          19000.0,
+          1560000.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": true,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0514-C3",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The usable bricks fired is 51,000 bricks, which meets the 45,000 bricks builders'-merchant minimum supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 51000.0,
+        "benchmark": 45000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          3400.0,
+          3800.0,
+          24000.0,
+          43200.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0514-C3",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The bricks delivered per week is 21,000 bricks, which fits within the 23,000 bricks merchant's weekly yard-storage capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 21000.0,
+        "benchmark": 23000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          3400.0,
+          3800.0,
+          24000.0,
+          43200.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0514-C3",
+      "item_idx": 2,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The delivery fleet's monthly fuel budget is $4,200, which meets the $3,800 minimum monthly fuel budget required to run the delivery routes.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 4200.0,
+        "benchmark": 3800.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          3400.0,
+          3800.0,
+          24000.0,
+          43200.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": true,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0504-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The daily water supply is 1,320,000 litres, which fails to meet the 1,450,000 litres daily municipal supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 1320000.0,
+        "benchmark": 1450000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          700.0,
+          825.0,
+          21000.0,
+          1560000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0504-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The stormwater moved per hour is 600 cubic metres, which fits within the 700 cubic metres downstream culvert throughput capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 600.0,
+        "benchmark": 700.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          700.0,
+          825.0,
+          21000.0,
+          1560000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0514-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The usable bricks fired is 51,000 bricks, which meets the 45,000 bricks builders'-merchant minimum supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 51000.0,
+        "benchmark": 45000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          4200.0,
+          23000.0,
+          24000.0,
+          43200.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0514-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The bricks delivered per week is 21,000 bricks, which fits within the 23,000 bricks merchant's weekly yard-storage capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 21000.0,
+        "benchmark": 23000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          4200.0,
+          23000.0,
+          24000.0,
+          43200.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0511-C1",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 1,
+      "mc_text": "The expected attendance is 3,780 attendees, which meets the 3,510 attendees sponsor's minimum-attendance contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 3780.0,
+        "benchmark": 3510.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          540.0,
+          3240.0,
+          3510.0,
+          7000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0421-C2",
+      "item_idx": 1,
+      "family": "F1",
+      "dose": 2,
+      "mc_text": "The cue sheet's speed setting exceeds the reduced speed cap for this load weight, so it may not run at this setting.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": null,
+        "benchmark": null,
+        "correct_final_nums": [
+          0.9,
+          1.0,
+          2.0,
+          3.0,
+          280.0,
+          300.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0505-C3",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The ward's daily nursing-hour requirement is 70 hours, which fails to meet the 75 hours minimum daily nurse-hour staffing contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 70.0,
+        "benchmark": 75.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          16.8,
+          84.0,
+          1400.0,
+          1600.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0505-C3",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The infusion suite's daily pharmacy-prep requirement is 12 hours, which fits within the 14 hours pharmacy department's daily prep-hour capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 12.0,
+        "benchmark": 14.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          16.8,
+          84.0,
+          1400.0,
+          1600.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0505-C3",
+      "item_idx": 2,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The ward's daily nursing-overtime budget is $1,800, which meets the $1,600 minimum daily overtime budget required to cover the ward.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 1800.0,
+        "benchmark": 1600.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          16.8,
+          84.0,
+          1400.0,
+          1600.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": true,
+        "value_contamination": false,
+        "stale_verdict_polarity": "MIXED",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0605-C1",
+      "item_idx": 0,
+      "family": "F1",
+      "dose": 1,
+      "mc_text": "The reefer container exceeds the quay crane's rated capacity at this outreach, so the lift cannot proceed as charted.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": null,
+        "benchmark": null,
+        "correct_final_nums": [
+          20.0,
+          27.0,
+          52.0,
+          55.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0533-C3",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The total chicks hatched this cycle is 20,500 chicks, which meets the 19,750 chicks broiler-grower's minimum hatchling-supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 20500.0,
+        "benchmark": 19750.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          2650.0,
+          2900.0,
+          18000.0,
+          19000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0533-C3",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The delivery vans' total same-day carrying load is 16,000 chicks, which fits within the 16,500 chicks grower farms' total same-day intake capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 16000.0,
+        "benchmark": 16500.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          2650.0,
+          2900.0,
+          18000.0,
+          19000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0533-C3",
+      "item_idx": 2,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The delivery fleet's weekly fuel budget is $2,400, which fails to meet the $2,650 minimum weekly fuel budget required to run the delivery vans.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 2400.0,
+        "benchmark": 2650.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          2650.0,
+          2900.0,
+          18000.0,
+          19000.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": true,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0523-C3",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The total passengers handled today is 14,025 passengers, which fails to meet the 15,500 passengers airport authority's minimum passenger-throughput contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 14025.0,
+        "benchmark": 15500.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          4920.0,
+          9000.0,
+          9800.0,
+          16150.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0523-C3",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The baggage belts' hourly sorting throughput is 5,700 bags, which exceeds the 5,200 bags hall's hourly sorting capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 5700.0,
+        "benchmark": 5200.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          4920.0,
+          9000.0,
+          9800.0,
+          16150.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0523-C3",
+      "item_idx": 2,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The baggage hall's daily staffing budget is $8,200, which fails to meet the $9,000 minimum daily staffing budget required to run all belts.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 8200.0,
+        "benchmark": 9000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          4920.0,
+          9000.0,
+          9800.0,
+          16150.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": true,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0407-C2",
+      "item_idx": 0,
+      "family": "F1",
+      "dose": 2,
+      "mc_text": "The glazing unit exceeds the crane's rated capacity at this reach, so the lift cannot proceed as charted.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": null,
+        "benchmark": null,
+        "correct_final_nums": [
+          3.8,
+          4.0,
+          14.0,
+          15.0,
+          16.0,
+          17.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0527-C1",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 1,
+      "mc_text": "The total sawn lumber milled is 84,000 board-feet, which meets the 79,000 board-feet construction supplier's minimum lumber contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 84000.0,
+        "benchmark": 79000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          4800.0,
+          28500.0,
+          74000.0,
+          79000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0416-C3",
+      "item_idx": 0,
+      "family": "F1",
+      "dose": 3,
+      "mc_text": "The planned dive depth exceeds the diver's certified maximum, so he may not work this dive as planned.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": null,
+        "benchmark": null,
+        "correct_final_nums": [
+          2.0,
+          32.0,
+          35.0,
+          55.0,
+          60.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0522-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The packing lines' hourly output is 1,520 kilograms, which fits within the 1,650 kilograms dispatch bay's hourly loading capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 1520.0,
+        "benchmark": 1650.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          1650.0,
+          1760.0,
+          3400.0,
+          20640.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0532-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The total assembly labour hours required is 900 hours, which meets the 1,025 hours assembly team's contracted maximum labour-hour budget.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 900.0,
+        "benchmark": 1025.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          152.0,
+          170.0,
+          1150.0,
+          4200.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0532-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The spray booths' per-shift finishing throughput is 180 frames, which exceeds the 170 frames warehouse's per-shift crating capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 180.0,
+        "benchmark": 170.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          152.0,
+          170.0,
+          1150.0,
+          4200.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0519-C3",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The usable aggregate blasted is 42,750 tonnes, which fails to meet the 45,000 tonnes highways authority's minimum aggregate-supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 42750.0,
+        "benchmark": 45000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          204.0,
+          8900.0,
+          9600.0,
+          47250.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0519-C3",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The haul fleet's per-trip carrying capacity used is 240 tonnes, which exceeds the 220 tonnes crusher yard's per-trip intake capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 240.0,
+        "benchmark": 220.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          204.0,
+          8900.0,
+          9600.0,
+          47250.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0519-C3",
+      "item_idx": 2,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The haul fleet's weekly fuel budget is $8,200, which fails to meet the $8,900 minimum weekly fuel budget required to run the haul trucks.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 8200.0,
+        "benchmark": 8900.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          204.0,
+          8900.0,
+          9600.0,
+          47250.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": true,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0509-C3",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The flock's total live weight is 92,000 kilograms, which meets the 88,000 kilograms processor's minimum-tonnage supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 92000.0,
+        "benchmark": 88000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          14400.0,
+          15500.0,
+          16500.0,
+          84000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0509-C3",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The plant's hourly bird throughput is 12,800 birds, which fits within the 13,500 birds plant's hourly throughput capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 12800.0,
+        "benchmark": 13500.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          14400.0,
+          15500.0,
+          16500.0,
+          84000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0509-C3",
+      "item_idx": 2,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The processing plant's weekly utilities budget is $14,000, which fails to meet the $15,500 minimum weekly utilities budget required to run all lines.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 14000.0,
+        "benchmark": 15500.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          14400.0,
+          15500.0,
+          16500.0,
+          84000.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": true,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0609-C1",
+      "item_idx": 0,
+      "family": "F1",
+      "dose": 1,
+      "mc_text": "The incoming tanker load exceeds the storage tank's remaining ullage capacity, so it cannot be offloaded as loaded.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": null,
+        "benchmark": null,
+        "correct_final_nums": [
+          17.0,
+          21.0,
+          38.0,
+          42.0,
+          12000.0,
+          13000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0417-C1",
+      "item_idx": 0,
+      "family": "F1",
+      "dose": 1,
+      "mc_text": "The new rack's heat load exceeds Row 6's spare cooling margin, so it may not be energised as planned.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": null,
+        "benchmark": null,
+        "correct_final_nums": [
+          9.0,
+          15.0,
+          18.0,
+          20.0,
+          23.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [
+          6.0
+        ],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0527-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The total sawn lumber milled is 84,000 board-feet, which meets the 79,000 board-feet construction supplier's minimum lumber contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 84000.0,
+        "benchmark": 79000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          4800.0,
+          31000.0,
+          33000.0,
+          74000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0527-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The kilns' per-cycle drying throughput is 28,500 board-feet, which fits within the 31,000 board-feet yard's per-cycle stacking capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 28500.0,
+        "benchmark": 31000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          4800.0,
+          31000.0,
+          33000.0,
+          74000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0526-C3",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The total tonnage loaded across trailers is 1,320 tonnes, which fails to meet the 1,400 tonnes haulage contract's minimum tonnage requirement.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 1320.0,
+        "benchmark": 1400.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          28.0,
+          1470.0,
+          6300.0,
+          6900.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0526-C3",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The bays' per-shift clearance throughput is 36 trailers, which exceeds the 32 trailers border crossing's per-shift throughput capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 36.0,
+        "benchmark": 32.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          28.0,
+          1470.0,
+          6300.0,
+          6900.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0526-C3",
+      "item_idx": 2,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The customs yard's weekly overtime budget is $5,600, which fails to meet the $6,300 minimum weekly overtime budget required to staff all bays.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 5600.0,
+        "benchmark": 6300.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          28.0,
+          1470.0,
+          6300.0,
+          6900.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": true,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0508-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The cases carried per delivery is 2,400 cases, which fits within the 2,400 cases bottler's loading-bay case capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 2400.0,
+        "benchmark": 2400.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          2400.0,
+          2800.0,
+          5000.0,
+          49300.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": true,
+        "stale_equals_correct": true,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0518-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The total packaged beef yielded is 248,000 kilograms, which meets the 230,000 kilograms supermarket's minimum beef-supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 248000.0,
+        "benchmark": 230000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          6000.0,
+          48000.0,
+          51000.0,
+          228000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0518-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The chiller bay's total holding load is 45,000 kilograms, which falls short of the 48,000 kilograms cold-chain bay's total holding capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 45000.0,
+        "benchmark": 48000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          6000.0,
+          48000.0,
+          51000.0,
+          228000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0522-C1",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 1,
+      "mc_text": "The total packaged lamb yielded is 23,400 kilograms, which meets the 21,000 kilograms supermarket's minimum lamb-supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 23400.0,
+        "benchmark": 21000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          1520.0,
+          3400.0,
+          20640.0,
+          21000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0504-C1",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 1,
+      "mc_text": "The daily water supply is 1,320,000 litres, which fails to meet the 1,450,000 litres daily municipal supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 1320000.0,
+        "benchmark": 1450000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          600.0,
+          21000.0,
+          1450000.0,
+          1560000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0511-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The expected attendance is 3,780 attendees, which meets the 3,510 attendees sponsor's minimum-attendance contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 3780.0,
+        "benchmark": 3510.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          450.0,
+          480.0,
+          3240.0,
+          7000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0511-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The dinners plated per hour is 540 dinners, which exceeds the 480 dinners banquet hall's hourly service capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 540.0,
+        "benchmark": 480.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          450.0,
+          480.0,
+          3240.0,
+          7000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0501-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The maize dried by the drying line is 120 tonnes, which fits within the 140 tonnes dryer throughput capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 120.0,
+        "benchmark": 140.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          140.0,
+          152.0,
+          504.0,
+          9000.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": true
+      }
+    },
+    {
+      "task_id": "A3-C-0605-C2",
+      "item_idx": 0,
+      "family": "F1",
+      "dose": 2,
+      "mc_text": "The reefer container exceeds the quay crane's rated capacity at this outreach, so the lift cannot proceed as charted.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": null,
+        "benchmark": null,
+        "correct_final_nums": [
+          20.0,
+          27.0,
+          52.0,
+          55.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0605-C2",
+      "item_idx": 1,
+      "family": "F1",
+      "dose": 2,
+      "mc_text": "The fitted spreader's certification band is below the reefer-rated band required, so it may not engage this container.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": null,
+        "benchmark": null,
+        "correct_final_nums": [
+          20.0,
+          27.0,
+          52.0,
+          55.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0505-C1",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 1,
+      "mc_text": "The ward's daily nursing-hour requirement is 70 hours, which fails to meet the 75 hours minimum daily nurse-hour staffing contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 70.0,
+        "benchmark": 75.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          12.0,
+          75.0,
+          84.0,
+          1800.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0515-C1",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 1,
+      "mc_text": "The total herring landed is 84,000 kilograms, which meets the 76,000 kilograms cannery's minimum supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 84000.0,
+        "benchmark": 76000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          2600.0,
+          22400.0,
+          72000.0,
+          76000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0611-C1",
+      "item_idx": 0,
+      "family": "F1",
+      "dose": 1,
+      "mc_text": "The planned release exceeds the downstream channel's rated maximum discharge, so it cannot proceed as scheduled.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": null,
+        "benchmark": null,
+        "correct_final_nums": [
+          4.5,
+          5.1,
+          18.0,
+          22.0,
+          280.0,
+          300.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0510-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The raw coal extracted is 14,700 tonnes, which fails to meet the 16,000 tonnes utility's minimum-tonnage supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 14700.0,
+        "benchmark": 16000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          135.0,
+          170.0,
+          9000.0,
+          17500.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0510-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The washery's hourly washing throughput is 180 tonnes, which exceeds the 170 tonnes washery's hourly processing capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 180.0,
+        "benchmark": 170.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          135.0,
+          170.0,
+          9000.0,
+          17500.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0416-C1",
+      "item_idx": 0,
+      "family": "F1",
+      "dose": 1,
+      "mc_text": "The planned dive depth exceeds the diver's certified maximum, so he may not work this dive as planned.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": null,
+        "benchmark": null,
+        "correct_final_nums": [
+          2.0,
+          3.0,
+          32.0,
+          35.0,
+          40.0,
+          55.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0622-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The cider fruit packed per day is 56 tonnes, which fits within the 64 tonnes cold-store's daily intake capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 56.0,
+        "benchmark": 64.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          64.0,
+          68.0,
+          1140.0,
+          2600.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0508-C3",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The juice pressed is 52,700 litres, which meets the 50,000 litres export bottling contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 52700.0,
+        "benchmark": 50000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          2800.0,
+          3800.0,
+          4400.0,
+          49300.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0508-C3",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The cases carried per delivery is 2,400 cases, which fits within the 2,400 cases bottler's loading-bay case capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 2400.0,
+        "benchmark": 2400.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          2800.0,
+          3800.0,
+          4400.0,
+          49300.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": true,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0508-C3",
+      "item_idx": 2,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The distribution fleet's monthly cargo-insurance budget is $5,000, which meets the $4,400 minimum monthly cargo-insurance budget required.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 5000.0,
+        "benchmark": 4400.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          2800.0,
+          3800.0,
+          4400.0,
+          49300.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": true,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0526-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The total tonnage loaded across trailers is 1,320 tonnes, which fails to meet the 1,400 tonnes haulage contract's minimum tonnage requirement.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 1320.0,
+        "benchmark": 1400.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          28.0,
+          32.0,
+          1470.0,
+          5600.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0526-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The bays' per-shift clearance throughput is 36 trailers, which exceeds the 32 trailers border crossing's per-shift throughput capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 36.0,
+        "benchmark": 32.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          28.0,
+          32.0,
+          1470.0,
+          5600.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0413-C2",
+      "item_idx": 0,
+      "family": "F1",
+      "dose": 2,
+      "mc_text": "The commission requires more firings than the policy cap allows without an outside slot, so it cannot proceed on the single kiln as capped.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": null,
+        "benchmark": null,
+        "correct_final_nums": [
+          8.0,
+          14.0,
+          18.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0413-C2",
+      "item_idx": 1,
+      "family": "F1",
+      "dose": 2,
+      "mc_text": "The commission needs more firing-days than remain before the install date, so it cannot be completed on time as scheduled.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": null,
+        "benchmark": null,
+        "correct_final_nums": [
+          8.0,
+          14.0,
+          18.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0527-C3",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The total sawn lumber milled is 84,000 board-feet, which meets the 79,000 board-feet construction supplier's minimum lumber contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 84000.0,
+        "benchmark": 79000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          5500.0,
+          6200.0,
+          33000.0,
+          74000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0527-C3",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The kilns' per-cycle drying throughput is 28,500 board-feet, which fits within the 31,000 board-feet yard's per-cycle stacking capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 28500.0,
+        "benchmark": 31000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          5500.0,
+          6200.0,
+          33000.0,
+          74000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0527-C3",
+      "item_idx": 2,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The drying yard's weekly kiln-energy budget is $4,800, which fails to meet the $5,500 minimum weekly kiln-energy budget required to run all kilns.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 4800.0,
+        "benchmark": 5500.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          5500.0,
+          6200.0,
+          33000.0,
+          74000.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": true,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0523-C1",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 1,
+      "mc_text": "The total passengers handled today is 14,025 passengers, which fails to meet the 15,500 passengers airport authority's minimum passenger-throughput contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 14025.0,
+        "benchmark": 15500.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          5700.0,
+          8200.0,
+          15500.0,
+          16150.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0533-C1",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 1,
+      "mc_text": "The total chicks hatched this cycle is 20,500 chicks, which meets the 19,750 chicks broiler-grower's minimum hatchling-supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 20500.0,
+        "benchmark": 19750.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          2400.0,
+          16000.0,
+          19000.0,
+          19750.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0519-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The usable aggregate blasted is 42,750 tonnes, which fails to meet the 45,000 tonnes highways authority's minimum aggregate-supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 42750.0,
+        "benchmark": 45000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          204.0,
+          220.0,
+          8200.0,
+          47250.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0519-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The haul fleet's per-trip carrying capacity used is 240 tonnes, which exceeds the 220 tonnes crusher yard's per-trip intake capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 240.0,
+        "benchmark": 220.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          204.0,
+          220.0,
+          8200.0,
+          47250.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0509-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The flock's total live weight is 92,000 kilograms, which meets the 88,000 kilograms processor's minimum-tonnage supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 92000.0,
+        "benchmark": 88000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          13500.0,
+          14000.0,
+          14400.0,
+          84000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0509-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The plant's hourly bird throughput is 12,800 birds, which fits within the 13,500 birds plant's hourly throughput capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 12800.0,
+        "benchmark": 13500.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          13500.0,
+          14000.0,
+          14400.0,
+          84000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0603-C1",
+      "item_idx": 0,
+      "family": "F1",
+      "dose": 1,
+      "mc_text": "The pylon section exceeds the helicopter's density-altitude-adjusted maximum sling load, so the lift cannot proceed as loaded.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": null,
+        "benchmark": null,
+        "correct_final_nums": [
+          3.0,
+          5.0,
+          1200.0,
+          1350.0,
+          1450.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0503-C3",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The loaves baked per shift is 7,200 loaves, which fails to meet the 7,500 loaves supermarket supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 7200.0,
+        "benchmark": 7500.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          900.0,
+          4200.0,
+          5000.0,
+          8400.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0503-C3",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The cakes delivered per round is 630 cakes, which fits within the 720 cakes depot cold-storage capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 630.0,
+        "benchmark": 720.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          900.0,
+          4200.0,
+          5000.0,
+          8400.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0503-C3",
+      "item_idx": 2,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The delivery team's weekly overtime budget is $6,000, which meets the $5,000 minimum weekly overtime budget required to cover the round.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 6000.0,
+        "benchmark": 5000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          900.0,
+          4200.0,
+          5000.0,
+          8400.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": true,
+        "value_contamination": false,
+        "stale_verdict_polarity": "MIXED",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0513-C3",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The farm's total daily generation is 3,600 kilowatt-hours, which fails to meet the 3,900 kilowatt-hours grid operator's minimum daily-supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 3600.0,
+        "benchmark": 3900.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          4200.0,
+          4400.0,
+          6200.0,
+          7000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0513-C3",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The substation's daily throughput load is 3,800 kilowatt-hours, which fits within the 4,200 kilowatt-hours substation's daily throughput capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 3800.0,
+        "benchmark": 4200.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          4200.0,
+          4400.0,
+          6200.0,
+          7000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0513-C3",
+      "item_idx": 2,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The substation's quarterly maintenance budget is $8,000, which meets the $7,000 minimum quarterly maintenance budget required.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 8000.0,
+        "benchmark": 7000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          4200.0,
+          4400.0,
+          6200.0,
+          7000.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": true,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0324-C3",
+      "item_idx": 2,
+      "family": "F3",
+      "dose": 3,
+      "mc_text": "The total season invoice including group-booking, insurance-rider, and printing fees is $28,035.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "value",
+        "stale_number": 28035.0,
+        "benchmark": null,
+        "correct_final_nums": [
+          3.0,
+          60.0,
+          250.0,
+          420.0,
+          27500.0,
+          28230.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "MIXED",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0324-C3",
+      "item_idx": 3,
+      "family": "F3",
+      "dose": 3,
+      "mc_text": "The total season invoice including group-booking, insurance-rider, and printing fees is $28,155.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "value",
+        "stale_number": 28155.0,
+        "benchmark": null,
+        "correct_final_nums": [
+          3.0,
+          60.0,
+          250.0,
+          420.0,
+          27500.0,
+          28230.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "MIXED",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0507-C1",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 1,
+      "mc_text": "The cargo weight loaded is 900 tonnes, which fails to meet the 950 tonnes shipping line's cargo-weight contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 900.0,
+        "benchmark": 950.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          198.0,
+          950.0,
+          1050.0,
+          12000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0408-C2",
+      "item_idx": 1,
+      "family": "F1",
+      "dose": 2,
+      "mc_text": "Three nurses are rostered beyond the consecutive-hours cap, so their shifts may not proceed as scheduled without a handover break.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": null,
+        "benchmark": null,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          6.0,
+          14.0,
+          15.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0422-C1",
+      "item_idx": 0,
+      "family": "F1",
+      "dose": 1,
+      "mc_text": "The stack's combined weight exceeds the bay's rated maximum, so it may not be loaded at this position as stowed.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": null,
+        "benchmark": null,
+        "correct_final_nums": [
+          2.0,
+          3.0,
+          4.0,
+          96.0,
+          100.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0528-C1",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 1,
+      "mc_text": "The total lift rides today is 20,400 rides, which fails to meet the 22,000 rides lift-operator staffing contract's minimum ride-volume threshold.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 20400.0,
+        "benchmark": 22000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          900.0,
+          6000.0,
+          22000.0,
+          24480.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0512-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The total state funding received is $12,880,000, which meets the $12,500,000 district's minimum state-funding contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 12880000.0,
+        "benchmark": 12500000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          760.0,
+          792.0,
+          210000.0,
+          12040000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0512-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The total morning bus-seat capacity used is 704 students, which falls short of the 760 students district's total morning bus-seat capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 704.0,
+        "benchmark": 760.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          760.0,
+          792.0,
+          210000.0,
+          12040000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0502-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The cloth woven per shift is 4,500 metres, which fails to meet the 4,875 metres export order.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 4500.0,
+        "benchmark": 4875.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          540.0,
+          650.0,
+          5250.0,
+          18000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0502-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The crates carried per delivery run is 720 crates, which exceeds the 650 crates warehouse loading-dock capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 720.0,
+        "benchmark": 650.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          540.0,
+          650.0,
+          5250.0,
+          18000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0534-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The total finished sheet rolled is 528 tonnes, which meets the 507 tonnes automotive supplier's minimum sheet-supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 528.0,
+        "benchmark": 507.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          48.0,
+          51.0,
+          486.0,
+          7200.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0534-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The pickling lines' hourly treatment throughput is 42 tonnes, which fits within the 48 tonnes bath's hourly acid-treatment capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 42.0,
+        "benchmark": 48.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          48.0,
+          51.0,
+          486.0,
+          7200.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0524-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The total pig iron cast is 186 tonnes, which meets the 174 tonnes foundry's minimum pig-iron supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 186.0,
+        "benchmark": 174.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          162.0,
+          5600.0,
+          6300.0,
+          12000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0524-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The re-melt furnaces' hourly processing throughput is 5,400 kilograms, which fits within the 5,600 kilograms casting floor's hourly pouring capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 5400.0,
+        "benchmark": 5600.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          162.0,
+          5600.0,
+          6300.0,
+          12000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0404-C1",
+      "item_idx": 0,
+      "family": "F1",
+      "dose": 1,
+      "mc_text": "The convoy exceeds the vehicle deck's marked capacity, so not all 42 vehicles can load onto this sailing.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 42.0,
+        "benchmark": null,
+        "correct_final_nums": [
+          4.2,
+          4.6,
+          42.0,
+          44.0,
+          260.0,
+          288.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": true,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0531-C1",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 1,
+      "mc_text": "The cheese cultured today is 1,710 kilograms, which meets the 1,550 kilograms wholesaler's minimum weekly wheel-count contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 1710.0,
+        "benchmark": 1550.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          1440.0,
+          1458.0,
+          1550.0,
+          2600.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0521-C1",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 1,
+      "mc_text": "The total daily bandwidth used is 50,400 gigabytes, which fails to meet the 58,000 gigabytes upstream provider's minimum-bandwidth SLA contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 50400.0,
+        "benchmark": 58000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          15000.0,
+          56000.0,
+          58000.0,
+          64800.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0621-C3",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The hourly calls handled is 450 calls, which fails to meet the 486 calls retail client's minimum hourly call-handling SLA.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 450.0,
+        "benchmark": 486.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          84.0,
+          540.0,
+          6200.0,
+          7200.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0621-C3",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The hourly outbound contacts completed is 108 contacts, which exceeds the 96 contacts partner bank's per-hour compliance-review capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 108.0,
+        "benchmark": 96.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          84.0,
+          540.0,
+          6200.0,
+          7200.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0621-C3",
+      "item_idx": 2,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The floor's weekly shift-premium budget is $8,000, which meets the $7,200 minimum weekly shift-premium budget required to cover the roster.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 8000.0,
+        "benchmark": 7200.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          84.0,
+          540.0,
+          6200.0,
+          7200.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": true,
+        "value_contamination": false,
+        "stale_verdict_polarity": "MIXED",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0525-C3",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The recyclables recovered this month is 306 tonnes, which meets the 280 tonnes municipal diversion-rate contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 306.0,
+        "benchmark": 280.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          130.0,
+          261.0,
+          7900.0,
+          8600.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0525-C3",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The balers' per-shift compaction throughput is 110 tonnes, which fits within the 120 tonnes yard's per-shift outbound-truck capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 110.0,
+        "benchmark": 120.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          130.0,
+          261.0,
+          7900.0,
+          8600.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0525-C3",
+      "item_idx": 2,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The sorting line's monthly electricity budget is $7,000, which fails to meet the $7,900 minimum monthly electricity budget required to run the sorting line.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 7000.0,
+        "benchmark": 7900.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          130.0,
+          261.0,
+          7900.0,
+          8600.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": true,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0535-C3",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The total honey yielded this season is 8,800 kilograms, which meets the 8,000 kilograms honey packer's minimum seasonal supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 8800.0,
+        "benchmark": 8000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          1140.0,
+          1700.0,
+          1900.0,
+          7400.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0535-C3",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The extraction lines' daily jarring throughput is 960 kilograms, which fits within the 1,050 kilograms shed's daily jarring-capacity limit.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 960.0,
+        "benchmark": 1050.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          1140.0,
+          1700.0,
+          1900.0,
+          7400.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0535-C3",
+      "item_idx": 2,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The extraction shed's weekly glass-jar budget is $2,100, which meets the $1,900 minimum weekly glass-jar budget required to jar the full run.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 2100.0,
+        "benchmark": 1900.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          1140.0,
+          1700.0,
+          1900.0,
+          7400.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": true,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0411-C2",
+      "item_idx": 0,
+      "family": "F1",
+      "dose": 2,
+      "mc_text": "The load's height exceeds the tunnel's posted clearance, so it may not enter the tunnel as loaded.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": null,
+        "benchmark": null,
+        "correct_final_nums": [
+          2.0,
+          2.6,
+          4.7,
+          4.9,
+          13.0,
+          14.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0525-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The recyclables recovered this month is 306 tonnes, which meets the 280 tonnes municipal diversion-rate contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 306.0,
+        "benchmark": 280.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          120.0,
+          130.0,
+          261.0,
+          7000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0525-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The balers' per-shift compaction throughput is 110 tonnes, which fits within the 120 tonnes yard's per-shift outbound-truck capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 110.0,
+        "benchmark": 120.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          120.0,
+          130.0,
+          261.0,
+          7000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0535-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The total honey yielded this season is 8,800 kilograms, which meets the 8,000 kilograms honey packer's minimum seasonal supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 8800.0,
+        "benchmark": 8000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          1050.0,
+          1140.0,
+          2100.0,
+          7400.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0535-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The extraction lines' daily jarring throughput is 960 kilograms, which fits within the 1,050 kilograms shed's daily jarring-capacity limit.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 960.0,
+        "benchmark": 1050.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          1050.0,
+          1140.0,
+          2100.0,
+          7400.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0621-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The hourly calls handled is 450 calls, which fails to meet the 486 calls retail client's minimum hourly call-handling SLA.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 450.0,
+        "benchmark": 486.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          84.0,
+          96.0,
+          540.0,
+          8000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0621-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The hourly outbound contacts completed is 108 contacts, which exceeds the 96 contacts partner bank's per-hour compliance-review capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 108.0,
+        "benchmark": 96.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          84.0,
+          96.0,
+          540.0,
+          8000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0003-C1",
+      "item_idx": 0,
+      "family": "F1",
+      "dose": 1,
+      "mc_text": "The loaded combination exceeds its certified gross combination weight, so the move cannot lawfully proceed on this vehicle as loaded.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": null,
+        "benchmark": null,
+        "correct_final_nums": [
+          40.0,
+          47.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0524-C3",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The total pig iron cast is 186 tonnes, which meets the 174 tonnes foundry's minimum pig-iron supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 186.0,
+        "benchmark": 174.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          162.0,
+          6300.0,
+          13500.0,
+          14500.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0410-C2",
+      "item_idx": 0,
+      "family": "F1",
+      "dose": 2,
+      "mc_text": "The planned sector exceeds the aircraft's certified range with reserves, so the flight may not be filed non-stop as planned.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": null,
+        "benchmark": null,
+        "correct_final_nums": [
+          30.0,
+          45.0,
+          220.0,
+          230.0,
+          1650.0,
+          1750.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0502-C3",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The cloth woven per shift is 4,500 metres, which fails to meet the 4,875 metres export order.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 4500.0,
+        "benchmark": 4875.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          540.0,
+          5250.0,
+          19500.0,
+          21000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0502-C3",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The crates carried per delivery run is 720 crates, which exceeds the 650 crates warehouse loading-dock capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 720.0,
+        "benchmark": 650.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          540.0,
+          5250.0,
+          19500.0,
+          21000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0502-C3",
+      "item_idx": 2,
+      "family": "F2",
+      "dose": 3,
+      "mc_text": "The fleet's quarterly insurance budget is $18,000, which fails to meet the $19,500 minimum quarterly insurance budget required.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 18000.0,
+        "benchmark": 19500.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          3.0,
+          540.0,
+          5250.0,
+          19500.0,
+          21000.0
+        ],
+        "stale_present_in_output": true,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": true,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0516-C1",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 1,
+      "mc_text": "The sheets printed per hour is 75,600 sheets, which fails to meet the 78,000 sheets publisher's minimum print-run contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 75600.0,
+        "benchmark": 78000.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          2550.0,
+          5200.0,
+          78000.0,
+          86400.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0423-C1",
+      "item_idx": 0,
+      "family": "F1",
+      "dose": 1,
+      "mc_text": "The loaded wagon's axle load exceeds the branch line's posted limit, so it may not run over this line as loaded.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": null,
+        "benchmark": null,
+        "correct_final_nums": [
+          22.0,
+          23.0,
+          24.0,
+          30.0,
+          40.0,
+          60.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0409-C2",
+      "item_idx": 0,
+      "family": "F1",
+      "dose": 2,
+      "mc_text": "Ticketed attendance exceeds the certified occupancy cap, so the event as ticketed is a life-safety violation.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": null,
+        "benchmark": null,
+        "correct_final_nums": [
+          3.0,
+          4.0,
+          7.0,
+          1150.0,
+          1200.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0503-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The loaves baked per shift is 7,200 loaves, which fails to meet the 7,500 loaves supermarket supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 7200.0,
+        "benchmark": 7500.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          720.0,
+          900.0,
+          6000.0,
+          8400.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0503-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The cakes delivered per round is 630 cakes, which fits within the 720 cakes depot cold-storage capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 630.0,
+        "benchmark": 720.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          720.0,
+          900.0,
+          6000.0,
+          8400.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0513-C2",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The farm's total daily generation is 3,600 kilowatt-hours, which fails to meet the 3,900 kilowatt-hours grid operator's minimum daily-supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 3600.0,
+        "benchmark": 3900.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          4200.0,
+          4400.0,
+          8000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "NEG",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0513-C2",
+      "item_idx": 1,
+      "family": "F2",
+      "dose": 2,
+      "mc_text": "The substation's daily throughput load is 3,800 kilowatt-hours, which fits within the 4,200 kilowatt-hours substation's daily throughput capacity.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 3800.0,
+        "benchmark": 4200.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          4200.0,
+          4400.0,
+          8000.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    },
+    {
+      "task_id": "A3-C-0529-C1",
+      "item_idx": 0,
+      "family": "F2",
+      "dose": 1,
+      "mc_text": "The total viable saplings grown is 11,700 saplings, which meets the 10,950 saplings reforestation authority's minimum supply contract.",
+      "true_contamination": false,
+      "evidence": {
+        "mc_type": "judgment",
+        "stale_number": 11700.0,
+        "benchmark": 10950.0,
+        "correct_final_nums": [
+          1.0,
+          2.0,
+          1260.0,
+          3800.0,
+          10200.0,
+          10950.0
+        ],
+        "stale_present_in_output": false,
+        "stale_equals_benchmark": false,
+        "stale_equals_correct": false,
+        "stale_only_in_supersession": false,
+        "value_contamination": false,
+        "stale_verdict_polarity": "POS",
+        "verdict_probe": false,
+        "entity_label_nums_excluded": [],
+        "stale_unit_collision": false
+      }
+    }
+  ]
+}

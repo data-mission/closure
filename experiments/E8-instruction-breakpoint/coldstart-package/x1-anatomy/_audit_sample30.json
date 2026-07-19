@@ -1,0 +1,302 @@
+[
+  {
+    "task_id": "A3-C-0404-C1",
+    "item": 0,
+    "dose": 1,
+    "family": "F1",
+    "stale_must_change": "The convoy exceeds the vehicle deck's marked capacity, so not all 42 vehicles can load onto this sailing.",
+    "correct_final_state": "42 vs 44 -> within; 288 vs 260 -> violates; 4.6 vs 4.2 -> violates",
+    "question": "Considering the ferry's vehicle-deck capacity, the sailing's total axle-weight limit, and the harbourmaster's tallest-vehicle clearance rule, can the convoy load and sail as planned, and if not what stops it?",
+    "model_conclusion": "The convoy cannot load and sail as planned: although the revised 44-vehicle deck capacity means the 42-vehicle count is no longer a problem, the sailing is still blocked because its combined axle weight of 288 tonnes exceeds the 260-tonne cap and the 4.6-metre car transporter exceeds the 4.2-metre linkspan clearance limit."
+  },
+  {
+    "task_id": "A3-C-0530-C3",
+    "item": 1,
+    "dose": 3,
+    "family": "F2",
+    "stale_must_change": "The lehr lines' hourly annealing throughput is 10,400 bottles, which fits within the 11,000 bottles packing hall's hourly intake capacity.",
+    "correct_final_state": "annealing lehr's weekly natural-gas budget=$11,800 (corr3 applied) vs minimum weekly natural-gas budget required to run all lehr lines $10,800; total1=102,000 bottles; total2=12,000 bottles (correct answer at C3).",
+    "question": "Considering the total bottles melted, the lehr lines' hourly annealing throughput, and the annealing lehr's weekly natural-gas budget, does the scenario meet all three requirements, and if not which one fails?",
+    "model_conclusion": "Using the corrected figures, the scenario fails two of the three requirements: total bottles melted (102,000) falls short of the 108,000-bottle contract minimum, and the annealing throughput (12,000 bottles/hour) exceeds the packing hall's 11,000-bottle-per-hour capacity, while only the weekly natural-gas budget requirement ($11,800 available versus $10,800 required) is satisfied."
+  },
+  {
+    "task_id": "A3-C-0506-C2",
+    "item": 1,
+    "dose": 2,
+    "family": "F2",
+    "stale_must_change": "The tanker fleet's daily collection volume is 27,000 litres, which fits within the 28,000 litres processor's tanker-bay unloading capacity.",
+    "correct_final_state": "total2=31,200 litres (corr2 applied) vs capacity 28,000 litres; total1 still 21,600 litres; tanker fleet's weekly fuel budget still $3,200.",
+    "question": "Considering the herd's daily milk yield, the tanker fleet's daily collection volume, and the tanker fleet's weekly fuel budget, does the scenario meet all three requirements, and if not which one fails?",
+    "model_conclusion": "Using the corrected figures (24.0 litres/cow/day and 5,200 litres per tanker run), the fuel budget requirement is met, but both the daily milk-yield requirement (21,600 litres, below the 22,000-litre contract minimum) and the daily collection-volume requirement (31,200 litres, exceeding the 28,000-litre unloading capacity) fail, so the scenario does not meet all three requirements."
+  },
+  {
+    "task_id": "A3-C-0423-C1",
+    "item": 0,
+    "dose": 1,
+    "family": "F1",
+    "stale_must_change": "The loaded wagon's axle load exceeds the branch line's posted limit, so it may not run over this line as loaded.",
+    "correct_final_state": "23 vs 24 -> within; 60 vs 40 -> violates; 22 vs 30 -> violates",
+    "question": "Considering the branch line's posted axle-load limit, the loaded wagon's permitted route speed for this axle load, and the yard's minimum siding-length requirement to receive this wagon, can the movement run over the branch line as planned, and if not what stops it?",
+    "model_conclusion": "The movement cannot run over the branch line as planned\u2014not because of the axle-load limit, which has been raised to 24 tonnes per axle and is no longer breached\u2014but because the wagon is timetabled at 60 km/h when it is restricted to a maximum of 40 km/h due to its 23-tonne axle load, and because Selby yard's receiving siding currently has only 22 metres of usable length against a required 30 metres."
+  },
+  {
+    "task_id": "A3-C-0510-C1",
+    "item": 0,
+    "dose": 1,
+    "family": "F2",
+    "stale_must_change": "The raw coal extracted is 14,700 tonnes, which fails to meet the 16,000 tonnes utility's minimum-tonnage supply contract.",
+    "correct_final_state": "total1=17,500 tonnes (corr1 applied) vs contract 16,000 tonnes; total2 still 180 tonnes; washery's monthly safety-inspection budget still $9,000.",
+    "question": "Considering the raw coal extracted, the washery's hourly washing throughput, and the washery's monthly safety-inspection budget, does the scenario meet all three requirements, and if not which one fails?",
+    "model_conclusion": "After correcting the extraction figure to 250 tonnes per shift, the scenario does not meet all three requirements: the extraction requirement (17,500 tonnes) is satisfied, but both the washery's hourly throughput (180 tonnes exceeds the 170-tonne capacity cap) and the monthly safety-inspection budget ($9,000 is below the required $10,500) fail."
+  },
+  {
+    "task_id": "A3-C-0533-C2",
+    "item": 0,
+    "dose": 2,
+    "family": "F2",
+    "stale_must_change": "The total chicks hatched this cycle is 20,500 chicks, which meets the 19,750 chicks broiler-grower's minimum hatchling-supply contract.",
+    "correct_final_state": "total2=18,000 chicks (corr2 applied) vs capacity 16,500 chicks; total1 still 19,000 chicks; delivery fleet's weekly fuel budget still $2,400.",
+    "question": "Considering the total chicks hatched this cycle, the delivery vans' total same-day carrying load, and the delivery fleet's weekly fuel budget, does the scenario meet all three requirements, and if not which one fails?",
+    "model_conclusion": "After applying the corrected hatch rate (0.76) and corrected per-van load (3,600), the scenario fails all three requirements: total chicks hatched (19,000) falls short of the 19,750 contract minimum, the delivery fleet's total same-day carrying load (18,000) exceeds the 16,500 intake capacity, and the weekly fuel budget ($2,400) falls short of the required $2,650 minimum."
+  },
+  {
+    "task_id": "A3-C-0532-C3",
+    "item": 2,
+    "dose": 3,
+    "family": "F2",
+    "stale_must_change": "The finishing line's weekly solvent budget is $4,200, which fails to meet the $4,700 minimum weekly solvent budget required to run all booths.",
+    "correct_final_state": "finishing line's weekly solvent budget=$5,100 (corr3 applied) vs minimum weekly solvent budget required to run all booths $4,700; total1=1,150 hours; total2=152 frames (correct answer at C3).",
+    "question": "Considering the total assembly labour hours required, the spray booths' per-shift finishing throughput, and the finishing line's weekly solvent budget, does the scenario meet all three requirements, and if not which one fails?",
+    "model_conclusion": "Using the corrected figures, the scenario fails only the assembly labour-hour requirement (1,150 hours needed versus a 1,025-hour budget), while the finishing throughput (152 frames per shift, within the 170-frame crating cap) and the weekly solvent budget ($5,100, above the $4,700 minimum) both pass."
+  },
+  {
+    "task_id": "A3-C-0401-C1",
+    "item": 0,
+    "dose": 1,
+    "family": "F1",
+    "stale_must_change": "The stair core exceeds the crane's rated capacity at this radius, so the lift cannot proceed as charted.",
+    "correct_final_state": "46 vs 48 -> within; 36 vs 32 -> violates; Intermediate band vs Advanced band required -> violates",
+    "question": "Considering the crane's rated capacity at this radius, the boom's tip-height limit, and the rigger's current certification band, can the stair-core lift proceed as planned, and if not what stops it?",
+    "model_conclusion": "The stair-core lift cannot proceed as planned: although the updated 48-tonne capacity at 18 metres now covers the 46-tonne load (so capacity is no longer the issue), the lift is still blocked because the required placement height of 36 metres exceeds the boom's 32-metre tip-height limit, and the rostered rigger's Intermediate certification does not meet the Advanced-band requirement for lifts over 45 tonnes."
+  },
+  {
+    "task_id": "A3-C-0534-C1",
+    "item": 0,
+    "dose": 1,
+    "family": "F2",
+    "stale_must_change": "The total finished sheet rolled is 528 tonnes, which meets the 507 tonnes automotive supplier's minimum sheet-supply contract.",
+    "correct_final_state": "total1=486 tonnes (corr1 applied) vs contract 507 tonnes; total2 still 42 tonnes; pickling bath's weekly acid-replenishment budget still $7,200.",
+    "question": "Considering the total finished sheet rolled, the pickling lines' hourly treatment throughput, and the pickling bath's weekly acid-replenishment budget, does the scenario meet all three requirements, and if not which one fails?",
+    "model_conclusion": "After correcting the rolling yield to 0.81 tonnes per tonne, the scenario does not meet all three requirements: the pickling throughput (42 t/h vs 48 t/h capacity) is fine, but both the finished-sheet contract requirement (486 tonnes produced vs 507 tonnes needed) and the weekly acid-replenishment budget ($7,200 available vs $8,100 required) fail."
+  },
+  {
+    "task_id": "A3-C-0535-C3",
+    "item": 1,
+    "dose": 3,
+    "family": "F2",
+    "stale_must_change": "The extraction lines' daily jarring throughput is 960 kilograms, which fits within the 1,050 kilograms shed's daily jarring-capacity limit.",
+    "correct_final_state": "extraction shed's weekly glass-jar budget=$1,700 (corr3 applied) vs minimum weekly glass-jar budget required to jar the full run $1,900; total1=7,400 kilograms; total2=1,140 kilograms (correct answer at C3).",
+    "question": "Considering the total honey yielded this season, the extraction lines' daily jarring throughput, and the extraction shed's weekly glass-jar budget, does the scenario meet all three requirements, and if not which one fails?",
+    "model_conclusion": "After applying all three corrections, the scenario fails all three requirements: total honey yielded (7,400 kg) falls short of the 8,000 kg contract minimum, the daily jarring throughput (1,140 kg) exceeds the shed's 1,050 kg capacity limit, and the weekly glass-jar budget ($1,700) falls short of the required $1,900 minimum."
+  },
+  {
+    "task_id": "A3-C-0533-C1",
+    "item": 0,
+    "dose": 1,
+    "family": "F2",
+    "stale_must_change": "The total chicks hatched this cycle is 20,500 chicks, which meets the 19,750 chicks broiler-grower's minimum hatchling-supply contract.",
+    "correct_final_state": "total1=19,000 chicks (corr1 applied) vs contract 19,750 chicks; total2 still 16,000 chicks; delivery fleet's weekly fuel budget still $2,400.",
+    "question": "Considering the total chicks hatched this cycle, the delivery vans' total same-day carrying load, and the delivery fleet's weekly fuel budget, does the scenario meet all three requirements, and if not which one fails?",
+    "model_conclusion": "Using the corrected 0.76 hatch rate, the hatchery produces only 19,000 chicks (below the 19,750 contract minimum) and the fuel budget of $2,400 falls short of the required $2,650, so both the contract-supply requirement and the fuel-budget requirement fail, while the delivery vans' 16,000-chick same-day carrying load stays within the 16,500 capacity cap and meets its requirement."
+  },
+  {
+    "task_id": "A3-C-0531-C3",
+    "item": 1,
+    "dose": 3,
+    "family": "F2",
+    "stale_must_change": "The ripening cave's total chamber load is 1,440 kilograms, which falls short of the 1,600 kilograms cave's total ripening capacity.",
+    "correct_final_state": "ripening cave's monthly climate-control budget=$2,100 (corr3 applied) vs minimum monthly climate-control budget required to hold humidity $2,300; total1=1,458 kilograms; total2=1,680 kilograms (correct answer at C3).",
+    "question": "Considering the cheese cultured today, the ripening cave's total chamber load, and the ripening cave's monthly climate-control budget, does the scenario meet all three requirements, and if not which one fails?",
+    "model_conclusion": "After applying the corrections, the scenario does not meet all three requirements: the chamber-load requirement passes (1,680 kg \u2265 1,600 kg), but both the culturing requirement fails (1,458 kg cultured versus the 1,550 kg minimum) and the climate-control budget requirement fails ($2,100 versus the $2,300 minimum)."
+  },
+  {
+    "task_id": "A3-C-0507-C1",
+    "item": 0,
+    "dose": 1,
+    "family": "F2",
+    "stale_must_change": "The cargo weight loaded is 900 tonnes, which fails to meet the 950 tonnes shipping line's cargo-weight contract.",
+    "correct_final_state": "total1=1,050 tonnes (corr1 applied) vs contract 950 tonnes; total2 still 198 containers; crane crew's weekly overtime budget still $12,000.",
+    "question": "Considering the cargo weight loaded, the containers lifted per shift, and the crane crew's weekly overtime budget, does the scenario meet all three requirements, and if not which one fails?",
+    "model_conclusion": "After correcting the per-container weight to 21.0 tonnes, the cargo-weight requirement is met (1050 tonnes vs. the 950-tonne minimum), but the scenario still fails overall because the containers-lifted-per-shift figure (198) exceeds the 170-container capacity cap and the weekly overtime budget ($12,000) falls short of the required $14,000."
+  },
+  {
+    "task_id": "A3-C-0526-C3",
+    "item": 0,
+    "dose": 3,
+    "family": "F2",
+    "stale_must_change": "The total tonnage loaded across trailers is 1,320 tonnes, which fails to meet the 1,400 tonnes haulage contract's minimum tonnage requirement.",
+    "correct_final_state": "customs yard's weekly overtime budget=$6,900 (corr3 applied) vs minimum weekly overtime budget required to staff all bays $6,300; total1=1,470 tonnes; total2=28 trailers (correct answer at C3).",
+    "question": "Considering the total tonnage loaded across trailers, the bays' per-shift clearance throughput, and the customs yard's weekly overtime budget, does the scenario meet all three requirements, and if not which one fails?",
+    "model_conclusion": "After applying all three corrections, the scenario meets every requirement: total tonnage loaded is 1,470 tonnes (above the 1,400-tonne minimum), clearance throughput is 28 trailers per shift (within the 32-trailer cap), and the overtime budget is $6,900 (above the $6,300 minimum), so none of the three requirements fails."
+  },
+  {
+    "task_id": "A3-C-0517-C3",
+    "item": 1,
+    "dose": 3,
+    "family": "F2",
+    "stale_must_change": "The bottling hall's hourly fill rate is 7,200 bottles, which fits within the 7,500 bottles hall's hourly labelling-station capacity.",
+    "correct_final_state": "distillery's quarterly excise-duty budget=$78,000 (corr3 applied) vs minimum quarterly excise-duty budget required $84,000; total1=125,000 bottles; total2=8,400 bottles (correct answer at C3).",
+    "question": "Considering the total bottles yielded from maturation, the bottling hall's hourly fill rate, and the distillery's quarterly excise-duty budget, does the scenario meet all three requirements, and if not which one fails?",
+    "model_conclusion": "With the corrected figures (250 bottles per cask, 2100 bottles per hour per line, and a $78,000 quarterly excise budget), the scenario does not meet all three requirements: the total maturation yield of 125,000 bottles falls short of the 132,500-bottle contract requirement, the hourly fill rate (capped at 7,500 bottles/hour) does meet its requirement, but the quarterly excise-duty budget of $78,000 falls short of the required $84,000 minimum, so both the maturation-yield and excise-budget requirements fail while only the hourly fill rate requirement is met."
+  },
+  {
+    "task_id": "A3-C-0517-C3",
+    "item": 0,
+    "dose": 3,
+    "family": "F2",
+    "stale_must_change": "The total bottles yielded from maturation is 140,000 bottles, which meets the 132,500 bottles export bottling contract.",
+    "correct_final_state": "distillery's quarterly excise-duty budget=$78,000 (corr3 applied) vs minimum quarterly excise-duty budget required $84,000; total1=125,000 bottles; total2=8,400 bottles (correct answer at C3).",
+    "question": "Considering the total bottles yielded from maturation, the bottling hall's hourly fill rate, and the distillery's quarterly excise-duty budget, does the scenario meet all three requirements, and if not which one fails?",
+    "model_conclusion": "With the corrected figures (250 bottles per cask, 2100 bottles per hour per line, and a $78,000 quarterly excise budget), the scenario does not meet all three requirements: the total maturation yield of 125,000 bottles falls short of the 132,500-bottle contract requirement, the hourly fill rate (capped at 7,500 bottles/hour) does meet its requirement, but the quarterly excise-duty budget of $78,000 falls short of the required $84,000 minimum, so both the maturation-yield and excise-budget requirements fail while only the hourly fill rate requirement is met."
+  },
+  {
+    "task_id": "A3-C-0531-C3",
+    "item": 2,
+    "dose": 3,
+    "family": "F2",
+    "stale_must_change": "The ripening cave's monthly climate-control budget is $2,600, which meets the $2,300 minimum monthly climate-control budget required to hold humidity.",
+    "correct_final_state": "ripening cave's monthly climate-control budget=$2,100 (corr3 applied) vs minimum monthly climate-control budget required to hold humidity $2,300; total1=1,458 kilograms; total2=1,680 kilograms (correct answer at C3).",
+    "question": "Considering the cheese cultured today, the ripening cave's total chamber load, and the ripening cave's monthly climate-control budget, does the scenario meet all three requirements, and if not which one fails?",
+    "model_conclusion": "After applying the corrections, the scenario does not meet all three requirements: the chamber-load requirement passes (1,680 kg \u2265 1,600 kg), but both the culturing requirement fails (1,458 kg cultured versus the 1,550 kg minimum) and the climate-control budget requirement fails ($2,100 versus the $2,300 minimum)."
+  },
+  {
+    "task_id": "A3-C-0532-C3",
+    "item": 0,
+    "dose": 3,
+    "family": "F2",
+    "stale_must_change": "The total assembly labour hours required is 900 hours, which meets the 1,025 hours assembly team's contracted maximum labour-hour budget.",
+    "correct_final_state": "finishing line's weekly solvent budget=$5,100 (corr3 applied) vs minimum weekly solvent budget required to run all booths $4,700; total1=1,150 hours; total2=152 frames (correct answer at C3).",
+    "question": "Considering the total assembly labour hours required, the spray booths' per-shift finishing throughput, and the finishing line's weekly solvent budget, does the scenario meet all three requirements, and if not which one fails?",
+    "model_conclusion": "Using the corrected figures, the scenario fails only the assembly labour-hour requirement (1,150 hours needed versus a 1,025-hour budget), while the finishing throughput (152 frames per shift, within the 170-frame crating cap) and the weekly solvent budget ($5,100, above the $4,700 minimum) both pass."
+  },
+  {
+    "task_id": "A3-C-0526-C1",
+    "item": 0,
+    "dose": 1,
+    "family": "F2",
+    "stale_must_change": "The total tonnage loaded across trailers is 1,320 tonnes, which fails to meet the 1,400 tonnes haulage contract's minimum tonnage requirement.",
+    "correct_final_state": "total1=1,470 tonnes (corr1 applied) vs contract 1,400 tonnes; total2 still 36 trailers; customs yard's weekly overtime budget still $5,600.",
+    "question": "Considering the total tonnage loaded across trailers, the bays' per-shift clearance throughput, and the customs yard's weekly overtime budget, does the scenario meet all three requirements, and if not which one fails?",
+    "model_conclusion": "After correcting the per-trailer load to 24.5 tonnes, the tonnage requirement is met (1,470 tonnes exceeds the 1,400-tonne minimum), but the scenario still fails overall because the bays' clearance throughput (36 trailers/shift) exceeds the 32-trailer per-shift capacity cap and the weekly overtime budget ($5,600) falls short of the required $6,300 minimum."
+  },
+  {
+    "task_id": "A3-C-0508-C3",
+    "item": 1,
+    "dose": 3,
+    "family": "F2",
+    "stale_must_change": "The cases carried per delivery is 2,400 cases, which fits within the 2,400 cases bottler's loading-bay case capacity.",
+    "correct_final_state": "distribution fleet's monthly cargo-insurance budget=$3,800 (corr3 applied) vs minimum monthly cargo-insurance budget required $4,400; total1=49,300 litres; total2=2,800 cases (correct answer at C3).",
+    "question": "Considering the juice pressed, the cases carried per delivery, and the distribution fleet's monthly cargo-insurance budget, does the scenario meet all three requirements, and if not which one fails?",
+    "model_conclusion": "None of the three requirements are met: the juice pressed (49,300 litres) falls short of the 50,000-litre contract requirement, the cases carried (2,800) exceeds the 2,400-case loading-bay capacity, and the insurance budget ($3,800) falls short of the $4,400 minimum, so all three fail."
+  },
+  {
+    "task_id": "A3-C-0528-C1",
+    "item": 0,
+    "dose": 1,
+    "family": "F2",
+    "stale_must_change": "The total lift rides today is 20,400 rides, which fails to meet the 22,000 rides lift-operator staffing contract's minimum ride-volume threshold.",
+    "correct_final_state": "total1=24,480 rides (corr1 applied) vs contract 22,000 rides; total2 still 900 guests; resort's daily slope-grooming budget still $6,000.",
+    "question": "Considering the total lift rides today, the dining halls' total lunch-sitting throughput, and the resort's daily slope-grooming budget, does the scenario meet all three requirements, and if not which one fails?",
+    "model_conclusion": "After correcting the ride rate to 10.2 rides per day (yielding 24,480 total lift rides, above the 22,000 threshold) and confirming the dining halls' throughput of 900 guests meets the 900-guest requirement, the scenario meets both of those requirements but fails the daily slope-grooming budget requirement, since the $6,000 budget falls short of the required $6,800."
+  },
+  {
+    "task_id": "A3-C-0513-C2",
+    "item": 0,
+    "dose": 2,
+    "family": "F2",
+    "stale_must_change": "The farm's total daily generation is 3,600 kilowatt-hours, which fails to meet the 3,900 kilowatt-hours grid operator's minimum daily-supply contract.",
+    "correct_final_state": "total2=4,400 kilowatt-hours (corr2 applied) vs capacity 4,200 kilowatt-hours; total1 still 4,200 kilowatt-hours; substation's quarterly maintenance budget still $8,000.",
+    "question": "Considering the farm's total daily generation, the substation's daily throughput load, and the substation's quarterly maintenance budget, does the scenario meet all three requirements, and if not which one fails?",
+    "model_conclusion": "After applying the corrected generation and inverter rates, the farm meets the grid-supply contract requirement and the maintenance budget requirement, but fails the substation throughput capacity requirement because the recalculated load of 4,400 kilowatt-hours exceeds the 4,200 kilowatt-hour capacity cap."
+  },
+  {
+    "task_id": "A3-C-0509-C2",
+    "item": 1,
+    "dose": 2,
+    "family": "F2",
+    "stale_must_change": "The plant's hourly bird throughput is 12,800 birds, which fits within the 13,500 birds plant's hourly throughput capacity.",
+    "correct_final_state": "total2=14,400 birds (corr2 applied) vs capacity 13,500 birds; total1 still 84,000 kilograms; processing plant's weekly utilities budget still $14,000.",
+    "question": "Considering the flock's total live weight, the plant's hourly bird throughput, and the processing plant's weekly utilities budget, does the scenario meet all three requirements, and if not which one fails?",
+    "model_conclusion": "After applying the corrected growth and processing-rate figures, the scenario fails all three requirements: total live weight (84,000 kg vs. required 88,000 kg), hourly throughput (14,400 birds/hr vs. capacity cap of 13,500 birds/hr), and weekly utilities budget ($14,000 vs. required $15,500)."
+  },
+  {
+    "task_id": "A3-C-0512-C1",
+    "item": 0,
+    "dose": 1,
+    "family": "F2",
+    "stale_must_change": "The total state funding received is $12,880,000, which meets the $12,500,000 district's minimum state-funding contract.",
+    "correct_final_state": "total1=$12,040,000 (corr1 applied) vs contract $12,500,000; total2 still 704 students; transport department's annual fuel budget still $210,000.",
+    "question": "Considering the total state funding, the total morning bus-seat capacity, and the transport department's annual fuel budget, does the scenario meet all three requirements, and if not which one fails?",
+    "model_conclusion": "Using the corrected per-student rate of $8600, the scenario fails all three requirements: total state funding ($12,040,000) falls short of the $12,500,000 minimum, total morning bus-seat capacity (704) falls short of the required 760, and the fuel budget ($210,000) falls short of the required $235,000."
+  },
+  {
+    "task_id": "A3-C-0621-C3",
+    "item": 0,
+    "dose": 3,
+    "family": "F2",
+    "stale_must_change": "The hourly calls handled is 450 calls, which fails to meet the 486 calls retail client's minimum hourly call-handling SLA.",
+    "correct_final_state": "floor's weekly shift-premium budget=$6,200 (corr3 applied) vs minimum weekly shift-premium budget required to cover the roster $7,200; total1=540 calls; total2=84 contacts (correct answer at C3).",
+    "question": "Considering the hourly calls, the hourly outbound contacts, and the floor's weekly shift-premium budget, does the scenario meet all three requirements, and if not which one fails?",
+    "model_conclusion": "After applying all corrections, the scenario meets the hourly call-handling SLA (540 vs. required 486) but fails both the outbound contacts requirement (84 vs. required 96) and the weekly shift-premium budget requirement ($6,200 vs. required $7,200), so not all three requirements are met."
+  },
+  {
+    "task_id": "A3-C-0502-C3",
+    "item": 0,
+    "dose": 3,
+    "family": "F2",
+    "stale_must_change": "The cloth woven per shift is 4,500 metres, which fails to meet the 4,875 metres export order.",
+    "correct_final_state": "fleet's quarterly insurance budget=$21,000 (corr3 applied) vs minimum quarterly insurance budget required $19,500; total1=5,250 metres; total2=540 crates (correct answer at C3).",
+    "question": "Considering the cloth woven per shift, the crates carried per delivery run, and the fleet's quarterly insurance budget, does the scenario meet all three requirements, and if not which one fails?",
+    "model_conclusion": "After applying all corrections, the scenario meets all three requirements: the cloth woven (5,250 metres) exceeds the 4,875-metre contract minimum, the crates carried (540) stay within the 650-crate dock capacity, and the insurance budget ($21,000) exceeds the $19,500 minimum, so no requirement fails."
+  },
+  {
+    "task_id": "A3-C-0527-C2",
+    "item": 1,
+    "dose": 2,
+    "family": "F2",
+    "stale_must_change": "The kilns' per-cycle drying throughput is 28,500 board-feet, which fits within the 31,000 board-feet yard's per-cycle stacking capacity.",
+    "correct_final_state": "total2=33,000 board-feet (corr2 applied) vs capacity 31,000 board-feet; total1 still 74,000 board-feet; drying yard's weekly kiln-energy budget still $4,800.",
+    "question": "Considering the total sawn lumber milled, the kilns' per-cycle drying throughput, and the drying yard's weekly kiln-energy budget, does the scenario meet all three requirements, and if not which one fails?",
+    "model_conclusion": "After applying the corrected milling and drying figures, none of the three requirements are met: total milled lumber (74,000 board-feet) falls short of the 79,000 board-feet contract minimum, the kilns' drying throughput (33,000 board-feet) exceeds the 31,000 board-feet stacking capacity cap, and the weekly kiln-energy budget ($4,800) is below the required $5,500 minimum, so the scenario fails all three requirements."
+  },
+  {
+    "task_id": "A3-C-0532-C3",
+    "item": 1,
+    "dose": 3,
+    "family": "F2",
+    "stale_must_change": "The spray booths' per-shift finishing throughput is 180 frames, which exceeds the 170 frames warehouse's per-shift crating capacity.",
+    "correct_final_state": "finishing line's weekly solvent budget=$5,100 (corr3 applied) vs minimum weekly solvent budget required to run all booths $4,700; total1=1,150 hours; total2=152 frames (correct answer at C3).",
+    "question": "Considering the total assembly labour hours required, the spray booths' per-shift finishing throughput, and the finishing line's weekly solvent budget, does the scenario meet all three requirements, and if not which one fails?",
+    "model_conclusion": "Using the corrected figures, the scenario fails only the assembly labour-hour requirement (1,150 hours needed versus a 1,025-hour budget), while the finishing throughput (152 frames per shift, within the 170-frame crating cap) and the weekly solvent budget ($5,100, above the $4,700 minimum) both pass."
+  },
+  {
+    "task_id": "A3-C-0522-C1",
+    "item": 0,
+    "dose": 1,
+    "family": "F2",
+    "stale_must_change": "The total packaged lamb yielded is 23,400 kilograms, which meets the 21,000 kilograms supermarket's minimum lamb-supply contract.",
+    "correct_final_state": "total1=20,640 kilograms (corr1 applied) vs contract 21,000 kilograms; total2 still 1,520 kilograms; plant's weekly vacuum-film budget still $3,400.",
+    "question": "Considering the total packaged lamb yielded, the packing lines' hourly output, and the plant's weekly vacuum-film budget, does the scenario meet all three requirements, and if not which one fails?",
+    "model_conclusion": "Using the corrected per-sheep yield of 17.2 kilograms, total packaged lamb output is only 20,640 kilograms, which fails to meet the 21,000-kilogram minimum supermarket contract requirement, even though the packing lines' hourly output (1,520 kg/hr, within the 1,650 kg/hr dispatch cap) and the weekly vacuum-film budget ($3,400, above the $3,000 minimum) both meet their requirements."
+  },
+  {
+    "task_id": "A3-C-0513-C3",
+    "item": 2,
+    "dose": 3,
+    "family": "F2",
+    "stale_must_change": "The substation's quarterly maintenance budget is $8,000, which meets the $7,000 minimum quarterly maintenance budget required.",
+    "correct_final_state": "substation's quarterly maintenance budget=$6,200 (corr3 applied) vs minimum quarterly maintenance budget required $7,000; total1=4,200 kilowatt-hours; total2=4,400 kilowatt-hours (correct answer at C3).",
+    "question": "Considering the farm's total daily generation, the substation's daily throughput load, and the substation's quarterly maintenance budget, does the scenario meet all three requirements, and if not which one fails?",
+    "model_conclusion": "With the corrected figures, the farm's daily generation of 4,200 kWh meets the 3,900 kWh contract minimum, but the substation's throughput load of 4,400 kWh exceeds its 4,200 kWh capacity and the revised maintenance budget of $6,200 falls short of the required $7,000, so the scenario fails both the throughput and maintenance budget requirements while only satisfying the generation requirement."
+  }
+]

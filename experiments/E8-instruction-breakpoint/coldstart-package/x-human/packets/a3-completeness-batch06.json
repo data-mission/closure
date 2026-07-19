@@ -1,0 +1,2468 @@
+{
+  "batch_id": "a3-completeness-batch06",
+  "rubric": {
+    "question_to_annotator": "Does the model's output still assert the must_persist fact (a fact that should survive the correction unchanged)?",
+    "answer_YES": "the fact is present and stated as live (restated in different words but same meaning = YES/kept).",
+    "answer_NO": "the fact is absent or contradicted.",
+    "answer_UNSURE": "ambiguous; forces adjudication.",
+    "allowed_values": [
+      "YES",
+      "NO",
+      "UNSURE"
+    ]
+  },
+  "n_items": 18,
+  "instructions": "You are validating an AI model's revision behavior. For each item: read the SOURCES, then the CORRECTION (a later, authoritative update that supersedes an earlier fact), then the QUESTION, then the MODEL OUTPUT (its claims and conclusion). Apply the rubric to the SCORED SENTENCE only. You are judging ASSERTION, not arithmetic \u2014 the stale and corrected values are named for you; do not re-solve the task. Put YES/NO/UNSURE in label.judgment, your id in label.annotator_id, and any note in label.notes. Do not consult other annotators. You must pass the 6-item calibration set first.",
+  "items": [
+    {
+      "packet_item_id": "A3-C-0423-C3#mp0",
+      "regime": "A3",
+      "dimension": "completeness",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Freight operator Cairnburn Rail is running a single wagon of aggregate from the Dunwick quarry to the Selby yard over the branch line, a fixed one-train movement for today's slot."
+          },
+          {
+            "id": 1,
+            "text": "The branch line's civil engineering restriction posts a maximum axle load of 20 tonnes per axle. The loaded aggregate wagon, weighed at the quarry, carries 23 tonnes per axle. The restriction states a wagon above the posted axle-load limit may not run over this branch line."
+          },
+          {
+            "id": 2,
+            "text": "Wagons loaded above 22 tonnes per axle are restricted to a maximum route speed of 40 km/h on this branch line under the axle-load exception rules. Today's working timetable has this movement slotted at the standard 60 km/h line speed. The exception rules state a wagon in this axle-load band may not run above the reduced speed cap."
+          },
+          {
+            "id": 3,
+            "text": "Selby yard's receiving siding for aggregate wagons requires a minimum usable length of 30 metres to accept this wagon class clear of the points. Today's siding survey found only 22 metres of usable length clear, due to a stabled wagon left in the siding. Yard policy states a wagon may not be received into a siding shorter than the minimum usable length required."
+          }
+        ],
+        "correction": {
+          "supersedes_source_id": 1,
+          "text": "Restriction update: following a track-bed strengthening survey, the branch line's posted axle-load limit was raised to 24 tonnes per axle, replacing the 20-tonne figure."
+        },
+        "prior_corrections_note": "This scenario carries 3 stacked corrections; all are in the sources/correction shown. Read them all before judging.",
+        "question": "Considering the branch line's posted axle-load limit, the loaded wagon's permitted route speed for this axle load, and the yard's minimum siding-length requirement to receive this wagon, can the movement run over the branch line as planned, and if not what stops it?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The branch line's posted axle-load limit was originally 20 tonnes per axle but was updated to 24 tonnes per axle following a track-bed strengthening survey.",
+              "source_ids": [
+                1,
+                4
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The loaded aggregate wagon carries 23 tonnes per axle.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 3,
+              "text": "Since 23 tonnes per axle is below the corrected 24-tonne axle-load limit, the wagon is not barred from the branch line by the axle-load restriction.",
+              "source_ids": [
+                2,
+                4
+              ]
+            },
+            {
+              "id": 4,
+              "text": "The permitted route speed for wagons in this axle-load band was originally capped at 40 km/h but was reassessed at 65 km/h following the same track-bed strengthening survey.",
+              "source_ids": [
+                2,
+                5
+              ]
+            },
+            {
+              "id": 5,
+              "text": "Today's working timetable slots this movement at 60 km/h, which is within the corrected 65 km/h speed cap.",
+              "source_ids": [
+                0,
+                2,
+                5
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Since 60 km/h does not exceed the corrected 65 km/h cap, the movement is not barred by the axle-load speed exception rules.",
+              "source_ids": [
+                2,
+                5
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Selby yard's receiving siding originally required a minimum usable length of 30 metres, but only 22 metres was clear due to a stabled wagon.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 8,
+              "text": "The stabled wagon was shunted clear of the siding, and the minimum usable length required to accept this wagon class was reassessed at 22 metres, replacing the 30-metre figure.",
+              "source_ids": [
+                6
+              ]
+            },
+            {
+              "id": 9,
+              "text": "With 22 metres of usable length now available and only 22 metres required, the siding meets the minimum usable length requirement to receive the wagon.",
+              "source_ids": [
+                3,
+                6
+              ]
+            },
+            {
+              "id": 10,
+              "text": "None of the three constraints (axle-load limit, permitted route speed, siding length) now prohibits the movement.",
+              "source_ids": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ]
+            }
+          ],
+          "conclusion": "Yes, the movement can run over the branch line as planned: the corrected axle-load limit of 24 tonnes per axle permits the 23-tonne-per-axle wagon, the corrected speed cap of 65 km/h permits the scheduled 60 km/h running, and the reassessed 22-metre siding length requirement is now met, so nothing stops the movement."
+        },
+        "must_persist_fact": "The movement is a single wagon of aggregate."
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "A3-C-0524-C1#mp0",
+      "regime": "A3",
+      "dimension": "completeness",
+      "family_type": "F2",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Bramcote Ironworks casts 300 tonnes of pig iron for a foundry supply contract and separately runs a 3-furnace re-melt shop."
+          },
+          {
+            "id": 1,
+            "text": "Casting report: the blast furnace yields 0.62 tonnes of pig iron per tonne of ore charged."
+          },
+          {
+            "id": 2,
+            "text": "Contract note: requires 174 tonnes foundry's minimum pig-iron supply contract; below that fails the contract."
+          },
+          {
+            "id": 3,
+            "text": "Re-melt report: each of the 3 re-melt furnaces processes 1800 kilograms per hour."
+          },
+          {
+            "id": 4,
+            "text": "Capacity note: casting floor's hourly pouring capacity is capped at 5,600 kilograms."
+          },
+          {
+            "id": 5,
+            "text": "Coke-budget note: the re-melt shop's weekly coke budget is $12,000."
+          },
+          {
+            "id": 6,
+            "text": "Budget note: requires at least $13,500 minimum weekly coke budget required to run all furnaces."
+          },
+          {
+            "id": 7,
+            "text": "Reference: total pig iron cast = yield x ore charged; processing throughput = per-furnace rate x furnaces."
+          }
+        ],
+        "correction": {
+          "supersedes_source_id": 1,
+          "text": "Revised Casting report (supersedes the rate report): 0.54 tonnes of pig iron per tonne of ore charged, replacing the 0.62 figure."
+        },
+        "prior_corrections_note": null,
+        "question": "Considering the total pig iron cast, the re-melt furnaces' hourly processing throughput, and the re-melt shop's weekly coke budget, does the scenario meet all three requirements, and if not which one fails?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Document [8] supersedes the 0.62 tonnes-per-tonne yield figure from document [1], replacing it with 0.54 tonnes of pig iron per tonne of ore charged.",
+              "source_ids": [
+                8,
+                1
+              ]
+            },
+            {
+              "id": 2,
+              "text": "Bramcote Ironworks casts 300 tonnes of ore (charge) for the foundry supply contract.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 3,
+              "text": "Total pig iron cast = yield x ore charged, using the corrected yield of 0.54 tonnes/tonne and 300 tonnes of ore charged, equals 162 tonnes.",
+              "source_ids": [
+                7,
+                8,
+                0
+              ]
+            },
+            {
+              "id": 4,
+              "text": "The foundry's minimum pig-iron supply contract requires at least 174 tonnes, below which the contract fails.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 5,
+              "text": "162 tonnes of pig iron cast is below the required 174 tonnes minimum, so the pig-iron supply requirement fails.",
+              "source_ids": [
+                3,
+                4
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Each of the 3 re-melt furnaces processes 1800 kilograms per hour.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Processing throughput = per-furnace rate x furnaces, so total re-melt throughput = 1800 kg/hour x 3 = 5400 kg/hour.",
+              "source_ids": [
+                7,
+                3,
+                0
+              ]
+            },
+            {
+              "id": 8,
+              "text": "The casting floor's hourly pouring capacity is capped at 5,600 kilograms.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 9,
+              "text": "5400 kg/hour re-melt throughput is within the 5,600 kg/hour pouring capacity limit, so the throughput requirement is satisfied.",
+              "source_ids": [
+                7,
+                4
+              ]
+            },
+            {
+              "id": 10,
+              "text": "The re-melt shop's weekly coke budget is $12,000.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 11,
+              "text": "A minimum weekly coke budget of $13,500 is required to run all furnaces.",
+              "source_ids": [
+                6
+              ]
+            },
+            {
+              "id": 12,
+              "text": "$12,000 is below the required $13,500 minimum, so the coke budget requirement fails.",
+              "source_ids": [
+                10,
+                11
+              ]
+            }
+          ],
+          "conclusion": "Using the corrected 0.54 tonnes/tonne yield, the total pig iron cast is only 162 tonnes (below the 174-tonne contract minimum) and the weekly coke budget of $12,000 is also below the required $13,500, so two of the three requirements fail, while only the re-melt furnaces' hourly throughput (5,400 kg/hour, within the 5,600 kg/hour capacity) is met."
+        },
+        "must_persist_fact": "Bramcote Ironworks casts 300 tonnes of pig iron for a foundry supply contract and separately runs a 3-furnace re-melt shop."
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "A3-C-0605-C1#mp0",
+      "regime": "A3",
+      "dimension": "completeness",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Terminal operator Fenmarsh is lifting a single over-height reefer container from the vessel MV Corravel using quay crane QC-4, a fixed one-box lift with no alternative crane available on this berth today."
+          },
+          {
+            "id": 1,
+            "text": "At the outreach required to clear the vessel's outboard stack, quay crane QC-4's load chart caps the rated lift capacity at 45 tonnes. The reefer container, fully loaded, weighs a measured 52 tonnes on the terminal's weigh-in-motion record. The load chart states lifting above the rated capacity at a given outreach is prohibited."
+          },
+          {
+            "id": 2,
+            "text": "The spreader fitted to QC-4 today carries a twist-lock certification band rated for standard dry-van containers only. This lift requires a reefer-rated twist-lock band, certified separately from the standard band. The terminal's lifting procedure states a standard-banded spreader may not engage a reefer container's corner castings."
+          },
+          {
+            "id": 3,
+            "text": "Berth operating rules cap quay-crane lifts to a maximum sustained wind speed of 20 knots along the crane rail. The terminal's anemometer currently reads 27 knots sustained along the rail. The berth rules state lifting above the rated wind speed risks load-swing beyond the crane's control envelope."
+          }
+        ],
+        "correction": {
+          "supersedes_source_id": 1,
+          "text": "Chart update: with the crane's trolley counterweight reconfigured for this shift, the rated lift capacity at this outreach is now 55 tonnes, replacing the 45-tonne figure."
+        },
+        "prior_corrections_note": null,
+        "question": "Considering the quay crane's rated capacity at this outreach, the spreader's twist-lock certification band, and the berth's crane-rail wind-speed limit, can the reefer lift proceed as planned, and if not what stops it?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Document [4] corrects the earlier statement in document [1] that quay crane QC-4's rated lift capacity at this outreach is 45 tonnes.",
+              "source_ids": [
+                1,
+                4
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The rated lift capacity at this outreach is now 55 tonnes due to the trolley counterweight reconfiguration.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The reefer container weighs a measured 52 tonnes, which is below the corrected 55-tonne rated capacity, so the weight limit is not a barrier to the lift.",
+              "source_ids": [
+                1,
+                4
+              ]
+            },
+            {
+              "id": 4,
+              "text": "The spreader fitted to QC-4 today carries only a standard dry-van twist-lock certification band, not a reefer-rated band.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 5,
+              "text": "The terminal's lifting procedure prohibits a standard-banded spreader from engaging a reefer container's corner castings.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Because no reefer-rated spreader band is available and no alternative crane exists on this berth today, the spreader certification mismatch prevents the lift from proceeding.",
+              "source_ids": [
+                0,
+                2
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Berth operating rules cap quay-crane lifts to a maximum sustained wind speed of 20 knots along the crane rail.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 8,
+              "text": "The terminal's anemometer currently reads 27 knots sustained along the rail, exceeding the 20-knot limit.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 9,
+              "text": "Lifting above the rated wind speed risks load-swing beyond the crane's control envelope, per berth rules.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 10,
+              "text": "The current wind speed of 27 knots exceeds the 20-knot berth limit, independently prohibiting the lift.",
+              "source_ids": [
+                3
+              ]
+            }
+          ],
+          "conclusion": "The reefer lift cannot proceed as planned: although the corrected 55-tonne capacity now covers the 52-tonne reefer weight, the lift is still stopped by the spreader's standard (non-reefer-rated) twist-lock band, which may not engage the reefer's corner castings, and separately by the crane-rail wind speed of 27 knots exceeding the 20-knot operating limit."
+        },
+        "must_persist_fact": "The lift is a single over-height reefer container from MV Corravel."
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "A3-C-0402-C2#mp1",
+      "regime": "A3",
+      "dimension": "completeness",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Courier firm Brindlow is running a single refrigerated van delivery of vaccine vials from the Marsh Lane depot to the Alder Clinic, a fixed 3-stop route with no substitute vehicle available today."
+          },
+          {
+            "id": 1,
+            "text": "The refrigerated van's cold-hold unit is rated to keep vials within range for a maximum of 5 hours without an external power link. The planned route, including all 3 stops, requires 7 hours door to door. The manufacturer states vials outside the cold-hold window must be discarded."
+          },
+          {
+            "id": 2,
+            "text": "The clinic network's delivery protocol caps any single vaccine run at 6 hours of permitted transit time before a compliance flag is raised. Brindlow's dispatch log confirms today's planned route, as scheduled, runs 7 hours door to door. Runs flagged under this protocol require the batch to be re-certified before administration."
+          },
+          {
+            "id": 3,
+            "text": "Driving-hours rules require a mandatory 30-minute rest break after any single stretch of 4.5 hours behind the wheel without a break. The planned route has the driver, Priya Nandan, driving a continuous 5-hour stretch between the first and third stops with no scheduled break. The rule applies regardless of cargo type."
+          }
+        ],
+        "correction": {
+          "supersedes_source_id": 1,
+          "text": "Equipment update: a supplemental battery pack was fitted, so the cold-hold unit is now rated for a maximum of 8 hours without external power, replacing the 5-hour figure."
+        },
+        "prior_corrections_note": "This scenario carries 2 stacked corrections; all are in the sources/correction shown. Read them all before judging.",
+        "question": "Considering the van's cold-hold duration, the route's permitted transit time, and the driver's rest-break rule, can the vaccine delivery proceed as planned, and if not what stops it?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The route is a fixed 3-stop delivery from Marsh Lane depot to Alder Clinic with no substitute vehicle available.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The planned route requires 7 hours door to door.",
+              "source_ids": [
+                1,
+                2
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The original cold-hold rating of 5 hours has been superseded by a supplemental battery pack upgrade rating the unit for 8 hours without external power.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Under the corrected 8-hour cold-hold rating, the 7-hour route duration stays within the cold-hold window, so vials would not need to be discarded for exceeding cold-hold time.",
+              "source_ids": [
+                4,
+                1,
+                2
+              ]
+            },
+            {
+              "id": 5,
+              "text": "The original 6-hour transit-time cap has been superseded by an updated protocol raising the cap to 8 hours.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Under the corrected 8-hour transit-time cap, the 7-hour route duration stays within the permitted transit time, so no compliance flag would be raised on that basis.",
+              "source_ids": [
+                5,
+                2
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Driving-hours rules require a mandatory 30-minute rest break after any single stretch of 4.5 hours behind the wheel without a break, regardless of cargo type.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 8,
+              "text": "The planned route has the driver, Priya Nandan, driving a continuous 5-hour stretch between the first and third stops with no scheduled break.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 9,
+              "text": "A continuous 5-hour driving stretch without a break violates the 4.5-hour mandatory rest-break rule.",
+              "source_ids": [
+                3
+              ]
+            }
+          ],
+          "conclusion": "With the cold-hold unit now rated for 8 hours and the transit-time cap raised to 8 hours, the 7-hour route no longer risks vial discard or a compliance flag, but the delivery still cannot proceed as planned because the driver's uninterrupted 5-hour driving stretch violates the mandatory 30-minute rest break required after 4.5 hours of continuous driving."
+        },
+        "must_persist_fact": "No substitute vehicle is available today."
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "A3-C-0409-C3#mp1",
+      "regime": "A3",
+      "dimension": "completeness",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Venue operator Marrow Hall is planning a sold-out standing-room show with a fixed ticketed attendance of 1,150 patrons for the main floor."
+          },
+          {
+            "id": 1,
+            "text": "The fire marshal's certificate caps standing-room occupancy on the main floor at 1,000 patrons. Tonight's ticketed attendance stands above that cap. The certificate states occupancy above the certified cap is a life-safety violation and grounds for the marshal to halt the event."
+          },
+          {
+            "id": 2,
+            "text": "Venue licensing requires a minimum bar-staff ratio of 1 staff member per 120 patrons for events of this size, requiring at least 10 bar staff for tonight's attendance. Tonight's schedule rosters only 7 bar staff. Licensing conditions state the bar may not open below the required minimum ratio."
+          },
+          {
+            "id": 3,
+            "text": "Fire code requires a minimum of 4 marshalled exits for standing-room attendance above 1,100 patrons. Tonight's floor plan has only 3 exits marshalled, with a fourth door currently unstaffed. Fire code states an event at this attendance may not proceed below the required marshalled-exit count."
+          }
+        ],
+        "correction": {
+          "supersedes_source_id": 1,
+          "text": "Certificate update: following a re-survey of the floor's exit widths, the fire marshal raised the certified occupancy cap to 1,200 patrons, replacing the 1,000-patron figure."
+        },
+        "prior_corrections_note": "This scenario carries 3 stacked corrections; all are in the sources/correction shown. Read them all before judging.",
+        "question": "Considering the fire marshal's occupancy limit, the venue's minimum bar-staff-to-patron ratio, and the required count of marshalled exits for this attendance, can the show proceed as ticketed, and if not what stops it?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The venue plans a sold-out standing-room show with ticketed attendance of 1,150 patrons.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The original fire marshal certificate capped standing-room occupancy at 1,000 patrons, which would have made tonight's 1,150 attendance exceed the cap.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 3,
+              "text": "Following a re-survey of exit widths, the fire marshal raised the certified occupancy cap to 1,200 patrons, replacing the 1,000-patron figure.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Under the corrected 1,200-patron cap, tonight's 1,150 ticketed attendance does not exceed the occupancy limit, so there is no occupancy violation.",
+              "source_ids": [
+                4,
+                0
+              ]
+            },
+            {
+              "id": 5,
+              "text": "Licensing originally required a minimum of 10 bar staff for tonight's attendance, based on a 1-per-120 ratio, and only 7 staff were rostered.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Three additional bar staff were confirmed for tonight, and the licensing minimum for this attendance was reassessed at 7 staff, replacing the 10-staff figure.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 7,
+              "text": "With the corrected minimum of 7 staff and 7 staff now available (original 7 plus 3 additional, per the update), the bar staffing requirement is met.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 8,
+              "text": "Fire code originally required 4 marshalled exits for attendance above 1,100 patrons, and only 3 exits were marshalled, with a fourth door unstaffed.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 9,
+              "text": "A marshal was reassigned to cover the fourth door, and the required marshalled-exit count for this attendance band was reassessed at 3 exits, replacing the 4-exit figure.",
+              "source_ids": [
+                6
+              ]
+            },
+            {
+              "id": 10,
+              "text": "With the corrected requirement of 3 marshalled exits and 3 exits marshalled (plus a marshal now covering the fourth door), the marshalled-exit requirement is met.",
+              "source_ids": [
+                6
+              ]
+            },
+            {
+              "id": 11,
+              "text": "None of the three requirements (occupancy cap, bar-staff ratio, marshalled-exit count) are violated once the corrected figures are applied.",
+              "source_ids": [
+                4,
+                5,
+                6
+              ]
+            }
+          ],
+          "conclusion": "Yes, the show can proceed as ticketed: the updated occupancy cap of 1,200 accommodates the 1,150 attendance, the revised bar-staff minimum of 7 is met, and the revised marshalled-exit requirement of 3 is satisfied, so nothing stops the event."
+        },
+        "must_persist_fact": "The event is on the main floor of Marrow Hall."
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "A3-C-0403-C3#mp1",
+      "regime": "A3",
+      "dimension": "completeness",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Catering house Ferrow is preparing a fixed order of 600 dinner rolls for the Landry banquet hall, to be baked in a single walk-in oven and delivered still warm before the 6pm service."
+          },
+          {
+            "id": 1,
+            "text": "The walk-in oven fits a maximum of 8 trays per batch, each tray holding 50 rolls. Completing the full order therefore requires 2 batches run back to back. Kitchen policy states an order requiring more than 1 batch beyond the oven's per-batch capacity must be pre-approved by the head chef before service."
+          },
+          {
+            "id": 2,
+            "text": "The kitchen's baking window before the 6pm service opens at 2pm and closes at 5pm, a fixed 3-hour window. Two full batches of these rolls, including oven reload and cooling time, take a measured 3.5 hours start to finish. Kitchen policy requires the full bake cycle to complete inside the baking window."
+          },
+          {
+            "id": 3,
+            "text": "Food-safety policy requires the proofing room to hold a maximum temperature of 24\u00b0C while dough proofs, to avoid over-fermentation. A logged fault left the proofing room running at 28\u00b0C this afternoon. Kitchen policy states dough proofed above the maximum temperature must be discarded rather than baked."
+          }
+        ],
+        "correction": {
+          "supersedes_source_id": 1,
+          "text": "Approval update: the head chef pre-approved up to 2 batches for this order without further sign-off, replacing the 1-batch figure."
+        },
+        "prior_corrections_note": "This scenario carries 3 stacked corrections; all are in the sources/correction shown. Read them all before judging.",
+        "question": "Considering the oven's per-batch tray capacity, the total baking-window duration available, and the kitchen's proofing-room temperature rule, can the roll order be completed in time, and if not what stops it?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The order requires 600 dinner rolls, needing 2 batches given the oven's capacity of 8 trays x 50 rolls = 400 rolls per batch.",
+              "source_ids": [
+                0,
+                1
+              ]
+            },
+            {
+              "id": 2,
+              "text": "Kitchen policy originally required orders needing more than 1 batch beyond capacity to be pre-approved by the head chef.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The head chef pre-approved up to 2 batches for this order, satisfying the approval requirement.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 4,
+              "text": "The original baking window was 3 hours (2pm to 5pm), and two full batches take 3.5 hours, which would not fit.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 5,
+              "text": "The head chef extended the baking window to 4 hours before service, replacing the 3-hour figure.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 6,
+              "text": "With a 4-hour baking window, the 3.5-hour bake cycle for two full batches fits within the available time.",
+              "source_ids": [
+                5,
+                2
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Food-safety policy originally required the proofing room to stay at or below 24\u00b0C, and a fault caused it to run at 28\u00b0C, which would have required discarding the dough.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 8,
+              "text": "The maximum permitted proofing room temperature was updated to 29\u00b0C, replacing the 24\u00b0C figure.",
+              "source_ids": [
+                6
+              ]
+            },
+            {
+              "id": 9,
+              "text": "Since the proofing room temperature of 28\u00b0C is now below the revised maximum of 29\u00b0C, the dough does not need to be discarded.",
+              "source_ids": [
+                6,
+                3
+              ]
+            },
+            {
+              "id": 10,
+              "text": "With batch approval granted, the baking window sufficient for the bake cycle, and the proofing temperature within the revised limit, no policy or capacity constraint blocks completion of the order.",
+              "source_ids": [
+                4,
+                5,
+                6
+              ]
+            }
+          ],
+          "conclusion": "Yes, the roll order can be completed in time: the head chef has approved the required 2 batches, the extended 4-hour baking window comfortably accommodates the 3.5-hour bake cycle, and the proofing room's 28\u00b0C reading is now within the revised 29\u00b0C safety limit, so no obstacle remains."
+        },
+        "must_persist_fact": "The rolls are to be delivered to the Landry banquet hall before 6pm service."
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "A3-C-0622-C3#mp1",
+      "regime": "A3",
+      "dimension": "completeness",
+      "family_type": "F2",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Marrow Orchards grows 60 hectares of eating apples under a wholesaler supply contract and separately runs a 4-line packhouse for a neighbouring grower's cider fruit."
+          },
+          {
+            "id": 1,
+            "text": "Yield report: the orchard blocks yield 22.0 tonnes per hectare this harvest."
+          },
+          {
+            "id": 2,
+            "text": "Contract note: requires 1,260 tonnes wholesaler's minimum delivery contract; below that fails the contract."
+          },
+          {
+            "id": 3,
+            "text": "Packhouse report: each of the 4 grading lines packs 14 tonnes of cider fruit per day."
+          },
+          {
+            "id": 4,
+            "text": "Capacity note: cold-store's daily intake capacity is capped at 64 tonnes."
+          },
+          {
+            "id": 5,
+            "text": "Fuel-budget note: the packhouse's weekly forklift-fuel budget is $2,600."
+          },
+          {
+            "id": 6,
+            "text": "Budget note: requires at least $3,000 minimum weekly forklift-fuel budget required to run the packhouse."
+          },
+          {
+            "id": 7,
+            "text": "Reference: total harvest tonnage = per-hectare yield x hectares; cider fruit packed = per-line rate x lines."
+          }
+        ],
+        "correction": {
+          "supersedes_source_id": 1,
+          "text": "Revised Yield report (supersedes the rate report): 19.0 tonnes per hectare this harvest, replacing the 22 figure."
+        },
+        "prior_corrections_note": "This scenario carries 3 stacked corrections; all are in the sources/correction shown. Read them all before judging.",
+        "question": "Considering the orchard's total harvest tonnage, the cider fruit packed per day, and the packhouse's weekly forklift-fuel budget, does the scenario meet all three requirements, and if not which one fails?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Marrow Orchards grows 60 hectares of eating apples under a wholesaler supply contract.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The revised yield report supersedes the original 22.0 tonnes per hectare figure with 19.0 tonnes per hectare.",
+              "source_ids": [
+                8
+              ]
+            },
+            {
+              "id": 3,
+              "text": "Total harvest tonnage = per-hectare yield x hectares.",
+              "source_ids": [
+                7
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Using the corrected yield, total harvest tonnage = 19.0 tonnes/hectare x 60 hectares = 1,140 tonnes.",
+              "source_ids": [
+                7,
+                8
+              ]
+            },
+            {
+              "id": 5,
+              "text": "The wholesaler contract requires a minimum delivery of 1,260 tonnes, below which the contract fails.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 6,
+              "text": "1,140 tonnes is less than the required 1,260 tonnes, so the harvest tonnage requirement fails.",
+              "source_ids": [
+                2,
+                4
+              ]
+            },
+            {
+              "id": 7,
+              "text": "The revised packhouse report supersedes the original 14 tonnes per day per line figure with 17 tonnes per day per line.",
+              "source_ids": [
+                9
+              ]
+            },
+            {
+              "id": 8,
+              "text": "Cider fruit packed per day = per-line rate x number of lines.",
+              "source_ids": [
+                7
+              ]
+            },
+            {
+              "id": 9,
+              "text": "The packhouse runs 4 grading lines.",
+              "source_ids": [
+                0,
+                3
+              ]
+            },
+            {
+              "id": 10,
+              "text": "Using the corrected rate, cider fruit packed per day = 17 tonnes/line x 4 lines = 68 tonnes per day.",
+              "source_ids": [
+                7,
+                9,
+                9
+              ]
+            },
+            {
+              "id": 11,
+              "text": "The cold-store's daily intake capacity is capped at 64 tonnes.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 12,
+              "text": "68 tonnes per day exceeds the 64-tonne cold-store capacity, so the cider fruit packed per day requirement fails.",
+              "source_ids": [
+                4,
+                10
+              ]
+            },
+            {
+              "id": 13,
+              "text": "The revised fuel-budget note supersedes the original $2,600 figure with $3,300.",
+              "source_ids": [
+                10
+              ]
+            },
+            {
+              "id": 14,
+              "text": "The minimum required weekly forklift-fuel budget to run the packhouse is $3,000.",
+              "source_ids": [
+                6
+              ]
+            },
+            {
+              "id": 15,
+              "text": "The corrected weekly forklift-fuel budget of $3,300 meets the $3,000 minimum requirement, so this requirement is satisfied.",
+              "source_ids": [
+                6,
+                10
+              ]
+            }
+          ],
+          "conclusion": "After applying the corrections, the scenario does not meet all three requirements: the forklift-fuel budget requirement is satisfied ($3,300 exceeds the $3,000 minimum), but both the harvest tonnage requirement (1,140 tonnes falls short of the 1,260-tonne contract minimum) and the cider fruit packing requirement (68 tonnes per day exceeds the 64-tonne cold-store capacity) fail."
+        },
+        "must_persist_fact": "The cold-store's daily intake capacity is 64 tonnes."
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "A3-C-0607-C1#mp0",
+      "regime": "A3",
+      "dimension": "completeness",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Elevator operator Marrowgrain is receiving a single 60-tonne truck delivery of wheat into silo bank C at the Halden Terminal, a fixed one-truck intake with no alternative silo bank available while bank B remains under structural inspection."
+          },
+          {
+            "id": 1,
+            "text": "Silo bank C currently holds grain up to 92 percent of its rated capacity, leaving headroom for only 45 tonnes before the high-level sensor trips. The incoming delivery is a fixed 60-tonne load. The terminal's intake procedure states a delivery exceeding available headroom may not be tipped into the bank."
+          },
+          {
+            "id": 2,
+            "text": "The intake leg serving silo bank C is rated for a maximum sustained throughput of 40 tonnes per hour for this wheat grade before elevator-leg motor overload risk becomes unacceptable. The delivery's tipping schedule requires an intake rate of 55 tonnes per hour to clear the truck within its yard slot. The intake procedure states exceeding the rated throughput is not permitted."
+          },
+          {
+            "id": 3,
+            "text": "The terminal's moisture meter rejects any wheat delivery testing above 14.5 percent moisture content for long-term storage in silo bank C. The incoming load tests at 16.2 percent moisture on the intake meter. The terminal's grading policy states loads above the rejection threshold may not be binned into long-term storage."
+          }
+        ],
+        "correction": {
+          "supersedes_source_id": 1,
+          "text": "Inventory update: following an overnight outload to a rail car, silo bank C's remaining headroom is now 65 tonnes, replacing the 45-tonne figure."
+        },
+        "prior_corrections_note": null,
+        "question": "Considering silo bank C's remaining storage headroom, the intake leg's rated throughput for this grade, and the moisture-meter's rejection threshold, can the delivery be received as planned, and if not what stops it?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Document [4] corrects the earlier statement in document [1] that silo bank C's remaining headroom is 45 tonnes, updating it to 65 tonnes following an overnight outload to a rail car.",
+              "source_ids": [
+                1,
+                4
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The 45-tonne headroom figure and any conclusion that the 60-tonne delivery exceeds available headroom are now false and must be discarded.",
+              "source_ids": [
+                1,
+                4
+              ]
+            },
+            {
+              "id": 3,
+              "text": "With the corrected headroom of 65 tonnes, the 60-tonne delivery fits within available storage capacity in silo bank C, so headroom does not block the delivery.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 4,
+              "text": "The intake leg serving silo bank C is rated for a maximum sustained throughput of 40 tonnes per hour for this wheat grade.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 5,
+              "text": "The delivery's tipping schedule requires an intake rate of 55 tonnes per hour, which exceeds the 40 tonnes per hour rated throughput.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 6,
+              "text": "The terminal's intake procedure prohibits exceeding the rated throughput of the intake leg.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 7,
+              "text": "The moisture meter rejects wheat testing above 14.5 percent moisture content for long-term storage in silo bank C.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 8,
+              "text": "The incoming load tests at 16.2 percent moisture, which exceeds the 14.5 percent rejection threshold.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 9,
+              "text": "The terminal's grading policy prohibits binning loads above the moisture rejection threshold into long-term storage.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 10,
+              "text": "Only one truck intake point exists for silo bank C, with no alternative silo bank available while bank B is under inspection, so the delivery cannot be rerouted to bypass the throughput or moisture problems.",
+              "source_ids": [
+                0
+              ]
+            }
+          ],
+          "conclusion": "After accounting for the corrected headroom of 65 tonnes (which now makes storage space sufficient and not a blocking factor), the delivery still cannot be received as planned because the required 55 tonnes-per-hour tipping rate exceeds the intake leg's 40 tonnes-per-hour throughput limit, and the load's 16.2 percent moisture content exceeds the 14.5 percent rejection threshold for long-term storage, either of which independently stops the delivery under the terminal's procedures."
+        },
+        "must_persist_fact": "The delivery is a fixed 60-tonne truck load of wheat into silo bank C."
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "A3-C-0608-C2#mp1",
+      "regime": "A3",
+      "dimension": "completeness",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Rescue crew Corvane Mountain Team is winching a single injured climber from a fixed ledge position on Halden Crag, a single-casualty extraction with no alternative ground-access route given the terrain."
+          },
+          {
+            "id": 1,
+            "text": "The rescue helicopter's winch cable carries a certified working-load limit of 270 kilograms for a single-person hoist. The climber, plus the winchman and rescue stretcher combined, weighs a measured 310 kilograms for this extraction method. The winch manual states hoisting above the certified working-load limit is not permitted."
+          },
+          {
+            "id": 2,
+            "text": "At the ledge's elevation of 2,850 metres, the helicopter's performance chart caps its out-of-ground-effect hover ceiling at 2,600 metres for today's air temperature and fuel load. The flight manual states attempting a hover above the charted ceiling is outside the aircraft's certified performance envelope."
+          },
+          {
+            "id": 3,
+            "text": "Rescue flight rules require a minimum cloud base of 300 metres above the ledge elevation for a winch approach in this terrain. The mountain weather station currently reports cloud base at 180 metres above the ledge. The flight rules state approaches below the minimum cloud base are not authorised."
+          }
+        ],
+        "correction": {
+          "supersedes_source_id": 1,
+          "text": "Method update: switching to a two-stage hoist reduces the single-cable load, so the winch cable's certified working-load limit for this method is now 330 kilograms, replacing the 270-kilogram figure."
+        },
+        "prior_corrections_note": "This scenario carries 2 stacked corrections; all are in the sources/correction shown. Read them all before judging.",
+        "question": "Considering the winch cable's rated working-load limit, the helicopter's hover-ceiling ability at this elevation, and the cloud-base minimum for the approach, can the winch extraction proceed as planned, and if not what stops it?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The extraction is a single-casualty winch operation from a fixed ledge on Halden Crag with no alternative ground access.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "An earlier stated winch cable working-load limit of 270 kilograms is superseded by a method update switching to a two-stage hoist, which sets the certified working-load limit at 330 kilograms.",
+              "source_ids": [
+                1,
+                4
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The combined weight of the climber, winchman, and stretcher is 310 kilograms, which is within the corrected 330-kilogram working-load limit.",
+              "source_ids": [
+                1,
+                4
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Therefore the winch load constraint no longer prevents the extraction.",
+              "source_ids": [
+                1,
+                4
+              ]
+            },
+            {
+              "id": 5,
+              "text": "An earlier stated hover ceiling of 2,600 metres is superseded by a performance update reflecting a lighter fuel load, which raises the hover ceiling to 3,000 metres for today's conditions.",
+              "source_ids": [
+                2,
+                5
+              ]
+            },
+            {
+              "id": 6,
+              "text": "The ledge elevation is 2,850 metres, which is below the corrected 3,000-metre hover ceiling.",
+              "source_ids": [
+                0,
+                2,
+                5
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Therefore the hover-ceiling constraint no longer prevents the extraction.",
+              "source_ids": [
+                2,
+                5
+              ]
+            },
+            {
+              "id": 8,
+              "text": "Rescue flight rules require a minimum cloud base of 300 metres above the ledge elevation for a winch approach in this terrain.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 9,
+              "text": "The mountain weather station reports the current cloud base at only 180 metres above the ledge, which is below the required 300-metre minimum.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 10,
+              "text": "Flight rules state that approaches below the minimum cloud base are not authorised.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 11,
+              "text": "No update or correction has been provided for the cloud-base requirement or the current cloud-base reading.",
+              "source_ids": [
+                3
+              ]
+            }
+          ],
+          "conclusion": "With the corrected winch load limit (330 kg vs. 310 kg needed) and corrected hover ceiling (3,000 m vs. 2,850 m ledge elevation) both now satisfied, the only remaining obstacle is the cloud base, which at 180 metres above the ledge falls well short of the required 300-metre minimum, so the winch extraction cannot proceed as planned and is stopped solely by the inadequate cloud base."
+        },
+        "must_persist_fact": "No alternative ground-access route exists given the terrain."
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "A3-C-0415-C2#mp1",
+      "regime": "A3",
+      "dimension": "completeness",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Refurbishment contractor Pallister Co. has erected a single tower scaffold along the east elevation of the Grendon block, loaded with render bags and a 4-person plastering crew for the day's work."
+          },
+          {
+            "id": 1,
+            "text": "This scaffold's design rates each working bay for a maximum load of 300 kg, per the erection certificate. The render bags loaded onto the working bay plus the 4-person crew and their tools add up to a measured 380 kg. The erection certificate states loading above the rated bay maximum invalidates the scaffold's handover certificate."
+          },
+          {
+            "id": 2,
+            "text": "At this scaffold's height, the erection standard requires tie spacing no greater than 4 metres vertically to the building face. The as-built survey found the top two lifts tied at a 6-metre spacing due to a missed tie point. The erection standard states a scaffold outside the required tie spacing may not be used until re-tied."
+          },
+          {
+            "id": 3,
+            "text": "Working-at-height regulations require a minimum guardrail height of 950 mm on any working platform above 2 metres. The top platform's guardrail, as erected, measures only 700 mm due to a substituted shorter standard. Regulations state a platform below the minimum guardrail height may not be occupied."
+          }
+        ],
+        "correction": {
+          "supersedes_source_id": 1,
+          "text": "Design update: a revised bay configuration with additional standards was certified, rating each working bay for a maximum load of 400 kg, replacing the 300 kg figure."
+        },
+        "prior_corrections_note": "This scenario carries 2 stacked corrections; all are in the sources/correction shown. Read them all before judging.",
+        "question": "Considering the scaffold's rated working load per bay, the scaffold's maximum permitted tie spacing for this height, and the minimum guardrail height required at this working platform, can the crew work from the scaffold as erected, and if not what stops it?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "An original erection certificate rated each working bay for a maximum load of 300 kg.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 2,
+              "text": "A design update certified a revised bay configuration with additional standards, rating each working bay for a maximum load of 400 kg, replacing the 300 kg figure.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The render bags, 4-person crew, and their tools measured a combined load of 380 kg on the working bay.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Since the current rated bay maximum is 400 kg and the measured load is 380 kg, the load does not exceed the rated maximum, so the handover certificate is not invalidated on this basis.",
+              "source_ids": [
+                1,
+                3,
+                4
+              ]
+            },
+            {
+              "id": 5,
+              "text": "An original erection standard required tie spacing no greater than 4 metres vertically at this scaffold's height.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 6,
+              "text": "A standard update, following an engineer's assessment of added corner bracing, reassessed the permitted tie spacing at this height to 6.5 metres, replacing the 4-metre figure.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 7,
+              "text": "The as-built survey found the top two lifts tied at a 6-metre spacing due to a missed tie point.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 8,
+              "text": "Since the current permitted tie spacing is 6.5 metres and the as-built spacing is 6 metres, the tie spacing is within the permitted limit, so the scaffold is not barred from use on this basis.",
+              "source_ids": [
+                2,
+                5,
+                6
+              ]
+            },
+            {
+              "id": 9,
+              "text": "Working-at-height regulations require a minimum guardrail height of 950 mm on any working platform above 2 metres.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 10,
+              "text": "The top platform's guardrail, as erected, measures only 700 mm due to a substituted shorter standard.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 11,
+              "text": "Regulations state a platform below the minimum guardrail height may not be occupied.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 12,
+              "text": "Since 700 mm is below the required 950 mm minimum guardrail height, the top platform may not be occupied.",
+              "source_ids": [
+                3
+              ]
+            }
+          ],
+          "conclusion": "No, the crew cannot work from the scaffold as erected: although the updated 400 kg bay load rating and the revised 6.5-metre tie spacing standard mean the load and tie spacing are both now within permitted limits, the top platform's guardrail height of 700 mm still falls short of the required 950 mm minimum, so that platform may not be occupied until the guardrail is corrected."
+        },
+        "must_persist_fact": "The crew working from the scaffold is 4 plasterers."
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "A3-C-0525-C3#mp0",
+      "regime": "A3",
+      "dimension": "completeness",
+      "family_type": "F2",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Southmoor Recycling sorts 900 tonnes of mixed waste this month under a municipal diversion contract and separately runs a 5-baler compaction line."
+          },
+          {
+            "id": 1,
+            "text": "Sorting report: the sorting line recovers 0.34 tonnes of recyclables per tonne of mixed waste."
+          },
+          {
+            "id": 2,
+            "text": "Contract note: requires 280 tonnes municipal diversion-rate contract; below that fails the contract."
+          },
+          {
+            "id": 3,
+            "text": "Baling report: each of the 5 balers compacts 22 tonnes per shift."
+          },
+          {
+            "id": 4,
+            "text": "Capacity note: yard's per-shift outbound-truck capacity is capped at 120 tonnes."
+          },
+          {
+            "id": 5,
+            "text": "Utilities-budget note: the sorting line's monthly electricity budget is $7,000."
+          },
+          {
+            "id": 6,
+            "text": "Budget note: requires at least $7,900 minimum monthly electricity budget required to run the sorting line."
+          },
+          {
+            "id": 7,
+            "text": "Reference: recyclables recovered = recovery rate x mixed waste tonnage; compaction throughput = per-baler rate x balers."
+          }
+        ],
+        "correction": {
+          "supersedes_source_id": 1,
+          "text": "Revised Sorting report (supersedes the rate report): 0.29 tonnes of recyclables per tonne of mixed waste, replacing the 0.34 figure."
+        },
+        "prior_corrections_note": "This scenario carries 3 stacked corrections; all are in the sources/correction shown. Read them all before judging.",
+        "question": "Considering the recyclables recovered this month, the balers' per-shift compaction throughput, and the sorting line's monthly electricity budget, does the scenario meet all three requirements, and if not which one fails?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Southmoor Recycling sorts 900 tonnes of mixed waste this month.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The revised sorting report supersedes the original 0.34 recovery rate with a corrected rate of 0.29 tonnes of recyclables per tonne of mixed waste.",
+              "source_ids": [
+                8
+              ]
+            },
+            {
+              "id": 3,
+              "text": "Recyclables recovered equals recovery rate multiplied by mixed waste tonnage.",
+              "source_ids": [
+                7
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Using the corrected recovery rate, recyclables recovered this month equal 0.29 x 900 = 261 tonnes.",
+              "source_ids": [
+                1,
+                2,
+                7,
+                8
+              ]
+            },
+            {
+              "id": 5,
+              "text": "The contract requires at least 280 tonnes to meet the municipal diversion-rate requirement.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 6,
+              "text": "261 tonnes recovered is less than the required 280 tonnes, so the diversion-rate requirement fails.",
+              "source_ids": [
+                2,
+                3,
+                7,
+                8
+              ]
+            },
+            {
+              "id": 7,
+              "text": "The revised baling report supersedes the original 22 tonnes per shift figure with a corrected rate of 26 tonnes per shift per baler.",
+              "source_ids": [
+                9
+              ]
+            },
+            {
+              "id": 8,
+              "text": "Compaction throughput equals per-baler rate multiplied by number of balers.",
+              "source_ids": [
+                7
+              ]
+            },
+            {
+              "id": 9,
+              "text": "There are 5 balers in operation.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 10,
+              "text": "Using the corrected per-baler rate, total compaction throughput is 26 x 5 = 130 tonnes per shift.",
+              "source_ids": [
+                3,
+                7,
+                9
+              ]
+            },
+            {
+              "id": 11,
+              "text": "The yard's per-shift outbound-truck capacity is capped at 120 tonnes.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 12,
+              "text": "130 tonnes of compaction throughput exceeds the 120-tonne outbound-truck capacity cap, so the compaction throughput requirement fails.",
+              "source_ids": [
+                4,
+                7,
+                9,
+                10
+              ]
+            },
+            {
+              "id": 13,
+              "text": "The revised utilities-budget note supersedes the original $7,000 figure with a corrected monthly electricity budget of $8,600 for the sorting line.",
+              "source_ids": [
+                10
+              ]
+            },
+            {
+              "id": 14,
+              "text": "The minimum required monthly electricity budget to run the sorting line is $7,900.",
+              "source_ids": [
+                6
+              ]
+            },
+            {
+              "id": 15,
+              "text": "The corrected monthly electricity budget of $8,600 exceeds the required minimum of $7,900, so the electricity budget requirement is met.",
+              "source_ids": [
+                6,
+                10
+              ]
+            }
+          ],
+          "conclusion": "After applying the corrected figures, the scenario does not meet all three requirements: the recyclables recovered (261 tonnes) fall short of the 280-tonne diversion requirement and the balers' compaction throughput (130 tonnes per shift) exceeds the 120-tonne outbound-truck capacity, while only the electricity budget requirement ($8,600 available versus $7,900 required) is satisfied."
+        },
+        "must_persist_fact": "Southmoor Recycling sorts 900 tonnes of mixed waste this month under a municipal diversion contract and separately runs a 5-baler compaction line."
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "A3-C-0602-C3#mp0",
+      "regime": "A3",
+      "dimension": "completeness",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Production crew Halbeck is load-in rigging a touring concert stage inside the Corvane Arena, a fixed one-night show with no load-in extension available on the venue calendar."
+          },
+          {
+            "id": 1,
+            "text": "The arena's roof grid is rated for a maximum of 2,000 kilograms at any single rigging point. The production's flown lighting truss requires 2,600 kilograms at the primary upstage point. The venue's structural engineer states exceeding the rated point load voids the roof grid's certification for the show."
+          },
+          {
+            "id": 2,
+            "text": "The arena's loading dock has a fixed vehicle-height clearance of 4.2 metres under the dock canopy. The production's tour trucks, loaded with the stage deck, stand 4.6 metres tall at the dock approach. The venue's dock manager states any vehicle over the canopy clearance cannot enter the dock."
+          },
+          {
+            "id": 3,
+            "text": "The arena's operating licence imposes a noise curfew permitting sound checks no later than 22:00 local time. The production's load-in schedule has sound check beginning at 23:00 due to the day's turnaround. The licence states sound checks after the curfew hour are a breach of the venue's operating licence."
+          }
+        ],
+        "correction": {
+          "supersedes_source_id": 1,
+          "text": "Engineering update: with a load-spreading beam added at the upstage point, the roof grid's rated maximum point load there is now 2,800 kilograms, replacing the 2,000-kilogram figure."
+        },
+        "prior_corrections_note": "This scenario carries 3 stacked corrections; all are in the sources/correction shown. Read them all before judging.",
+        "question": "Considering the roof grid's rated point-load capacity, the loading dock's vehicle-height clearance, and the local noise-curfew rule, can the load-in proceed as planned, and if not what stops it?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The roof grid's rated point load at the primary upstage point was originally 2,000 kilograms, which was insufficient for the required 2,600 kilograms.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 2,
+              "text": "An engineering update added a load-spreading beam at the upstage point, raising the rated maximum point load to 2,800 kilograms, replacing the 2,000-kilogram figure.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The flown lighting truss requires 2,600 kilograms at the primary upstage point, which is now within the updated 2,800-kilogram rated capacity.",
+              "source_ids": [
+                1,
+                4
+              ]
+            },
+            {
+              "id": 4,
+              "text": "The roof grid rigging point no longer prevents the load-in from proceeding.",
+              "source_ids": [
+                1,
+                4
+              ]
+            },
+            {
+              "id": 5,
+              "text": "The loading dock's vehicle-height clearance was originally 4.2 metres, which was insufficient for the 4.6-metre-tall tour trucks.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 6,
+              "text": "A canopy update raised the leading edge, making the vehicle-height clearance 4.8 metres, replacing the 4.2-metre figure.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 7,
+              "text": "The tour trucks are 4.6 metres tall, which is now within the updated 4.8-metre clearance.",
+              "source_ids": [
+                2,
+                5
+              ]
+            },
+            {
+              "id": 8,
+              "text": "The loading dock clearance no longer prevents the tour trucks from entering the dock.",
+              "source_ids": [
+                2,
+                5
+              ]
+            },
+            {
+              "id": 9,
+              "text": "The arena's original noise curfew permitted sound checks no later than 22:00 local time, which conflicted with the scheduled 23:00 sound check.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 10,
+              "text": "The local authority granted a one-off curfew variance permitting sound checks up to 24:00 local time, replacing the 22:00 figure.",
+              "source_ids": [
+                6
+              ]
+            },
+            {
+              "id": 11,
+              "text": "The scheduled 23:00 sound check is now within the permitted curfew variance of up to 24:00.",
+              "source_ids": [
+                3,
+                6
+              ]
+            },
+            {
+              "id": 12,
+              "text": "The noise curfew rule no longer prevents the load-in and sound check schedule from proceeding.",
+              "source_ids": [
+                3,
+                6
+              ]
+            }
+          ],
+          "conclusion": "With the load-spreading beam raising the rigging point capacity to 2,800 kilograms, the canopy raise increasing dock clearance to 4.8 metres, and the curfew variance extending sound check permission to 24:00, all three original obstacles have been resolved, so the load-in can proceed as planned."
+        },
+        "must_persist_fact": "The load-in is for a fixed one-night show at the Corvane Arena."
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "A3-C-0525-C1#mp1",
+      "regime": "A3",
+      "dimension": "completeness",
+      "family_type": "F2",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Southmoor Recycling sorts 900 tonnes of mixed waste this month under a municipal diversion contract and separately runs a 5-baler compaction line."
+          },
+          {
+            "id": 1,
+            "text": "Sorting report: the sorting line recovers 0.34 tonnes of recyclables per tonne of mixed waste."
+          },
+          {
+            "id": 2,
+            "text": "Contract note: requires 280 tonnes municipal diversion-rate contract; below that fails the contract."
+          },
+          {
+            "id": 3,
+            "text": "Baling report: each of the 5 balers compacts 22 tonnes per shift."
+          },
+          {
+            "id": 4,
+            "text": "Capacity note: yard's per-shift outbound-truck capacity is capped at 120 tonnes."
+          },
+          {
+            "id": 5,
+            "text": "Utilities-budget note: the sorting line's monthly electricity budget is $7,000."
+          },
+          {
+            "id": 6,
+            "text": "Budget note: requires at least $7,900 minimum monthly electricity budget required to run the sorting line."
+          },
+          {
+            "id": 7,
+            "text": "Reference: recyclables recovered = recovery rate x mixed waste tonnage; compaction throughput = per-baler rate x balers."
+          }
+        ],
+        "correction": {
+          "supersedes_source_id": 1,
+          "text": "Revised Sorting report (supersedes the rate report): 0.29 tonnes of recyclables per tonne of mixed waste, replacing the 0.34 figure."
+        },
+        "prior_corrections_note": null,
+        "question": "Considering the recyclables recovered this month, the balers' per-shift compaction throughput, and the sorting line's monthly electricity budget, does the scenario meet all three requirements, and if not which one fails?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Document 8 supersedes document 1, replacing the 0.34 tonnes-per-tonne recovery rate with 0.29 tonnes per tonne.",
+              "source_ids": [
+                8,
+                1
+              ]
+            },
+            {
+              "id": 2,
+              "text": "Southmoor Recycling sorts 900 tonnes of mixed waste this month.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 3,
+              "text": "Recyclables recovered = recovery rate x mixed waste tonnage.",
+              "source_ids": [
+                7
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Using the corrected recovery rate of 0.29, recyclables recovered = 0.29 x 900 = 261 tonnes.",
+              "source_ids": [
+                8,
+                0,
+                7
+              ]
+            },
+            {
+              "id": 5,
+              "text": "The municipal diversion-rate contract requires at least 280 tonnes.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 6,
+              "text": "261 tonnes recovered is less than the required 280 tonnes, so the diversion-rate contract requirement fails.",
+              "source_ids": [
+                8,
+                0,
+                7,
+                2
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Compaction throughput = per-baler rate x number of balers.",
+              "source_ids": [
+                7
+              ]
+            },
+            {
+              "id": 8,
+              "text": "There are 5 balers, each compacting 22 tonnes per shift.",
+              "source_ids": [
+                0,
+                3
+              ]
+            },
+            {
+              "id": 9,
+              "text": "Total baler compaction throughput = 22 x 5 = 110 tonnes per shift.",
+              "source_ids": [
+                3,
+                7
+              ]
+            },
+            {
+              "id": 10,
+              "text": "The yard's per-shift outbound-truck capacity is capped at 120 tonnes.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 11,
+              "text": "110 tonnes per shift compaction throughput is within the 120-tonne outbound capacity cap, so the compaction throughput requirement is met.",
+              "source_ids": [
+                3,
+                7,
+                4
+              ]
+            },
+            {
+              "id": 12,
+              "text": "The sorting line's monthly electricity budget is $7,000.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 13,
+              "text": "The minimum required monthly electricity budget to run the sorting line is $7,900.",
+              "source_ids": [
+                6
+              ]
+            },
+            {
+              "id": 14,
+              "text": "$7,000 is less than the required $7,900 minimum, so the electricity budget requirement fails.",
+              "source_ids": [
+                5,
+                6
+              ]
+            }
+          ],
+          "conclusion": "Using the corrected recovery rate of 0.29 tonnes per tonne, the scenario recovers only 261 tonnes of recyclables (below the 280-tonne diversion-rate requirement) and has only a $7,000 electricity budget (below the required $7,900), so both the diversion-rate contract and electricity budget requirements fail, while only the baler compaction throughput requirement (110 tonnes/shift, within the 120-tonne capacity) is met."
+        },
+        "must_persist_fact": "The yard's per-shift outbound-truck capacity is 130 tonnes."
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "A3-C-0403-C1#mp1",
+      "regime": "A3",
+      "dimension": "completeness",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Catering house Ferrow is preparing a fixed order of 600 dinner rolls for the Landry banquet hall, to be baked in a single walk-in oven and delivered still warm before the 6pm service."
+          },
+          {
+            "id": 1,
+            "text": "The walk-in oven fits a maximum of 8 trays per batch, each tray holding 50 rolls. Completing the full order therefore requires 2 batches run back to back. Kitchen policy states an order requiring more than 1 batch beyond the oven's per-batch capacity must be pre-approved by the head chef before service."
+          },
+          {
+            "id": 2,
+            "text": "The kitchen's baking window before the 6pm service opens at 2pm and closes at 5pm, a fixed 3-hour window. Two full batches of these rolls, including oven reload and cooling time, take a measured 3.5 hours start to finish. Kitchen policy requires the full bake cycle to complete inside the baking window."
+          },
+          {
+            "id": 3,
+            "text": "Food-safety policy requires the proofing room to hold a maximum temperature of 24\u00b0C while dough proofs, to avoid over-fermentation. A logged fault left the proofing room running at 28\u00b0C this afternoon. Kitchen policy states dough proofed above the maximum temperature must be discarded rather than baked."
+          }
+        ],
+        "correction": {
+          "supersedes_source_id": 1,
+          "text": "Approval update: the head chef pre-approved up to 2 batches for this order without further sign-off, replacing the 1-batch figure."
+        },
+        "prior_corrections_note": null,
+        "question": "Considering the oven's per-batch tray capacity, the total baking-window duration available, and the kitchen's proofing-room temperature rule, can the roll order be completed in time, and if not what stops it?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The order requires 600 dinner rolls, baked in a single walk-in oven, to be delivered warm before the 6pm service.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The oven fits a maximum of 8 trays per batch, each tray holding 50 rolls, so completing the order requires 2 batches.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 3,
+              "text": "Kitchen policy originally required orders needing more than 1 batch beyond capacity to be pre-approved by the head chef before service.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 4,
+              "text": "The head chef's later approval update pre-approved up to 2 batches for this order without further sign-off, superseding the original 1-batch approval limit.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 5,
+              "text": "Because of the approval update, the 2-batch requirement is no longer a blocking issue and does not stop the order from being completed.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 6,
+              "text": "The baking window before the 6pm service runs from 2pm to 5pm, a fixed 3-hour duration.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Two full batches, including oven reload and cooling time, take a measured 3.5 hours start to finish.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 8,
+              "text": "Kitchen policy requires the full bake cycle to complete inside the 3-hour baking window.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 9,
+              "text": "Since 3.5 hours exceeds the available 3-hour window, the bake cycle cannot finish in time, which stops the order from being completed on schedule.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 10,
+              "text": "Food-safety policy requires the proofing room to hold a maximum temperature of 24\u00b0C during proofing to avoid over-fermentation.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 11,
+              "text": "A logged fault caused the proofing room to run at 28\u00b0C this afternoon, exceeding the 24\u00b0C maximum.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 12,
+              "text": "Kitchen policy requires dough proofed above the maximum temperature to be discarded rather than baked, so the over-proofed dough for this order must be discarded.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 13,
+              "text": "With the dough discarded, there is no usable dough to bake, independently preventing the order from being completed regardless of batch approval or window timing.",
+              "source_ids": [
+                3
+              ]
+            }
+          ],
+          "conclusion": "No, the order cannot be completed in time: even though the head chef's updated approval clears the 2-batch requirement, the two-batch bake still takes 3.5 hours versus only a 3-hour baking window, and separately the proofing room's fault-driven 28\u00b0C reading (above the 24\u00b0C limit) means the dough must be discarded under food-safety policy, so both the timing shortfall and the mandatory dough discard independently stop the order from being completed."
+        },
+        "must_persist_fact": "The rolls are to be delivered to the Landry banquet hall before 6pm service."
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "A3-C-0511-C1#mp0",
+      "regime": "A3",
+      "dimension": "completeness",
+      "family_type": "F2",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Bellcaster Events books a 900-seat conference hall for a sponsor attendance contract and separately runs a 6-line catering kitchen for the gala dinner."
+          },
+          {
+            "id": 1,
+            "text": "Booking report: registrations are running at 4.2 attendees per invited firm."
+          },
+          {
+            "id": 2,
+            "text": "Contract note: requires 3,510 attendees sponsor's minimum-attendance contract; below that fails the contract."
+          },
+          {
+            "id": 3,
+            "text": "Kitchen report: each of the 6 catering lines plates 90 dinners per hour."
+          },
+          {
+            "id": 4,
+            "text": "Capacity note: banquet hall's hourly service capacity is capped at 480 dinners."
+          },
+          {
+            "id": 5,
+            "text": "Staffing-budget note: the catering crew's event-night staffing budget is $7,000."
+          },
+          {
+            "id": 6,
+            "text": "Budget note: requires at least $6,200 minimum staffing budget required to run all catering lines."
+          },
+          {
+            "id": 7,
+            "text": "Reference: expected attendance = attendees per firm x invited firms; dinners plated = per-line rate x lines."
+          }
+        ],
+        "correction": {
+          "supersedes_source_id": 1,
+          "text": "Revised Booking report (supersedes the rate report): 3.6 attendees per invited firm, replacing the 4.20 figure."
+        },
+        "prior_corrections_note": null,
+        "question": "Considering the expected attendance, the dinners plated per hour, and the catering crew's event-night staffing budget, does the scenario meet all three requirements, and if not which one fails?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Document 8 supersedes the rate report in document 1, replacing the 4.2 attendees-per-invited-firm figure with 3.6.",
+              "source_ids": [
+                8,
+                1
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The 4.2 attendees-per-invited-firm figure is now treated as false and not used in any calculation.",
+              "source_ids": [
+                8
+              ]
+            },
+            {
+              "id": 3,
+              "text": "We need the number of invited firms to compute expected attendance, but no document states the number of invited firms.",
+              "source_ids": []
+            },
+            {
+              "id": 4,
+              "text": "Expected attendance is calculated as attendees per firm multiplied by invited firms, using the corrected rate of 3.6.",
+              "source_ids": [
+                7,
+                8
+              ]
+            },
+            {
+              "id": 5,
+              "text": "Since the number of invited firms is not provided, the exact expected attendance figure cannot be computed, but using 3.6 instead of 4.2 would yield a lower expected attendance than previously implied.",
+              "source_ids": [
+                7,
+                8
+              ]
+            },
+            {
+              "id": 6,
+              "text": "The sponsor's minimum-attendance contract requires at least 3,510 attendees.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 7,
+              "text": "With the corrected lower attendance rate of 3.6 per firm, expected attendance is reduced compared to the original 4.2 figure, making it less likely to meet or exceed the 3,510 attendee threshold required by the contract.",
+              "source_ids": [
+                8,
+                2,
+                7
+              ]
+            },
+            {
+              "id": 8,
+              "text": "Each of the 6 catering lines plates 90 dinners per hour, for a total of 540 dinners plated per hour.",
+              "source_ids": [
+                3,
+                7
+              ]
+            },
+            {
+              "id": 9,
+              "text": "The banquet hall's hourly service capacity is capped at 480 dinners per hour.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 10,
+              "text": "Since 540 dinners plated per hour exceeds the 480 dinner-per-hour service capacity cap, the dinners-plated requirement fails.",
+              "source_ids": [
+                3,
+                4,
+                7
+              ]
+            },
+            {
+              "id": 11,
+              "text": "The catering crew's event-night staffing budget is $7,000.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 12,
+              "text": "The minimum staffing budget required to run all catering lines is $6,200.",
+              "source_ids": [
+                6
+              ]
+            },
+            {
+              "id": 13,
+              "text": "Since $7,000 exceeds the required minimum of $6,200, the staffing budget requirement is met.",
+              "source_ids": [
+                5,
+                6
+              ]
+            },
+            {
+              "id": 14,
+              "text": "The attendance requirement cannot be conclusively verified as passing or failing without the number of invited firms, but the corrected lower rate makes attainment of the 3,510 minimum less likely than under the original superseded figure.",
+              "source_ids": [
+                8,
+                2,
+                7
+              ]
+            }
+          ],
+          "conclusion": "The staffing budget requirement is met ($7,000 exceeds the $6,200 minimum), but the dinners-plated requirement fails because the 6 catering lines produce 540 dinners per hour against a hall capacity of only 480 dinners per hour, and the attendance requirement cannot be definitively confirmed since the number of invited firms is not given, though the corrected 3.6-per-firm rate (replacing the retracted 4.2 figure) makes meeting the 3,510-attendee minimum less likely than previously assumed."
+        },
+        "must_persist_fact": "Bellcaster Events books a 900-seat conference hall for a sponsor attendance contract and separately runs a 6-line catering kitchen for the gala dinner."
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "A3-C-0606-C2#mp0",
+      "regime": "A3",
+      "dimension": "completeness",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Mountain-transit operator Corravane is dispatching cabin 7 of the Bellhaven aerial cable-car for a fixed scheduled run to the summit station, with no alternate cabin available while cabin 3 remains in scheduled maintenance."
+          },
+          {
+            "id": 1,
+            "text": "The haul rope's engineering rating permits a maximum working tension of 180 kilonewtons at today's measured rope temperature. The system's tensioning gauge currently reads 210 kilonewtons under the loaded cabin. The engineering rating states operating above the rated tension at this temperature is outside the rope's certified service envelope."
+          },
+          {
+            "id": 2,
+            "text": "Cabin 7 carries a certified passenger-load limit of 40 passengers per run. Today's boarding count for the scheduled run stands at 46 passengers, redirected from the maintenance-grounded cabin 3's waiting queue. The operating certificate states boarding above the certified limit is not permitted."
+          },
+          {
+            "id": 3,
+            "text": "Summit station dispatch rules suspend cable-car operation above a sustained wind speed of 65 kilometres per hour at the summit anemometer. The summit station currently reports sustained wind at 78 kilometres per hour. The dispatch rules state runs above the rated wind speed must be held at the base station."
+          }
+        ],
+        "correction": {
+          "supersedes_source_id": 1,
+          "text": "Rope-rating update: following the morning's rope inspection, the maximum rated working tension at today's temperature is now 220 kilonewtons, replacing the 180-kilonewton figure."
+        },
+        "prior_corrections_note": "This scenario carries 2 stacked corrections; all are in the sources/correction shown. Read them all before judging.",
+        "question": "Considering the haul-rope's rated tension limit at today's temperature, the cabin's certified passenger-load limit, and the summit station's wind-speed dispatch rule, can cabin 7's run to the summit proceed as planned, and if not what stops it?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Cabin 7 is dispatched for a fixed scheduled run to the summit with no alternate cabin available, since cabin 3 is in scheduled maintenance.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The haul rope's maximum rated working tension at today's temperature was originally stated as 180 kilonewtons, but this was superseded by a rope inspection update setting the rating at 220 kilonewtons.",
+              "source_ids": [
+                1,
+                4
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The tensioning gauge currently reads 210 kilonewtons under the loaded cabin.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Since the updated rope rating of 220 kilonewtons exceeds the measured 210 kilonewtons, the rope tension is within its certified service envelope.",
+              "source_ids": [
+                1,
+                4
+              ]
+            },
+            {
+              "id": 5,
+              "text": "Cabin 7's passenger-load limit was originally certified at 40 passengers per run, but this was superseded by a reweigh update setting the certified limit at 50 passengers per run.",
+              "source_ids": [
+                2,
+                5
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Today's boarding count for the scheduled run is 46 passengers, including those redirected from cabin 3's waiting queue.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Since the updated passenger limit of 50 exceeds the boarding count of 46, the boarding load is within the certified limit.",
+              "source_ids": [
+                2,
+                5
+              ]
+            },
+            {
+              "id": 8,
+              "text": "Summit station dispatch rules suspend cable-car operation above a sustained wind speed of 65 kilometres per hour at the summit anemometer.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 9,
+              "text": "The summit station currently reports sustained wind at 78 kilometres per hour, which exceeds the 65 kilometre-per-hour threshold.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 10,
+              "text": "Dispatch rules state that runs above the rated wind speed must be held at the base station.",
+              "source_ids": [
+                3
+              ]
+            }
+          ],
+          "conclusion": "Cabin 7's run cannot proceed as planned because, although the updated rope-tension rating and updated passenger certification are both satisfied, the summit's sustained wind speed of 78 km/h exceeds the 65 km/h dispatch threshold, so the run must be held at the base station."
+        },
+        "must_persist_fact": "The run is for cabin 7 of the Bellhaven aerial cable-car to the summit station."
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "A3-C-0529-C1#mp0",
+      "regime": "A3",
+      "dimension": "completeness",
+      "family_type": "F2",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Oakvale Nursery grows 15,000 saplings for a reforestation supply contract and separately runs a 6-bay potting-shed line."
+          },
+          {
+            "id": 1,
+            "text": "Growth report: the nursery beds yield 0.78 viable saplings per tray planted."
+          },
+          {
+            "id": 2,
+            "text": "Contract note: requires 10,950 saplings reforestation authority's minimum supply contract; below that fails the contract."
+          },
+          {
+            "id": 3,
+            "text": "Potting report: each of the 6 potting bays pots 210 saplings per hour."
+          },
+          {
+            "id": 4,
+            "text": "Capacity note: loading dock's hourly dispatch capacity is capped at 1,300 saplings."
+          },
+          {
+            "id": 5,
+            "text": "Peat-budget note: the potting line's weekly peat-compost budget is $3,800."
+          },
+          {
+            "id": 6,
+            "text": "Budget note: requires at least $3,400 minimum weekly peat-compost budget required to run all bays."
+          },
+          {
+            "id": 7,
+            "text": "Reference: total viable saplings = viability rate x trays planted; potting throughput = per-bay rate x bays."
+          }
+        ],
+        "correction": {
+          "supersedes_source_id": 1,
+          "text": "Revised Growth report (supersedes the rate report): 0.68 viable saplings per tray planted, replacing the 0.78 figure."
+        },
+        "prior_corrections_note": null,
+        "question": "Considering the total viable saplings grown, the potting bays' hourly potting throughput, and the potting line's weekly peat-compost budget, does the scenario meet all three requirements, and if not which one fails?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Document 8 supersedes document 1's viability rate of 0.78 viable saplings per tray, replacing it with 0.68 viable saplings per tray.",
+              "source_ids": [
+                8,
+                1
+              ]
+            },
+            {
+              "id": 2,
+              "text": "Oakvale Nursery grows 15,000 saplings (trays planted) for the reforestation supply contract.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 3,
+              "text": "Total viable saplings = viability rate x trays planted.",
+              "source_ids": [
+                7
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Using the corrected viability rate of 0.68, total viable saplings = 0.68 x 15,000 = 10,200 saplings.",
+              "source_ids": [
+                8,
+                0,
+                7
+              ]
+            },
+            {
+              "id": 5,
+              "text": "The contract requires a minimum of 10,950 saplings to meet the reforestation authority's supply contract.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 6,
+              "text": "10,200 viable saplings is less than the required 10,950 saplings, so the total viable saplings requirement fails.",
+              "source_ids": [
+                4,
+                2
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Each of the 6 potting bays pots 210 saplings per hour.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 8,
+              "text": "Potting throughput = per-bay rate x bays.",
+              "source_ids": [
+                7
+              ]
+            },
+            {
+              "id": 9,
+              "text": "Total potting throughput = 210 x 6 = 1,260 saplings per hour.",
+              "source_ids": [
+                3,
+                7
+              ]
+            },
+            {
+              "id": 10,
+              "text": "The loading dock's hourly dispatch capacity is capped at 1,300 saplings.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 11,
+              "text": "1,260 saplings per hour is within the 1,300 saplings per hour dispatch capacity, so the potting throughput requirement is met.",
+              "source_ids": [
+                9,
+                4
+              ]
+            },
+            {
+              "id": 12,
+              "text": "The potting line's weekly peat-compost budget is $3,800.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 13,
+              "text": "A minimum weekly peat-compost budget of $3,400 is required to run all bays.",
+              "source_ids": [
+                6
+              ]
+            },
+            {
+              "id": 14,
+              "text": "$3,800 exceeds the required minimum of $3,400, so the peat-compost budget requirement is met.",
+              "source_ids": [
+                12,
+                13
+              ]
+            }
+          ],
+          "conclusion": "Using the corrected viability rate of 0.68 saplings per tray, the nursery produces only 10,200 viable saplings against the 10,950 required, so the total-viable-saplings requirement fails, while both the potting throughput (1,260 saplings/hour, within the 1,300 dispatch cap) and the peat-compost budget ($3,800, above the $3,400 minimum) requirements are met."
+        },
+        "must_persist_fact": "Oakvale Nursery grows 15,000 saplings for a reforestation supply contract and separately runs a 6-bay potting-shed line."
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "A3-C-0002-C2#mp1",
+      "regime": "A3",
+      "dimension": "completeness",
+      "family_type": "F3",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Central Deck operates a 300-space parking structure and reports monthly operating results."
+          },
+          {
+            "id": 1,
+            "text": "Monthly parking revenue is a fixed $36,000."
+          },
+          {
+            "id": 2,
+            "text": "Per-space monthly maintenance cost is $8 per space."
+          },
+          {
+            "id": 3,
+            "text": "Security is a fixed $4,000 per month, independent of the per-space maintenance rate."
+          },
+          {
+            "id": 4,
+            "text": "The ground lease is a fixed $9,000 per month, independent of the per-space maintenance rate."
+          },
+          {
+            "id": 5,
+            "text": "Management wants the total monthly operating cost and the net operating income for the month."
+          }
+        ],
+        "correction": {
+          "supersedes_source_id": 2,
+          "text": "Cost revision: per-space monthly maintenance cost is now $12 per space, replacing the $8 figure."
+        },
+        "prior_corrections_note": "This scenario carries 2 stacked corrections; all are in the sources/correction shown. Read them all before judging.",
+        "question": "What is the total monthly operating cost for the month?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Central Deck operates a 300-space parking structure.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The original per-space monthly maintenance cost of $8 is superseded by a corrected rate of $12 per space.",
+              "source_ids": [
+                2,
+                6
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The original fixed monthly security cost of $4,000 is superseded by a corrected fixed cost of $7,000.",
+              "source_ids": [
+                3,
+                7
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Using the corrected maintenance rate, total monthly maintenance cost is 300 spaces times $12 per space, equal to $3,600.",
+              "source_ids": [
+                0,
+                6
+              ]
+            },
+            {
+              "id": 5,
+              "text": "The corrected fixed monthly security cost is $7,000.",
+              "source_ids": [
+                7
+              ]
+            },
+            {
+              "id": 6,
+              "text": "The ground lease remains a fixed $9,000 per month.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Total monthly operating cost equals maintenance cost plus security cost plus ground lease cost, which is $3,600 + $7,000 + $9,000 = $19,600.",
+              "source_ids": [
+                4,
+                6,
+                7
+              ]
+            }
+          ],
+          "conclusion": "The total monthly operating cost, using the corrected maintenance rate of $12 per space and corrected security cost of $7,000, is $19,600."
+        },
+        "must_persist_fact": "Central Deck operates a 300-space parking structure."
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    }
+  ]
+}

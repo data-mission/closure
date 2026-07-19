@@ -1,0 +1,79 @@
+{
+  "seed": 20260718,
+  "built_from": {
+    "a3_corpus_sha": "4d566223a4c95224",
+    "a3_gen_sha": "19ea7cc991a83d6a",
+    "v2_report_sha": "0228cf669e3a66c1",
+    "e5_armslog_sha": "9c0a85d5dc5c11df"
+  },
+  "counts": {
+    "a3_contam_flagged_census": 200,
+    "a3_contam_clean_sample": 200,
+    "a3_persist_dropped_census": 168,
+    "a3_persist_kept_control": 100,
+    "e5_contam_census": 15,
+    "e5_clean_control": 90,
+    "total_items": 773
+  },
+  "strata_present": {
+    "S-DISPUTED": 200,
+    "S-CLEAN": 200,
+    "MP-DROPPED": 168,
+    "MP-KEPT-CONTROL": 100,
+    "E5-CONTAM-CENSUS": 15,
+    "E5-CLEAN-CONTROL": 90
+  },
+  "batches": [
+    {
+      "a3-contamination-batch01": 50
+    },
+    {
+      "a3-contamination-batch02": 50
+    },
+    {
+      "a3-contamination-batch03": 50
+    },
+    {
+      "a3-contamination-batch04": 50
+    },
+    {
+      "a3-contamination-batch05": 50
+    },
+    {
+      "a3-contamination-batch06": 50
+    },
+    {
+      "a3-contamination-batch07": 50
+    },
+    {
+      "a3-contamination-batch08": 50
+    },
+    {
+      "a3-completeness-batch01": 50
+    },
+    {
+      "a3-completeness-batch02": 50
+    },
+    {
+      "a3-completeness-batch03": 50
+    },
+    {
+      "a3-completeness-batch04": 50
+    },
+    {
+      "a3-completeness-batch05": 50
+    },
+    {
+      "a3-completeness-batch06": 18
+    },
+    {
+      "e5-contamination-batch01": 50
+    },
+    {
+      "e5-contamination-batch02": 50
+    },
+    {
+      "e5-contamination-batch03": 5
+    }
+  ]
+}

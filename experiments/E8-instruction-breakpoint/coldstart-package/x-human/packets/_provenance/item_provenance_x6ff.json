@@ -1,0 +1,407 @@
+{
+  "X6-A2-0001-BLANKET-T1": {
+    "stratum": "X6FF-BLANKET-D1",
+    "arm": "BLANKET",
+    "dose_level": 1,
+    "cases_by_class": {
+      "NEW": 1,
+      "RULE": 2
+    },
+    "cases_answered_parsed": 0,
+    "keyword_refusal_narrow": true,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0002-BLANKET-T1": {
+    "stratum": "X6FF-BLANKET-D1",
+    "arm": "BLANKET",
+    "dose_level": 1,
+    "cases_by_class": {
+      "RULE": 2,
+      "NEW": 1
+    },
+    "cases_answered_parsed": 0,
+    "keyword_refusal_narrow": false,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0003-BLANKET-T1": {
+    "stratum": "X6FF-BLANKET-D1",
+    "arm": "BLANKET",
+    "dose_level": 1,
+    "cases_by_class": {
+      "NEW": 1,
+      "RULE": 2
+    },
+    "cases_answered_parsed": 0,
+    "keyword_refusal_narrow": false,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0004-BLANKET-T1": {
+    "stratum": "X6FF-BLANKET-D1",
+    "arm": "BLANKET",
+    "dose_level": 1,
+    "cases_by_class": {
+      "NEW": 1,
+      "RULE": 2
+    },
+    "cases_answered_parsed": 0,
+    "keyword_refusal_narrow": true,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0005-BLANKET-T1": {
+    "stratum": "X6FF-BLANKET-D1",
+    "arm": "BLANKET",
+    "dose_level": 1,
+    "cases_by_class": {
+      "RULE": 2,
+      "NEW": 1
+    },
+    "cases_answered_parsed": 0,
+    "keyword_refusal_narrow": false,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0001-BLANKET-T2": {
+    "stratum": "X6FF-BLANKET-D2",
+    "arm": "BLANKET",
+    "dose_level": 2,
+    "cases_by_class": {
+      "RULE": 2,
+      "NEW": 1
+    },
+    "cases_answered_parsed": 0,
+    "keyword_refusal_narrow": true,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0002-BLANKET-T2": {
+    "stratum": "X6FF-BLANKET-D2",
+    "arm": "BLANKET",
+    "dose_level": 2,
+    "cases_by_class": {
+      "RULE": 2,
+      "NEW": 1
+    },
+    "cases_answered_parsed": 0,
+    "keyword_refusal_narrow": false,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0003-BLANKET-T2": {
+    "stratum": "X6FF-BLANKET-D2",
+    "arm": "BLANKET",
+    "dose_level": 2,
+    "cases_by_class": {
+      "RULE": 2,
+      "NEW": 1
+    },
+    "cases_answered_parsed": 0,
+    "keyword_refusal_narrow": false,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0004-BLANKET-T2": {
+    "stratum": "X6FF-BLANKET-D2",
+    "arm": "BLANKET",
+    "dose_level": 2,
+    "cases_by_class": {
+      "RULE": 2,
+      "NEW": 1
+    },
+    "cases_answered_parsed": 0,
+    "keyword_refusal_narrow": false,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0005-BLANKET-T2": {
+    "stratum": "X6FF-BLANKET-D2",
+    "arm": "BLANKET",
+    "dose_level": 2,
+    "cases_by_class": {
+      "RULE": 2,
+      "NEW": 1
+    },
+    "cases_answered_parsed": 0,
+    "keyword_refusal_narrow": true,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0001-BLANKET-T3": {
+    "stratum": "X6FF-BLANKET-D3",
+    "arm": "BLANKET",
+    "dose_level": 3,
+    "cases_by_class": {
+      "NEW": 1,
+      "RULE": 2
+    },
+    "cases_answered_parsed": 0,
+    "keyword_refusal_narrow": true,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0002-BLANKET-T3": {
+    "stratum": "X6FF-BLANKET-D3",
+    "arm": "BLANKET",
+    "dose_level": 3,
+    "cases_by_class": {
+      "RULE": 2,
+      "NEW": 1
+    },
+    "cases_answered_parsed": 0,
+    "keyword_refusal_narrow": false,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0003-BLANKET-T3": {
+    "stratum": "X6FF-BLANKET-D3",
+    "arm": "BLANKET",
+    "dose_level": 3,
+    "cases_by_class": {
+      "NEW": 1,
+      "RULE": 2
+    },
+    "cases_answered_parsed": 0,
+    "keyword_refusal_narrow": false,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0004-BLANKET-T3": {
+    "stratum": "X6FF-BLANKET-D3",
+    "arm": "BLANKET",
+    "dose_level": 3,
+    "cases_by_class": {
+      "RULE": 2,
+      "NEW": 1
+    },
+    "cases_answered_parsed": 0,
+    "keyword_refusal_narrow": true,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0005-BLANKET-T3": {
+    "stratum": "X6FF-BLANKET-D3",
+    "arm": "BLANKET",
+    "dose_level": 3,
+    "cases_by_class": {
+      "NEW": 1,
+      "RULE": 2
+    },
+    "cases_answered_parsed": 0,
+    "keyword_refusal_narrow": false,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0001-SCOPED-T1": {
+    "stratum": "X6FF-SCOPED-D1",
+    "arm": "SCOPED",
+    "dose_level": 1,
+    "cases_by_class": {
+      "RULE": 2,
+      "EXCEPTED": 1,
+      "NEW": 1
+    },
+    "cases_answered_parsed": 1,
+    "keyword_refusal_narrow": true,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0002-SCOPED-T1": {
+    "stratum": "X6FF-SCOPED-D1",
+    "arm": "SCOPED",
+    "dose_level": 1,
+    "cases_by_class": {
+      "EXCEPTED": 1,
+      "RULE": 2,
+      "NEW": 1
+    },
+    "cases_answered_parsed": 1,
+    "keyword_refusal_narrow": false,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0003-SCOPED-T1": {
+    "stratum": "X6FF-SCOPED-D1",
+    "arm": "SCOPED",
+    "dose_level": 1,
+    "cases_by_class": {
+      "NEW": 1,
+      "RULE": 2,
+      "EXCEPTED": 1
+    },
+    "cases_answered_parsed": 1,
+    "keyword_refusal_narrow": false,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0004-SCOPED-T1": {
+    "stratum": "X6FF-SCOPED-D1",
+    "arm": "SCOPED",
+    "dose_level": 1,
+    "cases_by_class": {
+      "EXCEPTED": 1,
+      "NEW": 1,
+      "RULE": 2
+    },
+    "cases_answered_parsed": 1,
+    "keyword_refusal_narrow": false,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0005-SCOPED-T1": {
+    "stratum": "X6FF-SCOPED-D1",
+    "arm": "SCOPED",
+    "dose_level": 1,
+    "cases_by_class": {
+      "RULE": 2,
+      "NEW": 1,
+      "EXCEPTED": 1
+    },
+    "cases_answered_parsed": 0,
+    "keyword_refusal_narrow": true,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0001-SCOPED-T2": {
+    "stratum": "X6FF-SCOPED-D2",
+    "arm": "SCOPED",
+    "dose_level": 2,
+    "cases_by_class": {
+      "NEW": 1,
+      "RULE": 2,
+      "EXCEPTED": 1
+    },
+    "cases_answered_parsed": 1,
+    "keyword_refusal_narrow": true,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0002-SCOPED-T2": {
+    "stratum": "X6FF-SCOPED-D2",
+    "arm": "SCOPED",
+    "dose_level": 2,
+    "cases_by_class": {
+      "NEW": 1,
+      "RULE": 2,
+      "EXCEPTED": 1
+    },
+    "cases_answered_parsed": 1,
+    "keyword_refusal_narrow": false,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0003-SCOPED-T2": {
+    "stratum": "X6FF-SCOPED-D2",
+    "arm": "SCOPED",
+    "dose_level": 2,
+    "cases_by_class": {
+      "NEW": 1,
+      "RULE": 2,
+      "EXCEPTED": 1
+    },
+    "cases_answered_parsed": 1,
+    "keyword_refusal_narrow": false,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0004-SCOPED-T2": {
+    "stratum": "X6FF-SCOPED-D2",
+    "arm": "SCOPED",
+    "dose_level": 2,
+    "cases_by_class": {
+      "RULE": 2,
+      "NEW": 1,
+      "EXCEPTED": 1
+    },
+    "cases_answered_parsed": 1,
+    "keyword_refusal_narrow": false,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0005-SCOPED-T2": {
+    "stratum": "X6FF-SCOPED-D2",
+    "arm": "SCOPED",
+    "dose_level": 2,
+    "cases_by_class": {
+      "EXCEPTED": 1,
+      "RULE": 2,
+      "NEW": 1
+    },
+    "cases_answered_parsed": 1,
+    "keyword_refusal_narrow": false,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0001-SCOPED-T3": {
+    "stratum": "X6FF-SCOPED-D3",
+    "arm": "SCOPED",
+    "dose_level": 3,
+    "cases_by_class": {
+      "RULE": 2,
+      "EXCEPTED": 1,
+      "NEW": 1
+    },
+    "cases_answered_parsed": 1,
+    "keyword_refusal_narrow": true,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0002-SCOPED-T3": {
+    "stratum": "X6FF-SCOPED-D3",
+    "arm": "SCOPED",
+    "dose_level": 3,
+    "cases_by_class": {
+      "EXCEPTED": 1,
+      "RULE": 2,
+      "NEW": 1
+    },
+    "cases_answered_parsed": 1,
+    "keyword_refusal_narrow": false,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0003-SCOPED-T3": {
+    "stratum": "X6FF-SCOPED-D3",
+    "arm": "SCOPED",
+    "dose_level": 3,
+    "cases_by_class": {
+      "RULE": 2,
+      "EXCEPTED": 1,
+      "NEW": 1
+    },
+    "cases_answered_parsed": 0,
+    "keyword_refusal_narrow": true,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0004-SCOPED-T3": {
+    "stratum": "X6FF-SCOPED-D3",
+    "arm": "SCOPED",
+    "dose_level": 3,
+    "cases_by_class": {
+      "EXCEPTED": 1,
+      "RULE": 2,
+      "NEW": 1
+    },
+    "cases_answered_parsed": 1,
+    "keyword_refusal_narrow": false,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  },
+  "X6-A2-0005-SCOPED-T3": {
+    "stratum": "X6FF-SCOPED-D3",
+    "arm": "SCOPED",
+    "dose_level": 3,
+    "cases_by_class": {
+      "EXCEPTED": 1,
+      "NEW": 1,
+      "RULE": 2
+    },
+    "cases_answered_parsed": 1,
+    "keyword_refusal_narrow": true,
+    "keyword_refusal_broad": true,
+    "diagnosis_expected": "REFUSAL"
+  }
+}

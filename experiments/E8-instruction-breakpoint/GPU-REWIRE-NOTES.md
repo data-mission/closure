@@ -41,6 +41,10 @@ is committed or registered; the owner decides registration treatment (§4).
   on 16 GB unified. Rule: GPU scoring runs ALONE, never alongside a CPU scorer fleet.
 - INCOMPLETE: flip-rate certification (CPU-vs-MPS boolean diffs near the 0.7 assert threshold) was
   not finished. The probe exists and is redesigned to need ~5 min on a quiet box (§3a).
+  RECONCILIATION (2026-07-19, this "INCOMPLETE" is now STALE): the certification PASSED — gpu_probe
+  smoke (probe-smoke.json) reported cpu_vs_mps 84/0 boolean flips (A_ZERO_FLIPS, self-consistency
+  bit-stable), and the device gate passed per INTERVENTIONS.log 15:35Z. This bullet reflects the
+  pre-run state only.
 
 ## 2. Banked assets — the restart does NOT start from zero
 

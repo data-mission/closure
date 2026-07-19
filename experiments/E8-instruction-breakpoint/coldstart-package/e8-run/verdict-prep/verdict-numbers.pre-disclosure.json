@@ -1,12 +1,11 @@
 {
-  "computed_at": "2026-07-18T23:26:55Z",
+  "computed_at": "2026-07-18T22:21:25Z",
   "alpha_corrected": 0.016666666666666666,
   "axes": {
     "A1": {
       "status": "SCORED",
       "break_side": "must_change",
       "theta": 0.05,
-      "validity_note": "AXIS INVALID AS BUILT \u2014 corpus polarity inverted: must_change holds the corrected (post-revision) values (verified 450/450 tasks, 2026-07-18), so per_dose counts measure revision SUCCESS, not contamination; this axis contributes no contamination signal to H-BREAKPOINT; break_verdict=false stands but is uninformative; corpus rebuild with stale-value must_change required to test the depth hypothesis.",
       "per_dose": {
         "1": {
           "count": 157,
@@ -63,7 +62,6 @@
       "status": "SCORED",
       "break_side": "must_persist",
       "theta": 0.1,
-      "validity_note": "polarity verified correct (A2: persist side, drop-counting fix applied 2026-07-18)",
       "per_dose": {
         "1": {
           "count": 13,
@@ -120,7 +118,6 @@
       "status": "SCORED",
       "break_side": "must_change",
       "theta": 0.05,
-      "validity_note": "polarity verified correct (A3: stale values confirmed 336/336)",
       "per_dose": {
         "1": {
           "count": 40,

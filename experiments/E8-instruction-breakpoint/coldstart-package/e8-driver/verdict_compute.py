@@ -73,11 +73,25 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 
-# axis config: (break_side, theta, dose_label_prefix)
+# axis config: (break_side, theta, dose_label_prefix, validity_note).
+# validity_note is DISCLOSURE ONLY — it never touches a count or a verdict. It carries the
+# corpus-polarity finding into the CANONICAL verdict files (verdict-numbers.json + VERDICT-numbers.md),
+# not just the dashboard/§4 drafts (panel-gaps audit, 2026-07-18): A1 is invalid AS BUILT (its
+# must_change holds post-revision values, so the counts measure revision SUCCESS not contamination);
+# A2/A3 polarity verified correct.
 AXES = {
-    "A1": {"break_side": "must_change", "theta": 0.05, "dose_prefix": "d"},
-    "A2": {"break_side": "must_persist", "theta": 0.10, "dose_prefix": "s"},
-    "A3": {"break_side": "must_change", "theta": 0.05, "dose_prefix": "c"},
+    "A1": {"break_side": "must_change", "theta": 0.05, "dose_prefix": "d",
+           "validity_note": (
+               "AXIS INVALID AS BUILT — corpus polarity inverted: must_change holds the corrected "
+               "(post-revision) values (verified 450/450 tasks, 2026-07-18), so per_dose counts "
+               "measure revision SUCCESS, not contamination; this axis contributes no contamination "
+               "signal to H-BREAKPOINT; break_verdict=false stands but is uninformative; corpus "
+               "rebuild with stale-value must_change required to test the depth hypothesis.")},
+    "A2": {"break_side": "must_persist", "theta": 0.10, "dose_prefix": "s",
+           "validity_note": ("polarity verified correct (A2: persist side, drop-counting fix applied "
+                             "2026-07-18)")},
+    "A3": {"break_side": "must_change", "theta": 0.05, "dose_prefix": "c",
+           "validity_note": ("polarity verified correct (A3: stale values confirmed 336/336)")},
 }
 DOSE_LEVELS = (1, 2, 3)  # routing.dose_level is int 1/2/3 (verified in all 3 corpora)
 
@@ -318,6 +332,7 @@ def build_placeholders(axis_verdicts: dict, program: dict, alpha_corrected: floa
     for axis, v in axis_verdicts.items():
         p = AXES[axis]["dose_prefix"]  # d/s/c
         a = axis.lower()
+        ph[f"{a}_validity_note"] = AXES[axis]["validity_note"]  # DISCLOSURE ONLY
         ph[f"{a}_n_families"] = v.disclosures.get("n_families")
         ph[f"{a}_n_excluded"] = v.disclosures.get("n_excluded")
         ph[f"{a}_n_pruned"] = v.disclosures.get("n_pruned")
@@ -405,13 +420,16 @@ def main() -> None:
                          alpha_corrected,
                          require_n_tasks=(expect_n if expect_n and expect_n > 0 else None))
         axis_verdicts[axis] = v
+        # INVALID-AS-BUILT marker on the printed line for any axis whose validity_note flags invalidity
+        # (A1). Disclosure only — does not touch numbers/verdict.
+        invalid_tag = " INVALID-AS-BUILT" if AXES[axis]["validity_note"].startswith("AXIS INVALID") else ""
         if v.status == "PENDING":
-            _log(f"[verdict] {axis}: PENDING (no results)")
+            _log(f"[verdict] {axis}: PENDING (no results){invalid_tag}")
         else:
             doses = " ".join(f"{L}:{v.per_dose.get(L,(0,0))[0]}/{v.per_dose.get(L,(0,0))[1]}"
                              for L in DOSE_LEVELS)
             _log(f"[verdict] {axis}: {v.status} | dose {doses} | break={v.break_verdict} | "
-                 f"oracle={v.oracle.get('verdict')}")
+                 f"oracle={v.oracle.get('verdict')}{invalid_tag}")
 
     program = program_verdict(axis_verdicts)
     ph = build_placeholders(axis_verdicts, program, alpha_corrected)
@@ -422,6 +440,7 @@ def main() -> None:
         "alpha_corrected": alpha_corrected,
         "axes": {axis: {
             "status": v.status, "break_side": v.break_side, "theta": v.theta,
+            "validity_note": AXES[axis]["validity_note"],  # DISCLOSURE ONLY — never affects numbers
             "per_dose": {str(L): {"count": v.per_dose.get(L, (None, None))[0],
                                   "trials": v.per_dose.get(L, (None, None))[1]}
                          for L in DOSE_LEVELS},

@@ -79,6 +79,8 @@ defaulting to all-true per the manager's 2026-07-17 canon ruling, score_worker.p
 
 ### A1 — Dependency depth (break side: must_change, θ = 5%)
 
+> **VALIDITY: {{a1_validity_note}}**
+
 | Level | count | trials (N) | rate |
 |---|---|---|---|
 | D1 | {{a1_d1_count}} | {{a1_d1_trials}} | {{a1_d1_rate}} |
@@ -95,6 +97,9 @@ defaulting to all-true per the manager's 2026-07-17 canon ruling, score_worker.p
 - **A1 BREAK: {{a1_break_verdict}}** (all three conjuncts required: gate_pass AND crossed).
 
 ### A2 — Scoped-exception generalization (break side: must_persist, θ_persist = 10%)
+
+> **VALIDITY: {{a2_validity_note}}**
+
 
 | Level | count | trials (N) | rate |
 |---|---|---|---|
@@ -115,6 +120,9 @@ defaulting to all-true per the manager's 2026-07-17 canon ruling, score_worker.p
 - **A2 BREAK: {{a2_break_verdict}}** (all three conjuncts required).
 
 ### A3 — Accumulated corrections (break side: must_change, θ = 5%)
+
+> **VALIDITY: {{a3_validity_note}}**
+
 
 | Level | count | trials (N) | rate |
 |---|---|---|---|
