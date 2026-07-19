@@ -1,0 +1,183 @@
+{
+  "computed_at": "2026-07-18T23:26:55Z",
+  "alpha_corrected": 0.016666666666666666,
+  "axes": {
+    "A1": {
+      "status": "SCORED",
+      "break_side": "must_change",
+      "theta": 0.05,
+      "validity_note": "AXIS INVALID AS BUILT \u2014 corpus polarity inverted: must_change holds the corrected (post-revision) values (verified 450/450 tasks, 2026-07-18), so per_dose counts measure revision SUCCESS, not contamination; this axis contributes no contamination signal to H-BREAKPOINT; break_verdict=false stands but is uninformative; corpus rebuild with stale-value must_change required to test the depth hypothesis.",
+      "per_dose": {
+        "1": {
+          "count": 157,
+          "trials": 300
+        },
+        "2": {
+          "count": 145,
+          "trials": 150
+        },
+        "3": {
+          "count": 130,
+          "trials": 138
+        }
+      },
+      "monotonicity": {
+        "z": 10.508921681111271,
+        "p_value": 3.929347271741318e-26,
+        "rates": [
+          0.5233333333333333,
+          0.9666666666666667,
+          0.9420289855072463
+        ],
+        "ca_uptrend": true,
+        "strict_rise": false,
+        "gate_pass": false
+      },
+      "crossing": {
+        "p_hat": 0.9420289855072463,
+        "critical_count": 14,
+        "p_value": 1.2972999987306306e-157,
+        "crossed": true,
+        "threshold": 0.05,
+        "alpha_corrected": 0.016666666666666666
+      },
+      "break_verdict": false,
+      "oracle": {
+        "present": true,
+        "verdict": "PASS",
+        "n_sampled": 12,
+        "n_mismatches": 0,
+        "n_present": 450,
+        "n_expected": 450,
+        "withhold_reasons": []
+      },
+      "disclosures": {
+        "n_families": 150,
+        "n_passed": 14,
+        "n_excluded": 136,
+        "n_pruned": 34
+      },
+      "notes": []
+    },
+    "A2": {
+      "status": "SCORED",
+      "break_side": "must_persist",
+      "theta": 0.1,
+      "validity_note": "polarity verified correct (A2: persist side, drop-counting fix applied 2026-07-18)",
+      "per_dose": {
+        "1": {
+          "count": 13,
+          "trials": 260
+        },
+        "2": {
+          "count": 12,
+          "trials": 260
+        },
+        "3": {
+          "count": 14,
+          "trials": 260
+        }
+      },
+      "monotonicity": {
+        "z": 0.20121090914638343,
+        "p_value": 0.4202668308358337,
+        "rates": [
+          0.05,
+          0.046153846153846156,
+          0.05384615384615385
+        ],
+        "ca_uptrend": true,
+        "strict_rise": false,
+        "gate_pass": false
+      },
+      "crossing": {
+        "p_hat": 0.05384615384615385,
+        "critical_count": 38,
+        "p_value": 0.9973639654841401,
+        "crossed": false,
+        "threshold": 0.1,
+        "alpha_corrected": 0.016666666666666666
+      },
+      "break_verdict": false,
+      "oracle": {
+        "present": true,
+        "verdict": "PASS",
+        "n_sampled": 12,
+        "n_mismatches": 0,
+        "n_present": 390,
+        "n_expected": 390,
+        "withhold_reasons": []
+      },
+      "disclosures": {
+        "n_families": 130,
+        "n_passed": 0,
+        "n_excluded": 130,
+        "n_pruned": 0
+      },
+      "notes": []
+    },
+    "A3": {
+      "status": "SCORED",
+      "break_side": "must_change",
+      "theta": 0.05,
+      "validity_note": "polarity verified correct (A3: stale values confirmed 336/336)",
+      "per_dose": {
+        "1": {
+          "count": 40,
+          "trials": 150
+        },
+        "2": {
+          "count": 77,
+          "trials": 262
+        },
+        "3": {
+          "count": 83,
+          "trials": 344
+        }
+      },
+      "monotonicity": {
+        "z": -0.8952385322920174,
+        "p_value": 0.8146702045918728,
+        "rates": [
+          0.26666666666666666,
+          0.29389312977099236,
+          0.24127906976744187
+        ],
+        "ca_uptrend": false,
+        "strict_rise": false,
+        "gate_pass": false
+      },
+      "crossing": {
+        "p_hat": 0.24127906976744187,
+        "critical_count": 27,
+        "p_value": 3.372706235066766e-33,
+        "crossed": true,
+        "threshold": 0.05,
+        "alpha_corrected": 0.016666666666666666
+      },
+      "break_verdict": false,
+      "oracle": {
+        "present": true,
+        "verdict": "PASS",
+        "n_sampled": 12,
+        "n_mismatches": 0,
+        "n_present": 336,
+        "n_expected": 336,
+        "withhold_reasons": []
+      },
+      "disclosures": {
+        "n_families": 112,
+        "n_passed": 85,
+        "n_excluded": 27,
+        "n_pruned": 30
+      },
+      "notes": []
+    }
+  },
+  "program_verdict": {
+    "status": "FINAL",
+    "axes_broke": [],
+    "block_a_fires": false,
+    "block_b_fires": true
+  }
+}

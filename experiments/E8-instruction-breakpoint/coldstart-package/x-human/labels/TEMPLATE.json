@@ -1,0 +1,7 @@
+{
+  "annotator_id": "REPLACE_WITH_YOUR_NAME",
+  "annotator_kind": "human",
+  "labels": {
+    "PACKET_ITEM_ID_HERE": "YES_or_NO_or_UNSURE"
+  }
+}

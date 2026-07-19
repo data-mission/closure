@@ -1,0 +1,76 @@
+=== [2026-07-18T16:53:57Z] A3 STAGE-2 GPU-SOLO SCORING START (device=mps) ===
+=== [2026-07-18T16:53:57Z] A3 STAGE-2 EQUIV GATE (shard(N=30)) ===
+[2026-07-18T16:53:58Z] [s2-equiv] 30 tasks, arms=('B',), device=mps, banked_hash=6dbe47a8e843, batch_size=16
+Loading weights:   0%|          | 0/394 [00:00<?, ?it/s]Loading weights: 100%|██████████| 394/394 [00:00<00:00, 20889.87it/s]
+[2026-07-18T16:53:59Z] [s2-equiv] scorer built on mps; warn_only needed: False
+[2026-07-18T16:53:59Z] [s2-equiv] scoring per-call (score_worker.score_one_task) ...
+[2026-07-18T16:56:09Z] [s2-equiv] scoring batched (fixed canonical composition) ...
+[2026-07-18T16:56:31Z] [batched] forward 50/157 batches (800/2512 pairs)
+[2026-07-18T16:56:51Z] [batched] forward 100/157 batches (1600/2512 pairs)
+[2026-07-18T16:57:11Z] [batched] forward 150/157 batches (2400/2512 pairs)
+[2026-07-18T16:57:14Z] [batched] forward 157/157 batches (2512/2512 pairs)
+[2026-07-18T16:57:14Z] [s2-equiv] RESULT {"verdict": "PASS", "flips": 0, "frac_mismatches": 0, "units": 143, "tasks_compared": 30, "key_mismatch": false}
+[2026-07-18T16:57:14Z] [s2-equiv] wrote /Users/vladryzhkov/e8-run/A3-stage2/batched-stage2-equiv.json
+[2026-07-18T16:57:14Z] [s2-equiv] PASS: zero flips — batched Stage-2 scorer equivalent to the per-call path here.
+=== [2026-07-18T16:57:14Z] A3 STAGE-2 EQUIV GATE PASSED (shard(N=30), zero flips) — scored pass ===
+=== [2026-07-18T16:57:14Z] A3 STAGE-2 SCORED PASS (batched_stage2_scorer) ===
+[2026-07-18T16:57:15Z] [stage2] 336 tasks, arms=('B',), threshold=0.7, batch_size=16, device=mps, banked_hash=6dbe47a8e843, live_hash=6dbe47a8e843
+Loading weights:   0%|          | 0/394 [00:00<?, ?it/s]Loading weights: 100%|██████████| 394/394 [00:00<00:00, 23072.01it/s]
+[2026-07-18T16:57:16Z] [stage2] scorer built on mps; warn_only needed: False
+[2026-07-18T16:57:16Z] [stage2] 33424 directional pairs over 1428 items; 0 tasks missing gen (skipped)
+[2026-07-18T16:57:38Z] [batched] forward 50/2089 batches (800/33424 pairs)
+[2026-07-18T16:57:58Z] [batched] forward 100/2089 batches (1600/33424 pairs)
+[2026-07-18T16:58:18Z] [batched] forward 150/2089 batches (2400/33424 pairs)
+[2026-07-18T16:58:40Z] [batched] forward 200/2089 batches (3200/33424 pairs)
+[2026-07-18T16:59:04Z] [batched] forward 250/2089 batches (4000/33424 pairs)
+[2026-07-18T16:59:28Z] [batched] forward 300/2089 batches (4800/33424 pairs)
+[2026-07-18T16:59:51Z] [batched] forward 350/2089 batches (5600/33424 pairs)
+[2026-07-18T17:00:16Z] [batched] forward 400/2089 batches (6400/33424 pairs)
+[2026-07-18T17:00:41Z] [batched] forward 450/2089 batches (7200/33424 pairs)
+[2026-07-18T17:01:05Z] [batched] forward 500/2089 batches (8000/33424 pairs)
+[2026-07-18T17:01:28Z] [batched] forward 550/2089 batches (8800/33424 pairs)
+[2026-07-18T17:01:53Z] [batched] forward 600/2089 batches (9600/33424 pairs)
+[2026-07-18T17:02:18Z] [batched] forward 650/2089 batches (10400/33424 pairs)
+[2026-07-18T17:02:46Z] [batched] forward 700/2089 batches (11200/33424 pairs)
+[2026-07-18T17:03:12Z] [batched] forward 750/2089 batches (12000/33424 pairs)
+[2026-07-18T17:03:37Z] [batched] forward 800/2089 batches (12800/33424 pairs)
+[2026-07-18T17:04:03Z] [batched] forward 850/2089 batches (13600/33424 pairs)
+[2026-07-18T17:04:31Z] [batched] forward 900/2089 batches (14400/33424 pairs)
+[2026-07-18T17:04:58Z] [batched] forward 950/2089 batches (15200/33424 pairs)
+[2026-07-18T17:05:28Z] [batched] forward 1000/2089 batches (16000/33424 pairs)
+[2026-07-18T17:05:55Z] [batched] forward 1050/2089 batches (16800/33424 pairs)
+[2026-07-18T17:06:17Z] [batched] forward 1100/2089 batches (17600/33424 pairs)
+[2026-07-18T17:06:41Z] [batched] forward 1150/2089 batches (18400/33424 pairs)
+[2026-07-18T17:07:07Z] [batched] forward 1200/2089 batches (19200/33424 pairs)
+[2026-07-18T17:07:32Z] [batched] forward 1250/2089 batches (20000/33424 pairs)
+[2026-07-18T17:07:59Z] [batched] forward 1300/2089 batches (20800/33424 pairs)
+[2026-07-18T17:08:25Z] [batched] forward 1350/2089 batches (21600/33424 pairs)
+[2026-07-18T17:08:53Z] [batched] forward 1400/2089 batches (22400/33424 pairs)
+[2026-07-18T17:09:22Z] [batched] forward 1450/2089 batches (23200/33424 pairs)
+[2026-07-18T17:09:46Z] [batched] forward 1500/2089 batches (24000/33424 pairs)
+[2026-07-18T17:10:14Z] [batched] forward 1550/2089 batches (24800/33424 pairs)
+[2026-07-18T17:10:42Z] [batched] forward 1600/2089 batches (25600/33424 pairs)
+[2026-07-18T17:11:09Z] [batched] forward 1650/2089 batches (26400/33424 pairs)
+[2026-07-18T17:11:37Z] [batched] forward 1700/2089 batches (27200/33424 pairs)
+[2026-07-18T17:12:07Z] [batched] forward 1750/2089 batches (28000/33424 pairs)
+[2026-07-18T17:12:35Z] [batched] forward 1800/2089 batches (28800/33424 pairs)
+[2026-07-18T17:13:05Z] [batched] forward 1850/2089 batches (29600/33424 pairs)
+[2026-07-18T17:13:34Z] [batched] forward 1900/2089 batches (30400/33424 pairs)
+[2026-07-18T17:14:02Z] [batched] forward 1950/2089 batches (31200/33424 pairs)
+[2026-07-18T17:14:31Z] [batched] forward 2000/2089 batches (32000/33424 pairs)
+[2026-07-18T17:15:02Z] [batched] forward 2050/2089 batches (32800/33424 pairs)
+[2026-07-18T17:15:26Z] [batched] forward 2089/2089 batches (33424/33424 pairs)
+[2026-07-18T17:15:26Z] [stage2] RESULT {"n_tasks_scored": 336, "n_missing": 0, "n_items": 1428, "pair_count": 33424, "device": "mps", "elapsed_s": 1091.1, "pairs_per_s": 30.67, "per_task_files": 336}
+[2026-07-18T17:15:26Z] [stage2] wrote /Users/vladryzhkov/e8-run/A3-stage2/batched-stage2-scores.json
+=== [2026-07-18T17:15:26Z] A3 STAGE-2 ORACLE SAMPLE GATE (fresh CPU 1-thread, cap 12) ===
+[2026-07-18T17:15:26Z] [oracle-sample] chose 12/336 tasks; strata={'dose=1,break_side=must_change': 4, 'dose=2,break_side=must_change': 4, 'dose=3,break_side=must_change': 4}; forced(contam>0|defaulted)=12
+[2026-07-18T17:15:26Z] [oracle-sample] running oracle_verify (fresh CPU 1-thread) on the staged sample ...
+[oracle] re-scoring 12 tasks in a FRESH 1-thread process; per-task == against parallel results ...
+[oracle] RESULT {"verdict": "PASS", "n_sampled_tasks": 12, "per_worker_coverage": {"Mac-558|2|2.13.0|5.13.1|6dbe47a8e843ec1540f64ed6ddd8339c17b95688db363e31605502e374a8b9f0": 12}, "n_mismatches": 0}
+
+Loading weights:   0%|          | 0/394 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 394/394 [00:00<00:00, 10593.92it/s]
+[2026-07-18T17:42:43Z] [oracle-sample] RESULT {"verdict": "PASS", "n_sampled_tasks": 12, "n_mismatches": 0, "wrote": "/Users/vladryzhkov/e8-run/A3-stage2/results/_oracle_result.json"}
+[2026-07-18T17:42:43Z] [oracle-sample] PASS: fresh-CPU per-task re-score matches the GPU results on the sample.
+=== [2026-07-18T17:42:43Z] A3 STAGE-2 ORACLE SAMPLE PASSED (fresh-CPU per-task ==) ===
+=== [2026-07-18T17:42:43Z] A3 STAGE-2 DONE — equiv=/Users/vladryzhkov/e8-run/A3-stage2/batched-stage2-equiv.json scores=/Users/vladryzhkov/e8-run/A3-stage2/batched-stage2-scores.json results=/Users/vladryzhkov/e8-run/A3-stage2/results/ oracle=/Users/vladryzhkov/e8-run/A3-stage2/results/_oracle_result.json ===

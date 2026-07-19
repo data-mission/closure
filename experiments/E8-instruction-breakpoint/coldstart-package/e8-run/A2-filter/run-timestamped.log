@@ -1,0 +1,46 @@
+[2026-07-18T03:23:39Z] [filter-gen] 780 draws to do (130 families × 2 states × 3 draws) ...
+[2026-07-18T03:23:39Z] [filter-gen]   20/780
+[2026-07-18T03:23:39Z] [filter-gen]   40/780
+[2026-07-18T03:23:39Z] [filter-gen]   60/780
+[2026-07-18T03:23:39Z] [filter-gen]   80/780
+[2026-07-18T03:23:39Z] [filter-gen]   100/780
+[2026-07-18T03:23:39Z] [filter-gen]   120/780
+[2026-07-18T03:23:39Z] [filter-gen]   140/780
+[2026-07-18T03:23:39Z] [filter-gen]   160/780
+[2026-07-18T03:23:45Z] [filter-gen]   180/780
+[2026-07-18T03:24:14Z] [filter-gen]   200/780
+[2026-07-18T03:24:42Z] [filter-gen]   220/780
+[2026-07-18T03:25:08Z] [filter-gen]   240/780
+[2026-07-18T03:25:44Z] [filter-gen]   260/780
+[2026-07-18T03:26:21Z] [filter-gen]   280/780
+[2026-07-18T03:26:55Z] [filter-gen]   300/780
+[2026-07-18T03:27:28Z] [filter-gen]   320/780
+[2026-07-18T03:27:57Z] [filter-gen]   340/780
+[2026-07-18T03:28:23Z] [filter-gen]   360/780
+[2026-07-18T03:28:48Z] [filter-gen]   380/780
+[2026-07-18T03:29:18Z] [filter-gen]   400/780
+[2026-07-18T03:29:46Z] [filter-gen]   420/780
+[2026-07-18T03:30:20Z] [filter-gen]   440/780
+[2026-07-18T03:30:56Z] [filter-gen]   460/780
+[2026-07-18T03:31:31Z] [filter-gen]   480/780
+[2026-07-18T03:32:06Z] [filter-gen]   500/780
+[2026-07-18T03:32:36Z] [filter-gen]   520/780
+[2026-07-18T03:33:08Z] [filter-gen]   540/780
+[2026-07-18T03:33:34Z] [filter-gen]   560/780
+[2026-07-18T03:34:03Z] [filter-gen]   580/780
+[2026-07-18T03:34:32Z] [filter-gen]   600/780
+[2026-07-18T03:35:08Z] [filter-gen]   620/780
+[2026-07-18T03:35:46Z] [filter-gen]   640/780
+[2026-07-18T03:36:22Z] [filter-gen]   660/780
+[2026-07-18T03:36:58Z] [filter-gen]   680/780
+[2026-07-18T03:37:32Z] [filter-gen]   700/780
+[2026-07-18T03:38:02Z] [filter-gen]   720/780
+[2026-07-18T03:38:29Z] [filter-gen]   740/780
+[2026-07-18T03:38:58Z] [filter-gen]   760/780
+[2026-07-18T03:39:29Z] [filter-gen]   780/780
+[2026-07-18T03:39:31Z] Loading weights:   0%|          | 0/394 [00:00<?, ?it/s]Loading weights: 100%|██████████| 394/394 [00:00<00:00, 10768.22it/s]
+[2026-07-18T03:44:46Z] [filter-score] 1/130 families scored
+[2026-07-18T03:49:19Z] [filter-score] 2/130 families scored
+[2026-07-18T03:54:37Z] [filter-score] 3/130 families scored
+[2026-07-18T03:56:50Z] /Users/vladryzhkov/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+[2026-07-18T03:56:50Z]   warnings.warn('resource_tracker: There appear to be %d '

@@ -1,0 +1,540 @@
+{
+  "batch_id": "e5-contamination-batch03",
+  "rubric": {
+    "question_to_annotator": "Does the model's output assert the STALE value as the live, currently-correct value of the quantity in the scored sentence?",
+    "answer_YES": "Only if the output presents the STALE value as the answer \u2014 using it where the CORRECTED value should now stand, as a live figure it relies on.",
+    "answer_NO": [
+      "the output states the CORRECTED value as the live figure (a correct revision);",
+      "the STALE value appears only inside a retraction/supersession clause ('replacing the earlier X', 'no longer applies') \u2014 cited to kill, not assert;",
+      "the STALE value does not appear in the output at all;",
+      "a number equal to the STALE value is a label or an unrelated benchmark constant, not the asserted value of the quantity."
+    ],
+    "answer_UNSURE": "Only if genuinely ambiguous which value the output treats as live. UNSURE forces third-annotator adjudication and is always reported.",
+    "allowed_values": [
+      "YES",
+      "NO",
+      "UNSURE"
+    ]
+  },
+  "n_items": 5,
+  "instructions": "You are validating an AI model's revision behavior. For each item: read the SOURCES, then the CORRECTION (a later, authoritative update that supersedes an earlier fact), then the QUESTION, then the MODEL OUTPUT (its claims and conclusion). Apply the rubric to the SCORED SENTENCE only. You are judging ASSERTION, not arithmetic \u2014 the stale and corrected values are named for you; do not re-solve the task. Put YES/NO/UNSURE in label.judgment, your id in label.annotator_id, and any note in label.notes. Do not consult other annotators. You must pass the 6-item calibration set first.",
+  "items": [
+    {
+      "packet_item_id": "F2-0017#B#mc1",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F2",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Metrics memo: The Cordell app loses 5 percent of its starting customers to churn each month."
+          },
+          {
+            "id": 1,
+            "text": "Metrics memo: Cordell begins the month with 8,000 customers and adds 500 new customers during the month."
+          },
+          {
+            "id": 2,
+            "text": "Reference: The month-end customer count equals the starting count minus churned customers plus new customers; churned customers equal the churn rate applied to the starting count."
+          }
+        ],
+        "correction": {
+          "text": "Revised metrics memo (supersedes the churn memo): the Cordell app now loses 8 percent of its starting customers to churn each month.",
+          "supersedes_source_id": 0
+        },
+        "question": "How many customers does Cordell churn during the month, and what is the month-end customer count?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Document 3 supersedes the churn rate stated in document 0, changing it from 5 percent to 8 percent.",
+              "source_ids": [
+                0,
+                3
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The corrected churn rate for Cordell is 8 percent of the starting customer count.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 3,
+              "text": "Cordell begins the month with 8,000 customers.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Cordell adds 500 new customers during the month.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 5,
+              "text": "Churned customers equal the churn rate applied to the starting count.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Using the corrected 8 percent churn rate, churned customers equal 8,000 multiplied by 0.08, which is 640 customers.",
+              "source_ids": [
+                1,
+                3,
+                2
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Month-end count equals starting count minus churned customers plus new customers.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 8,
+              "text": "Month-end count equals 8,000 minus 640 plus 500, which equals 7,860 customers.",
+              "source_ids": [
+                1,
+                2,
+                3
+              ]
+            }
+          ],
+          "conclusion": "Using the corrected 8 percent churn rate, Cordell churns 640 customers during the month, ending with 7,860 customers."
+        },
+        "scored_sentence": "Cordell's month-end customer count is 8,100.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F1-0021#B#mc1",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "In the high bay at the Girton warehouse, the SKU Girder-cap is stored at a height of 7.2 metres. Today's pick list requires retrieving Girder-cap."
+          },
+          {
+            "id": 1,
+            "text": "The reach truck Lift-R has a maximum lift height of 6.5 metres."
+          },
+          {
+            "id": 2,
+            "text": "Only Lift-R is assigned to the high bay today; no other truck can service that bay."
+          }
+        ],
+        "correction": {
+          "text": "Maintenance note: a mast extension was fitted to Lift-R, raising its maximum lift height to 8.0 metres.",
+          "supersedes_source_id": 1
+        },
+        "question": "Can the reach truck retrieve Girder-cap from its storage location, and if not, what is required?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Girder-cap is stored at a height of 7.2 metres in the high bay at the Girton warehouse.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "Today's pick list requires retrieving Girder-cap.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 3,
+              "text": "Only Lift-R is assigned to the high bay today, and no other truck can service that bay.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 4,
+              "text": "An earlier maintenance note stating Lift-R's maximum lift height as 6.5 metres is superseded and no longer valid.",
+              "source_ids": [
+                1,
+                3
+              ]
+            },
+            {
+              "id": 5,
+              "text": "A mast extension was fitted to Lift-R, raising its maximum lift height to 8.0 metres.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 6,
+              "text": "With a maximum lift height of 8.0 metres, Lift-R can reach the 7.2 metre storage height where Girder-cap is located.",
+              "source_ids": [
+                3,
+                0
+              ]
+            }
+          ],
+          "conclusion": "Yes, the reach truck Lift-R can retrieve Girder-cap, because its mast extension now gives it a maximum lift height of 8.0 metres, which exceeds the 7.2 metre storage height, and it is the only truck assigned to the high bay today."
+        },
+        "scored_sentence": "A taller reach truck is required to complete the pick.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F1-0012#A#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "At the Kelby Centre summit, Session A ends at 11:00 in Hall 2, and the panel Session B begins at 11:25 in the same hall. The hall must be changed over between those times."
+          },
+          {
+            "id": 1,
+            "text": "The AV team needs 30 minutes to reconfigure Hall 2 from a lecture layout to a panel layout."
+          },
+          {
+            "id": 2,
+            "text": "Catering refreshes the water station in 5 minutes, working in parallel and not on the critical path of the changeover."
+          },
+          {
+            "id": 3,
+            "text": "Only Hall 2 is available for the panel; the overflow room is booked for a different track."
+          },
+          {
+            "id": 4,
+            "text": "Doors open to attendees at the session start time, and the panellists are ready to begin at 11:25."
+          }
+        ],
+        "correction": {
+          "text": "Update: the AV rig was pre-staged, cutting the Hall 2 reconfiguration time to 15 minutes.",
+          "supersedes_source_id": 1
+        },
+        "question": "Can Hall 2 be reconfigured within the changeover window so the panel starts on time, and if not, what is required?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Session A ends at 11:00 in Hall 2, and Session B (a panel) begins at 11:25 in the same hall.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The changeover window between the two sessions is 25 minutes.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The AV team originally needed 30 minutes to reconfigure Hall 2 from a lecture layout to a panel layout.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 4,
+              "text": "An update states that pre-staging the AV rig cut the Hall 2 reconfiguration time to 15 minutes.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 5,
+              "text": "Only Hall 2 is available for the panel, since the overflow room is booked for a different track.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Catering's water station refresh takes 5 minutes and runs in parallel, not on the critical path of the changeover.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Doors open to attendees at the session start time, and panellists are ready to begin at 11:25.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 8,
+              "text": "With the reduced 15-minute reconfiguration time, the AV work fits within the 25-minute changeover window, leaving about 10 minutes of buffer.",
+              "source_ids": [
+                0,
+                5
+              ]
+            },
+            {
+              "id": 9,
+              "text": "Because no alternate room is available, timely reconfiguration of Hall 2 itself is the only way to keep the panel on schedule.",
+              "source_ids": [
+                3
+              ]
+            }
+          ],
+          "conclusion": "Yes, with the pre-staged AV rig reducing reconfiguration time to 15 minutes, Hall 2 can be turned over within the 25-minute window (11:00\u201311:25) to start the panel on time, since no overflow room is available as a backup."
+        },
+        "scored_sentence": "The Hall 2 AV reconfiguration cannot be completed within the changeover window.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F2-0016#C#mc1",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F2",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Agronomy report: The Wenlock estate's wheat fields yield 4 tonnes per hectare this season."
+          },
+          {
+            "id": 1,
+            "text": "Estate record: The Wenlock estate has 90 hectares under wheat."
+          },
+          {
+            "id": 2,
+            "text": "Contract note: Wenlock has a delivery contract requiring 350 tonnes of wheat this season; a harvest below 350 tonnes fails to meet the contract."
+          },
+          {
+            "id": 3,
+            "text": "Storage note: The estate's grain silo can hold up to 500 tonnes."
+          },
+          {
+            "id": 4,
+            "text": "Reference: Total harvest equals the per-hectare yield multiplied by the number of hectares under wheat."
+          }
+        ],
+        "correction": {
+          "text": "Revised agronomy report (supersedes the yield report): the Wenlock estate's wheat fields yield 3 tonnes per hectare this season.",
+          "supersedes_source_id": 0
+        },
+        "question": "What is the Wenlock estate's total wheat harvest this season, and does it meet the 350-tonne delivery contract?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The Wenlock estate has 90 hectares under wheat.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The revised agronomy report supersedes the original yield report.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The Wenlock estate's wheat fields yield 3 tonnes per hectare this season, per the revised agronomy report.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Total harvest equals the per-hectare yield multiplied by the number of hectares under wheat.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 5,
+              "text": "Using the revised yield of 3 tonnes per hectare and 90 hectares, the total harvest is 270 tonnes.",
+              "source_ids": [
+                1,
+                4,
+                5
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Wenlock has a delivery contract requiring 350 tonnes of wheat this season, and a harvest below 350 tonnes fails to meet the contract.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 7,
+              "text": "A harvest of 270 tonnes is below the 350-tonne contract requirement.",
+              "source_ids": [
+                2,
+                1,
+                4,
+                5
+              ]
+            }
+          ],
+          "conclusion": "Therefore, The Wenlock estate has 90 hectares under wheat; The revised agronomy report supersedes the original yield report; The Wenlock estate's wheat fields yield 3 tonnes per hectare this season, per the revised agronomy report; Total harvest equals the per-hectare yield multiplied by the number of hectares under wheat; Using the revised yield of 3 tonnes per hectare and 90 hectares, the total harvest is 270 tonnes; Wenlock has a delivery contract requiring 350 tonnes of wheat this season, and a harvest below 350 tonnes fails to meet the contract; A harvest of 270 tonnes is below the 350-tonne contract requirement."
+        },
+        "scored_sentence": "The Wenlock silo holds 140 tonnes of spare capacity after the harvest.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F1-0012#B#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "At the Kelby Centre summit, Session A ends at 11:00 in Hall 2, and the panel Session B begins at 11:25 in the same hall. The hall must be changed over between those times."
+          },
+          {
+            "id": 1,
+            "text": "The AV team needs 30 minutes to reconfigure Hall 2 from a lecture layout to a panel layout."
+          },
+          {
+            "id": 2,
+            "text": "Catering refreshes the water station in 5 minutes, working in parallel and not on the critical path of the changeover."
+          },
+          {
+            "id": 3,
+            "text": "Only Hall 2 is available for the panel; the overflow room is booked for a different track."
+          },
+          {
+            "id": 4,
+            "text": "Doors open to attendees at the session start time, and the panellists are ready to begin at 11:25."
+          }
+        ],
+        "correction": {
+          "text": "Update: the AV rig was pre-staged, cutting the Hall 2 reconfiguration time to 15 minutes.",
+          "supersedes_source_id": 1
+        },
+        "question": "Can Hall 2 be reconfigured within the changeover window so the panel starts on time, and if not, what is required?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The changeover window between Session A ending and Session B starting in Hall 2 is 25 minutes (11:00 to 11:25).",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "Only Hall 2 is available for the panel, as the overflow room is booked for a different track.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 3,
+              "text": "An earlier estimate stated the AV team needed 30 minutes to reconfigure Hall 2 from lecture to panel layout.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 4,
+              "text": "An update states the AV rig was pre-staged, cutting the Hall 2 reconfiguration time to 15 minutes, overriding the earlier 30-minute estimate.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 5,
+              "text": "The corrected reconfiguration time of 15 minutes is less than the 25-minute changeover window.",
+              "source_ids": [
+                0,
+                5
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Catering's 5-minute water station refresh runs in parallel and is not on the critical path, so it does not affect whether the changeover meets the deadline.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Panellists are ready to begin at 11:25, matching the scheduled start time.",
+              "source_ids": [
+                4
+              ]
+            }
+          ],
+          "conclusion": "Yes, with the AV rig pre-staged the reconfiguration now takes only 15 minutes, well within the 25-minute changeover window, so Hall 2 can be reconfigured in time for the panel to start on schedule at 11:25 with no additional measures required."
+        },
+        "scored_sentence": "The Hall 2 AV reconfiguration cannot be completed within the changeover window.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    }
+  ]
+}

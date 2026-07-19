@@ -1,0 +1,19 @@
+[2026-07-18T15:20:02Z] [probe] 4 families, threshold=0.7, config_hash=6dbe47a8e843
+Loading weights:   0%|          | 0/394 [00:00<?, ?it/s]Loading weights: 100%|██████████| 394/394 [00:00<00:00, 22773.46it/s]
+[2026-07-18T15:20:04Z] [probe] MPS scorer built; deterministic warn_only needed: False
+[2026-07-18T15:20:09Z] [probe mps1] 1/4 families scored
+[2026-07-18T15:20:27Z] [probe mps1] 2/4 families scored
+[2026-07-18T15:20:35Z] [probe mps1] 3/4 families scored
+[2026-07-18T15:20:44Z] [probe mps1] 4/4 families scored
+[2026-07-18T15:20:49Z] [probe mps2] 1/4 families scored
+[2026-07-18T15:21:07Z] [probe mps2] 2/4 families scored
+[2026-07-18T15:21:15Z] [probe mps2] 3/4 families scored
+[2026-07-18T15:21:24Z] [probe mps2] 4/4 families scored
+[2026-07-18T15:21:24Z] [probe] building CPU ground truth (device=cpu) for the same items ...
+Loading weights:   0%|          | 0/394 [00:00<?, ?it/s]Loading weights: 100%|██████████| 394/394 [00:00<00:00, 29256.54it/s]
+[2026-07-18T15:23:18Z] [probe cpu] 1/4 families scored
+[2026-07-18T15:29:10Z] [probe cpu] 2/4 families scored
+[2026-07-18T15:32:05Z] [probe cpu] 3/4 families scored
+[2026-07-18T15:35:17Z] [probe cpu] 4/4 families scored
+[2026-07-18T15:35:17Z] [probe] RESULT {"outcome": "A_ZERO_FLIPS", "cpu_vs_mps_flips": 0, "flip_rate": 0.0, "mps_self_flips": 0, "warn_only_needed": false, "max_delta": 0.00048828125}
+[2026-07-18T15:35:17Z] [probe] wrote /Users/vladryzhkov/e8-run/_gpu_rewire/probe-smoke.json

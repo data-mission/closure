@@ -1,0 +1,58 @@
+{
+  "_comment": "Worked E9 matched-family record at dose k=3, transformed from the REAL A3 F3 record A3-C-0002-C3 (base family F3-0048). This is an actual record from corpus-candidates/A3-corrections.jsonl with the E9 metadata added by build_e9_corpus.transform_record. The same scenario exists at k=1 (A3-C-0002-C1) and k=2 (A3-C-0002-C2) — the matched family. NOTE the must_change items are stale INTERMEDIATE totals (post-0/1/2 corrections: 15400/16600/19600), each != the correct-final 23600 — the exact structure a compaction cycle can strand: a summarizer that folds in correction 1 then compacts may carry $16,600 forward instead of tracking to $23,600. This is why F3-accumulated-corrections is the right E9 substrate.",
+  "task_id": "A3-C-0002-C3",
+  "experiment": "E9",
+  "family_id": "A3-C-0002",
+  "covariates": { "family": "F3", "base_family_e5": "F3-0048", "source_count": 6 },
+  "question": "What is the total monthly operating cost for the month?",
+  "sources": [
+    { "id": 0, "text": "Central Deck operates a 300-space parking structure and reports monthly operating results." },
+    { "id": 1, "text": "Monthly parking revenue is a fixed $36,000." },
+    { "id": 2, "text": "Per-space monthly maintenance cost is $8 per space." },
+    { "id": 3, "text": "Security is a fixed $4,000 per month, independent of the per-space maintenance rate." },
+    { "id": 4, "text": "The ground lease is a fixed $9,000 per month, independent of the per-space maintenance rate." }
+  ],
+  "axis_params": {
+    "corrections": [
+      { "supersedes_source_id": 2, "text": "Cost revision: per-space monthly maintenance cost is now $12 per space, replacing the $8 figure." },
+      { "supersedes_source_id": 3, "text": "Cost revision: monthly security is now a fixed $7,000, replacing the $4,000 figure." },
+      { "supersedes_source_id": 4, "text": "Cost revision: the monthly ground lease is now a fixed $13,000, replacing the $9,000 figure." }
+    ],
+    "state_values": [
+      "maint 8/space (2400)+sec4000+lease9000 = 15400",
+      "maint 12/space (3600)+sec4000+lease9000 = 16600",
+      "maint 3600+sec7000+lease9000 = 19600",
+      "maint 3600+sec7000+lease13000 = 23600 (correct answer at C3)"
+    ],
+    "stale_of_state": [0, 1, 2]
+  },
+  "must_change": [
+    "The total monthly operating cost is $15,400.",
+    "The total monthly operating cost is $16,600.",
+    "The total monthly operating cost is $19,600."
+  ],
+  "must_persist": [
+    "Monthly parking revenue is a fixed $36,000.",
+    "Central Deck operates a 300-space parking structure."
+  ],
+  "e9": {
+    "arms": ["N", "S"],
+    "dose_axis": "compaction_cycles",
+    "dose_levels": [1, 2, 3],
+    "scored_grammar": "F3-numeric-only",
+    "dual_scored": ["frozen_nli", "instrument_v2"],
+    "compression_band": [0.30, 0.50]
+  },
+  "_turn_rendering_k3_ArmS": [
+    "turn 0 (framing): sources [0..4] + question",
+    "turn 1: COMPACT(sources) -> summary_1 (30-50% length); reveal correction[0] (maint $12)",
+    "turn 2: COMPACT(summary_1 + correction[0]) -> summary_2; reveal correction[1] (security $7,000)",
+    "turn 3: COMPACT(summary_2 + correction[1]) -> summary_3; reveal correction[2] (lease $13,000)",
+    "answer: [summary_3, correction[2]] + Arm-B retract-and-revise instruction -> generate; correct answer = $23,600"
+  ],
+  "_turn_rendering_k3_ArmN": [
+    "turn 0 (framing): sources [0..4] + question",
+    "turns 1-3: append correction[0..2] to the FULL transcript (no compaction)",
+    "answer: full transcript (sources + all 3 corrections) + Arm-B instruction -> generate; correct answer = $23,600"
+  ]
+}

@@ -1,0 +1,8 @@
+{instruction}
+
+Material to compact:
+{documents}
+
+Provide your answer as structured output with two fields:
+- "claims": a list of atomic factual claims you are preserving, each an object with "id" (an integer), "text" (the claim as a single sentence), and "source_ids" (an empty list).
+- "conclusion": the compacted summary as a single passage that another reasoner will use as its only record of the material above.

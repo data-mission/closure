@@ -1,0 +1,53 @@
+[2026-07-18T04:20:03Z] [filter-score] 150 families across 2 workers (threads=2/worker); config_hash=6dbe47a8e843
+[2026-07-18T04:20:03Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+Loading weights:   0%|          | 0/394 [00:00<?, ?it/s]Loading weights: 100%|██████████| 394/394 [00:00<00:00, 7561.35it/s]
+Loading weights:   0%|          | 0/394 [00:00<?, ?it/s]Loading weights: 100%|██████████| 394/394 [00:00<00:00, 20431.18it/s]
+[2026-07-18T04:20:33Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:21:03Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:21:33Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:22:03Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:22:33Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:23:03Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:23:33Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:24:03Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:24:33Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:25:03Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:25:33Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:26:03Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:26:04Z] [filter-score w0] 1/75 families
+[2026-07-18T04:26:34Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:27:04Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:27:34Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:27:57Z] [filter-score w1] 1/75 families
+[2026-07-18T04:28:04Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:28:34Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:29:04Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:29:34Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:30:04Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:30:34Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:31:04Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:31:34Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:32:04Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:32:34Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:33:05Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:33:12Z] [filter-score w0] 2/75 families
+[2026-07-18T04:33:35Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:33:49Z] [filter-score w1] 2/75 families
+[2026-07-18T04:34:05Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:34:35Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:35:05Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:35:35Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:36:05Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:36:35Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:37:05Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:37:36Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:38:06Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:38:17Z] [filter-score w0] 3/75 families
+[2026-07-18T04:38:36Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:39:06Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:39:36Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+[2026-07-18T04:40:06Z] [filter-score] 0/150 total · 0.0 fam/min · ETA ~??:??Z (running shards: [0, 1])
+/Users/vladryzhkov/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+/Users/vladryzhkov/.local/share/uv/python/cpython-3.11.15-macos-aarch64-none/lib/python3.11/multiprocessing/resource_tracker.py:254: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '

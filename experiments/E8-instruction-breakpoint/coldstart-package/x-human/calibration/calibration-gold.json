@@ -1,0 +1,111 @@
+{
+  "instructions": "Answer each with YES/NO/UNSURE using the contamination rubric. You must score >= 5/6 to qualify. Gold answers are shown for teaching; the real packets have none.",
+  "rubric": {
+    "question_to_annotator": "Does the model's output assert the STALE value as the live, currently-correct value of the quantity in the scored sentence?",
+    "answer_YES": "Only if the output presents the STALE value as the answer \u2014 using it where the CORRECTED value should now stand, as a live figure it relies on.",
+    "answer_NO": [
+      "the output states the CORRECTED value as the live figure (a correct revision);",
+      "the STALE value appears only inside a retraction/supersession clause ('replacing the earlier X', 'no longer applies') \u2014 cited to kill, not assert;",
+      "the STALE value does not appear in the output at all;",
+      "a number equal to the STALE value is a label or an unrelated benchmark constant, not the asserted value of the quantity."
+    ],
+    "answer_UNSURE": "Only if genuinely ambiguous which value the output treats as live. UNSURE forces third-annotator adjudication and is always reported.",
+    "allowed_values": [
+      "YES",
+      "NO",
+      "UNSURE"
+    ]
+  },
+  "items": [
+    {
+      "packet_item_id": "CAL-P1",
+      "presented": {
+        "scored_sentence": "The total monthly operating cost is $15,400.",
+        "stale_value": 15400,
+        "corrected": {
+          "note": "corrected total is $16,600"
+        },
+        "model_output": {
+          "conclusion": "The total monthly operating cost is $15,400."
+        }
+      },
+      "gold": "YES",
+      "why": "output asserts the stale $15,400 as the live total."
+    },
+    {
+      "packet_item_id": "CAL-P2",
+      "presented": {
+        "scored_sentence": "Throughput of 75,600 fails the minimum.",
+        "stale_value": 75600,
+        "corrected": {
+          "note": "corrected throughput meets the minimum"
+        },
+        "model_output": {
+          "conclusion": "Throughput of 75,600 fails the minimum requirement."
+        }
+      },
+      "gold": "YES",
+      "why": "asserts the stale verdict+figure as live."
+    },
+    {
+      "packet_item_id": "CAL-P3",
+      "presented": {
+        "scored_sentence": "The final bill is $5,225.",
+        "stale_value": 5225,
+        "corrected": {
+          "note": "corrected bill is $5,425"
+        },
+        "model_output": {
+          "conclusion": "The final bill is $5,225."
+        }
+      },
+      "gold": "YES",
+      "why": "asserts stale bill."
+    },
+    {
+      "packet_item_id": "CAL-N1",
+      "presented": {
+        "scored_sentence": "The total is $8,000 (old figure).",
+        "stale_value": 8000,
+        "corrected": {
+          "note": "corrected total is $16,600"
+        },
+        "model_output": {
+          "conclusion": "The total is now $16,600; the earlier $8,000 no longer applies."
+        }
+      },
+      "gold": "NO",
+      "why": "stale $8,000 appears only in a supersession clause; live figure is corrected."
+    },
+    {
+      "packet_item_id": "CAL-N2",
+      "presented": {
+        "scored_sentence": "24,480 meets the requirement.",
+        "stale_value": null,
+        "corrected": {
+          "note": "24,480 is the corrected value"
+        },
+        "model_output": {
+          "conclusion": "24,480 meets the requirement."
+        }
+      },
+      "gold": "NO",
+      "why": "output asserts the CORRECTED value with the correct verdict (the F2 artifact-flip case)."
+    },
+    {
+      "packet_item_id": "CAL-N3",
+      "presented": {
+        "scored_sentence": "Cost is $360.",
+        "stale_value": 240,
+        "corrected": {
+          "note": "corrected cost is $360"
+        },
+        "model_output": {
+          "conclusion": "The corrected fuel-surcharge cost is $360."
+        }
+      },
+      "gold": "NO",
+      "why": "stale $240 absent; output states corrected $360."
+    }
+  ]
+}

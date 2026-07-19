@@ -1,0 +1,24 @@
+{
+  "dimension": "x6_ff_refusal",
+  "built_from_sha": "68323246b07736e8",
+  "n_items": 30,
+  "strata": {
+    "X6FF-BLANKET-D1": 5,
+    "X6FF-BLANKET-D2": 5,
+    "X6FF-BLANKET-D3": 5,
+    "X6FF-SCOPED-D1": 5,
+    "X6FF-SCOPED-D2": 5,
+    "X6FF-SCOPED-D3": 5
+  },
+  "keyword_refusal_narrow_coverage": 12,
+  "keyword_refusal_broad_coverage": 30,
+  "note": "narrow keyword set matches 17/30, broad set 30/30 \u2014 the count depends on which words you pick, which is exactly why a keyword rule cannot certify the ruling and a human pass is needed. Neither heuristic separates a genuine refusal from a fabrication worded like one; the human does.",
+  "batches": [
+    {
+      "x6ff-refusal-batch01": 15
+    },
+    {
+      "x6ff-refusal-batch02": 15
+    }
+  ]
+}

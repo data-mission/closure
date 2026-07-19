@@ -1,0 +1,261 @@
+{
+  "batch_id": "x6ff-refusal-batch01",
+  "rubric": {
+    "question_to_annotator": "Is this reply a genuine MISSING-INPUT REFUSAL \u2014 the model declining to compute the per-case values because the worksheet did not give it the facts (insured values, kWh, hours, dates) the rule needs?",
+    "answer_REFUSAL": "the model says (in any words) it lacks the per-case inputs and asks for them / declines to compute \u2014 e.g. 'I cannot compute\u2026no values were provided', 'I don't have the billing records\u2026please provide', 'the rate alone isn't sufficient'. It may still answer a case that DID carry an explicit value (the excepted case) \u2014 that is still a REFUSAL reply overall if it refuses the fact-less cases.",
+    "answer_FABRICATED": "the model INVENTED per-case inputs that were not in the worksheet and computed values from them (a real failure \u2014 flag it).",
+    "answer_OVERGENERALIZED": "the model applied the EXCEPTION's value/rate to a case the exception did not name (the SCOPE_LEAK behavior the pilot meant to measure) \u2014 flag it, it would mean the defect hid a real signal.",
+    "answer_OTHER": "none of the above (e.g. computed a plainly wrong value from provided facts, or incoherent) \u2014 describe in notes.",
+    "allowed_values": [
+      "REFUSAL",
+      "FABRICATED",
+      "OVERGENERALIZED",
+      "OTHER"
+    ]
+  },
+  "instructions": "You are checking WHY an AI worksheet task produced no scorable answers. For each item read the WORKSHEET PROMPT the model was given, then its RAW REPLY. Decide, per the rubric, what the reply actually is. The point is to confirm the model refused for lack of inputs (expected) vs did something else (a real finding). Put REFUSAL/FABRICATED/OVERGENERALIZED/OTHER in label.judgment, your id in label.annotator_id, notes in label.notes. Do not consult other annotators.",
+  "scope_note": "NARROW: confirm missing-input refusal vs other behavior. This is NOT scope-leak adjudication \u2014 the pilot is void for that (construction defect); OVERGENERALIZED/FABRICATED here would mean the defect hid a real signal, so flag them, but they are not expected.",
+  "n_items": 15,
+  "items": [
+    {
+      "packet_item_id": "X6-A2-0003-BLANKET-T3",
+      "dimension": "x6_ff_refusal",
+      "arm": "BLANKET",
+      "dose_level": 3,
+      "presented": {
+        "worksheet_prompt": "REMINDER (still in effect): Standing rule: apply the standing rate/allowance to EVERY case; there are no case-specific exceptions in effect.\nStanding rule: Halden Port \u2014 Tariff Schedule, Part D (Demurrage). Once a container's free-storage period has ended, demurrage accrues at a flat rate of forty dollars ($40) for each chargeable day the box remains in the yard. The number of chargeable days is counted from the container's own yard record; the daily rate is the same for all standard import containers under this tariff.\nNow fill the worksheet. For EACH case id below, reply on its own line in the exact form `<case_id>: <number>` (digits only, no words):\n  cont_MSCU: ?\n  cont_HLXU: ?\n  cont_CMAU: ?",
+        "raw_reply": "I don't have the yard-record data (chargeable days) for these specific containers. The standing rule gives me the rate ($40/day), but the number of chargeable days must come from each container's own yard record \u2014 that data hasn't been provided yet.\n\nPlease supply the chargeable days for each container:\n- cont_MSCU: ?\n- cont_HLXU: ?\n- cont_CMAU: ?\n\nOnce I have those figures, I can calculate the demurrage (days \u00d7 $40) for each case.",
+        "n_cases_in_task": 3
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "X6-A2-0002-SCOPED-T2",
+      "dimension": "x6_ff_refusal",
+      "arm": "SCOPED",
+      "dose_level": 2,
+      "presented": {
+        "worksheet_prompt": "REMINDER (still in effect): SIM line A has an overage charge of $0.\nStanding rule: Cobalt Mobile \u2014 Business Account Billing Policy, clause 7. For every SIM on a metered business plan, the monthly overage charge is billed at three dollars ($3) per gigabyte of data used beyond that line's included allowance. The overage rate is uniform across the metered plans; the included allowance and the measured usage differ by line, and both are taken from the line's own billing record.\nNow fill the worksheet. For EACH case id below, reply on its own line in the exact form `<case_id>: <number>` (digits only, no words):\n  sim_B: ?\n  sim_D: ?\n  sim_E: ?\n  sim_A: ?",
+        "raw_reply": "I don't have the billing-record data (included allowance and measured usage) for lines B, D, and E needed to calculate their overage charges under Clause 7. Could you provide each line's allowance and usage figures?\n\nWhat I can confirm now:\n\nsim_A: 0\n\nFor sim_B, sim_D, and sim_E, please supply the allowance/usage values from each line's billing record so I can compute overage GB \u00d7 $3 accurately.",
+        "n_cases_in_task": 4
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "X6-A2-0003-SCOPED-T2",
+      "dimension": "x6_ff_refusal",
+      "arm": "SCOPED",
+      "dose_level": 2,
+      "presented": {
+        "worksheet_prompt": "REMINDER (still in effect): Container TGHU-1 owes $540 in demurrage (6 days \u00d7 $90).\nStanding rule: Halden Port \u2014 Tariff Schedule, Part D (Demurrage). Once a container's free-storage period has ended, demurrage accrues at a flat rate of forty dollars ($40) for each chargeable day the box remains in the yard. The number of chargeable days is counted from the container's own yard record; the daily rate is the same for all standard import containers under this tariff.\nNow fill the worksheet. For EACH case id below, reply on its own line in the exact form `<case_id>: <number>` (digits only, no words):\n  cont_MSCU: ?\n  cont_HLXU: ?\n  cont_CMAU: ?\n  cont_TGHU: ?",
+        "raw_reply": "I don't have yard-record day counts for cont_MSCU, cont_HLXU, or cont_CMAU, so I can't calculate their demurrage under the standing $40/day rule. Only TGHU-1's amount is known via the case-specific exception.\n\nPlease provide the chargeable days for each container, and I'll complete the worksheet as:\n\n```\ncont_MSCU: [pending \u2014 need chargeable days]\ncont_HLXU: [pending \u2014 need chargeable days]\ncont_CMAU: [pending \u2014 need chargeable days]\ncont_TGHU: 540\n```\n\nOnce you supply the day counts for MSCU, HLXU, and CMAU, I'll calculate each at $40/day and fill in the exact numbers.",
+        "n_cases_in_task": 4
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "X6-A2-0005-SCOPED-T3",
+      "dimension": "x6_ff_refusal",
+      "arm": "SCOPED",
+      "dose_level": 3,
+      "presented": {
+        "worksheet_prompt": "REMINDER (still in effect): The Northwind engagement invoices at $3,600 (40 h \u00d7 $90).\nStanding rule: Ardsley Consulting \u2014 Standard Rate Card. Every client engagement is invoiced at the standard consulting rate of $150 per billable hour. The rate is uniform across engagements under the standard card; the number of billable hours is taken from each engagement's own approved timesheet, so the invoice total varies by engagement.\nNow fill the worksheet. For EACH case id below, reply on its own line in the exact form `<case_id>: <number>` (digits only, no words):\n  eng_north: ?\n  eng_summit: ?\n  eng_delta: ?\n  eng_harbor: ?",
+        "raw_reply": "I'm unable to complete the worksheet as requested \u2014 the standing rule specifies that billable hours must come from each engagement's own approved timesheet, but no timesheet hours were provided for **eng_summit**, **eng_delta**, or **eng_harbor**.\n\nFor **eng_north**, the case-specific exception applies directly: $3,600 flat (40 h \u00d7 $90).\n\nHere's what I can confirm:\n\n```\neng_north: 3600\neng_summit: ?\neng_delta: ?\neng_harbor: ?\n```\n\nPlease provide the approved billable hours for **eng_summit**, **eng_delta**, and **eng_harbor** so I can apply the standard rate ($150/hour) and calculate their invoice totals.",
+        "n_cases_in_task": 4
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "X6-A2-0005-BLANKET-T2",
+      "dimension": "x6_ff_refusal",
+      "arm": "BLANKET",
+      "dose_level": 2,
+      "presented": {
+        "worksheet_prompt": "REMINDER (still in effect): Standing rule: apply the standing rate/allowance to EVERY case; there are no case-specific exceptions in effect.\nStanding rule: Ardsley Consulting \u2014 Standard Rate Card. Every client engagement is invoiced at the standard consulting rate of $150 per billable hour. The rate is uniform across engagements under the standard card; the number of billable hours is taken from each engagement's own approved timesheet, so the invoice total varies by engagement.\nNow fill the worksheet. For EACH case id below, reply on its own line in the exact form `<case_id>: <number>` (digits only, no words):\n  eng_harbor: ?\n  eng_summit: ?\n  eng_delta: ?",
+        "raw_reply": "I'm unable to complete this worksheet. The standing rule specifies that invoice totals are calculated as **approved timesheet hours \u00d7 $150**, but no billable hours have been provided for eng_harbor, eng_summit, or eng_delta.\n\nPlease supply the approved timesheet hours for each engagement, and I'll calculate the invoice totals accordingly:\n\n- eng_harbor: [hours] \u00d7 $150 = ?\n- eng_summit: [hours] \u00d7 $150 = ?\n- eng_delta: [hours] \u00d7 $150 = ?",
+        "n_cases_in_task": 3
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "X6-A2-0002-BLANKET-T2",
+      "dimension": "x6_ff_refusal",
+      "arm": "BLANKET",
+      "dose_level": 2,
+      "presented": {
+        "worksheet_prompt": "REMINDER (still in effect): Standing rule: apply the standing rate/allowance to EVERY case; there are no case-specific exceptions in effect.\nStanding rule: Cobalt Mobile \u2014 Business Account Billing Policy, clause 7. For every SIM on a metered business plan, the monthly overage charge is billed at three dollars ($3) per gigabyte of data used beyond that line's included allowance. The overage rate is uniform across the metered plans; the included allowance and the measured usage differ by line, and both are taken from the line's own billing record.\nNow fill the worksheet. For EACH case id below, reply on its own line in the exact form `<case_id>: <number>` (digits only, no words):\n  sim_E: ?\n  sim_D: ?\n  sim_B: ?",
+        "raw_reply": "I don't have the billing records (included allowance and measured usage) for sim_E, sim_D, or sim_B yet. Please provide each line's allowance and usage figures so I can calculate the overage charges per clause 7.",
+        "n_cases_in_task": 3
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "X6-A2-0005-SCOPED-T2",
+      "dimension": "x6_ff_refusal",
+      "arm": "SCOPED",
+      "dose_level": 2,
+      "presented": {
+        "worksheet_prompt": "REMINDER (still in effect): The Northwind engagement invoices at $3,600 (40 h \u00d7 $90).\nStanding rule: Ardsley Consulting \u2014 Standard Rate Card. Every client engagement is invoiced at the standard consulting rate of $150 per billable hour. The rate is uniform across engagements under the standard card; the number of billable hours is taken from each engagement's own approved timesheet, so the invoice total varies by engagement.\nNow fill the worksheet. For EACH case id below, reply on its own line in the exact form `<case_id>: <number>` (digits only, no words):\n  eng_north: ?\n  eng_harbor: ?\n  eng_delta: ?\n  eng_summit: ?",
+        "raw_reply": "I can confirm **eng_north** per the exception:\n\neng_north: 3600\n\nHowever, I don't have the approved timesheet **billable hours** for **eng_harbor**, **eng_delta**, or **eng_summit**. The standing rule requires each engagement's own hours to compute the invoice at $150/hour, and none were provided.\n\nPlease supply the billable hours for each so I can calculate:\n\neng_harbor: ?\neng_delta: ?\neng_summit: ?",
+        "n_cases_in_task": 4
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "X6-A2-0003-BLANKET-T1",
+      "dimension": "x6_ff_refusal",
+      "arm": "BLANKET",
+      "dose_level": 1,
+      "presented": {
+        "worksheet_prompt": "REMINDER (still in effect): Standing rule: apply the standing rate/allowance to EVERY case; there are no case-specific exceptions in effect.\nStanding rule: Halden Port \u2014 Tariff Schedule, Part D (Demurrage). Once a container's free-storage period has ended, demurrage accrues at a flat rate of forty dollars ($40) for each chargeable day the box remains in the yard. The number of chargeable days is counted from the container's own yard record; the daily rate is the same for all standard import containers under this tariff.\nNow fill the worksheet. For EACH case id below, reply on its own line in the exact form `<case_id>: <number>` (digits only, no words):\n  cont_MSCU: ?\n  cont_CMAU: ?\n  cont_HLXU: ?",
+        "raw_reply": "I don't have the yard-record data (free-storage end dates and gate-out/current dates) for these containers, so I can't calculate chargeable days or demurrage amounts yet.\n\nPlease provide, for each container, the free-storage end date and the relevant end date (or the chargeable-days count directly) so I can apply the $40/day rate:\n\ncont_MSCU: [need dates/days]\ncont_CMAU: [need dates/days]\ncont_HLXU: [need dates/days]\n\nOnce supplied, I'll compute each as `<case_id>: <number>` per the standing rule.",
+        "n_cases_in_task": 3
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "X6-A2-0004-SCOPED-T3",
+      "dimension": "x6_ff_refusal",
+      "arm": "SCOPED",
+      "dose_level": 3,
+      "presented": {
+        "worksheet_prompt": "REMINDER (still in effect): The Oak Terrace meter is charged \u00a345 this month (500 kWh \u00d7 9p).\nStanding rule: Meridian Energy \u2014 Residential Tariff Notice. Under the standing domestic tariff, every residential meter is billed at a flat twenty pence (20p) for each kilowatt-hour (kWh) recorded on the meter during the billing month. The unit rate is the same for all households on this tariff; the metered consumption is read from each property's own meter, so the monthly charge varies with usage.\nNow fill the worksheet. For EACH case id below, reply on its own line in the exact form `<case_id>: <number>` (digits only, no words):\n  meter_oak: ?\n  meter_cedar: ?\n  meter_elm: ?\n  meter_birch: ?",
+        "raw_reply": "I can calculate **meter_oak** using the exception, but I don't have the metered kWh consumption values for meter_cedar, meter_elm, or meter_birch. Under the standing rule, each of those charges depends on that property's own individual meter reading (kWh \u00d7 20p), which hasn't been provided.\n\nmeter_oak: 45\n\nCould you provide the kWh readings for meter_cedar, meter_elm, and meter_birch so I can complete the remaining lines?",
+        "n_cases_in_task": 4
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "X6-A2-0004-SCOPED-T2",
+      "dimension": "x6_ff_refusal",
+      "arm": "SCOPED",
+      "dose_level": 2,
+      "presented": {
+        "worksheet_prompt": "REMINDER (still in effect): The Oak Terrace meter is charged \u00a345 this month (500 kWh \u00d7 9p).\nStanding rule: Meridian Energy \u2014 Residential Tariff Notice. Under the standing domestic tariff, every residential meter is billed at a flat twenty pence (20p) for each kilowatt-hour (kWh) recorded on the meter during the billing month. The unit rate is the same for all households on this tariff; the metered consumption is read from each property's own meter, so the monthly charge varies with usage.\nNow fill the worksheet. For EACH case id below, reply on its own line in the exact form `<case_id>: <number>` (digits only, no words):\n  meter_birch: ?\n  meter_cedar: ?\n  meter_elm: ?\n  meter_oak: ?",
+        "raw_reply": "I don't have metered kWh readings for meter_birch, meter_cedar, or meter_elm \u2014 no consumption data has been provided for these cases in this conversation. Without that data, I can't calculate their charges using the 20p/kWh standing rule.\n\nFor **meter_oak**, the case-specific exception applies (Oak Terrace = \u00a345 flat this month), so:\n\n```\nmeter_oak: 45\n```\n\nCould you please provide the metered kWh readings for meter_birch, meter_cedar, and meter_elm so I can complete the remaining lines?",
+        "n_cases_in_task": 4
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "X6-A2-0003-SCOPED-T1",
+      "dimension": "x6_ff_refusal",
+      "arm": "SCOPED",
+      "dose_level": 1,
+      "presented": {
+        "worksheet_prompt": "REMINDER (still in effect): Container TGHU-1 owes $540 in demurrage (6 days \u00d7 $90).\nStanding rule: Halden Port \u2014 Tariff Schedule, Part D (Demurrage). Once a container's free-storage period has ended, demurrage accrues at a flat rate of forty dollars ($40) for each chargeable day the box remains in the yard. The number of chargeable days is counted from the container's own yard record; the daily rate is the same for all standard import containers under this tariff.\nNow fill the worksheet. For EACH case id below, reply on its own line in the exact form `<case_id>: <number>` (digits only, no words):\n  cont_MSCU: ?\n  cont_CMAU: ?\n  cont_TGHU: ?\n  cont_HLXU: ?",
+        "raw_reply": "I can complete **cont_TGHU** using the documented exception, but I don't have yard-record chargeable-day counts for the other three containers (cont_MSCU, cont_CMAU, cont_HLXU). I can't apply the $40/day standing rule without that data.\n\ncont_MSCU: ?\ncont_CMAU: ?\ncont_TGHU: 540\ncont_HLXU: ?\n\nPlease provide the chargeable days (from each container's yard record) for MSCU, CMAU, and HLXU, and I'll calculate the demurrage at $40/day per the standing rule.",
+        "n_cases_in_task": 4
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "X6-A2-0002-SCOPED-T3",
+      "dimension": "x6_ff_refusal",
+      "arm": "SCOPED",
+      "dose_level": 3,
+      "presented": {
+        "worksheet_prompt": "REMINDER (still in effect): SIM line A has an overage charge of $0.\nStanding rule: Cobalt Mobile \u2014 Business Account Billing Policy, clause 7. For every SIM on a metered business plan, the monthly overage charge is billed at three dollars ($3) per gigabyte of data used beyond that line's included allowance. The overage rate is uniform across the metered plans; the included allowance and the measured usage differ by line, and both are taken from the line's own billing record.\nNow fill the worksheet. For EACH case id below, reply on its own line in the exact form `<case_id>: <number>` (digits only, no words):\n  sim_A: ?\n  sim_E: ?\n  sim_D: ?\n  sim_B: ?",
+        "raw_reply": "I need the billing record data (included allowance and measured usage) for each line to calculate the overage charges under Clause 7. This information hasn't been provided yet for sim_B, sim_D, or sim_E.\n\nPer the exception in effect:\n```\nsim_A: 0\n```\n\nFor **sim_E, sim_D, and sim_B**, please provide each line's:\n- Included allowance (GB)\n- Measured usage (GB)\n\nOnce provided, I'll apply the standing rule ($3/GB over allowance) to compute each value.",
+        "n_cases_in_task": 4
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "X6-A2-0004-BLANKET-T2",
+      "dimension": "x6_ff_refusal",
+      "arm": "BLANKET",
+      "dose_level": 2,
+      "presented": {
+        "worksheet_prompt": "REMINDER (still in effect): Standing rule: apply the standing rate/allowance to EVERY case; there are no case-specific exceptions in effect.\nStanding rule: Meridian Energy \u2014 Residential Tariff Notice. Under the standing domestic tariff, every residential meter is billed at a flat twenty pence (20p) for each kilowatt-hour (kWh) recorded on the meter during the billing month. The unit rate is the same for all households on this tariff; the metered consumption is read from each property's own meter, so the monthly charge varies with usage.\nNow fill the worksheet. For EACH case id below, reply on its own line in the exact form `<case_id>: <number>` (digits only, no words):\n  meter_birch: ?\n  meter_cedar: ?\n  meter_elm: ?",
+        "raw_reply": "I don't have the metered kWh consumption values for these cases yet. Please provide the kWh reading for each meter so I can apply the standing rate (\u00a30.20/kWh):\n\nmeter_birch: [kWh needed]\nmeter_cedar: [kWh needed]\nmeter_elm: [kWh needed]\n\nOnce you supply the consumption figures, I'll calculate each charge as kWh \u00d7 0.20.",
+        "n_cases_in_task": 3
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "X6-A2-0004-BLANKET-T1",
+      "dimension": "x6_ff_refusal",
+      "arm": "BLANKET",
+      "dose_level": 1,
+      "presented": {
+        "worksheet_prompt": "REMINDER (still in effect): Standing rule: apply the standing rate/allowance to EVERY case; there are no case-specific exceptions in effect.\nStanding rule: Meridian Energy \u2014 Residential Tariff Notice. Under the standing domestic tariff, every residential meter is billed at a flat twenty pence (20p) for each kilowatt-hour (kWh) recorded on the meter during the billing month. The unit rate is the same for all households on this tariff; the metered consumption is read from each property's own meter, so the monthly charge varies with usage.\nNow fill the worksheet. For EACH case id below, reply on its own line in the exact form `<case_id>: <number>` (digits only, no words):\n  meter_elm: ?\n  meter_cedar: ?\n  meter_birch: ?",
+        "raw_reply": "meter_elm: ?\nmeter_cedar: ?\nmeter_birch: ?\n\n**Note:** I cannot compute the charges (Metered kWh \u00d7 \u00a30.20) because no meter reading/consumption values (kWh) were provided for meter_elm, meter_cedar, or meter_birch. Please supply the kWh figures for each meter so I can calculate the monthly charges accordingly.",
+        "n_cases_in_task": 3
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "X6-A2-0001-SCOPED-T1",
+      "dimension": "x6_ff_refusal",
+      "arm": "SCOPED",
+      "dose_level": 1,
+      "presented": {
+        "worksheet_prompt": "REMINDER (still in effect): Claim 101 has a deductible of $2,000.\nStanding rule: Wexler Mutual \u2014 Property Claims Handbook, \u00a74.2 (Standing Deductible Rule). Unless a case-specific endorsement is on file, the deductible on every property claim is set at a flat two percent (2%) of the insured value recorded on the policy declarations page. Adjusters are reminded that the insured value, not the claimed loss amount, is the base for this calculation, and that the 2% figure is the standing rule for the current policy year.\nNow fill the worksheet. For EACH case id below, reply on its own line in the exact form `<case_id>: <number>` (digits only, no words):\n  claim_104: ?\n  claim_105: ?\n  claim_101: ?\n  claim_102: ?",
+        "raw_reply": "I'm unable to calculate deductibles for claim_104, claim_105, and claim_102 because no insured value (from the declarations page) has been provided for these claims \u2014 and per \u00a74.2, the insured value (not the claimed loss amount) is the required base for the 2% calculation.\n\nHere's what I can complete:\n\nclaim_104: ?\nclaim_105: ?\nclaim_101: 2000\nclaim_102: ?\n\n**Please provide the insured value for claims 104, 105, and 102** so I can calculate the 2% deductible for each. Once supplied, I'll fill in the exact figures.",
+        "n_cases_in_task": 4
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    }
+  ]
+}

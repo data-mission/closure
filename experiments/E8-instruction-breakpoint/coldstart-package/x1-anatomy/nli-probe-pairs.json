@@ -1,0 +1,83 @@
+{
+  "n_probes": 3,
+  "nli_model": "MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli",
+  "revision": "b3546ea6b0346eb6f8d5d68b13c7dc6d0376b3d7",
+  "threshold": 0.7,
+  "scalar": "max over premises of bidirectional avg of (P(entail)-P(contradict)+1)/2",
+  "runner": "run on Mini GPU via the frozen NLIScorer; DO NOT run locally",
+  "probes": [
+    {
+      "task_id": "A3-C-0419-C1",
+      "item_idx": 0,
+      "stale_hypothesis": "The delivery exceeds Silo 4's remaining free capacity, so it may not be received into the silo as is.",
+      "correct_final_state": "32 vs 35 -> within; 16.5 vs 14 -> violates; 32 vs 20 -> violates",
+      "premises": [
+        "The delivery cannot be received and stored as planned: although the corrected free capacity of 35 tonnes in Silo 4 is now sufficient for the 32-tonne load, the wheat's 16.5% moisture content exceeds the 14% storage cap and must first pass through the dryer, and the 32-tonne load cannot be unloaded within the 1-hour slot given the auger's 20-tonne-per-hour throughput, so both the moisture rule and the yard scheduling policy stop the delivery from proceeding as planned.",
+        "Document [4] corrects document [1] by updating Silo 4's free capacity from 25 tonnes to 35 tonnes after an overnight transfer to the export loading bay.",
+        "The 25-tonne free capacity figure from document [1] is now superseded and treated as false.",
+        "Silo 4's current free capacity is 35 tonnes.",
+        "Today's delivery is 32 tonnes of wheat.",
+        "Since 32 tonnes is less than or equal to the 35-tonne free capacity, the delivery does not exceed Silo 4's structural fill limit under intake policy.",
+        "Storage rules cap incoming wheat moisture content at 14% for long-term storage in Silo 4 without additional drying.",
+        "The grower's delivery docket lists a lab-tested moisture content of 16.5%, which exceeds the 14% cap.",
+        "Storage rules state wheat above the moisture cap may not be binned without passing through the dryer first, so this delivery cannot be binned directly into Silo 4.",
+        "The intake auger serving Silo 4 is rated for a maximum throughput of 20 tonnes per hour.",
+        "At 20 tonnes per hour, unloading the full 32-tonne load requires 1.6 hours, exceeding the 1-hour unloading slot.",
+        "Yard policy states a delivery may not be booked into a slot shorter than its throughput-determined unloading time, so the 1-hour slot violates yard policy for this 32-tonne load.",
+        "Even though the capacity constraint is now satisfied due to the corrected free capacity figure, the moisture content violation and the auger throughput/slot violation remain unresolved and independently block the delivery as planned."
+      ],
+      "stale_computed": 4.0,
+      "note": "score max-over-premises bidirectional NLI of stale_hypothesis; compare to a corrected-sentence hypothesis built from correct_final_state. stale>=corrected => real contamination; corrected>stale => instrument false positive."
+    },
+    {
+      "task_id": "A3-C-0417-C1",
+      "item_idx": 0,
+      "stale_hypothesis": "The new rack's heat load exceeds Row 6's spare cooling margin, so it may not be energised as planned.",
+      "correct_final_state": "18 vs 20 -> within; 23 vs 18 -> violates; 9 vs 15 -> violates",
+      "premises": [
+        "The new rack cannot be brought online in Row 6 as planned; although the corrected 20 kW spare cooling margin now covers the 18 kW heat load, the rack is still blocked by the supply-air temperature at 23\u00b0C exceeding the 18\u00b0C maximum and the under-floor static pressure at 9 pascals being below the required 15 pascals minimum.",
+        "A new rack of 40 blade servers adds a fixed heat load of 18 kW to Row 6.",
+        "Document 4 corrects the earlier statement that Row 6's spare cooling margin is 12 kW, raising it to 20 kW after an additional CRAC unit was commissioned.",
+        "The original 12 kW spare cooling margin figure from document 1 is now superseded and treated as false.",
+        "With the corrected 20 kW spare cooling margin, the 18 kW additional heat load from the new rack does not exceed Row 6's spare cooling capacity margin.",
+        "Facilities policy states a rack may not be energised if its heat load exceeds the row's spare cooling margin, and this condition is now satisfied given the corrected 20 kW margin.",
+        "The CRAC units serving Row 6 are rated for a maximum supply-air temperature of 18\u00b0C.",
+        "A sensor fault currently has the CRAC units supplying air at 23\u00b0C, which exceeds the rated maximum of 18\u00b0C.",
+        "Facilities policy states a rack may not be energised while supply-air temperature exceeds the rated maximum, and this condition is currently violated.",
+        "Row 6's under-floor plenum requires a minimum static pressure of 15 pascals.",
+        "A blocked floor tile has caused the current under-floor static pressure reading to be only 9 pascals, below the required minimum.",
+        "Facilities policy states a rack may not be energised while under-floor pressure is below the minimum requirement, and this condition is currently violated."
+      ],
+      "stale_computed": 6.0,
+      "note": "score max-over-premises bidirectional NLI of stale_hypothesis; compare to a corrected-sentence hypothesis built from correct_final_state. stale>=corrected => real contamination; corrected>stale => instrument false positive."
+    },
+    {
+      "task_id": "A3-C-0501-C2",
+      "item_idx": 1,
+      "stale_hypothesis": "The maize dried by the drying line is 120 tonnes, which fits within the 140 tonnes dryer throughput capacity.",
+      "correct_final_state": "total2=152 tonnes (corr2 applied) vs capacity 140 tonnes; total1 still 504 tonnes; season's diesel allowance for the drying line still $9,000.",
+      "premises": [
+        "With the corrected yields, the barley harvest is 504 tonnes (falling short of the required 552-tonne contract) and the maize dried is 152 tonnes (exceeding the 140-tonne dryer capacity), so both of these requirements fail, while only the diesel budget requirement ($9,000 against a required minimum of $8,200) is met.",
+        "Millbrook Farms is harvesting 120 hectares of barley this season.",
+        "The original agronomy report stating barley yields 5.0 tonnes per hectare has been superseded and is treated as false.",
+        "The revised agronomy report states barley yields 4.2 tonnes per hectare this season.",
+        "Barley harvest is calculated as per-hectare yield multiplied by hectares.",
+        "Using the corrected yield, barley harvest equals 4.2 tonnes/hectare x 120 hectares = 504 tonnes.",
+        "The contract requires a delivery of 552 tonnes, and delivery below that fails the contract.",
+        "504 tonnes is less than the required 552 tonnes, so the barley harvest requirement fails.",
+        "The drying line has 40 bins.",
+        "The original drying-line report stating each bin dries 3.0 tonnes of maize has been superseded and is treated as false.",
+        "The revised drying-line report states each bin dries 3.8 tonnes of maize per bin this run.",
+        "Maize dried is calculated as per-bin yield multiplied by number of bins.",
+        "Using the corrected rate, maize dried equals 3.8 tonnes/bin x 40 bins = 152 tonnes.",
+        "Dryer throughput capacity is capped at 140 tonnes.",
+        "152 tonnes exceeds the 140-tonne capacity cap, so the maize drying requirement fails.",
+        "This season's diesel allowance for the drying line is $9,000.",
+        "The minimum diesel budget required to complete the run is $8,200.",
+        "$9,000 meets the minimum required budget of $8,200, so the diesel budget requirement passes."
+      ],
+      "stale_computed": 120.0,
+      "note": "score max-over-premises bidirectional NLI of stale_hypothesis; compare to a corrected-sentence hypothesis built from correct_final_state. stale>=corrected => real contamination; corrected>stale => instrument false positive."
+    }
+  ]
+}

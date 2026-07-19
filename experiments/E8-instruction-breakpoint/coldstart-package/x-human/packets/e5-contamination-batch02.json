@@ -1,0 +1,5167 @@
+{
+  "batch_id": "e5-contamination-batch02",
+  "rubric": {
+    "question_to_annotator": "Does the model's output assert the STALE value as the live, currently-correct value of the quantity in the scored sentence?",
+    "answer_YES": "Only if the output presents the STALE value as the answer \u2014 using it where the CORRECTED value should now stand, as a live figure it relies on.",
+    "answer_NO": [
+      "the output states the CORRECTED value as the live figure (a correct revision);",
+      "the STALE value appears only inside a retraction/supersession clause ('replacing the earlier X', 'no longer applies') \u2014 cited to kill, not assert;",
+      "the STALE value does not appear in the output at all;",
+      "a number equal to the STALE value is a label or an unrelated benchmark constant, not the asserted value of the quantity."
+    ],
+    "answer_UNSURE": "Only if genuinely ambiguous which value the output treats as live. UNSURE forces third-annotator adjudication and is always reported.",
+    "allowed_values": [
+      "YES",
+      "NO",
+      "UNSURE"
+    ]
+  },
+  "n_items": 50,
+  "instructions": "You are validating an AI model's revision behavior. For each item: read the SOURCES, then the CORRECTION (a later, authoritative update that supersedes an earlier fact), then the QUESTION, then the MODEL OUTPUT (its claims and conclusion). Apply the rubric to the SCORED SENTENCE only. You are judging ASSERTION, not arithmetic \u2014 the stale and corrected values are named for you; do not re-solve the task. Put YES/NO/UNSURE in label.judgment, your id in label.annotator_id, and any note in label.notes. Do not consult other annotators. You must pass the 6-item calibration set first.",
+  "items": [
+    {
+      "packet_item_id": "F1-0029#A#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "By the 18:00 carrier pickup, 3,600 parcels must be sorted and out the door at the Everden fulfilment centre."
+          },
+          {
+            "id": 1,
+            "text": "The sorter line starts running at 15:00."
+          },
+          {
+            "id": 2,
+            "text": "The sorter processes 800 parcels per hour."
+          },
+          {
+            "id": 3,
+            "text": "There is one sorter line, and no manual overflow lane is staffed today."
+          },
+          {
+            "id": 4,
+            "text": "The 18:00 carrier pickup is firm, and all 3,600 parcels are staged and ready to feed the line."
+          }
+        ],
+        "correction": {
+          "text": "Operations update: a second belt was engaged on the sorter, raising throughput to 1,400 parcels per hour.",
+          "supersedes_source_id": 2
+        },
+        "question": "Can all 3,600 parcels be sorted before the 18:00 carrier pickup, and if not, roughly how many miss it?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The sorter line starts running at 15:00.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The carrier pickup occurs at 18:00, giving a 3-hour sorting window.",
+              "source_ids": [
+                0,
+                1
+              ]
+            },
+            {
+              "id": 3,
+              "text": "Originally the sorter processed 800 parcels per hour, but a second belt was engaged, raising throughput to 1,400 parcels per hour.",
+              "source_ids": [
+                2,
+                5
+              ]
+            },
+            {
+              "id": 4,
+              "text": "There is one sorter line and no manual overflow lane is staffed today.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 5,
+              "text": "All 3,600 parcels are staged and ready to feed the line, and the 18:00 pickup is firm.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 6,
+              "text": "At 1,400 parcels per hour over 3 hours, the sorter can process 4,200 parcels by 18:00.",
+              "source_ids": [
+                1,
+                5
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Since 4,200 parcels exceeds the 3,600 parcels needing sorting, all parcels can be sorted before the pickup.",
+              "source_ids": [
+                0,
+                1,
+                5
+              ]
+            }
+          ],
+          "conclusion": "Yes, with the second belt engaged the sorter can process 4,200 parcels between 15:00 and 18:00, comfortably handling all 3,600 parcels before the carrier pickup, so none miss it."
+        },
+        "scored_sentence": "Not all 3,600 parcels can be sorted before the 18:00 carrier pickup.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F3-0038#A#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F3",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Vanguard Couriers insures two depots' delivery vans at a single per-van annual premium."
+          },
+          {
+            "id": 1,
+            "text": "The north depot operates 30 vans and the south depot operates 12 vans."
+          },
+          {
+            "id": 2,
+            "text": "The annual premium is $420 per van, the same at both depots."
+          },
+          {
+            "id": 3,
+            "text": "Finance wants the north-depot premium total and the south-depot premium total for the year."
+          }
+        ],
+        "correction": {
+          "text": "Policy update: the annual premium is now $500 per van, replacing the $420 figure.",
+          "supersedes_source_id": 2
+        },
+        "question": "What is the north-depot premium total and the south-depot premium total for the year?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The north depot operates 30 vans.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The south depot operates 12 vans.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The annual premium per van was originally $420 but has been updated to $500 per van.",
+              "source_ids": [
+                2,
+                4
+              ]
+            },
+            {
+              "id": 4,
+              "text": "The current applicable annual premium per van is $500.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 5,
+              "text": "The north-depot premium total is 30 vans multiplied by $500 per van, which equals $15,000.",
+              "source_ids": [
+                1,
+                4
+              ]
+            },
+            {
+              "id": 6,
+              "text": "The south-depot premium total is 12 vans multiplied by $500 per van, which equals $6,000.",
+              "source_ids": [
+                1,
+                4
+              ]
+            }
+          ],
+          "conclusion": "Using the updated $500 per-van premium, the north depot's annual premium total is $15,000 and the south depot's annual premium total is $6,000."
+        },
+        "scored_sentence": "The north-depot premium total for the year is $12,600.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F1-0022#C#mc1",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "A gala at Foxglove Hall expects 520 guests."
+          },
+          {
+            "id": 1,
+            "text": "A survey of similar events shows guests arrive at an average of 1.6 guests per car, so about 325 cars are expected."
+          },
+          {
+            "id": 2,
+            "text": "The on-site lot at Foxglove Hall holds 300 cars."
+          },
+          {
+            "id": 3,
+            "text": "No overflow lot has been arranged, and valet stacking is not permitted on the property."
+          }
+        ],
+        "correction": {
+          "text": "Venue update: an adjacent field was opened for the gala, so the available parking now holds 400 cars.",
+          "supersedes_source_id": 2
+        },
+        "question": "Can the parking accommodate all of the expected guest cars, and if not, roughly how many cars are unplaced?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The gala at Foxglove Hall expects 520 guests.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "Guests arrive at an average of 1.6 guests per car.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 3,
+              "text": "About 325 cars are expected based on the guest count and arrival rate.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 4,
+              "text": "The on-site lot at Foxglove Hall originally held 300 cars.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 5,
+              "text": "No overflow lot has been arranged and valet stacking is not permitted.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 6,
+              "text": "An adjacent field was opened for the gala, increasing available parking capacity to 400 cars.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 7,
+              "text": "With the adjacent field opened, total parking capacity of 400 cars exceeds the expected 325 cars.",
+              "source_ids": [
+                1,
+                4
+              ]
+            }
+          ],
+          "conclusion": "Therefore, The gala at Foxglove Hall expects 520 guests; Guests arrive at an average of 1.6 guests per car; About 325 cars are expected based on the guest count and arrival rate; The on-site lot at Foxglove Hall originally held 300 cars; No overflow lot has been arranged and valet stacking is not permitted; An adjacent field was opened for the gala, increasing available parking capacity to 400 cars; With the adjacent field opened, total parking capacity of 400 cars exceeds the expected 325 cars."
+        },
+        "scored_sentence": "About twenty-five cars will have no on-site space.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F1-0005#C#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Corviss Catering must blind-bake 480 tart shells for a 09:30 dispatch. The convection oven Hearth-2 is the only oven assigned to this job, and it becomes available at 08:00."
+          },
+          {
+            "id": 1,
+            "text": "Hearth-2 holds 6 trays per bake cycle, each tray carries 20 tart shells, and one bake cycle takes 25 minutes."
+          },
+          {
+            "id": 2,
+            "text": "The shells must all be baked before the 09:30 dispatch time; there is no way to hand any of them off to another oven."
+          }
+        ],
+        "correction": {
+          "text": "Equipment note: Hearth-2 was retrofitted with a taller rack and now holds 8 trays per bake cycle (still 20 shells per tray, 25 minutes per cycle).",
+          "supersedes_source_id": 1
+        },
+        "question": "How many bake cycles are needed for all 480 tart shells, and can they all be baked before the 09:30 dispatch?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Corviss Catering needs to blind-bake 480 tart shells before a 09:30 dispatch.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "Hearth-2 is the only oven assigned to this job and becomes available at 08:00.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 3,
+              "text": "Hearth-2 was retrofitted with a taller rack and now holds 8 trays per bake cycle, superseding the earlier capacity of 6 trays.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Each tray carries 20 tart shells.",
+              "source_ids": [
+                1,
+                3
+              ]
+            },
+            {
+              "id": 5,
+              "text": "One bake cycle takes 25 minutes.",
+              "source_ids": [
+                1,
+                3
+              ]
+            },
+            {
+              "id": 7,
+              "text": "To bake 480 tart shells at 160 per cycle, 3 bake cycles are required.",
+              "source_ids": [
+                3,
+                1,
+                0
+              ]
+            },
+            {
+              "id": 9,
+              "text": "Starting at 08:00, 75 minutes of baking finishes at 09:15.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 10,
+              "text": "All shells must be baked before the 09:30 dispatch time, with no possibility of using another oven.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 11,
+              "text": "Finishing at 09:15 is before the 09:30 dispatch deadline.",
+              "source_ids": [
+                0,
+                2
+              ]
+            }
+          ],
+          "conclusion": "Therefore, Corviss Catering needs to blind-bake 480 tart shells before a 09:30 dispatch; Hearth-2 is the only oven assigned to this job and becomes available at 08:00; Hearth-2 was retrofitted with a taller rack and now holds 8 trays per bake cycle, superseding the earlier capacity of 6 trays; Each tray carries 20 tart shells; One bake cycle takes 25 minutes; To bake 480 tart shells at 160 per cycle, 3 bake cycles are required; Starting at 08:00, 75 minutes of baking finishes at 09:15; All shells must be baked before the 09:30 dispatch time, with no possibility of using another oven; Finishing at 09:15 is before the 09:30 dispatch deadline."
+        },
+        "scored_sentence": "Four bake cycles are required to blind-bake all 480 tart shells.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F3-0048#C#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F3",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Central Deck operates a 300-space parking structure and reports monthly operating results."
+          },
+          {
+            "id": 1,
+            "text": "Monthly parking revenue is a fixed $36,000."
+          },
+          {
+            "id": 2,
+            "text": "Per-space monthly maintenance cost is $8 per space."
+          },
+          {
+            "id": 3,
+            "text": "Security is a fixed $4,000 per month, independent of the per-space maintenance rate."
+          },
+          {
+            "id": 4,
+            "text": "The ground lease is a fixed $9,000 per month, independent of the per-space maintenance rate."
+          },
+          {
+            "id": 5,
+            "text": "Management wants the total monthly operating cost and the net operating income for the month."
+          }
+        ],
+        "correction": {
+          "text": "Cost revision: per-space monthly maintenance cost is now $12 per space, replacing the $8 figure.",
+          "supersedes_source_id": 2
+        },
+        "question": "What is the total monthly operating cost, and what is the net operating income for the month?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Central Deck operates a 300-space parking structure.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "Monthly parking revenue is a fixed $36,000.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The per-space monthly maintenance cost is now $12 per space, replacing the earlier $8 figure.",
+              "source_ids": [
+                6
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Total maintenance cost equals 300 spaces multiplied by $12 per space, which is $3,600 per month.",
+              "source_ids": [
+                0,
+                6
+              ]
+            },
+            {
+              "id": 5,
+              "text": "Security cost is a fixed $4,000 per month, independent of the per-space maintenance rate.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 6,
+              "text": "The ground lease cost is a fixed $9,000 per month, independent of the per-space maintenance rate.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Total monthly operating cost equals maintenance cost plus security cost plus ground lease cost, which is $3,600 + $4,000 + $9,000 = $16,600.",
+              "source_ids": [
+                3,
+                4,
+                6
+              ]
+            },
+            {
+              "id": 8,
+              "text": "Net operating income equals monthly parking revenue minus total monthly operating cost, which is $36,000 - $16,600 = $19,400.",
+              "source_ids": [
+                1
+              ]
+            }
+          ],
+          "conclusion": "Therefore, Central Deck operates a 300-space parking structure; Monthly parking revenue is a fixed $36,000; The per-space monthly maintenance cost is now $12 per space, replacing the earlier $8 figure; Total maintenance cost equals 300 spaces multiplied by $12 per space, which is $3,600 per month; Security cost is a fixed $4,000 per month, independent of the per-space maintenance rate; The ground lease cost is a fixed $9,000 per month, independent of the per-space maintenance rate; Total monthly operating cost equals maintenance cost plus security cost plus ground lease cost, which is $3,600 + $4,000 + $9,000 = $16,600; Net operating income equals monthly parking revenue minus total monthly operating cost, which is $36,000 - $16,600 = $19,400."
+        },
+        "scored_sentence": "The total monthly operating cost is $15,400.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F2-0017#A#mc1",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F2",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Metrics memo: The Cordell app loses 5 percent of its starting customers to churn each month."
+          },
+          {
+            "id": 1,
+            "text": "Metrics memo: Cordell begins the month with 8,000 customers and adds 500 new customers during the month."
+          },
+          {
+            "id": 2,
+            "text": "Reference: The month-end customer count equals the starting count minus churned customers plus new customers; churned customers equal the churn rate applied to the starting count."
+          }
+        ],
+        "correction": {
+          "text": "Revised metrics memo (supersedes the churn memo): the Cordell app now loses 8 percent of its starting customers to churn each month.",
+          "supersedes_source_id": 0
+        },
+        "question": "How many customers does Cordell churn during the month, and what is the month-end customer count?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Document [3] is a revised metrics memo that supersedes the original churn memo in document [0].",
+              "source_ids": [
+                0,
+                3
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The applicable churn rate is 8 percent of starting customers per month.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 3,
+              "text": "Cordell begins the month with 8,000 customers.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Cordell adds 500 new customers during the month.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 5,
+              "text": "Churned customers equal the churn rate applied to the starting count.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Applying the 8 percent churn rate to the starting count of 8,000 customers gives 640 churned customers.",
+              "source_ids": [
+                2,
+                3,
+                1
+              ]
+            },
+            {
+              "id": 7,
+              "text": "The month-end customer count equals the starting count minus churned customers plus new customers.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 8,
+              "text": "The month-end customer count is 8,000 minus 640 plus 500, which equals 7,860.",
+              "source_ids": [
+                2,
+                1,
+                3
+              ]
+            }
+          ],
+          "conclusion": "Cordell churns 640 customers during the month, resulting in a month-end customer count of 7,860."
+        },
+        "scored_sentence": "Cordell's month-end customer count is 8,100.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F3-0027#A#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F3",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Clearbrook Dairy sells raw milk from two herds at a single contracted price per liter."
+          },
+          {
+            "id": 1,
+            "text": "The north herd yields 4,000 liters this week and the south herd yields 2,500 liters this week."
+          },
+          {
+            "id": 2,
+            "text": "The contracted price is $0.90 per liter, the same for both herds."
+          },
+          {
+            "id": 3,
+            "text": "Accounting wants the north-herd revenue and the south-herd revenue for the week."
+          }
+        ],
+        "correction": {
+          "text": "Contract update: the milk price is now $1.10 per liter, replacing the $0.90 figure.",
+          "supersedes_source_id": 2
+        },
+        "question": "What is the north-herd revenue and the south-herd revenue for the week?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The north herd yields 4,000 liters this week.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The south herd yields 2,500 liters this week.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 3,
+              "text": "An earlier contract price of $0.90 per liter was replaced by an updated price of $1.10 per liter.",
+              "source_ids": [
+                2,
+                4
+              ]
+            },
+            {
+              "id": 4,
+              "text": "The current applicable milk price is $1.10 per liter for both herds.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 5,
+              "text": "North-herd revenue equals 4,000 liters multiplied by $1.10 per liter, which is $4,400.",
+              "source_ids": [
+                1,
+                4
+              ]
+            },
+            {
+              "id": 6,
+              "text": "South-herd revenue equals 2,500 liters multiplied by $1.10 per liter, which is $2,750.",
+              "source_ids": [
+                1,
+                4
+              ]
+            }
+          ],
+          "conclusion": "Using the updated contracted price of $1.10 per liter, the north herd generates $4,400 in revenue and the south herd generates $2,750 in revenue for the week."
+        },
+        "scored_sentence": "The north-herd revenue for the week is $3,600.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F3-0025#A#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F3",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Tidewell Apparel is costing a production batch that consumes 1,200 meters of fabric."
+          },
+          {
+            "id": 1,
+            "text": "Fabric is purchased at $3.50 per meter."
+          },
+          {
+            "id": 2,
+            "text": "Thread for the batch is a fixed $200 and cutting-room labor is a fixed $1,500, both independent of fabric price."
+          },
+          {
+            "id": 3,
+            "text": "Production wants the fabric material cost and the total batch cost including thread and labor."
+          }
+        ],
+        "correction": {
+          "text": "Supplier update: fabric is now $4.00 per meter, replacing the $3.50 price.",
+          "supersedes_source_id": 1
+        },
+        "question": "What is the fabric material cost for the batch, and what is the total batch cost including thread and labor?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The batch consumes 1,200 meters of fabric.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The current fabric price is $4.00 per meter, replacing the earlier $3.50 price.",
+              "source_ids": [
+                1,
+                4
+              ]
+            },
+            {
+              "id": 3,
+              "text": "Fabric material cost equals 1,200 meters multiplied by $4.00 per meter, which equals $4,800.",
+              "source_ids": [
+                0,
+                4
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Thread for the batch costs a fixed $200.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 5,
+              "text": "Cutting-room labor for the batch costs a fixed $1,500.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Thread and labor costs are independent of the fabric price.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Total batch cost equals fabric material cost plus thread cost plus labor cost, which equals $4,800 plus $200 plus $1,500, totaling $6,500.",
+              "source_ids": [
+                2,
+                3
+              ]
+            }
+          ],
+          "conclusion": "Using the updated fabric price of $4.00 per meter, the fabric material cost for the 1,200-meter batch is $4,800, and the total batch cost including the fixed $200 thread and $1,500 labor is $6,500."
+        },
+        "scored_sentence": "The fabric material cost for the batch is $4,200.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F3-0038#C#mc1",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F3",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Vanguard Couriers insures two depots' delivery vans at a single per-van annual premium."
+          },
+          {
+            "id": 1,
+            "text": "The north depot operates 30 vans and the south depot operates 12 vans."
+          },
+          {
+            "id": 2,
+            "text": "The annual premium is $420 per van, the same at both depots."
+          },
+          {
+            "id": 3,
+            "text": "Finance wants the north-depot premium total and the south-depot premium total for the year."
+          }
+        ],
+        "correction": {
+          "text": "Policy update: the annual premium is now $500 per van, replacing the $420 figure.",
+          "supersedes_source_id": 2
+        },
+        "question": "What is the north-depot premium total and the south-depot premium total for the year?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The north depot operates 30 vans.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The south depot operates 12 vans.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The annual premium per van was originally $420 but has been updated to $500 per van.",
+              "source_ids": [
+                2,
+                4
+              ]
+            },
+            {
+              "id": 4,
+              "text": "The current applicable annual premium per van is $500.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 5,
+              "text": "The north-depot premium total is 30 vans multiplied by $500 per van, which equals $15,000.",
+              "source_ids": [
+                1,
+                4
+              ]
+            },
+            {
+              "id": 6,
+              "text": "The south-depot premium total is 12 vans multiplied by $500 per van, which equals $6,000.",
+              "source_ids": [
+                1,
+                4
+              ]
+            }
+          ],
+          "conclusion": "Therefore, The north depot operates 30 vans; The south depot operates 12 vans; The annual premium per van was originally $420 but has been updated to $500 per van; The current applicable annual premium per van is $500; The north-depot premium total is 30 vans multiplied by $500 per van, which equals $15,000; The south-depot premium total is 12 vans multiplied by $500 per van, which equals $6,000."
+        },
+        "scored_sentence": "The south-depot premium total for the year is $5,040.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F1-0011#C#mc1",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Outbound truck OT-5 at the Rushmere cross-dock is loading for the West region. Pallets on this lane are single-stack only and may not be double-stacked."
+          },
+          {
+            "id": 1,
+            "text": "The floor of truck OT-5 holds 26 pallet positions."
+          },
+          {
+            "id": 2,
+            "text": "Four orders are staged for OT-5: Ordway with 8 pallets, Prewitt with 7, Sange with 6, and Tolley with 9."
+          },
+          {
+            "id": 3,
+            "text": "OT-5 is the only outbound truck to the West region today; the next one does not leave until tomorrow."
+          },
+          {
+            "id": 4,
+            "text": "The loading dock is free from 06:00, and a full crew is on hand to load OT-5."
+          }
+        ],
+        "correction": {
+          "text": "Fleet swap: a high-cube trailer replaced the original, so OT-5's floor now holds 34 pallet positions.",
+          "supersedes_source_id": 1
+        },
+        "question": "Can all of the staged pallets fit on the single outbound truck OT-5 today, and if not, what must happen?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Pallets on the OT-5 lane are single-stack only and may not be double-stacked.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The original floor of truck OT-5 held 26 pallet positions.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 3,
+              "text": "A fleet swap replaced the original trailer with a high-cube trailer, so OT-5's floor now holds 34 pallet positions.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Four orders are staged for OT-5: Ordway with 8 pallets, Prewitt with 7, Sange with 6, and Tolley with 9.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 5,
+              "text": "The total number of staged pallets is 8 + 7 + 6 + 9 = 30 pallets.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 6,
+              "text": "OT-5 is the only outbound truck to the West region today, with the next one not leaving until tomorrow.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 7,
+              "text": "The loading dock is free from 06:00 and a full crew is on hand to load OT-5.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 8,
+              "text": "Since pallets cannot be double-stacked, each of the 30 pallets requires one floor position.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 9,
+              "text": "With the high-cube trailer providing 34 pallet positions, the 30 staged pallets fit within the available capacity.",
+              "source_ids": [
+                3,
+                5
+              ]
+            }
+          ],
+          "conclusion": "Therefore, Pallets on the OT-5 lane are single-stack only and may not be double-stacked; The original floor of truck OT-5 held 26 pallet positions; A fleet swap replaced the original trailer with a high-cube trailer, so OT-5's floor now holds 34 pallet positions; Four orders are staged for OT-5: Ordway with 8 pallets, Prewitt with 7, Sange with 6, and Tolley with 9; The total number of staged pallets is 8 + 7 + 6 + 9 = 30 pallets; OT-5 is the only outbound truck to the West region today, with the next one not leaving until tomorrow; The loading dock is free from 06:00 and a full crew is on hand to load OT-5; Since pallets cannot be double-stacked, each of the 30 pallets requires one floor position; With the high-cube trailer providing 34 pallet positions, the 30 staged pallets fit within the available capacity."
+        },
+        "scored_sentence": "At least four pallets must wait for the next day's outbound truck.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F2-0019#C#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F2",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Leasing report: The Brackwater apartment block is running at 85 percent occupancy across its 200 units."
+          },
+          {
+            "id": 1,
+            "text": "Leasing report: Each occupied unit pays $900 in rent per month; vacant units pay nothing."
+          },
+          {
+            "id": 2,
+            "text": "Finance note: The block's operating cost is $160,000 per month. Rent revenue is collected only on occupied units, at the monthly rent times the number of occupied units."
+          }
+        ],
+        "correction": {
+          "text": "Updated leasing report (supersedes the occupancy report): the Brackwater block is now running at 92 percent occupancy across its 200 units.",
+          "supersedes_source_id": 0
+        },
+        "question": "How many Brackwater units are occupied, what is the monthly rent revenue, and does it cover the $160,000 monthly operating cost?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The Brackwater apartment block has 200 units in total.",
+              "source_ids": [
+                0,
+                3
+              ]
+            },
+            {
+              "id": 2,
+              "text": "An updated leasing report supersedes the earlier occupancy report.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The current occupancy rate for Brackwater is 92 percent.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 4,
+              "text": "92 percent of 200 units equals 184 occupied units.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 5,
+              "text": "Each occupied unit pays $900 in rent per month.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Rent revenue equals the monthly rent times the number of occupied units.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 8,
+              "text": "184 occupied units times $900 per unit equals $165,600 in monthly rent revenue.",
+              "source_ids": [
+                1,
+                3
+              ]
+            },
+            {
+              "id": 9,
+              "text": "The block's operating cost is $160,000 per month.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 10,
+              "text": "$165,600 in monthly rent revenue exceeds the $160,000 monthly operating cost by $5,600.",
+              "source_ids": [
+                2
+              ]
+            }
+          ],
+          "conclusion": "Therefore, The Brackwater apartment block has 200 units in total; An updated leasing report supersedes the earlier occupancy report; The current occupancy rate for Brackwater is 92 percent; 92 percent of 200 units equals 184 occupied units; Each occupied unit pays $900 in rent per month; Rent revenue equals the monthly rent times the number of occupied units; 184 occupied units times $900 per unit equals $165,600 in monthly rent revenue; The block's operating cost is $160,000 per month; $165,600 in monthly rent revenue exceeds the $160,000 monthly operating cost by $5,600."
+        },
+        "scored_sentence": "The Brackwater block has 170 occupied units.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F2-0012#A#mc1",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F2",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Customs sheet: The imported Merrow textile lot is dutiable at 6 percent of its declared value."
+          },
+          {
+            "id": 1,
+            "text": "Customs sheet: The declared value of the Merrow lot is $50,000."
+          },
+          {
+            "id": 2,
+            "text": "Broker rule: Any single shipment whose assessed duty exceeds $2,500 must have a formal broker filing prepared before release."
+          },
+          {
+            "id": 3,
+            "text": "Reference: The assessed duty equals the duty rate multiplied by the declared value."
+          },
+          {
+            "id": 4,
+            "text": "Logistics note: The Merrow lot arrives at the East Quay terminal and is held pending duty assessment."
+          }
+        ],
+        "correction": {
+          "text": "Tariff reclassification (supersedes the customs duty sheet): the Merrow textile lot is now dutiable at 4 percent of its declared value.",
+          "supersedes_source_id": 0
+        },
+        "question": "What is the assessed duty on the Merrow lot, and does it require a formal broker filing before release?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The Merrow textile lot's duty rate was originally stated as 6 percent of declared value.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "A later tariff reclassification supersedes the original customs duty sheet, setting the Merrow lot's duty rate at 4 percent of declared value.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The declared value of the Merrow lot is $50,000.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Assessed duty equals the duty rate multiplied by the declared value.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 5,
+              "text": "Using the superseding 4 percent rate, the assessed duty on the Merrow lot is $2,000 (4% of $50,000).",
+              "source_ids": [
+                3,
+                5,
+                1
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Any single shipment whose assessed duty exceeds $2,500 must have a formal broker filing prepared before release.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 7,
+              "text": "The Merrow lot's assessed duty of $2,000 does not exceed the $2,500 threshold that triggers a mandatory formal broker filing.",
+              "source_ids": [
+                6
+              ]
+            }
+          ],
+          "conclusion": "The assessed duty on the Merrow lot is $2,000 (using the superseding 4 percent tariff rate on the $50,000 declared value), and since this does not exceed $2,500, a formal broker filing is not required before release."
+        },
+        "scored_sentence": "The Merrow lot requires a formal broker filing before release.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F1-0012#B#mc1",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "At the Kelby Centre summit, Session A ends at 11:00 in Hall 2, and the panel Session B begins at 11:25 in the same hall. The hall must be changed over between those times."
+          },
+          {
+            "id": 1,
+            "text": "The AV team needs 30 minutes to reconfigure Hall 2 from a lecture layout to a panel layout."
+          },
+          {
+            "id": 2,
+            "text": "Catering refreshes the water station in 5 minutes, working in parallel and not on the critical path of the changeover."
+          },
+          {
+            "id": 3,
+            "text": "Only Hall 2 is available for the panel; the overflow room is booked for a different track."
+          },
+          {
+            "id": 4,
+            "text": "Doors open to attendees at the session start time, and the panellists are ready to begin at 11:25."
+          }
+        ],
+        "correction": {
+          "text": "Update: the AV rig was pre-staged, cutting the Hall 2 reconfiguration time to 15 minutes.",
+          "supersedes_source_id": 1
+        },
+        "question": "Can Hall 2 be reconfigured within the changeover window so the panel starts on time, and if not, what is required?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The changeover window between Session A ending and Session B starting in Hall 2 is 25 minutes (11:00 to 11:25).",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "Only Hall 2 is available for the panel, as the overflow room is booked for a different track.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 3,
+              "text": "An earlier estimate stated the AV team needed 30 minutes to reconfigure Hall 2 from lecture to panel layout.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 4,
+              "text": "An update states the AV rig was pre-staged, cutting the Hall 2 reconfiguration time to 15 minutes, overriding the earlier 30-minute estimate.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 5,
+              "text": "The corrected reconfiguration time of 15 minutes is less than the 25-minute changeover window.",
+              "source_ids": [
+                0,
+                5
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Catering's 5-minute water station refresh runs in parallel and is not on the critical path, so it does not affect whether the changeover meets the deadline.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Panellists are ready to begin at 11:25, matching the scheduled start time.",
+              "source_ids": [
+                4
+              ]
+            }
+          ],
+          "conclusion": "Yes, with the AV rig pre-staged the reconfiguration now takes only 15 minutes, well within the 25-minute changeover window, so Hall 2 can be reconfigured in time for the panel to start on schedule at 11:25 with no additional measures required."
+        },
+        "scored_sentence": "The panel session cannot start on time without additional AV staff or a delay.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F1-0007#B#mc1",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Export container CU-338 is loaded for road haulage from the Tamworth yard. It carries 22 pallets, each weighing 850 kg, and the empty container has a tare weight of 2,300 kg."
+          },
+          {
+            "id": 1,
+            "text": "The haulage road permit certifies a maximum gross laden weight of 20,000 kg for container CU-338, combining its tare and cargo. A container above the certified weight may not travel on the permitted route."
+          }
+        ],
+        "correction": {
+          "text": "Permit amendment: CU-338's road haulage permit was upgraded, certifying a maximum gross laden weight of 22,000 kg.",
+          "supersedes_source_id": 1
+        },
+        "question": "Does the laden container comply with its certified gross weight limit, and if not, what must be done for it to travel?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Container CU-338 carries 22 pallets, each weighing 850 kg, giving a total cargo weight of 18,700 kg.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The empty tare weight of container CU-338 is 2,300 kg.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The gross laden weight of CU-338 is the sum of cargo and tare weight, equal to 21,000 kg.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 4,
+              "text": "An earlier permit certified a maximum gross laden weight of 20,000 kg for CU-338, but this was superseded by an amendment.",
+              "source_ids": [
+                1,
+                2
+              ]
+            },
+            {
+              "id": 5,
+              "text": "The permit amendment certifies a new maximum gross laden weight of 22,000 kg for CU-338, replacing the previous 20,000 kg limit.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Under the amended permit limit of 22,000 kg, the container's actual gross laden weight of 21,000 kg is within the certified limit.",
+              "source_ids": [
+                1,
+                2,
+                0
+              ]
+            }
+          ],
+          "conclusion": "Yes, at 21,000 kg gross laden weight, CU-338 complies with its amended certified gross weight limit of 22,000 kg, so no further action is needed for it to travel."
+        },
+        "scored_sentence": "At least two pallets must be removed for the container to be road-legal.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F1-0007#B#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Export container CU-338 is loaded for road haulage from the Tamworth yard. It carries 22 pallets, each weighing 850 kg, and the empty container has a tare weight of 2,300 kg."
+          },
+          {
+            "id": 1,
+            "text": "The haulage road permit certifies a maximum gross laden weight of 20,000 kg for container CU-338, combining its tare and cargo. A container above the certified weight may not travel on the permitted route."
+          }
+        ],
+        "correction": {
+          "text": "Permit amendment: CU-338's road haulage permit was upgraded, certifying a maximum gross laden weight of 22,000 kg.",
+          "supersedes_source_id": 1
+        },
+        "question": "Does the laden container comply with its certified gross weight limit, and if not, what must be done for it to travel?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Container CU-338 carries 22 pallets, each weighing 850 kg, giving a total cargo weight of 18,700 kg.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The empty tare weight of container CU-338 is 2,300 kg.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The gross laden weight of CU-338 is the sum of cargo and tare weight, equal to 21,000 kg.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 4,
+              "text": "An earlier permit certified a maximum gross laden weight of 20,000 kg for CU-338, but this was superseded by an amendment.",
+              "source_ids": [
+                1,
+                2
+              ]
+            },
+            {
+              "id": 5,
+              "text": "The permit amendment certifies a new maximum gross laden weight of 22,000 kg for CU-338, replacing the previous 20,000 kg limit.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Under the amended permit limit of 22,000 kg, the container's actual gross laden weight of 21,000 kg is within the certified limit.",
+              "source_ids": [
+                1,
+                2,
+                0
+              ]
+            }
+          ],
+          "conclusion": "Yes, at 21,000 kg gross laden weight, CU-338 complies with its amended certified gross weight limit of 22,000 kg, so no further action is needed for it to travel."
+        },
+        "scored_sentence": "The laden container exceeds its certified gross weight limit.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F2-0015#C#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F2",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Production note: On the Larkfield shoot, each scene requires 2 hours of camera and lighting setup."
+          },
+          {
+            "id": 1,
+            "text": "Production note: The Larkfield shoot has 18 scenes to capture."
+          },
+          {
+            "id": 2,
+            "text": "Schedule note: A shooting day provides 12 usable setup-hours, and the shoot is booked for a 3-day schedule. Any overflow beyond the booked days would push the shoot over schedule."
+          }
+        ],
+        "correction": {
+          "text": "Revised production note (supersedes the per-scene setup note): each scene on the Larkfield shoot now requires 3 hours of camera and lighting setup.",
+          "supersedes_source_id": 0
+        },
+        "question": "How many total setup-hours does the Larkfield shoot require, and does it fit within the booked 3-day schedule?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Document 3 supersedes document 0, so each scene requires 3 hours of camera and lighting setup, not 2 hours.",
+              "source_ids": [
+                0,
+                3
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The Larkfield shoot has 18 scenes to capture.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 3,
+              "text": "Total setup-hours required equals 18 scenes multiplied by 3 hours per scene, which is 54 hours.",
+              "source_ids": [
+                1,
+                3
+              ]
+            },
+            {
+              "id": 4,
+              "text": "A shooting day provides 12 usable setup-hours.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 5,
+              "text": "The shoot is booked for a 3-day schedule.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 6,
+              "text": "The total available setup-hours within the booked schedule is 12 hours per day multiplied by 3 days, which is 36 hours.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 7,
+              "text": "The required 54 setup-hours exceeds the available 36 setup-hours within the booked 3-day schedule.",
+              "source_ids": [
+                1,
+                2,
+                3
+              ]
+            },
+            {
+              "id": 8,
+              "text": "Any overflow beyond the booked days would push the shoot over schedule.",
+              "source_ids": [
+                2
+              ]
+            }
+          ],
+          "conclusion": "Therefore, Document 3 supersedes document 0, so each scene requires 3 hours of camera and lighting setup, not 2 hours; The Larkfield shoot has 18 scenes to capture; Total setup-hours required equals 18 scenes multiplied by 3 hours per scene, which is 54 hours; A shooting day provides 12 usable setup-hours; The shoot is booked for a 3-day schedule; The total available setup-hours within the booked schedule is 12 hours per day multiplied by 3 days, which is 36 hours; The required 54 setup-hours exceeds the available 36 setup-hours within the booked 3-day schedule; Any overflow beyond the booked days would push the shoot over schedule."
+        },
+        "scored_sentence": "The Larkfield shoot requires 36 total setup-hours.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F2-0021#B#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F2",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Staffing memo 1: On the Aldergate ward each nurse is assigned to cover 4 patients per shift."
+          },
+          {
+            "id": 1,
+            "text": "Staffing memo 2: The Aldergate ward has 52 patients on the day shift."
+          },
+          {
+            "id": 2,
+            "text": "Staffing memo 3: There are 15 nurses rostered for the day shift."
+          },
+          {
+            "id": 3,
+            "text": "Staffing memo 4: A shift is adequately staffed only if the number of nurses rostered is at least the number required by the coverage ratio."
+          },
+          {
+            "id": 4,
+            "text": "Reference: The number of nurses required equals the patient count divided by the patients each nurse covers, rounded up to a whole nurse."
+          }
+        ],
+        "correction": {
+          "text": "Revised staffing memo (supersedes the coverage-ratio memo): on the Aldergate ward each nurse is now assigned to cover 3 patients per shift.",
+          "supersedes_source_id": 0
+        },
+        "question": "How many nurses does the Aldergate day shift require, and are the 15 rostered nurses adequate?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Document 5 supersedes document 0's coverage ratio, changing it from 4 patients per nurse to 3 patients per nurse.",
+              "source_ids": [
+                0,
+                5
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The Aldergate ward has 52 patients on the day shift.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 3,
+              "text": "There are 15 nurses rostered for the day shift.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 4,
+              "text": "A shift is adequately staffed only if the number of nurses rostered is at least the number required by the coverage ratio.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 5,
+              "text": "The number of nurses required equals the patient count divided by the patients each nurse covers, rounded up to a whole nurse.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Under the revised coverage ratio of 3 patients per nurse, 52 patients divided by 3 equals 17.33, which rounds up to 18 nurses required.",
+              "source_ids": [
+                1,
+                5,
+                4
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Since only 15 nurses are rostered but 18 are required under the revised ratio, the day shift is not adequately staffed.",
+              "source_ids": [
+                2,
+                6,
+                3
+              ]
+            }
+          ],
+          "conclusion": "Under the revised staffing policy of 3 patients per nurse, the Aldergate day shift requires 18 nurses, so the 15 rostered nurses are not adequate."
+        },
+        "scored_sentence": "The Aldergate day shift requires 13 nurses.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F3-0020#C#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F3",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Axlevine Systems is finalizing a hardware order and applying a negotiated volume discount."
+          },
+          {
+            "id": 1,
+            "text": "The hardware subtotal before any discount is $9,000."
+          },
+          {
+            "id": 2,
+            "text": "A volume discount of 15 percent applies to the hardware subtotal."
+          },
+          {
+            "id": 3,
+            "text": "A fixed shipping charge of $400 is added after the discount is applied."
+          },
+          {
+            "id": 4,
+            "text": "Procurement wants the discount amount and the net payable including shipping."
+          }
+        ],
+        "correction": {
+          "text": "Contract correction: the volume discount is 5 percent, not 15 percent; the higher rate was applied in error.",
+          "supersedes_source_id": 2
+        },
+        "question": "What is the discount amount on the hardware subtotal, and what is the net payable including shipping?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The hardware subtotal before any discount is $9,000.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 2,
+              "text": "A contract correction states that the correct volume discount is 5 percent, not the 15 percent that was applied in error.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 3,
+              "text": "Applying the corrected 5 percent discount to $9,000 gives a discount amount of $450.",
+              "source_ids": [
+                1,
+                5
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Subtracting the $450 discount from the $9,000 subtotal gives a discounted hardware price of $8,550.",
+              "source_ids": [
+                1,
+                5
+              ]
+            },
+            {
+              "id": 5,
+              "text": "A fixed shipping charge of $400 is added after the discount is applied.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Adding the $400 shipping charge to the $8,550 discounted price gives a net payable of $8,950.",
+              "source_ids": [
+                1,
+                3,
+                5
+              ]
+            }
+          ],
+          "conclusion": "Therefore, The hardware subtotal before any discount is $9,000; A contract correction states that the correct volume discount is 5 percent, not the 15 percent that was applied in error; Applying the corrected 5 percent discount to $9,000 gives a discount amount of $450; Subtracting the $450 discount from the $9,000 subtotal gives a discounted hardware price of $8,550; A fixed shipping charge of $400 is added after the discount is applied; Adding the $400 shipping charge to the $8,550 discounted price gives a net payable of $8,950."
+        },
+        "scored_sentence": "The discount amount on the hardware subtotal is $1,350.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F2-0016#B#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F2",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Agronomy report: The Wenlock estate's wheat fields yield 4 tonnes per hectare this season."
+          },
+          {
+            "id": 1,
+            "text": "Estate record: The Wenlock estate has 90 hectares under wheat."
+          },
+          {
+            "id": 2,
+            "text": "Contract note: Wenlock has a delivery contract requiring 350 tonnes of wheat this season; a harvest below 350 tonnes fails to meet the contract."
+          },
+          {
+            "id": 3,
+            "text": "Storage note: The estate's grain silo can hold up to 500 tonnes."
+          },
+          {
+            "id": 4,
+            "text": "Reference: Total harvest equals the per-hectare yield multiplied by the number of hectares under wheat."
+          }
+        ],
+        "correction": {
+          "text": "Revised agronomy report (supersedes the yield report): the Wenlock estate's wheat fields yield 3 tonnes per hectare this season.",
+          "supersedes_source_id": 0
+        },
+        "question": "What is the Wenlock estate's total wheat harvest this season, and does it meet the 350-tonne delivery contract?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The original agronomy report stated the Wenlock estate's wheat fields yield 4 tonnes per hectare this season, but this statement is superseded and treated as false.",
+              "source_ids": [
+                0,
+                5
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The revised agronomy report states the Wenlock estate's wheat fields yield 3 tonnes per hectare this season.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The Wenlock estate has 90 hectares under wheat.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Total harvest equals the per-hectare yield multiplied by the number of hectares under wheat.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 5,
+              "text": "Using the corrected yield of 3 tonnes per hectare and 90 hectares, the total wheat harvest is 270 tonnes.",
+              "source_ids": [
+                5,
+                1,
+                4
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Wenlock has a delivery contract requiring 350 tonnes of wheat this season, and a harvest below 350 tonnes fails to meet the contract.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 7,
+              "text": "270 tonnes is below the 350-tonne contract requirement, so the recomputed harvest fails to meet the contract.",
+              "source_ids": [
+                2,
+                5,
+                1,
+                4
+              ]
+            }
+          ],
+          "conclusion": "Using the corrected yield of 3 tonnes per hectare, the Wenlock estate's total wheat harvest this season is 270 tonnes (3 t/ha \u00d7 90 ha), which falls short of the 350-tonne delivery contract and therefore does not meet it."
+        },
+        "scored_sentence": "The Wenlock estate's total wheat harvest is 360 tonnes.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F2-0024#C#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F2",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Policy summary: The Harrowgate property policy carries a deductible of $2,500 per claim."
+          },
+          {
+            "id": 1,
+            "text": "Claim file: The submitted storm-damage claim is assessed at $9,000 in covered loss."
+          },
+          {
+            "id": 2,
+            "text": "Policy summary: The payout on a single claim equals the assessed covered loss minus the deductible, and any single payout is capped at $7,000; a computed payout above the cap is paid at the cap."
+          }
+        ],
+        "correction": {
+          "text": "Endorsement notice (supersedes the deductible summary): the Harrowgate property policy deductible is reduced to $1,500 per claim.",
+          "supersedes_source_id": 0
+        },
+        "question": "What is the computed payout on the storm-damage claim, and is it within the $7,000 single-claim cap?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The assessed covered loss for the storm-damage claim is $9,000.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The original policy summary states the Harrowgate property policy deductible is $2,500 per claim.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 3,
+              "text": "An endorsement notice supersedes the deductible summary and reduces the Harrowgate property policy deductible to $1,500 per claim.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 4,
+              "text": "The applicable deductible to use is $1,500 because the endorsement supersedes the earlier deductible amount.",
+              "source_ids": [
+                3,
+                0
+              ]
+            },
+            {
+              "id": 5,
+              "text": "The payout on a single claim equals the assessed covered loss minus the deductible.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Any single payout is capped at $7,000, and a computed payout above the cap is paid at the cap.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Subtracting the $1,500 deductible from the $9,000 assessed covered loss yields a computed payout of $7,500.",
+              "source_ids": [
+                1,
+                3,
+                2
+              ]
+            },
+            {
+              "id": 8,
+              "text": "The computed payout of $7,500 exceeds the $7,000 single-claim cap.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 9,
+              "text": "Because the computed payout exceeds the cap, the actual payout is limited to $7,000.",
+              "source_ids": [
+                2
+              ]
+            }
+          ],
+          "conclusion": "Therefore, The assessed covered loss for the storm-damage claim is $9,000; The original policy summary states the Harrowgate property policy deductible is $2,500 per claim; An endorsement notice supersedes the deductible summary and reduces the Harrowgate property policy deductible to $1,500 per claim; The applicable deductible to use is $1,500 because the endorsement supersedes the earlier deductible amount; The payout on a single claim equals the assessed covered loss minus the deductible; Any single payout is capped at $7,000, and a computed payout above the cap is paid at the cap; Subtracting the $1,500 deductible from the $9,000 assessed covered loss yields a computed payout of $7,500; The computed payout of $7,500 exceeds the $7,000 single-claim cap; Because the computed payout exceeds the cap, the actual payout is limited to $7,000."
+        },
+        "scored_sentence": "The computed payout on the storm-damage claim is $6,500.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F1-0022#A#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "A gala at Foxglove Hall expects 520 guests."
+          },
+          {
+            "id": 1,
+            "text": "A survey of similar events shows guests arrive at an average of 1.6 guests per car, so about 325 cars are expected."
+          },
+          {
+            "id": 2,
+            "text": "The on-site lot at Foxglove Hall holds 300 cars."
+          },
+          {
+            "id": 3,
+            "text": "No overflow lot has been arranged, and valet stacking is not permitted on the property."
+          }
+        ],
+        "correction": {
+          "text": "Venue update: an adjacent field was opened for the gala, so the available parking now holds 400 cars.",
+          "supersedes_source_id": 2
+        },
+        "question": "Can the parking accommodate all of the expected guest cars, and if not, roughly how many cars are unplaced?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The gala at Foxglove Hall expects 520 guests.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "Guests arrive at an average of 1.6 guests per car.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 3,
+              "text": "About 325 cars are expected based on the guest count and arrival rate.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 4,
+              "text": "The on-site lot at Foxglove Hall originally held 300 cars.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 5,
+              "text": "No overflow lot has been arranged and valet stacking is not permitted.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 6,
+              "text": "An adjacent field was opened for the gala, increasing available parking capacity to 400 cars.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 7,
+              "text": "With the adjacent field opened, total parking capacity of 400 cars exceeds the expected 325 cars.",
+              "source_ids": [
+                1,
+                4
+              ]
+            }
+          ],
+          "conclusion": "Yes, with the adjacent field opened the venue now has 400 parking spaces, which comfortably covers the roughly 325 expected cars, leaving no cars unplaced."
+        },
+        "scored_sentence": "The parking cannot accommodate all of the expected guest cars.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F3-0018#C#mc1",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F3",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Coastline Media is planning a launch campaign across a click-based channel and two fixed-fee placements."
+          },
+          {
+            "id": 1,
+            "text": "The click-based channel is expected to deliver 8,000 clicks."
+          },
+          {
+            "id": 2,
+            "text": "The click-based channel costs $0.75 per click."
+          },
+          {
+            "id": 3,
+            "text": "A newsletter sponsorship costs a fixed $1,500 and a creative-production fee is a fixed $600, both independent of clicks."
+          },
+          {
+            "id": 4,
+            "text": "The planner wants the click-channel spend and the total campaign spend including the sponsorship and creative fees."
+          }
+        ],
+        "correction": {
+          "text": "Bid update: the click-based channel now costs $1.00 per click, replacing the $0.75 figure.",
+          "supersedes_source_id": 2
+        },
+        "question": "What is the click-channel spend, and what is the total campaign spend including sponsorship and creative fees?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The click-based channel is expected to deliver 8,000 clicks.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The click-based channel's cost per click was originally $0.75 but was updated to $1.00 per click, replacing the earlier figure.",
+              "source_ids": [
+                2,
+                5
+              ]
+            },
+            {
+              "id": 3,
+              "text": "Using the updated $1.00 per click rate, the click-channel spend is 8,000 clicks multiplied by $1.00, equaling $8,000.",
+              "source_ids": [
+                1,
+                5
+              ]
+            },
+            {
+              "id": 4,
+              "text": "The newsletter sponsorship costs a fixed $1,500, independent of clicks.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 5,
+              "text": "The creative-production fee is a fixed $600, independent of clicks.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 6,
+              "text": "The total campaign spend is the sum of the click-channel spend, the sponsorship fee, and the creative-production fee.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 7,
+              "text": "The total campaign spend equals $8,000 plus $1,500 plus $600, which is $10,100.",
+              "source_ids": [
+                1,
+                3,
+                5
+              ]
+            }
+          ],
+          "conclusion": "Therefore, The click-based channel is expected to deliver 8,000 clicks; The click-based channel's cost per click was originally $0.75 but was updated to $1.00 per click, replacing the earlier figure; Using the updated $1.00 per click rate, the click-channel spend is 8,000 clicks multiplied by $1.00, equaling $8,000; The newsletter sponsorship costs a fixed $1,500, independent of clicks; The creative-production fee is a fixed $600, independent of clicks; The total campaign spend is the sum of the click-channel spend, the sponsorship fee, and the creative-production fee; The total campaign spend equals $8,000 plus $1,500 plus $600, which is $10,100."
+        },
+        "scored_sentence": "The total campaign spend including sponsorship and creative fees is $8,100.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F1-0004#C#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Refrigerated van Frost-9 runs a rural delivery loop from the Calder depot. The route goes depot to Client Aldrege, then to Client Boswin, then back to the depot, with no refuelling stops available anywhere along the rural route."
+          },
+          {
+            "id": 1,
+            "text": "The three legs measure 140 km from the depot to Aldrege, 110 km from Aldrege to Boswin, and 95 km from Boswin back to the depot."
+          },
+          {
+            "id": 2,
+            "text": "Frost-9's engine and reefer unit together give it a single-fill driving range of 300 km before it must refuel."
+          }
+        ],
+        "correction": {
+          "text": "Fleet update: Frost-9 was fitted with an auxiliary tank, raising its single-fill driving range to 400 km.",
+          "supersedes_source_id": 2
+        },
+        "question": "Can Frost-9 complete the full delivery loop to both clients on a single fuel fill, and if not, what is required?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Frost-9's rural delivery loop goes from the Calder depot to Client Aldrege, then to Client Boswin, then back to the depot.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "No refuelling stops are available anywhere along the rural route.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The leg from the depot to Aldrege measures 140 km.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 4,
+              "text": "The leg from Aldrege to Boswin measures 110 km.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 5,
+              "text": "The leg from Boswin back to the depot measures 95 km.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 6,
+              "text": "The total loop distance is 140 km plus 110 km plus 95 km, which equals 345 km.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Frost-9's original single-fill driving range was 300 km before refuelling was required.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 8,
+              "text": "Frost-9 was fitted with an auxiliary tank, raising its single-fill driving range to 400 km.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 9,
+              "text": "The updated single-fill range of 400 km exceeds the total loop distance of 345 km.",
+              "source_ids": [
+                1,
+                3
+              ]
+            },
+            {
+              "id": 10,
+              "text": "The original single-fill range of 300 km is insufficient to cover the total loop distance of 345 km.",
+              "source_ids": [
+                1,
+                2
+              ]
+            }
+          ],
+          "conclusion": "Therefore, Frost-9's rural delivery loop goes from the Calder depot to Client Aldrege, then to Client Boswin, then back to the depot; No refuelling stops are available anywhere along the rural route; The leg from the depot to Aldrege measures 140 km; The leg from Aldrege to Boswin measures 110 km; The leg from Boswin back to the depot measures 95 km; The total loop distance is 140 km plus 110 km plus 95 km, which equals 345 km; Frost-9's original single-fill driving range was 300 km before refuelling was required; Frost-9 was fitted with an auxiliary tank, raising its single-fill driving range to 400 km; The updated single-fill range of 400 km exceeds the total loop distance of 345 km; The original single-fill range of 300 km is insufficient to cover the total loop distance of 345 km."
+        },
+        "scored_sentence": "The delivery loop cannot be completed on a single fuel fill.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F3-0027#B#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F3",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Clearbrook Dairy sells raw milk from two herds at a single contracted price per liter."
+          },
+          {
+            "id": 1,
+            "text": "The north herd yields 4,000 liters this week and the south herd yields 2,500 liters this week."
+          },
+          {
+            "id": 2,
+            "text": "The contracted price is $0.90 per liter, the same for both herds."
+          },
+          {
+            "id": 3,
+            "text": "Accounting wants the north-herd revenue and the south-herd revenue for the week."
+          }
+        ],
+        "correction": {
+          "text": "Contract update: the milk price is now $1.10 per liter, replacing the $0.90 figure.",
+          "supersedes_source_id": 2
+        },
+        "question": "What is the north-herd revenue and the south-herd revenue for the week?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The north herd yields 4,000 liters this week.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The south herd yields 2,500 liters this week.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The contract update sets the milk price to $1.10 per liter, replacing the earlier $0.90 per liter figure.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 4,
+              "text": "The $0.90 per liter price is superseded and no longer applies to revenue calculations.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 5,
+              "text": "North-herd revenue equals 4,000 liters multiplied by $1.10 per liter, which is $4,400.",
+              "source_ids": [
+                1,
+                4
+              ]
+            },
+            {
+              "id": 6,
+              "text": "South-herd revenue equals 2,500 liters multiplied by $1.10 per liter, which is $2,750.",
+              "source_ids": [
+                1,
+                4
+              ]
+            }
+          ],
+          "conclusion": "Using the corrected price of $1.10 per liter, the north herd generated $4,400 in revenue and the south herd generated $2,750 in revenue for the week."
+        },
+        "scored_sentence": "The north-herd revenue for the week is $3,600.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F1-0010#A#mc1",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Driver Halvard is assigned a three-leg delivery run for a single duty period. The three legs require 3 hours 20 minutes, 2 hours 50 minutes, and 3 hours 30 minutes of driving respectively."
+          },
+          {
+            "id": 1,
+            "text": "A driving-time cap of 9 hours applies to any single duty period. Driving beyond the cap in one duty period is not permitted."
+          }
+        ],
+        "correction": {
+          "text": "Schedule-rule revision: the driving-time cap for a single duty period was raised to 10 hours.",
+          "supersedes_source_id": 1
+        },
+        "question": "Does the three-leg run fit within the driver's duty-period driving cap, and can one driver complete it in a single duty period?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Driver Halvard's three-leg run requires 3 hours 20 minutes, 2 hours 50 minutes, and 3 hours 30 minutes of driving.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The total driving time for the three legs is 9 hours 40 minutes.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 3,
+              "text": "An original driving-time cap of 9 hours applied to any single duty period, and driving beyond that cap was not permitted.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 4,
+              "text": "A schedule-rule revision raised the driving-time cap for a single duty period to 10 hours.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 5,
+              "text": "Under the revised 10-hour cap, the total driving time of 9 hours 40 minutes fits within the limit.",
+              "source_ids": [
+                0,
+                2
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Under the original 9-hour cap, the total driving time of 9 hours 40 minutes would have exceeded the limit.",
+              "source_ids": [
+                0,
+                1
+              ]
+            }
+          ],
+          "conclusion": "Under the current, revised driving-time cap of 10 hours, the three-leg run's total driving time of 9 hours 40 minutes fits within the limit, so one driver can complete it in a single duty period."
+        },
+        "scored_sentence": "The run cannot be completed by a single driver in one duty period.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F2-0010#A#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F2",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Grant memo 1: The Sorrel Foundation reimburses travel at $0.55 per mile driven for approved field visits."
+          },
+          {
+            "id": 1,
+            "text": "Grant memo 2: Researcher Nwora logged 800 approved field-visit miles this quarter."
+          },
+          {
+            "id": 2,
+            "text": "Grant memo 3: A single quarterly travel reimbursement claim above $400 requires the program director's countersignature before payment."
+          }
+        ],
+        "correction": {
+          "text": "Reimbursement policy update (supersedes grant memo 1): the Sorrel Foundation now reimburses approved travel at $0.48 per mile driven.",
+          "supersedes_source_id": 0
+        },
+        "question": "What is Nwora's quarterly travel reimbursement, and does the claim require the program director's countersignature?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The Sorrel Foundation originally reimbursed travel at $0.55 per mile driven for approved field visits.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "A reimbursement policy update supersedes grant memo 1 and sets the rate at $0.48 per mile driven.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The current applicable reimbursement rate is $0.48 per mile because it supersedes the earlier $0.55 rate.",
+              "source_ids": [
+                0,
+                3
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Researcher Nwora logged 800 approved field-visit miles this quarter.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 5,
+              "text": "At $0.48 per mile, 800 miles amounts to a reimbursement of $384.00.",
+              "source_ids": [
+                1,
+                3
+              ]
+            },
+            {
+              "id": 6,
+              "text": "A single quarterly travel reimbursement claim above $400 requires the program director's countersignature before payment.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Nwora's claim of $384.00 is below the $400 threshold that triggers the countersignature requirement.",
+              "source_ids": [
+                2,
+                5
+              ]
+            }
+          ],
+          "conclusion": "Nwora's quarterly travel reimbursement is $384.00 (800 miles at the current $0.48 per mile rate), and since this is below the $400 threshold, it does not require the program director's countersignature."
+        },
+        "scored_sentence": "Nwora's quarterly travel reimbursement is $440.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F3-0025#A#mc1",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F3",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Tidewell Apparel is costing a production batch that consumes 1,200 meters of fabric."
+          },
+          {
+            "id": 1,
+            "text": "Fabric is purchased at $3.50 per meter."
+          },
+          {
+            "id": 2,
+            "text": "Thread for the batch is a fixed $200 and cutting-room labor is a fixed $1,500, both independent of fabric price."
+          },
+          {
+            "id": 3,
+            "text": "Production wants the fabric material cost and the total batch cost including thread and labor."
+          }
+        ],
+        "correction": {
+          "text": "Supplier update: fabric is now $4.00 per meter, replacing the $3.50 price.",
+          "supersedes_source_id": 1
+        },
+        "question": "What is the fabric material cost for the batch, and what is the total batch cost including thread and labor?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The batch consumes 1,200 meters of fabric.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The current fabric price is $4.00 per meter, replacing the earlier $3.50 price.",
+              "source_ids": [
+                1,
+                4
+              ]
+            },
+            {
+              "id": 3,
+              "text": "Fabric material cost equals 1,200 meters multiplied by $4.00 per meter, which equals $4,800.",
+              "source_ids": [
+                0,
+                4
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Thread for the batch costs a fixed $200.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 5,
+              "text": "Cutting-room labor for the batch costs a fixed $1,500.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Thread and labor costs are independent of the fabric price.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Total batch cost equals fabric material cost plus thread cost plus labor cost, which equals $4,800 plus $200 plus $1,500, totaling $6,500.",
+              "source_ids": [
+                2,
+                3
+              ]
+            }
+          ],
+          "conclusion": "Using the updated fabric price of $4.00 per meter, the fabric material cost for the 1,200-meter batch is $4,800, and the total batch cost including the fixed $200 thread and $1,500 labor is $6,500."
+        },
+        "scored_sentence": "The total batch cost including thread and labor is $5,900.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F3-0028#A#mc1",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F3",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Meridian Print is quoting a run of 3,000 posters, with fixed design and shipping charges added separately."
+          },
+          {
+            "id": 1,
+            "text": "Each poster costs $0.40 to print. Design is a fixed $350 and shipping is a fixed $250, both independent of the per-poster rate."
+          },
+          {
+            "id": 2,
+            "text": "The client wants the poster print cost and the total quoted cost including design and shipping."
+          }
+        ],
+        "correction": {
+          "text": "Quote correction: each poster costs $0.55 to print, not $0.40; use the corrected rate.",
+          "supersedes_source_id": 1
+        },
+        "question": "What is the poster print cost, and what is the total quoted cost including design and shipping?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The run consists of 3,000 posters.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "Design cost is a fixed $350 and shipping cost is a fixed $250, independent of the per-poster rate.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The original per-poster print cost of $0.40 was corrected to $0.55 per poster.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Using the corrected rate of $0.55 per poster, the poster print cost for 3,000 posters is 3,000 \u00d7 $0.55 = $1,650.",
+              "source_ids": [
+                0,
+                3
+              ]
+            },
+            {
+              "id": 5,
+              "text": "The total quoted cost includes the poster print cost plus the fixed design cost plus the fixed shipping cost.",
+              "source_ids": [
+                1,
+                2
+              ]
+            },
+            {
+              "id": 6,
+              "text": "The total quoted cost is $1,650 (print) + $350 (design) + $250 (shipping) = $2,250.",
+              "source_ids": [
+                1,
+                3
+              ]
+            }
+          ],
+          "conclusion": "Using the corrected rate of $0.55 per poster, the poster print cost for 3,000 posters is $1,650, and the total quoted cost including design ($350) and shipping ($250) is $2,250."
+        },
+        "scored_sentence": "The total quoted cost including design and shipping is $1,800.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F1-0025#C#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Banquet prep produces 84 sheet trays of chilled canapes that must be held overnight until service the next day."
+          },
+          {
+            "id": 1,
+            "text": "The walk-in cooler Frostgate holds 60 sheet trays."
+          },
+          {
+            "id": 2,
+            "text": "There is no second cooler, and the canapes must be held chilled until service."
+          },
+          {
+            "id": 3,
+            "text": "The prep is completed the night before the banquet."
+          },
+          {
+            "id": 4,
+            "text": "Ambient holding is not food-safe for these canape items."
+          }
+        ],
+        "correction": {
+          "text": "Facilities update: a second walk-in cooler was brought online, raising the combined chilled holding capacity to 96 sheet trays.",
+          "supersedes_source_id": 1
+        },
+        "question": "Can all 84 sheet trays be held chilled overnight, and if not, roughly how many have no space?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Banquet prep produces 84 sheet trays of chilled canapes that must be held overnight until service the next day.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The original walk-in cooler Frostgate holds 60 sheet trays.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 3,
+              "text": "A second walk-in cooler was brought online, raising the combined chilled holding capacity to 96 sheet trays.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 4,
+              "text": "96 sheet trays of combined capacity is greater than the 84 sheet trays that need to be held.",
+              "source_ids": [
+                3,
+                5
+              ]
+            },
+            {
+              "id": 5,
+              "text": "Ambient holding is not food-safe for these canape items, so chilled storage is required.",
+              "source_ids": [
+                4
+              ]
+            }
+          ],
+          "conclusion": "Therefore, Banquet prep produces 84 sheet trays of chilled canapes that must be held overnight until service the next day; The original walk-in cooler Frostgate holds 60 sheet trays; A second walk-in cooler was brought online, raising the combined chilled holding capacity to 96 sheet trays; 96 sheet trays of combined capacity is greater than the 84 sheet trays that need to be held; Ambient holding is not food-safe for these canape items, so chilled storage is required."
+        },
+        "scored_sentence": "All 84 sheet trays cannot be held chilled overnight.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F1-0008#B#mc1",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "The Selby aquatics centre is opening its 50-metre pool for an evening gala. A peak of 180 swimmers is expected in the water at the busiest point of the event."
+          },
+          {
+            "id": 1,
+            "text": "Safety regulation requires at least one certified lifeguard on deck for every 25 swimmers in the water."
+          },
+          {
+            "id": 2,
+            "text": "Six certified lifeguards are rostered for the gala, and there are no on-call reserves available that evening."
+          }
+        ],
+        "correction": {
+          "text": "Regulatory update: the on-deck ratio was revised to one certified lifeguard for every 35 swimmers in the water.",
+          "supersedes_source_id": 1
+        },
+        "question": "Are enough certified lifeguards rostered to open the pool at peak attendance, and how many are required?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The Selby aquatics centre gala expects a peak of 180 swimmers in the water at the busiest point.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The original safety regulation required one certified lifeguard for every 25 swimmers, but this has been superseded.",
+              "source_ids": [
+                1,
+                3
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The revised regulation requires one certified lifeguard for every 35 swimmers in the water.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Under the revised ratio, 180 swimmers require ceil(180/35) = 6 certified lifeguards.",
+              "source_ids": [
+                0,
+                3
+              ]
+            },
+            {
+              "id": 5,
+              "text": "Six certified lifeguards are rostered for the gala, with no on-call reserves available.",
+              "source_ids": [
+                2
+              ]
+            }
+          ],
+          "conclusion": "Yes, under the updated regulation requiring one lifeguard per 35 swimmers, only 6 lifeguards are needed for the expected peak of 180 swimmers, and since exactly 6 are rostered, there are enough certified lifeguards to open the pool at peak attendance."
+        },
+        "scored_sentence": "The rostered lifeguard staffing is insufficient to open the pool at peak attendance.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F3-0044#C#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F3",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Lantern Films is budgeting a shoot that requires 40 crew-days of labor, plus fixed equipment, location, and catering costs."
+          },
+          {
+            "id": 1,
+            "text": "The crew day rate is $350 per crew-day."
+          },
+          {
+            "id": 2,
+            "text": "Equipment rental for the shoot is a fixed $8,000."
+          },
+          {
+            "id": 3,
+            "text": "Location fees for the shoot are a fixed $3,000."
+          },
+          {
+            "id": 4,
+            "text": "Catering for the shoot is a fixed $2,000."
+          },
+          {
+            "id": 5,
+            "text": "The producer wants the crew labor cost and the total shoot budget including equipment, location, and catering."
+          }
+        ],
+        "correction": {
+          "text": "Rate update: the crew day rate is now $420 per crew-day, replacing the $350 figure.",
+          "supersedes_source_id": 1
+        },
+        "question": "What is the crew labor cost, and what is the total shoot budget including equipment, location, and catering?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The shoot requires 40 crew-days of labor.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The crew day rate was originally $350 per crew-day, but has been updated to $420 per crew-day.",
+              "source_ids": [
+                1,
+                6
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The current crew day rate to use is $420 per crew-day.",
+              "source_ids": [
+                6
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Crew labor cost equals 40 crew-days multiplied by $420 per crew-day, which is $16,800.",
+              "source_ids": [
+                0,
+                6
+              ]
+            },
+            {
+              "id": 5,
+              "text": "Equipment rental for the shoot is a fixed $8,000.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Location fees for the shoot are a fixed $3,000.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Catering for the shoot is a fixed $2,000.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 8,
+              "text": "The total shoot budget is the sum of crew labor cost, equipment, location, and catering costs: $16,800 + $8,000 + $3,000 + $2,000 = $29,800.",
+              "source_ids": [
+                0,
+                2,
+                3,
+                4,
+                6
+              ]
+            }
+          ],
+          "conclusion": "Therefore, The shoot requires 40 crew-days of labor; The crew day rate was originally $350 per crew-day, but has been updated to $420 per crew-day; The current crew day rate to use is $420 per crew-day; Crew labor cost equals 40 crew-days multiplied by $420 per crew-day, which is $16,800; Equipment rental for the shoot is a fixed $8,000; Location fees for the shoot are a fixed $3,000; Catering for the shoot is a fixed $2,000; The total shoot budget is the sum of crew labor cost, equipment, location, and catering costs: $16,800 + $8,000 + $3,000 + $2,000 = $29,800."
+        },
+        "scored_sentence": "The crew labor cost is $14,000.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F3-0048#B#mc1",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F3",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Central Deck operates a 300-space parking structure and reports monthly operating results."
+          },
+          {
+            "id": 1,
+            "text": "Monthly parking revenue is a fixed $36,000."
+          },
+          {
+            "id": 2,
+            "text": "Per-space monthly maintenance cost is $8 per space."
+          },
+          {
+            "id": 3,
+            "text": "Security is a fixed $4,000 per month, independent of the per-space maintenance rate."
+          },
+          {
+            "id": 4,
+            "text": "The ground lease is a fixed $9,000 per month, independent of the per-space maintenance rate."
+          },
+          {
+            "id": 5,
+            "text": "Management wants the total monthly operating cost and the net operating income for the month."
+          }
+        ],
+        "correction": {
+          "text": "Cost revision: per-space monthly maintenance cost is now $12 per space, replacing the $8 figure.",
+          "supersedes_source_id": 2
+        },
+        "question": "What is the total monthly operating cost, and what is the net operating income for the month?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Central Deck operates a 300-space parking structure.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "Monthly parking revenue is a fixed $36,000.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The per-space monthly maintenance cost is now $12 per space, replacing the earlier $8 figure.",
+              "source_ids": [
+                6
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Total monthly maintenance cost is 300 spaces multiplied by $12 per space, equaling $3,600.",
+              "source_ids": [
+                0,
+                3,
+                6
+              ]
+            },
+            {
+              "id": 5,
+              "text": "Security cost is a fixed $4,000 per month, independent of the per-space maintenance rate.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 6,
+              "text": "The ground lease is a fixed $9,000 per month, independent of the per-space maintenance rate.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Total monthly operating cost is the sum of maintenance ($3,600), security ($4,000), and ground lease ($9,000), equaling $16,600.",
+              "source_ids": [
+                3,
+                4,
+                6
+              ]
+            },
+            {
+              "id": 8,
+              "text": "Net operating income is monthly revenue ($36,000) minus total monthly operating cost ($16,600), equaling $19,400.",
+              "source_ids": [
+                1,
+                3,
+                4,
+                6
+              ]
+            }
+          ],
+          "conclusion": "Using the corrected maintenance cost of $12 per space, the total monthly operating cost is $16,600, and the net operating income for the month is $19,400."
+        },
+        "scored_sentence": "The net operating income for the month is $20,600.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F1-0018#C#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "The fabrication shop's night shift is running the Brennan contract tonight."
+          },
+          {
+            "id": 1,
+            "text": "Code requires at least 3 certified pressure-vessel welders to be present whenever pressure-vessel welding is performed."
+          },
+          {
+            "id": 2,
+            "text": "Tonight's roster has 2 certified pressure-vessel welders scheduled."
+          },
+          {
+            "id": 3,
+            "text": "The Brennan job includes pressure-vessel welding tonight."
+          },
+          {
+            "id": 4,
+            "text": "No additional certified welders are on call, and the other fabricators on shift are not certified for pressure-vessel welds."
+          }
+        ],
+        "correction": {
+          "text": "Code interpretation update: the minimum for pressure-vessel welding was lowered to 2 certified welders present.",
+          "supersedes_source_id": 1
+        },
+        "question": "Can pressure-vessel welding run on tonight's shift as staffed, and if not, what is required?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The Brennan job scheduled for tonight's shift includes pressure-vessel welding.",
+              "source_ids": [
+                0,
+                3
+              ]
+            },
+            {
+              "id": 2,
+              "text": "An updated code interpretation lowered the minimum requirement for pressure-vessel welding to 2 certified welders present.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 3,
+              "text": "This updated requirement supersedes the older code requirement of at least 3 certified pressure-vessel welders.",
+              "source_ids": [
+                1,
+                5
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Tonight's roster has 2 certified pressure-vessel welders scheduled.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 5,
+              "text": "No additional certified welders are on call, and other fabricators on shift are not certified for pressure-vessel welding.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Since the updated minimum of 2 certified welders is met by the 2 scheduled tonight, staffing satisfies the current requirement.",
+              "source_ids": [
+                2,
+                5
+              ]
+            }
+          ],
+          "conclusion": "Therefore, The Brennan job scheduled for tonight's shift includes pressure-vessel welding; An updated code interpretation lowered the minimum requirement for pressure-vessel welding to 2 certified welders present; This updated requirement supersedes the older code requirement of at least 3 certified pressure-vessel welders; Tonight's roster has 2 certified pressure-vessel welders scheduled; No additional certified welders are on call, and other fabricators on shift are not certified for pressure-vessel welding; Since the updated minimum of 2 certified welders is met by the 2 scheduled tonight, staffing satisfies the current requirement."
+        },
+        "scored_sentence": "Pressure-vessel welding cannot run on tonight's shift.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F3-0027#C#mc1",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F3",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Clearbrook Dairy sells raw milk from two herds at a single contracted price per liter."
+          },
+          {
+            "id": 1,
+            "text": "The north herd yields 4,000 liters this week and the south herd yields 2,500 liters this week."
+          },
+          {
+            "id": 2,
+            "text": "The contracted price is $0.90 per liter, the same for both herds."
+          },
+          {
+            "id": 3,
+            "text": "Accounting wants the north-herd revenue and the south-herd revenue for the week."
+          }
+        ],
+        "correction": {
+          "text": "Contract update: the milk price is now $1.10 per liter, replacing the $0.90 figure.",
+          "supersedes_source_id": 2
+        },
+        "question": "What is the north-herd revenue and the south-herd revenue for the week?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The north herd yields 4,000 liters this week.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The south herd yields 2,500 liters this week.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 3,
+              "text": "An earlier contract price of $0.90 per liter was replaced by an updated price of $1.10 per liter.",
+              "source_ids": [
+                2,
+                4
+              ]
+            },
+            {
+              "id": 4,
+              "text": "The current applicable milk price is $1.10 per liter for both herds.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 5,
+              "text": "North-herd revenue equals 4,000 liters multiplied by $1.10 per liter, which is $4,400.",
+              "source_ids": [
+                1,
+                4
+              ]
+            },
+            {
+              "id": 6,
+              "text": "South-herd revenue equals 2,500 liters multiplied by $1.10 per liter, which is $2,750.",
+              "source_ids": [
+                1,
+                4
+              ]
+            }
+          ],
+          "conclusion": "Therefore, The north herd yields 4,000 liters this week; The south herd yields 2,500 liters this week; An earlier contract price of $0.90 per liter was replaced by an updated price of $1.10 per liter; The current applicable milk price is $1.10 per liter for both herds; North-herd revenue equals 4,000 liters multiplied by $1.10 per liter, which is $4,400; South-herd revenue equals 2,500 liters multiplied by $1.10 per liter, which is $2,750."
+        },
+        "scored_sentence": "The south-herd revenue for the week is $2,250.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F2-0010#C#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F2",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Grant memo 1: The Sorrel Foundation reimburses travel at $0.55 per mile driven for approved field visits."
+          },
+          {
+            "id": 1,
+            "text": "Grant memo 2: Researcher Nwora logged 800 approved field-visit miles this quarter."
+          },
+          {
+            "id": 2,
+            "text": "Grant memo 3: A single quarterly travel reimbursement claim above $400 requires the program director's countersignature before payment."
+          }
+        ],
+        "correction": {
+          "text": "Reimbursement policy update (supersedes grant memo 1): the Sorrel Foundation now reimburses approved travel at $0.48 per mile driven.",
+          "supersedes_source_id": 0
+        },
+        "question": "What is Nwora's quarterly travel reimbursement, and does the claim require the program director's countersignature?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The Sorrel Foundation originally reimbursed travel at $0.55 per mile driven for approved field visits.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "A reimbursement policy update supersedes grant memo 1 and sets the rate at $0.48 per mile driven.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The current applicable reimbursement rate is $0.48 per mile because it supersedes the earlier $0.55 rate.",
+              "source_ids": [
+                0,
+                3
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Researcher Nwora logged 800 approved field-visit miles this quarter.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 5,
+              "text": "At $0.48 per mile, 800 miles amounts to a reimbursement of $384.00.",
+              "source_ids": [
+                1,
+                3
+              ]
+            },
+            {
+              "id": 6,
+              "text": "A single quarterly travel reimbursement claim above $400 requires the program director's countersignature before payment.",
+              "source_ids": [
+                2
+              ]
+            }
+          ],
+          "conclusion": "Therefore, The Sorrel Foundation originally reimbursed travel at $0.55 per mile driven for approved field visits; A reimbursement policy update supersedes grant memo 1 and sets the rate at $0.48 per mile driven; The current applicable reimbursement rate is $0.48 per mile because it supersedes the earlier $0.55 rate; Researcher Nwora logged 800 approved field-visit miles this quarter; At $0.48 per mile, 800 miles amounts to a reimbursement of $384.00; A single quarterly travel reimbursement claim above $400 requires the program director's countersignature before payment."
+        },
+        "scored_sentence": "Nwora's quarterly travel reimbursement is $440.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F1-0023#C#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "On the Larkspur site, a precast panel weighing 6.5 tonnes must be set at a 30-metre radius from the tower crane."
+          },
+          {
+            "id": 1,
+            "text": "The tower crane's load chart gives a rated capacity of 5.5 tonnes at a 30-metre radius."
+          },
+          {
+            "id": 2,
+            "text": "Only this crane is on site, and the panel must be set from the crane's current position."
+          },
+          {
+            "id": 3,
+            "text": "The rigging weighs 0.3 tonnes and is added to the load on the hook."
+          },
+          {
+            "id": 4,
+            "text": "The panel has been delivered and staged next to the setting location."
+          }
+        ],
+        "correction": {
+          "text": "Crane update: a heavier counterweight was fitted, raising the rated capacity to 7.5 tonnes at a 30-metre radius.",
+          "supersedes_source_id": 1
+        },
+        "question": "Can the panel be lifted at the 30-metre radius on the current crane, and if not, what must change?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The panel to be set weighs 6.5 tonnes.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The panel must be set at a 30-metre radius from the tower crane.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The rigging used to lift the panel weighs 0.3 tonnes and is added to the hook load.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 4,
+              "text": "The total load on the hook, including rigging, is 6.8 tonnes.",
+              "source_ids": [
+                0,
+                3
+              ]
+            },
+            {
+              "id": 5,
+              "text": "Only one tower crane is on site, and the panel must be set from that crane's current position.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 6,
+              "text": "A heavier counterweight was fitted to the crane, raising its rated capacity at 30-metre radius to 7.5 tonnes.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 7,
+              "text": "The original load chart listed a rated capacity of only 5.5 tonnes at 30-metre radius, before the counterweight update.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 8,
+              "text": "With the updated counterweight, the crane's rated capacity of 7.5 tonnes exceeds the total hook load of 6.8 tonnes at 30-metre radius.",
+              "source_ids": [
+                3,
+                0,
+                5
+              ]
+            }
+          ],
+          "conclusion": "Therefore, The panel to be set weighs 6.5 tonnes; The panel must be set at a 30-metre radius from the tower crane; The rigging used to lift the panel weighs 0.3 tonnes and is added to the hook load; The total load on the hook, including rigging, is 6.8 tonnes; Only one tower crane is on site, and the panel must be set from that crane's current position; A heavier counterweight was fitted to the crane, raising its rated capacity at 30-metre radius to 7.5 tonnes; The original load chart listed a rated capacity of only 5.5 tonnes at 30-metre radius, before the counterweight update; With the updated counterweight, the crane's rated capacity of 7.5 tonnes exceeds the total hook load of 6.8 tonnes at 30-metre radius."
+        },
+        "scored_sentence": "The panel cannot be lifted at the 30-metre radius on the current crane.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F2-0011#A#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F2",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Print spec: The Halloway atlas is bound in signatures. Each signature holds 16 printed pages."
+          },
+          {
+            "id": 1,
+            "text": "Print spec: The atlas has 320 printed pages in total."
+          },
+          {
+            "id": 2,
+            "text": "Bindery quote: The bindery charges a flat $8 for every signature bound, with no other binding charges."
+          },
+          {
+            "id": 3,
+            "text": "Budget note: The binding budget for the atlas is $150. A binding cost above the budget must be re-quoted."
+          },
+          {
+            "id": 4,
+            "text": "Reference: The number of signatures equals the total page count divided by the pages per signature; total binding cost equals the number of signatures times the per-signature charge."
+          }
+        ],
+        "correction": {
+          "text": "Revised print spec (supersedes the signature page spec): each signature now holds 32 printed pages.",
+          "supersedes_source_id": 0
+        },
+        "question": "What is the total binding cost for the Halloway atlas, and does it stay within the $150 binding budget?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The revised print spec supersedes the original signature page spec.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 2,
+              "text": "Each signature now holds 32 printed pages according to the revised print spec.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The atlas has 320 printed pages in total.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 4,
+              "text": "The number of signatures equals the total page count divided by the pages per signature.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 5,
+              "text": "Using the revised spec, the number of signatures is 320 divided by 32, which equals 10.",
+              "source_ids": [
+                1,
+                5,
+                4
+              ]
+            },
+            {
+              "id": 6,
+              "text": "The bindery charges a flat $8 for every signature bound, with no other binding charges.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Total binding cost equals the number of signatures times the per-signature charge.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 8,
+              "text": "The total binding cost is 10 signatures times $8 per signature, which equals $80.",
+              "source_ids": [
+                2,
+                4,
+                5
+              ]
+            },
+            {
+              "id": 9,
+              "text": "The binding budget for the atlas is $150.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 10,
+              "text": "A binding cost above the budget must be re-quoted.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 11,
+              "text": "$80 is less than the $150 budget, so the cost stays within budget.",
+              "source_ids": [
+                9
+              ]
+            }
+          ],
+          "conclusion": "The total binding cost for the Halloway atlas, using the revised 32-pages-per-signature spec (10 signatures at $8 each), is $80, which stays comfortably within the $150 binding budget."
+        },
+        "scored_sentence": "The Halloway atlas requires 20 signatures.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F3-0013#A#mc1",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F3",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Stonehaul Logistics is quoting a dedicated run of 800 miles for a single customer."
+          },
+          {
+            "id": 1,
+            "text": "The base linehaul charge for this run is a fixed $1,200, independent of fuel."
+          },
+          {
+            "id": 2,
+            "text": "A fuel surcharge of $0.30 per mile is added on top of the linehaul charge."
+          },
+          {
+            "id": 3,
+            "text": "A fixed accessorial fee of $175 covers loading and detention for the run."
+          },
+          {
+            "id": 4,
+            "text": "The customer asked for the fuel-surcharge cost alone and the all-in quoted price for the run."
+          }
+        ],
+        "correction": {
+          "text": "Rate update: the fuel surcharge for this run is $0.45 per mile, superseding the $0.30 figure.",
+          "supersedes_source_id": 2
+        },
+        "question": "What is the fuel-surcharge cost for the run, and what is the all-in quoted price?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The run distance is 800 miles.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The base linehaul charge is a fixed $1,200.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 3,
+              "text": "A rate update supersedes the original $0.30 per mile fuel surcharge with a new rate of $0.45 per mile.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Using the updated fuel surcharge rate of $0.45 per mile over 800 miles, the fuel-surcharge cost is $360.",
+              "source_ids": [
+                5,
+                0
+              ]
+            },
+            {
+              "id": 5,
+              "text": "A fixed accessorial fee of $175 covers loading and detention for the run.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 6,
+              "text": "The all-in quoted price is the sum of the linehaul charge, fuel surcharge, and accessorial fee: $1,200 + $360 + $175 = $1,735.",
+              "source_ids": [
+                1,
+                5,
+                0,
+                3
+              ]
+            }
+          ],
+          "conclusion": "The fuel-surcharge cost for the 800-mile run is $360 (using the updated $0.45/mile rate), and the all-in quoted price is $1,735 ($1,200 linehaul + $360 fuel surcharge + $175 accessorial fee)."
+        },
+        "scored_sentence": "The all-in quoted price for the run is $1,615.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F3-0017#B#mc1",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F3",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Willowmere Events is costing a reception for 200 confirmed guests."
+          },
+          {
+            "id": 1,
+            "text": "Beverage service is priced at $6 per guest."
+          },
+          {
+            "id": 2,
+            "text": "Food is provided as fixed platters costing $2,000 in total, independent of headcount."
+          },
+          {
+            "id": 3,
+            "text": "Furniture and linen rental is a fixed $800 for the reception."
+          },
+          {
+            "id": 4,
+            "text": "The client asked for the beverage line cost and the full reception cost including food and rental."
+          }
+        ],
+        "correction": {
+          "text": "Menu update: beverage service is now priced at $9 per guest, superseding the $6 figure.",
+          "supersedes_source_id": 1
+        },
+        "question": "What is the beverage line cost for the reception, and what is the full reception cost including food and rental?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The reception has 200 confirmed guests.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "An earlier menu figure priced beverage service at $6 per guest, but this has been superseded and is treated as false.",
+              "source_ids": [
+                1,
+                5
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The corrected beverage service price is $9 per guest.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Using the corrected price, the beverage line cost is 200 guests times $9 per guest, equaling $1,800.",
+              "source_ids": [
+                5,
+                0
+              ]
+            },
+            {
+              "id": 5,
+              "text": "Food is provided as fixed platters costing $2,000 total, regardless of headcount.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Furniture and linen rental is a fixed $800 for the reception.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 7,
+              "text": "The full reception cost including food and rental is the sum of the corrected beverage cost ($1,800), food ($2,000), and rental ($800), totaling $4,600.",
+              "source_ids": [
+                5,
+                2,
+                3,
+                0
+              ]
+            }
+          ],
+          "conclusion": "The beverage line cost is $1,800 (200 guests x $9), and the full reception cost including food and rental is $4,600 ($1,800 beverage + $2,000 food + $800 rental)."
+        },
+        "scored_sentence": "The full reception cost including food and rental is $4,000.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F3-0014#A#mc1",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F3",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "The Larkspur Fund is budgeting a residential fellowship cohort for the coming year."
+          },
+          {
+            "id": 1,
+            "text": "The cohort will admit 40 scholars this year."
+          },
+          {
+            "id": 2,
+            "text": "Each scholar's tuition is budgeted at $1,500."
+          },
+          {
+            "id": 3,
+            "text": "A fixed venue rental of $3,000 and a fixed administrative allocation of $4,500 apply to the cohort regardless of size."
+          },
+          {
+            "id": 4,
+            "text": "The board requested the total tuition line and the full cohort budget including venue and administration."
+          }
+        ],
+        "correction": {
+          "text": "Admissions revision: the cohort will admit 55 scholars this year, not 40; the intake target was raised.",
+          "supersedes_source_id": 1
+        },
+        "question": "What is the total tuition budget for the cohort, and what is the full cohort budget including venue and administration?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The cohort's admissions target was revised to 55 scholars, replacing the earlier figure of 40.",
+              "source_ids": [
+                1,
+                5
+              ]
+            },
+            {
+              "id": 2,
+              "text": "Each scholar's tuition is budgeted at $1,500.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 3,
+              "text": "Total tuition budget equals 55 scholars multiplied by $1,500 per scholar, which is $82,500.",
+              "source_ids": [
+                2,
+                5
+              ]
+            },
+            {
+              "id": 4,
+              "text": "A fixed venue rental of $3,000 applies to the cohort regardless of size.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 5,
+              "text": "A fixed administrative allocation of $4,500 applies to the cohort regardless of size.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 6,
+              "text": "The full cohort budget is the total tuition budget plus the fixed venue rental plus the fixed administrative allocation, which equals $82,500 + $3,000 + $4,500 = $90,000.",
+              "source_ids": [
+                2,
+                3,
+                5
+              ]
+            }
+          ],
+          "conclusion": "With the revised cohort size of 55 scholars, the total tuition budget is $82,500, and the full cohort budget including the $3,000 venue rental and $4,500 administrative allocation is $90,000."
+        },
+        "scored_sentence": "The full cohort budget including venue and administration is $67,500.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F1-0004#A#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Refrigerated van Frost-9 runs a rural delivery loop from the Calder depot. The route goes depot to Client Aldrege, then to Client Boswin, then back to the depot, with no refuelling stops available anywhere along the rural route."
+          },
+          {
+            "id": 1,
+            "text": "The three legs measure 140 km from the depot to Aldrege, 110 km from Aldrege to Boswin, and 95 km from Boswin back to the depot."
+          },
+          {
+            "id": 2,
+            "text": "Frost-9's engine and reefer unit together give it a single-fill driving range of 300 km before it must refuel."
+          }
+        ],
+        "correction": {
+          "text": "Fleet update: Frost-9 was fitted with an auxiliary tank, raising its single-fill driving range to 400 km.",
+          "supersedes_source_id": 2
+        },
+        "question": "Can Frost-9 complete the full delivery loop to both clients on a single fuel fill, and if not, what is required?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Frost-9's rural delivery loop goes from the Calder depot to Client Aldrege, then to Client Boswin, then back to the depot.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "No refuelling stops are available anywhere along the rural route.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The leg from the depot to Aldrege measures 140 km.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 4,
+              "text": "The leg from Aldrege to Boswin measures 110 km.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 5,
+              "text": "The leg from Boswin back to the depot measures 95 km.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 6,
+              "text": "The total loop distance is 140 km plus 110 km plus 95 km, which equals 345 km.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Frost-9's original single-fill driving range was 300 km before refuelling was required.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 8,
+              "text": "Frost-9 was fitted with an auxiliary tank, raising its single-fill driving range to 400 km.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 9,
+              "text": "The updated single-fill range of 400 km exceeds the total loop distance of 345 km.",
+              "source_ids": [
+                1,
+                3
+              ]
+            },
+            {
+              "id": 10,
+              "text": "The original single-fill range of 300 km is insufficient to cover the total loop distance of 345 km.",
+              "source_ids": [
+                1,
+                2
+              ]
+            }
+          ],
+          "conclusion": "With the auxiliary tank fitted, Frost-9's single-fill range of 400 km exceeds the 345 km total loop distance, so it can now complete the full delivery loop to both clients on a single fuel fill; without that upgrade, its original 300 km range would have been insufficient."
+        },
+        "scored_sentence": "The delivery loop cannot be completed on a single fuel fill.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F3-0015#B#mc1",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F3",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Datapoint API served 2,000,000 billable requests to a customer last month."
+          },
+          {
+            "id": 1,
+            "text": "Requests are billed at $0.0004 each."
+          },
+          {
+            "id": 2,
+            "text": "A fixed egress allocation of $120 is charged monthly regardless of request volume."
+          },
+          {
+            "id": 3,
+            "text": "A fixed support-plan fee of $99 is charged monthly."
+          },
+          {
+            "id": 4,
+            "text": "The customer wants the request-based charge and the total monthly bill including egress and support."
+          }
+        ],
+        "correction": {
+          "text": "Pricing notice: the per-request rate has increased to $0.0006 each, effective for last month's usage.",
+          "supersedes_source_id": 1
+        },
+        "question": "What is the request-based charge for the month, and what is the total monthly bill including egress and support?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Document [5] corrects document [1], raising the per-request rate from $0.0004 to $0.0006 for last month's usage.",
+              "source_ids": [
+                1,
+                5
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The Datapoint API served 2,000,000 billable requests last month.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The corrected per-request rate is $0.0006.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 4,
+              "text": "The request-based charge is 2,000,000 x $0.0006 = $1,200.",
+              "source_ids": [
+                0,
+                5
+              ]
+            },
+            {
+              "id": 5,
+              "text": "A fixed egress allocation of $120 is charged monthly.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 6,
+              "text": "A fixed support-plan fee of $99 is charged monthly.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 7,
+              "text": "The total monthly bill is $1,200 (requests) + $120 (egress) + $99 (support) = $1,419.",
+              "source_ids": [
+                2,
+                3,
+                5,
+                0
+              ]
+            }
+          ],
+          "conclusion": "Using the corrected rate of $0.0006 per request, the request-based charge is $1,200, and the total monthly bill including egress ($120) and support ($99) is $1,419."
+        },
+        "scored_sentence": "The total monthly bill including egress and support is $1,019.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F1-0017#B#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F1",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "A consolidation is being planned for reefer container RC-12 bound for the port. The container runs a single temperature setpoint for all cargo inside it."
+          },
+          {
+            "id": 1,
+            "text": "Pharmaceuticals must ship between 2 and 8 degrees Celsius, and RC-12 is set to 5 degrees Celsius, which is within the pharmaceutical range."
+          },
+          {
+            "id": 2,
+            "text": "The frozen seafood requires minus 18 degrees Celsius to stay compliant."
+          },
+          {
+            "id": 3,
+            "text": "Both a pharmaceutical pallet and a seafood pallet are staged for loading into RC-12."
+          },
+          {
+            "id": 4,
+            "text": "There is one container with one setpoint, and the next reefer to the port sails in three days."
+          }
+        ],
+        "correction": {
+          "text": "Product correction: the seafood pallet is a chilled line, not frozen, and stays compliant between 2 and 8 degrees Celsius.",
+          "supersedes_source_id": 2
+        },
+        "question": "Can the seafood pallet ship in the same reefer as the pharmaceutical pallet at the current setpoint, and if not, what must happen?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "RC-12 is a single reefer container that runs one temperature setpoint for all cargo loaded inside it.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "RC-12 is currently set to 5 degrees Celsius.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 3,
+              "text": "Pharmaceuticals must ship between 2 and 8 degrees Celsius, so RC-12's 5 degree setpoint is compliant for the pharmaceutical pallet.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 4,
+              "text": "An earlier statement claimed the seafood pallet was frozen seafood requiring minus 18 degrees Celsius, but this statement has been corrected and is no longer treated as true.",
+              "source_ids": [
+                2,
+                5
+              ]
+            },
+            {
+              "id": 5,
+              "text": "The corrected information states the seafood pallet is actually a chilled line that stays compliant between 2 and 8 degrees Celsius, not frozen.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Both the pharmaceutical pallet and the seafood pallet are staged for loading into RC-12.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Since the corrected seafood pallet requirement (2 to 8 degrees Celsius) overlaps with the pharmaceutical range (2 to 8 degrees Celsius) and matches RC-12's 5 degree setpoint, both pallets can share the same setpoint.",
+              "source_ids": [
+                1,
+                5
+              ]
+            },
+            {
+              "id": 8,
+              "text": "There is only one container with one setpoint available, and the next reefer to the port sails in three days, meaning any need to split cargo would cause a delay, but this is no longer necessary given the corrected compatibility.",
+              "source_ids": [
+                4
+              ]
+            }
+          ],
+          "conclusion": "Yes, the seafood pallet can ship in the same reefer as the pharmaceutical pallet at the current 5 degree Celsius setpoint, because the corrected information shows the seafood is a chilled product compliant between 2 and 8 degrees Celsius, matching the pharmaceutical range, so no consolidation change or delay is required."
+        },
+        "scored_sentence": "The seafood pallet cannot be shipped in the same reefer as the pharmaceutical pallet.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F3-0041#B#mc1",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F3",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Voltmere operates a public EV charging site and bills a fleet customer for 4,000 kilowatt-hours in a month, plus fixed service charges."
+          },
+          {
+            "id": 1,
+            "text": "Energy is billed at $0.16 per kilowatt-hour."
+          },
+          {
+            "id": 2,
+            "text": "A network access charge is a fixed $200 per month."
+          },
+          {
+            "id": 3,
+            "text": "A maintenance charge is a fixed $150 per month."
+          },
+          {
+            "id": 4,
+            "text": "A connection charge is a fixed $90 per month."
+          },
+          {
+            "id": 5,
+            "text": "The fleet customer wants the energy charge and the total monthly bill including network, maintenance, and connection."
+          }
+        ],
+        "correction": {
+          "text": "Tariff update: energy is now billed at $0.22 per kilowatt-hour, replacing the $0.16 rate.",
+          "supersedes_source_id": 1
+        },
+        "question": "What is the energy charge, and what is the total monthly bill including network, maintenance, and connection?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Document 6 corrects document 1, replacing the $0.16 per kilowatt-hour energy rate with $0.22 per kilowatt-hour.",
+              "source_ids": [
+                1,
+                6
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The fleet customer used 4,000 kilowatt-hours in the month.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The corrected energy rate is $0.22 per kilowatt-hour.",
+              "source_ids": [
+                6
+              ]
+            },
+            {
+              "id": 4,
+              "text": "The energy charge is 4,000 kWh multiplied by $0.22 per kWh, which equals $880.",
+              "source_ids": [
+                0,
+                6
+              ]
+            },
+            {
+              "id": 5,
+              "text": "The network access charge is a fixed $200 per month.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 6,
+              "text": "The maintenance charge is a fixed $150 per month.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 7,
+              "text": "The connection charge is a fixed $90 per month.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 8,
+              "text": "The total monthly bill is the sum of the energy charge ($880), network access charge ($200), maintenance charge ($150), and connection charge ($90), equaling $1,320.",
+              "source_ids": [
+                0,
+                2,
+                3,
+                4,
+                6
+              ]
+            }
+          ],
+          "conclusion": "Using the corrected energy rate of $0.22 per kWh, the energy charge for 4,000 kWh is $880, and the total monthly bill including the $200 network access charge, $150 maintenance charge, and $90 connection charge is $1,320."
+        },
+        "scored_sentence": "The total monthly bill including network, maintenance, and connection is $1,080.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F2-0019#C#mc1",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F2",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Leasing report: The Brackwater apartment block is running at 85 percent occupancy across its 200 units."
+          },
+          {
+            "id": 1,
+            "text": "Leasing report: Each occupied unit pays $900 in rent per month; vacant units pay nothing."
+          },
+          {
+            "id": 2,
+            "text": "Finance note: The block's operating cost is $160,000 per month. Rent revenue is collected only on occupied units, at the monthly rent times the number of occupied units."
+          }
+        ],
+        "correction": {
+          "text": "Updated leasing report (supersedes the occupancy report): the Brackwater block is now running at 92 percent occupancy across its 200 units.",
+          "supersedes_source_id": 0
+        },
+        "question": "How many Brackwater units are occupied, what is the monthly rent revenue, and does it cover the $160,000 monthly operating cost?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The Brackwater apartment block has 200 units in total.",
+              "source_ids": [
+                0,
+                3
+              ]
+            },
+            {
+              "id": 2,
+              "text": "An updated leasing report supersedes the earlier occupancy report.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The current occupancy rate for Brackwater is 92 percent.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 4,
+              "text": "92 percent of 200 units equals 184 occupied units.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 5,
+              "text": "Each occupied unit pays $900 in rent per month.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Rent revenue equals the monthly rent times the number of occupied units.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 8,
+              "text": "184 occupied units times $900 per unit equals $165,600 in monthly rent revenue.",
+              "source_ids": [
+                1,
+                3
+              ]
+            },
+            {
+              "id": 9,
+              "text": "The block's operating cost is $160,000 per month.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 10,
+              "text": "$165,600 in monthly rent revenue exceeds the $160,000 monthly operating cost by $5,600.",
+              "source_ids": [
+                2
+              ]
+            }
+          ],
+          "conclusion": "Therefore, The Brackwater apartment block has 200 units in total; An updated leasing report supersedes the earlier occupancy report; The current occupancy rate for Brackwater is 92 percent; 92 percent of 200 units equals 184 occupied units; Each occupied unit pays $900 in rent per month; Rent revenue equals the monthly rent times the number of occupied units; 184 occupied units times $900 per unit equals $165,600 in monthly rent revenue; The block's operating cost is $160,000 per month; $165,600 in monthly rent revenue exceeds the $160,000 monthly operating cost by $5,600."
+        },
+        "scored_sentence": "The Brackwater block's monthly rent revenue is $153,000.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F3-0020#C#mc1",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F3",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Axlevine Systems is finalizing a hardware order and applying a negotiated volume discount."
+          },
+          {
+            "id": 1,
+            "text": "The hardware subtotal before any discount is $9,000."
+          },
+          {
+            "id": 2,
+            "text": "A volume discount of 15 percent applies to the hardware subtotal."
+          },
+          {
+            "id": 3,
+            "text": "A fixed shipping charge of $400 is added after the discount is applied."
+          },
+          {
+            "id": 4,
+            "text": "Procurement wants the discount amount and the net payable including shipping."
+          }
+        ],
+        "correction": {
+          "text": "Contract correction: the volume discount is 5 percent, not 15 percent; the higher rate was applied in error.",
+          "supersedes_source_id": 2
+        },
+        "question": "What is the discount amount on the hardware subtotal, and what is the net payable including shipping?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The hardware subtotal before any discount is $9,000.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 2,
+              "text": "A contract correction states that the correct volume discount is 5 percent, not the 15 percent that was applied in error.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 3,
+              "text": "Applying the corrected 5 percent discount to $9,000 gives a discount amount of $450.",
+              "source_ids": [
+                1,
+                5
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Subtracting the $450 discount from the $9,000 subtotal gives a discounted hardware price of $8,550.",
+              "source_ids": [
+                1,
+                5
+              ]
+            },
+            {
+              "id": 5,
+              "text": "A fixed shipping charge of $400 is added after the discount is applied.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Adding the $400 shipping charge to the $8,550 discounted price gives a net payable of $8,950.",
+              "source_ids": [
+                1,
+                3,
+                5
+              ]
+            }
+          ],
+          "conclusion": "Therefore, The hardware subtotal before any discount is $9,000; A contract correction states that the correct volume discount is 5 percent, not the 15 percent that was applied in error; Applying the corrected 5 percent discount to $9,000 gives a discount amount of $450; Subtracting the $450 discount from the $9,000 subtotal gives a discounted hardware price of $8,550; A fixed shipping charge of $400 is added after the discount is applied; Adding the $400 shipping charge to the $8,550 discounted price gives a net payable of $8,950."
+        },
+        "scored_sentence": "The net payable including shipping is $8,050.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F3-0012#B#mc1",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F3",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Ironvale Works runs a single production line that starts 5,000 units of the Model-C bracket per shift."
+          },
+          {
+            "id": 1,
+            "text": "The line's good-yield rate is 92 percent; the remaining units are scrapped."
+          },
+          {
+            "id": 2,
+            "text": "Each good bracket sells for $15."
+          },
+          {
+            "id": 3,
+            "text": "A fixed rework subsidy of $500 per shift is credited to the line by corporate, independent of output."
+          },
+          {
+            "id": 4,
+            "text": "Operations wants the count of good brackets per shift and the total sellable revenue per shift including the subsidy."
+          }
+        ],
+        "correction": {
+          "text": "Quality revision: the good-yield rate on the Model-C line has dropped to 85 percent, replacing the 92 percent figure.",
+          "supersedes_source_id": 1
+        },
+        "question": "How many good brackets are produced per shift, and what is the total sellable revenue per shift including the subsidy?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The production line starts 5,000 units of the Model-C bracket per shift.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The original good-yield rate of 92 percent is superseded and no longer valid.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The corrected good-yield rate on the Model-C line is 85 percent.",
+              "source_ids": [
+                5
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Using the corrected 85 percent yield rate, the number of good brackets per shift is 5,000 x 0.85 = 4,250 units.",
+              "source_ids": [
+                0,
+                5
+              ]
+            },
+            {
+              "id": 5,
+              "text": "Each good bracket sells for $15.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Sales revenue from good brackets per shift is 4,250 x $15 = $63,750.",
+              "source_ids": [
+                2,
+                5
+              ]
+            },
+            {
+              "id": 7,
+              "text": "A fixed rework subsidy of $500 per shift is credited to the line regardless of output.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 8,
+              "text": "Total sellable revenue per shift including the subsidy is $63,750 + $500 = $64,250.",
+              "source_ids": [
+                2,
+                3,
+                5
+              ]
+            }
+          ],
+          "conclusion": "With the corrected 85 percent yield rate, the line produces 4,250 good brackets per shift, generating total sellable revenue of $64,250 per shift including the $500 subsidy."
+        },
+        "scored_sentence": "The total sellable revenue per shift including the subsidy is $69,500.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F2-0022#B#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F2",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Box-office note: For the Thornbury concert, ticketing assumes a 10 percent no-show rate among ticket holders."
+          },
+          {
+            "id": 1,
+            "text": "Box-office note: The Thornbury concert has sold 900 tickets."
+          },
+          {
+            "id": 2,
+            "text": "Venue note: The Thornbury hall seats 850. Expected attendance is the tickets sold reduced by the no-show rate; attendance above the seating capacity would cause overcrowding."
+          }
+        ],
+        "correction": {
+          "text": "Revised box-office note (supersedes the no-show assumption): the Thornbury concert now assumes a 5 percent no-show rate among ticket holders.",
+          "supersedes_source_id": 0
+        },
+        "question": "What is the expected attendance at the Thornbury concert, and does it stay within the hall's 850-seat capacity?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "The Thornbury concert has sold 900 tickets.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The original box-office note assumed a 10 percent no-show rate among ticket holders.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 3,
+              "text": "A revised box-office note supersedes the original 10 percent no-show assumption, setting the no-show rate at 5 percent.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 4,
+              "text": "The Thornbury hall seats 850.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 5,
+              "text": "Expected attendance equals tickets sold reduced by the no-show rate.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Using the corrected 5 percent no-show rate, expected attendance is 900 minus 5 percent of 900, which equals 855.",
+              "source_ids": [
+                1,
+                3
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Attendance above the seating capacity of 850 would cause overcrowding.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 8,
+              "text": "An expected attendance of 855 exceeds the hall's 850-seat capacity, resulting in overcrowding.",
+              "source_ids": [
+                1,
+                2,
+                3
+              ]
+            }
+          ],
+          "conclusion": "With the corrected 5 percent no-show rate, expected attendance at the Thornbury concert is about 855 people, which exceeds the hall's 850-seat capacity and would result in overcrowding."
+        },
+        "scored_sentence": "The expected attendance at the Thornbury concert is 810.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F2-0018#B#mc0",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F2",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Bid sheet: Vendor Pallin Supply quotes a delivered price of $12 per unit, freight included, for the fastener order."
+          },
+          {
+            "id": 1,
+            "text": "Bid sheet: Vendor Quist Hardware quotes $10 per unit plus a single flat freight charge of $2,400 for the same order."
+          },
+          {
+            "id": 2,
+            "text": "Order note: The fastener order is for 1,000 units."
+          },
+          {
+            "id": 3,
+            "text": "Award rule: The order is awarded to whichever vendor's total delivered cost for the full 1,000-unit order is lower."
+          },
+          {
+            "id": 4,
+            "text": "Reference: Pallin's total is its delivered per-unit price times the order quantity; Quist's total is its per-unit price times the order quantity plus its flat freight charge."
+          }
+        ],
+        "correction": {
+          "text": "Bid revision (supersedes Pallin's bid sheet): Pallin Supply now quotes a delivered price of $14 per unit, freight included.",
+          "supersedes_source_id": 0
+        },
+        "question": "What is Pallin's total delivered cost for the 1,000-unit order, and which vendor is awarded the order under the lower-total rule?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Document [5] supersedes document [0] and establishes that Pallin Supply's delivered price is $14 per unit, freight included, not $12 per unit.",
+              "source_ids": [
+                5,
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "The fastener order quantity is 1,000 units.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 3,
+              "text": "Pallin's total delivered cost equals its per-unit price times the order quantity.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Using the corrected per-unit price of $14, Pallin's total delivered cost is $14 x 1,000 = $14,000.",
+              "source_ids": [
+                5,
+                2,
+                4
+              ]
+            },
+            {
+              "id": 5,
+              "text": "Quist Hardware quotes $10 per unit plus a flat freight charge of $2,400 for the order.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Quist's total delivered cost equals its per-unit price times the order quantity plus its flat freight charge.",
+              "source_ids": [
+                4
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Quist's total delivered cost is ($10 x 1,000) + $2,400 = $12,400.",
+              "source_ids": [
+                1,
+                2,
+                4
+              ]
+            },
+            {
+              "id": 8,
+              "text": "The order is awarded to whichever vendor's total delivered cost for the full 1,000-unit order is lower.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 9,
+              "text": "Comparing the recomputed totals, Quist's $12,400 is lower than Pallin's $14,000.",
+              "source_ids": []
+            }
+          ],
+          "conclusion": "Under the corrected pricing, Pallin's total delivered cost for the 1,000-unit order is $14,000, which is higher than Quist Hardware's $12,400, so Quist Hardware is awarded the order."
+        },
+        "scored_sentence": "Pallin's total delivered cost for the order is $12,000.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    },
+    {
+      "packet_item_id": "F2-0004#B#mc1",
+      "regime": "E5",
+      "dimension": "contamination",
+      "family_type": "F2",
+      "presented": {
+        "sources": [
+          {
+            "id": 0,
+            "text": "Tender summary: Vendor Calderon Systems bid a unit price of $320 per workstation in the office fit-out tender."
+          },
+          {
+            "id": 1,
+            "text": "Tender summary: Vendor Rooksby Interiors bid a firm total of $58,000 for the same 200-workstation scope, with no separate line items."
+          },
+          {
+            "id": 2,
+            "text": "Tender rules: The contract is awarded to whichever vendor's total for the full 200-workstation scope is lower. Calderon's total is its unit price multiplied by the 200 workstations."
+          }
+        ],
+        "correction": {
+          "text": "Bid correction (supersedes Calderon's tender summary): Calderon Systems has revised its unit price to $270 per workstation.",
+          "supersedes_source_id": 0
+        },
+        "question": "What is Calderon's total for the full 200-workstation scope, and which vendor wins the award under the lower-total rule?",
+        "model_output": {
+          "claims": [
+            {
+              "id": 1,
+              "text": "Calderon Systems originally bid a unit price of $320 per workstation.",
+              "source_ids": [
+                0
+              ]
+            },
+            {
+              "id": 2,
+              "text": "A later bid correction supersedes Calderon's original tender summary and revises Calderon's unit price to $270 per workstation.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 3,
+              "text": "The $320 unit price is now false and must not be used in any calculation.",
+              "source_ids": [
+                3
+              ]
+            },
+            {
+              "id": 4,
+              "text": "Rooksby Interiors bid a firm total of $58,000 for the full 200-workstation scope, with no separate line items.",
+              "source_ids": [
+                1
+              ]
+            },
+            {
+              "id": 5,
+              "text": "The contract award rule states that the vendor with the lower total for the full 200-workstation scope wins, and Calderon's total is its unit price multiplied by 200 workstations.",
+              "source_ids": [
+                2
+              ]
+            },
+            {
+              "id": 6,
+              "text": "Using the corrected unit price, Calderon's total for the full 200-workstation scope is $270 x 200 = $54,000.",
+              "source_ids": [
+                3,
+                2
+              ]
+            },
+            {
+              "id": 7,
+              "text": "Calderon's corrected total of $54,000 is lower than Rooksby's total of $58,000.",
+              "source_ids": [
+                6,
+                4
+              ]
+            },
+            {
+              "id": 8,
+              "text": "Under the lower-total rule, Calderon Systems wins the award because its corrected total of $54,000 is less than Rooksby's $58,000.",
+              "source_ids": [
+                5,
+                6,
+                4
+              ]
+            }
+          ],
+          "conclusion": "After applying the corrected unit price of $270, Calderon's total for the full 200-workstation scope is $54,000, which is lower than Rooksby's $58,000, so Calderon Systems wins the award under the lower-total rule."
+        },
+        "scored_sentence": "Rooksby Interiors wins the award as the lower-total vendor.",
+        "stale_value": null,
+        "corrected": {
+          "corrected_value_candidates": null,
+          "note": "Judge whether the output asserts this stale conclusion as live, after the correction."
+        },
+        "mc_type": "e5_judgment"
+      },
+      "label": {
+        "judgment": null,
+        "annotator_id": null,
+        "notes": null
+      }
+    }
+  ]
+}

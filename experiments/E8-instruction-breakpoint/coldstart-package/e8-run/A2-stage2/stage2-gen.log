@@ -1,0 +1,23 @@
+=== [2026-07-18T15:58:14Z] A2 STAGE-2 GENERATION START (390 Arm-B draws, rate=4.0, conc=8) ===
+[gen] 390 generations to do (0 banked), dry_run=False, concurrency=8, rate=4.0/s
+[gen]   20/390 (ok=20 err=0)
+[gen]   40/390 (ok=40 err=0)
+[gen]   60/390 (ok=60 err=0)
+[gen]   80/390 (ok=80 err=0)
+[gen]   100/390 (ok=100 err=0)
+[gen]   120/390 (ok=120 err=0)
+[gen]   140/390 (ok=140 err=0)
+[gen]   160/390 (ok=160 err=0)
+[gen]   180/390 (ok=180 err=0)
+[gen]   200/390 (ok=200 err=0)
+[gen]   220/390 (ok=220 err=0)
+[gen]   240/390 (ok=240 err=0)
+[gen]   260/390 (ok=260 err=0)
+[gen]   280/390 (ok=280 err=0)
+[gen]   300/390 (ok=300 err=0)
+[gen]   320/390 (ok=320 err=0)
+[gen]   340/390 (ok=340 err=0)
+[gen]   360/390 (ok=360 err=0)
+[gen]   380/390 (ok=380 err=0)
+[gen] DONE ok=390 err=0
+=== [2026-07-18T16:03:59Z] A2 STAGE-2 GENERATION DONE — banked → /Users/vladryzhkov/e8-run/A2-stage2/stage2-gen.jsonl ===
