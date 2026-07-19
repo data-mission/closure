@@ -26,9 +26,6 @@ false positive under the pre-audit instrument. X6's pilot was VOID for a distinc
 construction defect, correctly caught by a withholding harness — the model's refusal to fabricate was
 the good behavior).
 
-Standalone statement of the general methodological finding (written for a reader outside this program):
-`FINDING-NLI-ARTIFACT.md`.
-
 The E8 program verdict (Block B, no axis broke) STANDS and is unaffected. E5's registered refutation
 of the release-time operator hypothesis (H-RELEASE) is WITHDRAWN and REOPENED. Mission X workload
 (measurement provenance, §5): E9 900/900 finals across 150 F3 families × 2 arms; X6 pilot 280 specs
