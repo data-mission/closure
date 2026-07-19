@@ -6,6 +6,7 @@ is settled; the two ⚑ owner acts that remain are the E5 correction-note public
 annotation, both outside this document. Conventions follow the repo's VERDICT-skeleton.md.
 
 Base: closure@689833c + uncommitted mission-x. Adjudication of record: `SYNTHESIS-GATE.md`.
+Standalone statement of the core methodological finding: `FINDING-NLI-ARTIFACT.md`.
 Owner: everything authorized, no ceiling, per-launch disclosure, exploratory grade. ⚑ = owner decision.
 
 ---
@@ -24,6 +25,9 @@ independent appearances of the same template-collision artifact, each of which w
 false positive under the pre-audit instrument. X6's pilot was VOID for a distinct reason (a corpus-
 construction defect, correctly caught by a withholding harness — the model's refusal to fabricate was
 the good behavior).
+
+Standalone statement of the general methodological finding (written for a reader outside this program):
+`FINDING-NLI-ARTIFACT.md`.
 
 The E8 program verdict (Block B, no axis broke) STANDS and is unaffected. E5's registered refutation
 of the release-time operator hypothesis (H-RELEASE) is WITHDRAWN and REOPENED. Mission X workload
