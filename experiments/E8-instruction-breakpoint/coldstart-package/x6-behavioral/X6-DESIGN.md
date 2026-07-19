@@ -1,6 +1,12 @@
 # X6 — Behavioral scoped-exception instrument (design + prototype spec)
 
-Status: DESIGN, zero-spend authoring. Not registered, not run. Owner decides registration treatment.
+**STATUS 2026-07-19: PILOT VOID — corpus-construction defect (the pilot corpus embedded the rule +
+exception but never the per-case FACTS, so the model could not compute and correctly refused; the
+acceptance gate WITHHELD). The behavioral-form question remains OPEN; the re-run (embed per-case facts,
+typed output, bank raw replies) is owner-gated. See MISSION-X-VERDICT.md §2.6. Owner decides registration
+treatment. The design below stands as authored; the defect was in corpus construction, not the design.**
+
+Authoring status: DESIGN, authoring only (no generation). Not registered.
 Author's standpoint: this is written by the reviewer who found the four instrument↔corpus coupling
 errors of Mission X (A2 wrong-side counting, A1 polarity inversion, A3 template collision, E5-C pending).
 The governing lesson (SYNTHESIS-GATE §0.6): **the measuring instrument, not the model, was the modal
@@ -364,14 +370,12 @@ against A2's null via one D-EXC cell.
 - **Turns per instance:** T1/T2/T3 = 2/5/9 intervening turns → grant/rule-statement(1) + interv + score(1) =
   4/7/11 turns per instance. Per arm: 40×(4+7+11) = 880 turns. Two arms = **1,760 turns**; + D-EXC cross-val
   (SCOPED only, 40×~4 ≈ 160) = **~1,920 agent turns**.
-- **Spend estimate (multi-turn, costed carefully; control arm doubles it).** Basis: E5/E8 pin `claude-sonnet-5`,
-  reconciled per-gen $6.27/898 ≈ **$0.007/gen** at short context; X6 turns carry worksheet+history → scale
-  ~3–5× → **$0.021–0.035/turn**. 1,920 turns → **$40–67**; with a 25% retry contingency (E5's ~12% retry,
-  doubled for multi-turn fragility) → **$50–84**. **Frozen pilot cap ≈ $85**, denominated before any generation
-  (PHASE0 §5; spending past cap voids the pilot). Scoring local + deterministic = $0. Generation is the entire
-  cost. (Cost-reduction option if the cap is tight: drop D-EXC cross-val to a later pass and/or run the BLANKET
-  arm at only T1 and T3 to bound the decay slope — saves ~$10–15 but weakens the paired contrast; not
-  recommended, the BLANKET arm is the novelty guard.)
+- **Generation workload (multi-turn; the control arm roughly doubles it).** Model pin `claude-sonnet-5`
+  (E5/E8). The pilot's model load is **~1,920 agent turns** (the turn table above), each turn carrying
+  worksheet + history. Scoring is local + deterministic (no generation). Generation is the entire model
+  workload. (Load-reduction option if turns must be bounded: drop D-EXC cross-val to a later pass and/or
+  run the BLANKET arm at only T1 and T3 to bound the decay slope — fewer turns but weakens the paired
+  contrast; not recommended, the BLANKET arm is the novelty guard.)
 - **Decisiveness:** the pilot returns (i) SCOPED dose-1 rate + BLANKET dose-1 rate → θ and δ are set and the
   full run is powered; (ii) fire-check (positive controls + SRD-decay reproduced in BLANKET → the instrument
   demonstrably detects degradation); (iii) the sign of `p_over − p_decay` at short distance → early read on

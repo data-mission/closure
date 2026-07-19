@@ -35,7 +35,7 @@ REGISTRATION GUARDS enforced at startup (all fail-loud, all HALT):
 
 DRY-RUN: --dry-run uses the frozen driver's fake provider (generation_driver.make_fake_provider) for
 BOTH the answer and the summarizer calls, so the full 2-arm x 3-dose plumbing + scoring + comparability
-gate runs end-to-end at ZERO spend. This is the plumbing-verification path the manager runs first.
+gate runs end-to-end with NO generation. This is the plumbing-verification path the manager runs first.
 
 STATUS: BUILT. The frozen-call wiring, the per-arm/per-dose loop, resumable logging, the compression-
 band redraw accounting, and the dual-scoring join (instrument_v2 + frozen outcomes.py NLI, with the
@@ -282,7 +282,7 @@ def main() -> int:
 
     def _bank(row):
         """Persist EVERY generated row (intermediate summaries/restatements + final answers) for full
-        cost accounting and partial-work resumability. Atomic append via the frozen helper."""
+        workload accounting and partial-work resumability. Atomic append via the frozen helper."""
         append_jsonl(args.gen_log, row)
 
     for task in tasks:

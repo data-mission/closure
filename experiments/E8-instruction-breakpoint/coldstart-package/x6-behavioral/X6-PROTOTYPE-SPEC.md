@@ -2,7 +2,7 @@
 
 Companion to X6-DESIGN.md. This is the build sheet: exact corpus transform from
 `A2-scoped-exception.jsonl`, the frozen data contracts, and the harness skeleton. Written for a Sonnet
-builder to execute. Zero-spend until the generation step, which is owner-gated (PHASE0 §5). Nothing here is
+builder to execute. No generation until the generation step, which is owner-gated (PHASE0 §5). Nothing here is
 registered; owner decides registration treatment.
 
 ## A. Corpus transform: A2 → X6 (FORM-WRITE surface, deterministic)
@@ -93,7 +93,7 @@ never a silently-computed number.
    130 A2 families are usable** (ran the transform-gate against A2-scoped-exception.jsonl: 4 rejected
    unparseable-exception, 5 value-collision `R==E_c`, 0 insufficient-persist). 121 ≫ the 40-family pilot and
    the ~120-family full run.
-3. Multi-turn generation harness `x6_generate.py` (owner-gated spend): grant → N intervening → scored turn,
+3. Multi-turn generation harness `x6_generate.py` (owner-gated generation): grant → N intervening → scored turn,
    capturing the field-write/tool-call trace into the frozen result shape; runs BOTH arms on the identical
    trajectory (1–2 days). Guard G: the exception-grant string is re-inserted into the scored turn's context
    and asserted present; NO compaction anywhere. Pin `claude-sonnet-5`, frozen sampler, content-hashed
@@ -102,7 +102,7 @@ never a silently-computed number.
    dose and the paired `p_over − p_decay ≥ δ` contrast (permutation over matched families). Acceptance:
    reproduces a hand-computed 2-family toy, `(FF)/(TT)` routed not counted, guard-D conditioning applied,
    paired contrast matches a hand permutation on the toy.
-5. Pilot run (owner-gated, **cap ≈$85**): 40 families × 3 doses × 2 arms (SCOPED+BLANKET) + 40 D-EXC cross-val
+5. Pilot run (owner-gated): 40 families × 3 doses × 2 arms (SCOPED+BLANKET) + 40 D-EXC cross-val
    instances ≈ 1,920 agent turns. Deliver: both arms' dose-1 rates (θ + δ), the fire-check (positive controls
    + BLANKET reproduces SRD omission>commission decay), the sign of `p_over − p_decay`, and the A2 cross-val.
 

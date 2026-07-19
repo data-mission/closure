@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""INSTRUMENT-V2 — claim-grounded value/verdict contamination test (zero-spend, CPU-only, no model).
+"""INSTRUMENT-V2 — claim-grounded value/verdict contamination test (no generation, CPU-only, no model).
 
 Replaces the whole-sentence NLI-entailment contamination flag (outcomes._still_asserts) for the E8-A3
 family, whose stale and corrected sentences are near-identical templates that differ only in a computed

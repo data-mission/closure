@@ -4,7 +4,7 @@
 floor, or a corpus/scoring artifact? **Answer: it is substantially an NLI compound-sentence artifact.
 The true instruction-failure floor is 0 (upper bound 3/200 = 1.5%, all hand-resolved to clean).**
 
-Zero-spend, local-CPU, deterministic. No model run; NLI used nowhere in the rescore. All checks
+No generation, local-CPU, deterministic. No model run; NLI used nowhere in the rescore. All checks
 reproducible: `python3 rescore.py`, `python3 full_rescore.py`, `python3 positive_controls.py`,
 `python3 anatomy.py`.
 

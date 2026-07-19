@@ -1,6 +1,6 @@
 # E9 — Compaction cycles: does an iterated summarize-and-continue operator accumulate revision error?
 
-**Status:** DESIGN (zero-spend authoring). Not runnable. Generation launches only through the lead
+**Status:** DESIGN (authoring only — no generation). Not runnable. Generation launches only through the lead
 with disclosure. This document + the code skeletons in `driver/` are the complete apparatus design.
 
 **Authoring provenance:** written by P2 after the P2 design-sufficiency audit
@@ -163,7 +163,7 @@ crippling clustering (4 independent families cannot support the task-level compa
 transform is therefore validated as a SCHEMA-and-GUARD proof, NOT as the scale source. **E9 requires
 FRESH F3-family construction** (the A1/A2 route in E8: fresh scenarios, not a transform), reusing the
 A3 correction-stacking + state_values + independence-certification structure per new scenario. This is
-the single biggest build-cost driver and is called out here so it is priced, not discovered mid-run.
+the single biggest build-workload driver and is called out here so it is scoped, not discovered mid-run.
 
 - **Base families:** the substrate is the E5 F3 quantitative grammar (`experiments/E5-reclosure/corpus/`
   and the A3 `F3-*` scenarios as the STRUCTURAL template). F3 is the family that (i) carries the
@@ -194,9 +194,9 @@ the single biggest build-cost driver and is called out here so it is priced, not
   E5/E8. Summarizer uses the SAME model pin (a compaction operator in the wild uses the same model);
   its instruction is separately hash-pinned.
 
-## 5. Spend estimate and power table
+## 5. Workload estimate and power table
 
-### Spend (per arm × dose × N)
+### Generation workload (per arm × dose × N)
 
 Calls per task, per arm, at dose `k`:
 - Arm N: `k` correction turns are context-only (no generation needed until the answer) + 1 answer
@@ -210,27 +210,24 @@ Calls per task, per arm, at dose `k`:
 Per matched task across all doses: Arm N = 3 (one answer at each of k=1,2,3) ; Arm S = (2)+(3)+(4)=9.
 Total = 12 generations per matched task.
 
-At the E8-calibrated rate (E5 billed pilot $6.27 / 898 generations = **$0.00698/generation**,
-`PHASE0.md` §5) and N tasks per dose:
+Generation workload by N tasks per dose:
 
-| N tasks/dose | matched tasks | total generations | est. cost | +25% contingency |
-|---|---|---|---|---|
-| 50 | 50 | 50×12 = 600 | $4.19 | $5.24 |
-| 85 (E8 calibration) | 85 | 85×12 = 1020 | $7.12 | $8.90 |
-| 120 | 120 | 120×12 = 1440 | $10.05 | $12.57 |
-| 150 | 150 | 150×12 = 1800 | $12.57 | $15.71 |
+| N tasks/dose | matched tasks | total generations |
+|---|---|---|
+| 50 | 50 | 50×12 = 600 |
+| 85 (E8 calibration) | 85 | 85×12 = 1020 |
+| 120 | 120 | 120×12 = 1440 |
+| 150 (registered) | 150 | 150×12 = 1800 |
 
-Summaries are short (they compress context) so per-generation cost is at or below the E5 average;
-the estimate uses the flat average conservatively. Scoring is local CPU/GPU, $0.
+Scoring is local CPU/GPU (model-free NLI), so it adds no generation workload.
 
-**Construction dominates (per the §4 scale finding).** Because E9 needs FRESH F3 scenarios (the 4
-existing clean A3 F3 families are far too few), construction is the main cost, matching E8's own
-"construction is ~85–90% of cost" pattern (`PHASE0.md` §5). Budget it like A1/A2 (fresh-construction
-axes: A1 $19.51, A2 $22.65) rather than A3 (transform: $14.71). Expected E9 total at N=150/dose:
-run generations $15.71 (table above) + fresh F3 construction on the A1/A2 scale (~$20) ≈ **$36 with
-contingency**, inside the E8 per-axis envelope. Annotation drafting uses a non-measured model + human
-spot-check (E5 materials-provenance pattern), disclosed at freeze; every exclusion (grammar-gate
-rejects, compression-band redraws, polarity HALTs) counted and reported.
+**Construction dominates the workload (per the §4 scale finding).** Because E9 needs FRESH F3
+scenarios (the 4 existing clean A3 F3 families are far too few), fresh-corpus construction is the
+main generation load, matching E8's own "construction is ~85–90% of the generation workload" pattern
+(`PHASE0.md` §5) — budget the construction load on the A1/A2 fresh-construction scale, not the A3
+transform scale. Annotation drafting uses a non-measured model + human spot-check (E5
+materials-provenance pattern), disclosed at freeze; every exclusion (grammar-gate rejects,
+compression-band redraws, polarity HALTs) counted and reported.
 
 ### Power table
 
@@ -288,8 +285,8 @@ paired S-vs-N contamination contrast at top dose (well-powered, this is what car
 **secondary** verdict is the monotone-accumulation gate (underpowered for a shallow curve, reported
 honestly as a bounded read). A confirmed primary with a failed secondary = "compaction degrades
 revision but the per-cycle accumulation shape is below our resolution" — a true and publishable
-bounded result, not a null. Registered N = **150 tasks/dose** (McNemar 0.99 primary; $15.71 with
-contingency, inside the E8-scale envelope).
+bounded result, not a null. Registered N = **150 tasks/dose** (McNemar 0.99 primary; 1,800 run
+generations, inside the E8-scale workload envelope).
 
 ## 6. Pre-stated conclusion sentences (two-sided, frozen before the run)
 
@@ -346,7 +343,7 @@ Exactly one fires; both are written now so neither can be authored to fit the da
 
 ## 9. Files in this design (BUILT + acceptance-verified)
 
-- `DESIGN.md` (this document) — framing, arms, scoring, corpus, spend, power, conclusions, threats.
+- `DESIGN.md` (this document) — framing, arms, scoring, corpus, workload, power, conclusions, threats.
 - `X5-NOTES.md` — related-work / novelty differentiation (2607.08032, 2606.22528, 2510.07777).
 - `driver/SUMMARIZER-INSTRUCTION.md` — the pinned summarizer prompt (Arm S operator), hash frozen at
   registration; compression band [30–50%] is a hard requirement of the prompt.
@@ -363,7 +360,7 @@ Exactly one fires; both are written now so neither can be authored to fit the da
   per-family dose loop over BOTH arms, Arm-N restatement k+1 matched-count control, Arm-S k compaction
   cycles with compression-band redraw accounting, EVERY generation logged (atomic append, resumable),
   dual scoring (`score_both`: instrument-v2 + frozen NLI) with the ≤2% comparability gate. `--dry-run`
-  exercises the whole pipeline via the frozen fake provider at $0. Acceptance: matched-count invariant
+  exercises the whole pipeline via the frozen fake provider with no generation. Acceptance: matched-count invariant
   (S-cycles == N-restatements == k) holds for every cell; resume banks 0 on re-run; instrument-v2
   scores correct-answer output clean and stale-asserting output contaminated on generated tasks.
 - `driver/prompt_template.txt`, `driver/summarizer_template.txt` — the answer and compaction templates
@@ -405,5 +402,5 @@ program's standard move for an unavoidable degree of freedom.
 compaction. A skeptic can argue Arm S's extra generations (not the compaction per se) drive any
 delta. The clean fix — an Arm-N variant with k+1 matched "restate the running answer" generations
 that do NOT compact — is registered as the primary control refinement to add before the run if the
-lead wants the tightest possible attribution; it roughly doubles Arm N cost (still inside the
-envelope at N=150). Flagged for the lead's decision rather than silently chosen.
+lead wants the tightest possible attribution; it roughly doubles Arm N generation load (still inside
+the workload envelope at N=150). Flagged for the lead's decision rather than silently chosen.

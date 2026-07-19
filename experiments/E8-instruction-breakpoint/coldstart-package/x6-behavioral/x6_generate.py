@@ -11,7 +11,7 @@ and appends one result row (aggregator shape) to the results JSONL.
 MODEL: pinned via the frozen CONFIG.generation.model_pin + identity guard (a spoofed model HALTS).
 KEY: read from ANTHROPIC_API_KEY inside the provider at call time; never logged.
 DRY-RUN: --dry-run uses a deterministic FAKE agent (no network, no key) that plays a fixed policy, so
-the full build->generate->aggregate plumbing is verifiable at ZERO SPEND before any real generation.
+the full build->generate->aggregate plumbing is verifiable with NO GENERATION before any real generation.
 
 This is multi-turn, so it does NOT reuse the frozen single-shot generate_row (that is the NLI corpus
 path). It uses the Anthropic messages API directly with the pinned model + identity halt. Frozen files

@@ -26,9 +26,9 @@ construction defect, correctly caught by a withholding harness — the model's r
 the good behavior).
 
 The E8 program verdict (Block B, no axis broke) STANDS and is unaffected. E5's registered refutation
-of the release-time operator hypothesis (H-RELEASE) is WITHDRAWN and REOPENED. Mission X spend
-(honest band, never a point): ~$42 metered-known (E9 ~$36 + X6 capture ~$6 + X4 $0) + the X6 pilot
-within its $85 cap (no token ledger; ~1,920 turns). See §5.
+of the release-time operator hypothesis (H-RELEASE) is WITHDRAWN and REOPENED. Mission X workload
+(measurement provenance, §5): E9 900/900 finals across 150 F3 families × 2 arms; X6 pilot 280 specs
+/ ~1,920 turns (VOID — corpus defect); X4 re-scored on banked generations (no new draws).
 
 ---
 
@@ -59,9 +59,8 @@ claim-grounded value/verdict echo and certified 4/4 gates + adversarial positive
 **Block B — no axis broke** under the registered conjunctive definition (monotone rise across ≥3
 levels AND θ-crossing at the top, surviving multiplicity). axes_broke = []. Independent of the A1
 polarity finding (Block B rests on A3 correctly-polarized + A2 fixed). Instrument certification: all
-gates green, zero flips; oracles PASS 0/12 each; program cost = pre-launch ruled $24.63
-(RUN-MANIFEST.md); actual spend ≤ ceiling, computed in §5. (E8 canonical numbers:
-`~/e8-run/verdict-prep/verdict-numbers.json`.)
+gates green, zero flips; oracles PASS 0/12 each; workload = 3,528 banked draws (filter 2,352 +
+Stage-2 1,176), 0 error rows, §5. (E8 canonical numbers: `~/e8-run/verdict-prep/verdict-numbers.json`.)
 
 ### 2.2 A3 corrections (FINAL)
 Registered θ=5% flag rate 26.7/29.4/24.1% (flat, non-monotone → no break). **Real contamination = 0**
@@ -107,7 +106,9 @@ re-scored it on the certified instrument. **X4 verdict FINAL:**
 - Validity: oracle PASS 0/12 mismatches (447/447 records present). Disclosures: 149 families, 141
   passed, 8 excluded, 25 pruned. Chain: Tier-1 equiv 0 flips → 47,202 pairs scored → converter →
   Stage-2 shard-equiv 0 flips → 28,072 pairs scored → fresh-CPU oracle PASS.
-- X4 spend: $0 (reuse path — no new generation; scored on the certified instrument).
+- X4 workload: reuse path — no new generation; the registered A1 generation already covers all 447
+  task_ids, so X4 re-scored those banked draws on the certified instrument. Fresh-gen (894 filter + 447
+  Stage-2 draws) was PREPARED (PREPARED-GENERATION-COMMANDS.md) but NOT exercised.
 
 ### 2.5 E5 reclosure — H-RELEASE REOPENED (FINAL)
 Registered B-vs-C contamination separation (Arm-B 0.9% vs Arm-C 10.3%) was read as evidence that the
@@ -152,11 +153,10 @@ to score) — correctly, because the pilot cannot answer the behavioral question
 - Consequence: X6 does NOT settle the behavioral-form question in this pilot; it surfaced a corpus bug
   and correctly withheld. The behavioral question remains open pending the re-run. The WITHHELD gate is
   the system working. Source: `~/e8-run/x6/x6-acceptance.json` + the capture INTERVENTIONS entries.
-- X6 spend (two distinct items, never collapsed to one figure): (1) the PILOT GENERATION itself —
-  launch entry 01:22:10Z "280 specs, ~1,920 turns, cap $85" — has NO token ledger, so it is carried as
-  the draw-count workload (~1,920 turns) bounded by the $85 cap, not a point figure; (2) the raw-reply
-  CAPTURE that characterized the corpus defect (~220-turn capture; x6_generate didn't persist replies)
-  ~$6 draw-count basis. Both inside X6's $85 cap. Per red-check's INTERVENTIONS log lines.
+- X6 workload (two distinct items): (1) the PILOT GENERATION — launch entry 01:22:10Z "280 specs,
+  ~1,920 turns" (280/280 generated); (2) the raw-reply CAPTURE that characterized the corpus defect
+  (~220-turn capture; x6_generate didn't persist replies, so the replies were re-captured against raw
+  output). Per red-check's INTERVENTIONS log lines.
 
 ### 2.7 E9 compaction cycles (H-COMPACT) — HOLDS CLEAN (FINAL): corrections survive compaction
 Iterated summarize-and-continue operator vs a matched no-compaction baseline on a correction-fidelity
@@ -178,7 +178,6 @@ revision error at this operating point.**
 - Provenance: corpus manifest 958d77c4 (150 families, guards 150/150), 900/900 finals with 0 errors,
   10-shard parallel generation (disclosed in §6 deviations; zero science change, resume-bank lossless),
   derived MPS scorer sha b0aae68d → 5dbadf43 (3-line device change, diff-verified).
-- E9 spend: ~$36 (draw-count basis, same no-token-ledger discipline as E8's row — not "exact").
 - E9 novelty (final): NON-DUPLICATE on 3 axes vs the compaction papers (§3); does NOT claim primacy on
   iterating compaction (2607.08032 iterates it for end-task error; E9's claim is a matched baseline on a
   correction-fidelity DV).
@@ -208,28 +207,25 @@ revision error at this operating point.**
 
 ---
 
-## 5. Spend ledger (FINAL to date; placeholders for pending runs)
+## 5. Workload & provenance ledger (FINAL)
 
-| item | status | spend |
-|---|---|---|
-| E8 full program (filter + Stage-2 + oracles) | closed | $24.63 (computed actual — see note) |
-| Mission X critical path (instrument-v2, A3 rescore, E5-C re-exam) | closed | $0 (zero-spend, local) |
+Measurement provenance only: what ran, how many draws/turns, on what instrument, with what result
+integrity. Draw and turn counts are the scientific record; they are counted from the banked generation
+jsonls (0 error rows unless noted), not estimated. (Cost figures are deliberately excluded from the
+scientific record.)
 
-E8 spend note (D1 audit fix): the "$24.63" figure is BOTH the pre-launch ruled program cost
-(RUN-MANIFEST.md: 3,528 expected draws × $0.006982/generation E5-ledger unit cost) AND the computed
-actual — because the run completed at exactly the ruled draw count with zero error rows. Computed
-actual = banked draw count × unit cost: filter 2,352 (A1 900 + A2 780 + A3 672) + Stage-2 1,176
-(A1 450 + A2 390 + A3 336) = **3,528 banked draws** (counted from the gen jsonls, 0 errors) ×
-$0.006982 = **$24.63**. LIMITATION: the banked gen records carry NO per-call usage/token fields
-(keys: arm, config_hash, draw_index, output, prompt_sha256, reported_model, task_id, ts), so the
-actual is a DRAW-COUNT × empirical-unit-rate computation, not a token-summed invoice; it is an
-upper-faithful actual (every banked draw counted, retry contingency unspent since 0 errors), not the
-literal API-billed amount. Not "exact" in the token-metered sense.
-| X4 A1-depth-v2 rebuild + rescore | closed | $0 (reuse path — banked gens × A1-depth-v2; scored on the certified instrument, no new generation). Fresh-gen ($6.24 filter + $3.12 Stage-2 = $9.36) was PREPARED (PREPARED-GENERATION-COMMANDS.md) but NOT exercised. |
-| X6 behavioral pilot (280 specs, VOID — corpus defect; WITHHELD) | closed | pilot generation ≤$85 cap — no token ledger exists for it (launch entry 01:22:10Z: "280 specs, ~1,920 turns, cap $85"); carried as the draw-count workload (~1,920 turns) bounded by the cap, not reducible to a point figure. |
-| X6 raw-reply capture (characterizing the corpus defect) | closed | ~$6 (draw-count basis; ~220-turn capture, x6_generate didn't persist replies) |
-| E9 compaction (150 families, both arms, 900/900) | closed | ~$36 (draw-count basis) |
-| **Mission X total** | | **an honest band, never a point:** E9 ~$36 + X6 pilot ≤$85 (no token ledger; ~1,920 turns) + X6 capture ~$6 + X4 $0 → **~$42 metered-known + X6 pilot within its $85 cap**; never a single token-metered "exact" figure. |
+| item | status | generation workload | scoring instrument | integrity |
+|---|---|---|---|---|
+| E8 full program (filter + Stage-2 + oracles) | closed | 3,528 banked draws = filter 2,352 (A1 900 + A2 780 + A3 672) + Stage-2 1,176 (A1 450 + A2 390 + A3 336); 0 error rows | frozen NLI (device CPU→MPS, gate A_ZERO_FLIPS 0/84) | oracles PASS 0/12 each; all equiv gates 0 flips |
+| Mission X critical path (instrument-v2, A3 rescore, E5-C re-exam) | closed | no new generation (banked E8/E5 draws re-scored) | instrument-v2 (accepted) | A3 786-item surface 0 real; E5-C 0/11 real |
+| X4 A1-depth-v2 rebuild + rescore | closed | no new generation — registered A1 gen already covers all 447 task_ids; fresh-gen (894 filter + 447 Stage-2 draws) PREPARED (PREPARED-GENERATION-COMMANDS.md) but NOT exercised | certified instrument (A1-depth-v2) | oracle PASS 0/12; Tier-1 + Stage-2 equiv 0 flips |
+| X6 behavioral pilot | closed (VOID — corpus defect) | pilot generation 280/280 (launch 01:22:10Z: "280 specs, ~1,920 turns") + ~220-turn raw-reply capture | acceptance gate WITHHELD (corpus defect — could not score) | 30/30 raw replies = sound missing-input refusals |
+| E9 compaction | closed | 900/900 finals across 150 F3 families × 2 arms × doses k=1..3; 0 errors; 10-shard parallel generation | dual scorer: instrument-v2 + frozen-NLI comparability | v2 0/1800 real; frozen-NLI 0/27 real (screened); comparability 1.83% ≤ 2% |
+
+Draw-count basis note: the banked gen records carry NO per-call usage/token fields (keys: arm,
+config_hash, draw_index, output, prompt_sha256, reported_model, task_id, ts). Every workload figure
+above is a counted draw/turn count from the jsonls, not a token-summed invoice — that is the exact,
+verifiable scientific quantity, and no other per-call quantity exists in the record.
 
 ---
 
@@ -257,13 +253,3 @@ literal API-billed amount. Not "exact" in the token-metered sense.
 - ⚑ Non-synthetic corpus (corpus-authoring circularity) — optional program addition.
 - ⚑ DANGLING_RULE contraction fix — schedule the v2-contractor build before any operator retest.
 
----
-
-## 8. Fill protocol (for #30 execution when verdicts land)
-1. X4 lands → §2.4 table + break conjuncts + §5 spend from X4 verdict-numbers.json, computed by
-   `coldstart-package/e8-driver/verdict_compute.py` (Mini: `~/e8-driver/verdict_compute.py`) run on the
-   A1-depth-v2 GPU scores — per-dose count/trials via aggregate_axis, conjuncts via
-   monotonicity_gate (stats.py:191) + exact_binomial_crossing (stats.py:138).
-2. X6 lands → §2.6 three-outcome + §3 X6 novelty row + §5 spend from x6_verdict.py output.
-3. E9 status → §2.7 (DEFERRED text or RUN verdict) + §5 spend.
-4. Recompute §5 Mission X total. Flip STATUS line to FINAL. Then #30's local commit.

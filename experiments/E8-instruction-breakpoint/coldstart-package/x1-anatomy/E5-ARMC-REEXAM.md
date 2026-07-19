@@ -71,7 +71,7 @@ stale conclusion asserted; it leaves the corrected conclusion un-stated.
   values) — separate from the instrument question.
 
 ## Rigor / limitations
-- Zero-spend, no model run. Pure read of banked Arm-C outputs + corpus + arithmetic.
+- No generation, no model run. Pure read of banked Arm-C outputs + corpus + arithmetic.
 - Two independent adjudication passes agreed on 9 FP; the 2 F2 dangling items were the only non-obvious
   cases and were resolved by explicit arithmetic (stale conclusion provably FALSE under correction) +
   confirming Arm C never states the stale entity-specific conclusion.

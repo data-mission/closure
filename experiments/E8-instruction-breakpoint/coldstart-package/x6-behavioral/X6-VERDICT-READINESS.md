@@ -64,7 +64,7 @@ which term bound each threshold.
   curve is reported alongside SRD's verified anchor for the writeup. **Tested: passes an increasing curve
   (labeled susceptible-like), passes a flat curve (immune-like), FAILS a decreasing curve.**
 
-## Test evidence (all zero-spend, run on the Mini)
+## Test evidence (all no-generation, run on the Mini)
 - Both scripts run clean on the 280-row pilot DRY-RUN: derivation → θ=0.05/δ=0.03 (both MIN-bound, correct
   for the zero-floor fixture); acceptance → AC1 280/280, AC2 0 FF/0 TT, AC3 flat/immune, gate PROCEED.
 - Adversarial negative test (`x6_acceptance_negtest.py`, on Mini): AC1 fires on pc-miss, AC2 fires on TT,

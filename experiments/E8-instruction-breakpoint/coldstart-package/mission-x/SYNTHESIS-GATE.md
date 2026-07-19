@@ -73,12 +73,12 @@ Mission residual (P4, stands): revision subgraph closes; E0–E3, E4-enforce, E6
 
 ## 3. Plan of record (post-pivot)
 
-CRITICAL PATH (zero spend, local): instrument-v2 (claim-grounded value/verdict scoring;
+CRITICAL PATH (local, no new generation): instrument-v2 (claim-grounded value/verdict scoring;
 acceptance: 200→0 on A3 flags AND 10/10 synthetic true-echo positive controls — must be able
 to fire) → full A3 rescore (1,428 items, final table) → **E5 Arm-C re-examination** (the
 program's remaining measured failure: real or artifact).
-PARALLEL BUILDS (authorized, in order of value): X4 (A1 rebuild w/ insurance fix → gen ≈$9.5 →
-GPU score), X5/E9 (compaction as operator-BEARING hypothesis, no-compaction baseline, numeric-only
+PARALLEL BUILDS (authorized, in order of value): X4 (A1 rebuild w/ insurance fix → GPU
+score), X5/E9 (compaction as operator-BEARING hypothesis, no-compaction baseline, numeric-only
 scored strings), X-HUMAN (protocol + sampling; annotation is owner-mediated ⚑), X6 (behavioral
 instrument prototype), X-VENDOR (after instrument-v2 exists to grade it), X0 (checkpoint
 amendment, soundness-gated). RETIRED: X3-as-scoped, X2 (no failing regime to bridge; P3+P4
@@ -110,5 +110,5 @@ an instrument/harness/corpus artifact, not model behavior.
 ## 5. Execution ledger
 
 23:26Z A1 validity disclosure in canonical files (diff-verified number-neutral).
-23:28Z instrument-v2 + rescores assigned (zero spend). Spend to date Mission X: $0.
-Pending spends: X4 gen ≈$9.5; X5 corpus gen TBD; X-VENDOR TBD — each disclosed at launch.
+23:28Z instrument-v2 + rescores assigned (critical path re-scored banked draws — no new generation).
+Workload provenance for the runs that did generate is in MISSION-X-VERDICT.md §5.

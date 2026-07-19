@@ -2,7 +2,7 @@
 
 **Verdict: 0/27 S-arm NLI flags survive as REAL_ECHO. E9's clean-hold carries a ZERO footnote.**
 
-Zero-spend re-scoring of the banked E9 run; no new generation. The frozen scorer's own `score_both`
+Re-scoring of the banked E9 run; no new generation. The frozen scorer's own `score_both`
 (`~/e9-driver/run_e9_mps.py`, v2 + NLI dual path) was re-run over all 450 S-arm FINAL answers via the
 harness venv on the Mini. It reproduces the reported S-arm NLI curve exactly and confirms every flag is
 an instrument artifact the accepted scorer (instrument-v2) already clears.
@@ -21,7 +21,7 @@ The v2/registered contamination number is 0/1800 both arms all doses; the NLI co
 
 ## Mechanism (why NLI flags 27 while 0 are real)
 
-Two independent proofs, both zero-spend:
+Two independent proofs, both re-scoring only (no new generation):
 
 1. **Global assertion sweep (CPU, all 450 S finals, all 900 (stale,dose) pairs).** For every S-arm final
    at every dose, tested whether ANY stale `must_change` TOTAL is asserted as a live value in the output

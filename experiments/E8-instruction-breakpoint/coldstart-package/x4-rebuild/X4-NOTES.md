@@ -3,7 +3,7 @@
 **Deliverable:** `A1-depth-v2.jsonl` — the E8-A1 depth corpus with `must_change` corrected to hold the
 STALE-world value (the inverse of the shipped bug), the insurance item dropped, and `verdict_item` /
 `item_roles` kept consistent. Built by a deterministic transform, machine-checked, hand-spot-checked.
-Zero model calls; zero spend.
+Zero model calls (deterministic transform, no generation).
 
 ## The bug this fixes
 
@@ -101,16 +101,15 @@ All read before→after by hand (reproducible via the register). Representative:
 
 See `PREPARED-GENERATION-COMMANDS.md`. The filter-tier entry point is `filter_stage.py` (verified: it
 generates the 2-state×3-draw `filter-gen.jsonl` with `filter_state`/`draw_index` and CPU-scores in one
-command; `run_axis_gpu.sh` then GPU re-scores for certification). Filter tier 894 draws → **$6.24**;
-Stage-2 447 draws → **$3.12**; **total ≈ $9.36** (matches the ≈$9.5 estimate). Scoring is model-free
-(GPU NLI), zero spend.
+command; `run_axis_gpu.sh` then GPU re-scores for certification). Fresh-gen workload: filter tier
+**894 draws**; Stage-2 **447 draws**. Scoring is model-free (GPU NLI), adding no generation load.
 
-**Cost-saving alternative flagged for the owner (⚑):** the transform changed ONLY scoring-side fields —
+**Reuse alternative flagged for the owner (⚑):** the transform changed ONLY scoring-side fields —
 `sources`/`question`/`not_A_evidence` are byte-identical to the original A1 (verified 447/447), and the
-existing registered A1 generation already covers all 447 task_ids. So X4 can be **re-scored for $0**
-against the existing generation (the prompt is identical, only the stale-polarity `must_change` changes).
-This isolates the polarity variable perfectly and is the recommended first pass; regenerate ($9.36) only
-if an independently-registered fresh run is required. Owner decides.
+existing registered A1 generation already covers all 447 task_ids. So X4 can be **re-scored with no new
+generation** against the existing draws (the prompt is identical, only the stale-polarity `must_change`
+changes). This isolates the polarity variable perfectly and is the recommended first pass; regenerate
+(the 894 + 447 fresh draws) only if an independently-registered fresh run is required. Owner decides.
 
 ## Files
 
@@ -118,12 +117,12 @@ if an independently-registered fresh run is required. Owner decides.
 - `A1-depth-v2.jsonl` — 447 corrected records.
 - `transform-register.json` — every record's disposition, per-item before/after, drops, rejects+reasons.
 - `check_v2.py` — acceptance checker (run: `python3 check_v2.py`; exits nonzero on any failure).
-- `PREPARED-GENERATION-COMMANDS.md` — filter (`filter_stage.py`) + Stage-2 commands, spend estimates.
+- `PREPARED-GENERATION-COMMANDS.md` — filter (`filter_stage.py`) + Stage-2 commands, workload estimates.
 
 ## Limitations / decisions flagged
 
 1. **Boolean canonical sentences use node labels**, reading more clinically than original prose. Correct
-   and scorer-valid; the alternative (LLM-negated prose) is not zero-spend/deterministic. If the owner
+   and scorer-valid; the alternative (LLM-negated prose) is not generation-free/deterministic. If the owner
    prefers natural prose for the 144 boolean primaries, that is a generation step, not a transform.
 2. **A1-D-0008 dropped** (word-form number) — 3 records, fail-closed rather than risk a word-form
    transformer. Recoverable later if desired via an explicit number-word map with its own assertions.

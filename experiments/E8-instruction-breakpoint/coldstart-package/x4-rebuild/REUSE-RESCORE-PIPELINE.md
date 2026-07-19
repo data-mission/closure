@@ -1,7 +1,7 @@
-# X4 — $0 REUSE re-score pipeline (both tiers), wired for the Mini
+# X4 — REUSE re-score pipeline (both tiers), wired for the Mini
 
-Adopted path: re-score the BANKED A1 generations (filter + Stage-2) against the v2 corpus. No API
-spend. The v2 corpus supplies the stale-polarity `must_change`; the banked gens supply the model
+Adopted path: re-score the BANKED A1 generations (filter + Stage-2) against the v2 corpus. No new
+generation. The v2 corpus supplies the stale-polarity `must_change`; the banked gens supply the model
 outputs (byte-identical prompts → same outputs). GPU/MPS scoring only.
 
 ## INDEX-MAPPING GUARD — verified safe (the load-bearing correctness check)
@@ -47,7 +47,7 @@ DEVICE=mps THREADS=2 \
 bash ~/e8-driver/run_axis_gpu.sh
 ```
 - `run_axis_gpu.sh` runs `batched_equiv.py` (boolean-flip gate) then `batched_scorer.py`, writing
-  `~/e8-run/A1V2-filter/batched-scores.json`. Zero spend.
+  `~/e8-run/A1V2-filter/batched-scores.json`. No generation.
 - NOTE the GEN_LOG points at the ORIGINAL `A1-filter/filter-gen.jsonl` (reused). Out-dir is
   `A1V2-filter` (AXIS=A1V2) so nothing overwrites the registered A1 artifacts.
 
@@ -78,7 +78,7 @@ bash ~/e8-driver/run_stage2_gpu.sh
 ```
 - GEN_LOG points at the ORIGINAL `A1-stage2/stage2-gen.jsonl` (reused); PRUNED at the v2 pruning.
 - Writes `~/e8-run/A1V2-stage2/{batched-stage2-equiv.json, batched-stage2-scores.json, results/*.json,
-  _oracle_result.json}`. Zero spend. Same equiv + oracle gates as the registered run.
+  _oracle_result.json}`. No generation. Same equiv + oracle gates as the registered run.
 
 ---
 
