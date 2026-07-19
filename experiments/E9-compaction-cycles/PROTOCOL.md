@@ -167,10 +167,16 @@ on-Mini driver + scorer at `~/e9-driver/`.
 
 ---
 
-## 9. Verdict (exploratory) — H-COMPACT HOLDS CLEAN
+## 9. Verdict (exploratory, RE-SCOPED post-verdict) — corrections survive NEAR-LOSSLESS summarization; the registered band was not achieved
 
-Kill condition (b) fired. Corrections SURVIVE compaction; the operator does not accumulate revision error
-at this operating point.
+Kill condition (b) fired on the data as scored. But a post-verdict adversarial re-check (2026-07-19) found
+the summarizer never achieved the registered 30–50% band: mean length ratio 0.963 / median 0.943 across
+all 2,683 S-arm summary rows, 13/2,683 (0.5%) in-band, 448/450 chains redraw-exhausted out-of-band —
+and the exclusion flag was INERT (`_score_run` filters only on the FINAL-row regex; `e9_meta.redraw_exhausted`
+is never read), so out-of-band chains were silently scored. Harness defect, disclosed. Consequently the
+verdict is: corrections survive repeated near-lossless summarization (achieved ratio ≈0.94) with zero real
+contamination; **H-COMPACT at real compression ratios is UNTESTED and remains open — fixed re-run required**
+(enforce the band or report achieved-ratio as covariate; make the exclusion flag live).
 
 - instrument-v2 contamination **0 / 1800 real at every (arm, dose)**: N-arm 0/150, 0/300, 0/450; S-arm
   0/150, 0/300, 0/450.
@@ -186,8 +192,10 @@ at this operating point.
 
 ## 10. Scope and limitations
 
-- One model (`claude-sonnet-5`), one compression band (30–50%), one summarizer instruction (`305f7e27`).
-  The verdict is AT that operating point; it does not generalize to other models, bands, or summarizers.
+- One model (`claude-sonnet-5`), one summarizer instruction (`305f7e27`), and an ACHIEVED operating point
+  of near-lossless summarization (median ratio 0.94 — the registered 30–50% band was NOT achieved, see §9).
+  The verdict is AT that achieved point; it does not generalize to other models, summarizers, or real
+  compression ratios.
 - The dose-response secondary is honestly bounded (shallow at-floor curve, underpowered) — the verdict
   rests on the flat, at-floor contamination, not on a powered monotone slope.
 - Exploratory grade: no pre-registration. The frozen apparatus + disclosed deviations are the integrity

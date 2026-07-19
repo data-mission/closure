@@ -94,18 +94,22 @@ Which branch fired for each (actual outcomes; full numbers in MISSION-X-VERDICT.
   (correction note drafted; publication = owner).
 - X4: **CLEAN NULL FIRED** → A1 depth NO BREAK, true floor 0/447; depth question settled (revision robust
   across depth).
-- X5/E9: **HOLD FIRED** → H-COMPACT holds clean, 0/1800 real; corrections survive compaction; E5's
-  single-shot result does NOT fail to scale (the operator does not accumulate error at this operating
-  point). NB the frozen-NLI showed the rising-S-curve that WOULD have falsely confirmed accumulation —
-  caught by the screen.
+- X5/E9: **HOLD FIRED — then RE-SCOPED post-verdict**: 0/1800 real stands, but the summarizer never
+  achieved the registered 30–50% band (median ratio 0.94; 0.5% in-band; exclusion flag inert — silently
+  scored). So: corrections survive repeated NEAR-LOSSLESS summarization; compaction at real ratios is
+  UNTESTED and the question REOPENS for a fixed re-run ⚑. NB the frozen-NLI showed the rising-S-curve
+  that WOULD have falsely confirmed accumulation — caught by the screen.
 - X6: **NEITHER — PILOT VOID** → a corpus-construction defect (missing per-case facts) made the pilot
   uninterpretable; the harness correctly WITHHELD; the model's refusal-to-fabricate was the good
   behavior. Behavioral-form question remains OPEN pending an ⚑ owner-gated re-run.
 - X-HUMAN: PENDING → annotation packets (773 + 30 items) staged, awaiting annotators ⚑.
 
-PROGRAM CONCLUSION (forced by all outcomes): the operator line has NO measured opening in ANY regime
-tested — single-shot (E5), depth (X4), or compaction (E9). Every failure signal across the campaign was
-an instrument/harness/corpus artifact, not model behavior.
+PROGRAM CONCLUSION (forced by all outcomes): the operator line has NO measured opening in any regime
+actually tested — single-shot (E5), depth (X4), and repeated near-lossless summarization (E9). Two
+regimes remain OPEN, both by harness/corpus defect rather than by data: behavioral form (X6 re-run ⚑)
+and compaction at real compression ratios (E9 re-run ⚑). Every CONTAMINATION signal across the campaign
+was an instrument artifact, not model behavior; the campaign's non-instrument failures were its own
+harness/corpus defects (X6 facts, E9 band), both caught by internal audit.
 
 ## 5. Execution ledger
 

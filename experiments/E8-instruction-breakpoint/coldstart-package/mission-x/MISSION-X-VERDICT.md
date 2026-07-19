@@ -1,7 +1,8 @@
 # MISSION X — VERDICT (stream-closure document)
 
-STATUS: FINAL (2026-07-19) — all three runs landed: X4 depth NO-BREAK (true floor 0/447), X6 pilot
-VOID (corpus defect, harness correctly withheld), E9 compaction HOLDS CLEAN (0/1800 real). Every section
+STATUS: FINAL (2026-07-19; E9 re-scoped same day post-verdict) — all three runs landed: X4 depth NO-BREAK
+(true floor 0/447), X6 pilot VOID (corpus defect, harness correctly withheld), E9 0/1800 real BUT re-scoped
+to near-lossless summarization only (band not achieved — §2.7, finding #8; compaction re-run open ⚑). Every section
 is settled; the two ⚑ owner acts that remain are the E5 correction-note publication and the X-HUMAN
 annotation, both outside this document. Conventions follow the repo's VERDICT-skeleton.md.
 
@@ -17,8 +18,10 @@ Mission X was a post-verdict adversarial audit of the E8 instruction-breakpoint 
 convergent finding: **the measuring instrument — not the model — was the modal failure class of the
 entire revision line.** Every "revision failure" the program had measured re-adjudicated to an NLI
 template-collision artifact. Under a claim-grounded instrument, instructed revision is ROBUST on every
-validly-measured corpus, and **the operator line has NO measured opening in ANY regime tested —
-single-shot (E5), depth (X4), or compaction (E9).** Instrument↔corpus coupling errors were found and
+validly-measured corpus, and **the operator line has NO measured opening in any regime tested —
+single-shot (E5), depth (X4), and repeated near-lossless summarization (E9). Compaction at real
+compression ratios was NOT tested (E9's band mechanism failed silently, finding #8) and remains the
+one open regime ⚑.** Instrument↔corpus coupling errors were found and
 disclosed by the program's own audit, pre-external-discovery: A2 wrong-side counting, A1 polarity
 inversion, A3 template collision, E5 Arm-C separation, and the E9 frozen-NLI rising-S-curve — five
 independent appearances of the same template-collision artifact, each of which would have produced a
@@ -47,6 +50,7 @@ and one corpus-construction defect (#7). Every "revision failure" the program me
 | 5 | DANGLING_RULE (distinct, real) | E5 Arm-C | contraction computes corrected value + retains rule but never draws the Boolean | 2/11 — a real completeness defect, NOT contamination; fix specced | DANGLING-RULE-FIX-SPEC.md |
 | 6 | E9 frozen-NLI rising S-curve | E9 (compaction) | supersession-scaffold collision produced a 0/9/18 rising curve — the exact shape that would falsely confirm H-COMPACT | 0/27 real (all 900 stale-total pairs screened); v2 0/1800 real | §2.7 + panel-necessity screen |
 | 7 | X6 corpus-construction defect (distinct) | X6 pilot | x6_build gave rule+exception but not per-case FACTS → model can't compute → refuses | pilot VOID; harness correctly WITHHELD; model's refusal was the GOOD behavior; ⚑ re-run | §2.6 + FF-TAXONOMY.md |
+| 8 | E9 band-enforcement failure (distinct, harness) | E9 | summarizer never reached the [0.30,0.50] band (median ratio 0.94; 0.5% in-band; 99.6% chains redraw-exhausted) and the exclusion flag was inert (`_score_run` never reads `redraw_exhausted`) → out-of-band chains silently scored | E9 verdict RE-SCOPED to near-lossless summarization; compaction at real ratios untested, re-run open ⚑; found post-verdict by adversarial re-check | §2.7 + vein-checker report |
 
 Common root: bidirectional DeBERTa-v3-large-MNLI at 0.7, max-over-premises, fires on shared
 requirement scaffolding between stale and corrected sentences. The replacement (instrument-v2) scores
@@ -159,11 +163,18 @@ to score) — correctly, because the pilot cannot answer the behavioral question
   (~220-turn capture; x6_generate didn't persist replies, so the replies were re-captured against raw
   output). Per red-check's INTERVENTIONS log lines.
 
-### 2.7 E9 compaction cycles (H-COMPACT) — HOLDS CLEAN (FINAL): corrections survive compaction
+### 2.7 E9 compaction cycles (H-COMPACT) — RE-SCOPED (2026-07-19 post-verdict re-check): corrections survive NEAR-LOSSLESS summarization; the registered band was NOT achieved
 Iterated summarize-and-continue operator vs a matched no-compaction baseline on a correction-fidelity
-DV — the operator question's only live opening after E5-C resolved to artifact. **E9 VERDICT:
-H-COMPACT HOLDS CLEAN — corrections SURVIVE compaction cycles; the operator does NOT accumulate
-revision error at this operating point.**
+DV — the operator question's only live opening after E5-C resolved to artifact. **E9 VERDICT AS
+RE-SCOPED: corrections survive repeated near-lossless summarization (achieved ratio ≈0.94) with zero
+real contamination; H-COMPACT at real compression ratios is UNTESTED — the band mechanism failed
+silently (finding #8, §1) and the compaction question REOPENS for a fixed re-run ⚑.**
+- BAND FAILURE (adversarial re-check, Mini data): mean summary/context length ratio 0.963, median 0.943
+  vs the registered [0.30, 0.50] band across all 2,683 S-arm summary rows; 13/2,683 (0.5%) in-band;
+  448/450 chains redraw-exhausted out-of-band. The exclusion flag was INERT: `_score_run` filters only
+  on the FINAL-row regex and never reads `e9_meta.redraw_exhausted` — out-of-band chains silently
+  scored. This is the exact "strawman near-lossless summarizer" failure the design's own hostile pass
+  (DESIGN.md §10) predicted; the guard against it did not fire.
 - v2 contamination = **0 / 1800 real at every (arm, dose)**: N-arm 0/150, 0/300, 0/450; S-arm 0/150,
   0/300, 0/450. No real correction loss under compaction on either arm.
 - Frozen-NLI cross-check: the OLD instrument showed a RISING S-curve 0 / 9 / 18 (3.0% / 4.0%) — the exact
@@ -173,9 +184,9 @@ revision error at this operating point.**
   N-arm frozen-NLI is 2/2/2 flat (the same 2 items). This is the SAME template-collision artifact class
   as A3/E5 — E9 is its fifth independent confirmation.
 - Comparability gate: 33/1800 = 1.83% ≤ 2% → PASS (the two arms are comparably scored).
-- SCOPE LIMITS (verbatim): one model (claude-sonnet-5), one pinned compression band (30–50%), summarizer
-  sha 305f7e27 — E9 measures compaction AT that operating point; it does not generalize to other models,
-  bands, or summarizers.
+- SCOPE LIMITS: one model (claude-sonnet-5), summarizer sha 305f7e27, and an ACHIEVED operating point of
+  near-lossless summarization (median ratio 0.94; the registered 30–50% band was not achieved) — E9
+  measures repeated summarization at that achieved point only; nothing about real compression ratios.
 - Provenance: corpus manifest 958d77c4 (150 families, guards 150/150), 900/900 finals with 0 errors,
   10-shard parallel generation (disclosed in §6 deviations; zero science change, resume-bank lossless),
   derived MPS scorer sha b0aae68d → 5dbadf43 (3-line device change, diff-verified).

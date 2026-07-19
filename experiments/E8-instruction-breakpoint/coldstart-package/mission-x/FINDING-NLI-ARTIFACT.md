@@ -277,13 +277,16 @@ met). The panel-necessity screen adjudicated all 13 NLI-flagged items as artifac
 floor is 0/447 = 0.0% real contamination at any depth** — a real zero, not merely a not-crossed
 (`.../mission-x/MISSION-X-VERDICT.md` §2.4 TRUE FLOOR).
 
-### 4.3 Compaction (E9), with the matched-arm control
+### 4.3 Repeated summarization (E9), with the matched-arm control — re-scoped
 
-E9 contamination = **0 / 1800 real at every (arm, dose)**: N-arm (no-compaction restatement) 0/150,
-0/300, 0/450; S-arm (compaction) 0/150, 0/300, 0/450 (`.../mission-x/MISSION-X-VERDICT.md` §2.7). The
-matched no-compaction baseline is the control that makes "compaction does not accumulate revision error"
-a comparison, not an assertion. Comparability gate 33/1800 = 1.83% ≤ 2% (the two arms are comparably
-scored).
+E9 contamination = **0 / 1800 real at every (arm, dose)**: N-arm (no-summarization restatement) 0/150,
+0/300, 0/450; S-arm (summarization) 0/150, 0/300, 0/450 (`.../mission-x/MISSION-X-VERDICT.md` §2.7). The
+matched baseline is the control that makes "the operator does not accumulate revision error" a
+comparison, not an assertion. Comparability gate 33/1800 = 1.83% ≤ 2% (the two arms are comparably
+scored). RE-SCOPE (post-verdict re-check): the summarizer never achieved its registered 30–50%
+compression band (median length ratio 0.94; exclusion flag inert — §4.5), so this result covers repeated
+NEAR-LOSSLESS summarization only; compaction at real compression ratios is untested. The §2 artifact
+analysis is unaffected — the frozen-NLI rising curve is fully screened regardless of achieved ratio.
 
 ### 4.4 The honest texture: one disclosed arithmetic slip
 
@@ -301,8 +304,11 @@ they help the headline.
 
 ### 4.5 Scope limits of the model-side result
 
-The robustness result holds for **one model** (claude-sonnet-5), **one pinned compression band** (30–50%,
-summarizer sha 305f7e27 for E9), on **template-generated corpora**
+The robustness result holds for **one model** (claude-sonnet-5), and for E9 an **achieved operating
+point of near-lossless summarization** (median summary/context length ratio 0.94 — the registered 30–50%
+compression band was NOT achieved; the band-exclusion flag was inert and out-of-band chains were silently
+scored, so E9's leg says nothing about real compression ratios; summarizer sha 305f7e27), on
+**template-generated corpora**
 (`.../mission-x/MISSION-X-VERDICT.md` §2.7 scope limits; `.../x1-anatomy/X1-FINDINGS.md` §8 scope). "0
 real" is a claim about this model on these near-identical-template corpora plus the instrument's blindness
 on them; it does not certify the model would resist harder, less-templated stale-value traps. The
@@ -373,4 +379,5 @@ templated corpora this produces hypothesis-shaped false positives (10–26%, and
 five times in one program would have been published as real revision failures; a claim-grounded value/
 verdict instrument that excludes retraction clauses and must prove it can fire collapses all five to zero
 real, under which the studied model's instructed revision is robust across single-shot, depth, and
-compaction — with human κ-validation of the screens the one load-bearing step still pending.
+repeated near-lossless summarization — with human κ-validation of the screens the one load-bearing
+step still pending.

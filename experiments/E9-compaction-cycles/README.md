@@ -74,10 +74,21 @@ device-ported scorer) are disclosed in [PROTOCOL.md §Deviations](PROTOCOL.md).
   cross θ at the top level. E5's single-shot contraction result does not scale into an iterated-operator
   failure regime; the compaction line closes with a bounded negative.
 
-## Verdict (exploratory) — **H-COMPACT HOLDS CLEAN: corrections survive compaction**
+## Verdict (exploratory, RE-SCOPED post-verdict) — **corrections survive repeated NEAR-LOSSLESS summarization; compaction at the registered band was NOT tested**
 
-Kill condition (b) fired. Corrections SURVIVE compaction cycles; the operator does NOT accumulate revision
-error at this operating point.
+Kill condition (b) fired on the data as scored — but a post-verdict adversarial re-check (2026-07-19)
+found the operator did not operate at its registered point: **the summarizer never achieved the 30–50%
+compression band.** Measured over all 2,683 S-arm summary rows: mean length ratio 0.963, median 0.943;
+only 13/2,683 (0.5%) in-band; 448/450 chains (99.6%) exhausted their redraw budget out-of-band. The
+band-exclusion flag was INERT — `_score_run` filters only on the FINAL-row regex and never reads
+`e9_meta.redraw_exhausted`, so out-of-band chains were silently scored (harness defect, disclosed).
+This is precisely the "strawman near-lossless summarizer" failure mode the design's own hostile pass
+(`DESIGN.md` §10) warned about; the guard built against it failed silently.
+
+**What E9 therefore proves:** corrections survive k repeated near-lossless summarization cycles (ratio
+≈0.94) with zero real contamination. **What it does not prove:** anything about compaction at real
+compression ratios. H-COMPACT at the registered band is OPEN and requires a fixed re-run (enforce the
+band mechanically or treat achieved-ratio as a reported covariate; make the exclusion flag live).
 
 - **instrument-v2 contamination = 0 / 1800 real at every (arm, dose):** N-arm 0/150, 0/300, 0/450; S-arm
   0/150, 0/300, 0/450. No real correction loss under compaction on either arm.
@@ -90,9 +101,10 @@ error at this operating point.
 
 ## Scope limits (do not over-read)
 
-One model (`claude-sonnet-5`), one pinned compression band (30–50%), one summarizer instruction (sha
-`305f7e27`). E9 measures compaction AT that operating point; it does not generalize to other models,
-bands, or summarizers. The dose-response secondary read is honestly bounded (a shallow curve at floor is
+One model (`claude-sonnet-5`), one summarizer instruction (sha `305f7e27`), and — per the re-scope
+above — an ACHIEVED operating point of near-lossless summarization (median ratio 0.94), NOT the
+registered 30–50% band. E9 measures repeated summarization at that achieved point only; it does not
+generalize to other models, summarizers, or to real compression ratios. The dose-response secondary read is honestly bounded (a shallow curve at floor is
 underpowered) — the load-bearing verdict is the flat, at-floor contamination, not a powered slope.
 
 ## Novelty / related work
