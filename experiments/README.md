@@ -1,6 +1,8 @@
 # The Experiment Program
 
-Nine experiments (E0–E7, plus E8 derived post-E5). Each one tests a hypothesis from the [registry](../HYPOTHESES.md), ships with its kill condition, and is decomposed into concrete steps in its own folder. **No timelines, no priority tiers** — the only ordering is dependency and cost.
+Nine registered experiments (E0–E7, plus E8 derived post-E5), plus E9, an exploratory experiment derived post-E8. Each one tests a hypothesis from the [registry](../HYPOTHESES.md), ships with its kill condition, and is decomposed into concrete steps in its own folder. **No timelines, no priority tiers** — the only ordering is dependency and cost.
+
+E8 ran to verdict 2026-07-19 (Block B, no axis broke) under a post-verdict adversarial audit, **Mission X**, that also re-examined E5. Mission X's finding — the program's measuring instrument, not the model, was the modal failure class of the whole revision line — is recorded at [coldstart-package/mission-x/](E8-instruction-breakpoint/coldstart-package/mission-x/), with the standalone methodological statement at [FINDING-NLI-ARTIFACT.md](E8-instruction-breakpoint/coldstart-package/mission-x/FINDING-NLI-ARTIFACT.md) and the full verdict record at [MISSION-X-VERDICT.md](E8-instruction-breakpoint/coldstart-package/mission-x/MISSION-X-VERDICT.md). E8's depth axis (A1) was invalid as registered (a polarity inversion) and was rebuilt and re-scored — [A1V2-DEPTH-REBUILD.md](E8-instruction-breakpoint/A1V2-DEPTH-REBUILD.md), true floor 0/447, no depth-breakpoint. E5's registered REFUTED verdict is withdrawn and reopened as a consequence — see the [correction note](E8-instruction-breakpoint/coldstart-package/x1-anatomy/CORRECTION-NOTE-DRAFT.md).
 
 ## Dependency structure
 
@@ -21,6 +23,7 @@ Solid edges: the measurement tooling consumed as an instrument — one implement
 6. **[E6](E6-lowering-invariance/)** — needs two independent backend implementations.
 7. **[E7](E7-composition/)** — interpret in light of E0's answer.
 8. **[E2](E2-conserved-quantities/)** — highest risk, flagship if positive.
+9. **[E9](E9-compaction-cycles/)** — exploratory, not registered; tests whether iterated summarize-and-continue compaction accumulates revision contamination that a no-compaction instruction avoids. RE-SCOPED 2026-07-19: 0/1800 real contamination under repeated near-lossless summarization, but the registered 30–50% compression band was never achieved (median ratio 0.94) — compaction at real ratios remains untested.
 
 ## Run discipline (applies to every experiment)
 

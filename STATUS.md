@@ -1,22 +1,30 @@
 # Status
 
-The program is in execution: nine experiment protocols are published, two have run to a verdict, and a third
-(E8) is registered behind a gating design phase. This page states exactly what that means — what is settled,
-what is not, and what is deliberately not claimed — because a stage stated plainly is worth more than a stage
-inferred from an absence.
+The program is in execution: nine experiment protocols are published, E8 has run to verdict, E3 and E5 have
+verdicts on record (E5's now under correction), and E9 (exploratory, unregistered) has run and been re-scoped.
+This page states exactly what that means — what is settled, what is not, and what is deliberately not claimed
+— because a stage stated plainly is worth more than a stage inferred from an absence.
 
-Last updated: 2026-07-16.
+Last updated: 2026-07-19.
 
 ## On the record
 
-- **E5 — REFUTED, registered grade (2026-07-16).** Mechanical contraction did not beat instructed disregard —
-  it lost: downstream contamination 10.3% vs 0.9%, Bonferroni-corrected p = 0.0089, completeness non-inferior,
-  task-level sign test agreeing (contraction worse on 9 tasks, instruction worse on 0). `release` as formulated
-  is retired; the verdict is recorded in stronger-than-registered form with the pre-registration wording defect
-  disclosed, not absorbed. Scope, per the commissioned hostile audit: shallow document-revision tasks (1–2
-  reasoning operations); it says nothing about long contexts, stacked corrections, or deep dependency chains.
-  Record: [results/E5-reclosure/2026-07-15-registered-run/](results/E5-reclosure/2026-07-15-registered-run/),
-  archived snapshot DOI [10.5281/zenodo.21399411](https://doi.org/10.5281/zenodo.21399411).
+- **E5 — REOPENED (2026-07-19), correcting the 2026-07-16 REFUTED registered verdict.** A post-verdict
+  adversarial audit (Mission X) found that the registered B-vs-C contamination separation (0.9% vs 10.3%,
+  read as evidence that mechanical contraction injects contamination instructed revision avoids) **does not
+  exist under a valid instrument.** The contamination metric fires on the requirement scaffold shared between
+  a stale sentence and its corrected replacement, not on any real assertion of the stale conclusion. Under a
+  claim-grounded replacement instrument, all three E5 arms carry ~0 real contamination (Arm-C 0/11, Arm-B
+  0/1, the same flagged item appearing in both arms — direct proof the flag tracked sentence template, not
+  arm behavior). `release` as formulated returns to `REOPENED`; the program has no valid measurement of an
+  operator-induced revision failure. A correction note is drafted for owner review and publication:
+  [CORRECTION-NOTE-DRAFT.md](experiments/E8-instruction-breakpoint/coldstart-package/x1-anatomy/CORRECTION-NOTE-DRAFT.md).
+  A distinct, real, disclosed defect (not contamination): DANGLING_RULE, a completeness gap in 2/11 Arm-C items
+  where contraction computes the corrected value and retains the governing rule but never draws the final
+  Boolean — fix specced, gated to any future operator retest. The original registered run artifacts are
+  unchanged (this is a re-interpretation of the same banked data, not a re-run); the archived snapshot DOI
+  [10.5281/zenodo.21399411](https://doi.org/10.5281/zenodo.21399411) is superseded pending a new version.
+  Record: [results/E5-reclosure/2026-07-15-registered-run/](results/E5-reclosure/2026-07-15-registered-run/).
 - **E3 — confirmed-shaped, exploratory grade (2026-07-15).** A linear probe regressed continuous future-output
   volume from the pre-sampling hidden state (Spearman 0.83), survived within-family and length-residualization
   controls, transferred under every leave-one-family-out rotation, and beat verbalized confidence — carrying
@@ -25,11 +33,42 @@ Last updated: 2026-07-16.
   replication (second model, fresh corpus) is the step that would settle it. Record:
   `experiments/E3-future-volume/run/VERDICT.md`, DOI
   [10.5281/zenodo.21383448](https://doi.org/10.5281/zenodo.21383448).
-- **E8 — registered, not yet runnable (2026-07-16).** Derived from E5's refutation: a dose-response study on
-  the instruction baseline alone, no operators anywhere. Phase 0 (axis selection) is a gating sub-registration
-  that must freeze by public commit plus Zenodo-archived release before any probe is generated
-  ([0008](decisions/0008-e8-instruction-breakpoint.md),
-  [0006 as amended](decisions/0006-reproducibility-and-freeze.md)).
+- **E8 — ran to verdict, registered grade (2026-07-19). Block B: no axis broke.** All gates green, zero
+  flips, oracles PASS 0/12 each; workload 3,528 banked draws (filter 2,352 + Stage-2 1,176), 0 error rows.
+  H-BREAKPOINT outcome (b) fired: instructed revision holds everywhere tested at practical scale — a
+  program-level negative of record. The registered depth axis (A1) was found invalid as built post-verdict (an
+  undisclosed polarity inversion made it measure revision success, not contamination); it was rebuilt and
+  re-scored on the certified instrument (X4): no depth-breakpoint, true floor 0/447 real contamination at any
+  depth. The E8 program verdict itself is unaffected — it rests on A3 (correctly polarized) and the fixed A2,
+  not on A1. Record: [A1V2-DEPTH-REBUILD.md](experiments/E8-instruction-breakpoint/A1V2-DEPTH-REBUILD.md),
+  Zenodo-archived Phase 0 freeze DOI
+  [10.5281/zenodo.21404864](https://doi.org/10.5281/zenodo.21404864).
+- **E9 — exploratory, unregistered, RUN and RE-SCOPED (2026-07-19).** Tests whether iterated
+  summarize-and-continue compaction accumulates revision contamination beyond a matched no-compaction
+  instruction baseline. 900/900 finals across 150 F3 families × 2 arms × 3 doses; instrument-v2 found 0/1800
+  real contamination at every (arm, dose). A post-verdict adversarial re-check found the summarizer never
+  reached its registered 30–50% compression band (median length ratio 0.94; 0.5% of rows in-band) and the
+  band-exclusion guard was inert, so the result is re-scoped: corrections survive repeated near-lossless
+  summarization at the achieved operating point; compaction at real compression ratios is untested and open.
+  Record: `experiments/E9-compaction-cycles/README.md`, `PROTOCOL.md`.
+
+## The methodological finding (Mission X)
+
+The program's most consequential result to date is not a verdict but a discovery about its own measuring
+instrument. Bidirectional DeBERTa-v3-large-MNLI entailment, used across the revision line to score whether a
+model still asserts a superseded claim, fires on the requirement scaffold shared between a stale sentence and
+its correction — not on any real assertion — and produces hypothesis-shaped false positives (10–26%, including
+a clean rising dose-response curve that would have falsely confirmed H-COMPACT) on templated correction
+corpora. It appeared five independent times in this program (E8's A2, A1, A3, E5's Arm-C, and E9's compaction
+arm); all five collapsed to zero real contamination under a claim-grounded replacement instrument
+(instrument-v2), which is itself certified against positive controls that must fire and adversarial hardening.
+Four of the five appearances were caught by the program's own audit before any external reviewer; the fifth by
+a mandatory cross-check screen built into the E9 run. Standalone statement:
+[FINDING-NLI-ARTIFACT.md](experiments/E8-instruction-breakpoint/coldstart-package/mission-x/FINDING-NLI-ARTIFACT.md);
+full verdict record:
+[MISSION-X-VERDICT.md](experiments/E8-instruction-breakpoint/coldstart-package/mission-x/MISSION-X-VERDICT.md).
+Human κ-validation of the screens (X-HUMAN, ≥100 items × 2 annotators) is staged and pending — the one
+load-bearing step not yet complete.
 
 ## Published (stable, citable)
 
@@ -39,11 +78,12 @@ Last updated: 2026-07-16.
   unformalized parts recorded as open problems — [background/formal-core.md](background/formal-core.md).
 - The reduction of the ontology to falsifiable claims, and the case study of how the reduction itself went
   wrong and was corrected — [background/reduction-history.md](background/reduction-history.md).
-- The living hypothesis registry: nine hypotheses bound to experiment protocols (E0–E8) — one of them,
-  H-RELEASE, already refuted by a registered run — plus two explicitly future architectural hypotheses, each
-  with status, confidence, and kill condition, the ontology's own retirement condition, and the retired claims
-  kept visible with cause of death — [HYPOTHESES.md](HYPOTHESES.md).
-- Nine experiment protocols with pre-registered verdict conditions — [experiments/](experiments/).
+- The living hypothesis registry: nine hypotheses bound to experiment protocols (E0–E8), plus H-COMPACT
+  (exploratory, E9) and two explicitly future architectural hypotheses, each with status, confidence, and kill
+  condition, the ontology's own retirement condition, and the retired claims kept visible with cause of death
+  — [HYPOTHESES.md](HYPOTHESES.md).
+- Nine registered experiment protocols with pre-registered verdict conditions, plus E9 (exploratory) —
+  [experiments/](experiments/).
 - The methodology, with every practice anchored to a standard, declared as a contribution, or listed as a known
   nonconformance with its fix — [METHODOLOGY.md](METHODOLOGY.md).
 - The prior-art map and the citation-verification ledger — [background/prior-art.md](background/prior-art.md),
@@ -53,9 +93,16 @@ Last updated: 2026-07-16.
 
 ## Next in line
 
-- **E8 Phase 0** — the axis-selection study: narrow the eight registered candidate axes, freeze the break
-  definition, per-axis probe budgets, and the instrument-constraint resolution, then register by commit +
-  Zenodo release ([0008](decisions/0008-e8-instruction-breakpoint.md)). The named next step.
+- **The E5 correction-note publication** — owner act: venue, public status wording, whether the DANGLING_RULE
+  defect is disclosed in the same note or separately. Draft ready
+  ([CORRECTION-NOTE-DRAFT.md](experiments/E8-instruction-breakpoint/coldstart-package/x1-anatomy/CORRECTION-NOTE-DRAFT.md)).
+- **X-HUMAN annotation** — human κ-validation of the Mission X screens (≥100 items × 2 annotators); owner-mediated
+  annotator recruitment and scheduling. The one load-bearing step that converts "screened to 0" into
+  "human-confirmed 0."
+- **E9 real-ratio re-run** — the compaction band-enforcement fix (make the exclusion flag live, or enforce the
+  30–50% band mechanically) so H-COMPACT can be tested at its registered operating point.
+- **X6 re-run** — fix the corpus-construction defect (embed per-case facts) and re-run the scoped-exception
+  behavioral pilot; the behavioral-form question remains open.
 - **The registered E3 replication** — second model, fresh corpus, pre-frozen thresholds. The step that would
   move H-VOL from exploratory support to registered evidence.
 - **S5b** — the pre-registered cross-vendor replication of E5 (pinned `gpt-5.4-mini-2026-03-17`); kills the
@@ -65,22 +112,33 @@ Last updated: 2026-07-16.
 
 ## Not yet run
 
-E0, E1, E2, E4, E6, E7 — protocols published, not executed. E8 is registered and gated on its Phase 0 freeze.
+E0, E1, E2, E4, E6, E7 — protocols published, not executed. E8 has run to verdict (Block B, no axis broke); E9
+(exploratory) has run and been re-scoped; both have open follow-on regimes (X-HUMAN, X6, E9 real-ratio) listed
+above.
 
 ## Built / not yet built
 
 - **Built:** the G-slice harness ([harness/](harness/)) — the NLI grounding scalar, leave-one-out contrast,
   contamination detector, deterministic contraction, ground-truth outcome scoring, and the frozen-config
-  mechanism; it served E5's registered run.
+  mechanism; it served E5's registered run and E8's registered run. The claim-grounded replacement instrument,
+  instrument-v2 (`experiments/E8-instruction-breakpoint/coldstart-package/x1-anatomy/instrument_v2.py`),
+  certified against positive controls and adversarial hardening; it served the Mission X re-adjudication of
+  E8-A3, E5-C, X4, and E9.
 - **Not yet built:** R and P scoring and the factor-analysis notebook (E0), the per-layer recording harness
   (E1), the decode-time enforcement backend (E6) — each listed under "Wanted from contributors" in the
   relevant experiment folder.
 
 ## Explicitly not claimed
 
-- That E5's refutation shows instruction suffices in general. It shows instruction sufficed in the shallow
-  document-revision regime tested; whether instructed revision has a failure regime at all is exactly E8's
-  question, and it is open.
+- That E5's original registered refutation was correct. It was withdrawn: the separation it reported does not
+  exist under a valid instrument. Conversely, the corrected "instructed revision is robust" reading is itself
+  scoped — one model, template-generated corpora — and does not claim the operator question is closed; harder,
+  non-templated corpora remain untested.
+- That E9's 0/1800 real result says anything about compaction at real compression ratios. The registered
+  30–50% band was never achieved (median ratio 0.94); E9 as run measures near-lossless summarization only.
+- That the Mission X screens are human-confirmed. They are agent-run, certified against positive controls and
+  adversarial hardening, but the X-HUMAN κ-validation that would close the circularity of an LLM-adjacent judge
+  is staged, not executed.
 - That E3's result establishes H-VOL. It is exploratory-grade: unregistered, single model, threshold-fragile
   on one control band. It licenses the registered replication, not the claim.
 - That the closure dimensions aggregate to a single scalar score — that is precisely what E0 tests (H-SCALAR),
@@ -99,9 +157,11 @@ E0, E1, E2, E4, E6, E7 — protocols published, not executed. E8 is registered a
 
 ## Already reduced or retired
 
-- **H-RELEASE (`release` as formulated)** — refuted by E5's registered run, 2026-07-16: the program's first
-  registered kill, recorded in stronger-than-registered form
-  ([results record](results/E5-reclosure/2026-07-15-registered-run/)).
+- **H-RELEASE (`release` as formulated)** — REOPENED 2026-07-19. The 2026-07-16 registered refutation is
+  withdrawn: the B-vs-C separation it rested on was an NLI instrument artifact, not a real effect. See "On the
+  record" above and the [correction note](experiments/E8-instruction-breakpoint/coldstart-package/x1-anatomy/CORRECTION-NOTE-DRAFT.md).
+- **H-BREAKPOINT** — E8's registered run fired outcome (b): no axis broke at practical scale, a program-level
+  negative of record for the instructed-revision-has-a-failure-regime question.
 - Four claims killed under the program's own adversarial review, kept visible with cause of death: "a new
   computational paradigm," "the six operators form a complete algebra," "convergent design," and "closure
   justified by formal fixed-point mathematics" ([HYPOTHESES.md § Retired](HYPOTHESES.md#retired-claims)).
@@ -115,9 +175,9 @@ The program has no single alive/dead gate. Each experiment directly retires only
 architectural claims survive, weaken, or die by their explicit dependencies. What survives each result is stated
 in advance in the [consequence matrix](HYPOTHESES.md#consequence-matrix). In brief:
 
-- **E8 decides whether instructed revision has a failure regime.** A break re-scopes the remaining operator
-  experiments to the regime where instruction degrades (confirming none of them); no break at practical scale
-  concludes the revision line with a program-level negative of record.
+- **E8 has decided whether instructed revision has a failure regime, at practical scale, on tested corpora: it does not.** Outcome (b) fired — no axis broke. This is the program-level negative of record for
+  H-BREAKPOINT; the operator line (H-ENFORCE and any reformulated H-RELEASE) has no measured opening. E9's
+  compaction re-run and harder non-templated corpora remain the open ways this could still change.
 - **E0 decides scalar aggregation only** — whether G/R/P collapse to one closure score. A negative result retires
   the single score and reports closure as a multidimensional profile; it does **not** gate the specification
   layers. The structural hypotheses stand or fall on their own verdicts, not on E0.

@@ -311,3 +311,72 @@ DOI-record commit — then corpus construction under the frozen caps, then the r
 **Freeze act executed, same session (2026-07-17).** PR #4 merged (`283400a`); tag `e8-phase0-freeze-2026-07-17`;
 release published; Zenodo archive minted: **DOI 10.5281/zenodo.21404864** — the independent timestamp over the
 frozen registration. E8 is registered. Corpus construction under the frozen caps is now permitted to spend.
+
+---
+
+## 2026-07-19 — E8 runs to verdict; Mission X finds the measuring instrument was the failure; E5 reopened; E9 run and re-scoped
+
+**Done.** E8's registered dose-response run executed to verdict: **Block B, no axis broke** (all gates green,
+zero flips, oracles PASS 0/12 each; workload 3,528 banked draws, 0 error rows). A post-verdict adversarial
+campaign, **Mission X**, then re-examined every "revision failure" the program had measured across E5 and E8's
+own axes. Its convergent finding: the measuring instrument — bidirectional DeBERTa-v3-large-MNLI entailment at
+0.7, max-over-premises, whole-sentence — fires on the requirement scaffold shared between a stale sentence and
+its corrected replacement, not on any assertion of stale content, and produced hypothesis-shaped false
+positives (10–26%, including a clean rising dose-response curve) five independent times: E8's A2 (wrong-side
+counting), A1 (polarity inversion — the axis measured revision success, not contamination), A3 (template
+collision, 200 flags → 0 real, full sweep 0/786), E5 Arm-C (10.3% vs Arm-B 0.9% "separation" → 0/11 real echo,
+with the same flagged item appearing in both arms — proof the flag tracks sentence template, not behavior),
+and E9's compaction arm (a rising 0/9/18 curve that would have falsely confirmed H-COMPACT → 0/27 real). A
+distinct corpus-construction defect voided X6's behavioral pilot (missing per-case facts; the model correctly
+refused to fabricate them — the harness's withholding gate is recorded as the system working, not a failure).
+Full record: `experiments/E8-instruction-breakpoint/coldstart-package/mission-x/MISSION-X-VERDICT.md`;
+standalone statement: `.../mission-x/FINDING-NLI-ARTIFACT.md`; adjudication of record:
+`.../mission-x/SYNTHESIS-GATE.md`.
+
+E8's depth axis (A1) was invalid as registered — an undisclosed polarity inversion made it measure revision
+success, not contamination — found post-verdict by the owner's disbelief at the numbers and confirmed by a
+450/450 red-check. Rebuilt with corrected polarity (X4, `transform.py`, 0 corrected-world leaks across 447
+records) and re-scored on the certified claim-grounded instrument (instrument-v2): **no depth-breakpoint, true
+floor 0/447 real contamination at any depth.** Surfaced at the E8 top level in
+`experiments/E8-instruction-breakpoint/A1V2-DEPTH-REBUILD.md`. The E8 program verdict (Block B) is unaffected —
+it rests on A3 (correctly polarized) and the fixed A2, not on A1.
+
+E5's registered refutation of H-RELEASE is **withdrawn and reopened.** The B-vs-C contamination separation the
+2026-07-16 verdict rested on does not exist under a valid instrument; all three E5 arms carry ~0 real
+contamination. A correction note is drafted for owner review and publication:
+`experiments/E8-instruction-breakpoint/coldstart-package/x1-anatomy/CORRECTION-NOTE-DRAFT.md`. A distinct, real
+defect was found and disclosed alongside it: DANGLING_RULE, a completeness gap in 2/11 Arm-C items where the
+contraction operator recomputes the corrected value and retains the governing rule but never draws the final
+Boolean — under-completion, not contamination, gated to any future operator retest.
+
+**E9 (compaction cycles) ran and was re-scoped the same day.** H-COMPACT — whether an iterated
+summarize-and-continue operator accumulates revision contamination that a matched no-compaction instruction
+avoids — was tested at 900/900 finals across 150 F3 families × 2 arms × 3 doses, dual-scored (instrument-v2 +
+frozen NLI, comparability 1.83% ≤ 2%). instrument-v2 found 0/1800 real contamination at every (arm, dose). A
+post-verdict adversarial re-check then found the summarizer never reached its registered 30–50% compression
+band (median length ratio 0.94; 0.5% of rows in-band; 99.6% of chains redraw-exhausted out-of-band), and the
+exclusion flag meant to catch this was inert (`_score_run` never read `redraw_exhausted`). **Re-scoped verdict:**
+corrections survive repeated near-lossless summarization (the achieved operating point) with zero real
+contamination; H-COMPACT at real compression ratios is untested and remains open. Record:
+`experiments/E9-compaction-cycles/README.md`, `PROTOCOL.md`; full detail
+`.../mission-x/MISSION-X-VERDICT.md` §2.7.
+
+**Decided, and why.** The correction is written up and disclosed as the program's own pre-publication catch —
+four of the five artifact appearances were caught by the program's own audit before any external reviewer; the
+fifth (E9) by a mandatory cross-check screen built into the E9 run itself. This is the same falsification
+discipline the program applies to its hypotheses, turned on its own registered result. Nothing about the E8
+program verdict changes; the correction is scoped narrowly to the B-vs-C contamination claim inside E5.
+
+**State.** All Mission X and E9 work is local (`e8-run-apparatus`), not yet pushed. The correction note,
+STATUS, HYPOTHESES, and the Zenodo new-version package are staged for owner review before any publication act.
+Hard rules unchanged: no AI/"Claude" mention anywhere in the repo or commit messages; no dollar amounts in the
+scientific record.
+
+**What remains open.** X6's behavioral re-run (corpus-construction fix, owner-gated); E9's compaction re-run at
+the registered real compression band; the X-HUMAN annotation pass (≥100 items × 2 annotators, κ + FP/FN near
+0.7) that would convert the Mission X screens from agent-run to human-confirmed — staged, not yet executed,
+owner-mediated (annotator recruitment/scheduling).
+
+**Next session starts here:** the owner's publication act on the E5 correction note (venue, wording, whether
+DANGLING_RULE is disclosed in the same note or separately) — everything else in this entry is either closed or
+gated on that decision or on X-HUMAN annotator staffing.
