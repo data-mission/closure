@@ -1,5 +1,17 @@
 # Closure
 
+**Open research on LLM inference structure and output verification.**
+
+I originated this program to make hypotheses about model behavior testable through explicit protocols, intervention-based measurements, and public experiment records.
+
+**Start here:** [current results and limitations](STATUS.md) · [hypotheses and refutation conditions](HYPOTHESES.md) · [recorded results](results/) · [measurement methodology](METHODOLOGY.md).
+
+This is a research program. Its proposed execution-control architecture is a hypothesis, not a completed runtime. Corrections and reopened findings remain part of the public record; the current correction notice follows below.
+
+Led by [Vlad Ryzhkov](https://github.com/data-mission); [authorship and credit](AUTHORS.md).
+
+---
+
 A research program on model-native inference structure in large language models: a testable mechanistic hypothesis for hallucination and confidence, causal (non-LLM-judged) verification of model outputs, and whether a multidimensional structural specification can become a portable control layer for learned computation.
 
 Originated and led by [Vlad Ryzhkov](AUTHORS.md). Public since 2026-07-14; execution has begun. The program's headline result is now methodological, not behavioral: a post-verdict adversarial audit (Mission X) found that the measuring instrument — not the model — was the modal failure class of the whole revision line. E5's registered refutation of mechanical reclosure is **WITHDRAWN and REOPENED**: the Arm-B-vs-Arm-C contamination separation it rested on does not exist under a valid instrument (it is an NLI template-collision artifact, confirmed five independent times in this program alone), and the correction is drafted and awaiting publication ([correction note](experiments/E8-instruction-breakpoint/coldstart-package/x1-anatomy/CORRECTION-NOTE-DRAFT.md), [standalone finding](experiments/E8-instruction-breakpoint/coldstart-package/mission-x/FINDING-NLI-ARTIFACT.md)). The prior registered snapshot remains archived under DOI [10.5281/zenodo.21399411](https://doi.org/10.5281/zenodo.21399411) but is superseded pending a new version. Under the corrected instrument, instructed revision has no measured failure regime anywhere tested: single-shot (E5), depth (E8's A1V2 rebuild, true floor 0/447), and repeated near-lossless summarization (E9, 0/1800 real — though E9's registered compression band was not achieved, leaving real-ratio compaction open). E3 (future-output volume) remains `confirmed-shaped` at exploratory grade. The remaining experiments are pre-execution, and that is still the point: the plan is public so it can be attacked before execution hardens its assumptions ([STATUS.md](STATUS.md), [LOG.md](LOG.md)).
