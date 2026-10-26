@@ -1,8 +1,8 @@
 # Closure
 
-**Open research on LLM inference structure and output verification.**
+**Research beyond LLM-as-a-judge: causal verification, inference dynamics, and model control.**
 
-I originated this program to make hypotheses about model behavior testable through explicit protocols, intervention-based measurements, and public experiment records.
+I originated this program to investigate whether LLM outputs can be verified through causal interventions and measurements of inference dynamics rather than another LLM's judgment, and whether those measurements can support structured control of model execution.
 
 **Start here:** [current results and limitations](STATUS.md) · [hypotheses and refutation conditions](HYPOTHESES.md) · [recorded results](results/) · [measurement methodology](METHODOLOGY.md).
 
